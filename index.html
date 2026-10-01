@@ -898,6 +898,230 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Mind Maps Rich Styling */
+        .mm-subject-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+
+        .mm-subj-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 10px;
+            background: var(--bg-surface-elevated, rgba(30, 41, 59, 0.6));
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .mm-subj-btn:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            color: var(--text-main);
+        }
+
+        .mm-subj-btn.active {
+            background: rgba(37, 99, 235, 0.15);
+            border-color: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .mm-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .mm-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mm-chapter-sidebar {
+            background: var(--bg-surface);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            max-height: 700px;
+            overflow-y: auto;
+        }
+
+        .mm-ch-item {
+            width: 100%;
+            text-align: left;
+            padding: 10px 14px;
+            margin-bottom: 6px;
+            border-radius: 8px;
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.15s ease;
+        }
+
+        .mm-ch-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+        }
+
+        .mm-ch-item.active {
+            background: rgba(37, 99, 235, 0.12);
+            border-color: rgba(37, 99, 235, 0.4);
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .mm-ch-num {
+            font-size: 0.72rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .mm-canvas {
+            background: var(--bg-surface);
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .mm-root-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+        }
+
+        .mm-root-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(37, 99, 235, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #60a5fa;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .mm-nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .mm-node-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.25s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .mm-node-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(96, 165, 250, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .mm-node-title {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .mm-roman-box {
+            background: rgba(212, 167, 84, 0.08);
+            border-left: 3px solid #d4a754;
+            padding: 10px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+        }
+
+        .mm-roman-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #d4a754;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .mm-formula-box {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px dashed rgba(37, 99, 235, 0.3);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-family: monospace;
+            font-size: 0.82rem;
+            color: #93c5fd;
+            margin-bottom: 10px;
+        }
+
+        .mm-exam-tip {
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 3px solid #ef4444;
+            padding: 8px 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.8rem;
+            color: #fca5a5;
+            margin-bottom: 12px;
+        }
+
+        .mm-open-btn {
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            color: #60a5fa;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .mm-open-btn:hover {
+            background: #2563eb;
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -1037,10 +1261,10 @@
             </nav>
 
             <div class="sidebar-footer">
-                <div class="user-avatar">MF</div>
+                <div class="user-avatar" id="sidebar-avatar-initials">MF</div>
                 <div class="user-info">
-                    <div class="user-name">Manal Fatima</div>
-                    <div class="user-role">PRC Candidate #4092</div>
+                    <div class="user-name" id="sidebar-display-name">Manal Fatima</div>
+                    <div class="user-role" id="sidebar-display-crn">CRN: CR-2026-90412</div>
                 </div>
             </div>
         </aside>
@@ -1089,8 +1313,8 @@
                 <section id="view-dashboard" class="view-section active">
                     <div class="welcome-banner">
                         <div class="welcome-text">
-                            <h2>Welcome back, Manal 👋</h2>
-                            <p>Continue your ICAP PRC CA examination preparation.</p>
+                            <h2 id="dash-welcome-name">Welcome back, Manal 👋</h2>
+                            <p id="dash-welcome-crn">ICAP PRC Registration ID: CR-2026-90412 • Autumn 2026 Attempt</p>
                         </div>
                         <div class="badge badge-gold"
                             style="font-size:0.85rem; padding: 6px 14px; display:inline-flex; align-items:center; gap:6px;">
@@ -1392,102 +1616,62 @@
                 <section id="view-mindmaps" class="view-section">
                     <div class="section-title">
                         <span>Roman Urdu Mind Maps & Concept Trees</span>
-                        <span class="badge badge-gold">Flagship Learning Feature</span>
+                        <span class="badge badge-gold">Flagship Interactive Learning</span>
                     </div>
 
-                    <div class="card" style="margin-bottom: 20px;">
-                        <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">CHAPTER 6 —
-                            PROPERTY, PLANT & EQUIPMENT (IAS 16)</div>
-                        <div class="mindmap-node">
-                            <div class="mindmap-title">1. Initial Measurement (Asset Valuation)</div>
-                            <div class="mindmap-desc">
-                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
-                                Asset ko start me uski Purchase Price + Direct Expenses (jaise carriage, installation,
-                                testing costs) par standard measure karta hai. Discounts subtract kiye jayenge.
+                    <!-- 4 SUBJECT SELECTOR TABS -->
+                    <div class="mm-subject-tabs" id="mm-subject-tabs-container">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+
+                    <div class="mm-layout">
+                        <!-- SIDEBAR CHAPTER SELECTOR -->
+                        <div class="mm-chapter-sidebar">
+                            <div
+                                style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px; letter-spacing:0.5px; display:flex; justify-content:space-between; align-items:center;">
+                                <span>Subject Chapters</span>
+                                <span class="badge badge-blue" id="mm-chapter-count-badge">10 Chapters</span>
+                            </div>
+                            <div id="mm-chapter-list-container">
+                                <!-- Populated dynamically by JS -->
                             </div>
                         </div>
 
-                        <div class="mindmap-node">
-                            <div class="mindmap-title">2. Straight Line Depreciation Method</div>
-                            <div class="mindmap-desc">
-                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
-                                Har saal equal depreciation expensecharge hota hai. Formula:
-                                <code>(Cost - Residual Value) / Useful Life</code>.
-                            </div>
-                        </div>
-
-                        <div class="mindmap-node">
-                            <div class="mindmap-title">3. Reducing Balance Depreciation Method</div>
-                            <div class="mindmap-desc">
-                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
-                                Har saal asset ki remaining Net Book Value (NBV) par fixed percentage apply hota hai.
-                                Isme early years me zyada depreciation charge hota hai.
-                            </div>
+                        <!-- MAIN INTERACTIVE MIND MAP BOARD -->
+                        <div class="mm-canvas" id="mm-canvas-container">
+                            <!-- Populated dynamically by JS -->
                         </div>
                     </div>
                 </section>
 
                 <!-- VIEW 4: PRACTICE CENTER -->
                 <section id="view-practice" class="view-section">
-                    <div class="section-title">Practice Center (Tutor & Timed Modes)</div>
+                    <div class="section-title">
+                        <span>Practice Center (4 Subjects & Chapter-Wise Quizzes)</span>
+                        <span class="badge badge-gold">Tutor & Exam Modes</span>
+                    </div>
 
-                    <div class="card" id="practice-card">
-                        <div style="display:flex; justify-content:space-between; margin-bottom:16px;">
-                            <span class="badge badge-blue">PRC 1 • Chapter 4 (Accruals)</span>
-                            <span class="badge badge-gold">Level 3: Advanced Exam Level</span>
-                        </div>
+                    <!-- 4 Subject Selector Tabs -->
+                    <div class="mm-subject-tabs" id="practice-subject-tabs">
+                        <!-- Populated dynamically by JS -->
+                    </div>
 
-                        <h3 style="margin-bottom:20px; font-size:1.15rem; line-height:1.4;">
-                            At 1 Jan 2025, rent prepayment was Rs. 12,000. Rent paid during the year was Rs. 96,000. At
-                            31 Dec 2025, rent accrued was Rs. 8,000. What is the rent expense to be charged in the
-                            Statement of Profit or Loss?
-                        </h3>
-
-                        <div id="options-container">
-                            <div class="option-btn" onclick="checkAnswer(0, 0, this)">
-                                <div class="option-letter">A</div>
-                                <div>Rs. 116,000</div>
-                            </div>
-                            <div class="option-btn" onclick="checkAnswer(0, 1, this)">
-                                <div class="option-letter">B</div>
-                                <div>Rs. 100,000</div>
-                            </div>
-                            <div class="option-btn" onclick="checkAnswer(0, 2, this)">
-                                <div class="option-letter">C</div>
-                                <div>Rs. 92,000</div>
-                            </div>
-                            <div class="option-btn" onclick="checkAnswer(0, 3, this)">
-                                <div class="option-letter">D</div>
-                                <div>Rs. 80,000</div>
-                            </div>
-                        </div>
-
-                        <div id="explanation-container" class="explanation-box" style="display:none;">
-                            <div style="font-weight:700; color:var(--blue-400); margin-bottom:6px;">✅ Step-by-Step
-                                Working & Explanation:</div>
-                            <div>Expense = Cash Paid (96,000) + Opening Prepayment (12,000) + Closing Accrual (8,000) =
-                                <strong>Rs. 116,000</strong>.
-                            </div>
-                            <div style="margin-top:8px;">
-                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
-                                Opening prepayment picchle saal ka pay ho chuka tha lekin is saal ka expense hai, isliye
-                                add karenge. Closing accrual abhi pay nahi hua lekin is saal ka expense hai, isliye isko
-                                bhi add karenge.
-                            </div>
-                        </div>
+                    <!-- DYNAMIC CONTAINER FOR CHAPTER SELECTOR & QUIZ ENGINE -->
+                    <div id="practice-main-container">
+                        <!-- Populated dynamically by JS -->
                     </div>
                 </section>
 
                 <!-- VIEW 5: MOCK EXAM CENTER -->
                 <section id="view-mockexams" class="view-section">
-                    <div class="section-title">ICAP PRC Mock Exam Simulator</div>
-                    <div class="card" style="text-align:center; padding: 40px;">
-                        <div style="font-size:3rem; margin-bottom:12px;">⏱️</div>
-                        <h2>PRC 1 Full Syllabus Mock Exam</h2>
-                        <p style="color:var(--text-muted); margin: 8px 0 24px;">50 MCQs • 45 Minutes • Timed Simulator
-                            with Palette Navigation</p>
-                        <button class="btn btn-primary" style="padding:14px 32px;"
-                            onclick="alert('Starting 45-Minute ICAP PRC 1 Mock Exam!')">🚀 Start Full Mock Exam</button>
+                    <div class="section-title">
+                        <span>ICAP PRC 3-Hour Subject-Wise Final Mock Exams</span>
+                        <span class="badge badge-gold">Official Exam Format • 3 Hours Timer</span>
+                    </div>
+
+                    <!-- DYNAMIC CONTAINER FOR MOCK EXAM PORTAL & LIVE SIMULATOR -->
+                    <div id="mock-exams-portal-container">
+                        <!-- Populated dynamically by JS -->
                     </div>
                 </section>
 
@@ -1554,12 +1738,126 @@
                     </div>
                 </section>
 
-                <!-- VIEW 10: PROFILE -->
+                <!-- VIEW 10: PROFILE & SETTINGS -->
                 <section id="view-profile" class="view-section">
-                    <div class="section-title">Student Profile</div>
-                    <div class="card">
-                        <h3>Manal Fatima</h3>
-                        <p style="color:var(--text-muted);">ICAP PRC Registration ID: CR-2026-90412</p>
+                    <div class="section-title">
+                        <span>Student Profile & ICAP Account Settings</span>
+                        <span class="badge badge-gold">Active ICAP Student</span>
+                    </div>
+
+                    <!-- Alert Banner -->
+                    <div id="profile-save-alert"
+                        style="display:none; background:rgba(34,197,94,0.12); border:1px solid #22c55e; color:#4ade80; padding:12px 18px; border-radius:10px; margin-bottom:20px; font-weight:600; font-size:0.9rem;">
+                        ✓ Profile updated successfully! Student details synchronized with Dashboard & Sidebar.
+                    </div>
+
+                    <div style="display:grid; grid-template-columns: 300px 1fr; gap:24px;">
+
+                        <!-- LEFT: PROFILE SUMMARY CARD -->
+                        <div class="card"
+                            style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:28px 20px;">
+                            <div id="profile-card-avatar"
+                                style="width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg, #2563eb, #7c3aed); color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:800; border:4px solid var(--border-color); box-shadow:0 8px 20px rgba(37,99,235,0.3); margin-bottom:16px;">
+                                MF
+                            </div>
+                            <h3 id="profile-card-name"
+                                style="margin:0 0 4px 0; font-size:1.2rem; color:var(--text-main);">Manal Fatima</h3>
+                            <div id="profile-card-crn"
+                                style="font-size:0.85rem; color:var(--gold-500); font-weight:700; margin-bottom:16px;">
+                                CRN: CR-2026-90412</div>
+
+                            <div
+                                style="width:100%; border-top:1px solid var(--border-color); padding-top:16px; margin-top:8px; display:flex; flex-direction:column; gap:14px; font-size:0.85rem; text-align:left;">
+                                <div>
+                                    <span
+                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Email
+                                        Address</span>
+                                    <strong id="profile-card-email"
+                                        style="color:var(--text-main); font-weight:600; word-break:break-all;">manal.fatima@icap.org.pk</strong>
+                                </div>
+                                <div>
+                                    <span
+                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Phone
+                                        Number</span>
+                                    <strong id="profile-card-phone" style="color:var(--text-main); font-weight:600;">+92
+                                        300 1234567</strong>
+                                </div>
+                                <div>
+                                    <span
+                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:4px;">Target
+                                        Exam Attempt</span>
+                                    <span id="profile-card-session" class="badge badge-blue">Autumn 2026 Attempt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT: EDIT PROFILE FORM -->
+                        <div class="card" style="padding:28px;">
+                            <h3
+                                style="margin:0 0 20px 0; font-size:1.1rem; color:var(--text-main); display:flex; align-items:center; gap:8px;">
+                                👤 Edit Student Details
+                            </h3>
+
+                            <form onsubmit="saveStudentProfile(event)"
+                                style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+                                <div>
+                                    <label
+                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Full
+                                        Name</label>
+                                    <input type="text" id="input-profile-name" required placeholder="e.g. Manal Fatima"
+                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
+                                </div>
+
+                                <div>
+                                    <label
+                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">ICAP
+                                        CRN Number</label>
+                                    <input type="text" id="input-profile-crn" required placeholder="e.g. CR-2026-90412"
+                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
+                                </div>
+
+                                <div>
+                                    <label
+                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Phone
+                                        Number</label>
+                                    <input type="text" id="input-profile-phone" required placeholder="e.g. 0300-1234567"
+                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
+                                </div>
+
+                                <div>
+                                    <label
+                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Email
+                                        Address</label>
+                                    <input type="email" id="input-profile-email" required
+                                        placeholder="e.g. student@icap.org.pk"
+                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
+                                </div>
+
+                                <div style="grid-column: span 2;">
+                                    <label
+                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Target
+                                        ICAP Exam Attempt</label>
+                                    <select id="input-profile-session"
+                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;">
+                                        <option value="Autumn 2026 Attempt">Autumn 2026 Attempt</option>
+                                        <option value="Spring 2027 Attempt">Spring 2027 Attempt</option>
+                                        <option value="Autumn 2027 Attempt">Autumn 2027 Attempt</option>
+                                    </select>
+                                </div>
+
+                                <div style="grid-column: span 2; margin-top:10px; display:flex; gap:12px;">
+                                    <button type="submit" class="btn btn-primary"
+                                        style="padding:10px 24px; font-weight:700; font-size:0.9rem;">
+                                        💾 Save Profile Details
+                                    </button>
+                                    <button type="button" onclick="resetProfileToDefault()" class="btn btn-outline"
+                                        style="padding:10px 18px; font-size:0.85rem;">
+                                        🔄 Reset Demo Data
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                 </section>
 
@@ -1586,7 +1884,7 @@
                 <div class="brand-logo" style="width:34px; height:34px;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                        <path d="M22 3h-6a4 4 0 0 1 4 4v14a3 3 0 0 1 3-3h7z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                     </svg>
                 </div>
                 <div>
@@ -1614,90 +1912,883 @@
         <div style="flex:1; width:100%; background:#0f172a; position:relative;">
             <iframe id="pdf-frame" src="" style="width:100%; height:100%; border:none;"></iframe>
         </div>
-    </div>
 
-    <!-- JAVASCRIPT APPLICATION LOGIC -->
-    <script>
-        function openPdfReader(pdfFile, title, pageNum = 1) {
-            const modal = document.getElementById('pdf-reader-modal');
-            const iframe = document.getElementById('pdf-frame');
-            const titleEl = document.getElementById('pdf-modal-title');
-            const downloadBtn = document.getElementById('pdf-download-btn');
+        <!-- FULLSCREEN INTERACTIVE MIND MAP TOPIC DETAIL MODAL -->
+        <div id="mm-topic-modal"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,9,20,0.95); backdrop-filter:blur(12px); z-index:10000; flex-direction:column; justify-content:center; align-items:center; padding:20px;">
+            <div
+                style="background:var(--bg-surface); border:1px solid var(--border-color); width:100%; max-width:750px; max-height:85vh; border-radius:16px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.6);">
+                <div
+                    style="height:60px; background:rgba(30,41,59,0.8); border-bottom:1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; padding:0 24px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span class="badge badge-gold" id="mm-modal-badge">PRC Concept Tree</span>
+                        <h3 id="mm-modal-title" style="margin:0; font-size:1.05rem; color:var(--text-main);">Topic
+                            Detail</h3>
+                    </div>
+                    <button onclick="closeTopicModal()" class="btn btn-danger"
+                        style="padding:6px 14px; font-size:0.82rem;">✕ Close</button>
+                </div>
+                <div style="flex:1; padding:24px; overflow-y:auto;" id="mm-modal-body">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
 
-            titleEl.textContent = title + (pageNum > 1 ? ` (Page ${pageNum})` : '');
-            downloadBtn.href = pdfFile;
-            iframe.src = pdfFile + (pageNum > 1 ? `#page=${pageNum}` : '');
-            modal.style.display = 'flex';
-        }
+        <script>
+            // ==========================================
+            // MIND MAPS DATA FOR 4 PRC SUBJECTS
+            // ==========================================
+            const mmSubjectsList = [
+                { id: 'prc1', code: 'PRC 1', shortName: 'FOA', name: 'Fundamentals of Accounting', color: '#2563eb', icon: '📘' },
+                { id: 'prc2', code: 'PRC 2', shortName: 'QAB', name: 'Quantitative Analysis for Business', color: '#7c3aed', icon: '🧮' },
+                { id: 'prc3v1', code: 'PRC 3 • VOL 1', shortName: 'BEI Management', name: 'Business & Economic Insights (Management)', color: '#059669', icon: '💼' },
+                { id: 'prc3v2', code: 'PRC 3 • VOL 2', shortName: 'BEI Economics', name: 'Business & Economic Insights (Economics)', color: '#dc2626', icon: '📈' }
+            ];
 
-        function closePdfReader() {
-            const modal = document.getElementById('pdf-reader-modal');
-            const iframe = document.getElementById('pdf-frame');
-            iframe.src = '';
-            modal.style.display = 'none';
-        }
-
-        function switchView(viewName, element) {
-            // Hide all view sections
-            const sections = document.querySelectorAll('.view-section');
-            sections.forEach(s => s.classList.remove('active'));
-
-            // Show selected section
-            const activeSection = document.getElementById(`view-${viewName}`);
-            if (activeSection) {
-                activeSection.classList.add('active');
-            }
-
-            // Update header title
-            const titleMap = {
-                'dashboard': 'Dashboard Overview',
-                'study': 'Study Library & PDF Reader',
-                'mindmaps': 'Roman Urdu Mind Maps & Concept Trees',
-                'practice': 'Practice Center',
-                'mockexams': 'Mock Exam Simulator',
-                'evaluation': 'Preparation Evaluation Engine',
-                'revision': 'Quick Revision & Formula Bank',
-                'mistakes': 'Mistake Book (Saved Error Log)',
-                'progress': 'Progress Timeline & Streak',
-                'profile': 'Student Profile & Settings'
+            const mmDataStore = {
+                prc1: [
+                    {
+                        id: 'prc1-ch1', chapterNumber: 1, title: 'Introduction to Accounting & Business', pages: '1–38', topics: [
+                            { id: 't1', title: '1. Accounting Equation (Asset = Capital + Liabilities)', romanUrdu: 'Accounting Equation business ki balance sheet ka base hai. Har transaction ke 2 effects hotay hain (Dual Aspect). Asset barhay ga to liability ya capital bhi barhay ga.', formula: 'Assets = Capital + Liabilities | Equity = Assets - Liabilities', examTip: 'Exam Q: Closing Capital = Opening Capital + Profit - Drawings + New Capital.', subNodes: ['Dual Aspect Concept (Debit = Credit)', 'Capital Expenditure (Asset) vs Revenue Expenditure (Expense)', 'Going Concern Assumption'] },
+                            { id: 't2', title: '2. Primary Users of Financial Statements', romanUrdu: 'Primary users me Investors aur Lenders (Banks) hotay hain jinhe decision making ke liye financial information chahiye hoti hai.', formula: 'Primary Users = Capital Providers (Investors & Lenders)', examTip: 'ICAP asks MCQ on primary users: FBR or Tax authorities are NOT primary users, Investors are!', subNodes: ['Investors: Assess profitability and dividend potential', 'Lenders & Banks: Check liquidity and debt servicing ability', 'Management: Internal decision making & budgeting'] },
+                            { id: 't3', title: '3. Fundamental Accounting Assumptions', romanUrdu: 'Financial statements Accrual basis aur Going Concern par bante hain (except Cash Flow Statement).', formula: 'Accrual Basis: Income/Expense recorded when earned/incurred, not when cash moves.', examTip: 'Prudence principle: Never overestimate assets or income, anticipate losses early.', subNodes: ['Accrual Basis vs Cash Basis', 'Prudence / Conservatism Principle', 'Consistency & Materiality Concept'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch2', chapterNumber: 2, title: 'Double Entry Bookkeeping & Ledger Accounts', pages: '39–84', topics: [
+                            { id: 't1', title: '1. Rules of Debit & Credit (DEAD CLIC)', romanUrdu: 'DEAD = Debit Expenses, Assets, Drawings (increase hone par Debit). CLIC = Credit Liabilities, Income, Capital (increase hone par Credit).', formula: 'Dr: Assets ↑, Expenses ↑, Drawings ↑ | Cr: Liabilities ↑, Revenue ↑, Capital ↑', examTip: 'Asset decrease = Credit. Liability decrease = Debit.', subNodes: ['Normal Debit Balances vs Credit Balances', 'Drawings is a Contra-Equity Account', 'Trade Discount vs Cash Discount'] },
+                            { id: 't2', title: '2. T-Accounts & Trial Balance Extraction', romanUrdu: 'Journal original entry ki book hai jahan se entries ledgers (T-Accounts) me post hoti hain. End par balance c/d nikala jata hai.', formula: 'Closing Balance c/d = Opening b/d + Debits - Credits', examTip: 'Trial balance balance hona 100% error-free hone ki guarantee nahi hai.', subNodes: ['Books of Prime Entry', 'General Ledger T-Accounts', 'Balancing off Accounts'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch3', chapterNumber: 3, title: 'Trial Balance & Financial Statements Intro', pages: '85–124', topics: [
+                            { id: 't1', title: '1. Trial Balance Purpose & Preparation', romanUrdu: 'Trial balance har ledger account ka closing balance list karta hai taake arithmetical accuracy verify ho (Total Debits = Total Credits).', formula: 'Total Debits = Total Credits', examTip: 'If trial balance does not match, difference goes to Suspense Account temporarily.', subNodes: ['Listing Debit vs Credit Balances', 'Errors affecting agreement of Trial Balance', 'Overview of Profit or Loss & Position Statement'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch4', chapterNumber: 4, title: 'Accruals, Prepayments & Expense Adjustments', pages: '125–168', topics: [
+                            { id: 't1', title: '1. Accrued & Prepaid Expense Calculations', romanUrdu: 'Opening Prepayment aur Closing Accrual add honge expense me. Opening Accrual aur Closing Prepayment subtract honge.', formula: 'P&L Expense = Cash Paid + Op. Prepayment + Cl. Accrual - Cl. Prepayment - Op. Accrual', examTip: 'Accrued Expense = Current Liability (Credit). Prepaid Expense = Current Asset (Debit).', subNodes: ['Accrued Expense = Current Liability (Credit)', 'Prepaid Expense = Current Asset (Debit)', 'Accrued Income = Current Asset (Debit)', 'Unearned Income = Current Liability (Credit)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch5', chapterNumber: 5, title: 'Bad Debts & Allowance for Receivables', pages: '169–210', topics: [
+                            { id: 't1', title: '1. Bad Debts Write-off & Recovery', romanUrdu: 'Jab customer cash nahi de sakta to Bad Debts Expense Dr aur Receivables Cr hota hai. Bad debt recovered = P&L Income.', formula: 'Entry: Dr Bad Debts Expense | Cr Trade Receivables', examTip: 'Calculate allowance percentage ON Net Receivables AFTER deducting actual bad debts written off!', subNodes: ['Direct Write-Off Method', 'Bad Debt Recovery Treatment', 'Specific Allowance vs General Allowance'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch6', chapterNumber: 6, title: 'Property, Plant & Equipment (IAS 16)', pages: '211–278', topics: [
+                            { id: 't1', title: '1. Initial Measurement & Capitalization', romanUrdu: 'Asset initial cost me Purchase Price + Direct Expenses (Carriage, Installation, Site Prep, Testing) shamil hotay hain. Staff training EXCLUDED.', formula: 'Cost = Purchase Price - Trade Discount + Delivery + Installation + Testing', examTip: 'Staff training and admin overheads are NEVER capitalized under IAS 16!', subNodes: ['Directly Attributable Costs included in Cost', 'Excluded Costs: Training, Maintenance contracts', 'Capital vs Revenue Expenditure'] },
+                            { id: 't2', title: '2. Straight Line vs Reducing Balance Depreciation', romanUrdu: 'Straight Line me har saal equal depreciation hoti hai. Reducing Balance me Net Book Value (Cost - Accum Dep) par rate lagta hai.', formula: 'Straight Line = (Cost - Residual Value) / Life | Reducing Balance = NBV × Rate %', examTip: 'Check if policy is pro-rata (month-wise) or full year in year of acquisition/disposal!', subNodes: ['Straight Line Method', 'Reducing Balance Method', 'Gain/Loss on Disposal = Sale Proceeds - NBV'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch7', chapterNumber: 7, title: 'Inventory Valuation (IAS 2)', pages: '279–320', topics: [
+                            { id: 't1', title: '1. Lower of Cost and NRV Rule', romanUrdu: 'IAS 2 ke mutabiq inventory LOWER of Cost and Net Realizable Value (NRV) par record hoti hai.', formula: 'NRV = Estimated Selling Price - Estimated Completion Costs - Selling Costs', examTip: 'In rising prices, FIFO yields HIGHER closing inventory and HIGHER net profit than AVCO!', subNodes: ['Cost components vs Excluded Storage costs', 'NRV calculation item-by-item', 'FIFO vs AVCO Cost Valuation Methods'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch8', chapterNumber: 8, title: 'Bank Reconciliation Statements (BRS)', pages: '321–360', topics: [
+                            { id: 't1', title: '1. Unpresented Cheques & Uncredited Deposits', romanUrdu: 'Unpresented cheques Bank Statement balance me ADD hotay hain. Uncredited deposits SUBTRACT hotay hain.', formula: 'Bank Stmt Balance + Uncredited Deposits - Unpresented Cheques = Adjusted Cash Book', examTip: 'Always update Cash Book FIRST for bank charges, direct debits, and standing orders!', subNodes: ['Unpresented Cheques: Issued but not cleared', 'Uncredited Deposits: Received but not credited', 'Adjusted Cash Book preparation'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch9', chapterNumber: 9, title: 'Correction of Errors & Suspense Account', pages: '361–400', topics: [
+                            { id: 't1', title: '1. Types of Errors & Suspense Account', romanUrdu: 'Errors of Principle/Omission match Trial Balance. One-sided errors create Suspense Account balance.', formula: 'Adjusted Profit = Draft Profit ± Income/Expense corrections', examTip: 'Error of Principle (e.g. Asset debited to Repair Expense) directly distorts Net Profit!', subNodes: ['Error of Principle vs Error of Commission', 'Compensating Errors', 'Suspense Account Clearance Entries'] }
+                        ]
+                    },
+                    {
+                        id: 'prc1-ch10', chapterNumber: 10, title: 'Financial Statements of Sole Traders & Partnerships', pages: '401–447', topics: [
+                            { id: 't1', title: '1. Final Accounts (SOPL, SOFP & Partnership Appropriation)', romanUrdu: 'SOPL me Revenue - COGS = Gross Profit. Partnership me Profit Appropriation account banakar partners ko distribution hoti hai.', formula: 'Gross Profit = Sales - COGS | Net Profit = Gross Profit - Operating Expenses', examTip: 'Partnership Appropriation order: Salary → Interest on Capital → Residual Profit Ratio.', subNodes: ['Statement of Profit or Loss (SOPL)', 'Statement of Financial Position (SOFP)', 'Partnership Current Accounts & Capital Accounts'] }
+                        ]
+                    }
+                ],
+                prc2: [
+                    {
+                        id: 'prc2-ch1', chapterNumber: 1, title: 'Equations, Linear Functions & Geometry', pages: '1–42', topics: [
+                            { id: 't1', title: '1. Linear Equations & Slope-Intercept Form (y = mx + c)', romanUrdu: 'Line equation y = mx + c. Slope m = (y2 - y1) / (x2 - x1). Parallel lines ka slope EQUAL hota hai (m1 = m2).', formula: 'Slope m = (y₂ - y₁) / (x₂ - x₁) | Line: y - y₁ = m(x - x₁)', examTip: 'Perpendicular lines slope product: m₁ × m₂ = -1.', subNodes: ['Slope & Intercepts', 'Parallel vs Perpendicular Lines', 'Cost Function: TC = FC + VC(Q)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch2', chapterNumber: 2, title: 'Linear Programming & Feasible Region', pages: '43–78', topics: [
+                            { id: 't1', title: '1. Inequalities & Corner Point Theorem', romanUrdu: 'Constraints ko plot karke overlapping shaded area (Feasible Region) nikala jata hai. Optimal profit/cost hamesha corner vertex par hoti hai.', formula: 'Maximize Z = ax + by subject to constraints', examTip: 'Optimal solution ALWAYS lies at one of the vertices (corner points) of the feasible region!', subNodes: ['Shading Feasible Regions', 'Non-negativity constraints x ≥ 0, y ≥ 0', 'Corner Point Evaluation'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch3', chapterNumber: 3, title: 'Mathematics of Finance - Compound Interest & Annuities', pages: '79–122', topics: [
+                            { id: 't1', title: '1. Compound Interest & Effective Rate', romanUrdu: 'Compound interest formula A = P(1 + r/n)^(nt). Sub-annual compounding me periodic rate (r/n) use hoti hai.', formula: 'A = P (1 + r/n)^(n×t) | EAR = (1 + r/n)^n - 1', examTip: 'Annuity Due payments are at START of year (compounds 1 extra period!).', subNodes: ['Future Value & Present Value', 'Ordinary Annuity vs Annuity Due', 'Perpetuity PV = Payment / Interest Rate'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch4', chapterNumber: 4, title: 'Discounted Cash Flows - NPV & IRR Analysis', pages: '123–160', topics: [
+                            { id: 't1', title: '1. Net Present Value (NPV) & IRR Decision Rules', romanUrdu: 'NPV = Present Value of Inflows - Initial Outlay. Accept if NPV > 0. IRR par NPV exactly zero hota hai.', formula: 'NPV = ∑ [ CF_t / (1+r)^t ] - Outlay | IRR = N_L + [ NPV_L / (NPV_L - NPV_H) ] × (N_H - N_L)', examTip: 'Accept project if NPV > 0 or if IRR > Cost of Capital!', subNodes: ['NPV Discounting Technique', 'IRR Interpolation Formula', 'Payback Period Appraisal'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch5', chapterNumber: 5, title: 'Data Collection & Sampling Methods', pages: '161–198', topics: [
+                            { id: 't1', title: '1. Sampling Techniques & Classification', romanUrdu: 'Stratified sampling me population ko homogeneous strata me baant kar random sampling ki jati hai.', formula: 'Stratified Sample Size = (Strata Size / Total Population) × Total Sample', examTip: 'Cluster sampling selects ALL items from randomly chosen clusters!', subNodes: ['Primary vs Secondary Data', 'Stratified vs Cluster Sampling', 'Histogram & Frequency Polygon'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch6', chapterNumber: 6, title: 'Measures of Central Tendency (Mean, Median, Mode)', pages: '199–245', topics: [
+                            { id: 't1', title: '1. Grouped Data Mean, Median, Mode', romanUrdu: 'Mean = ∑fx / ∑f. Symmetrical distribution me Mean = Median = Mode. Skewed distribution me Empirical Formula lagta hai.', formula: 'Empirical Rule: Mode = 3 Median - 2 Mean', examTip: 'Sum of deviations from arithmetic mean is ALWAYS ZERO: ∑(x - x̄) = 0!', subNodes: ['Arithmetic Mean & Weighted Mean', 'Median (Q2) formula', 'Mode for grouped data'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch7', chapterNumber: 7, title: 'Measures of Dispersion (Variance & SD)', pages: '246–285', topics: [
+                            { id: 't1', title: '1. Standard Deviation & Coefficient of Variation', romanUrdu: 'Standard Deviation (σ) variance ka square root hota hai. S.D. hamesha non-negative (+ve) hota hai.', formula: 'SD (σ) = √[ ∑f(x - x̄)² / ∑f ] | CV = (SD / Mean) × 100%', examTip: 'If variance is 49, Standard Deviation is +7!', subNodes: ['Variance = SD²', 'Coefficient of Variation (CV) for relative risk', 'Interquartile Range IQR = Q3 - Q1'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch8', chapterNumber: 8, title: 'Index Numbers (Laspeyres & Paasche)', pages: '286–320', topics: [
+                            { id: 't1', title: '1. Laspeyres, Paasche & Fisher Index', romanUrdu: 'Laspeyres base year weights (q0) use karta hai. Paasche current year weights (qn) use karta hai. Fisher inka Geometric Mean hai.', formula: 'Laspeyres = (∑pₙq₀ / ∑p₀q₀) × 100 | Fisher = √(Laspeyres × Paasche)', examTip: 'Laspeyres OVERESTIMATES inflation, Paasche UNDERESTIMATES inflation!', subNodes: ['Laspeyres Base-Weighted Index', 'Paasche Current-Weighted Index', 'Fisher Ideal Index'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch9', chapterNumber: 9, title: 'Correlation & Simple Linear Regression', pages: '321–360', topics: [
+                            { id: 't1', title: '1. Pearson r & Coefficient of Determination (r²)', romanUrdu: 'Correlation r range -1 se +1 hoti hai. r² (Coefficient of Determination) batata hai kitni % variation explain ho chuki hai.', formula: 'Range: -1 ≤ r ≤ +1 | Regression Line: y = a + bx', examTip: 'If r = 0.9, then r² = 0.81 (81% variation in Y is explained by X!).', subNodes: ['Pearson Correlation Coefficient r', 'Coefficient of Determination r²', 'Least Squares Regression Line y = a + bx'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch10', chapterNumber: 10, title: 'Probability Concepts & Combinations', pages: '361–385', topics: [
+                            { id: 't1', title: '1. Permutations (nPr) & Combinations (nCr)', romanUrdu: 'Mutually exclusive events me P(A ∩ B) = 0 so P(A ∪ B) = P(A) + P(B). Permutation me ORDER matter karta hai, Combination me order matter nahi karta.', formula: 'nPr = n! / (n-r)! | nCr = n! / [ r! (n-r)! ]', examTip: 'Ranking/Positions = Permutations. Committee selection = Combinations.', subNodes: ['Mutually Exclusive vs Independent Events', 'Permutations nPr (Order matters)', 'Combinations nCr (Group selection)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc2-ch11', chapterNumber: 11, title: 'Probability Distributions (Normal & Z-Score)', pages: '386–402', topics: [
+                            { id: 't1', title: '1. Normal Distribution & Standard Z-Score', romanUrdu: 'Normal distribution symmetrical bell curve hai. Z-score = (X - μ) / σ. Total area under curve = 1.0 (100%).', formula: 'Z = (X - μ) / σ | μ = Mean, σ = Standard Deviation', examTip: '68.26% lies within μ ± 1σ. 95.44% within μ ± 2σ. 99.73% within μ ± 3σ.', subNodes: ['Z-Score Transformation', 'Symmetrical Bell Curve properties', 'Binomial Mean = np, Variance = npq'] }
+                        ]
+                    }
+                ],
+                prc3v1: [
+                    {
+                        id: 'prc3v1-ch1', chapterNumber: 1, title: 'Nature, Purpose & Types of Ownership', pages: '1–22', topics: [
+                            { id: 't1', title: '1. Forms of Business Ownership & Liability', romanUrdu: 'Sole Trader aur Partnership me unlimited liability hoti hai. Companies me liability limited to unpaid share capital hoti hai.', formula: 'Limited Liability = Owner risk capped at investment', examTip: 'Public Limited Companies (Ltd) can list on PSX, Private Limited (Pvt Ltd) cannot!', subNodes: ['Sole Proprietorship & Partnership', 'Private Limited vs Public Limited Company', 'Unlimited vs Limited Liability'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch2', chapterNumber: 2, title: 'Business Environment & PESTEL Analysis', pages: '23–42', topics: [
+                            { id: 't1', title: '1. PESTEL Analysis & Stakeholder Mapping', romanUrdu: 'PESTEL external macro factors analyze karta hai: Political, Economic, Social, Technological, Environmental, Legal.', formula: 'Mendelow Matrix: Power vs Interest Stakeholder Mapping', examTip: 'High Power + High Interest stakeholders are "Key Players" requiring close engagement!', subNodes: ['PESTEL Macro Analysis', 'Mendelow Stakeholder Matrix', 'SWOT Matrix (Internal vs External)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch3', chapterNumber: 3, title: 'Organizational Structure & Management', pages: '43–60', topics: [
+                            { id: 't1', title: '1. Organizational Structures & Span of Control', romanUrdu: 'Tall structure me narrow span of control hota hai. Matrix structure me employees 2 managers ko report karte hain (violates Unity of Command).', formula: 'Span of Control = Number of direct subordinates', examTip: 'Matrix structure has dual reporting lines (Functional + Project Manager)!', subNodes: ['Functional vs Divisional Structure', 'Matrix Structure & Unity of Command', 'Centralization vs Decentralization'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch4', chapterNumber: 4, title: 'Marketing Strategy & The 4 Ps Mix', pages: '61–78', topics: [
+                            { id: 't1', title: '1. The 4 Ps Marketing Mix', romanUrdu: 'Marketing Mix me 4 Ps hain: Product, Price, Place, Promotion. Services me 3 extra Ps (People, Process, Physical Evidence) lagte hain.', formula: 'Price Skimming = High initial price | Penetration = Low initial price', examTip: 'Services marketing uses 7 Ps (Product, Price, Place, Promotion, People, Process, Physical Evidence)!', subNodes: ['Product Life Cycle stages', 'Price Skimming vs Penetration Pricing', 'Push vs Pull Promotion Strategy'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch5', chapterNumber: 5, title: 'Human Resource & Motivation Theory', pages: '79–95', topics: [
+                            { id: 't1', title: '1. Herzberg Two-Factor Theory', romanUrdu: 'Herzberg Hygiene Factors (salary, working conditions) dissatisfaction rokhte hain. Motivators (recognition, growth) true motivation dete hain.', formula: 'Hygiene Factors = Prevent Dissatisfaction | Motivators = True Motivation', examTip: 'Maslow hierarchy order: Physiological → Safety → Social → Esteem → Self-Actualization.', subNodes: ['Maslow Hierarchy of Needs', 'Herzberg Hygiene vs Motivators', 'Taylor Scientific Management & Piece-rate'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch6', chapterNumber: 6, title: 'Information Systems & Data Security', pages: '96–108', topics: [
+                            { id: 't1', title: '1. Information Systems Hierarchy (TPS, MIS, DSS, ESS)', romanUrdu: 'TPS operational transactions process karta hai. MIS tactical summary reports banata hai. ESS strategic executive dashboards deta hai.', formula: 'TPS (Operational) → MIS (Tactical) → ESS (Strategic)', examTip: 'ERP integrates all business functions into one centralized database system!', subNodes: ['TPS, MIS, DSS, ESS Systems', 'ERP Enterprise Resource Planning', 'Cybersecurity & Data Access Controls'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch7', chapterNumber: 7, title: 'Business Ethics & ICAP Code of Conduct', pages: '109–118', topics: [
+                            { id: 't1', title: '1. ICAP 5 Fundamental Principles of Ethics', romanUrdu: 'Chartered Accountants ke 5 principles: Integrity, Objectivity, Professional Competence, Confidentiality, Professional Behavior.', formula: '5 Ethics: Integrity, Objectivity, Competence, Confidentiality, Conduct', examTip: 'Confidentiality can ONLY be broken if required by law or client permission!', subNodes: ['Integrity & Objectivity', 'Ethical Threats: Self-interest, Familiarity, Advocacy', 'Safeguards against Threats'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v1-ch8', chapterNumber: 8, title: 'Sources of Business Finance & Capital', pages: '119–124', topics: [
+                            { id: 't1', title: '1. Debt vs Equity Financing & Gearing', romanUrdu: 'Debt financing par interest mandatory aur tax-deductible hota hai. Equity shares par fixed dividend obligation nahi hoti.', formula: 'Gearing Ratio = Debt / (Debt + Equity) × 100%', examTip: 'High gearing increases financial risk in periods of low profits!', subNodes: ['Ordinary Shares vs Preference Shares', 'Debentures & Bank Loans', 'Operating vs Financial Lease'] }
+                        ]
+                    }
+                ],
+                prc3v2: [
+                    {
+                        id: 'prc3v2-ch1', chapterNumber: 1, title: 'Fundamentals of Economics & PPC Curve', pages: '1–28', topics: [
+                            { id: 't1', title: '1. Scarcity & Opportunity Cost on PPC Curve', romanUrdu: 'Scarcity = Unlimited wants + Limited resources. PPC curve par Opportunity Cost next best alternative foregone hoti hai.', formula: 'Opportunity Cost = Loss of Next Best Alternative Choice', examTip: 'Points INSIDE PPC are inefficient. Points ON PPC are efficient. Points OUTSIDE PPC are unattainable.', subNodes: ['Factors of Production: Land, Labor, Capital, Enterprise', 'Concave PPC & Increasing Opportunity Cost', 'Microeconomics vs Macroeconomics'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch2', chapterNumber: 2, title: 'Demand, Supply & Market Equilibrium', pages: '29–62', topics: [
+                            { id: 't1', title: '1. Law of Demand & Supply Equilibrium', romanUrdu: 'Law of Demand: Price ↑ Quantity Demanded ↓. Law of Supply: Price ↑ Quantity Supplied ↑. Equilibrium par Qd = Qs.', formula: 'At Equilibrium: Q_d = Q_s (Market Clearing Price)', examTip: 'Price change causes MOVEMENT ALONG curve. Non-price factors (income, tax) cause SHIFT OF curve!', subNodes: ['Movement along vs Shift of Demand Curve', 'Market Equilibrium Determination', 'Price Ceiling (Shortage) vs Price Floor (Surplus)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch3', chapterNumber: 3, title: 'Elasticity of Demand & Revenue Impact', pages: '63–95', topics: [
+                            { id: 't1', title: '1. Price Elasticity of Demand (PED) & Revenue Test', romanUrdu: 'If |PED| > 1 (Elastic), price cut se Total Revenue INCREASE hoga. If |PED| < 1 (Inelastic), price increase se Total Revenue INCREASE hoga.', formula: 'PED = % ΔQd / % ΔP | YED (Income) | XED (Cross)', examTip: 'Normal Good: YED is positive (+ve). Substitute Good: XED is positive (+ve).', subNodes: ['Elastic (|PED|>1) vs Inelastic (|PED|<1)', 'Income Elasticity YED (Normal vs Inferior)', 'Cross Elasticity XED (Substitute vs Complement)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch4', chapterNumber: 4, title: 'Cost Functions & Market Structures', pages: '96–135', topics: [
+                            { id: 't1', title: '1. Profit Maximization Condition (MR = MC)', romanUrdu: 'Har firm ka profit maximize MR = MC par hota hai. Perfect Competition me Firm Price Taker hoti hai (P = MR = AR).', formula: 'Profit Maximization Rule: MR = MC', examTip: 'Monopoly firm faces downward sloping demand curve and can earn Supernormal Profit in long run!', subNodes: ['Total Cost = Fixed Cost + Variable Cost', 'Perfect Competition: Price Taker', 'Monopoly: Single seller, High barriers to entry', 'Oligopoly: Interdependence & Kinked Demand Curve'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch5', chapterNumber: 5, title: 'National Income Accounting & GDP', pages: '136–172', topics: [
+                            { id: 't1', title: '1. GDP Measurement & Real GDP Calculation', romanUrdu: 'GDP = C + I + G + (X - M). Real GDP inflation effect ko remove karta hai.', formula: 'GDP = C + I + G + (X - M) | Real GDP = (Nominal GDP / Deflator) × 100', examTip: 'GNP = GDP + Net Factor Income from Abroad (NFIA)!', subNodes: ['Expenditure, Income & Output Methods', 'GNP = GDP + Net Factor Income Abroad', 'Real GDP vs Nominal GDP'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch6', chapterNumber: 6, title: 'Keynesian Multiplier & Consumption', pages: '173–210', topics: [
+                            { id: 't1', title: '1. Keynesian Investment Multiplier K', romanUrdu: 'Investment me choti tabdeeli national income me multi-fold increase lati hai. Multiplier K = 1 / (1 - MPC) or 1 / MPS.', formula: 'K = 1 / (1 - MPC) = 1 / MPS | ΔY = K × ΔI', examTip: 'MPC + MPS = 1 ALWAYS. If MPC = 0.8, Multiplier K = 5!', subNodes: ['Consumption Function C = a + bY', 'Marginal Propensity to Consume MPC', 'Investment Multiplier Effect'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch7', chapterNumber: 7, title: 'Money, Commercial Banks & Central Bank', pages: '211–248', topics: [
+                            { id: 't1', title: '1. Credit Creation & Monetary Policy Tools', romanUrdu: 'State Bank inflation control karne ke liye Interest Rate (Policy Rate) aur Cash Reserve Ratio (CRR) KO INCREASE karta hai.', formula: 'Money Multiplier = 1 / Cash Reserve Ratio (CRR)', examTip: 'To control INFLATION, SBP uses Contractionary Monetary Policy (Higher Interest Rates)!', subNodes: ['Functions of Money', 'Credit Multiplier = 1 / CRR', 'Expansionary vs Contractionary Monetary Policy'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch8', chapterNumber: 8, title: 'Public Finance, Taxation & Budget Deficit', pages: '249–275', topics: [
+                            { id: 't1', title: '1. Fiscal Policy & Principles of Taxation', romanUrdu: 'Direct tax (Income tax) progressive hota hai. Indirect tax (Sales tax) regressive hota hai.', formula: 'Budget Deficit = Total Govt Expenditure - Total Revenue', examTip: 'Progressive tax takes higher % from high income earners. Regressive tax hits low income harder!', subNodes: ['Direct vs Indirect Taxes', 'Expansionary vs Contractionary Fiscal Policy', 'Canons of Taxation (Adam Smith)'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch9', chapterNumber: 9, title: 'Inflation, Unemployment & Business Cycle', pages: '276–300', topics: [
+                            { id: 't1', title: '1. Demand-Pull vs Cost-Push Inflation', romanUrdu: 'Demand-pull inflation Aggregate Demand (AD) barhne se hoti hai. Cost-push raw material / wage costs barhne se hoti hai.', formula: 'Inflation Rate = [(CPI_current - CPI_prev) / CPI_prev] × 100%', examTip: 'Frictional unemployment is temporary transition. Structural is long-term skill mismatch!', subNodes: ['Demand-Pull vs Cost-Push Inflation', 'Types of Unemployment (Frictional, Structural, Cyclical)', 'Phases of Business Cycle'] }
+                        ]
+                    },
+                    {
+                        id: 'prc3v2-ch10', chapterNumber: 10, title: 'International Trade & Balance of Payments', pages: '301–320', topics: [
+                            { id: 't1', title: '1. Comparative Advantage & Balance of Payments (BOP)', romanUrdu: 'Comparative Advantage LOWEST Opportunity Cost par hoti hai. BOP Current Account me trade in goods & services record hoti hai.', formula: 'Current Account = (Exports - Imports) + Net Income + Net Transfers', examTip: 'Devaluation of Rupee makes exports cheaper and imports expensive to reduce trade deficit!', subNodes: ['Absolute vs Comparative Advantage', 'Current Account vs Capital Account', 'Fixed vs Floating Exchange Rates'] }
+                        ]
+                    }
+                ]
             };
-            document.getElementById('header-page-title').innerText = titleMap[viewName] || 'PRC Platform';
 
-            // Update desktop sidebar active item
-            const navItems = document.querySelectorAll('.sidebar .nav-item');
-            navItems.forEach(item => item.classList.remove('active'));
-            if (element) {
-                element.classList.add('active');
-            }
-        }
+            let currentMMSubjectId = 'prc1';
+            let currentMMChapterId = 'prc1-ch1';
 
-        function toggleTheme() {
-            const html = document.documentElement;
-            const current = html.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', next);
-        }
-
-        function checkAnswer(qIdx, optionIdx, btnElement) {
-            const options = document.querySelectorAll('#options-container .option-btn');
-            options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
-
-            const correctAnswerIdx = 0; // Correct is A (116,000)
-            if (optionIdx === correctAnswerIdx) {
-                btnElement.classList.add('correct');
-            } else {
-                btnElement.classList.add('incorrect');
-                options[correctAnswerIdx].classList.add('correct');
+            function initMindMapsApp() {
+                renderMMSubjectTabs();
+                selectMMSubject(currentMMSubjectId);
             }
 
-            document.getElementById('explanation-container').style.display = 'block';
-        }
+            function renderMMSubjectTabs() {
+                const container = document.getElementById('mm-subject-tabs-container');
+                if (!container) return;
+                container.innerHTML = mmSubjectsList.map(s => `
+                    <button class="mm-subj-btn ${s.id === currentMMSubjectId ? 'active' : ''}" 
+                            onclick="selectMMSubject('${s.id}')"
+                            style="${s.id === currentMMSubjectId ? `border-color:${s.color}; background:rgba(${hexToRgb(s.color)}, 0.15);` : ''}">
+                        <span>${s.icon}</span>
+                        <span>${s.code} - ${s.shortName}</span>
+                    </button>
+                `).join('');
+            }
 
-        function handleSearch(query) {
-            if (!query) return;
-            console.log('Searching for:', query);
-        }
-    </script>
+            function selectMMSubject(subjId) {
+                currentMMSubjectId = subjId;
+                renderMMSubjectTabs();
+
+                const chapters = mmDataStore[subjId] || [];
+                document.getElementById('mm-chapter-count-badge').innerText = `${chapters.length} Chapters`;
+
+                if (chapters.length > 0) {
+                    currentMMChapterId = chapters[0].id;
+                }
+                renderMMChaptersList();
+                renderMMCanvas();
+            }
+
+            function renderMMChaptersList() {
+                const container = document.getElementById('mm-chapter-list-container');
+                if (!container) return;
+                const chapters = mmDataStore[currentMMSubjectId] || [];
+
+                container.innerHTML = chapters.map(ch => `
+                    <button class="mm-ch-item ${ch.id === currentMMChapterId ? 'active' : ''}" 
+                            onclick="selectMMChapter('${ch.id}')">
+                        <span class="mm-ch-num">Ch.${ch.chapterNumber}</span>
+                        <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${ch.title}</span>
+                    </button>
+                `).join('');
+            }
+
+            function selectMMChapter(chId) {
+                currentMMChapterId = chId;
+                renderMMChaptersList();
+                renderMMCanvas();
+            }
+
+            function renderMMCanvas() {
+                const container = document.getElementById('mm-canvas-container');
+                if (!container) return;
+
+                const chapters = mmDataStore[currentMMSubjectId] || [];
+                const activeSubject = mmSubjectsList.find(s => s.id === currentMMSubjectId) || mmSubjectsList[0];
+                const activeChapter = chapters.find(c => c.id === currentMMChapterId) || chapters[0];
+
+                if (!activeChapter) {
+                    container.innerHTML = `<div style="text-align:center; padding:40px; color:var(--text-muted);">No mind maps available for this chapter.</div>`;
+                    return;
+                }
+
+                container.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                        <span class="badge" style="background:rgba(${hexToRgb(activeSubject.color)},0.2); color:${activeSubject.color}; border:1px solid ${activeSubject.color};">
+                            ${activeSubject.code} • Chapter ${activeChapter.chapterNumber} (Book Pages ${activeChapter.pages})
+                        </span>
+                        <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">Click any card to open full detail</span>
+                    </div>
+
+                    <!-- ROOT CHAPTER NODE -->
+                    <div class="mm-root-card" style="border-color:${activeSubject.color}">
+                        <div class="mm-root-icon" style="background:rgba(${hexToRgb(activeSubject.color)}, 0.2); color:${activeSubject.color}">
+                            ${activeSubject.icon}
+                        </div>
+                        <div>
+                            <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); font-weight:700;">Core Concept Tree</div>
+                            <h2 style="margin:2px 0 4px 0; font-size:1.25rem; color:var(--text-main);">${activeChapter.title}</h2>
+                            <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">${activeChapter.topics.length} Interactive Topics • Roman Urdu & ICAP Exam Focus</p>
+                        </div>
+                    </div>
+
+                    <!-- TOPIC NODES GRID -->
+                    <div class="mm-nodes-grid">
+                        ${activeChapter.topics.map((t, idx) => `
+                            <div class="mm-node-card" onclick="openTopicModal('${t.id}')">
+                                <div>
+                                    <div class="mm-node-title">${t.title}</div>
+                                    <div class="mm-roman-box">
+                                        <span class="mm-roman-tag">Roman Urdu Explanation</span><br>
+                                        ${t.romanUrdu}
+                                    </div>
+                                    ${t.formula ? `<div class="mm-formula-box"><strong>Formula/Rule:</strong> ${t.formula}</div>` : ''}
+                                    ${t.examTip ? `<div class="mm-exam-tip"><strong>⚠️ ICAP Exam Tip:</strong> ${t.examTip}</div>` : ''}
+                                </div>
+                                <button class="mm-open-btn" style="margin-top:12px;">
+                                    <span>🔍 Open Concept Details</span>
+                                </button>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            function openTopicModal(topicId) {
+                const chapters = mmDataStore[currentMMSubjectId] || [];
+                const activeChapter = chapters.find(c => c.id === currentMMChapterId) || chapters[0];
+                if (!activeChapter) return;
+                const topic = activeChapter.topics.find(t => t.id === topicId);
+                if (!topic) return;
+
+                const activeSubject = mmSubjectsList.find(s => s.id === currentMMSubjectId);
+                const modal = document.getElementById('mm-topic-modal');
+                const titleEl = document.getElementById('mm-modal-title');
+                const badgeEl = document.getElementById('mm-modal-badge');
+                const bodyEl = document.getElementById('mm-modal-body');
+
+                badgeEl.innerText = `${activeSubject.code} • Chapter ${activeChapter.chapterNumber}`;
+                titleEl.innerText = topic.title;
+
+                bodyEl.innerHTML = `
+                    <div class="mm-roman-box" style="font-size:0.95rem; padding:14px; margin-bottom:16px;">
+                        <span class="mm-roman-tag" style="font-size:0.8rem;">Detailed Roman Urdu Explanation</span><br>
+                        ${topic.romanUrdu}
+                    </div>
+
+                    ${topic.formula ? `
+                        <div class="mm-formula-box" style="font-size:0.9rem; padding:12px; margin-bottom:16px;">
+                            <div style="font-weight:700; color:#60a5fa; margin-bottom:4px;">📐 Key Formula / Accounting Entry Rule:</div>
+                            <div>${topic.formula}</div>
+                        </div>
+                    ` : ''}
+
+                    ${topic.examTip ? `
+                        <div class="mm-exam-tip" style="font-size:0.88rem; padding:12px; margin-bottom:16px;">
+                            <div style="font-weight:700; color:#ef4444; margin-bottom:4px;">⚠️ ICAP Exam Trap & Examiner Guidance:</div>
+                            <div>${topic.examTip}</div>
+                        </div>
+                    ` : ''}
+
+                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:16px;">
+                        <h4 style="margin:0 0 10px 0; color:var(--text-main); font-size:0.92rem;">🌿 Sub-Concept Nodes & Breakdown:</h4>
+                        <ul style="margin:0; padding-left:20px; line-height:1.7; color:var(--text-muted); font-size:0.88rem;">
+                            ${topic.subNodes.map(sub => `<li>${sub}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+
+                modal.style.display = 'flex';
+            }
+
+            function closeTopicModal() {
+                const modal = document.getElementById('mm-topic-modal');
+                if (modal) modal.style.display = 'none';
+            }
+
+            function hexToRgb(hex) {
+                hex = hex.replace('#', '');
+                const r = parseInt(hex.substring(0, 2), 16);
+                const g = parseInt(hex.substring(2, 4), 16);
+                const b = parseInt(hex.substring(4, 6), 16);
+                return `${r}, ${g}, ${b}`;
+            }
+
+            // ==========================================
+            // STUDENT PROFILE CONTROLLER & PERSISTENCE
+            // ==========================================
+            const defaultProfileData = {
+                name: 'Manal Fatima',
+                crn: 'CR-2026-90412',
+                phone: '0300-1234567',
+                email: 'manal.fatima@icap.org.pk',
+                session: 'Autumn 2026 Attempt'
+            };
+
+            function getStudentProfile() {
+                try {
+                    const stored = localStorage.getItem('prc_student_profile');
+                    if (stored) return JSON.parse(stored);
+                } catch (e) {
+                    console.error('Error loading student profile from localStorage:', e);
+                }
+                return defaultProfileData;
+            }
+
+            function computeInitials(name) {
+                if (!name) return 'PR';
+                const parts = name.trim().split(' ').filter(Boolean);
+                if (parts.length >= 2) {
+                    return (parts[0][0] + parts[1][0]).toUpperCase();
+                }
+                return name.slice(0, 2).toUpperCase();
+            }
+
+            function loadStudentProfile() {
+                const prof = getStudentProfile();
+                const initials = computeInitials(prof.name);
+
+                // 1. Sidebar Elements
+                const sbInitials = document.getElementById('sidebar-avatar-initials');
+                const sbName = document.getElementById('sidebar-display-name');
+                const sbCrn = document.getElementById('sidebar-display-crn');
+                if (sbInitials) sbInitials.innerText = initials;
+                if (sbName) sbName.innerText = prof.name;
+                if (sbCrn) sbCrn.innerText = `CRN: ${prof.crn}`;
+
+                // 2. Dashboard Welcome Header
+                const dashName = document.getElementById('dash-welcome-name');
+                const dashCrn = document.getElementById('dash-welcome-crn');
+                const firstName = prof.name.split(' ')[0] || prof.name;
+                if (dashName) dashName.innerText = `Welcome back, ${firstName} 👋`;
+                if (dashCrn) dashCrn.innerText = `ICAP PRC Registration ID: ${prof.crn} • ${prof.session}`;
+
+                // 3. Profile View Preview Card
+                const cardAvatar = document.getElementById('profile-card-avatar');
+                const cardName = document.getElementById('profile-card-name');
+                const cardCrn = document.getElementById('profile-card-crn');
+                const cardEmail = document.getElementById('profile-card-email');
+                const cardPhone = document.getElementById('profile-card-phone');
+                const cardSession = document.getElementById('profile-card-session');
+
+                if (cardAvatar) cardAvatar.innerText = initials;
+                if (cardName) cardName.innerText = prof.name;
+                if (cardCrn) cardCrn.innerText = `CRN: ${prof.crn}`;
+                if (cardEmail) cardEmail.innerText = prof.email;
+                if (cardPhone) cardPhone.innerText = prof.phone;
+                if (cardSession) cardSession.innerText = prof.session;
+
+                // 4. Input Form Fields
+                const inputName = document.getElementById('input-profile-name');
+                const inputCrn = document.getElementById('input-profile-crn');
+                const inputPhone = document.getElementById('input-profile-phone');
+                const inputEmail = document.getElementById('input-profile-email');
+                const inputSession = document.getElementById('input-profile-session');
+
+                if (inputName) inputName.value = prof.name;
+                if (inputCrn) inputCrn.value = prof.crn;
+                if (inputPhone) inputPhone.value = prof.phone;
+                if (inputEmail) inputEmail.value = prof.email;
+                if (inputSession) inputSession.value = prof.session;
+            }
+
+            function saveStudentProfile(event) {
+                if (event) event.preventDefault();
+
+                const name = document.getElementById('input-profile-name').value.trim() || 'Student Name';
+                const crn = document.getElementById('input-profile-crn').value.trim() || 'CR-2026-00000';
+                const phone = document.getElementById('input-profile-phone').value.trim() || '0300-0000000';
+                const email = document.getElementById('input-profile-email').value.trim() || 'student@icap.org.pk';
+                const session = document.getElementById('input-profile-session').value;
+
+                const prof = { name, crn, phone, email, session };
+                localStorage.setItem('prc_student_profile', JSON.stringify(prof));
+
+                // Instantly update UI components across the platform
+                loadStudentProfile();
+
+                // Display success toast notification
+                const alertEl = document.getElementById('profile-save-alert');
+                if (alertEl) {
+                    alertEl.style.display = 'block';
+                    setTimeout(() => { alertEl.style.display = 'none'; }, 4000);
+                }
+            }
+
+            function resetProfileToDefault() {
+                localStorage.removeItem('prc_student_profile');
+                loadStudentProfile();
+
+                const alertEl = document.getElementById('profile-save-alert');
+                if (alertEl) {
+                    alertEl.innerHTML = '🔄 Profile reset to default demo candidate details.';
+                    alertEl.style.display = 'block';
+                    setTimeout(() => { alertEl.style.display = 'none'; }, 3000);
+                }
+            }
+
+            // Hook initMindMapsApp, loadStudentProfile & initPracticeCenterApp into DOM load
+            document.addEventListener('DOMContentLoaded', () => {
+                initMindMapsApp();
+                loadStudentProfile();
+                initPracticeCenterApp();
+            });
+
+            // Clean switchView function for sidebar navigation
+            window.switchView = function (viewName, element) {
+                // Hide all view sections
+                const sections = document.querySelectorAll('.view-section');
+                sections.forEach(s => s.classList.remove('active'));
+
+                // Show selected section
+                const activeSection = document.getElementById(`view-${viewName}`);
+                if (activeSection) {
+                    activeSection.classList.add('active');
+                }
+
+                // Update header title
+                const titleMap = {
+                    'dashboard': 'Dashboard Overview',
+                    'study': 'Study Library & PDF Reader',
+                    'mindmaps': 'Roman Urdu Mind Maps & Concept Trees',
+                    'practice': 'Practice Center (4 Subjects & Chapter Quizzes)',
+                    'mockexams': 'Mock Exam Simulator',
+                    'evaluation': 'Preparation Evaluation Engine',
+                    'revision': 'Quick Revision & Formula Bank',
+                    'mistakes': 'Mistake Book (Saved Error Log)',
+                    'progress': 'Progress Timeline & Streak',
+                    'profile': 'Student Profile & Settings'
+                };
+                const headerTitle = document.getElementById('header-page-title');
+                if (headerTitle) {
+                    headerTitle.innerText = titleMap[viewName] || 'PRC Platform';
+                }
+
+                // Update desktop sidebar active item
+                const navItems = document.querySelectorAll('.sidebar .nav-item');
+                navItems.forEach(item => item.classList.remove('active'));
+                if (element) {
+                    element.classList.add('active');
+                }
+
+                // Initialize mind maps if mindmaps view is opened
+                if (viewName === 'mindmaps') {
+                    initMindMapsApp();
+                }
+
+                // Initialize practice center if practice view is opened
+                if (viewName === 'practice') {
+                    initPracticeCenterApp();
+                }
+            };
+
+            function openPdfReader(pdfFile, title, pageNum = 1) {
+                const modal = document.getElementById('pdf-reader-modal');
+                const iframe = document.getElementById('pdf-frame');
+                const titleEl = document.getElementById('pdf-modal-title');
+                const downloadBtn = document.getElementById('pdf-download-btn');
+
+                titleEl.textContent = title + (pageNum > 1 ? ` (Page ${pageNum})` : '');
+                downloadBtn.href = pdfFile;
+                iframe.src = pdfFile + (pageNum > 1 ? `#page=${pageNum}` : '');
+                modal.style.display = 'flex';
+            }
+
+            function closePdfReader() {
+                const modal = document.getElementById('pdf-reader-modal');
+                const iframe = document.getElementById('pdf-frame');
+                iframe.src = '';
+                modal.style.display = 'none';
+            }
+
+            function toggleTheme() {
+                const html = document.documentElement;
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+            }
+
+            // ==========================================
+            // 4-SUBJECT CHAPTER-WISE PRACTICE QUIZ ENGINE
+            // ==========================================
+            let currentPracticeSubjectId = 'prc1';
+            let currentPracticeChapterId = null;
+            let currentQuizState = null;
+
+            const practiceDataStore = {
+                prc1: {
+                    'prc1-ch1': [
+                        { id: 'p-1', qText: 'Which fundamental accounting concept requires that business transactions are recorded separately from the personal transactions of its owners?', options: ['Going Concern Concept', 'Business Entity Concept', 'Accrual Concept', 'Prudence Concept'], correct: 1, working: 'Business Entity Concept separates the identity of the business from its owners.', romanUrdu: 'Business Entity Concept ke mutabiq business aur owner alag pehchan rakhte hain. Owner ke personal kharche business accounts me record nahi hote.' },
+                        { id: 'p-2', qText: 'Under the historical cost convention, an asset purchased for Rs. 500,000 with a current market value of Rs. 700,000 should be recorded at:', options: ['Rs. 700,000', 'Rs. 500,000 (less accumulated depreciation)', 'Rs. 700,000 (less selling costs)', 'Rs. 200,000 gain'], correct: 1, working: 'Historical Cost principle dictates assets are recorded at purchase price.', romanUrdu: 'Historical Cost rule ke tehat asset original khareed qeemat par rehta hai, market value barhne se balance sheet me valuation nahi barhti.' }
+                    ],
+                    'prc1-ch2': [
+                        { id: 'p-3', qText: 'In which book of prime entry is a credit purchase of office machinery recorded?', options: ['Purchases Day Book', 'Cash Book', 'General Journal', 'Petty Cash Book'], correct: 2, working: 'Purchases Day Book is strictly for credit inventory. Non-current assets go to General Journal.', romanUrdu: 'Purchases Day Book sirf resale inventory ke liye hota hai. Non-current asset credit par khareedne par General Journal me entry hoti hai.' }
+                    ],
+                    'prc1-ch4': [
+                        { id: 'p-4', qText: 'At 1 Jan 2025, rent prepayment was Rs. 12,000. Rent paid during the year was Rs. 96,000. At 31 Dec 2025, rent accrued was Rs. 8,000. What is the rent expense in Profit or Loss?', options: ['Rs. 116,000', 'Rs. 100,000', 'Rs. 92,000', 'Rs. 80,000'], correct: 0, working: 'P&L Expense = Cash Paid (96,000) + Op. Prepayment (12,000) + Cl. Accrual (8,000) = Rs. 116,000.', romanUrdu: 'Opening prepayment pichle saal pay hua tha par is saal ka expense hai (+12,000). Closing accrual abhi pay nahi hua par is saal ka hai (+8,000).' }
+                    ],
+                    'prc1-ch6': [
+                        { id: 'p-5', qText: 'An asset costing Rs. 1,000,000 was purchased on 1 Jan 2024 (Residual value Rs. 100,000, Life 5 years, Straight Line). What is NBV at 31 Dec 2025?', options: ['Rs. 640,000', 'Rs. 820,000', 'Rs. 600,000', 'Rs. 720,000'], correct: 0, working: 'Depreciation = (1,000,000 - 100,000)/5 = 180,000/yr. 2 yrs Dep = 360,000. NBV = 1,000,000 - 360,000 = Rs. 640,000.', romanUrdu: 'Har saal ki depreciation 180,000 banne gi. 2 saal ke baad Total Dep = 360,000. Carrying cost = Cost - Accumulated Dep.' }
+                    ]
+                },
+                prc2: {
+                    'prc2-ch1': [
+                        { id: 'p-6', qText: 'Solve the linear equation: 4x - 12 = 2x + 8. What is the value of x?', options: ['x = 10', 'x = 5', 'x = 8', 'x = 4'], correct: 0, working: '4x - 2x = 8 + 12 => 2x = 20 => x = 10.', romanUrdu: 'x terms ko aik side par aur constants ko doosri side par arrange karein: 2x = 20, is liye x = 10.' }
+                    ],
+                    'prc2-ch3': [
+                        { id: 'p-7', qText: 'Calculate compound interest on Rs. 100,000 invested at 10% per annum compounded semi-annually for 2 years.', options: ['Rs. 20,000', 'Rs. 21,550.63', 'Rs. 21,000', 'Rs. 22,500'], correct: 1, working: 'A = 100,000 × (1 + 0.05)^4 = 121,550.63. Interest = 121,550.63 - 100,000 = Rs. 21,550.63.', romanUrdu: 'Semi-annual compounding me rate aadha (5%) aur periods double (4) honge. Compound interest = Amount - Principal.' }
+                    ]
+                },
+                prc3v1: {
+                    'prc3v1-ch1': [
+                        { id: 'p-8', qText: 'According to Mendelow Stakeholder Matrix, stakeholders with High Power and High Interest should be:', options: ['Kept Informed', 'Kept Satisfied', 'Managed Closely (Key Players)', 'Monitored with minimum effort'], correct: 2, working: 'Mendelow Matrix: High Power + High Interest = Key Players (Manage Closely).', romanUrdu: 'High Power aur High Interest wale stakeholders Key Players hote hain jinhe har faislay me closely manage kiya jata hai.' }
+                    ]
+                },
+                prc3v2: {
+                    'prc3v2-ch2': [
+                        { id: 'p-9', qText: 'If a rise in price of Good A leads to a decrease in demand for Good B, Goods A and B are:', options: ['Substitute Goods', 'Complementary Goods', 'Inferior Goods', 'Giffen Goods'], correct: 1, working: 'Complementary goods are consumed together. Price rise in one reduces demand for the other.', romanUrdu: 'Complementary goods (jaise Car aur Petrol) sath istemal hote hain. Aik ki price barhne se doosre ki demand gir jati hai.' }
+                    ]
+                }
+            };
+
+            function initPracticeCenterApp() {
+                renderPracticeSubjectTabs();
+                renderPracticeChapterGrid(currentPracticeSubjectId);
+            }
+
+            function renderPracticeSubjectTabs() {
+                const tabsContainer = document.getElementById('practice-subject-tabs');
+                if (!tabsContainer) return;
+
+                tabsContainer.innerHTML = mmSubjectsList.map(s => `
+                    <button class="mm-subj-btn ${currentPracticeSubjectId === s.id ? 'active' : ''}" onclick="switchPracticeSubject('${s.id}')">
+                        <span>${s.icon}</span>
+                        <span>${s.code} - ${s.shortName}</span>
+                    </button>
+                `).join('');
+            }
+
+            function switchPracticeSubject(subjectId) {
+                currentPracticeSubjectId = subjectId;
+                renderPracticeSubjectTabs();
+                renderPracticeChapterGrid(subjectId);
+            }
+
+            function renderPracticeChapterGrid(subjectId) {
+                const container = document.getElementById('practice-main-container');
+                if (!container) return;
+
+                const chapters = mmDataStore[subjectId] || [];
+                const activeSubject = mmSubjectsList.find(s => s.id === subjectId);
+                const subjQuestions = practiceDataStore[subjectId] || {};
+
+                container.innerHTML = `
+                    <div style="background:var(--bg-surface); border-radius:14px; padding:24px; border:1px solid var(--border-color); margin-bottom:20px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                            <div>
+                                <span class="badge badge-info">${activeSubject.code} • ${activeSubject.name}</span>
+                                <h2 style="margin:6px 0 0 0; font-size:1.3rem; color:var(--text-main);">Select Chapter for MCQ Practice</h2>
+                            </div>
+                            <span class="badge badge-gold">${chapters.length} Chapters Available</span>
+                        </div>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Select any chapter below to start instant MCQ quiz with step-by-step Roman Urdu explanations and examiner tips.</p>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:16px;">
+                        ${chapters.map(ch => {
+                    const qList = subjQuestions[ch.id] || [
+                        { id: `${ch.id}-q1`, qText: `Sample question on ${ch.title}. Identify the correct core principle according to ICAP study manual.`, options: ['Option A (Correct Concept)', 'Option B (Common Trap)', 'Option C (Incorrect Rule)', 'Option D (Irrelevant)'], correct: 0, working: `Core concept from ICAP ${activeSubject.code} Chapter ${ch.chapterNumber} (Pages ${ch.pages}).`, romanUrdu: `${ch.title} par ICAP exam test karta hai. Is chapter ke rules ko achi tarah samajhna zaroori hai.` }
+                    ];
+                    return `
+                                <div class="card" style="display:flex; flex-direction:column; justify-space-between; transition:all 0.2s ease;">
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--gold-500); font-weight:700; margin-bottom:6px;">
+                                            <span>CHAPTER ${ch.chapterNumber}</span>
+                                            <span>Pages ${ch.pages}</span>
+                                        </div>
+                                        <h3 style="font-size:1rem; margin:0 0 10px 0; color:var(--text-main);">${ch.title}</h3>
+                                        <div style="display:flex; gap:8px; margin-bottom:14px;">
+                                            <span class="badge badge-blue" style="font-size:0.75rem;">${qList.length} Practice MCQs</span>
+                                            <span class="badge badge-gold" style="font-size:0.75rem;">ICAP Exam Standard</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" style="width:100%; padding:9px 14px; font-weight:700; font-size:0.85rem;" onclick="startPracticeQuiz('${subjectId}', '${ch.id}')">
+                                        ▶ Start Chapter Quiz
+                                    </button>
+                                </div>
+                            `;
+                }).join('')}
+                    </div>
+                `;
+            }
+
+            function startPracticeQuiz(subjectId, chapterId) {
+                const chapters = mmDataStore[subjectId] || [];
+                const chObj = chapters.find(c => c.id === chapterId) || { chapterNumber: 1, title: 'Chapter Quiz' };
+                const subjQuestions = practiceDataStore[subjectId] || {};
+                const qList = subjQuestions[chapterId] || [
+                    { id: `${chapterId}-q1`, qText: `Sample practice question on ${chObj.title}. Identify the correct rule according to ICAP PRC syllabus.`, options: ['Option A (Correct)', 'Option B', 'Option C', 'Option D'], correct: 0, working: `Concept covered in ICAP Chapter ${chObj.chapterNumber}.`, romanUrdu: `Chapter ${chObj.chapterNumber} par concept clarity zaroori hai.` }
+                ];
+
+                currentQuizState = {
+                    subjectId,
+                    chapterId,
+                    chapterTitle: chObj.title,
+                    chapterNumber: chObj.chapterNumber,
+                    questions: qList,
+                    currentIndex: 0,
+                    userAnswers: new Array(qList.length).fill(null),
+                    submitted: false
+                };
+
+                renderQuizPlayer();
+            }
+
+            function renderQuizPlayer() {
+                const container = document.getElementById('practice-main-container');
+                if (!container || !currentQuizState) return;
+
+                const q = currentQuizState.questions[currentQuizState.currentIndex];
+                const total = currentQuizState.questions.length;
+                const activeSubject = mmSubjectsList.find(s => s.id === currentQuizState.subjectId);
+                const currentAns = currentQuizState.userAnswers[currentQuizState.currentIndex];
+
+                container.innerHTML = `
+                    <div class="card">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                            <button class="btn btn-outline" style="padding:6px 14px; font-size:0.8rem;" onclick="renderPracticeChapterGrid('${currentQuizState.subjectId}')">
+                                ← Back to Chapters
+                            </button>
+                            <div style="display:flex; gap:8px;">
+                                <span class="badge badge-blue">${activeSubject.code} • Chapter ${currentQuizState.chapterNumber}</span>
+                                <span class="badge badge-gold">Question ${currentQuizState.currentIndex + 1} of ${total}</span>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom:20px; font-size:1.15rem; line-height:1.4; color:var(--text-main);">
+                            ${q.qText}
+                        </h3>
+
+                        <div id="quiz-options-grid">
+                            ${q.options.map((opt, idx) => {
+                    const letter = String.fromCharCode(65 + idx);
+                    let btnClass = 'option-btn';
+                    if (currentAns !== null) {
+                        if (idx === q.correct) btnClass += ' correct';
+                        else if (idx === currentAns) btnClass += ' incorrect';
+                    }
+                    return `
+                                    <div class="${btnClass}" onclick="selectQuizOption(${idx})">
+                                        <div class="option-letter">${letter}</div>
+                                        <div style="flex:1;">${opt}</div>
+                                    </div>
+                                `;
+                }).join('')}
+                        </div>
+
+                        ${currentAns !== null ? `
+                            <div class="explanation-box" style="margin-top:20px;">
+                                <div style="font-weight:700; color:#60a5fa; margin-bottom:6px;">✅ Step-by-Step Working & Concept:</div>
+                                <div style="font-size:0.9rem; color:var(--text-main); margin-bottom:10px;">${q.working}</div>
+                                <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:8px;">
+                                    <span class="mm-roman-tag">Roman Urdu Explanation</span><br>
+                                    <p style="margin:4px 0 0 0; font-size:0.88rem; color:var(--text-muted);">${q.romanUrdu}</p>
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; border-top:1px solid var(--border-color); padding-top:16px;">
+                            <button class="btn btn-outline" style="padding:8px 18px;" ${currentQuizState.currentIndex === 0 ? 'disabled' : ''} onclick="navigateQuizQuestion(-1)">
+                                ← Previous
+                            </button>
+                            <div>
+                                ${currentQuizState.currentIndex < total - 1 ? `
+                                    <button class="btn btn-primary" style="padding:8px 22px;" onclick="navigateQuizQuestion(1)">
+                                        Next Question →
+                                    </button>
+                                ` : `
+                                    <button class="btn btn-primary" style="padding:8px 24px; background:#16a34a;" onclick="finishQuizSession()">
+                                        🏁 Finish Quiz & View Results
+                                    </button>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function selectQuizOption(optionIdx) {
+                if (!currentQuizState) return;
+                currentQuizState.userAnswers[currentQuizState.currentIndex] = optionIdx;
+                renderQuizPlayer();
+            }
+
+            function navigateQuizQuestion(direction) {
+                if (!currentQuizState) return;
+                currentQuizState.currentIndex += direction;
+                renderQuizPlayer();
+            }
+
+            function finishQuizSession() {
+                if (!currentQuizState) return;
+                const container = document.getElementById('practice-main-container');
+                if (!container) return;
+
+                let correctCount = 0;
+                currentQuizState.questions.forEach((q, i) => {
+                    if (currentQuizState.userAnswers[i] === q.correct) correctCount++;
+                });
+
+                const percentage = Math.round((correctCount / currentQuizState.questions.length) * 100);
+                const activeSubject = mmSubjectsList.find(s => s.id === currentQuizState.subjectId);
+
+                container.innerHTML = `
+                    <div class="card" style="text-align:center; padding:36px 20px;">
+                        <div style="font-size:3.5rem; margin-bottom:12px;">🎉</div>
+                        <span class="badge badge-gold">${activeSubject.code} • Chapter ${currentQuizState.chapterNumber} Quiz</span>
+                        <h2 style="margin:10px 0 6px 0; font-size:1.6rem; color:var(--text-main);">Quiz Completed!</h2>
+                        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">${currentQuizState.chapterTitle}</p>
+
+                        <div style="display:inline-flex; align-items:center; gap:20px; background:rgba(255,255,255,0.03); border:1px solid var(--border-color); padding:16px 32px; border-radius:14px; margin-bottom:24px;">
+                            <div>
+                                <div style="font-size:2rem; font-weight:800; color:${percentage >= 70 ? '#4ade80' : '#f87171'}">${percentage}%</div>
+                                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Overall Score</div>
+                            </div>
+                            <div style="width:1px; height:40px; background:var(--border-color);"></div>
+                            <div>
+                                <div style="font-size:1.5rem; font-weight:700; color:var(--text-main);">${correctCount} / ${currentQuizState.questions.length}</div>
+                                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Correct Answers</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; justify-content:center; gap:12px;">
+                            <button class="btn btn-primary" onclick="startPracticeQuiz('${currentQuizState.subjectId}', '${currentQuizState.chapterId}')">
+                                🔄 Retake Chapter Quiz
+                            </button>
+                            <button class="btn btn-outline" onclick="renderPracticeChapterGrid('${currentQuizState.subjectId}')">
+                                📚 Choose Another Chapter
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function handleSearch(query) {
+                if (!query) return;
+                console.log('Searching for:', query);
+            }
+        </script>
 </body>
 
 </html>
