@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch PRC CA Exam Prep Platform</title>
+    <style>
+        :root {
+            --navy-900: #0a1628;
+            --navy-800: #132238;
+            --blue-500: #2563eb;
+            --blue-400: #60a5fa;
+            --gold-500: #d4a754;
+            --gray-100: #f3f4f6;
+            --gray-400: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--navy-900), #060d18);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--navy-800);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .icon-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--blue-500), #1d4ed8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--gray-400);
+            font-size: 15px;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .btn-launch {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-launch:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        .routes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .route-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px;
+            color: var(--gray-100);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .route-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--blue-400);
+        }
+
+        .cmd-box {
+            margin-top: 28px;
+            background: #060d18;
+            border-radius: 10px;
+            padding: 14px;
+            text-align: left;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--gold-500);
+            border: 1px solid rgba(212, 167, 84, 0.3);
+        }
+
+        .cmd-title {
+            font-size: 11px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="icon-badge">🛡️</div>
+        <h1>PRC CA Exam Platform</h1>
+        <p>Click below to launch your web app locally at <code>http://localhost:3000</code></p>
+
+        <a href="http://localhost:3000" class="btn-launch" target="_blank">
+            🚀 Open App in Browser
+        </a>
+
+        <div class="routes-grid">
+            <a href="http://localhost:3000/dashboard" class="route-card" target="_blank">📊 Dashboard</a>
+            <a href="http://localhost:3000/study" class="route-card" target="_blank">📚 Study Library</a>
+            <a href="http://localhost:3000/practice" class="route-card" target="_blank">✏️ Practice Engine</a>
+            <a href="http://localhost:3000/mock-exams" class="route-card" target="_blank">⏱️ Mock Exams</a>
+            <a href="http://localhost:3000/mistakes" class="route-card" target="_blank">❌ Mistake Book</a>
+            <a href="http://localhost:3000/mind-maps" class="route-card" target="_blank">🌿 Mind Maps</a>
+        </div>
+
+        <div class="cmd-box">
+            <div class="cmd-title">⚡ If app server is not running, run in terminal:</div>
+            <div>cd c:\Users\PMLS\Desktop\PRC\prc-app</div>
+            <div>npm run dev</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
