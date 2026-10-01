@@ -1,0 +1,25 @@
+{
+  "name": "prc-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "firebase": "^12.19.0",
+    "lucide-react": "^1.49.0",
+    "next": "16.3.7",
+    "pdfjs-dist": "^6.3.289",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "reactflow": "^11.11.4",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.3.7"
+  }
+}

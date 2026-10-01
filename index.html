@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRC CA Exam Preparation Platform — Professional Edition</title>
+    <style>
+        /* ==========================================================================
+       DESIGN SYSTEM & CSS CUSTOM PROPERTIES
+       ========================================================================== */
+        :root {
+            --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-serif: 'Source Serif 4', Georgia, serif;
+
+            /* Color Palette */
+            --navy-950: #040914;
+            --navy-900: #0a1628;
+            --navy-800: #112239;
+            --navy-700: #1b3152;
+            --navy-600: #2a456c;
+
+            --blue-600: #1d4ed8;
+            --blue-500: #2563eb;
+            --blue-400: #60a5fa;
+            --blue-100: #dbeafe;
+            --blue-50: #eff6ff;
+
+            --gold-600: #b4852c;
+            --gold-500: #d4a754;
+            --gold-400: #fbbf24;
+            --gold-100: #fef3c7;
+
+            --emerald-600: #059669;
+            --emerald-500: #10b981;
+            --emerald-100: #d1fae5;
+
+            --rose-600: #dc2626;
+            --rose-500: #ef4444;
+            --rose-100: #fee2e2;
+
+            --gray-900: #0f172a;
+            --gray-800: #1e293b;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-500: #64748b;
+            --gray-400: #94a3b8;
+            --gray-300: #cbd5e1;
+            --gray-200: #e2e8f0;
+            --gray-100: #f1f5f9;
+            --gray-50: #f8fafc;
+
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 20px;
+            --radius-full: 9999px;
+
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.25);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: var(--navy-950);
+            --bg-surface: var(--navy-900);
+            --bg-card: var(--navy-800);
+            --bg-hover: var(--navy-700);
+            --bg-input: #07101d;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-color-hover: rgba(255, 255, 255, 0.18);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-subtle: #64748b;
+        }
+
+        [data-theme="light"] {
+            --bg-body: #f4f6f9;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f1f5f9;
+            --bg-input: #f8fafc;
+            --border-color: #e2e8f0;
+            --border-color-hover: #cbd5e1;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-subtle: #94a3b8;
+        }
+
+        /* Reset & Base */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--navy-700);
+            border-radius: 4px;
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-thumb {
+            background: var(--gray-300);
+        }
+
+        /* App Shell Layout */
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Desktop Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: var(--bg-surface);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 50;
+            transition: width var(--transition-base);
+        }
+
+        .sidebar-header {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand-logo {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-600));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+            flex-shrink: 0;
+        }
+
+        .brand-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            font-size: 0.72rem;
+            color: var(--gold-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 16px 12px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: var(--bg-hover);
+            color: var(--text-main);
+        }
+
+        .nav-item.active {
+            background-color: rgba(37, 99, 235, 0.12);
+            color: var(--blue-400);
+            border-color: rgba(37, 99, 235, 0.25);
+            font-weight: 600;
+        }
+
+        [data-theme="light"] .nav-item.active {
+            background-color: var(--blue-50);
+            color: var(--blue-600);
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-footer {
+            padding: 16px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+            color: var(--navy-950);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .user-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+            white-space: nowrap;
+        }
+
+        .user-role {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        /* Main Content Wrapper */
+        .main-wrapper {
+            flex: 1;
+            margin-left: 260px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Bar */
+        .top-header {
+            height: 70px;
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            position: sticky;
+            top: 0;
+            z-index: 40;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .page-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.3px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .search-box {
+            position: relative;
+            width: 260px;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            padding: 8px 16px 8px 38px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            outline: none;
+            transition: all var(--transition-fast);
+        }
+
+        .search-input:focus {
+            border-color: var(--blue-500);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .search-icon-svg {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            color: var(--text-muted);
+        }
+
+        .icon-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .icon-btn:hover {
+            background-color: var(--bg-hover);
+            color: var(--text-main);
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 28px;
+            flex: 1;
+        }
+
+        /* Common Card Components */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+
+        .card.hoverable:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-color-hover);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-blue {
+            background: rgba(37, 99, 235, 0.15);
+            color: var(--blue-400);
+        }
+
+        .badge-gold {
+            background: rgba(212, 167, 84, 0.15);
+            color: var(--gold-400);
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--emerald-500);
+        }
+
+        .badge-red {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--rose-500);
+        }
+
+        .badge-neutral {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+        }
+
+        [data-theme="light"] .badge-blue {
+            background: var(--blue-100);
+            color: var(--blue-600);
+        }
+
+        [data-theme="light"] .badge-gold {
+            background: var(--gold-100);
+            color: var(--gold-600);
+        }
+
+        [data-theme="light"] .badge-green {
+            background: var(--emerald-100);
+            color: var(--emerald-600);
+        }
+
+        [data-theme="light"] .badge-red {
+            background: var(--rose-100);
+            color: var(--rose-600);
+        }
+
+        [data-theme="light"] .badge-neutral {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        /* Button Component */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: var(--radius-md);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all var(--transition-fast);
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-600));
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--blue-500);
+            color: var(--blue-400);
+        }
+
+        .btn-outline:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-muted);
+        }
+
+        .btn-ghost:hover {
+            background: var(--bg-hover);
+            color: var(--text-main);
+        }
+
+        .btn-danger {
+            background: var(--rose-600);
+            color: #ffffff;
+        }
+
+        .btn-danger:hover {
+            filter: brightness(0.9);
+        }
+
+        /* Progress Bar Component */
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .progress-track {
+            background-color: var(--gray-200);
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: var(--radius-full);
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+        }
+
+        /* Grid Layout Utilities */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* View Sections Container */
+        .view-section {
+            display: none;
+            animation: fadeIn var(--transition-base);
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* DASHBOARD SPECIFIC STYLES */
+        .welcome-banner {
+            background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+            border: 1px solid rgba(212, 167, 84, 0.25);
+            border-radius: var(--radius-xl);
+            padding: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-banner::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(212, 167, 84, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .welcome-text h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .welcome-text p {
+            color: var(--gray-400);
+            font-size: 0.92rem;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .stat-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stat-icon-wrap {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .stat-val {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.1;
+        }
+
+        .stat-lbl {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .subject-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .subject-card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .subject-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+        }
+
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .subject-code {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .subject-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .subject-stats {
+            display: flex;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px dashed var(--border-color);
+            padding-top: 12px;
+        }
+
+        /* MOCK EXAMS & PRACTICE ENGINE STYLES */
+        .option-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-align: left;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .option-btn:hover {
+            border-color: var(--blue-400);
+            background-color: var(--bg-hover);
+        }
+
+        .option-letter {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--bg-input);
+            color: var(--text-main);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        .option-btn.selected {
+            border-color: var(--blue-500);
+            background-color: rgba(37, 99, 235, 0.12);
+        }
+
+        .option-btn.selected .option-letter {
+            background-color: var(--blue-500);
+            color: #ffffff;
+        }
+
+        .option-btn.correct {
+            border-color: var(--emerald-500) !important;
+            background-color: rgba(16, 185, 129, 0.12) !important;
+        }
+
+        .option-btn.correct .option-letter {
+            background-color: var(--emerald-500);
+            color: white;
+        }
+
+        .option-btn.incorrect {
+            border-color: var(--rose-500) !important;
+            background-color: rgba(239, 68, 68, 0.12) !important;
+        }
+
+        .option-btn.incorrect .option-letter {
+            background-color: var(--rose-500);
+            color: white;
+        }
+
+        .explanation-box {
+            background-color: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        .roman-urdu-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-400);
+            background: rgba(212, 167, 84, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        /* MIND MAP NODE STYLES */
+        .mindmap-node {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--blue-500);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            margin-bottom: 12px;
+            transition: all var(--transition-fast);
+        }
+
+        .mindmap-node:hover {
+            border-color: var(--blue-400);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mindmap-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .mindmap-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Mobile Navigation Bar */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            z-index: 50;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            color: var(--text-muted);
+            font-size: 0.68rem;
+            font-weight: 600;
+        }
+
+        .mobile-nav-item.active {
+            color: var(--blue-400);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main-wrapper {
+                margin-left: 0;
+            }
+
+            .mobile-nav {
+                display: flex;
+            }
+
+            .content-area {
+                padding: 18px;
+                padding-bottom: 80px;
+            }
+
+            .top-header {
+                padding: 0 16px;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- DESKTOP SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M12 8v8" />
+                        <path d="M8 12h8" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="brand-title">PRC Exam Prep</div>
+                    <div class="brand-subtitle">ICAP CA Institute</div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-item active" onclick="switchView('dashboard', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                        </svg>
+                    </div>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item" onclick="switchView('study', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
+                    <span>Study Library</span>
+                </div>
+                <div class="nav-item" onclick="switchView('mindmaps', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="5" r="3" />
+                            <circle cx="5" cy="19" r="3" />
+                            <circle cx="19" cy="19" r="3" />
+                            <path d="M12 8v4" />
+                            <path d="M12 12L7 16" />
+                            <path d="M12 12l5 4" />
+                        </svg>
+                    </div>
+                    <span>Mind Maps</span>
+                </div>
+                <div class="nav-item" onclick="switchView('practice', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                            <path d="M9 12h6" />
+                            <path d="M9 16h4" />
+                        </svg>
+                    </div>
+                    <span>Practice Center</span>
+                </div>
+                <div class="nav-item" onclick="switchView('mockexams', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <span>Mock Exams</span>
+                </div>
+                <div class="nav-item" onclick="switchView('evaluation', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                            <path d="M3 20h18" />
+                        </svg>
+                    </div>
+                    <span>Evaluation</span>
+                </div>
+                <div class="nav-item" onclick="switchView('revision', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <span>Quick Revision</span>
+                </div>
+                <div class="nav-item" onclick="switchView('mistakes', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <span>Mistake Book</span>
+                </div>
+                <div class="nav-item" onclick="switchView('progress', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" />
+                        </svg>
+                    </div>
+                    <span>Progress Log</span>
+                </div>
+                <div class="nav-item" onclick="switchView('profile', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <span>Student Profile</span>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-avatar">MF</div>
+                <div class="user-info">
+                    <div class="user-name">Manal Fatima</div>
+                    <div class="user-role">PRC Candidate #4092</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+
+            <!-- TOP HEADER -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="page-title" id="header-page-title">Dashboard Overview</div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-box">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Search chapters, concepts..."
+                            oninput="handleSearch(this.value)">
+                    </div>
+
+                    <button class="icon-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- CONTENT AREA WITH VIEWS -->
+            <main class="content-area">
+
+                <!-- VIEW 1: DASHBOARD -->
+                <section id="view-dashboard" class="view-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h2>Welcome back, Manal 👋</h2>
+                            <p>Continue your ICAP PRC CA examination preparation.</p>
+                        </div>
+                        <div class="badge badge-gold"
+                            style="font-size:0.85rem; padding: 6px 14px; display:inline-flex; align-items:center; gap:6px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                <path
+                                    d="M12 2c0 0-4 4-4 8 0 2.21 1.79 4 4 4s4-1.79 4-4c0-4-4-8-4-8zm0 18c-4.42 0-8-3.58-8-8 0-3.31 2.01-6.15 4.88-7.36C8.32 6.13 8 7.72 8 9.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5c0-1.78-.32-3.37-.88-4.86C20.99 5.85 23 8.69 23 12c0 4.42-3.58 8-8 8z" />
+                            </svg>
+                            <span>12 Day Study Streak</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-icon-wrap"
+                                style="background: rgba(37,99,235,0.15); color: var(--blue-400);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                                </svg>
+                            </div>
+                            <div class="stat-val">76%</div>
+                            <div class="stat-lbl">Overall Preparedness</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon-wrap"
+                                style="background: rgba(16,185,129,0.15); color: var(--emerald-500);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 11l3 3L22 4" />
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                                </svg>
+                            </div>
+                            <div class="stat-val">1,245</div>
+                            <div class="stat-lbl">Questions Attempted</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon-wrap"
+                                style="background: rgba(212,167,84,0.15); color: var(--gold-400);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                            </div>
+                            <div class="stat-val">81.4%</div>
+                            <div class="stat-lbl">Average Accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon-wrap" style="background: rgba(168,85,247,0.15); color: #c084fc;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div class="stat-val">14</div>
+                            <div class="stat-lbl">Mock Exams Done</div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">
+                        <span>PRC Core Subjects</span>
+                        <span style="font-size:0.85rem; color:var(--text-muted); font-weight:normal;">Official ICAP
+                            Syllabus</span>
+                    </div>
+
+                    <div class="subject-cards-grid">
+                        <div class="card subject-card hoverable">
+                            <div class="subject-accent" style="background-color: var(--blue-500);"></div>
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-code">PRC 1</div>
+                                    <div class="subject-name">Fundamentals of Accounting</div>
+                                </div>
+                                <span class="badge badge-blue">76% Done</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 76%;"></div>
+                            </div>
+                            <div class="subject-stats">
+                                <span>10 Chapters</span>
+                                <span>83% Accuracy</span>
+                                <span>447 Pages</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="switchView('study')">Continue Reading</button>
+                        </div>
+
+                        <div class="card subject-card hoverable">
+                            <div class="subject-accent" style="background-color: #7c3aed;"></div>
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-code">PRC 2</div>
+                                    <div class="subject-name">Quantitative Analysis for Business</div>
+                                </div>
+                                <span class="badge badge-gold">64% Done</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill"
+                                    style="width: 64%; background: linear-gradient(90deg,#7c3aed,#a855f7);"></div>
+                            </div>
+                            <div class="subject-stats">
+                                <span>12 Chapters</span>
+                                <span>75% Accuracy</span>
+                                <span>402 Pages</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="switchView('study')">Continue Reading</button>
+                        </div>
+
+                        <div class="card subject-card hoverable">
+                            <div class="subject-accent" style="background-color: var(--emerald-500);"></div>
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-code">PRC 3 • VOL. 1</div>
+                                    <div class="subject-name">Business & Economic Insights</div>
+                                </div>
+                                <span class="badge badge-green">87% Done</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill"
+                                    style="width: 87%; background: linear-gradient(90deg,#059669,#10b981);"></div>
+                            </div>
+                            <div class="subject-stats">
+                                <span>8 Chapters</span>
+                                <span>88% Accuracy</span>
+                                <span>124 Pages</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="switchView('study')">Continue Reading</button>
+                        </div>
+
+                        <div class="card subject-card hoverable">
+                            <div class="subject-accent" style="background-color: var(--rose-500);"></div>
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-code">PRC 3 • VOL. 2</div>
+                                    <div class="subject-name">Business & Economic Insights</div>
+                                </div>
+                                <span class="badge badge-red">58% Done</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill"
+                                    style="width: 58%; background: linear-gradient(90deg,#dc2626,#ef4444);"></div>
+                            </div>
+                            <div class="subject-stats">
+                                <span>12 Chapters</span>
+                                <span>72% Accuracy</span>
+                                <span>320 Pages</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="switchView('study')">Continue Reading</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 2: STUDY LIBRARY -->
+                <section id="view-study" class="view-section">
+                    <div class="section-title">
+                        <span>Official ICAP PRC Study Texts & PDF Reader</span>
+                        <span class="badge badge-gold">4 Complete Volumes</span>
+                    </div>
+
+                    <div class="grid-2">
+                        <!-- BOOK 1: PRC 1 -->
+                        <div class="card hoverable">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+                                <div>
+                                    <div class="subject-code" style="color:var(--blue-400);">PRC 1 • STUDY TEXT</div>
+                                    <h3 style="margin-top:2px;">Fundamentals of Accounting</h3>
+                                </div>
+                                <span class="badge badge-blue">First Edition 2025</span>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom: 14px;">
+                                Official ICAP Study Text covering Financial Accounting, Double Entry, Ledger Accounts,
+                                Trial Balance, Accruals, Depreciation (IAS 16), Inventory (IAS 2) & Financial Statements
+                                (IAS 1).
+                            </p>
+                            <div class="badge badge-neutral" style="margin-bottom:16px;">10 Chapters • 447 Pages •
+                                Official ICAP PDF</div>
+                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                <button class="btn btn-primary"
+                                    onclick="openPdfReader('PRC-1-ST FOA.pdf', 'PRC 1: Fundamentals of Accounting', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    <span>Open Full PDF</span>
+                                </button>
+                                <button class="btn btn-outline"
+                                    onclick="openPdfReader('PRC-1-ST FOA.pdf', 'PRC 1 - Chapter 4: Accruals & Prepayments', 125)">
+                                    📌 Ch 4 (Page 125)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BOOK 2: PRC 2 -->
+                        <div class="card hoverable">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+                                <div>
+                                    <div class="subject-code" style="color:#c084fc;">PRC 2 • STUDY TEXT</div>
+                                    <h3 style="margin-top:2px;">Quantitative Analysis for Business</h3>
+                                </div>
+                                <span class="badge badge-gold">Official Edition</span>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom: 14px;">
+                                Comprehensive coverage of Business Mathematics, Linear Equations, Financial Mathematics
+                                (NPV, IRR, Annuities), Measures of Central Tendency & Probability Distributions.
+                            </p>
+                            <div class="badge badge-neutral" style="margin-bottom:16px;">12 Chapters • 402 Pages •
+                                Official ICAP PDF</div>
+                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                <button class="btn btn-primary"
+                                    onclick="openPdfReader('PRC-2-ST QM.pdf', 'PRC 2: Quantitative Analysis for Business', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    <span>Open Full PDF</span>
+                                </button>
+                                <button class="btn btn-outline"
+                                    onclick="openPdfReader('PRC-2-ST QM.pdf', 'PRC 2 - Chapter 5: Financial Mathematics', 123)">
+                                    📌 Ch 5 (Page 123)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BOOK 3: PRC 3 VOL 1 -->
+                        <div class="card hoverable">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+                                <div>
+                                    <div class="subject-code" style="color:var(--emerald-500);">PRC 3 • VOLUME 1</div>
+                                    <h3 style="margin-top:2px;">Business & Economic Insights (Vol 1)</h3>
+                                </div>
+                                <span class="badge badge-green">Micro & Macro Economics</span>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom: 14px;">
+                                In-depth analysis of Fundamentals of Microeconomics, Supply & Demand Elasticity, Market
+                                Structures, Macroeconomic Indicators, Fiscal Policy & Monetary Policy.
+                            </p>
+                            <div class="badge badge-neutral" style="margin-bottom:16px;">8 Chapters • 124 Pages •
+                                Official ICAP PDF</div>
+                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                <button class="btn btn-primary"
+                                    onclick="openPdfReader('PRC-3-ST-Vol-1 BAE.pdf', 'PRC 3 Vol 1: Business & Economic Insights', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    <span>Open Full PDF</span>
+                                </button>
+                                <button class="btn btn-outline"
+                                    onclick="openPdfReader('PRC-3-ST-Vol-1 BAE.pdf', 'PRC 3 Vol 1 - Chapter 3: Elasticity of Demand', 45)">
+                                    📌 Ch 3 (Page 45)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BOOK 4: PRC 3 VOL 2 -->
+                        <div class="card hoverable">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+                                <div>
+                                    <div class="subject-code" style="color:var(--rose-500);">PRC 3 • VOLUME 2</div>
+                                    <h3 style="margin-top:2px;">Business & Economic Insights (Vol 2)</h3>
+                                </div>
+                                <span class="badge badge-red">IT & Business Ethics</span>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom: 14px;">
+                                Practical frameworks for Information Systems, E-Commerce, Data Analytics in Accountancy,
+                                Corporate Governance, Business Ethics & Professional Codes.
+                            </p>
+                            <div class="badge badge-neutral" style="margin-bottom:16px;">12 Chapters • 320 Pages •
+                                Official ICAP PDF</div>
+                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                <button class="btn btn-primary"
+                                    onclick="openPdfReader('PRC-3-ST-Vol-2 BAE.pdf', 'PRC 3 Vol 2: Information Technology & Business Insights', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    <span>Open Full PDF</span>
+                                </button>
+                                <button class="btn btn-outline"
+                                    onclick="openPdfReader('PRC-3-ST-Vol-2 BAE.pdf', 'PRC 3 Vol 2 - Chapter 7: Information Systems', 88)">
+                                    📌 Ch 7 (Page 88)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 3: ROMAN URDU MIND MAPS -->
+                <section id="view-mindmaps" class="view-section">
+                    <div class="section-title">
+                        <span>Roman Urdu Mind Maps & Concept Trees</span>
+                        <span class="badge badge-gold">Flagship Learning Feature</span>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">CHAPTER 6 —
+                            PROPERTY, PLANT & EQUIPMENT (IAS 16)</div>
+                        <div class="mindmap-node">
+                            <div class="mindmap-title">1. Initial Measurement (Asset Valuation)</div>
+                            <div class="mindmap-desc">
+                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
+                                Asset ko start me uski Purchase Price + Direct Expenses (jaise carriage, installation,
+                                testing costs) par standard measure karta hai. Discounts subtract kiye jayenge.
+                            </div>
+                        </div>
+
+                        <div class="mindmap-node">
+                            <div class="mindmap-title">2. Straight Line Depreciation Method</div>
+                            <div class="mindmap-desc">
+                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
+                                Har saal equal depreciation expensecharge hota hai. Formula:
+                                <code>(Cost - Residual Value) / Useful Life</code>.
+                            </div>
+                        </div>
+
+                        <div class="mindmap-node">
+                            <div class="mindmap-title">3. Reducing Balance Depreciation Method</div>
+                            <div class="mindmap-desc">
+                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
+                                Har saal asset ki remaining Net Book Value (NBV) par fixed percentage apply hota hai.
+                                Isme early years me zyada depreciation charge hota hai.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 4: PRACTICE CENTER -->
+                <section id="view-practice" class="view-section">
+                    <div class="section-title">Practice Center (Tutor & Timed Modes)</div>
+
+                    <div class="card" id="practice-card">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:16px;">
+                            <span class="badge badge-blue">PRC 1 • Chapter 4 (Accruals)</span>
+                            <span class="badge badge-gold">Level 3: Advanced Exam Level</span>
+                        </div>
+
+                        <h3 style="margin-bottom:20px; font-size:1.15rem; line-height:1.4;">
+                            At 1 Jan 2025, rent prepayment was Rs. 12,000. Rent paid during the year was Rs. 96,000. At
+                            31 Dec 2025, rent accrued was Rs. 8,000. What is the rent expense to be charged in the
+                            Statement of Profit or Loss?
+                        </h3>
+
+                        <div id="options-container">
+                            <div class="option-btn" onclick="checkAnswer(0, 0, this)">
+                                <div class="option-letter">A</div>
+                                <div>Rs. 116,000</div>
+                            </div>
+                            <div class="option-btn" onclick="checkAnswer(0, 1, this)">
+                                <div class="option-letter">B</div>
+                                <div>Rs. 100,000</div>
+                            </div>
+                            <div class="option-btn" onclick="checkAnswer(0, 2, this)">
+                                <div class="option-letter">C</div>
+                                <div>Rs. 92,000</div>
+                            </div>
+                            <div class="option-btn" onclick="checkAnswer(0, 3, this)">
+                                <div class="option-letter">D</div>
+                                <div>Rs. 80,000</div>
+                            </div>
+                        </div>
+
+                        <div id="explanation-container" class="explanation-box" style="display:none;">
+                            <div style="font-weight:700; color:var(--blue-400); margin-bottom:6px;">✅ Step-by-Step
+                                Working & Explanation:</div>
+                            <div>Expense = Cash Paid (96,000) + Opening Prepayment (12,000) + Closing Accrual (8,000) =
+                                <strong>Rs. 116,000</strong>.
+                            </div>
+                            <div style="margin-top:8px;">
+                                <span class="roman-urdu-badge">Roman Urdu Explanation</span><br>
+                                Opening prepayment picchle saal ka pay ho chuka tha lekin is saal ka expense hai, isliye
+                                add karenge. Closing accrual abhi pay nahi hua lekin is saal ka expense hai, isliye isko
+                                bhi add karenge.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 5: MOCK EXAM CENTER -->
+                <section id="view-mockexams" class="view-section">
+                    <div class="section-title">ICAP PRC Mock Exam Simulator</div>
+                    <div class="card" style="text-align:center; padding: 40px;">
+                        <div style="font-size:3rem; margin-bottom:12px;">⏱️</div>
+                        <h2>PRC 1 Full Syllabus Mock Exam</h2>
+                        <p style="color:var(--text-muted); margin: 8px 0 24px;">50 MCQs • 45 Minutes • Timed Simulator
+                            with Palette Navigation</p>
+                        <button class="btn btn-primary" style="padding:14px 32px;"
+                            onclick="alert('Starting 45-Minute ICAP PRC 1 Mock Exam!')">🚀 Start Full Mock Exam</button>
+                    </div>
+                </section>
+
+                <!-- VIEW 6: EVALUATION -->
+                <section id="view-evaluation" class="view-section">
+                    <div class="section-title">Preparation Evaluation Engine</div>
+                    <div class="grid-3">
+                        <div class="card">
+                            <h4>Knowledge & Concept</h4>
+                            <div class="stat-val" style="color:var(--emerald-500); margin:12px 0;">88%</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);">High conceptual clarity in PRC 1 and
+                                PRC 3 Vol 1.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Numerical Ability</h4>
+                            <div class="stat-val" style="color:var(--gold-400); margin:12px 0;">72%</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);">Needs practice on Discounted Cash
+                                Flows (PRC 2 Ch. 6).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Speed per Question</h4>
+                            <div class="stat-val" style="color:var(--blue-400); margin:12px 0;">54 sec</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);">Optimal time allocation per question
+                                (&lt; 90 seconds).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 7: QUICK REVISION -->
+                <section id="view-revision" class="view-section">
+                    <div class="section-title">Quick Revision & Formula Bank</div>
+                    <div class="card">
+                        <h3>⚡ Key Formulas (PRC 2 Quantitative Analysis)</h3>
+                        <ul style="padding-left:20px; margin-top:12px; line-height:1.8; color:var(--text-muted);">
+                            <li><strong>Compound Interest:</strong> <code>A = P (1 + r/n)^(n*t)</code></li>
+                            <li><strong>Standard Deviation:</strong> <code>SD = √Variance</code></li>
+                            <li><strong>Quadratic Formula:</strong> <code>x = [-b ± √(b² - 4ac)] / 2a</code></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- VIEW 8: MISTAKE BOOK -->
+                <section id="view-mistakes" class="view-section">
+                    <div class="section-title">
+                        <span>My Mistakes Book</span>
+                        <span class="badge badge-red">4 Saved Error Items</span>
+                    </div>
+                    <div class="card" style="margin-bottom:12px;">
+                        <div style="font-size:0.8rem; color:var(--rose-500); font-weight:700;">PRC 2 • Chapter 8
+                            (Statistics)</div>
+                        <h4 style="margin:6px 0;">If variance is 49, what is the standard deviation?</h4>
+                        <p style="font-size:0.85rem; color:var(--text-muted);">Your last answer: 2,401 (Incorrect).
+                            Correct answer: 7 (√49 = 7).</p>
+                    </div>
+                </section>
+
+                <!-- VIEW 9: PROGRESS -->
+                <section id="view-progress" class="view-section">
+                    <div class="section-title">Study Progress Log</div>
+                    <div class="card">
+                        <h3>🔥 12 Days Study Streak Active</h3>
+                        <p style="color:var(--text-muted); margin-top:4px;">You have studied every day since Sept 18,
+                            2026.</p>
+                    </div>
+                </section>
+
+                <!-- VIEW 10: PROFILE -->
+                <section id="view-profile" class="view-section">
+                    <div class="section-title">Student Profile</div>
+                    <div class="card">
+                        <h3>Manal Fatima</h3>
+                        <p style="color:var(--text-muted);">ICAP PRC Registration ID: CR-2026-90412</p>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- MOBILE BOTTOM NAVIGATION -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-item active" onclick="switchView('dashboard', this)">📊 <span>Dash</span></div>
+            <div class="mobile-nav-item" onclick="switchView('study', this)">📚 <span>Study</span></div>
+            <div class="mobile-nav-item" onclick="switchView('practice', this)">✏️ <span>Practice</span></div>
+            <div class="mobile-nav-item" onclick="switchView('mockexams', this)">⏱️ <span>Tests</span></div>
+            <div class="mobile-nav-item" onclick="switchView('profile', this)">👤 <span>Profile</span></div>
+        </nav>
+
+    </div>
+
+    <!-- FULLSCREEN INTERACTIVE PDF READER MODAL -->
+    <div id="pdf-reader-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,9,20,0.95); backdrop-filter:blur(10px); z-index:9999; flex-direction:column;">
+        <div
+            style="height:60px; background:var(--bg-surface); border-bottom:1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; padding:0 24px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div class="brand-logo" style="width:34px; height:34px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 1 4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                </div>
+                <div>
+                    <div id="pdf-modal-title"
+                        style="font-weight:700; color:var(--text-main); font-size:0.98rem; line-height:1.2;">PRC Study
+                        Text Reader</div>
+                    <div style="font-size:0.75rem; color:var(--gold-500); font-weight:600;">ICAP OFFICIAL STUDY MATERIAL
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <a id="pdf-download-btn" href="#" target="_blank" class="btn btn-outline"
+                    style="padding:6px 14px; font-size:0.82rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Open in Browser Tab</span>
+                </a>
+                <button onclick="closePdfReader()" class="btn btn-danger" style="padding:6px 14px; font-size:0.82rem;">✕
+                    Close Reader</button>
+            </div>
+        </div>
+        <div style="flex:1; width:100%; background:#0f172a; position:relative;">
+            <iframe id="pdf-frame" src="" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        function openPdfReader(pdfFile, title, pageNum = 1) {
+            const modal = document.getElementById('pdf-reader-modal');
+            const iframe = document.getElementById('pdf-frame');
+            const titleEl = document.getElementById('pdf-modal-title');
+            const downloadBtn = document.getElementById('pdf-download-btn');
+
+            titleEl.textContent = title + (pageNum > 1 ? ` (Page ${pageNum})` : '');
+            downloadBtn.href = pdfFile;
+            iframe.src = pdfFile + (pageNum > 1 ? `#page=${pageNum}` : '');
+            modal.style.display = 'flex';
+        }
+
+        function closePdfReader() {
+            const modal = document.getElementById('pdf-reader-modal');
+            const iframe = document.getElementById('pdf-frame');
+            iframe.src = '';
+            modal.style.display = 'none';
+        }
+
+        function switchView(viewName, element) {
+            // Hide all view sections
+            const sections = document.querySelectorAll('.view-section');
+            sections.forEach(s => s.classList.remove('active'));
+
+            // Show selected section
+            const activeSection = document.getElementById(`view-${viewName}`);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+
+            // Update header title
+            const titleMap = {
+                'dashboard': 'Dashboard Overview',
+                'study': 'Study Library & PDF Reader',
+                'mindmaps': 'Roman Urdu Mind Maps & Concept Trees',
+                'practice': 'Practice Center',
+                'mockexams': 'Mock Exam Simulator',
+                'evaluation': 'Preparation Evaluation Engine',
+                'revision': 'Quick Revision & Formula Bank',
+                'mistakes': 'Mistake Book (Saved Error Log)',
+                'progress': 'Progress Timeline & Streak',
+                'profile': 'Student Profile & Settings'
+            };
+            document.getElementById('header-page-title').innerText = titleMap[viewName] || 'PRC Platform';
+
+            // Update desktop sidebar active item
+            const navItems = document.querySelectorAll('.sidebar .nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            if (element) {
+                element.classList.add('active');
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+        }
+
+        function checkAnswer(qIdx, optionIdx, btnElement) {
+            const options = document.querySelectorAll('#options-container .option-btn');
+            options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+
+            const correctAnswerIdx = 0; // Correct is A (116,000)
+            if (optionIdx === correctAnswerIdx) {
+                btnElement.classList.add('correct');
+            } else {
+                btnElement.classList.add('incorrect');
+                options[correctAnswerIdx].classList.add('correct');
+            }
+
+            document.getElementById('explanation-container').style.display = 'block';
+        }
+
+        function handleSearch(query) {
+            if (!query) return;
+            console.log('Searching for:', query);
+        }
+    </script>
+</body>
+
+</html>
