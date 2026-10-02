@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRC CA Exam Preparation Platform — Professional Edition</title>
+    <script>
+        // Redirect to login if no active session (GitHub Pages entry point is always index.html)
+        (function () {
+            try {
+                var session = localStorage.getItem('nsa_session');
+                if (!session) {
+                    window.location.replace('login.html');
+                }
+            } catch (e) {
+                window.location.replace('login.html');
+            }
+        })();
+    </script>
     <style>
         /* ==========================================================================
        PROFESSIONAL DESIGN SYSTEM v2.0 — PRC Exam Prep Platform
