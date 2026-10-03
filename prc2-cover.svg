@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="760" y2="260">
+      <stop offset="0" stop-color="#581c87"/><stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="260" fill="url(#bg2)"/>
+  <rect x="60" y="46" width="640" height="168" rx="12" fill="#0f172a" opacity="0.88"/>
+  <!-- candlesticks -->
+  <rect x="90"  y="120" width="14" height="60" fill="#22c55e"/><rect x="96"  y="108" width="3" height="84" fill="#22c55e"/>
+  <rect x="130" y="90"  width="14" height="70" fill="#ef4444"/><rect x="136" y="78"  width="3" height="94" fill="#ef4444"/>
+  <rect x="170" y="130" width="14" height="52" fill="#22c55e"/><rect x="176" y="118" width="3" height="76" fill="#22c55e"/>
+  <rect x="210" y="100" width="14" height="66" fill="#22c55e"/><rect x="216" y="90"  width="3" height="88" fill="#22c55e"/>
+  <rect x="250" y="70"  width="14" height="58" fill="#ef4444"/><rect x="256" y="60"  width="3" height="80" fill="#ef4444"/>
+  <!-- moving-average line -->
+  <polyline points="90,150 150,120 200,150 260,95 330,110 400,70 470,90 560,60 650,80" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="650" cy="80" r="7" fill="#38bdf8"/>
+</svg>
