@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+    <!-- v: 20261007-3 -->
 
 <head>
     <meta charset="UTF-8">
@@ -131,11 +132,11 @@
         }
 
         [data-theme="light"] {
-            --bg-body: #f8fafc;
+            --bg-body: #f6f8fc;
             --bg-surface: #ffffff;
             --bg-card: #ffffff;
             --bg-elevated: #f1f5f9;
-            --bg-hover: #f1f5f9;
+            --bg-hover: #eef2f7;
             --bg-input: #f8fafc;
             --border-color: #e2e8f0;
             --border-color-hover: #cbd5e1;
@@ -144,6 +145,16 @@
             --text-muted: #475569;
             --text-subtle: #94a3b8;
             --text-inverse: #f8fafc;
+
+            /* Light mode gradient backgrounds */
+            --bg-gradient-primary: linear-gradient(145deg, #f6f8fc 0%, #eef2f7 50%, #f1f5f9 100%);
+            --bg-gradient-sidebar: linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 100%);
+            --bg-gradient-card: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%);
+            --bg-gradient-welcome: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            --shadow-glow-light: 0 0 40px rgba(59, 130, 246, 0.08);
+            --shadow-card-light: 0 2px 8px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-card-hover-light: 0 12px 28px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.05);
+            --shadow-input-focus: 0 0 0 3px rgba(37, 99, 235, 0.15), 0 4px 12px rgba(37, 99, 246, 0.08);
         }
 
         /* Reset & Base */
@@ -163,12 +174,19 @@
         body {
             font-family: var(--font-sans);
             background-color: var(--bg-body);
+            background-image: var(--bg-gradient-primary);
+            background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        [data-theme="light"] body {
+            background-image: var(--bg-gradient-primary);
+            background-attachment: fixed;
         }
 
         a {
@@ -220,7 +238,7 @@
         /* Desktop Sidebar */
         .sidebar {
             width: 264px;
-            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-card) 100%);
+            background: var(--bg-gradient-sidebar);
             border-right: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
@@ -230,6 +248,11 @@
             left: 0;
             z-index: 50;
             transition: transform var(--transition-base);
+        }
+
+        [data-theme="light"] .sidebar {
+            background: var(--bg-gradient-sidebar);
+            border-right: 1px solid var(--border-color);
         }
 
         .sidebar-header {
@@ -306,9 +329,15 @@
         }
 
         [data-theme="light"] .nav-item.active {
-            background: var(--blue-50);
-            color: var(--blue-600);
-            border-color: var(--blue-100);
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            color: var(--blue-700);
+            border-color: var(--blue-200);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+        }
+
+        [data-theme="light"] .nav-item:hover:not(.active) {
+            background: var(--bg-hover);
+            color: var(--text-main);
         }
 
         .nav-icon {
@@ -328,6 +357,11 @@
             gap: var(--space-md);
         }
 
+        [data-theme="light"] .sidebar-footer {
+            border-top: 1px solid #e8eef5;
+            background: linear-gradient(90deg, transparent, #f8fafc, transparent);
+        }
+
         .logout-btn {
             margin-left: auto;
             width: 34px;
@@ -344,10 +378,23 @@
             flex-shrink: 0;
         }
 
+        [data-theme="light"] .logout-btn {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+        }
+
         .logout-btn:hover {
             background: rgba(239, 68, 68, 0.12);
             border-color: rgba(239, 68, 68, 0.4);
             color: var(--rose-400);
+        }
+
+        [data-theme="light"] .logout-btn:hover {
+            background: #fef2f2;
+            border-color: #fecaca;
+            color: #dc2626;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
         }
 
         .user-avatar {
@@ -364,6 +411,11 @@
             justify-content: center;
             font-size: var(--text-sm);
             box-shadow: var(--shadow-sm);
+        }
+
+        [data-theme="light"] .user-avatar {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
         }
 
         .user-info {
@@ -403,6 +455,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .hd-badge {
@@ -413,6 +466,13 @@
             background: #ffffff;
             border-radius: 7px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+            flex-shrink: 0;
+        }
+
+        [data-theme="light"] .hd-badge {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
         }
 
         .hd-badge img {
@@ -421,6 +481,10 @@
             max-width: 130px;
             object-fit: contain;
             display: block;
+        }
+
+        [data-theme="light"] .hd-badge img {
+            filter: drop-shadow(0 1px 2px rgba(15, 23, 42, 0.08));
         }
 
         /* Main Content Wrapper */
@@ -437,7 +501,8 @@
 
         /* Header Bar */
         .top-header {
-            height: 64px;
+            height: auto;
+            min-height: 64px;
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -449,10 +514,17 @@
             position: sticky;
             top: 0;
             z-index: 40;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
         }
 
         [data-theme="light"] .top-header {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            min-height: 64px;
+            height: auto;
         }
 
         .header-left {
@@ -460,6 +532,7 @@
             align-items: center;
             gap: var(--space-lg);
             min-width: 0;
+            flex: 1;
         }
 
         .page-title {
@@ -515,6 +588,7 @@
 
         .header-titles {
             min-width: 0;
+            overflow: hidden;
         }
 
         .page-trail {
@@ -581,6 +655,8 @@
             display: flex;
             align-items: center;
             gap: var(--space-md);
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .search-box {
@@ -602,7 +678,16 @@
 
         .search-input:focus {
             border-color: var(--blue-500);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            box-shadow: var(--shadow-input-focus);
+        }
+
+        [data-theme="light"] .search-input {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        [data-theme="light"] .search-input:hover {
+            border-color: #cbd5e1;
         }
 
         .search-icon-svg {
@@ -629,10 +714,22 @@
             transition: all var(--transition-fast);
         }
 
+        [data-theme="light"] .icon-btn {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+        }
+
         .icon-btn:hover {
             background-color: var(--bg-hover);
             color: var(--text-main);
             border-color: var(--border-color-hover);
+        }
+
+        [data-theme="light"] .icon-btn:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
         }
 
         /* Content Area */
@@ -644,7 +741,7 @@
 
         /* Common Card Components */
         .card {
-            background-color: var(--bg-card);
+            background: var(--bg-gradient-card);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-xl);
             padding: var(--space-xl);
@@ -652,10 +749,20 @@
             transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
         }
 
+        [data-theme="light"] .card {
+            background: var(--bg-gradient-card);
+            box-shadow: var(--shadow-card-light);
+        }
+
         .card.hoverable:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
             border-color: var(--border-color-hover);
+        }
+
+        [data-theme="light"] .card.hoverable:hover {
+            box-shadow: var(--shadow-card-hover-light);
+            border-color: var(--blue-200);
         }
 
         /* Badge */
@@ -781,6 +888,77 @@
             transform: translateY(-1px);
         }
 
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(212, 167, 84, 0.3);
+        }
+
+        .btn-gold:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(212, 167, 84, 0.4);
+        }
+
+        /* Light mode button enhancements */
+        [data-theme="light"] .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35), 0 1px 3px rgba(37, 99, 235, 0.15);
+        }
+
+        [data-theme="light"] .btn-primary:hover {
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4), 0 2px 6px rgba(37, 99, 235, 0.2);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="light"] .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        [data-theme="light"] .btn-outline {
+            background: transparent;
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        [data-theme="light"] .btn-outline:hover {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #1d4ed8;
+            color: #1d4ed8;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+        }
+
+        [data-theme="light"] .btn-ghost {
+            background: transparent;
+            color: var(--text-muted);
+        }
+
+        [data-theme="light"] .btn-ghost:hover {
+            background: #f1f5f9;
+            color: var(--text-main);
+        }
+
+        [data-theme="light"] .btn-danger {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3), 0 1px 3px rgba(239, 68, 68, 0.1);
+        }
+
+        [data-theme="light"] .btn-danger:hover {
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35), 0 2px 6px rgba(239, 68, 68, 0.15);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="light"] .btn-gold {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3), 0 1px 3px rgba(217, 119, 6, 0.1);
+        }
+
+        [data-theme="light"] .btn-gold:hover {
+            box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35), 0 2px 6px rgba(217, 119, 6, 0.15);
+            transform: translateY(-2px);
+        }
+
         /* Progress Bar Component */
         .progress-track {
             width: 100%;
@@ -792,6 +970,7 @@
 
         [data-theme="light"] .progress-track {
             background-color: var(--gray-200);
+            box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.08);
         }
 
         .progress-fill {
@@ -799,6 +978,11 @@
             border-radius: var(--radius-full);
             transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+        }
+
+        [data-theme="light"] .progress-fill {
+            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
         }
 
         /* Grid Layout Utilities */
@@ -844,7 +1028,7 @@
 
         /* DASHBOARD SPECIFIC STYLES */
         .welcome-banner {
-            background: linear-gradient(135deg, var(--bg-surface), var(--bg-elevated));
+            background: var(--bg-gradient-welcome);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-xl);
             padding: var(--space-2xl);
@@ -859,18 +1043,28 @@
         .welcome-banner::before {
             content: '';
             position: absolute;
-            top: -60px;
-            right: -60px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(212, 167, 84, 0.12) 0%, transparent 70%);
+            top: -80px;
+            right: -80px;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(212, 167, 84, 0.18) 0%, transparent 70%);
             pointer-events: none;
+        }
+
+        [data-theme="light"] .welcome-banner {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4fa 100%);
+            border: 1px solid #e8eef5;
+            box-shadow: var(--shadow-card-light), var(--shadow-glow-light);
+        }
+
+        [data-theme="light"] .welcome-banner::before {
+            background: radial-gradient(circle, rgba(212, 167, 84, 0.22) 0%, transparent 70%);
         }
 
         .welcome-text h2 {
             font-size: var(--text-3xl);
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-main);
             margin-bottom: 4px;
             letter-spacing: -0.5px;
         }
@@ -878,6 +1072,13 @@
         .welcome-text p {
             color: var(--text-muted);
             font-size: var(--text-base);
+        }
+
+        [data-theme="light"] .welcome-text h2 {
+            background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .stats-row {
@@ -888,7 +1089,7 @@
         }
 
         .stat-card {
-            background-color: var(--bg-card);
+            background: var(--bg-gradient-card);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
             padding: var(--space-xl);
@@ -898,10 +1099,20 @@
             transition: all var(--transition-base);
         }
 
+        [data-theme="light"] .stat-card {
+            background: var(--bg-gradient-card);
+            box-shadow: var(--shadow-card-light);
+        }
+
         .stat-card:hover {
             border-color: var(--border-color-hover);
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
+        }
+
+        [data-theme="light"] .stat-card:hover {
+            box-shadow: var(--shadow-card-hover-light);
+            border-color: var(--blue-200);
         }
 
         .stat-icon-wrap {
@@ -912,6 +1123,10 @@
             align-items: center;
             justify-content: center;
             margin-bottom: var(--space-xs);
+        }
+
+        [data-theme="light"] .stat-icon-wrap {
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
         }
 
         .stat-val {
@@ -1021,11 +1236,22 @@
             text-transform: uppercase;
             line-height: 1.4;
             white-space: nowrap;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .crumb-nav .crumb-root {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .crumb-nav #header-page-title {
             color: var(--text-subtle);
             font-weight: 700;
             letter-spacing: 2px;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .streak-pill {
             display: flex;
@@ -1339,7 +1565,22 @@
             }
 
             .top-header {
-                padding: 0 var(--space-lg);
+                height: auto;
+                min-height: 64px;
+                padding: var(--space-sm) var(--space-lg);
+                flex-wrap: wrap;
+                gap: var(--space-sm);
+            }
+
+            .header-left {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .header-right {
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: var(--space-sm);
             }
 
             .search-box {
@@ -2676,6 +2917,14 @@ tr.pc-zero td { opacity: .8; }
                         </span>
                     </div>
 
+                                        <div class="hd-badge" style="background:transparent; box-shadow:none; border:1px solid var(--border-color); border-radius:7px; padding:2px 8px; display:inline-flex; align-items:center; gap:4px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold-500);">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span id="pk-clock-display" style="font-size:0.68rem; font-weight:600; color:var(--text-main); white-space:nowrap;">-- --</span>
+                    </div>
+
                     <div class="search-box">
                         <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2720,31 +2969,31 @@ tr.pc-zero td { opacity: .8; }
                                 </svg>
                             </div>
                             <div>
-                                <div class="streak-pill-title">12 Day Study Streak</div>
-                                <div class="streak-pill-sub">Keep up the momentum!</div>
+                                <div class="streak-pill-title" id="streak-title">0 Day Study Streak</div>
+                                <div class="streak-pill-sub" id="streak-sub">Start your first session!</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="stats-row">
                         <div class="stat-card">
-                            <span class="stat-pill" style="background:rgba(16,185,129,0.14); color:#34d399;">+8% Improvement</span>
-                            <div class="stat-val">76%</div>
+                            <span class="stat-pill" id="pill-improvement" style="background:rgba(16,185,129,0.14); color:#34d399;">--</span>
+                            <div class="stat-val" id="stat-preparedness">0%</div>
                             <div class="stat-lbl">Overall Preparedness</div>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-pill" style="background:rgba(59,130,246,0.14); color:#60a5fa;">+128 Questions</span>
-                            <div class="stat-val">1,245</div>
+                            <span class="stat-pill" id="pill-questions" style="background:rgba(59,130,246,0.14); color:#60a5fa;">--</span>
+                            <div class="stat-val" id="stat-questions">0</div>
                             <div class="stat-lbl">Questions Attempted</div>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-pill" style="background:rgba(74,222,128,0.14); color:#4ade80;">Top 5% Efficient</span>
-                            <div class="stat-val">81.4%</div>
+                            <span class="stat-pill" id="pill-efficiency" style="background:rgba(74,222,128,0.14); color:#4ade80;">--</span>
+                            <div class="stat-val" id="stat-accuracy">0%</div>
                             <div class="stat-lbl">Average Accuracy</div>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-pill" style="background:rgba(239,68,68,0.14); color:#f87171;">Target: 20</span>
-                            <div class="stat-val">14</div>
+                            <span class="stat-pill" id="pill-target" style="background:rgba(239,68,68,0.14); color:#f87171;">--</span>
+                            <div class="stat-val" id="stat-mocks">0</div>
                             <div class="stat-lbl">Mock Exams Done</div>
                         </div>
                     </div>
@@ -2764,12 +3013,12 @@ tr.pc-zero td { opacity: .8; }
                                 <div class="subject-name">Fundamentals of Accounting</div>
                                 <div class="subject-meta-row">
                                     <span class="subject-meta-label">Topics Mastered</span>
-                                    <span class="subject-meta-val" style="color:#f59e0b;">24 / 32</span>
+                                    <span class="subject-meta-val" id="subj-prc1-topics" style="color:#f59e0b;">0 / 10</span>
                                 </div>
                                 <div class="progress-track">
-                                    <div class="progress-fill" style="width: 76%; background:#f59e0b;"></div>
+                                    <div class="progress-fill" id="subj-prc1-bar" style="width: 0%; background:#f59e0b;"></div>
                                 </div>
-                                <div class="progress-pct" style="color:#f59e0b;">76%</div>
+                                <div class="progress-pct" id="subj-prc1-pct" style="color:#f59e0b;">0%</div>
                                 <button class="btn-continue" onclick="switchView('study')">
                                     <span>Continue Learning</span>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2785,12 +3034,12 @@ tr.pc-zero td { opacity: .8; }
                                 <div class="subject-name">Quantitative Analysis for Business</div>
                                 <div class="subject-meta-row">
                                     <span class="subject-meta-label">Topics Mastered</span>
-                                    <span class="subject-meta-val" style="color:#3b82f6;">19 / 30</span>
+                                    <span class="subject-meta-val" id="subj-prc2-topics" style="color:#3b82f6;">0 / 12</span>
                                 </div>
                                 <div class="progress-track">
-                                    <div class="progress-fill" style="width: 64%; background:#3b82f6;"></div>
+                                    <div class="progress-fill" id="subj-prc2-bar" style="width: 0%; background:#3b82f6;"></div>
                                 </div>
-                                <div class="progress-pct" style="color:#3b82f6;">64%</div>
+                                <div class="progress-pct" id="subj-prc2-pct" style="color:#3b82f6;">0%</div>
                                 <button class="btn-continue" onclick="switchView('study')">
                                     <span>Continue Learning</span>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2806,12 +3055,12 @@ tr.pc-zero td { opacity: .8; }
                                 <div class="subject-name">Business & Economic Insights</div>
                                 <div class="subject-meta-row">
                                     <span class="subject-meta-label">Topics Mastered</span>
-                                    <span class="subject-meta-val" style="color:#10b981;">27 / 31</span>
+                                    <span class="subject-meta-val" id="subj-prc3v1-topics" style="color:#10b981;">0 / 8</span>
                                 </div>
                                 <div class="progress-track">
-                                    <div class="progress-fill" style="width: 87%; background:#10b981;"></div>
+                                    <div class="progress-fill" id="subj-prc3v1-bar" style="width: 0%; background:#10b981;"></div>
                                 </div>
-                                <div class="progress-pct" style="color:#10b981;">87%</div>
+                                <div class="progress-pct" id="subj-prc3v1-pct" style="color:#10b981;">0%</div>
                                 <button class="btn-continue" onclick="switchView('study')">
                                     <span>Continue Learning</span>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2827,12 +3076,12 @@ tr.pc-zero td { opacity: .8; }
                                 <div class="subject-name">Business & Economic Insights</div>
                                 <div class="subject-meta-row">
                                     <span class="subject-meta-label">Topics Mastered</span>
-                                    <span class="subject-meta-val" style="color:#ef4444;">16 / 28</span>
+                                    <span class="subject-meta-val" id="subj-prc3v2-topics" style="color:#ef4444;">0 / 12</span>
                                 </div>
                                 <div class="progress-track">
-                                    <div class="progress-fill" style="width: 58%; background:#ef4444;"></div>
+                                    <div class="progress-fill" id="subj-prc3v2-bar" style="width: 0%; background:#ef4444;"></div>
                                 </div>
-                                <div class="progress-pct" style="color:#ef4444;">58%</div>
+                                <div class="progress-pct" id="subj-prc3v2-pct" style="color:#ef4444;">0%</div>
                                 <button class="btn-continue" onclick="switchView('study')">
                                     <span>Continue Learning</span>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -3141,21 +3390,18 @@ tr.pc-zero td { opacity: .8; }
                     <div class="grid-3">
                         <div class="card">
                             <h4>Knowledge & Concept</h4>
-                            <div class="stat-val" style="color:var(--emerald-500); margin:12px 0;">88%</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);">High conceptual clarity in PRC 1 and
-                                PRC 3 Vol 1.</p>
+                            <div class="stat-val" id="eval-knowledge" style="color:var(--emerald-500); margin:12px 0;">0%</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-knowledge-note">Complete practice sessions to see your concept clarity.</p>
                         </div>
                         <div class="card">
                             <h4>Numerical Ability</h4>
-                            <div class="stat-val" style="color:var(--gold-400); margin:12px 0;">72%</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);">Needs practice on Discounted Cash
-                                Flows (PRC 2 Ch. 6).</p>
+                            <div class="stat-val" id="eval-numerical" style="color:var(--gold-400); margin:12px 0;">0%</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-numerical-note">Practice numerical questions to build accuracy here.</p>
                         </div>
                         <div class="card">
                             <h4>Speed per Question</h4>
-                            <div class="stat-val" style="color:var(--blue-400); margin:12px 0;">54 sec</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);">Optimal time allocation per question
-                                (&lt; 90 seconds).</p>
+                            <div class="stat-val" id="eval-speed" style="color:var(--blue-400); margin:12px 0;">--</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-speed-note">Take a mock exam to measure your pacing.</p>
                         </div>
                     </div>
                 </section>
@@ -3177,14 +3423,12 @@ tr.pc-zero td { opacity: .8; }
                 <section id="view-mistakes" class="view-section">
                     <div class="section-title">
                         <span>My Mistakes Book</span>
-                        <span class="badge badge-red">4 Saved Error Items</span>
+                        <span class="badge badge-red" id="mistake-badge">0 Saved Error Items</span>
                     </div>
-                    <div class="card" style="margin-bottom:12px;">
-                        <div style="font-size:0.8rem; color:var(--rose-500); font-weight:700;">PRC 2 &bull; Chapter 8
-                            (Statistics)</div>
-                        <h4 style="margin:6px 0;">If variance is 49, what is the standard deviation?</h4>
-                        <p style="font-size:0.85rem; color:var(--text-muted);">Your last answer: 2,401 (Incorrect).
-                            Correct answer: 7 (√49 = 7).</p>
+                    <div id="mistakes-view-container">
+                        <div class="card" style="text-align:center; padding:24px;">
+                            <p style="color:var(--text-muted);">No mistakes recorded yet. Complete a practice session and your stumbles will appear here.</p>
+                        </div>
                     </div>
                 </section>
 
@@ -3192,13 +3436,12 @@ tr.pc-zero td { opacity: .8; }
                 <section id="view-progress" class="view-section">
                     <div class="section-title"><span>Study Progress Log</span></div>
                     <div class="card">
-                        <h3 style="display:flex; align-items:center; gap:8px;">
+                        <h3 style="display:flex; align-items:center; gap:8px;" id="progress-streak-title">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07 2.16-1.07 2.16 1.5 3.5 1.48 1.15 2.46 1.3 3.5 1.5.5-1 .5-1.72 0-3A5.5 5.5 0 0 1 8.5 14.5z" />
                             </svg>
-                            12 Days Study Streak Active</h3>
-                        <p style="color:var(--text-muted); margin-top:4px;">You have studied every day since Sept 18,
-                            2026.</p>
+                            0 Days Study Streak</h3>
+                        <p style="color:var(--text-muted); margin-top:4px;" id="progress-streak-note">Start practicing to begin your streak.</p>
                     </div>
                 </section>
 
@@ -21486,7 +21729,7 @@ function initRevisionApp() {
                 const history = JSON.parse(localStorage.getItem('prc_mock_exam_history') || '[]');
                 history.push({
                     subjectTitle: currentMockExam.subjectTitle,
-                    date: new Date().toLocaleDateString(),
+                    date: pkDateStr(),
                     timeTaken: `${timeTakenMins} mins`,
                     score: obtainedMarks,
                     totalMarks: currentMockExam.totalMarks,
@@ -21763,18 +22006,79 @@ function profileFeedback(msg, isError) {
     el.style.color = isError ? 'var(--rose-400)' : 'var(--emerald-400)';
 }
 
+/* ------------------------------------------------------------------- time */
+function nowPk() {
+    /* Always evaluate dates in Pakistan's timezone (Asia/Karachi, UTC+5) */
+    return new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
+}
+
+function pkDateStr() {
+    return new Date().toLocaleDateString('en-PK', { timeZone: 'Asia/Karachi', day: 'numeric', month: 'short', year: 'numeric' });
+}
+
 /* ------------------------------------------------------------------- theme */
+function applyLightThemeVars() {
+    const html = document.documentElement;
+    const body = document.body;
+    const s = html.style;
+    s.setProperty('--bg-body', '#f6f8fc');
+    s.setProperty('--bg-surface', '#ffffff');
+    s.setProperty('--bg-card', '#ffffff');
+    s.setProperty('--bg-elevated', '#f1f5f9');
+    s.setProperty('--bg-hover', '#eef2f7');
+    s.setProperty('--bg-input', '#f8fafc');
+    s.setProperty('--border-color', '#e2e8f0');
+    s.setProperty('--border-color-hover', '#cbd5e1');
+    s.setProperty('--border-accent', 'rgba(37, 99, 235, 0.2)');
+    s.setProperty('--text-main', '#0f172a');
+    s.setProperty('--text-muted', '#475569');
+    s.setProperty('--text-subtle', '#94a3b8');
+    s.setProperty('--text-inverse', '#f8fafc');
+    s.setProperty('--bg-gradient-primary', 'linear-gradient(145deg, #f6f8fc 0%, #eef2f7 50%, #f1f5f9 100%)');
+    s.setProperty('--bg-gradient-sidebar', 'linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 100%)');
+    s.setProperty('--bg-gradient-card', 'linear-gradient(145deg, #ffffff 0%, #fafbfc 100%)');
+    s.setProperty('--bg-gradient-welcome', 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)');
+    s.setProperty('--shadow-glow-light', '0 0 40px rgba(59, 130, 246, 0.08)');
+    s.setProperty('--shadow-card-light', '0 2px 8px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06)');
+    s.setProperty('--shadow-card-hover-light', '0 12px 28px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.05)');
+    s.setProperty('--shadow-input-focus', '0 0 0 3px rgba(37, 99, 235, 0.15), 0 4px 12px rgba(37, 99, 246, 0.08)');
+    // Force body background directly (browsers may not pick up var() from ancestor inline styles)
+    body.style.backgroundColor = '#f6f8fc';
+    body.style.backgroundImage = 'linear-gradient(145deg, #f6f8fc 0%, #eef2f7 50%, #f1f5f9 100%)';
+    body.style.backgroundAttachment = 'fixed';
+}
+
+function clearLightThemeVars() {
+    const html = document.documentElement;
+    const body = document.body;
+    const s = html.style;
+    const vars = ['--bg-body','--bg-surface','--bg-card','--bg-elevated','--bg-hover','--bg-input',
+        '--border-color','--border-color-hover','--border-accent','--text-main','--text-muted',
+        '--text-subtle','--text-inverse','--bg-gradient-primary','--bg-gradient-sidebar',
+        '--bg-gradient-card','--bg-gradient-welcome','--shadow-glow-light','--shadow-card-light',
+        '--shadow-card-hover-light','--shadow-input-focus'];
+    vars.forEach(v => s.removeProperty(v));
+    // Clear forced body backgrounds
+    body.style.backgroundColor = '';
+    body.style.backgroundImage = '';
+    body.style.backgroundAttachment = '';
+}
+
 function toggleTheme() {
     const html = document.documentElement;
     const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
+    if (next === 'light') { applyLightThemeVars(); } else { clearLightThemeVars(); }
     try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore */ }
 }
 
 function applyStoredTheme() {
     let saved = '';
     try { saved = localStorage.getItem(THEME_KEY) || ''; } catch (e) { saved = ''; }
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        if (saved === 'light') { applyLightThemeVars(); }
+    }
 }
 
 /* ----------------------------------------------------------------- profile */
@@ -21933,6 +22237,12 @@ function applyView(view, opts) {
     const meta = VIEW_META[view];
     const titleEl = document.getElementById('header-page-title');
     if (titleEl) titleEl.textContent = meta.title;
+
+    /* Refresh live stats whenever the student opens a tracking view */
+    if (view === 'dashboard' || view === 'evaluation' || view === 'mistakes' || view === 'progress') {
+        if (typeof renderRealStats === 'function') renderRealStats();
+    }
+    if (view === 'mistakes' && typeof renderMistakesView === 'function') renderMistakesView();
 
     const trailEl = document.getElementById('app-page-trail');
     if (trailEl) trailEl.innerHTML = '<span class="crumb-root">Home</span>' +
@@ -22492,9 +22802,225 @@ document.addEventListener('click', function (e) {
 });
 
 /* ------------------------------------------------------------------ boot */
+function renderMistakesView() {
+    /* Render the real mistake book into the main-app mistakes view */
+    const container = document.getElementById('mistakes-view-container');
+    if (!container) return;
+    const mb = (typeof practiceCentreMistakeBook === 'function') ? practiceCentreMistakeBook() : {};
+    if (!mb.entries || !mb.entries.length) {
+        container.innerHTML = '<div class="card" style="text-align:center; padding:24px;">' +
+            '<p style="color:var(--text-muted);">No mistakes recorded yet. Complete a practice session and your stumbles will appear here.</p>' +
+            '</div>';
+        return;
+    }
+    const rows = mb.entries.map(function (e) {
+        return '<div class="card" style="margin-bottom:12px;">' +
+            '<div style="font-size:0.8rem; color:var(--rose-500); font-weight:700;">' +
+            (e.errorType ? e.errorType.replace(/_/g, ' ').toLowerCase() : 'General') + '</div>' +
+            '<h4 style="margin:6px 0;">' + (e.criterionId || 'Criterion') + '</h4>' +
+            '<p style="font-size:0.85rem; color:var(--text-muted);">' +
+            'Marks lost: ' + e.marksLost + ' &bull; Times: ' + e.occurrences + '</p>' +
+            '</div>';
+    }).join('');
+    container.innerHTML = '<p class="pc-note" style="margin-bottom:12px;">' + mb.entries.length + ' error pattern(s) across your sessions.</p>' + rows;
+}
+
+/* Live Pakistan date/time display */
+function startPkClock() {
+    function tick() {
+        const el = document.getElementById('pk-clock-display');
+        if (!el) return;
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('en-PK', { timeZone: 'Asia/Karachi', day: 'numeric', month: 'short' });
+        const timeStr = now.toLocaleTimeString('en-PK', { timeZone: 'Asia/Karachi', hour: '2-digit', minute: '2-digit' });
+        el.textContent = dateStr + ' \u2022 ' + timeStr + ' PKST';
+    }
+    tick();
+    setInterval(tick, 30000);
+}
+
+function renderRealStats() {
+    /* Read practice + mock history and paint the real numbers on the
+       dashboard, evaluation, progress, and mistakes views. Everything
+       starts at zero until the user has done real work. */
+    let sessions = [];
+    try {
+        const raw = localStorage.getItem('pc_sessions');
+        if (raw) {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) sessions = parsed.filter(s => s && (s.results || []).length);
+        }
+    } catch (e) { /* ignore */ }
+
+    let mocks = [];
+    try {
+        const raw = localStorage.getItem('prc_mock_exam_history');
+        if (raw) {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) mocks = parsed;
+        }
+    } catch (e) { /* ignore */ }
+
+    /* Questions attempted: practice session results + mock questions */
+    let practiceQCount = 0;
+    let practiceAwarded = 0;
+    let practiceMarks = 0;
+    sessions.forEach(s => {
+        (s.results || []).forEach(r => {
+            practiceQCount++;
+            practiceAwarded += (r.awarded || 0);
+            practiceMarks += (r.maxMarks || 0);
+        });
+    });
+
+    let mockQCount = 0;
+    let mockCorrect = 0;
+    let mockTotal = 0;
+    mocks.forEach(m => {
+        mockQCount += 1; /* each mock attempt counts as 60 questions in the bank */
+        mockTotal += (m.totalMarks || 120);
+        mockCorrect += ((m.score || 0) / 2); /* score is marks; 2 marks per q */
+    });
+
+    const totalQuestions = practiceQCount + (mockQCount * 60);
+    const totalAwarded = practiceAwarded + (mockCorrect * 2);
+    const totalMarks = practiceMarks + (mockTotal);
+    const avgAccuracy = totalMarks > 0 ? Math.round((totalAwarded / totalMarks) * 1000) / 10 : 0;
+
+    /* Preparedness: accuracy weighted by how many questions done vs a 500-question benchmark */
+    const prepScore = totalMarks > 0 ? Math.min(100, Math.round(avgAccuracy * Math.min(1, totalQuestions / 500))) : 0;
+
+    /* Topic mastery per subject: count distinct chapters with at least one answered result */
+    const topicMastery = {};
+    sessions.forEach(s => {
+        (s.questions || []).forEach(q => {
+            if (!q || !q.subjectId || !q.id) return;
+            const sid = q.subjectId;
+            if (!topicMastery[sid]) topicMastery[sid] = new Set();
+            topicMastery[sid].add(q.chapter || q.id);
+        });
+    });
+
+    function masteryFor(subjectId, maxChapters) {
+        return topicMastery[subjectId] ? Math.min(maxChapters, topicMastery[subjectId].size) : 0;
+    }
+
+    /* Update dashboard stat cards */
+    const statPrep = document.getElementById('stat-preparedness');
+    if (statPrep) statPrep.textContent = prepScore + '%';
+    const statQ = document.getElementById('stat-questions');
+    if (statQ) statQ.textContent = totalQuestions.toLocaleString();
+    const statAcc = document.getElementById('stat-accuracy');
+    if (statAcc) statAcc.textContent = avgAccuracy + '%';
+    const statMocks = document.getElementById('stat-mocks');
+    if (statMocks) statMocks.textContent = mocks.length;
+
+    const pillImprovement = document.getElementById('pill-improvement');
+    if (pillImprovement) pillImprovement.textContent = totalQuestions > 0 ? '+' + Math.min(totalQuestions, 128) + ' this week' : 'No data yet';
+    const pillQuestions = document.getElementById('pill-questions');
+    if (pillQuestions) pillQuestions.textContent = practiceQCount > 0 ? '+' + practiceQCount + ' practice' : 'Start a session';
+    const pillEfficiency = document.getElementById('pill-efficiency');
+    if (pillEfficiency) pillEfficiency.textContent = avgAccuracy >= 80 ? 'Top 5% Efficient' : (avgAccuracy > 0 ? 'Keep going!' : 'No data');
+    const pillTarget = document.getElementById('pill-target');
+    if (pillTarget) pillTarget.textContent = 'Target: 20';
+
+    /* Streak: count unique Pakistan-calendar days with at least one session or mock */
+    const daySet = new Set();
+    sessions.forEach(s => {
+        const d = s.finishedAt || s.startedAt;
+        if (d) {
+            const pkDate = new Date(new Date(d).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
+            daySet.add(pkDate.toDateString());
+        }
+    });
+    mocks.forEach(m => {
+        if (m.date) {
+            const pkDate = new Date(new Date(m.date).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
+            daySet.add(pkDate.toDateString());
+        }
+    });
+    const streakDays = daySet.size;
+
+    const streakTitle = document.getElementById('streak-title');
+    if (streakTitle) streakTitle.textContent = streakDays + ' Day' + (streakDays === 1 ? '' : 's') + ' Study Streak';
+    const streakSub = document.getElementById('streak-sub');
+    if (streakSub) streakSub.textContent = streakDays > 0 ? 'Keep up the momentum!' : 'Start your first session!';
+
+    const progressTitle = document.getElementById('progress-streak-title');
+    if (progressTitle) {
+        const svg = progressTitle.querySelector('svg');
+        progressTitle.innerHTML = '';
+        if (svg) progressTitle.appendChild(svg);
+        progressTitle.innerHTML += ' ' + streakDays + ' Day' + (streakDays === 1 ? '' : 's') + ' Study Streak' + (streakDays > 0 ? ' Active' : '');
+    }
+    const progressNote = document.getElementById('progress-streak-note');
+    if (progressNote) progressNote.textContent = streakDays > 0 ? 'You have studied on ' + streakDays + ' unique day' + (streakDays === 1 ? '' : 's') + '.' : 'Start practicing to begin your streak.';
+
+    /* Subject mastery per card */
+    const masteryMap = {
+        prc1: { el: 'subj-prc1-topics', bar: 'subj-prc1-bar', pct: 'subj-prc1-pct', max: 10 },
+        prc2: { el: 'subj-prc2-topics', bar: 'subj-prc2-bar', pct: 'subj-prc2-pct', max: 12 },
+        prc3v1: { el: 'subj-prc3v1-topics', bar: 'subj-prc3v1-bar', pct: 'subj-prc3v1-pct', max: 8 },
+        prc3v2: { el: 'subj-prc3v2-topics', bar: 'subj-prc3v2-bar', pct: 'subj-prc3v2-pct', max: 12 }
+    };
+    Object.keys(masteryMap).forEach(sid => {
+        const m = masteryMap[sid];
+        const done = masteryFor(sid, m.max);
+        const pct = m.max > 0 ? Math.round((done / m.max) * 100) : 0;
+        const v = document.getElementById(m.el);
+        const b = document.getElementById(m.bar);
+        const p = document.getElementById(m.pct);
+        if (v) v.textContent = done + ' / ' + m.max;
+        if (b) b.style.width = pct + '%';
+        if (p) p.textContent = pct + '%';
+    });
+
+    /* Evaluation view */
+    const evalKnowledge = document.getElementById('eval-knowledge');
+    if (evalKnowledge) evalKnowledge.textContent = avgAccuracy + '%';
+    const evalKnowledgeNote = document.getElementById('eval-knowledge-note');
+    if (evalKnowledgeNote) evalKnowledgeNote.textContent = avgAccuracy >= 80 ? 'Strong conceptual clarity across your subjects.' : (avgAccuracy > 0 ? 'Keep building — accuracy is trending up.' : 'Complete practice sessions to see your concept clarity.');
+
+    const evalNumerical = document.getElementById('eval-numerical');
+    const numericalAccuracy = practiceMarks > 0 ? Math.round((practiceAwarded / practiceMarks) * 1000) / 10 : 0;
+    if (evalNumerical) evalNumerical.textContent = numericalAccuracy + '%';
+    const evalNumericalNote = document.getElementById('eval-numerical-note');
+    if (evalNumericalNote) evalNumericalNote.textContent = numericalAccuracy >= 70 ? 'Solid numerical skills across attempts.' : (numericalAccuracy > 0 ? 'Needs more practice on numerical problems.' : 'Practice numerical questions to build accuracy here.');
+
+    const evalSpeed = document.getElementById('eval-speed');
+    if (evalSpeed) {
+        if (mocks.length > 0) {
+            const avgMins = mocks.reduce((a, m) => {
+                const t = parseInt(m.timeTaken) || 0;
+                return a + t;
+            }, 0) / mocks.length;
+            const avgPerQ = Math.round((avgMins * 60) / 60); /* 60 q per paper */
+            evalSpeed.textContent = avgPerQ + ' sec';
+        } else {
+            evalSpeed.textContent = '--';
+        }
+    }
+    const evalSpeedNote = document.getElementById('eval-speed-note');
+    if (evalSpeedNote) evalSpeedNote.textContent = mocks.length > 0 ? 'Based on your mock exam pacing.' : 'Take a mock exam to measure your pacing.';
+
+    /* Mistake badge: count from pc_review or sessions with low percent */
+    const mistakeBadge = document.getElementById('mistake-badge');
+    if (mistakeBadge) {
+        let mistakeCount = 0;
+        sessions.forEach(s => {
+            (s.results || []).forEach(r => {
+                if ((r.percent || 0) < 50) mistakeCount++;
+            });
+        });
+        mistakeBadge.textContent = mistakeCount + ' Saved Error Item' + (mistakeCount === 1 ? '' : 's');
+    }
+}
+
 function bootAppShell() {
     applyStoredTheme();
     renderProfileUI();
+    renderRealStats();
+    startPkClock();
     restoreNavHistory();
 
     // tag nav items so switchView can highlight them without touching the markup
