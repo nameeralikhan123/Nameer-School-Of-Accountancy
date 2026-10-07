@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261007-3 -->
+    <!-- v: 20261007-5 -->
 
 <head>
     <meta charset="UTF-8">
@@ -1013,6 +1013,47 @@
         .view-section.active {
             display: block;
         }
+
+        /* Scientific Calculator (Casio-style) */
+        .calc-body {
+            background: linear-gradient(165deg, #eceff4 0%, #dbe0e8 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(15, 23, 42, 0.10);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22), inset 0 1px 0 #fff;
+            padding: 16px;
+        }
+        [data-theme="light"] .calc-body {
+            background: linear-gradient(165deg, #f1f4f9 0%, #e2e8f0 100%);
+        }
+        .calc-screen {
+            background: linear-gradient(180deg, #d9ead0 0%, #c9deb8 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.18);
+            box-shadow: inset 0 2px 8px rgba(15, 23, 42, 0.35);
+            padding: 10px 12px;
+            font-family: 'Courier New', ui-monospace, monospace;
+        }
+        .calc-key {
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            border-radius: 8px;
+            padding: 10px 0;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #1f2937;
+            background: #f8fafc;
+            box-shadow: 0 2px 0 rgba(15, 23, 42, 0.18);
+            cursor: pointer;
+            transition: transform .06s ease, box-shadow .06s ease, background .15s ease;
+        }
+        .calc-key:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+        .calc-key.num { background: #ffffff; }
+        .calc-key.op { background: #e2e8f0; color: #1d4ed8; }
+        .calc-key.func { background: #e9edf3; color: #334155; font-size: 0.8rem; }
+        .calc-key.clear { background: #ef4444; border-color: #dc2626; color: #ffffff; }
+        .calc-key.equals { background: #f59e0b; border-color: #d97706; color: #111827; }
 
         @keyframes fadeIn {
             from {
@@ -2831,6 +2872,23 @@ tr.pc-zero td { opacity: .8; }
                     </div>
                     <span>Progress Log</span>
                 </div>
+                <div class="nav-item" onclick="switchView('calc', this)">
+                    <div class="nav-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <line x1="8" y1="6" x2="16" y2="6" />
+                            <line x1="8" y1="10" x2="8" y2="11" />
+                            <line x1="12" y1="10" x2="12" y2="11" />
+                            <line x1="16" y1="10" x2="16" y2="11" />
+                            <line x1="8" y1="14" x2="8" y2="15" />
+                            <line x1="12" y1="14" x2="12" y2="15" />
+                            <line x1="16" y1="14" x2="16" y2="18" />
+                            <line x1="8" y1="18" x2="12" y2="18" />
+                        </svg>
+                    </div>
+                    <span>Calculator</span>
+                </div>
                 <div class="nav-item" onclick="switchView('profile', this)">
                     <div class="nav-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3643,6 +3701,73 @@ tr.pc-zero td { opacity: .8; }
                     </div>
                 </section>
 
+                <!-- VIEW 11: SCIENTIFIC CALCULATOR -->
+                <section id="view-calc" class="view-section">
+                    <div class="section-title"><span>Scientific Calculator</span></div>
+
+                    <div class="card" style="max-width:460px; margin:0 auto; padding:20px;">
+                        <div class="calc-body">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                <span style="font-weight:800; font-size:0.72rem; letter-spacing:1.5px; text-transform:uppercase; color:#475569;">Scientific Calculator</span>
+                                <span id="calc-mem-flag" style="font-weight:800; font-size:0.72rem; color:#b45309; background:rgba(245,158,11,.15); padding:2px 8px; border-radius:999px; display:none;">M</span>
+                            </div>
+
+                            <div class="calc-screen">
+                                <div id="calc-expr" style="min-height:18px; font-size:0.85rem; color:#2d3a2d; white-space:nowrap; overflow-x:auto; text-align:right;" onscroll="this.scrollLeft=this.scrollWidth"></div>
+                                <div id="calc-out" style="font-size:1.6rem; font-weight:700; color:#111; text-align:right; min-height:32px;">0</div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:8px; margin-top:12px;">
+                                <button class="calc-key clear" onclick="calcKey('AC','clear')">AC</button>
+                                <button class="calc-key func" onclick="calcKey('C','clear')">C</button>
+                                <button class="calc-key func" onclick="calcKey('DEL','del')">DEL</button>
+                                <button class="calc-key func" onclick="calcKey('^','op')">x^y</button>
+                                <button class="calc-key func" onclick="calcKey('√(','func')">√</button>
+
+                                <button class="calc-key func" onclick="calcKey('sin(','func')">sin</button>
+                                <button class="calc-key func" onclick="calcKey('cos(','func')">cos</button>
+                                <button class="calc-key func" onclick="calcKey('tan(','func')">tan</button>
+                                <button class="calc-key func" onclick="calcKey('log(','func')">log</button>
+                                <button class="calc-key func" onclick="calcKey('ln(','func')">ln</button>
+
+                                <button class="calc-key func" onclick="calcKey('(','num')">(</button>
+                                <button class="calc-key func" onclick="calcKey(')','num')">)</button>
+                                <button class="calc-key func" onclick="calcKey('π','num')">π</button>
+                                <button class="calc-key func" onclick="calcKey('^2','op')">x²</button>
+                                <button class="calc-key func" onclick="calcKey('M+','mem')">M+</button>
+
+                                <button class="calc-key num" onclick="calcKey('7','num')">7</button>
+                                <button class="calc-key num" onclick="calcKey('8','num')">8</button>
+                                <button class="calc-key num" onclick="calcKey('9','num')">9</button>
+                                <button class="calc-key op" onclick="calcKey('÷','op')">÷</button>
+                                <button class="calc-key func" onclick="calcKey('M-','mem')">M−</button>
+
+                                <button class="calc-key num" onclick="calcKey('4','num')">4</button>
+                                <button class="calc-key num" onclick="calcKey('5','num')">5</button>
+                                <button class="calc-key num" onclick="calcKey('6','num')">6</button>
+                                <button class="calc-key op" onclick="calcKey('×','op')">×</button>
+                                <button class="calc-key func" onclick="calcKey('MR','num')">MR</button>
+
+                                <button class="calc-key num" onclick="calcKey('1','num')">1</button>
+                                <button class="calc-key num" onclick="calcKey('2','num')">2</button>
+                                <button class="calc-key num" onclick="calcKey('3','num')">3</button>
+                                <button class="calc-key op" onclick="calcKey('-','op')">−</button>
+                                <button class="calc-key func" onclick="calcKey('%','op')">%</button>
+
+                                <button class="calc-key num" onclick="calcKey('0','num')">0</button>
+                                <button class="calc-key num" onclick="calcKey('.','num')">.</button>
+                                <button class="calc-key func" onclick="calcKey('Ans','num')">Ans</button>
+                                <button class="calc-key op" onclick="calcKey('+','op')">+</button>
+                                <button class="calc-key equals" onclick="calcKey('=','equals')">=</button>
+                            </div>
+
+                            <p style="margin:12px 0 0; font-size:0.72rem; color:#64748b; text-align:center;">
+                                DEG mode • Scientific keys match Casio fx-style layout
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
             </main>
         </div>
 
@@ -3687,6 +3812,17 @@ tr.pc-zero td { opacity: .8; }
                     <circle cx="12" cy="7" r="4" />
                 </svg>
                 <span>Profile</span>
+            </div>
+            <div class="mobile-nav-item" onclick="switchView('calc', this)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                    <line x1="8" y1="6" x2="16" y2="6" />
+                    <line x1="8" y1="10" x2="8" y2="11" />
+                    <line x1="12" y1="10" x2="12" y2="11" />
+                    <line x1="16" y1="10" x2="16" y2="18" />
+                    <line x1="8" y1="18" x2="12" y2="18" />
+                </svg>
+                <span>Calc</span>
             </div>
         </nav>
 
@@ -21855,7 +21991,8 @@ const VIEW_META = {
     revision: { title: 'Quick Revision', crumb: 'Quick Revision' },
     mistakes: { title: 'Mistake Bank', crumb: 'Mistake Bank' },
     progress: { title: 'Progress', crumb: 'Progress' },
-    profile: { title: 'My Profile', crumb: 'Profile' }
+    profile: { title: 'My Profile', crumb: 'Profile' },
+    calc: { title: 'Scientific Calculator', crumb: 'Calculator' }
 };
 
 let currentView = 'dashboard';
@@ -22837,6 +22974,104 @@ function startPkClock() {
     }
     tick();
     setInterval(tick, 30000);
+}
+
+/* ====================== Scientific Calculator (Casio-style) ==================== */
+var calcExpr = '';
+var calcMem = 0;
+var calcAns = 0;
+var calcFrozen = false;
+
+function calcSetDisplay(exprText, outText) {
+    var exprEl = document.getElementById('calc-expr');
+    var outEl = document.getElementById('calc-out');
+    if (exprEl) exprEl.textContent = exprText;
+    if (outEl) outEl.textContent = outText;
+}
+
+function calcUpdateMemFlag() {
+    var flag = document.getElementById('calc-mem-flag');
+    if (flag) flag.style.display = (calcMem !== 0) ? '' : 'none';
+}
+
+function casioBuild(expr) {
+    var s = String(expr);
+    s = s.split('×').join('*').split('÷').join('/').split('−').join('-');
+
+    /* implicit multiplication around parentheses on the RAW expression
+       (function tokens like log( have no digit before '(' so nothing later
+       breaks once they are expanded) */
+    s = s.replace(/\)\s*\(/g, ')*(');
+    s = s.replace(/(\d)\s*\(/g, '$1*(');
+    s = s.replace(/\)(\d)/g, ')*$1');
+
+    s = s.split('√(').join('Math.sqrt(');
+    s = s.split('sin(').join('Math.sin(').split('cos(').join('Math.cos(').split('tan(').join('Math.tan(');
+    s = s.split('log(').join('Math.log10(').split('ln(').join('Math.log(');
+    s = s.split('π').join('Math.PI');
+    s = s.split('Ans').join('(' + (isFinite(calcAns) ? calcAns : 0) + ')');
+    s = s.split('%').join('/100');
+    s = s.split('Math.sin(').join('Math.sin((Math.PI/180)*')
+         .split('Math.cos(').join('Math.cos((Math.PI/180)*')
+         .split('Math.tan(').join('Math.tan((Math.PI/180)*');
+    s = s.split('^').join('**');
+
+    /* implicit multiplication around expanded numbers/functions */
+    s = s.replace(/(\d)(Math\.)/g, '$1*$2');
+    s = s.replace(/\)(Math\.)/g, ')*$1');
+    return s;
+}
+
+function casioEvalDisplay(expr) {
+    var src;
+    try { src = casioBuild(expr); } catch (e) { return 'ERROR'; }
+    var result;
+    try {
+        result = Function('"use strict"; return (' + src + ');')();
+    } catch (e) { return 'ERROR'; }
+    if (typeof result !== 'number' || !isFinite(result)) return 'ERROR';
+    result = Math.round((result + Number.EPSILON) * 1e12) / 1e12;
+    return String(result);
+}
+
+function calcKey(tok, kind) {
+    kind = kind || 'num';
+    if (kind === 'clear') {
+        calcExpr = ''; calcFrozen = false;
+        calcSetDisplay('', '0');
+        return;
+    }
+    if (kind === 'del') {
+        if (calcFrozen) { calcExpr = ''; calcFrozen = false; }
+        else { calcExpr = calcExpr.length > 1 ? calcExpr.substring(0, calcExpr.length - 1) : ''; }
+        calcSetDisplay(calcExpr, calcExpr ? '' : '0');
+        return;
+    }
+    if (kind === 'equals') {
+        if (!calcExpr) return;
+        var res = casioEvalDisplay(calcExpr);
+        calcAns = (res === 'ERROR') ? 0 : parseFloat(res);
+        calcSetDisplay(calcExpr, res);
+        calcExpr = ''; calcFrozen = true;
+        return;
+    }
+    if (tok === 'M+') { calcMem = calcMem + calcAns; calcUpdateMemFlag(); return; }
+    if (tok === 'M-') { calcMem = calcMem - calcAns; calcUpdateMemFlag(); return; }
+    if (tok === 'MR') {
+        if (calcFrozen) { calcExpr = String(calcMem); calcFrozen = false; }
+        else { calcExpr += String(calcMem); }
+        calcSetDisplay(calcExpr, '');
+        return;
+    }
+    /* normal key press */
+    if (calcFrozen) {
+        calcFrozen = false;
+        if (kind === 'op') { calcExpr = 'Ans' + tok; }
+        else { calcExpr = tok; }
+    } else {
+        calcExpr += tok;
+    }
+    calcSetDisplay(calcExpr, '');
 }
 
 function renderRealStats() {
