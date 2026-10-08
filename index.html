@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261007-5 -->
+    <!-- v: 20261008-2 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Exam Prep -- Nameer School of Accountancy</title>
+    <!-- Firebase SDK (compat for inline scripts) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <script>
-        // Redirect to login if no active session (GitHub Pages entry point is always index.html)
+        // ==========================================
+        // SESSION CHECK — must run before Firebase init
+        // Allows localStorage fallback while Firebase initializes
+        // ==========================================
         (function () {
             try {
                 var session = localStorage.getItem('nsa_session');
                 if (!session) {
                     window.location.replace('login.html');
+                    return;
                 }
+                window.sessionValidated = true;
             } catch (e) {
                 window.location.replace('login.html');
+                return;
             }
         })();
+
+        // ==========================================
+        // FIREBASE CONFIG
+        // ==========================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyAskVmKXim1oW75lrmSpBL2QnjHidRH9lA",
+            authDomain: "nameer-school--of-accountancy.firebaseapp.com",
+            projectId: "nameer-school--of-accountancy",
+            storageBucket: "nameer-school--of-accountancy.firebasestorage.app",
+            messagingSenderId: "594772166032",
+            appId: "1:594772166032:web:8bc331f57bf04620f9df15",
+            measurementId: "G-0PMZEG6F78"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Listen for auth state changes (for sign-out, token refresh, etc.)
+        auth.onAuthStateChanged(function(user) {
+            if (!user) {
+                // No Firebase user - only redirect if we never validated a session
+                if (!window.sessionValidated) {
+                    try {
+                        var session = localStorage.getItem('nsa_session');
+                        if (!session) {
+                            window.location.replace('login.html');
+                        }
+                    } catch (e) {
+                        window.location.replace('login.html');
+                    }
+                }
+            }
+        });
     </script>
     <style>
         /* ==========================================================================
@@ -3584,6 +3629,36 @@ tr.pc-zero td { opacity: .8; }
                                         Exam Attempt</span>
                                     <span id="profile-card-session" class="badge badge-blue">Autumn 2026 Attempt</span>
                                 </div>
+                            </div>
+                            <div>
+                                <span
+                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Subscription
+                                    Status</span>
+                                <strong id="profile-card-status" style="color:var(--text-main); font-weight:600;">PENDING</strong>
+                            </div>
+                            <div>
+                                <span
+                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Plan
+                                    Type</span>
+                                <strong id="profile-card-plan" style="color:var(--text-main); font-weight:600;">TRIAL</strong>
+                            </div>
+                            <div>
+                                <span
+                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Access
+                                    Expires</span>
+                                <strong id="profile-card-expiry" style="color:var(--text-main); font-weight:600;">90 days from activation</strong>
+                            </div>
+                            <div>
+                                <span
+                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Content
+                                    Access</span>
+                                <strong id="profile-card-access" style="color:var(--gold-500); font-weight:600;">Access Pending</strong>
+                            </div>
+                            <div>
+                                <span
+                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Assigned
+                                    Subjects</span>
+                                <strong id="profile-card-assigned" style="color:var(--text-main); font-weight:600;">None assigned</strong>
                             </div>
                         </div>
 
@@ -21999,44 +22074,128 @@ let currentView = 'dashboard';
 let navHistory = [];
 let navHistoryIndex = -1;
 let viewInitialised = {};
+let currentUser = null;
+let currentUserProfile = null;
+let profileListener = null;
 
-/* ------------------------------------------------------------------ session */
+/* ------------------------------------------------------------------ session (Firebase + localStorage fallback) */
 function getSession() {
     try {
-        return JSON.parse(localStorage.getItem(NSA_SESSION_KEY) || 'null');
-    } catch (e) {
-        return null;
-    }
+        const session = JSON.parse(localStorage.getItem(NSA_SESSION_KEY) || 'null');
+        // Validate session has required fields
+        if (session && session.email && session.uid) {
+            return session;
+        }
+    } catch (e) { /* ignore */ }
+    return null;
 }
 
+/* ------------------------------------------------------------------ profile (Firestore cached + localStorage fallback) */
 function getProfile() {
-    const s = getSession();
+    const session = getSession();
+    if (!session) return getDefaultProfile();
+
+    // If Firestore profile is cached, use it (sync read)
+    if (currentUserProfile && currentUser && currentUser.uid === session.uid) {
+        const data = currentUserProfile;
+        return {
+            name: data.name || session.name || 'Student',
+            crn: data.crn || '',
+            phone: data.phone || '',
+            email: data.email || session.email,
+            role: data.role || 'student',
+            accountStatus: data.accountStatus || 'PENDING',
+            accessEnabled: data.accessEnabled || false,
+            level: data.level || 'CAF',
+            planType: data.planType || 'TRIAL',
+            subscriptionStatus: data.subscriptionStatus || 'TRIAL',
+            startDate: data.startDate ? data.startDate.toDate ? data.startDate.toDate() : new Date(data.startDate) : null,
+            expiryDate: data.expiryDate ? data.expiryDate.toDate ? data.expiryDate.toDate() : new Date(data.expiryDate) : null,
+            assignedSubjects: data.assignedSubjects || [],
+            session: data.session || ''
+        };
+    }
+
+    // Fallback to localStorage
     let saved = {};
     try {
         saved = JSON.parse(localStorage.getItem(NSA_PROFILE_KEY) || '{}') || {};
     } catch (e) { saved = {}; }
 
-    // a profile belongs to one student: if it was filled in for a different
-    // email, ignore it rather than showing the previous person's details
-    const sEmail = s && String(s.email || '').trim().toLowerCase();
+    const sEmail = session && String(session.email || '').trim().toLowerCase();
     const pEmail = String(saved.email || '').trim().toLowerCase();
     if (sEmail && pEmail && pEmail !== sEmail) {
         saved = {};
     }
 
     return {
-        name: saved.name || (s && (s.name || s.user_name)) || 'Student',
-        crn: saved.crn || (s && s.crn) || '',
+        name: saved.name || session.name || 'Student',
+        crn: saved.crn || '',
         phone: saved.phone || '',
-        email: saved.email || (s && s.email) || '',
-        // `session` here means exam attempt (what the dropdown lists); the
-        // ICAP session level from login is a separate thing and is not stored here
+        email: saved.email || session.email,
+        role: saved.role || 'student',
+        accountStatus: saved.accountStatus || 'PENDING',
+        accessEnabled: saved.accessEnabled || false,
+        level: saved.level || 'CAF',
+        planType: saved.planType || 'TRIAL',
+        subscriptionStatus: saved.subscriptionStatus || 'TRIAL',
+        startDate: saved.startDate ? new Date(saved.startDate) : null,
+        expiryDate: saved.expiryDate ? new Date(saved.expiryDate) : null,
+        assignedSubjects: saved.assignedSubjects || [],
         session: saved.session || ''
     };
 }
 
+/* Async Firestore fetch — called from auth listener, caches to currentUserProfile */
+async function fetchProfileFromFirestore() {
+    if (!currentUser) return null;
+    try {
+        const userDoc = await db.collection('users').doc(currentUser.uid).get();
+        if (userDoc.exists) {
+            currentUserProfile = userDoc.data();
+            return currentUserProfile;
+        }
+    } catch (e) {
+        console.warn('Firestore profile fetch failed, using localStorage:', e);
+    }
+    return null;
+}
+
+function getDefaultProfile() {
+    return {
+        name: 'Student',
+        crn: '',
+        phone: '',
+        email: '',
+        role: 'student',
+        accountStatus: 'PENDING',
+        accessEnabled: false,
+        level: 'CAF',
+        planType: 'TRIAL',
+        subscriptionStatus: 'TRIAL',
+        startDate: null,
+        expiryDate: null,
+        assignedSubjects: [],
+        session: ''
+    };
+}
+
 function saveProfile(p) {
+    // Save to localStorage for immediate UI updates
     try { localStorage.setItem(NSA_PROFILE_KEY, JSON.stringify(p)); } catch (e) { /* quota */ }
+    
+    // Also sync to Firestore if user is signed in
+    if (currentUser) {
+        db.collection('users').doc(currentUser.uid).update({
+            name: p.name,
+            crn: p.crn,
+            phone: p.phone,
+            email: p.email,
+            level: p.level,
+            session: p.session,
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+        }).catch(e => console.warn('Firestore profile update failed:', e));
+    }
 }
 
 function profileInitials(name) {
@@ -22083,6 +22242,40 @@ function renderProfileUI() {
 
     const cardSession = document.getElementById('profile-card-session');
     if (cardSession) cardSession.textContent = sessionLabel(p.session);
+
+    // Subscription fields
+    const cardStatus = document.getElementById('profile-card-status');
+    if (cardStatus) {
+        const status = p.subscriptionStatus || p.accountStatus || 'PENDING';
+        const isActive = p.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
+        cardStatus.innerHTML = '<span class="badge ' + (isActive ? 'badge-success' : 'badge-warning') + '">' + status + '</span>';
+    }
+    
+    const cardPlan = document.getElementById('profile-card-plan');
+    if (cardPlan) cardPlan.textContent = p.planType || 'TRIAL';
+    
+    const cardExpiry = document.getElementById('profile-card-expiry');
+    if (cardExpiry && p.expiryDate) {
+        const expDate = p.expiryDate instanceof Date ? p.expiryDate : new Date(p.expiryDate);
+        const daysLeft = Math.ceil((expDate - new Date()) / (1000 * 60 * 60 * 24));
+        if (daysLeft > 0) {
+            cardExpiry.textContent = expDate.toLocaleDateString('en-PK') + ' (' + daysLeft + ' days left)';
+        } else {
+            cardExpiry.innerHTML = '<span style="color:var(--danger-500)">Expired ' + expDate.toLocaleDateString('en-PK') + '</span>';
+        }
+    }
+    
+    const cardAccess = document.getElementById('profile-card-access');
+    if (cardAccess) {
+        cardAccess.textContent = p.accessEnabled ? 'Access Granted' : 'Access Pending';
+        cardAccess.style.color = p.accessEnabled ? 'var(--success-500)' : 'var(--gold-500)';
+    }
+    
+    const cardAssigned = document.getElementById('profile-card-assigned');
+    if (cardAssigned) {
+        const subjects = (p.assignedSubjects || []).join(', ');
+        cardAssigned.textContent = subjects || 'None assigned';
+    }
 
     setVal('input-profile-name', p.name);
     setVal('input-profile-crn', p.crn);
@@ -22236,10 +22429,28 @@ function saveStudentProfile(event) {
         return;
     }
 
-    saveProfile({
+    const profileData = {
         name: name.trim(), crn: crn.trim(), phone: phone.trim(),
         email: email.trim(), session: session
-    });
+    };
+
+    // Save to localStorage
+    saveProfile(profileData);
+
+    // Also sync to Firestore if user is signed in
+    if (currentUser) {
+        const userRef = db.collection('users').doc(currentUser.uid);
+        userRef.update({
+            name: profileData.name,
+            crn: profileData.crn,
+            phone: profileData.phone,
+            email: profileData.email,
+            level: profileData.level || 'CAF',
+            session: profileData.session,
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+        }).catch(e => console.warn('Firestore profile update failed:', e));
+    }
+
     renderProfileUI();
     showProfileAlert('Profile save ho gaya. Shukriya!', false);
 }
@@ -22340,13 +22551,74 @@ function handleLogout() {
     try {
         localStorage.removeItem(NSA_SESSION_KEY);
         localStorage.removeItem(HISTORY_KEY);
-        // the profile and photo belong to the student, not the device -- drop
-        // them too, or the next person to sign in sees the previous details
         localStorage.removeItem(NSA_PROFILE_KEY);
         localStorage.removeItem(PROFILE_PHOTO_KEY);
         // THEME_KEY is deliberately kept: it is a device preference
     } catch (e) { /* ignore */ }
+    
+    // Sign out from Firebase
+    auth.signOut().catch(e => console.warn('Firebase signOut failed:', e));
+    
     window.location.replace('login.html');
+}
+
+/* ------------------------------------------------------------- subscription access check */
+/**
+ * Check if user has access to paid content
+ * Returns { hasAccess: boolean, reason: string, profile: object }
+ */
+function checkSubscriptionAccess() {
+    if (!currentUserProfile) {
+        return { hasAccess: false, reason: 'Profile not loaded', profile: null };
+    }
+    
+    const profile = currentUserProfile;
+    
+    // Check if account is active
+    if (profile.accountStatus !== 'ACTIVE' && profile.subscriptionStatus !== 'ACTIVE' && profile.subscriptionStatus !== 'TRIAL') {
+        return { 
+            hasAccess: false, 
+            reason: 'Account status: ' + (profile.accountStatus || profile.subscriptionStatus || 'PENDING'), 
+            profile: profile 
+        };
+    }
+    
+    // Check access enabled flag
+    if (!profile.accessEnabled) {
+        return { 
+            hasAccess: false, 
+            reason: 'Content access not enabled by admin', 
+            profile: profile 
+        };
+    }
+    
+    // Check expiry date
+    if (profile.expiryDate) {
+        const expDate = profile.expiryDate.toDate ? profile.expiryDate.toDate() : new Date(profile.expiryDate);
+        if (new Date() > expDate) {
+            return { 
+                hasAccess: false, 
+                reason: 'Subscription expired on ' + expDate.toLocaleDateString('en-PK'), 
+                profile: profile 
+            };
+        }
+    }
+    
+    return { hasAccess: true, reason: 'Access granted', profile: profile };
+}
+
+/**
+ * Wrapper for views that require active subscription
+ * Returns true if access granted, false if redirected
+ */
+function requireSubscription(viewName) {
+    const access = checkSubscriptionAccess();
+    if (!access.hasAccess) {
+        showProfileAlert('Subscription required: ' + access.reason, true);
+        applyView('profile', { silent: true });
+        return false;
+    }
+    return true;
 }
 
 /* ------------------------------------------------------------- navigation */
@@ -23287,5 +23559,104 @@ function bootAppShell() {
             pushNavEntry(v);
         }
     });
+
+    // Initialize Firebase Auth state listener
+    initFirebaseAuth();
+}
+
+/* ------------------------------------------------------------------ Firebase Auth + Profile Sync */
+function initFirebaseAuth() {
+    auth.onAuthStateChanged(async function(user) {
+        if (user) {
+            currentUser = user;
+            // Update localStorage session with fresh data
+            localStorage.setItem(NSA_SESSION_KEY, JSON.stringify({
+                name: user.displayName || user.email.split('@')[0],
+                email: user.email,
+                uid: user.uid,
+                loginAt: Date.now()
+            }));
+
+            // Start real-time Firestore profile listener
+            startProfileListener(user.uid);
+
+            // Fetch fresh profile from Firestore (async), then re-render
+            await fetchProfileFromFirestore();
+            renderProfileUI();
+        } else {
+            // No Firebase user — but check if we have a localStorage session
+            // (allows offline/fallback mode when Firebase is not configured)
+            const localSession = getSession();
+            if (!localSession) {
+                // No session at all — clear listener and redirect to login
+                stopProfileListener();
+                currentUser = null;
+                currentUserProfile = null;
+                localStorage.removeItem(NSA_SESSION_KEY);
+                if (!window.location.pathname.endsWith('login.html')) {
+                    window.location.replace('login.html');
+                }
+            }
+            // If localSession exists, we stay on the page with fallback mode
+        }
+    });
+}
+
+function startProfileListener(uid) {
+    stopProfileListener(); // Ensure no duplicate listeners
+    
+    profileListener = db.collection('users').doc(uid)
+        .onSnapshot(function(doc) {
+            if (doc.exists) {
+                currentUserProfile = doc.data();
+                // Update UI with fresh subscription data
+                updateSubscriptionUI(currentUserProfile);
+            } else {
+                // Profile doesn't exist, create default
+                currentUserProfile = null;
+                updateSubscriptionUI(getDefaultProfile());
+            }
+        }, function(error) {
+            console.warn('Profile listener error:', error);
+            // Fallback to one-time fetch
+            fetchProfileFromFirestore().then(p => { if (p) updateSubscriptionUI(p); });
+        });
+}
+
+function stopProfileListener() {
+    if (profileListener) {
+        profileListener();
+        profileListener = null;
+    }
+}
+
+function updateSubscriptionUI(profile) {
+    // Update subscription status indicators in UI
+    const statusEl = document.getElementById('subscription-status');
+    const expiryEl = document.getElementById('subscription-expiry');
+    const accessEl = document.getElementById('access-status');
+    
+    if (statusEl) {
+        const status = profile.subscriptionStatus || profile.accountStatus || 'PENDING';
+        const isActive = profile.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
+        statusEl.textContent = status;
+        statusEl.className = 'badge ' + (isActive ? 'badge-success' : 'badge-warning');
+    }
+    
+    if (expiryEl && profile.expiryDate) {
+        const expDate = profile.expiryDate.toDate ? profile.expiryDate.toDate() : new Date(profile.expiryDate);
+        const daysLeft = Math.ceil((expDate - new Date()) / (1000 * 60 * 60 * 24));
+        if (daysLeft > 0) {
+            expiryEl.textContent = expDate.toLocaleDateString('en-PK') + ' (' + daysLeft + ' days left)';
+        } else {
+            expiryEl.textContent = 'Expired on ' + expDate.toLocaleDateString('en-PK');
+            expiryEl.style.color = 'var(--danger-500)';
+        }
+    }
+    
+    if (accessEl) {
+        accessEl.textContent = profile.accessEnabled ? 'Access Granted' : 'Access Pending';
+        accessEl.style.color = profile.accessEnabled ? 'var(--success-500)' : 'var(--gold-500)';
+    }
 }
 </script>

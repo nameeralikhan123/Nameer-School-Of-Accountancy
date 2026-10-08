@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Firebase SDK (compat for inline scripts) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <style>
         :root {
             --gold-300: #e8c876;
@@ -598,18 +602,33 @@
     </div>
 
     <script>
-        const USERS_KEY = 'nsa_users';
-        const SESSION_KEY = 'nsa_session';
+        // ==========================================
+        // FIREBASE CONFIG — REPLACE WITH YOUR VALUES
+        // Get these from Firebase Console > Project Settings > General > Your apps > Web app
+        // ==========================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyAskVmKXim1oW75lrmSpBL2QnjHidRH9lA",
+            authDomain: "nameer-school--of-accountancy.firebaseapp.com",
+            projectId: "nameer-school--of-accountancy",
+            storageBucket: "nameer-school--of-accountancy.firebasestorage.app",
+            messagingSenderId: "594772166032",
+            appId: "1:594772166032:web:8bc331f57bf04620f9df15",
+            measurementId: "G-0PMZEG6F78"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Firestore settings
+        db.settings({ cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED });
+        // Enable offline persistence (optional, for better offline support)
+        // db.enablePersistence().catch(() => {});
+
+        const SESSION_KEY = 'nsa_session';  // local fallback for immediate redirects
         let authMode = 'login';
-
-        function loadUsers() {
-            try { return JSON.parse(localStorage.getItem(USERS_KEY)) || []; }
-            catch (e) { return []; }
-        }
-
-        function saveUsers(users) {
-            localStorage.setItem(USERS_KEY, JSON.stringify(users));
-        }
+        let authUnsubscribe = null;
 
         function showError(msg) {
             const el = document.getElementById('login-error');
@@ -638,17 +657,57 @@
             setMode(authMode === 'login' ? 'signup' : 'login');
         }
 
-        function startSession(user) {
+        function setLoading(isLoading) {
+            const btn = document.getElementById('auth-submit-btn');
+            const label = document.getElementById('auth-submit-label');
+            if (isLoading) {
+                btn.disabled = true;
+                label.innerHTML = '<span class="spinner" style="display:inline-block;width:16px;height:16px;border:2px solid #fff;border-right-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;"></span>Please wait...';
+            } else {
+                btn.disabled = false;
+                label.textContent = authMode === 'signup' ? 'Create Account' : 'Sign In';
+            }
+        }
+
+        function startLocalSession(user) {
             localStorage.setItem(SESSION_KEY, JSON.stringify({
-                name: user.name,
+                name: user.displayName || user.email.split('@')[0],
                 email: user.email,
+                uid: user.uid,
                 loginAt: Date.now()
             }));
         }
 
-        function handleAuth(e) {
+        async function createUserProfile(uid, email, displayName) {
+            const userRef = db.collection('users').doc(uid);
+            const now = firebase.firestore.Timestamp.now();
+            const expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 90); // 90-day trial default
+
+            const profile = {
+                name: displayName || email.split('@')[0],
+                email: email,
+                role: 'student',
+                accountStatus: 'PENDING',  // PENDING, ACTIVE, EXPIRED, SUSPENDED
+                accessEnabled: false,
+                level: 'CAF',  // CAF, PRC, or specific level
+                planType: 'TRIAL',  // TRIAL, CAF_1_SUBJECT, CAF_FULL, PRC_1, PRC_FULL, etc.
+                subscriptionStatus: 'TRIAL',  // TRIAL, ACTIVE, EXPIRED, CANCELLED
+                startDate: now,
+                expiryDate: firebase.firestore.Timestamp.fromDate(expiryDate),
+                assignedSubjects: [],
+                createdAt: now,
+                updatedAt: now
+            };
+
+            await userRef.set(profile);
+            return profile;
+        }
+
+        async function handleAuth(e) {
             e.preventDefault();
             showError('');
+            setLoading(true);
 
             const email = document.getElementById('auth-email').value.trim();
             const password = document.getElementById('auth-password').value;
@@ -656,48 +715,94 @@
 
             if (!email || !password) {
                 showError('Please enter your email and password.');
+                setLoading(false);
                 return;
             }
 
-            // shape check first, so a typo never reads as "no such account"
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
                 showError('Please enter a valid email address.');
+                setLoading(false);
                 return;
             }
 
-            const users = loadUsers();
-            const existing = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+            try {
+                if (authMode === 'signup') {
+                    if (password.length < 6) {
+                        showError('Password must be at least 6 characters long.');
+                        setLoading(false);
+                        return;
+                    }
 
-            if (authMode === 'signup') {
-                if (existing) {
-                    // setMode() clears the error box, so switch mode first, then report
-                    setMode('login');
-                    showError('An account with this email already exists. Please sign in.');
-                    document.getElementById('auth-password').value = '';
-                    return;
+                    // Create user with Firebase Auth
+                    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+                    const user = userCredential.user;
+
+                    // Update profile with display name
+                    await user.updateProfile({ displayName: name || email.split('@')[0] });
+
+                    // Create Firestore user document with subscription fields
+                    await createUserProfile(user.uid, email, name);
+
+                    // Set local session for immediate redirect
+                    startLocalSession(user);
+
+                } else {
+                    // Sign in existing user
+                    const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                    const user = userCredential.user;
+
+                    // Check if user document exists, create if not (for backward compatibility)
+                    const userRef = db.collection('users').doc(user.uid);
+                    const userDoc = await userRef.get();
+                    if (!userDoc.exists) {
+                        await createUserProfile(user.uid, email, user.displayName);
+                    }
+
+                    startLocalSession(user);
                 }
-                if (password.length < 6) {
-                    showError('Password must be at least 6 characters long.');
-                    return;
+
+                window.location.href = 'index.html';
+
+            } catch (error) {
+                let msg = 'An error occurred. Please try again.';
+                switch (error.code) {
+                    case 'auth/email-already-in-use':
+                        msg = 'An account with this email already exists. Please sign in.';
+                        break;
+                    case 'auth/invalid-email':
+                        msg = 'Please enter a valid email address.';
+                        break;
+                    case 'auth/weak-password':
+                        msg = 'Password must be at least 6 characters long.';
+                        break;
+                    case 'auth/user-not-found':
+                        msg = 'No account found with this email. Please create an account.';
+                        break;
+                    case 'auth/wrong-password':
+                        msg = 'Incorrect password. Please try again.';
+                        break;
+                    case 'auth/too-many-requests':
+                        msg = 'Too many failed attempts. Please try again later.';
+                        break;
+                    case 'auth/network-request-failed':
+                        msg = 'Network error. Please check your connection.';
+                        break;
+                    default:
+                        msg = error.message || msg;
                 }
-                const user = { name: name || email.split('@')[0], email, password };
-                users.push(user);
-                saveUsers(users);
-                startSession(user);
-            } else {
-                if (!existing) {
-                    showError('No account found with this email. Please create an account.');
-                    return;
-                }
-                if (existing.password !== password) {
-                    showError('Incorrect password. Please try again.');
-                    return;
-                }
-                startSession(existing);
+                showError(msg);
+                setLoading(false);
             }
-
-            window.location.href = 'index.html';
         }
+
+        // Listen for auth state changes (handles page refresh, etc.)
+        authUnsubscribe = auth.onAuthStateChanged(function(user) {
+            if (user && window.location.pathname.endsWith('login.html')) {
+                // Already signed in, redirect to app
+                startLocalSession(user);
+                window.location.href = 'index.html';
+            }
+        });
 
         // Password visibility toggle
         (function () {
@@ -713,6 +818,16 @@
                 btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
             });
         })();
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (authUnsubscribe) authUnsubscribe();
+        });
+
+        // Add spinner animation style
+        const style = document.createElement('style');
+        style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+        document.head.appendChild(style);
     </script>
 </body>
 
