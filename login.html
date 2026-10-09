@@ -743,7 +743,7 @@
                     // Create Firestore user document with subscription fields
                     await createUserProfile(user.uid, email, name);
 
-                    // Set local session for immediate redirect
+                    // Set local session for redirect
                     startLocalSession(user);
 
                 } else {
@@ -761,6 +761,8 @@
                     startLocalSession(user);
                 }
 
+                // Always redirect to index.html — it will check approval status
+                // and show "Pending Approval" screen if not yet approved
                 window.location.href = 'index.html';
 
             } catch (error) {
