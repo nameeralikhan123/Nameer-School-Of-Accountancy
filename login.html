@@ -511,6 +511,185 @@
             font-size: 0.88rem;
             letter-spacing: 0.2px;
         }
+
+        /* ==================================================================
+           SPLIT-SCREEN LAYOUT + DIAGONAL DIVIDER
+           Everything above is the original page and is left untouched: the
+           background scene, the colours and the fonts on the brand side stay
+           exactly the same. This block only changes the layout into a
+           full-bleed two-panel split, adds a diagonal divider, and turns the
+           right side into a clean white panel.
+           ================================================================== */
+
+        /* full-bleed two-panel split */
+        .login-wrapper {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+            align-items: stretch;
+            align-content: stretch;
+            /* the seam sits at 53% at the top, so the brand side is a touch
+               wider than the white side */
+            grid-template-columns: 1.06fr 0.94fr;
+        }
+
+        /* The diagonal divider. A clean white panel sits over the right half
+           and reaches a little into the left half at the bottom, so its left
+           edge runs on a slant and the original dark scene shows through
+           above it. The right half itself stays fully white. */
+        .login-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 59%;
+            background: #ffffff;
+            clip-path: polygon(20.34% 0, 100% 0, 100% 100%, 0 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ---- left panel: the original look, only repositioned ---- */
+        .brand-side {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 12.4vw 40px 5.7vw;
+        }
+
+        /* ---- right panel: clean white ---- */
+        .login-card {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            max-width: 79%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 36px 0;
+        }
+
+        /* sizing follows the reference proportions at any width */
+        .brand-logo-lg {
+            width: clamp(150px, 17vw, 240px);
+            margin-bottom: 22px;
+        }
+
+        .gold-rule {
+            width: 55px;
+            height: 4px;
+            margin: 0 0 22px;
+        }
+
+        .hero-heading { font-size: clamp(1.9rem, 3.4vw, 2.85rem); }
+
+        .hero-desc {
+            font-size: clamp(0.85rem, 1.16vw, 0.98rem);
+        }
+
+        /* vertical rhythm matches the reference spacing */
+        .login-card .sub { margin-bottom: 34px; }
+        .form-group { margin-bottom: 24px; }
+        .checkbox-row { margin: 6px 0 22px; }
+        .divider { margin: 30px 0 0; }
+        .wa-link { margin-top: 24px; }
+
+        .login-card h2 { color: #10233b; }
+        .login-card .sub { color: #5c6b7d; }
+
+        .form-label { color: #10233b; }
+        .input-icon { color: #94a3b8; }
+
+        .form-input {
+            background: #ffffff;
+            border: 1px solid #dbe3ec;
+            color: #10233b;
+        }
+
+        .form-input::placeholder { color: #9aa7b6; }
+
+        .form-input:focus {
+            border-color: var(--gold-400);
+            box-shadow: 0 0 0 3px rgba(212, 167, 84, 0.16);
+        }
+
+        .pw-toggle { color: #94a3b8; }
+        .pw-toggle:hover { color: var(--gold-500); }
+
+        .checkbox-label { color: #5c6b7d; }
+
+        .forgot-link { color: #a9821f; }
+        .forgot-link:hover { color: var(--gold-500); }
+
+        .divider { color: #94a3b8; }
+        .divider::before,
+        .divider::after { background: #e2e8f0; }
+
+        .form-error {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #b91c1c;
+        }
+
+        .wa-link {
+            border-color: rgba(212, 167, 84, 0.55);
+            background: #fdfaf4;
+            color: #5c6b7d;
+        }
+
+        .wa-link:hover {
+            border-color: var(--gold-400);
+            background: rgba(212, 167, 84, 0.08);
+        }
+
+        .wa-link strong { color: #a9821f; }
+
+        /* keep the whole page in one screen on shorter displays */
+        @media (max-height: 760px) {
+            .brand-logo-lg { width: 165px; margin-bottom: 12px; }
+            .gold-rule { width: 44px; height: 3px; margin-bottom: 14px; }
+            .hero-heading { font-size: 2.1rem; margin-bottom: 8px; }
+            .hero-desc { font-size: 0.85rem; margin-bottom: 14px; }
+            .body-badge img { height: 34px; max-width: 190px; }
+            .login-card { padding: 26px 0; }
+            .login-card h2 { font-size: 1.5rem; margin-bottom: 4px; }
+            .login-card .sub { margin-bottom: 16px; }
+            .form-group { margin-bottom: 12px; }
+            .checkbox-row { margin: 4px 0 14px; }
+            .divider { margin: 16px 0 0; }
+            .wa-link { margin-top: 14px; }
+        }
+
+        /* once the panels stack there is nothing to cut diagonally */
+        @media (max-width: 940px) {
+            .login-wrapper {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .login-wrapper::after { display: none; }
+
+            .brand-side { padding: 36px 28px 18px; }
+
+            .login-card {
+                align-self: auto;
+                background: #ffffff;
+                max-width: 520px;
+                padding: 30px 26px 40px;
+            }
+        }
     </style>
 </head>
 
