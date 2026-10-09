@@ -688,11 +688,11 @@
                 name: displayName || email.split('@')[0],
                 email: email,
                 role: 'student',
-                accountStatus: 'PENDING',  // PENDING, ACTIVE, EXPIRED, SUSPENDED
-                accessEnabled: false,
+                accountStatus: 'ACTIVE',  // ACTIVE, EXPIRED, SUSPENDED
+                accessEnabled: true,
                 level: 'CAF',  // CAF, PRC, or specific level
                 planType: 'TRIAL',  // TRIAL, CAF_1_SUBJECT, CAF_FULL, PRC_1, PRC_FULL, etc.
-                subscriptionStatus: 'TRIAL',  // TRIAL, ACTIVE, EXPIRED, CANCELLED
+                subscriptionStatus: 'ACTIVE',  // ACTIVE, EXPIRED, CANCELLED
                 startDate: now,
                 expiryDate: firebase.firestore.Timestamp.fromDate(expiryDate),
                 assignedSubjects: [],

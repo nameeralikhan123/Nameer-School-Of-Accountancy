@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261008-2 -->
+    <!-- v: 20261008-4 -->
 
 <head>
     <meta charset="UTF-8">
@@ -3634,7 +3634,7 @@ tr.pc-zero td { opacity: .8; }
                                 <span
                                     style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Subscription
                                     Status</span>
-                                <strong id="profile-card-status" style="color:var(--text-main); font-weight:600;">PENDING</strong>
+                                <strong id="profile-card-status" style="color:var(--text-main); font-weight:600;">ACTIVE</strong>
                             </div>
                             <div>
                                 <span
@@ -3652,7 +3652,7 @@ tr.pc-zero td { opacity: .8; }
                                 <span
                                     style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Content
                                     Access</span>
-                                <strong id="profile-card-access" style="color:var(--gold-500); font-weight:600;">Access Pending</strong>
+                                <strong id="profile-card-access" style="color:var(--success-500); font-weight:600;">Access Granted</strong>
                             </div>
                             <div>
                                 <span
@@ -20581,6 +20581,7 @@ function practiceCentreRenderReview() {
             try {
                 localStorage.setItem(REVIEW_KEY, JSON.stringify(decisions));
             } catch (e) { /* storage disabled - decision stands for this visit */ }
+            fsPushData('reviews');
             practiceCentreRenderReview();
         };
     }
@@ -20632,6 +20633,7 @@ function practiceCentrePersistSession(session) {
         all.push(session);
         localStorage.setItem('pc_sessions', JSON.stringify(all.slice(-50)));
     } catch (e) { /* storage disabled - the session still works in memory */ }
+    fsPushData('sessions');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -21947,6 +21949,7 @@ function initRevisionApp() {
                     percentage: percentage
                 });
                 localStorage.setItem('prc_mock_exam_history', JSON.stringify(history));
+                fsPushData('mockHistory');
 
                 const container = document.getElementById('mock-exams-portal-container');
                 if (!container) return;
@@ -22104,11 +22107,11 @@ function getProfile() {
             phone: data.phone || '',
             email: data.email || session.email,
             role: data.role || 'student',
-            accountStatus: data.accountStatus || 'PENDING',
-            accessEnabled: data.accessEnabled || false,
+            accountStatus: data.accountStatus || 'ACTIVE',
+            accessEnabled: data.accessEnabled !== false,
             level: data.level || 'CAF',
             planType: data.planType || 'TRIAL',
-            subscriptionStatus: data.subscriptionStatus || 'TRIAL',
+            subscriptionStatus: data.subscriptionStatus || 'ACTIVE',
             startDate: data.startDate ? data.startDate.toDate ? data.startDate.toDate() : new Date(data.startDate) : null,
             expiryDate: data.expiryDate ? data.expiryDate.toDate ? data.expiryDate.toDate() : new Date(data.expiryDate) : null,
             assignedSubjects: data.assignedSubjects || [],
@@ -22134,11 +22137,11 @@ function getProfile() {
         phone: saved.phone || '',
         email: saved.email || session.email,
         role: saved.role || 'student',
-        accountStatus: saved.accountStatus || 'PENDING',
-        accessEnabled: saved.accessEnabled || false,
+        accountStatus: saved.accountStatus || 'ACTIVE',
+        accessEnabled: saved.accessEnabled !== false,
         level: saved.level || 'CAF',
         planType: saved.planType || 'TRIAL',
-        subscriptionStatus: saved.subscriptionStatus || 'TRIAL',
+        subscriptionStatus: saved.subscriptionStatus || 'ACTIVE',
         startDate: saved.startDate ? new Date(saved.startDate) : null,
         expiryDate: saved.expiryDate ? new Date(saved.expiryDate) : null,
         assignedSubjects: saved.assignedSubjects || [],
@@ -22161,6 +22164,122 @@ async function fetchProfileFromFirestore() {
     return null;
 }
 
+/* ------------------------------------------------------------------ Firestore student-data sync
+ * Progress + results live in localStorage for instant/offline use and are
+ * mirrored to Firestore under users/{uid}/data so they follow the student
+ * across devices. Firestore wins on login; every local save pushes up.
+ * Practice sessions are stored one doc per session (they carry full answer
+ * text); reviews and mock-exam history are single overwrite docs. */
+const FS_DATA_DOCS = {
+    sessions:    { key: 'pc_sessions',           doc: 'sessions',    perItem: true, sub: true },
+    reviews:     { key: 'pc_review',             doc: 'reviews',     perItem: false },
+    mockHistory: { key: 'prc_mock_exam_history', doc: 'mockHistory', perItem: false }
+};
+
+function fsReadLocal(key) {
+    try {
+        const v = JSON.parse(localStorage.getItem(key) || 'null');
+        return Array.isArray(v) ? v : null;
+    } catch (e) { return null; }
+}
+
+function fsWriteLocal(key, arr) {
+    try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) { /* quota */ }
+}
+
+/* Tag which uid this browser's caches belong to, so a different student signing
+ * in on this browser never inherits the previous student's progress. */
+function dataSyncGuard() {
+    const uid = currentUser && currentUser.uid;
+    if (!uid) return;
+    let tagged = null;
+    try { tagged = localStorage.getItem('nsa_data_user'); } catch (e) { /* ignore */ }
+    if (tagged && tagged !== uid) {
+        Object.keys(FS_DATA_DOCS).forEach(function (name) {
+            try { localStorage.removeItem(FS_DATA_DOCS[name].key); } catch (e) { /* ignore */ }
+        });
+    }
+    try { localStorage.setItem('nsa_data_user', uid); } catch (e) { /* ignore */ }
+}
+
+function fsDataColl(name) {
+    const meta = FS_DATA_DOCS[name];
+    const uidDoc = db.collection('users').doc(currentUser.uid);
+    return meta.sub ? uidDoc.collection('sessions') : uidDoc.collection('data');
+}
+
+function fsDataRef(name) {
+    return fsDataColl(name).doc(FS_DATA_DOCS[name].doc);
+}
+
+/* Push one datastore up — per-item stores overwrite each entry's own doc (so a
+ * repeat push of the same array is idempotent), the rest overwrite one doc. */
+function fsPushData(name) {
+    if (!currentUser || !currentUser.uid) return;
+    const meta = FS_DATA_DOCS[name];
+    const arr = fsReadLocal(meta.key);
+    if (!arr || !arr.length) return;
+    if (meta.perItem) {
+        arr.forEach(function (item) {
+            const id = item && (item.sessionId || item.id);
+            if (!id || typeof id !== 'string') return;
+            fsDataColl(name).doc(id).set(item).catch(function () { /* offline */ });
+        });
+    } else {
+        fsDataRef(name).set({ uid: currentUser.uid, items: arr })
+            .catch(function () { /* offline */ });
+    }
+}
+
+function fsPushAllData() {
+    if (!currentUser || !currentUser.uid) return;
+    Object.keys(FS_DATA_DOCS).forEach(fsPushData);
+}
+
+/* Pull cloud data down at login. Firestore is authoritative when it has data;
+ * otherwise the local cache seeds the cloud (first sync). */
+function fsPullOne(name) {
+    const meta = FS_DATA_DOCS[name];
+    if (meta.perItem) {
+        return fsDataColl(name).limit(60).get().then(function (snap) {
+            const docs = [];
+            snap.forEach(function (d) { docs.push(d.data()); });
+            if (docs.length) {
+                docs.sort(function (a, b) { return String(a.startedAt) < String(b.startedAt) ? -1 : 1; });
+                fsWriteLocal(meta.key, docs.slice(-50));
+            } else {
+                fsPushData(name); // seed the cloud from local history
+            }
+        }).catch(function () { /* offline - keep local cache */ });
+    }
+    return fsDataRef(name).get().then(function (snap) {
+        const data = snap.exists ? snap.data() : null;
+        if (data && Array.isArray(data.items) && data.items.length) {
+            fsWriteLocal(meta.key, data.items);
+        } else {
+            fsPushData(name); // seed the cloud from local history
+        }
+    }).catch(function () { /* offline - keep local cache */ });
+}
+
+async function fsPullData() {
+    if (!currentUser || !currentUser.uid) return;
+    dataSyncGuard();
+    await Promise.all(Object.keys(FS_DATA_DOCS).map(fsPullOne));
+}
+
+/* Delete the student's cloud progress (used by "Reset the entire application"). */
+function fsClearCloudData() {
+    if (!currentUser || !currentUser.uid) return Promise.resolve();
+    const ops = [fsDataRef('reviews').delete(), fsDataRef('mockHistory').delete()];
+    ops.push(fsDataColl('sessions').get().then(function (snap) {
+        const dels = [];
+        snap.forEach(function (d) { dels.push(d.ref.delete()); });
+        return Promise.all(dels);
+    }).catch(function () { /* offline */ }));
+    return Promise.all(ops).catch(function () { /* ignore */ });
+}
+
 function getDefaultProfile() {
     return {
         name: 'Student',
@@ -22168,11 +22287,11 @@ function getDefaultProfile() {
         phone: '',
         email: '',
         role: 'student',
-        accountStatus: 'PENDING',
-        accessEnabled: false,
+        accountStatus: 'ACTIVE',
+        accessEnabled: true,
         level: 'CAF',
         planType: 'TRIAL',
-        subscriptionStatus: 'TRIAL',
+        subscriptionStatus: 'ACTIVE',
         startDate: null,
         expiryDate: null,
         assignedSubjects: [],
@@ -22246,7 +22365,7 @@ function renderProfileUI() {
     // Subscription fields
     const cardStatus = document.getElementById('profile-card-status');
     if (cardStatus) {
-        const status = p.subscriptionStatus || p.accountStatus || 'PENDING';
+        const status = p.subscriptionStatus || p.accountStatus || 'INACTIVE';
         const isActive = p.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
         cardStatus.innerHTML = '<span class="badge ' + (isActive ? 'badge-success' : 'badge-warning') + '">' + status + '</span>';
     }
@@ -22544,7 +22663,8 @@ function resetApplication() {
         localStorage.removeItem('prc_mock_exam_history');
         localStorage.removeItem(HISTORY_KEY);
     } catch (e) { /* ignore */ }
-    window.location.reload();
+    // Also wipe the student's cloud progress so it does not come back on next login
+    fsClearCloudData().finally(function () { window.location.reload(); });
 }
 
 function handleLogout() {
@@ -22578,7 +22698,7 @@ function checkSubscriptionAccess() {
     if (profile.accountStatus !== 'ACTIVE' && profile.subscriptionStatus !== 'ACTIVE' && profile.subscriptionStatus !== 'TRIAL') {
         return { 
             hasAccess: false, 
-            reason: 'Account status: ' + (profile.accountStatus || profile.subscriptionStatus || 'PENDING'), 
+            reason: 'Account status: ' + (profile.accountStatus || profile.subscriptionStatus || 'INACTIVE'), 
             profile: profile 
         };
     }
@@ -23583,6 +23703,14 @@ function initFirebaseAuth() {
             // Fetch fresh profile from Firestore (async), then re-render
             await fetchProfileFromFirestore();
             renderProfileUI();
+
+            // Pull practice sessions / review decisions / mock history from
+            // Firestore, then refresh any data-driven view showing them
+            fsPullData().then(function () {
+                if ({ dashboard: 1, progress: 1, evaluation: 1, mistakes: 1 }[currentView]) {
+                    applyView(currentView, { silent: true });
+                }
+            });
         } else {
             // No Firebase user — but check if we have a localStorage session
             // (allows offline/fallback mode when Firebase is not configured)
@@ -23637,7 +23765,7 @@ function updateSubscriptionUI(profile) {
     const accessEl = document.getElementById('access-status');
 
     if (statusEl) {
-        const status = profile.subscriptionStatus || profile.accountStatus || 'PENDING';
+        const status = profile.subscriptionStatus || profile.accountStatus || 'INACTIVE';
         const isActive = profile.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
         statusEl.textContent = status;
         statusEl.className = 'badge ' + (isActive ? 'badge-success' : 'badge-warning');
