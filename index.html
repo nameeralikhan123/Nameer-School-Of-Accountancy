@@ -3681,7 +3681,7 @@ tr.pc-zero td { opacity: .8; }
                                     <label
                                         style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Full
                                         Name</label>
-                                    <input type="text" id="input-profile-name" required placeholder="e.g. Manal Fatima"
+                                    <input type="text" id="input-profile-name" required placeholder="e.g. Nameer Ali Khan"
                                         style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
                                 </div>
 
@@ -22306,12 +22306,12 @@ function saveProfile(p) {
     // Also sync to Firestore if user is signed in
     if (currentUser) {
         db.collection('users').doc(currentUser.uid).update({
-            name: p.name,
-            crn: p.crn,
-            phone: p.phone,
-            email: p.email,
-            level: p.level,
-            session: p.session,
+            name: p.name || '',
+            crn: p.crn || '',
+            phone: p.phone || '',
+            email: p.email || '',
+            level: p.level || 'CAF',
+            session: p.session || getActiveSessionId(),
             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         }).catch(e => console.warn('Firestore profile update failed:', e));
     }
