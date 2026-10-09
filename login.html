@@ -480,6 +480,42 @@
             text-decoration: none;
         }
         .signup-row a:hover { text-decoration: underline; }
+
+        /* WhatsApp access note */
+        .wa-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 14px;
+            padding: 13px 16px;
+            border: 1px solid rgba(212, 167, 84, 0.32);
+            background: rgba(212, 167, 84, 0.07);
+            border-radius: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            line-height: 1.45;
+            text-align: left;
+            transition: border-color 0.2s, background 0.2s, transform 0.2s;
+        }
+        .wa-link:hover {
+            border-color: var(--gold-400);
+            background: rgba(212, 167, 84, 0.13);
+            transform: translateY(-1px);
+        }
+        .wa-icon {
+            width: 26px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #25d366;
+        }
+        .wa-link strong {
+            display: block;
+            color: var(--gold-300);
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+        }
     </style>
 </head>
 
@@ -527,17 +563,6 @@
             <form id="auth-form" onsubmit="return handleAuth(event)">
                 <div class="form-error" id="login-error"></div>
 
-                <div class="form-group" id="name-group" style="display:none;">
-                    <label class="form-label">Full Name</label>
-                    <div class="input-wrap">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
-                        <input type="text" id="auth-name" class="form-input" placeholder="Enter your full name" autocomplete="name">
-                    </div>
-                </div>
-
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
                     <div class="input-wrap">
@@ -582,22 +607,19 @@
                 </button>
             </form>
 
-            <div class="divider">OR</div>
+            <div class="divider">Need access?</div>
 
-            <button class="btn-outline-gold" id="auth-toggle-btn" onclick="toggleAuthMode()">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <line x1="19" y1="8" x2="19" y2="14" />
-                    <line x1="22" y1="11" x2="16" y2="11" />
+            <a class="wa-link"
+               href="https://wa.me/923352228638?text=Assalam-o-Alaikum%2C%20I%20need%20account%20access%20for%20the%20Nameer%20School%20of%20Accountancy%20app."
+               target="_blank" rel="noopener">
+                <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
-                <span id="auth-toggle-label">Create Your Account</span>
-            </button>
-
-            <div class="signup-row" id="auth-footer">
-                Don't have an account?
-                <a href="#" onclick="toggleAuthMode(); return false;">Create account</a>
-            </div>
+                <span>
+                    Need account access? Provide your details on WhatsApp
+                    <strong>+92 335 2228638</strong>
+                </span>
+            </a>
         </div>
     </div>
 
@@ -627,34 +649,11 @@
         // db.enablePersistence().catch(() => {});
 
         const SESSION_KEY = 'nsa_session';  // local fallback for immediate redirects
-        let authMode = 'login';
-        let authUnsubscribe = null;
 
         function showError(msg) {
             const el = document.getElementById('login-error');
             el.textContent = msg;
             el.style.display = msg ? 'block' : 'none';
-        }
-
-        function setMode(mode) {
-            authMode = mode;
-            const signup = mode === 'signup';
-            document.getElementById('auth-title').textContent = signup ? 'Create Your Account' : 'Welcome Back';
-            document.getElementById('auth-subtitle').textContent = signup
-                ? 'Start your CA & ACCA preparation journey in minutes'
-                : 'Sign in to continue your preparation';
-            document.getElementById('name-group').style.display = signup ? 'block' : 'none';
-            document.getElementById('auth-name').required = signup;
-            document.getElementById('auth-submit-label').textContent = signup ? 'Create Account' : 'Sign In';
-            document.getElementById('auth-toggle-label').textContent = signup ? 'Sign In Instead' : 'Create Your Account';
-            document.getElementById('auth-footer').innerHTML = signup
-                ? 'Already have an account? <a href="#" onclick="toggleAuthMode(); return false;">Sign in</a>'
-                : 'Don\'t have an account? <a href="#" onclick="toggleAuthMode(); return false;">Create account</a>';
-            showError('');
-        }
-
-        function toggleAuthMode() {
-            setMode(authMode === 'login' ? 'signup' : 'login');
         }
 
         function setLoading(isLoading) {
@@ -665,7 +664,7 @@
                 label.innerHTML = '<span class="spinner" style="display:inline-block;width:16px;height:16px;border:2px solid #fff;border-right-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;"></span>Please wait...';
             } else {
                 btn.disabled = false;
-                label.textContent = authMode === 'signup' ? 'Create Account' : 'Sign In';
+                label.textContent = 'Sign In';
             }
         }
 
@@ -711,7 +710,6 @@
 
             const email = document.getElementById('auth-email').value.trim();
             const password = document.getElementById('auth-password').value;
-            const name = document.getElementById('auth-name').value.trim();
 
             if (!email || !password) {
                 showError('Please enter your email and password.');
@@ -726,57 +724,29 @@
             }
 
             try {
-                if (authMode === 'signup') {
-                    if (password.length < 6) {
-                        showError('Password must be at least 6 characters long.');
-                        setLoading(false);
-                        return;
-                    }
+                // Sign in with admin-provided credentials. Accounts are created by the
+                // admin in the Firebase Console (Authentication > Users > Add user).
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                const user = userCredential.user;
 
-                    // Create user with Firebase Auth
-                    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
-                    const user = userCredential.user;
-
-                    // Update profile with display name
-                    await user.updateProfile({ displayName: name || email.split('@')[0] });
-
-                    // Create Firestore user document with subscription fields
-                    await createUserProfile(user.uid, email, name);
-
-                    // Set local session for immediate redirect
-                    startLocalSession(user);
-
-                } else {
-                    // Sign in existing user
-                    const userCredential = await auth.signInWithEmailAndPassword(email, password);
-                    const user = userCredential.user;
-
-                    // Check if user document exists, create if not (for backward compatibility)
-                    const userRef = db.collection('users').doc(user.uid);
-                    const userDoc = await userRef.get();
-                    if (!userDoc.exists) {
-                        await createUserProfile(user.uid, email, user.displayName);
-                    }
-
-                    startLocalSession(user);
+                // Ensure the user's profile document exists (created on first login)
+                const userRef = db.collection('users').doc(user.uid);
+                const userDoc = await userRef.get();
+                if (!userDoc.exists) {
+                    await createUserProfile(user.uid, email, user.displayName);
                 }
 
+                startLocalSession(user);
                 window.location.href = 'index.html';
 
             } catch (error) {
                 let msg = 'An error occurred. Please try again.';
                 switch (error.code) {
-                    case 'auth/email-already-in-use':
-                        msg = 'An account with this email already exists. Please sign in.';
-                        break;
                     case 'auth/invalid-email':
                         msg = 'Please enter a valid email address.';
                         break;
-                    case 'auth/weak-password':
-                        msg = 'Password must be at least 6 characters long.';
-                        break;
                     case 'auth/user-not-found':
-                        msg = 'No account found with this email. Please create an account.';
+                        msg = 'No account found with this email. Please contact your admin to get your login credentials.';
                         break;
                     case 'auth/wrong-password':
                         msg = 'Incorrect password. Please try again.';
@@ -795,15 +765,6 @@
             }
         }
 
-        // Listen for auth state changes (handles page refresh, etc.)
-        authUnsubscribe = auth.onAuthStateChanged(function(user) {
-            if (user && window.location.pathname.endsWith('login.html')) {
-                // Already signed in, redirect to app
-                startLocalSession(user);
-                window.location.href = 'index.html';
-            }
-        });
-
         // Password visibility toggle
         (function () {
             const btn = document.getElementById('pw-toggle');
@@ -818,11 +779,6 @@
                 btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
             });
         })();
-
-        // Cleanup on page unload
-        window.addEventListener('beforeunload', function() {
-            if (authUnsubscribe) authUnsubscribe();
-        });
 
         // Add spinner animation style
         const style = document.createElement('style');
