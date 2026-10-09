@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261009-1 -->
+    <!-- v: 20261009-5 -->
 
 <head>
     <meta charset="UTF-8">
@@ -1047,6 +1047,1306 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: var(--space-xl);
+        }
+
+        /* ============================================================
+           EVALUATION ENGINE
+           ============================================================ */
+        .eval-lede {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            margin: -6px 0 var(--space-xl);
+            max-width: 760px;
+            line-height: 1.55;
+        }
+
+        .eval-panel-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .eval-panel-head h4 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .eval-panel-head .badge {
+            margin-left: auto;
+            background: rgba(148, 163, 184, 0.14);
+            color: var(--text-muted);
+        }
+
+        /* Tooltip — plain CSS, no JS */
+        .info-tip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: rgba(148, 163, 184, 0.12);
+            color: var(--text-muted);
+            font-size: 0.62rem;
+            font-weight: 700;
+            cursor: help;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .info-tip:hover::after,
+        .info-tip:focus::after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: calc(100% + 9px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 234px;
+            padding: 9px 11px;
+            border-radius: 9px;
+            background: #0b1a30;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            color: #e2e8f0;
+            font-size: 0.72rem;
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: 0;
+            text-align: left;
+            white-space: normal;
+            z-index: 40;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-theme="light"] .info-tip:hover::after,
+        [data-theme="light"] .info-tip:focus::after {
+            background: #1e293b;
+        }
+
+        /* ---------- Hero: gauge + breakdown ---------- */
+        .eval-hero {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 0;
+            padding: 0;
+            overflow: hidden;
+            margin-bottom: var(--space-xl);
+        }
+
+        .eval-gauge-col {
+            padding: 26px 28px 24px;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .eval-breakdown {
+            padding: 26px 28px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .eval-gauge-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .eval-gauge {
+            width: 100%;
+            display: block;
+            overflow: visible;
+        }
+
+        .gauge-track {
+            fill: none;
+            stroke: rgba(148, 163, 184, 0.13);
+            stroke-width: 17;
+            stroke-linecap: round;
+        }
+
+        .gauge-arc {
+            fill: none;
+            stroke-width: 17;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gauge-dot {
+            fill: #fff;
+            stroke: rgba(15, 23, 42, 0.35);
+            stroke-width: 3;
+            transition: cx 1s cubic-bezier(0.4, 0, 0.2, 1), cy 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] .gauge-dot { stroke: rgba(255, 255, 255, 0.85); }
+
+        .eval-gauge-center {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 6px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .gauge-value {
+            font-size: 2.85rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--text-main);
+            letter-spacing: -1.4px;
+        }
+
+        .gauge-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+        }
+
+        .eval-gauge-scale {
+            display: flex;
+            justify-content: space-between;
+            max-width: 300px;
+            width: 100%;
+            margin: 2px auto 0;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+        }
+
+        .eval-band {
+            margin-top: 14px;
+            text-align: center;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 7px 12px;
+            border-radius: var(--radius-full);
+            background: rgba(148, 163, 184, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ---------- Metric rows ---------- */
+        .eval-metric {
+            margin-bottom: 15px;
+        }
+
+        .eval-metric-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 7px;
+        }
+
+        .eval-metric-name {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .eval-metric-sub {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            opacity: 0.75;
+            margin-left: auto;
+            margin-right: 2px;
+        }
+
+        .eval-metric-val {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-main);
+            min-width: 62px;
+            text-align: right;
+        }
+
+        .eval-bar {
+            position: relative;
+            height: 9px;
+            border-radius: var(--radius-full);
+            background: rgba(148, 163, 184, 0.13);
+            overflow: hidden;
+        }
+
+        .eval-bar-fill {
+            height: 100%;
+            border-radius: var(--radius-full);
+            width: 0;
+            transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .eval-cta {
+            margin-top: auto;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, #0d9488, #14b8a6);
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            box-shadow: 0 6px 18px rgba(13, 148, 136, 0.32);
+        }
+
+        .eval-cta:hover { transform: translateY(-1px); filter: brightness(1.06); }
+        .eval-cta:active { transform: translateY(0); }
+
+        /* ---------- Skill cards ---------- */
+        .eval-skills { margin-bottom: var(--space-xl); }
+
+        .eval-skill-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .eval-skill-head h4 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .eval-skill-ico {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(148, 163, 184, 0.12);
+            flex-shrink: 0;
+        }
+
+        .eval-skill .stat-val {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 10px;
+        }
+
+        .eval-skill .progress-track { height: 6px; }
+
+        .eval-note {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.45;
+        }
+
+        /* ---------- Trend + focus ---------- */
+        .eval-lower {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .eval-spark {
+            width: 100%;
+            height: 148px;
+        }
+
+        .eval-spark-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .eval-spark-legend span {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            padding: 3px 8px;
+            border-radius: var(--radius-full);
+            background: rgba(148, 163, 184, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .eval-focus-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .eval-focus-item {
+            display: flex;
+            gap: 10px;
+            padding: 11px 12px;
+            border-radius: var(--radius-lg);
+            background: rgba(148, 163, 184, 0.07);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--blue-500);
+        }
+
+        .eval-focus-item.warn { border-left-color: var(--gold-400); }
+        .eval-focus-item.good { border-left-color: var(--emerald-500); }
+
+        .eval-focus-item .fx-ico {
+            flex-shrink: 0;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        .eval-focus-item strong {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .eval-focus-item p {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* ---------- Engine table ---------- */
+        .eval-table-card { padding-bottom: 8px; }
+
+        .eval-viewall {
+            margin-left: auto;
+            padding: 7px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--blue-400);
+            font-size: 0.78rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .eval-viewall:hover { background: rgba(37, 99, 235, 0.2); border-color: var(--blue-400); }
+
+        .eval-tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 6px;
+            overflow-x: auto;
+        }
+
+        .eval-tab {
+            padding: 9px 14px;
+            border: none;
+            background: none;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            white-space: nowrap;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .eval-tab:hover { color: var(--text-main); }
+
+        .eval-tab.active {
+            color: var(--gold-400);
+            border-bottom-color: var(--gold-400);
+        }
+
+        .eval-table-wrap { overflow-x: auto; }
+
+        .eval-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .eval-table th {
+            text-align: left;
+            padding: 11px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        .eval-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .eval-table tbody tr { transition: background 0.18s; }
+        .eval-table tbody tr:hover { background: rgba(148, 163, 184, 0.06); }
+        .eval-table tbody tr:last-child td { border-bottom: none; }
+
+        .eval-table .subj-cell {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 190px;
+        }
+
+        .eval-table .subj-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .eval-table .subj-name {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .eval-table .subj-code {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .eval-table .num { font-weight: 700; }
+        .eval-table .muted { color: var(--text-muted); }
+
+        .eval-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 9px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .eval-status.strong { background: rgba(16, 185, 129, 0.15); color: var(--emerald-500); }
+        .eval-status.ok { background: rgba(59, 130, 246, 0.15); color: var(--blue-400); }
+        .eval-status.weak { background: rgba(245, 158, 11, 0.15); color: var(--gold-400); }
+        .eval-status.none { background: rgba(148, 163, 184, 0.14); color: var(--text-muted); }
+
+        .eval-empty {
+            text-align: center;
+            padding: 34px 20px;
+            color: var(--text-muted);
+            font-size: 0.86rem;
+        }
+
+        @media (max-width: 1024px) {
+            .eval-hero { grid-template-columns: 1fr; }
+            .eval-gauge-col { border-right: none; border-bottom: 1px solid var(--border-color); }
+            .eval-lower { grid-template-columns: 1fr; }
+            .grid-4.eval-skills { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            .eval-gauge-col, .eval-breakdown { padding: 20px; }
+        }
+
+        @media (max-width: 560px) {
+            .grid-4.eval-skills { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================================
+           PROGRESS LOG
+           ============================================================ */
+        .pl-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            color: var(--gold-400);
+            margin-bottom: 10px;
+        }
+
+        .pl-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold-400);
+        }
+
+        .pl-eyebrow.blue { color: var(--blue-400); }
+        .pl-eyebrow.blue::before { background: var(--blue-400); }
+
+        /* ---------- milestone banner ---------- */
+        .pl-banner {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 22px;
+            padding: 24px 26px;
+            margin-bottom: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            border: 1px solid rgba(245, 158, 11, 0.28);
+            background:
+                radial-gradient(760px 220px at 12% 0%, rgba(245, 158, 11, 0.14), transparent 70%),
+                linear-gradient(135deg, rgba(30, 27, 16, 0.92), rgba(9, 16, 30, 0.94));
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .pl-banner {
+            background:
+                radial-gradient(760px 220px at 12% 0%, rgba(245, 158, 11, 0.18), transparent 70%),
+                linear-gradient(135deg, #fffdf7, #f8fafc);
+        }
+
+        /* corner brackets, like the reference frame */
+        .pl-banner::before,
+        .pl-banner::after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border: 2px solid var(--gold-400);
+            opacity: 0.55;
+        }
+
+        .pl-banner::before { top: 10px; left: 10px; border-right: 0; border-bottom: 0; }
+        .pl-banner::after { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
+
+        .pl-banner-ico {
+            width: 62px;
+            height: 62px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(245, 158, 11, 0.1));
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: var(--gold-400);
+            position: relative;
+        }
+
+        .pl-banner-tag {
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            font-size: 0.56rem;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            background: var(--emerald-500);
+            color: #04211a;
+        }
+
+        .pl-banner-tag.off { background: var(--gray-500); color: #0b1220; }
+
+        .pl-banner-title {
+            font-family: var(--font-serif);
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: 0.4px;
+            color: var(--text-main);
+            margin: 0 0 6px;
+        }
+
+        .pl-banner-title em {
+            font-style: normal;
+            color: var(--gold-400);
+        }
+
+        .pl-banner-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+            max-width: 620px;
+        }
+
+        .pl-banner-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .pl-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            font-family: inherit;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s, background 0.2s;
+            white-space: nowrap;
+        }
+
+        .pl-btn.primary {
+            border: none;
+            background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+            color: #171104;
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
+        }
+
+        .pl-btn.ghost {
+            border: 1px solid var(--border-color);
+            background: rgba(148, 163, 184, 0.08);
+            color: var(--text-muted);
+        }
+
+        .pl-btn:hover { transform: translateY(-1px); filter: brightness(1.06); }
+
+        /* ---------- grid shells ---------- */
+        .pl-top {
+            display: grid;
+            grid-template-columns: 1.55fr 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .pl-side {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .pl-mid {
+            display: grid;
+            grid-template-columns: 1.55fr 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        /* ---------- chart ---------- */
+        .pl-card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .pl-card-head h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            font-style: italic;
+            letter-spacing: 0.2px;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .pl-card-head .pl-eyebrow { margin-bottom: 5px; }
+
+        .pl-toggle {
+            margin-left: auto;
+            display: flex;
+            gap: 4px;
+            padding: 3px;
+            border-radius: var(--radius-md);
+            background: rgba(148, 163, 184, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .pl-toggle button {
+            padding: 5px 11px;
+            border: none;
+            border-radius: var(--radius-sm);
+            background: none;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .pl-toggle button.active {
+            background: rgba(245, 158, 11, 0.18);
+            color: var(--gold-400);
+        }
+
+        .pl-chart { width: 100%; display: block; }
+
+        .pl-legend {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-end;
+            margin-top: 12px;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .pl-legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+        .pl-legend i {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .pl-legend i.dot { border-radius: 50%; width: 8px; height: 8px; }
+
+        /* ---------- side cards ---------- */
+        .pl-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pl-link-ico {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .pl-link h4 {
+            font-size: 0.98rem;
+            font-weight: 800;
+            font-style: italic;
+            color: var(--text-main);
+            margin: 0 0 6px;
+        }
+
+        .pl-link p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 14px;
+        }
+
+        .pl-link-foot {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pl-link-foot .progress-track { flex: 1; }
+
+        .pl-link-foot span {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .pl-link-btn {
+            margin-top: 14px;
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 13px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            background: rgba(148, 163, 184, 0.08);
+            color: var(--text-muted);
+            font-size: 0.74rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .pl-link-btn:hover { color: var(--text-main); border-color: var(--border-color-hover); background: rgba(148, 163, 184, 0.14); }
+
+        /* ---------- core completion ---------- */
+        .pl-modules {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px 26px;
+        }
+
+        .pl-module-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 7px;
+        }
+
+        .pl-module-name {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.3px;
+        }
+
+        .pl-module-val {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--gold-400);
+        }
+
+        .pl-module .progress-track { height: 5px; }
+
+        .pl-module-meta {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            opacity: 0.8;
+        }
+
+        .pl-sync {
+            margin-left: auto;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+            font-size: 0.64rem;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--emerald-500);
+            white-space: nowrap;
+        }
+
+        .pl-sync.off {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--gold-400);
+        }
+
+        /* ---------- event stream ---------- */
+        .pl-events {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pl-event {
+            display: flex;
+            gap: 12px;
+            padding: 11px 12px;
+            border-radius: var(--radius-lg);
+            background: rgba(148, 163, 184, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        .pl-event-ico {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pl-event-body { min-width: 0; flex: 1; }
+
+        .pl-event-top {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 3px;
+        }
+
+        .pl-event-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .pl-event-time {
+            margin-left: auto;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .pl-event-desc {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        .pl-event-desc b { color: var(--emerald-500); font-weight: 700; }
+        .pl-event-desc i { color: var(--gold-400); font-style: normal; font-weight: 700; }
+
+        .pl-stream-all {
+            width: 100%;
+            margin-top: 14px;
+            padding: 10px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            background: rgba(148, 163, 184, 0.08);
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-family: inherit;
+            cursor: pointer;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .pl-stream-all:hover { color: var(--text-main); background: rgba(148, 163, 184, 0.14); }
+
+        /* ---------- bottom shortcuts ---------- */
+        .pl-shortcuts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        .pl-shortcut {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 18px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            background: rgba(148, 163, 184, 0.05);
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            transition: transform 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .pl-shortcut:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-color-hover);
+            background: rgba(148, 163, 184, 0.1);
+        }
+
+        .pl-shortcut-ico {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pl-shortcut strong {
+            display: block;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .pl-shortcut span {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 1024px) {
+            .pl-top, .pl-mid { grid-template-columns: 1fr; }
+            .pl-banner { grid-template-columns: auto 1fr; }
+            .pl-banner-actions { grid-column: 1 / -1; justify-content: flex-start; }
+        }
+
+        @media (max-width: 760px) {
+            .pl-modules, .pl-shortcuts { grid-template-columns: 1fr; }
+            .pl-banner { grid-template-columns: 1fr; text-align: left; }
+            .pl-banner-title { font-size: 1.5rem; }
+        }
+
+        /* ============================================================
+           STUDENT PROFILE
+           ============================================================ */
+        .pr-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-xl);
+        }
+
+        .pr-head h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0 0 4px;
+            letter-spacing: -0.4px;
+        }
+
+        .pr-head p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .pr-head-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .pr-layout {
+            display: grid;
+            grid-template-columns: 300px minmax(0, 1fr);
+            gap: var(--space-xl);
+            align-items: start;
+        }
+
+        /* ---------- left identity card ---------- */
+        .pr-id {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 24px 26px;
+        }
+
+        .pr-avatar-wrap {
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .pr-avatar {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            border: 3px solid var(--border-color);
+            box-shadow: 0 10px 26px rgba(37, 99, 235, 0.28);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .pr-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pr-camera {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gold-400);
+            color: #171104;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .pr-camera:hover { transform: scale(1.1); filter: brightness(1.08); }
+
+        .pr-remove-photo {
+            margin-top: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--rose-500);
+            font-size: 0.72rem;
+            font-weight: 700;
+            font-family: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .pr-id-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0 0 3px;
+        }
+
+        .pr-id-crn {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-500);
+            letter-spacing: 0.3px;
+            margin-bottom: 20px;
+        }
+
+        .pr-meta {
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+            padding-top: 18px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .pr-meta-row > span {
+            display: block;
+            font-size: 0.66rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+        }
+
+        .pr-meta-row > strong {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .pr-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pr-status i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--emerald-500);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+            flex-shrink: 0;
+        }
+
+        .pr-status.off i {
+            background: var(--rose-500);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18);
+        }
+
+        /* ---------- right form card ---------- */
+        .pr-form { padding: 28px 30px; }
+
+        .pr-form h3 {
+            font-size: 1.02rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .pr-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 26px 0;
+        }
+
+        .pr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 18px;
+        }
+
+        .pr-field label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 7px;
+        }
+
+        .pr-field input,
+        .pr-field select {
+            width: 100%;
+            padding: 11px 14px;
+            border-radius: var(--radius-md);
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .pr-field input:focus,
+        .pr-field select:focus {
+            border-color: var(--gold-400);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.14);
+        }
+
+        .pr-field input::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+        .pr-field.wide { grid-column: 1 / -1; }
+
+        .pr-hint {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            line-height: 1.45;
+        }
+
+        .pr-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-top: 28px;
+        }
+
+        .pr-foot {
+            margin-top: var(--space-xl);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0.75;
+        }
+
+        .pr-danger {
+            padding: 22px 26px;
+            border: 1px solid rgba(239, 68, 68, 0.32);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .pr-danger h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            font-weight: 800;
+            color: #f87171;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pr-danger p {
+            margin: 0 0 16px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+
+        .pr-danger-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        @media (max-width: 900px) {
+            .pr-layout { grid-template-columns: 1fr; }
+            .pr-grid { grid-template-columns: 1fr; }
+            .pr-head-actions { margin-left: 0; width: 100%; }
         }
 
         /* View Sections Container */
@@ -3489,22 +4789,178 @@ tr.pc-zero td { opacity: .8; }
 
                 <!-- VIEW 6: EVALUATION -->
                 <section id="view-evaluation" class="view-section">
-                    <div class="section-title"><span>Preparation Evaluation Engine</span></div>
-                    <div class="grid-3">
-                        <div class="card">
-                            <h4>Knowledge & Concept</h4>
-                            <div class="stat-val" id="eval-knowledge" style="color:var(--emerald-500); margin:12px 0;">0%</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-knowledge-note">Complete practice sessions to see your concept clarity.</p>
+                    <div class="section-title">
+                        <span>Evaluation Engine</span>
+                        <span class="badge badge-gold" id="eval-engine-badge">Awaiting first attempt</span>
+                    </div>
+                    <p class="eval-lede">
+                        Every figure below is computed from your own saved practice sessions and mock exams &mdash;
+                        accuracy weighted by how much of the syllabus you have actually touched. Nothing here is
+                        pre-filled or estimated.
+                    </p>
+
+                    <!-- HERO: readiness gauge + metric breakdown -->
+                    <div class="card eval-hero">
+                        <div class="eval-gauge-col">
+                            <div class="eval-panel-head">
+                                <h4>Overall Readiness</h4>
+                                <span class="info-tip" tabindex="0"
+                                    data-tip="Your accuracy across every answered question, damped by how small a share of the syllabus you have covered so far.">?</span>
+                            </div>
+                            <div class="eval-gauge-wrap">
+                                <svg class="eval-gauge" viewBox="0 0 220 130" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="evalGaugeGrad" x1="30" y1="0" x2="190" y2="0"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ef4444" />
+                                            <stop offset="34%" stop-color="#f97316" />
+                                            <stop offset="64%" stop-color="#eab308" />
+                                            <stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path class="gauge-track" d="M 30 110 A 80 80 0 0 1 190 110" />
+                                    <path class="gauge-arc" id="eval-gauge-arc" stroke="url(#evalGaugeGrad)"
+                                        d="M 30 110 A 80 80 0 0 1 190 110" />
+                                    <circle class="gauge-dot" id="eval-gauge-dot" cx="30" cy="110" r="7" />
+                                </svg>
+                                <div class="eval-gauge-center">
+                                    <div class="gauge-value" id="eval-gauge-value">0%</div>
+                                    <div class="gauge-label">Readiness</div>
+                                </div>
+                            </div>
+                            <div class="eval-gauge-scale">
+                                <span>0%</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="eval-band" id="eval-gauge-band">No attempts recorded yet</div>
                         </div>
-                        <div class="card">
-                            <h4>Numerical Ability</h4>
-                            <div class="stat-val" id="eval-numerical" style="color:var(--gold-400); margin:12px 0;">0%</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-numerical-note">Practice numerical questions to build accuracy here.</p>
+
+                        <div class="eval-breakdown">
+                            <div class="eval-panel-head">
+                                <h4>Readiness Breakdown</h4>
+                                <span class="badge" id="eval-sample-badge">0 answers</span>
+                            </div>
+                            <div id="eval-metrics"></div>
+                            <button class="eval-cta" type="button" onclick="switchView('practice')">
+                                Open Practice Centre
+                            </button>
                         </div>
+                    </div>
+
+                    <!-- SKILL CARDS -->
+                    <div class="grid-4 eval-skills">
+                        <div class="card eval-skill">
+                            <div class="eval-skill-head">
+                                <span class="eval-skill-ico" style="color:var(--emerald-500)">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+                                        <path d="M9 21h6" />
+                                    </svg>
+                                </span>
+                                <h4>Concept Accuracy</h4>
+                            </div>
+                            <div class="stat-val" id="eval-knowledge" style="color:var(--emerald-500);">0%</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" id="eval-knowledge-bar" style="width:0%; background:linear-gradient(90deg,#059669,#34d399);"></div>
+                            </div>
+                            <p class="eval-note" id="eval-knowledge-note">Complete practice sessions to see your concept clarity.</p>
+                        </div>
+
+                        <div class="card eval-skill">
+                            <div class="eval-skill-head">
+                                <span class="eval-skill-ico" style="color:var(--gold-400)">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="4" y1="20" x2="4" y2="10" />
+                                        <line x1="10" y1="20" x2="10" y2="4" />
+                                        <line x1="16" y1="20" x2="16" y2="14" />
+                                        <line x1="22" y1="20" x2="22" y2="8" />
+                                    </svg>
+                                </span>
+                                <h4>Numerical Ability</h4>
+                            </div>
+                            <div class="stat-val" id="eval-numerical" style="color:var(--gold-400);">0%</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" id="eval-numerical-bar" style="width:0%; background:linear-gradient(90deg,#d97706,#fbbf24);"></div>
+                            </div>
+                            <p class="eval-note" id="eval-numerical-note">Practice numerical questions to build accuracy here.</p>
+                        </div>
+
+                        <div class="card eval-skill">
+                            <div class="eval-skill-head">
+                                <span class="eval-skill-ico" style="color:var(--blue-400)">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M12 7v5l3 2" />
+                                    </svg>
+                                </span>
+                                <h4>Speed / Question</h4>
+                            </div>
+                            <div class="stat-val" id="eval-speed" style="color:var(--blue-400);">--</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" id="eval-speed-bar" style="width:0%; background:linear-gradient(90deg,#2563eb,#60a5fa);"></div>
+                            </div>
+                            <p class="eval-note" id="eval-speed-note">Take a mock exam to measure your pacing.</p>
+                        </div>
+
+                        <div class="card eval-skill">
+                            <div class="eval-skill-head">
+                                <span class="eval-skill-ico" style="color:#a78bfa">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                    </svg>
+                                </span>
+                                <h4>Syllabus Coverage</h4>
+                            </div>
+                            <div class="stat-val" id="eval-coverage" style="color:#a78bfa;">0%</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" id="eval-coverage-bar" style="width:0%; background:linear-gradient(90deg,#7c3aed,#c4b5fd);"></div>
+                            </div>
+                            <p class="eval-note" id="eval-coverage-note">Open new chapters to widen your coverage.</p>
+                        </div>
+                    </div>
+
+                    <!-- TREND + FOCUS -->
+                    <div class="eval-lower">
                         <div class="card">
-                            <h4>Speed per Question</h4>
-                            <div class="stat-val" id="eval-speed" style="color:var(--blue-400); margin:12px 0;">--</div>
-                            <p style="font-size:0.85rem; color:var(--text-muted);" id="eval-speed-note">Take a mock exam to measure your pacing.</p>
+                            <div class="eval-panel-head">
+                                <h4>Accuracy Trend</h4>
+                                <span class="badge" id="eval-trend-badge">No sessions yet</span>
+                            </div>
+                            <div id="eval-spark"></div>
+                            <div class="eval-spark-legend" id="eval-spark-legend"></div>
+                        </div>
+
+                        <div class="card">
+                            <div class="eval-panel-head">
+                                <h4>Focus Areas</h4>
+                                <span class="badge badge-gold">Next best actions</span>
+                            </div>
+                            <ul class="eval-focus-list" id="eval-focus-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- ENGINE TABLE -->
+                    <div class="card eval-table-card">
+                        <div class="eval-panel-head">
+                            <h4>Evaluation Engine</h4>
+                            <button class="eval-viewall" type="button" id="eval-viewall-btn" onclick="toggleEvalTableAll()">View all</button>
+                        </div>
+                        <div class="eval-tabs" id="eval-tabs">
+                            <button class="eval-tab active" type="button" data-tab="subjects">Subjects</button>
+                            <button class="eval-tab" type="button" data-tab="readiness">Exam Readiness</button>
+                            <button class="eval-tab" type="button" data-tab="pace">Pace &amp; Efficiency</button>
+                            <button class="eval-tab" type="button" data-tab="evidence">Evidence Base</button>
+                        </div>
+                        <div class="eval-table-wrap">
+                            <table class="eval-table">
+                                <thead id="eval-thead"></thead>
+                                <tbody id="eval-tbody"></tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
@@ -3537,243 +4993,436 @@ tr.pc-zero td { opacity: .8; }
 
                 <!-- VIEW 9: PROGRESS -->
                 <section id="view-progress" class="view-section">
-                    <div class="section-title"><span>Study Progress Log</span></div>
-                    <div class="card">
-                        <h3 style="display:flex; align-items:center; gap:8px;" id="progress-streak-title">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07 2.16-1.07 2.16 1.5 3.5 1.48 1.15 2.46 1.3 3.5 1.5.5-1 .5-1.72 0-3A5.5 5.5 0 0 1 8.5 14.5z" />
+                    <div class="section-title">
+                        <span>Study Progress Log</span>
+                        <span class="badge" id="progress-sync-badge">Local record</span>
+                    </div>
+
+                    <!-- MILESTONE BANNER -->
+                    <div class="pl-banner">
+                        <div class="pl-banner-ico">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="17" rx="2" />
+                                <path d="M8 2v4M16 2v4M3 10h18" />
+                                <path d="m9 15 2 2 4-4" />
                             </svg>
-                            0 Days Study Streak</h3>
-                        <p style="color:var(--text-muted); margin-top:4px;" id="progress-streak-note">Start practicing to begin your streak.</p>
+                            <span class="pl-banner-tag off" id="progress-streak-tag">NEW</span>
+                        </div>
+                        <div>
+                            <span class="pl-eyebrow" id="progress-streak-eyebrow">Milestone detected</span>
+                            <h3 class="pl-banner-title" id="progress-streak-title">0-Day Continuity Streak</h3>
+                            <p class="pl-banner-sub" id="progress-streak-note">
+                                A day only counts once you have answered at least one question. Start a practice session to
+                                begin the streak.
+                            </p>
+                        </div>
+                        <div class="pl-banner-actions">
+                            <button class="pl-btn primary" type="button" onclick="switchView('practice')">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="6 4 20 12 6 20 6 4" />
+                                </svg>
+                                Resume learning
+                            </button>
+                            <button class="pl-btn ghost" type="button" onclick="plScrollToEvents()">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                                    <path d="M3 3v5h5" />
+                                    <path d="M12 8v4l3 2" />
+                                </svg>
+                                Activity history
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CHART + SIDE LINKS -->
+                    <div class="pl-top">
+                        <div class="card">
+                            <div class="pl-card-head">
+                                <div>
+                                    <span class="pl-eyebrow blue">Activity analysis</span>
+                                    <h3>Temporal Performance</h3>
+                                </div>
+                                <div class="pl-toggle" id="pl-range-toggle">
+                                    <button type="button" data-days="7" class="active">7 days</button>
+                                    <button type="button" data-days="14">14 days</button>
+                                    <button type="button" data-days="30">30 days</button>
+                                </div>
+                            </div>
+                            <div id="pl-chart"></div>
+                            <div class="pl-legend">
+                                <span><i style="background:linear-gradient(180deg,#f59e0b,#d97706);"></i> Questions answered</span>
+                                <span><i class="dot" style="background:#10b981;"></i> Accuracy %</span>
+                            </div>
+                        </div>
+
+                        <div class="pl-side">
+                            <div class="card pl-link">
+                                <span class="pl-link-ico" style="background:rgba(124,58,237,0.16);color:#a78bfa;">
+                                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="5" r="2.4" />
+                                        <circle cx="5" cy="18" r="2.4" />
+                                        <circle cx="19" cy="18" r="2.4" />
+                                        <path d="M12 7.4v4.2M12 11.6 6.4 16M12 11.6 17.6 16" />
+                                    </svg>
+                                </span>
+                                <h4>Mind Maps</h4>
+                                <p>Chapter-by-chapter concept maps across every PRC and CAF subject.</p>
+                                <div class="pl-link-foot">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="pl-mindmaps-bar"
+                                            style="width:0%; background:linear-gradient(90deg,#7c3aed,#c4b5fd);"></div>
+                                    </div>
+                                    <span id="pl-mindmaps-val">0 / 0</span>
+                                </div>
+                                <button class="pl-link-btn" type="button" onclick="switchView('mindmaps')">
+                                    Open mind maps
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M13 6l6 6-6 6" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="card pl-link">
+                                <span class="pl-link-ico" style="background:rgba(239,68,68,0.16);color:#f87171;">
+                                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                        <path d="M12 8v5M12 16v.01" />
+                                    </svg>
+                                </span>
+                                <h4>Mistake Bank</h4>
+                                <p>Every answer that scored below half marks, kept for targeted re-drilling.</p>
+                                <div class="pl-link-foot">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="pl-mistakes-bar"
+                                            style="width:0%; background:linear-gradient(90deg,#dc2626,#f87171);"></div>
+                                    </div>
+                                    <span id="pl-mistakes-val">0 / 0</span>
+                                </div>
+                                <button class="pl-link-btn" type="button" onclick="switchView('mistakes')">
+                                    Open mistake bank
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M13 6l6 6-6 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CORE COMPLETION + EVENT STREAM -->
+                    <div class="pl-mid">
+                        <div class="card">
+                            <div class="pl-card-head">
+                                <div>
+                                    <span class="pl-eyebrow">Syllabus module status</span>
+                                    <h3>Core Completion</h3>
+                                </div>
+                                <span class="pl-sync" id="pl-sync-state">Local only</span>
+                            </div>
+                            <div class="pl-modules" id="pl-modules"></div>
+                        </div>
+
+                        <div class="card" id="pl-events-card">
+                            <div class="pl-card-head">
+                                <div>
+                                    <span class="pl-eyebrow">Event stream</span>
+                                    <h3>Recent Activity</h3>
+                                </div>
+                            </div>
+                            <ul class="pl-events" id="pl-events"></ul>
+                            <button class="pl-stream-all" type="button" id="pl-stream-all-btn" onclick="toggleProgressEvents()">
+                                Stream all events
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SHORTCUTS -->
+                    <div class="pl-shortcuts">
+                        <button class="pl-shortcut" type="button" onclick="switchView('practice')">
+                            <span class="pl-shortcut-ico" style="background:rgba(245,158,11,0.16);color:var(--gold-400);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20h9" />
+                                    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <strong>Practice Centre</strong>
+                                <span id="pl-short-practice">No questions answered yet</span>
+                            </span>
+                        </button>
+
+                        <button class="pl-shortcut" type="button" onclick="switchView('study')">
+                            <span class="pl-shortcut-ico" style="background:rgba(16,185,129,0.16);color:var(--emerald-500);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <strong>Study Library</strong>
+                                <span id="pl-short-study">Loading study texts</span>
+                            </span>
+                        </button>
+
+                        <a class="pl-shortcut" style="text-decoration:none;"
+                            href="https://wa.me/923352228638?text=Assalam-o-Alaikum%2C%20I%20need%20help%20with%20the%20Nameer%20School%20of%20Accountancy%20app."
+                            target="_blank" rel="noopener">
+                            <span class="pl-shortcut-ico" style="background:rgba(37,211,102,0.16);color:#25d366;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <strong>Help Center</strong>
+                                <span>WhatsApp +92 335 2228638</span>
+                            </span>
+                        </a>
                     </div>
                 </section>
 
                 <!-- VIEW 10: PROFILE & SETTINGS -->
                 <section id="view-profile" class="view-section">
-                    <div class="section-title">
-                        <span>Student Profile & ICAP Account Settings</span>
-                        <span style="display:inline-flex; align-items:center; gap:10px;">
-                            <span class="badge badge-gold">Active ICAP Student</span>
-                            <button class="btn btn-danger" style="padding:8px 16px; font-size:0.82rem; display:inline-flex; align-items:center; gap:7px;" onclick="handleLogout()">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- HEADER -->
+                    <div class="pr-head">
+                        <div>
+                            <h2>Student Profile</h2>
+                            <p>Manage your personal information and academic preferences.</p>
+                        </div>
+                        <div class="pr-head-actions">
+                            <button class="btn btn-outline" type="button" onclick="openPhotoPicker()"
+                                style="padding:9px 16px; font-size:0.82rem; display:inline-flex; align-items:center; gap:7px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                                <span>Change Photo</span>
+                            </button>
+                            <button class="btn btn-danger" type="button" onclick="handleLogout()"
+                                style="padding:9px 16px; font-size:0.82rem; display:inline-flex; align-items:center; gap:7px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
                                     <polyline points="16 17 21 12 16 7" />
                                     <line x1="21" y1="12" x2="9" y2="12" />
                                 </svg>
-                                Logout
+                                <span>Sign Out</span>
                             </button>
-                        </span>
+                        </div>
                     </div>
 
                     <!-- Alert Banner -->
-                    <div id="profile-save-alert"
+                    <div id="profile-save-alert" role="status" aria-live="polite"
                         style="display:none; background:rgba(34,197,94,0.12); border:1px solid #22c55e; color:#4ade80; padding:12px 18px; border-radius:10px; margin-bottom:20px; font-weight:600; font-size:0.9rem;">
-                        OK Profile updated successfully! Student details synchronized with Dashboard & Sidebar.
+                        OK Profile updated successfully! Student details synchronized with Dashboard &amp; Sidebar.
                     </div>
 
-                    <div style="display:grid; grid-template-columns: 300px 1fr; gap:24px;">
+                    <div class="pr-layout">
 
-                        <!-- LEFT: PROFILE SUMMARY CARD -->
-                        <div class="card"
-                            style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:28px 20px;">
-                            <div id="profile-card-avatar"
-                                style="width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg, #2563eb, #7c3aed); color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:800; border:4px solid var(--border-color); box-shadow:0 8px 20px rgba(37,99,235,0.3); margin-bottom:10px; background-size:cover; background-position:center;">
-                                MF
-                            </div>
-
-                            <!-- PROFILE PHOTO UPLOAD CONTROLS -->
+                        <!-- LEFT: IDENTITY CARD -->
+                        <div class="card pr-id">
                             <input type="file" id="profile-photo-input"
                                 accept="image/png, image/jpeg, image/webp, image/gif" style="display:none;"
                                 onchange="onProfilePhotoSelected(event)">
-                            <div style="display:flex; gap:8px; margin-bottom:16px;">
-                                <button type="button" class="btn btn-primary" onclick="openPhotoPicker()"
-                                    style="padding:6px 12px; font-size:0.78rem; display:inline-flex; align-items:center; gap:5px;">
-                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" />
+
+                            <div class="pr-avatar-wrap">
+                                <div class="pr-avatar" id="profile-card-avatar">MF</div>
+                                <button class="pr-camera" type="button" onclick="openPhotoPicker()"
+                                    title="Change photo" aria-label="Change profile photo">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                        <circle cx="12" cy="13" r="4" />
                                     </svg>
-                                    <span>Upload Photo</span>
-                                </button>
-                                <button type="button" class="btn btn-danger" onclick="removeProfilePhoto()"
-                                    style="padding:6px 12px; font-size:0.78rem;">
-                                    <span>Remove</span>
                                 </button>
                             </div>
+
+                            <button class="pr-remove-photo" type="button" id="profile-remove-photo-btn"
+                                onclick="removeProfilePhoto()" style="display:none;">Remove photo</button>
 
                             <div id="profile-photo-feedback" role="status" aria-live="polite"
-                                style="display:none; margin-bottom:16px; padding:8px 12px; border-radius:8px; font-size:0.8rem; font-weight:600;"></div>
-                            <h3 id="profile-card-name"
-                                style="margin:0 0 4px 0; font-size:1.2rem; color:var(--text-main);">Manal Fatima</h3>
-                            <div id="profile-card-crn"
-                                style="font-size:0.85rem; color:var(--gold-500); font-weight:700; margin-bottom:16px;">
-                                CRN: CR-2026-90412</div>
+                                style="display:none; margin-bottom:10px; padding:7px 12px; border-radius:8px; font-size:0.78rem; font-weight:600;"></div>
 
-                            <div
-                                style="width:100%; border-top:1px solid var(--border-color); padding-top:16px; margin-top:8px; display:flex; flex-direction:column; gap:14px; font-size:0.85rem; text-align:left;">
-                                <div>
-                                    <span
-                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Email
-                                        Address</span>
-                                    <strong id="profile-card-email"
-                                        style="color:var(--text-main); font-weight:600; word-break:break-all;">manal.fatima@icap.org.pk</strong>
+                            <h3 class="pr-id-name" id="profile-card-name">Manal Fatima</h3>
+                            <div class="pr-id-crn" id="profile-card-crn">CRN CR-2026-90412</div>
+
+                            <div class="pr-meta">
+                                <div class="pr-meta-row">
+                                    <span>Status</span>
+                                    <strong><span class="pr-status" id="profile-status-wrap"><i></i><span
+                                                id="profile-card-status">ACTIVE</span></span></strong>
                                 </div>
-                                <div>
-                                    <span
-                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Phone
-                                        Number</span>
-                                    <strong id="profile-card-phone" style="color:var(--text-main); font-weight:600;">+92
-                                        300 1234567</strong>
+                                <div class="pr-meta-row">
+                                    <span>Member Since</span>
+                                    <strong id="profile-card-since">&mdash;</strong>
                                 </div>
-                                <div>
-                                    <span
-                                        style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:4px;">Target
-                                        Exam Attempt</span>
-                                    <span id="profile-card-session" class="badge badge-blue">Autumn 2026 Attempt</span>
+                                <div class="pr-meta-row">
+                                    <span>Academic Level</span>
+                                    <strong id="profile-card-level">CAF</strong>
                                 </div>
-                            </div>
-                            <div>
-                                <span
-                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Subscription
-                                    Status</span>
-                                <strong id="profile-card-status" style="color:var(--text-main); font-weight:600;">ACTIVE</strong>
-                            </div>
-                            <div>
-                                <span
-                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Plan
-                                    Type</span>
-                                <strong id="profile-card-plan" style="color:var(--text-main); font-weight:600;">TRIAL</strong>
-                            </div>
-                            <div>
-                                <span
-                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Access
-                                    Expires</span>
-                                <strong id="profile-card-expiry" style="color:var(--text-main); font-weight:600;">90 days from activation</strong>
-                            </div>
-                            <div>
-                                <span
-                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Content
-                                    Access</span>
-                                <strong id="profile-card-access" style="color:var(--success-500); font-weight:600;">Access Granted</strong>
-                            </div>
-                            <div>
-                                <span
-                                    style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:2px;">Assigned
-                                    Subjects</span>
-                                <strong id="profile-card-assigned" style="color:var(--text-main); font-weight:600;">None assigned</strong>
+                                <div class="pr-meta-row">
+                                    <span>Target Exam Attempt</span>
+                                    <strong id="profile-card-session">Autumn 2026 Attempt</strong>
+                                </div>
+                                <div class="pr-meta-row">
+                                    <span>Plan</span>
+                                    <strong id="profile-card-plan">TRIAL</strong>
+                                </div>
+                                <div class="pr-meta-row">
+                                    <span>Access Expires</span>
+                                    <strong id="profile-card-expiry">90 days from activation</strong>
+                                </div>
+                                <div class="pr-meta-row">
+                                    <span>Content Access</span>
+                                    <strong id="profile-card-access">Access Granted</strong>
+                                </div>
+                                <div class="pr-meta-row">
+                                    <span>Assigned Subjects</span>
+                                    <strong id="profile-card-assigned">None assigned</strong>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- RIGHT: EDIT PROFILE FORM -->
-                        <div class="card" style="padding:28px;">
-                            <h3
-                                style="margin:0 0 20px 0; font-size:1.1rem; color:var(--text-main); display:flex; align-items:center; gap:8px;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M11 4a4 4 0 1 1 8 0v12" />
-                                    <path d="M20 21H4" />
-                                    <path d="M16 12h-8" />
-                                    <path d="M12 8v8" />
-                                </svg>
-                                Edit Student Details
-                            </h3>
+                        <!-- RIGHT: EDIT FORM -->
+                        <div>
+                            <div class="card pr-form">
+                                <h3>
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                    Personal Information
+                                </h3>
 
-                            <form onsubmit="saveStudentProfile(event)"
-                                style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-                                <div>
-                                    <label
-                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Full
-                                        Name</label>
-                                    <input type="text" id="input-profile-name" required placeholder="e.g. Nameer Ali Khan"
-                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
-                                </div>
+                                <form id="profile-form" onsubmit="saveStudentProfile(event)">
+                                    <div class="pr-grid">
+                                        <div class="pr-field">
+                                            <label for="input-profile-name">Full Name</label>
+                                            <input type="text" id="input-profile-name" required
+                                                placeholder="e.g. Nameer Ali Khan" autocomplete="name" />
+                                        </div>
+                                        <div class="pr-field">
+                                            <label for="input-profile-crn">ICAP CRN</label>
+                                            <input type="text" id="input-profile-crn" placeholder="e.g. CR-155251" />
+                                        </div>
+                                        <div class="pr-field">
+                                            <label for="input-profile-phone">Phone Number</label>
+                                            <input type="text" id="input-profile-phone" placeholder="e.g. +92 335 2228638"
+                                                autocomplete="tel" />
+                                        </div>
+                                        <div class="pr-field">
+                                            <label for="input-profile-email">Email Address</label>
+                                            <input type="email" id="input-profile-email" required
+                                                placeholder="e.g. student@icap.org.pk" autocomplete="email" />
+                                        </div>
+                                    </div>
 
-                                <div>
-                                    <label
-                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">ICAP
-                                        CRN Number</label>
-                                    <input type="text" id="input-profile-crn" placeholder="e.g. CR-2026-90412"
-                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
-                                </div>
+                                    <div class="pr-divider"></div>
 
-                                <div>
-                                    <label
-                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Phone
-                                        Number</label>
-                                    <input type="text" id="input-profile-phone" placeholder="e.g. 0300-1234567"
-                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
-                                </div>
-
-                                <div>
-                                    <label
-                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Email
-                                        Address</label>
-                                    <input type="email" id="input-profile-email" required
-                                        placeholder="e.g. student@icap.org.pk"
-                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;" />
-                                </div>
-
-                                <div style="grid-column: span 2;">
-                                    <label
-                                        style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Target
-                                        ICAP Exam Attempt</label>
-                                    <select id="input-profile-session"
-                                        style="width:100%; padding:10px 14px; border-radius:8px; background:var(--bg-surface-elevated, rgba(15,23,42,0.8)); border:1px solid var(--border-color); color:var(--text-main); font-size:0.9rem; outline:none;">
-                                        <option value="Autumn 2026 Attempt">Autumn 2026 Attempt</option>
-                                        <option value="Spring 2027 Attempt">Spring 2027 Attempt</option>
-                                        <option value="Autumn 2027 Attempt">Autumn 2027 Attempt</option>
-                                    </select>
-                                </div>
-
-                                <div style="grid-column: span 2; margin-top:10px; display:flex; gap:12px;">
-                                    <button type="submit" class="btn btn-primary"
-                                        style="padding:10px 24px; font-weight:700; font-size:0.9rem; display:inline-flex; align-items:center; gap:8px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-                                            <polyline points="17 21 17 13 7 13 7 21" />
-                                            <polyline points="7 3 7 8 15 8" />
+                                    <h3>
+                                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>Save Profile Details</span>
+                                        Academic Preferences
+                                    </h3>
+
+                                    <div class="pr-grid">
+                                        <div class="pr-field">
+                                            <label for="input-profile-level">Academic Level</label>
+                                            <select id="input-profile-level">
+                                                <option value="CAF">CAF &mdash; Advanced Level</option>
+                                                <option value="PRC">PRC &mdash; Foundation Level</option>
+                                            </select>
+                                        </div>
+                                        <div class="pr-field">
+                                            <label for="input-profile-session">Target Exam Attempt</label>
+                                            <select id="input-profile-session">
+                                                <option value="Autumn 2026 Attempt">Autumn 2026 Attempt</option>
+                                                <option value="Spring 2027 Attempt">Spring 2027 Attempt</option>
+                                                <option value="Autumn 2027 Attempt">Autumn 2027 Attempt</option>
+                                            </select>
+                                        </div>
+                                        <div class="pr-field wide">
+                                            <p class="pr-hint">
+                                                Your name, CRN and academic preferences appear on the dashboard, sidebar,
+                                                progress log and evaluation engine. Signing in on another device restores
+                                                them from your account.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="pr-actions">
+                                        <button type="button" class="btn btn-outline" onclick="discardProfileChanges()"
+                                            style="padding:10px 20px; font-size:0.88rem; display:inline-flex; align-items:center; gap:8px;">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="1 4 1 10 7 10" />
+                                                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                                            </svg>
+                                            <span>Discard Changes</span>
+                                        </button>
+                                        <button type="submit" class="btn btn-primary"
+                                            style="padding:10px 22px; font-size:0.9rem; font-weight:700; display:inline-flex; align-items:center; gap:8px;">
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+                                                <polyline points="17 21 17 13 7 13 7 21" />
+                                                <polyline points="7 3 7 8 15 8" />
+                                            </svg>
+                                            <span>Update Profile</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- DANGER ZONE -->
+                            <div class="card pr-danger" style="margin-top:var(--space-xl);">
+                                <h3>
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                                        <path d="M3 3v5h5" />
+                                    </svg>
+                                    Reset Application &amp; Start Over
+                                </h3>
+                                <p>
+                                    Permanently erase your practice sessions, mock exam attempts, review decisions and
+                                    navigation history &mdash; on this device and in the cloud. Your login and profile
+                                    details stay, but performance starts again from zero.
+                                </p>
+                                <div class="pr-danger-actions">
+                                    <button type="button" class="btn btn-outline" onclick="resetProfileToDefault()"
+                                        style="padding:9px 18px; font-size:0.85rem;">
+                                        <span>Reset Profile to Login Details</span>
                                     </button>
-                                    <button type="button" onclick="resetProfileToDefault()" class="btn btn-outline"
-                                        style="padding:10px 18px; font-size:0.85rem; display:inline-flex; align-items:center; gap:8px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="1 4 1 10 7 10" />
-                                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                                    <button type="button" class="btn btn-danger" onclick="resetApplication()"
+                                        style="padding:9px 20px; font-weight:700; font-size:0.85rem; display:inline-flex; align-items:center; gap:8px;">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                                            <path d="M3 3v5h5" />
                                         </svg>
-                                        <span>Reset Demo Data</span>
+                                        <span>Reset &amp; Start from Zero</span>
                                     </button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-
-                        <!-- APPLICATION RESET (PERFORMANCE RESET TO ZERO) -->
-                        <div class="card"
-                            style="padding:24px 28px; grid-column: span 2; border:1px solid rgba(239,68,68,0.35); background:rgba(239,68,68,0.05);">
-                            <h3
-                                style="margin:0 0 10px 0; font-size:1.05rem; color:#f87171; display:flex; align-items:center; gap:8px;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-                                    <path d="M3 3v5h5" />
-                                </svg>
-                                Reset Application &amp; Start Over
-                            </h3>
-                            <p
-                                style="margin:0 0 18px 0; color:var(--text-muted); font-size:0.88rem; line-height:1.55;">
-                                Permanently erase your practice sessions, mock exam attempts, review decisions and
-                                navigation history. Your login, name and profile details will stay — but the app will
-                                reload itself fresh, and your performance will start completely from zero.
-                            </p>
-                            <button type="button" class="btn btn-danger" onclick="resetApplication()"
-                                style="padding:10px 20px; font-weight:700; font-size:0.88rem; display:inline-flex; align-items:center; gap:8px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-                                    <path d="M3 3v5h5" />
-                                </svg>
-                                <span>Reset &amp; Start from Zero</span>
-                            </button>
-                        </div>
-
                     </div>
+
+                    <div class="pr-foot">Powered by Nameer School of Accountancy Infrastructure</div>
                 </section>
 
                 <!-- VIEW 11: SCIENTIFIC CALCULATOR -->
@@ -22329,7 +23978,8 @@ function sessionLabel(v) {
 }
 
 /* ------------------------------------------------------------ render profile */
-function renderProfileUI() {
+function renderProfileUI(opts) {
+    opts = opts || {};
     const p = getProfile();
 
     const avatar = document.getElementById('sidebar-avatar-initials');
@@ -22363,13 +24013,29 @@ function renderProfileUI() {
     if (cardSession) cardSession.textContent = sessionLabel(p.session);
 
     // Subscription fields
+    const status = p.subscriptionStatus || p.accountStatus || 'INACTIVE';
+    const isActive = !!p.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
+
     const cardStatus = document.getElementById('profile-card-status');
-    if (cardStatus) {
-        const status = p.subscriptionStatus || p.accountStatus || 'INACTIVE';
-        const isActive = p.accessEnabled && (status === 'ACTIVE' || status === 'TRIAL');
-        cardStatus.innerHTML = '<span class="badge ' + (isActive ? 'badge-success' : 'badge-warning') + '">' + status + '</span>';
+    if (cardStatus) cardStatus.textContent = status === 'ACTIVE' ? 'Active Student' : status;
+
+    const statusWrap = document.getElementById('profile-status-wrap');
+    if (statusWrap) statusWrap.classList.toggle('off', !isActive);
+
+    const cardSince = document.getElementById('profile-card-since');
+    if (cardSince) {
+        const created = currentUser && currentUser.metadata && currentUser.metadata.creationTime;
+        cardSince.textContent = created
+            ? new Date(created).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
+            : '—';
     }
-    
+
+    const cardLevel = document.getElementById('profile-card-level');
+    if (cardLevel) {
+        cardLevel.textContent = (p.level || 'CAF') === 'PRC'
+            ? 'PRC — Foundation' : 'CAF — Advanced';
+    }
+
     const cardPlan = document.getElementById('profile-card-plan');
     if (cardPlan) cardPlan.textContent = p.planType || 'TRIAL';
     
@@ -22396,31 +24062,36 @@ function renderProfileUI() {
         cardAssigned.textContent = subjects || 'None assigned';
     }
 
-    setVal('input-profile-name', p.name);
-    setVal('input-profile-crn', p.crn);
-    setVal('input-profile-phone', p.phone);
-    setVal('input-profile-email', p.email);
+    // keepForm leaves the inputs alone — used when a background sync lands
+    // while the student is mid-edit, so their typing is never overwritten.
+    if (!opts.keepForm) {
+        setVal('input-profile-name', p.name);
+        setVal('input-profile-crn', p.crn);
+        setVal('input-profile-phone', p.phone);
+        setVal('input-profile-email', p.email);
+        setVal('input-profile-level', (p.level || 'CAF') === 'PRC' ? 'PRC' : 'CAF');
 
-    // the dropdown lists exam attempts, so only honour a saved value that is
-    // actually one of its options -- never inject the login session code
-    const sel = document.getElementById('input-profile-session');
-    if (sel && sel.options.length) {
-        const wanted = p.session;
-        const has = Array.prototype.some.call(sel.options, function (o) {
-            return o.value === wanted;
-        });
-        if (has) {
-            sel.value = wanted;
-        } else if (!p.session) {
-            sel.selectedIndex = 0;
-            saveProfile(Object.assign({}, p, { session: sel.value }));
+        // the dropdown lists exam attempts, so only honour a saved value that is
+        // actually one of its options -- never inject the login session code
+        const sel = document.getElementById('input-profile-session');
+        if (sel && sel.options.length) {
+            const wanted = p.session;
+            const has = Array.prototype.some.call(sel.options, function (o) {
+                return o.value === wanted;
+            });
+            if (has) {
+                sel.value = wanted;
+            } else if (!p.session) {
+                sel.selectedIndex = 0;
+                saveProfile(Object.assign({}, p, { session: sel.value }));
+            }
         }
-    }
 
-    // the card must agree with whatever the dropdown ended up showing
-    if (sel && sel.value) {
-        const cardSess = document.getElementById('profile-card-session');
-        if (cardSess) cardSess.textContent = sessionLabel(sel.value);
+        // the card must agree with whatever the dropdown ended up showing
+        if (sel && sel.value) {
+            const cardSess = document.getElementById('profile-card-session');
+            if (cardSess) cardSess.textContent = sessionLabel(sel.value);
+        }
     }
 
     renderProfilePhoto();
@@ -22437,11 +24108,15 @@ function getProfilePhoto() {
 
 function renderProfilePhoto() {
     const host = document.getElementById('profile-card-avatar');
-    if (!host) return;
     const url = getProfilePhoto();
+
+    // The Remove control only earns its place once a photo is actually set.
+    const removeBtn = document.getElementById('profile-remove-photo-btn');
+    if (removeBtn) removeBtn.style.display = url ? '' : 'none';
+
+    if (!host) return;
     if (url) {
-        host.innerHTML = '<img src="' + url + '" alt="Profile photo" ' +
-            'style="width:100%;height:100%;object-fit:cover;border-radius:50%;">';
+        host.innerHTML = '<img src="' + url + '" alt="Profile photo">';
     } else {
         host.textContent = profileInitials(getProfile().name);
     }
@@ -22538,6 +24213,7 @@ function saveStudentProfile(event) {
     const phone = (document.getElementById('input-profile-phone') || {}).value || '';
     const email = (document.getElementById('input-profile-email') || {}).value || '';
     const session = (document.getElementById('input-profile-session') || {}).value || '';
+    const level = (document.getElementById('input-profile-level') || {}).value || 'CAF';
 
     if (!name.trim()) {
         showProfileAlert('Naam likhna zaroori hai.', true);
@@ -22548,13 +24224,24 @@ function saveStudentProfile(event) {
         return;
     }
 
-    const profileData = {
+    // Carry the rest of the saved profile through so saving the form never
+    // wipes fields the form does not show (plan, expiry, assigned subjects).
+    const profileData = Object.assign({}, getProfile(), {
         name: name.trim(), crn: crn.trim(), phone: phone.trim(),
-        email: email.trim(), session: session
-    };
+        email: email.trim(), session: session,
+        level: level === 'PRC' ? 'PRC' : 'CAF'
+    });
 
     // Save to localStorage
     saveProfile(profileData);
+
+    /* getProfile() prefers the cached Firestore doc over localStorage, so merge
+       the new values into that cache first. Without this the repaint below
+       would show — and write back over the form — the previous values, which
+       made a successful save look like it had done nothing. */
+    if (currentUserProfile) {
+        currentUserProfile = Object.assign({}, currentUserProfile, profileData);
+    }
 
     // Also sync to Firestore if user is signed in
     if (currentUser) {
@@ -22564,7 +24251,7 @@ function saveStudentProfile(event) {
             crn: profileData.crn,
             phone: profileData.phone,
             email: profileData.email,
-            level: profileData.level || 'CAF',
+            level: profileData.level,
             session: profileData.session,
             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         }).catch(e => console.warn('Firestore profile update failed:', e));
@@ -22572,6 +24259,13 @@ function saveStudentProfile(event) {
 
     renderProfileUI();
     showProfileAlert('Profile save ho gaya. Shukriya!', false);
+}
+
+/* Throw away unsaved edits and repaint the form from the stored profile. */
+function discardProfileChanges() {
+    renderProfileUI();
+    const alert = document.getElementById('profile-save-alert');
+    if (alert) { alert.style.display = 'none'; alert.textContent = ''; }
 }
 
 function showProfileAlert(msg, isError) {
@@ -22645,9 +24339,22 @@ function removeProfilePhoto() {
 }
 
 function resetProfileToDefault() {
+    // Drop the locally-entered details AND the cached Firestore profile, then
+    // re-read the account. Without clearing the cache the form would repaint
+    // exactly the same values and the button would look broken.
     try { localStorage.removeItem(NSA_PROFILE_KEY); } catch (e) { /* ignore */ }
-    renderProfileUI();
-    showProfileAlert('Profile login details par reset ho gaya.', false);
+    currentUserProfile = null;
+
+    const done = function () {
+        renderProfileUI();
+        showProfileAlert('Profile login details par reset ho gaya.', false);
+    };
+
+    if (currentUser && typeof fetchProfileFromFirestore === 'function') {
+        fetchProfileFromFirestore().then(done).catch(done);
+    } else {
+        done();
+    }
 }
 
 function resetApplication() {
@@ -23573,15 +25280,7 @@ function renderRealStats() {
     const streakSub = document.getElementById('streak-sub');
     if (streakSub) streakSub.textContent = streakDays > 0 ? 'Keep up the momentum!' : 'Start your first session!';
 
-    const progressTitle = document.getElementById('progress-streak-title');
-    if (progressTitle) {
-        const svg = progressTitle.querySelector('svg');
-        progressTitle.innerHTML = '';
-        if (svg) progressTitle.appendChild(svg);
-        progressTitle.innerHTML += ' ' + streakDays + ' Day' + (streakDays === 1 ? '' : 's') + ' Study Streak' + (streakDays > 0 ? ' Active' : '');
-    }
-    const progressNote = document.getElementById('progress-streak-note');
-    if (progressNote) progressNote.textContent = streakDays > 0 ? 'You have studied on ' + streakDays + ' unique day' + (streakDays === 1 ? '' : 's') + '.' : 'Start practicing to begin your streak.';
+    /* Progress log banner + charts live in renderProgressLog (called below) */
 
     /* Subject mastery per card */
     const masteryMap = {
@@ -23602,33 +25301,35 @@ function renderRealStats() {
         if (p) p.textContent = pct + '%';
     });
 
-    /* Evaluation view */
-    const evalKnowledge = document.getElementById('eval-knowledge');
-    if (evalKnowledge) evalKnowledge.textContent = avgAccuracy + '%';
-    const evalKnowledgeNote = document.getElementById('eval-knowledge-note');
-    if (evalKnowledgeNote) evalKnowledgeNote.textContent = avgAccuracy >= 80 ? 'Strong conceptual clarity across your subjects.' : (avgAccuracy > 0 ? 'Keep building — accuracy is trending up.' : 'Complete practice sessions to see your concept clarity.');
+    /* Evaluation view — full engine (see renderEvaluationEngine) */
+    renderEvaluationEngine({
+        sessions: sessions,
+        mocks: mocks,
+        practiceQCount: practiceQCount,
+        practiceAwarded: practiceAwarded,
+        practiceMarks: practiceMarks,
+        mockQCount: mockQCount,
+        mockCorrect: mockCorrect,
+        mockTotal: mockTotal,
+        totalQuestions: totalQuestions,
+        totalAwarded: totalAwarded,
+        totalMarks: totalMarks,
+        avgAccuracy: avgAccuracy,
+        prepScore: prepScore,
+        topicMastery: topicMastery,
+        streakDays: streakDays
+    });
 
-    const evalNumerical = document.getElementById('eval-numerical');
-    const numericalAccuracy = practiceMarks > 0 ? Math.round((practiceAwarded / practiceMarks) * 1000) / 10 : 0;
-    if (evalNumerical) evalNumerical.textContent = numericalAccuracy + '%';
-    const evalNumericalNote = document.getElementById('eval-numerical-note');
-    if (evalNumericalNote) evalNumericalNote.textContent = numericalAccuracy >= 70 ? 'Solid numerical skills across attempts.' : (numericalAccuracy > 0 ? 'Needs more practice on numerical problems.' : 'Practice numerical questions to build accuracy here.');
-
-    const evalSpeed = document.getElementById('eval-speed');
-    if (evalSpeed) {
-        if (mocks.length > 0) {
-            const avgMins = mocks.reduce((a, m) => {
-                const t = parseInt(m.timeTaken) || 0;
-                return a + t;
-            }, 0) / mocks.length;
-            const avgPerQ = Math.round((avgMins * 60) / 60); /* 60 q per paper */
-            evalSpeed.textContent = avgPerQ + ' sec';
-        } else {
-            evalSpeed.textContent = '--';
-        }
-    }
-    const evalSpeedNote = document.getElementById('eval-speed-note');
-    if (evalSpeedNote) evalSpeedNote.textContent = mocks.length > 0 ? 'Based on your mock exam pacing.' : 'Take a mock exam to measure your pacing.';
+    /* Progress log — same aggregates, different lens */
+    renderProgressLog({
+        sessions: sessions,
+        mocks: mocks,
+        totalQuestions: totalQuestions,
+        avgAccuracy: avgAccuracy,
+        prepScore: prepScore,
+        topicMastery: topicMastery,
+        streakDays: streakDays
+    });
 
     /* Mistake badge: count from pc_review or sessions with low percent */
     const mistakeBadge = document.getElementById('mistake-badge');
@@ -23640,6 +25341,1114 @@ function renderRealStats() {
             });
         });
         mistakeBadge.textContent = mistakeCount + ' Saved Error Item' + (mistakeCount === 1 ? '' : 's');
+    }
+}
+
+/* ================================================================
+   EVALUATION ENGINE
+   Every figure below is derived from the student's own saved work:
+   practice sessions (pc_sessions) and mock attempts
+   (prc_mock_exam_history). Nothing is invented or pre-filled — with
+   no evidence the engine reports zero and says so on the page.
+   ================================================================ */
+
+const EVAL_STATE = { tab: 'subjects', showAll: false };
+
+const EVAL_SUBJECTS = (typeof mmSubjectsList !== 'undefined' ? mmSubjectsList : []).map(function (s) {
+    return { id: s.id, code: s.code, name: s.name, color: s.color };
+});
+
+/* Readiness reference points, stated on the page so the maths is never a mystery. */
+const EVAL_PACE_BEST_SEC = 60;   /* seconds/question that scores full marks on pace */
+const EVAL_PACE_ZERO_SEC = 180;  /* seconds/question that scores zero */
+const EVAL_COVERAGE_FULL = 50;   /* % of a subject's chapters before accuracy counts in full */
+
+function evalEscape(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+}
+
+function evalClamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
+
+function evalChapterTotal(sid) {
+    try { return ((typeof mmDataStore !== 'undefined' && mmDataStore[sid]) || []).length; }
+    catch (e) { return 0; }
+}
+
+function evalSubjectMeta(sid) {
+    for (let i = 0; i < EVAL_SUBJECTS.length; i++) {
+        if (EVAL_SUBJECTS[i].id === sid) return EVAL_SUBJECTS[i];
+    }
+    return { id: sid, code: sid, name: sid, color: '#94a3b8' };
+}
+
+/* Which half of the syllabus counts — mirrors the Practice Centre level switch. */
+function evalLevelSubjects() {
+    const level = (typeof currentPracticeLevel !== 'undefined' && currentPracticeLevel)
+        ? currentPracticeLevel : 'prc';
+    const wantCaf = level === 'caf';
+    const list = EVAL_SUBJECTS.filter(function (s) {
+        return (String(s.id).indexOf('prc') === 0) !== wantCaf;
+    });
+    return list.length ? list : EVAL_SUBJECTS;
+}
+
+/* Per-subject roll-up of every answered practice result. */
+function evalSubjectRows(agg) {
+    const rows = {};
+
+    function blank(sid) {
+        if (!rows[sid]) {
+            rows[sid] = {
+                sid: sid, q: 0, awarded: 0, marks: 0,
+                chapters: {}, sessions: 0, lastAt: 0, lowCount: 0
+            };
+        }
+        return rows[sid];
+    }
+
+    agg.sessions.forEach(function (s) {
+        const byId = {};
+        const sids = {};
+        (s.questions || []).forEach(function (q) {
+            if (q && q.id) byId[q.id] = q;
+            if (q && q.subjectId) {
+                sids[q.subjectId] = 1;
+                if (q.chapter) blank(q.subjectId).chapters[q.chapter] = 1;
+            }
+        });
+
+        let touched = false;
+        (s.results || []).forEach(function (r) {
+            const q = byId[r.questionId] || {};
+            const sid = q.subjectId || s.subjectId || s.subject || '';
+            if (!sid) return;
+            const row = blank(sid);
+            row.q += 1;
+            row.awarded += (r.awarded || 0);
+            row.marks += (r.maxMarks || r.marks || 0);
+            if ((r.percent || 0) < 50) row.lowCount += 1;
+            touched = true;
+        });
+
+        if (!touched) return;
+        const at = s.finishedAt || s.startedAt || 0;
+        Object.keys(sids).forEach(function (sid) {
+            const row = blank(sid);
+            row.sessions += 1;
+            if (at && at > row.lastAt) row.lastAt = at;
+        });
+    });
+
+    return Object.keys(rows).map(function (sid) {
+        const row = rows[sid];
+        const meta = evalSubjectMeta(sid);
+        const acc = row.marks > 0 ? Math.round((row.awarded / row.marks) * 1000) / 10 : 0;
+        const chaptersDone = Math.min(Object.keys(row.chapters).length, evalChapterTotal(sid) || 9999);
+        const chaptersTotal = evalChapterTotal(sid) || chaptersDone;
+        const cov = chaptersTotal > 0 ? Math.round((chaptersDone / chaptersTotal) * 100) : 0;
+        /* Readiness: accuracy only counts once you have actually opened half the
+           subject, so a 90% score off two chapters cannot read as exam-ready. */
+        const damp = Math.min(1, (cov / EVAL_COVERAGE_FULL));
+        const readiness = Math.round(acc * damp);
+        return {
+            sid: sid, code: meta.code, name: meta.name, color: meta.color,
+            q: row.q, marks: row.marks, awarded: row.awarded,
+            accuracy: acc,
+            chaptersDone: chaptersDone, chaptersTotal: chaptersTotal,
+            coverage: cov, readiness: readiness,
+            sessions: row.sessions, lowCount: row.lowCount, lastAt: row.lastAt
+        };
+    }).sort(function (a, b) { return b.readiness - a.readiness; });
+}
+
+function evalBand(pct) {
+    if (pct >= 75) return 'Exam ready';
+    if (pct >= 55) return 'On track';
+    if (pct >= 35) return 'Needs work';
+    if (pct > 0) return 'Early stage';
+    return 'No data';
+}
+
+function evalBandClass(pct) {
+    if (pct >= 75) return 'strong';
+    if (pct >= 55) return 'ok';
+    if (pct > 0) return 'weak';
+    return 'none';
+}
+
+/* -------------------------------------------------------------- gauge */
+function evalPaintGauge(pct) {
+    const p = evalClamp(pct || 0, 0, 100);
+    const arc = document.getElementById('eval-gauge-arc');
+    const dot = document.getElementById('eval-gauge-dot');
+    const len = Math.PI * 80; /* semicircle of radius 80 */
+    if (arc) {
+        arc.style.strokeDasharray = len + ' ' + len;
+        arc.style.strokeDashoffset = String(len * (1 - p / 100));
+    }
+    if (dot) {
+        const ang = (180 - p * 1.8) * Math.PI / 180;
+        dot.setAttribute('cx', String(Math.round((110 + 80 * Math.cos(ang)) * 100) / 100));
+        dot.setAttribute('cy', String(Math.round((110 - 80 * Math.sin(ang)) * 100) / 100));
+    }
+}
+
+function evalMetricRow(o) {
+    return '<div class="eval-metric">'
+        + '<div class="eval-metric-top">'
+        + '<span class="eval-metric-name">' + evalEscape(o.name) + '</span>'
+        + (o.tip ? '<span class="info-tip" tabindex="0" data-tip="' + evalEscape(o.tip) + '">?</span>' : '')
+        + (o.sub ? '<span class="eval-metric-sub">' + evalEscape(o.sub) + '</span>' : '')
+        + '<span class="eval-metric-val">' + evalEscape(o.value) + '</span>'
+        + '</div>'
+        + '<div class="eval-bar"><div class="eval-bar-fill" style="width:' + o.pct + '%; background:' + o.color + '"></div></div>'
+        + '</div>';
+}
+
+/* -------------------------------------------------------------- trend */
+function evalPaintTrend(agg) {
+    const host = document.getElementById('eval-spark');
+    const legend = document.getElementById('eval-spark-legend');
+    const badge = document.getElementById('eval-trend-badge');
+    if (!host) return;
+
+    const pts = agg.sessions.map(function (s) {
+        const rs = s.results || [];
+        let a = 0, m = 0;
+        rs.forEach(function (r) { a += (r.awarded || 0); m += (r.maxMarks || r.marks || 0); });
+        return {
+            pct: m > 0 ? Math.round((a / m) * 1000) / 10 : 0,
+            at: s.finishedAt || s.startedAt || 0,
+            n: rs.length
+        };
+    }).filter(function (p) { return p.n > 0; })
+        .sort(function (x, y) { return x.at - y.at; })
+        .slice(-12);
+
+    if (!pts.length) {
+        host.innerHTML = '<div class="eval-empty">Finish a practice session and your accuracy line appears here.</div>';
+        if (legend) legend.innerHTML = '';
+        if (badge) badge.textContent = 'No sessions yet';
+        return;
+    }
+
+    const W = 100, H = 44;
+    const stepX = pts.length > 1 ? (W - 4) / (pts.length - 1) : 0;
+    const coords = pts.map(function (p, i) {
+        const x = 2 + i * stepX;
+        const y = H - (evalClamp(p.pct, 0, 100) / 100) * (H - 6) - 3;
+        return { x: x, y: y, p: p };
+    });
+
+    let d = '';
+    coords.forEach(function (c, i) {
+        d += (i ? ' L' : 'M') + c.x.toFixed(2) + ' ' + c.y.toFixed(2);
+    });
+    const last = coords[coords.length - 1];
+    const first = coords[0];
+    const area = d + ' L' + last.x.toFixed(2) + ' ' + H + ' L' + first.x.toFixed(2) + ' ' + H + ' Z';
+
+    let html = '<svg class="eval-spark" viewBox="0 0 ' + W + ' ' + (H + 6)
+        + '" preserveAspectRatio="none" role="img" aria-label="Accuracy per session">'
+        + '<defs><linearGradient id="evalSparkGrad" x1="0" y1="0" x2="0" y2="1">'
+        + '<stop offset="0%" stop-color="#10b981" stop-opacity="0.38"/>'
+        + '<stop offset="100%" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>';
+
+    [0, 25, 50, 75, 100].forEach(function (g) {
+        const gy = H - (g / 100) * (H - 6) - 3;
+        html += '<line x1="0" y1="' + gy.toFixed(2) + '" x2="' + W + '" y2="' + gy.toFixed(2)
+            + '" stroke="rgba(148,163,184,0.13)" stroke-width="0.4" vector-effect="non-scaling-stroke"/>';
+    });
+
+    html += '<path d="' + area + '" fill="url(#evalSparkGrad)"/>'
+        + '<path d="' + d + '" fill="none" stroke="#10b981" stroke-width="1.6"'
+        + ' stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>';
+
+    coords.forEach(function (c) {
+        html += '<circle cx="' + c.x.toFixed(2) + '" cy="' + c.y.toFixed(2)
+            + '" r="1.7" fill="#10b981" vector-effect="non-scaling-stroke">'
+            + '<title>' + c.p.pct + '% across ' + c.p.n + ' question' + (c.p.n === 1 ? '' : 's')
+            + '</title></circle>';
+    });
+    html += '</svg>';
+
+    host.innerHTML = html;
+
+    const delta = Math.round((pts[pts.length - 1].pct - pts[0].pct) * 10) / 10;
+    if (badge) {
+        badge.textContent = 'Last ' + pts.length + ' session' + (pts.length === 1 ? '' : 's');
+    }
+    if (legend) {
+        legend.innerHTML = '<span>First ' + pts[0].pct + '%</span>'
+            + '<span>Latest ' + pts[pts.length - 1].pct + '%</span>'
+            + '<span>' + (delta >= 0 ? '+' : '') + delta + ' pts change</span>'
+            + (agg.mocks.length ? '<span>' + agg.mocks.length + ' mock attempt' + (agg.mocks.length === 1 ? '' : 's') + ' on file</span>' : '');
+    }
+}
+
+/* -------------------------------------------------------------- focus areas */
+function evalPaintFocus(rows, agg, cov) {
+    const list = document.getElementById('eval-focus-list');
+    if (!list) return;
+
+    const items = [];
+    if (!rows.length) {
+        items.push({
+            tone: 'warn', title: 'No evidence to score yet',
+            body: 'The engine needs at least one answered question. Open the Practice Centre, attempt a chapter, and every gauge, bar and table on this page fills in automatically.'
+        });
+        list.innerHTML = items.map(function (i) {
+            return '<li class="eval-focus-item ' + i.tone + '"><div><strong>' + evalEscape(i.title)
+                + '</strong><p>' + evalEscape(i.body) + '</p></div></li>';
+        }).join('');
+        return;
+    }
+
+    const byAccuracy = rows.slice().sort(function (a, b) { return a.accuracy - b.accuracy; });
+    const weakest = byAccuracy[0];
+    const strongest = byAccuracy[byAccuracy.length - 1];
+
+    if (weakest && weakest.q > 0) {
+        items.push({
+            tone: 'warn',
+            title: weakest.code + ' is your weakest subject at ' + weakest.accuracy + '%',
+            body: weakest.lowCount + ' of ' + weakest.q + ' answers there fell below half marks. Re-read those chapters, then retry the same questions.'
+        });
+    }
+
+    if (cov.pct < 40) {
+        items.push({
+            tone: 'warn',
+            title: 'Coverage is ' + cov.pct + '% of the ' + (cov.level === 'caf' ? 'CAF' : 'PRC') + ' syllabus',
+            body: 'You have opened ' + cov.done + ' of ' + cov.total + ' chapters. Readiness is capped by coverage, so breadth moves this number faster than accuracy does.'
+        });
+    }
+
+    if (agg.mocks.length === 0) {
+        items.push({
+            tone: 'warn',
+            title: 'No mock exam attempted',
+            body: 'Practice tells you about the questions you chose. A timed mock is the only thing that measures pacing — sit one to unlock the Pace & Efficiency tab.'
+        });
+    } else {
+        const pace = agg.paceSec;
+        if (pace > 0 && pace > EVAL_PACE_BEST_SEC) {
+            items.push({
+                tone: 'warn',
+                title: 'Pacing is ' + pace + ' sec per question',
+                body: 'Full marks on pace starts at ' + EVAL_PACE_BEST_SEC + ' sec. Timed mocks with a per-question budget are the fastest way to bring this down.'
+            });
+        } else {
+            items.push({
+                tone: 'good',
+                title: 'Pacing is inside the target band',
+                body: 'At ' + (pace || 0) + ' sec per question you are at or better than the ' + EVAL_PACE_BEST_SEC + ' sec reference. Keep the timed-mock rhythm.'
+            });
+        }
+    }
+
+    if (strongest && strongest !== weakest && strongest.accuracy >= 70) {
+        items.push({
+            tone: 'good',
+            title: strongest.code + ' is carrying you at ' + strongest.accuracy + '%',
+            body: 'Accuracy there is solid. Spend the leftover time on your weakest subject rather than re-drilling what already works.'
+        });
+    }
+
+    list.innerHTML = items.slice(0, 4).map(function (i) {
+        return '<li class="eval-focus-item ' + i.tone + '">'
+            + '<svg class="fx-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+            + ' stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            + (i.tone === 'good'
+                ? '<path d="M20 6 9 17l-5-5"/>'
+                : '<circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16.5v.01"/>')
+            + '</svg>'
+            + '<div><strong>' + evalEscape(i.title) + '</strong><p>' + evalEscape(i.body) + '</p></div>'
+            + '</li>';
+    }).join('');
+}
+
+/* -------------------------------------------------------------- table */
+function evalTableHead(cols) {
+    return '<tr>' + cols.map(function (c) {
+        return '<th' + (c.num ? ' style="text-align:right"' : '') + '>' + evalEscape(c.label) + '</th>';
+    }).join('') + '</tr>';
+}
+
+function evalStatusChip(pct) {
+    return '<span class="eval-status ' + evalBandClass(pct) + '">' + evalEscape(evalBand(pct)) + '</span>';
+}
+
+function evalSubjCell(r) {
+    return '<div class="subj-cell"><span class="subj-dot" style="background:' + evalEscape(r.color) + '"></span>'
+        + '<span><span class="subj-name">' + evalEscape(r.code) + '</span><br>'
+        + '<span class="subj-code">' + evalEscape(r.name) + '</span></span></div>';
+}
+
+function evalEmptyRow(cols, msg) {
+    return '<tr><td colspan="' + cols + '"><div class="eval-empty">' + evalEscape(msg) + '</div></td></tr>';
+}
+
+function evalFmtDate(ts) {
+    if (!ts) return '—';
+    try { return new Date(ts).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' }); }
+    catch (e) { return '—'; }
+}
+
+/* Mock history stores its date as a display string (pkDateStr), not a stamp.
+   Older/hand-written rows may hold a numeric stamp, so accept both. */
+function evalDateValue(v) {
+    if (!v) return 0;
+    const n = Number(v);
+    if (!isNaN(n) && n > 0) return n;
+    const d = new Date(String(v));
+    return isNaN(d.getTime()) ? 0 : d.getTime();
+}
+
+function evalMockDateLabel(m) {
+    const ts = evalDateValue(m.date);
+    if (ts) return evalFmtDate(ts);
+    return m.date ? String(m.date) : '—';
+}
+
+/* timeTaken is stored as "95 mins"; parseInt copes with both that and a number. */
+function evalMockMinutes(m) { return parseInt(m.timeTaken) || 0; }
+
+function evalPaintTable(rows, agg, cov) {
+    const thead = document.getElementById('eval-thead');
+    const tbody = document.getElementById('eval-tbody');
+    if (!thead || !tbody) return;
+
+    const tab = EVAL_STATE.tab;
+    const byId = {};
+    rows.forEach(function (r) { byId[r.sid] = r; });
+
+    /* Subject list: only what has evidence, or the whole level catalogue. */
+    let list = rows.slice();
+    if (EVAL_STATE.showAll) {
+        const seen = {};
+        rows.forEach(function (r) { seen[r.sid] = 1; });
+        list = evalLevelSubjects().map(function (s) {
+            return byId[s.id] || {
+                sid: s.id, code: s.code, name: s.name, color: s.color,
+                q: 0, marks: 0, awarded: 0, accuracy: 0,
+                chaptersDone: 0, chaptersTotal: evalChapterTotal(s.id),
+                coverage: 0, readiness: 0, sessions: 0, lowCount: 0, lastAt: 0
+            };
+        });
+    }
+
+    if (tab === 'pace') {
+        /* History is appended in order, so the newest attempt is last. */
+        let mocks = agg.mocks.slice().reverse();
+        if (!EVAL_STATE.showAll) mocks = mocks.slice(0, 5);
+        const cols = [
+            { label: 'Paper' }, { label: 'Date' }, { label: 'Score', num: true },
+            { label: 'Total', num: true }, { label: 'Percent', num: true },
+            { label: 'Time', num: true }, { label: 'Sec / question', num: true }
+        ];
+        thead.innerHTML = evalTableHead(cols);
+        if (!mocks.length) {
+            tbody.innerHTML = evalEmptyRow(cols.length, 'No mock exam on file yet. Sit one from the Mock Exams portal and this table fills in.');
+            return;
+        }
+        tbody.innerHTML = mocks.map(function (m) {
+            const total = m.totalMarks || 120;
+            const score = m.score || 0;
+            const pct = (m.percentage != null)
+                ? m.percentage
+                : (total > 0 ? Math.round((score / total) * 1000) / 10 : 0);
+            const mins = evalMockMinutes(m);
+            /* Papers carry 60 questions, so minutes-per-paper equals seconds-per-question. */
+            const perQ = mins > 0 ? Math.round((mins * 60) / 60) : 0;
+            return '<tr>'
+                + '<td>' + evalEscape(m.subjectTitle || 'Mock exam') + '</td>'
+                + '<td class="muted">' + evalEscape(evalMockDateLabel(m)) + '</td>'
+                + '<td class="num" style="text-align:right">' + score + '</td>'
+                + '<td class="muted" style="text-align:right">' + total + '</td>'
+                + '<td style="text-align:right">' + evalStatusChip(pct) + '</td>'
+                + '<td class="muted" style="text-align:right">' + (mins ? mins + ' min' : '—') + '</td>'
+                + '<td class="num" style="text-align:right">' + (perQ || '—') + '</td>'
+                + '</tr>';
+        }).join('');
+        return;
+    }
+
+    if (tab === 'readiness') {
+        const cols = [
+            { label: 'Subject' }, { label: 'Readiness', num: true }, { label: 'Band' },
+            { label: 'Accuracy', num: true }, { label: 'Coverage', num: true },
+            { label: 'Gap to 70%', num: true }
+        ];
+        thead.innerHTML = evalTableHead(cols);
+        if (!list.length) {
+            tbody.innerHTML = evalEmptyRow(cols.length, 'Nothing to rank yet — answer a few questions first.');
+            return;
+        }
+        tbody.innerHTML = list.map(function (r) {
+            const gap = Math.max(0, 70 - r.readiness);
+            return '<tr>'
+                + '<td>' + evalSubjCell(r) + '</td>'
+                + '<td class="num" style="text-align:right">' + r.readiness + '%</td>'
+                + '<td>' + evalStatusChip(r.readiness) + '</td>'
+                + '<td class="muted" style="text-align:right">' + (r.q ? r.accuracy + '%' : '—') + '</td>'
+                + '<td class="muted" style="text-align:right">' + r.coverage + '%</td>'
+                + '<td class="muted" style="text-align:right">' + (gap ? gap + ' pts' : 'Met') + '</td>'
+                + '</tr>';
+        }).join('');
+        return;
+    }
+
+    if (tab === 'evidence') {
+        const cols = [
+            { label: 'Subject' }, { label: 'Answers', num: true }, { label: 'Marks earned', num: true },
+            { label: 'Marks available', num: true }, { label: 'Chapters', num: true },
+            { label: 'Sessions', num: true }, { label: 'Below half', num: true },
+            { label: 'Last practised' }
+        ];
+        thead.innerHTML = evalTableHead(cols);
+        if (!rows.length) {
+            tbody.innerHTML = evalEmptyRow(cols.length, 'No answered questions stored yet.');
+            return;
+        }
+        tbody.innerHTML = rows.map(function (r) {
+            return '<tr>'
+                + '<td>' + evalSubjCell(r) + '</td>'
+                + '<td class="num" style="text-align:right">' + r.q + '</td>'
+                + '<td class="num" style="text-align:right">' + Math.round(r.awarded * 10) / 10 + '</td>'
+                + '<td class="muted" style="text-align:right">' + Math.round(r.marks * 10) / 10 + '</td>'
+                + '<td class="muted" style="text-align:right">' + r.chaptersDone + ' / ' + r.chaptersTotal + '</td>'
+                + '<td class="muted" style="text-align:right">' + r.sessions + '</td>'
+                + '<td style="text-align:right">' + (r.lowCount
+                    ? '<span class="eval-status weak">' + r.lowCount + '</span>'
+                    : '<span class="muted">0</span>') + '</td>'
+                + '<td class="muted">' + evalEscape(evalFmtDate(r.lastAt)) + '</td>'
+                + '</tr>';
+        }).join('');
+        return;
+    }
+
+    /* default: subjects */
+    const cols = [
+        { label: 'Subject' }, { label: 'Accuracy', num: true }, { label: 'Readiness', num: true },
+        { label: 'Coverage', num: true }, { label: 'Answers', num: true }, { label: 'Status' }
+    ];
+    thead.innerHTML = evalTableHead(cols);
+    if (!list.length) {
+        tbody.innerHTML = evalEmptyRow(cols.length, 'No subject has any recorded answers yet.');
+        return;
+    }
+    tbody.innerHTML = list.map(function (r) {
+        return '<tr>'
+            + '<td>' + evalSubjCell(r) + '</td>'
+            + '<td class="num" style="text-align:right">' + (r.q ? r.accuracy + '%' : '—') + '</td>'
+            + '<td class="num" style="text-align:right">' + r.readiness + '%</td>'
+            + '<td class="muted" style="text-align:right">' + r.coverage + '%</td>'
+            + '<td class="muted" style="text-align:right">' + r.q + '</td>'
+            + '<td>' + evalStatusChip(r.readiness) + '</td>'
+            + '</tr>';
+    }).join('');
+}
+
+/* -------------------------------------------------------------- main */
+function renderEvaluationEngine(agg) {
+    if (!agg || !document.getElementById('view-evaluation')) return;
+
+    const rows = evalSubjectRows(agg);
+    const hasData = agg.totalMarks > 0;
+
+    /* Coverage across the level the student is actually working in. */
+    const levelSubjects = evalLevelSubjects();
+    let doneChapters = 0, totalChapters = 0;
+    levelSubjects.forEach(function (s) {
+        totalChapters += evalChapterTotal(s.id);
+        const set = agg.topicMastery && agg.topicMastery[s.id];
+        if (set && set.size) {
+            doneChapters += Math.min(set.size, evalChapterTotal(s.id) || set.size);
+        }
+    });
+    const coveragePct = totalChapters > 0 ? Math.round((doneChapters / totalChapters) * 100) : 0;
+    const cov = {
+        pct: coveragePct, done: doneChapters, total: totalChapters,
+        level: (typeof currentPracticeLevel !== 'undefined' && currentPracticeLevel === 'caf') ? 'caf' : 'prc'
+    };
+
+    /* Pace from mock exams. */
+    let paceSec = 0;
+    if (agg.mocks.length) {
+        const totalMin = agg.mocks.reduce(function (a, m) { return a + (parseInt(m.timeTaken) || 0); }, 0);
+        if (totalMin > 0) paceSec = Math.round((totalMin * 60) / (agg.mocks.length * 60));
+    }
+    agg.paceSec = paceSec;
+
+    const readiness = hasData ? agg.prepScore : 0;
+    const numericalAccuracy = agg.practiceMarks > 0
+        ? Math.round((agg.practiceAwarded / agg.practiceMarks) * 1000) / 10 : 0;
+    const pacePct = paceSec > 0
+        ? Math.round(evalClamp((EVAL_PACE_ZERO_SEC - paceSec) / (EVAL_PACE_ZERO_SEC - EVAL_PACE_BEST_SEC) * 100, 0, 100))
+        : 0;
+    const mockMarks = agg.practiceMarks + agg.mockTotal;
+    const allAccuracy = mockMarks > 0
+        ? Math.round((agg.practiceAwarded + agg.mockCorrect * 2) / mockMarks * 1000) / 10 : 0;
+
+    /* ---- header badge ---- */
+    const engineBadge = document.getElementById('eval-engine-badge');
+    if (engineBadge) {
+        engineBadge.textContent = hasData
+            ? agg.totalQuestions.toLocaleString() + ' answers scored'
+            : 'Awaiting first attempt';
+    }
+
+    /* ---- gauge ---- */
+    evalPaintGauge(readiness);
+    const gaugeValue = document.getElementById('eval-gauge-value');
+    if (gaugeValue) gaugeValue.textContent = readiness + '%';
+    const gaugeBand = document.getElementById('eval-gauge-band');
+    if (gaugeBand) {
+        gaugeBand.textContent = hasData
+            ? evalBand(readiness) + ' · ' + agg.totalQuestions.toLocaleString() + ' answers · '
+                + agg.sessions.length + ' session' + (agg.sessions.length === 1 ? '' : 's')
+            : 'No attempts recorded yet';
+    }
+
+    /* ---- breakdown bars ---- */
+    const metrics = document.getElementById('eval-metrics');
+    const sampleBadge = document.getElementById('eval-sample-badge');
+    if (sampleBadge) {
+        sampleBadge.textContent = agg.totalQuestions.toLocaleString() + ' answer'
+            + (agg.totalQuestions === 1 ? '' : 's');
+    }
+    if (metrics) {
+        metrics.innerHTML = [
+            evalMetricRow({
+                name: 'Exam Readiness',
+                tip: 'Your overall accuracy, damped by how much of the syllabus you have opened. Full marks need 70%+ accuracy across half the chapters or more.',
+                sub: agg.totalMarks > 0 ? Math.round(agg.totalAwarded * 10) / 10 + ' / ' + Math.round(agg.totalMarks * 10) / 10 + ' marks' : '',
+                value: readiness + '%',
+                pct: readiness,
+                color: 'linear-gradient(90deg,#f59e0b,#fbbf24)'
+            }),
+            evalMetricRow({
+                name: 'Concept Accuracy',
+                tip: 'Marks awarded over marks available, across every answered question in practice and mocks.',
+                sub: agg.totalQuestions.toLocaleString() + ' answers',
+                value: allAccuracy + '%',
+                pct: allAccuracy,
+                color: 'linear-gradient(90deg,#059669,#34d399)'
+            }),
+            evalMetricRow({
+                name: 'Syllabus Coverage',
+                tip: 'Chapters you have actually opened, over the chapters available in the level you are working in.',
+                sub: cov.done + ' / ' + cov.total + ' chapters',
+                value: coveragePct + '%',
+                pct: coveragePct,
+                color: 'linear-gradient(90deg,#7c3aed,#c4b5fd)'
+            }),
+            evalMetricRow({
+                name: 'Pace',
+                tip: 'From your timed mocks. ' + EVAL_PACE_BEST_SEC + ' sec per question scores full marks, ' + EVAL_PACE_ZERO_SEC + ' sec scores zero.',
+                sub: agg.mocks.length ? agg.mocks.length + ' mock' + (agg.mocks.length === 1 ? '' : 's') : 'no mocks yet',
+                value: paceSec > 0 ? paceSec + ' sec' : '—',
+                pct: pacePct,
+                color: 'linear-gradient(90deg,#0d9488,#2dd4bf)'
+            })
+        ].join('');
+    }
+
+    /* ---- skill cards ---- */
+    function setSkill(id, barId, noteId, value, note) {
+        const v = document.getElementById(id);
+        const b = document.getElementById(barId);
+        const n = document.getElementById(noteId);
+        if (v) v.textContent = value;
+        if (b) b.style.width = evalClamp(parseFloat(value) || 0, 0, 100) + '%';
+        if (n) n.textContent = note;
+    }
+
+    setSkill('eval-knowledge', 'eval-knowledge-bar', 'eval-knowledge-note', allAccuracy + '%',
+        allAccuracy >= 80 ? 'Strong conceptual clarity across your subjects.'
+            : (allAccuracy > 0 ? 'Keep building — accuracy is trending up.'
+                : 'Complete practice sessions to see your concept clarity.'));
+
+    setSkill('eval-numerical', 'eval-numerical-bar', 'eval-numerical-note', numericalAccuracy + '%',
+        numericalAccuracy >= 70 ? 'Solid numerical skills across attempts.'
+            : (numericalAccuracy > 0 ? 'Needs more practice on numerical problems.'
+                : 'Practice numerical questions to build accuracy here.'));
+
+    setSkill('eval-speed', 'eval-speed-bar', 'eval-speed-note', paceSec > 0 ? paceSec + 's' : '--',
+        paceSec > 0 ? 'Based on your mock exam pacing.'
+            : 'Take a mock exam to measure your pacing.');
+
+    setSkill('eval-coverage', 'eval-coverage-bar', 'eval-coverage-note', coveragePct + '%',
+        coveragePct >= 60 ? 'Broad coverage — readiness is now accuracy-limited.'
+            : (coveragePct > 0 ? 'Open new chapters to widen your coverage.'
+                : 'Open a chapter in the Practice Centre to start.'));
+
+    /* ---- trend, focus, table ---- */
+    evalPaintTrend(agg);
+    evalPaintFocus(rows, agg, cov);
+    evalPaintTable(rows, agg, cov);
+
+    /* ---- tab + view-all wiring (bound once) ---- */
+    const tabs = document.getElementById('eval-tabs');
+    if (tabs && !tabs.dataset.bound) {
+        tabs.dataset.bound = '1';
+        tabs.addEventListener('click', function (e) {
+            const btn = e.target.closest ? e.target.closest('.eval-tab') : null;
+            if (!btn) return;
+            EVAL_STATE.tab = btn.getAttribute('data-tab') || 'subjects';
+            Array.prototype.forEach.call(tabs.querySelectorAll('.eval-tab'), function (t) {
+                t.classList.toggle('active', t === btn);
+            });
+            /* Re-read storage rather than reusing the aggregate this closure was
+               built with — otherwise a tab switch would paint stale numbers. */
+            renderRealStats();
+        });
+    }
+
+    const viewAll = document.getElementById('eval-viewall-btn');
+    if (viewAll) viewAll.textContent = EVAL_STATE.showAll ? 'Show less' : 'View all';
+}
+
+function toggleEvalTableAll() {
+    EVAL_STATE.showAll = !EVAL_STATE.showAll;
+    renderRealStats();
+}
+
+/* ================================================================
+   PROGRESS LOG
+   Same evidence base as the Evaluation Engine (practice sessions +
+   mock history), presented as activity over time rather than as a
+   score. Nothing here is invented — quiet days read as zero.
+   ================================================================ */
+
+const PL_STATE = { days: 7, showAllEvents: false };
+
+/* Day buckets keyed on the Pakistan calendar, matching the streak logic. */
+function plDayKey(ts) {
+    try {
+        return new Date(new Date(ts).toLocaleString('en-US', { timeZone: 'Asia/Karachi' })).toDateString();
+    } catch (e) {
+        return new Date(ts).toDateString();
+    }
+}
+
+/* Key for "today in Pakistan, shifted by n days". */
+function plDayKeyOffset(n) {
+    const now = new Date();
+    let pk;
+    try { pk = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Karachi' })); }
+    catch (e) { pk = new Date(now); }
+    pk.setDate(pk.getDate() + n);
+    return pk.toDateString();
+}
+
+function plDayLabel(key) {
+    const d = new Date(key);
+    if (isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-GB', { weekday: 'short' });
+}
+
+function plRelativeDay(key) {
+    if (key === plDayKeyOffset(0)) return 'Today';
+    if (key === plDayKeyOffset(-1)) return 'Yesterday';
+    const d = new Date(key);
+    if (isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
+}
+
+/* Questions answered and accuracy per day, for the last N days. */
+function plDailySeries(agg, days) {
+    const buckets = {};
+    for (let i = days - 1; i >= 0; i--) {
+        const key = plDayKeyOffset(-i);
+        buckets[key] = { key: key, q: 0, awarded: 0, marks: 0, sessions: 0, mocks: 0 };
+    }
+
+    agg.sessions.forEach(function (s) {
+        const ts = s.finishedAt || s.startedAt;
+        if (!ts) return;
+        const b = buckets[plDayKey(ts)];
+        if (!b) return;
+        b.sessions += 1;
+        (s.results || []).forEach(function (r) {
+            b.q += 1;
+            b.awarded += (r.awarded || 0);
+            b.marks += (r.maxMarks || r.marks || 0);
+        });
+    });
+
+    agg.mocks.forEach(function (m) {
+        const ts = evalDateValue(m.date);
+        if (!ts) return;
+        const b = buckets[plDayKey(ts)];
+        if (!b) return;
+        /* A paper carries 60 questions, so it counts as that many answers. */
+        b.mocks += 1;
+        b.q += 60;
+        b.awarded += (m.score || 0);
+        b.marks += (m.totalMarks || 120);
+    });
+
+    const list = Object.keys(buckets).map(function (k) { return buckets[k]; })
+        .sort(function (a, b) { return new Date(a.key) - new Date(b.key); });
+
+    list.forEach(function (b) {
+        b.pct = b.marks > 0 ? Math.round((b.awarded / b.marks) * 1000) / 10 : 0;
+    });
+    return list;
+}
+
+/* Combo chart: bars for volume, line for accuracy — drawn at real pixel
+   width so nothing is stretched and the labels stay crisp. */
+function plPaintChart(agg) {
+    const host = document.getElementById('pl-chart');
+    if (!host) return;
+
+    const days = PL_STATE.days;
+    const series = plDailySeries(agg, days);
+    const W = Math.max(320, host.clientWidth || 640);
+    const H = 250;
+    const padL = 38, padR = 38, padT = 16, padB = 34;
+    const plotW = W - padL - padR;
+    const plotH = H - padT - padB;
+
+    const maxQ = Math.max.apply(null, series.map(function (d) { return d.q; }).concat([4]));
+    const qStep = Math.max(1, Math.ceil(maxQ / 4));
+    const qTop = qStep * 4;
+
+    const n = series.length;
+    const slot = plotW / n;
+    const barW = Math.min(34, slot * 0.52);
+    const xAt = function (i) { return padL + slot * i + slot / 2; };
+    const yQ = function (q) { return padT + plotH - (q / qTop) * plotH; };
+    const yP = function (p) { return padT + plotH - (evalClamp(p, 0, 100) / 100) * plotH; };
+
+    let svg = '<svg class="pl-chart" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H
+        + '" role="img" aria-label="Questions answered and accuracy over the last ' + days + ' days">';
+
+    /* horizontal gridlines + left axis (questions) */
+    for (let g = 0; g <= 4; g++) {
+        const v = qStep * g;
+        const gy = yQ(v);
+        svg += '<line x1="' + padL + '" y1="' + gy.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + gy.toFixed(1)
+            + '" stroke="rgba(148,163,184,0.14)" stroke-width="1" />';
+        svg += '<text x="' + (padL - 8) + '" y="' + (gy + 4).toFixed(1) + '" text-anchor="end" font-size="10"'
+            + ' fill="rgba(148,163,184,0.75)">' + v + '</text>';
+    }
+
+    /* right axis (accuracy %) */
+    for (let g = 0; g <= 4; g++) {
+        const v = g * 25;
+        const gy = yQ(v);
+        svg += '<text x="' + (W - padR + 8) + '" y="' + (gy + 4).toFixed(1) + '" text-anchor="start" font-size="10"'
+            + ' fill="rgba(16,185,129,0.8)">' + v + '</text>';
+    }
+
+    /* bars */
+    series.forEach(function (d, i) {
+        const x = xAt(i) - barW / 2;
+        const y = yQ(d.q);
+        const h = Math.max(d.q > 0 ? 3 : 0, plotH - (y - padT));
+        svg += '<rect x="' + x.toFixed(1) + '" y="' + (d.q > 0 ? y.toFixed(1) : (padT + plotH).toFixed(1))
+            + '" width="' + barW.toFixed(1) + '" height="' + h.toFixed(1) + '" rx="4" fill="url(#plBarGrad)">'
+            + '<title>' + plRelativeDay(d.key) + ': ' + d.q + ' question' + (d.q === 1 ? '' : 's')
+            + (d.marks > 0 ? ', accuracy ' + d.pct + '%' : '') + '</title></rect>';
+    });
+
+    /* accuracy line — only across days that actually have marks */
+    const pts = [];
+    series.forEach(function (d, i) {
+        if (d.marks > 0) pts.push({ x: xAt(i), y: yP(d.pct), d: d });
+    });
+    if (pts.length) {
+        svg += '<defs><linearGradient id="plBarGrad" x1="0" y1="0" x2="0" y2="1">'
+            + '<stop offset="0%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#d97706" />'
+            + '</linearGradient></defs>';
+        let d = '';
+        pts.forEach(function (p, i) { d += (i ? ' L' : 'M') + p.x.toFixed(1) + ' ' + p.y.toFixed(1); });
+        svg += '<path d="' + d + '" fill="none" stroke="#10b981" stroke-width="2.4"'
+            + ' stroke-linejoin="round" stroke-linecap="round" />';
+        pts.forEach(function (p) {
+            svg += '<circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="4" fill="#0b1220"'
+                + ' stroke="#10b981" stroke-width="2.4"><title>' + plRelativeDay(p.d.key) + ': '
+                + p.d.pct + '% accuracy</title></circle>';
+        });
+    } else {
+        svg += '<defs><linearGradient id="plBarGrad" x1="0" y1="0" x2="0" y2="1">'
+            + '<stop offset="0%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#d97706" />'
+            + '</linearGradient></defs>';
+    }
+
+    /* baseline + day labels (thinned out when the range is long) */
+    svg += '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) + '" y2="' + (padT + plotH)
+        + '" stroke="rgba(148,163,184,0.3)" stroke-width="1" />';
+
+    const every = n > 16 ? Math.ceil(n / 10) : 1;
+    series.forEach(function (d, i) {
+        if (i % every !== 0 && i !== n - 1) return;
+        svg += '<text x="' + xAt(i).toFixed(1) + '" y="' + (H - padB + 18)
+            + '" text-anchor="middle" font-size="10" fill="rgba(148,163,184,0.85)">'
+            + evalEscape(plDayLabel(d.key)) + '</text>';
+    });
+
+    if (!series.some(function (d) { return d.q > 0; })) {
+        svg += '<text x="' + (W / 2) + '" y="' + (padT + plotH / 2) + '" text-anchor="middle" font-size="12"'
+            + ' fill="rgba(148,163,184,0.8)">No activity recorded in this window yet</text>';
+    }
+
+    svg += '</svg>';
+    host.innerHTML = svg;
+}
+
+function plPaintBanner(agg) {
+    const days = agg.streakDays;
+    const title = document.getElementById('progress-streak-title');
+    if (title) {
+        title.innerHTML = '<em>' + days + '-Day</em> Continuity Streak';
+    }
+    const note = document.getElementById('progress-streak-note');
+    if (note) {
+        note.textContent = days > 0
+            ? 'You have recorded activity on ' + days + ' separate day' + (days === 1 ? '' : 's')
+                + ' — ' + agg.sessions.length + ' practice session' + (agg.sessions.length === 1 ? '' : 's')
+                + ' and ' + agg.mocks.length + ' mock attempt' + (agg.mocks.length === 1 ? '' : 's')
+                + ' on file. A day only counts once at least one question is answered.'
+            : 'No activity on record yet. Answer a question in the Practice Centre or sit a mock exam, and this counter starts today.';
+    }
+    const tag = document.getElementById('progress-streak-tag');
+    if (tag) {
+        tag.textContent = days > 0 ? 'ACTIVE' : 'NEW';
+        tag.classList.toggle('off', days === 0);
+    }
+    const eyebrow = document.getElementById('progress-streak-eyebrow');
+    if (eyebrow) eyebrow.textContent = days > 0 ? 'Milestone detected' : 'Awaiting first session';
+}
+
+function plPaintModules(agg) {
+    const host = document.getElementById('pl-modules');
+    if (!host) return;
+
+    const rows = evalSubjectRows(agg);
+    const list = evalLevelSubjects().map(function (s) {
+        for (let i = 0; i < rows.length; i++) if (rows[i].sid === s.id) return rows[i];
+        return {
+            sid: s.id, code: s.code, name: s.name, color: s.color,
+            q: 0, chaptersDone: 0, chaptersTotal: evalChapterTotal(s.id), coverage: 0, readiness: 0
+        };
+    });
+
+    if (!list.length) {
+        host.innerHTML = '<div class="pl-empty" style="grid-column:1/-1;text-align:center;padding:26px 0;'
+            + 'color:var(--text-muted);font-size:0.84rem;">No syllabus modules available.</div>';
+        return;
+    }
+
+    host.innerHTML = list.map(function (r) {
+        const val = r.readiness;
+        return '<div class="pl-module">'
+            + '<div class="pl-module-head">'
+            + '<span class="pl-module-name">' + evalEscape(r.code) + '</span>'
+            + '<span class="pl-module-val">' + val + '%</span>'
+            + '</div>'
+            + '<div class="progress-track"><div class="progress-fill" style="width:' + val
+            + '%; background:linear-gradient(90deg,' + evalEscape(r.color) + ','
+            + evalEscape(r.color) + 'cc);"></div></div>'
+            + '<div class="pl-module-meta">' + r.chaptersDone + ' / ' + r.chaptersTotal + ' chapters &middot; '
+            + r.q + ' answered</div>'
+            + '</div>';
+    }).join('');
+}
+
+function plPaintEvents(agg) {
+    const host = document.getElementById('pl-events');
+    if (!host) return;
+
+    const events = [];
+
+    agg.sessions.forEach(function (s) {
+        const rs = s.results || [];
+        if (!rs.length) return;
+        let awarded = 0, marks = 0;
+        rs.forEach(function (r) { awarded += (r.awarded || 0); marks += (r.maxMarks || r.marks || 0); });
+        const pct = marks > 0 ? Math.round((awarded / marks) * 1000) / 10 : 0;
+        const codes = {};
+        (s.questions || []).forEach(function (q) { if (q && q.subjectId) codes[q.subjectId] = 1; });
+        const names = Object.keys(codes).map(function (sid) { return evalSubjectMeta(sid).code; });
+        events.push({
+            ts: s.finishedAt || s.startedAt || 0,
+            kind: 'practice',
+            title: 'Practice session completed',
+            desc: (names.length ? names.join(' + ') : 'Mixed subjects') + ' &middot; '
+                + rs.length + ' question' + (rs.length === 1 ? '' : 's') + ' &middot; scored <b>'
+                + Math.round(awarded * 10) / 10 + ' / ' + Math.round(marks * 10) / 10 + '</b> (<i>'
+                + pct + '%</i>)'
+        });
+    });
+
+    agg.mocks.forEach(function (m) {
+        const total = m.totalMarks || 120;
+        const score = m.score || 0;
+        const pct = (m.percentage != null) ? m.percentage : (total > 0 ? Math.round((score / total) * 1000) / 10 : 0);
+        const mins = evalMockMinutes(m);
+        events.push({
+            ts: evalDateValue(m.date),
+            kind: 'mock',
+            title: 'Mock exam attempted',
+            desc: (m.subjectTitle ? evalEscape(m.subjectTitle) + ' &middot; ' : '')
+                + 'scored <b>' + score + ' / ' + total + '</b> (<i>' + pct + '%</i>)'
+                + (mins ? ' &middot; ' + mins + ' min' : '')
+        });
+    });
+
+    events.sort(function (a, b) { return (b.ts || 0) - (a.ts || 0); });
+
+    const btn = document.getElementById('pl-stream-all-btn');
+    if (btn) {
+        btn.style.display = events.length > 5 ? '' : 'none';
+        btn.textContent = PL_STATE.showAllEvents
+            ? 'Show recent only'
+            : 'Stream all events (' + events.length + ')';
+    }
+
+    if (!events.length) {
+        host.innerHTML = '<li class="pl-event"><span class="pl-event-ico" style="background:rgba(148,163,184,0.14);'
+            + 'color:var(--text-muted);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"'
+            + ' stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+            + '<circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16v.01"/></svg></span>'
+            + '<div class="pl-event-body"><div class="pl-event-title">Nothing logged yet</div>'
+            + '<div class="pl-event-desc">Every finished practice session and mock exam appears here with its score.</div>'
+            + '</div></li>';
+        return;
+    }
+
+    const shown = PL_STATE.showAllEvents ? events : events.slice(0, 5);
+    host.innerHTML = shown.map(function (e) {
+        const tint = e.kind === 'mock'
+            ? 'background:rgba(245,158,11,0.16);color:var(--gold-400);'
+            : 'background:rgba(16,185,129,0.16);color:var(--emerald-500);';
+        const icon = e.kind === 'mock'
+            ? '<path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>'
+            : '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>';
+        return '<li class="pl-event">'
+            + '<span class="pl-event-ico" style="' + tint + '">'
+            + '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"'
+            + ' stroke-linecap="round" stroke-linejoin="round">' + icon + '</svg></span>'
+            + '<div class="pl-event-body">'
+            + '<div class="pl-event-top"><span class="pl-event-title">' + evalEscape(e.title) + '</span>'
+            + '<span class="pl-event-time">' + evalEscape(plRelativeDay(plDayKey(e.ts || Date.now())))
+            + (e.ts ? ' &middot; ' + new Date(e.ts).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : '')
+            + '</span></div>'
+            + '<div class="pl-event-desc">' + e.desc + '</div>'
+            + '</div></li>';
+    }).join('');
+}
+
+function plPaintSideCards(agg, rows) {
+    /* Mind Maps: chapters actually opened, over chapters in the level. */
+    const level = evalLevelSubjects();
+    let opened = 0, total = 0;
+    level.forEach(function (s) {
+        const t = evalChapterTotal(s.id);
+        total += t;
+        const set = agg.topicMastery && agg.topicMastery[s.id];
+        if (set && set.size) opened += Math.min(set.size, t || set.size);
+    });
+    const mmBar = document.getElementById('pl-mindmaps-bar');
+    const mmVal = document.getElementById('pl-mindmaps-val');
+    if (mmBar) mmBar.style.width = (total > 0 ? Math.round((opened / total) * 100) : 0) + '%';
+    if (mmVal) mmVal.textContent = opened + ' / ' + total + ' chapters';
+
+    /* Mistake Bank: answers under half marks, over everything answered. */
+    let weak = 0, answered = 0;
+    agg.sessions.forEach(function (s) {
+        (s.results || []).forEach(function (r) {
+            answered += 1;
+            if ((r.percent || 0) < 50) weak += 1;
+        });
+    });
+    const weakPct = answered > 0 ? Math.round((weak / answered) * 100) : 0;
+    const mkBar = document.getElementById('pl-mistakes-bar');
+    const mkVal = document.getElementById('pl-mistakes-val');
+    if (mkBar) mkBar.style.width = weakPct + '%';
+    if (mkVal) mkVal.textContent = weak + ' of ' + answered;
+
+    /* Shortcut captions */
+    const sp = document.getElementById('pl-short-practice');
+    if (sp) {
+        sp.textContent = answered > 0
+            ? answered.toLocaleString() + ' answered across ' + agg.sessions.length + ' session'
+                + (agg.sessions.length === 1 ? '' : 's')
+            : 'No questions answered yet';
+    }
+    const ss = document.getElementById('pl-short-study');
+    if (ss) {
+        let books = 0, pages = 0;
+        try {
+            if (typeof STUDY_BOOK_MAP !== 'undefined') {
+                Object.keys(STUDY_BOOK_MAP).forEach(function (k) {
+                    books += 1; pages += (STUDY_BOOK_MAP[k].pdfPages || 0);
+                });
+            }
+            if (typeof CAF_BOOKS !== 'undefined') {
+                CAF_BOOKS.forEach(function (b) { books += 1; pages += (b.pdfPages || 0); });
+            }
+        } catch (e) { /* ignore */ }
+        ss.textContent = books > 0
+            ? books + ' ICAP study texts · ' + pages.toLocaleString() + ' pages'
+            : 'Study texts unavailable';
+    }
+
+    /* Sync state — honest about where the record currently lives. */
+    const sync = document.getElementById('pl-sync-state');
+    const headSync = document.getElementById('progress-sync-badge');
+    if (sync) {
+        const on = !!currentUser;
+        sync.textContent = on ? 'Cloud synced' : 'Local only';
+        sync.classList.toggle('off', !on);
+    }
+    if (headSync) {
+        headSync.textContent = currentUser ? 'Synced to your account' : 'Local record';
+        headSync.className = 'badge ' + (currentUser ? 'badge-green' : 'badge-gold');
+    }
+}
+
+function plScrollToEvents() {
+    const card = document.getElementById('pl-events-card');
+    if (card && card.scrollIntoView) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function toggleProgressEvents() {
+    PL_STATE.showAllEvents = !PL_STATE.showAllEvents;
+    renderRealStats();
+}
+
+function renderProgressLog(agg) {
+    if (!agg || !document.getElementById('view-progress')) return;
+
+    plPaintBanner(agg);
+    plPaintChart(agg);
+
+    const rows = evalSubjectRows(agg);
+    plPaintModules(agg);
+    plPaintEvents(agg);
+    plPaintSideCards(agg, rows);
+
+    /* Range toggle (bound once) */
+    const toggle = document.getElementById('pl-range-toggle');
+    if (toggle && !toggle.dataset.bound) {
+        toggle.dataset.bound = '1';
+        toggle.addEventListener('click', function (e) {
+            const btn = e.target.closest ? e.target.closest('button[data-days]') : null;
+            if (!btn) return;
+            PL_STATE.days = parseInt(btn.getAttribute('data-days')) || 7;
+            Array.prototype.forEach.call(toggle.querySelectorAll('button'), function (b) {
+                b.classList.toggle('active', b === btn);
+            });
+            renderRealStats();
+        });
     }
 }
 
@@ -23739,6 +26548,12 @@ function startProfileListener(uid) {
                 currentUserProfile = doc.data();
                 // Update UI with fresh subscription data
                 updateSubscriptionUI(currentUserProfile);
+                /* Repaint the card, sidebar and dashboard from the fresh doc.
+                   Never overwrite the form while a field has focus, or a
+                   background sync would eat whatever the student is typing. */
+                const active = document.activeElement;
+                const typing = !!(active && active.closest && active.closest('#profile-form'));
+                renderProfileUI({ keepForm: typing });
             } else {
                 // Profile doesn't exist, create default
                 currentUserProfile = null;

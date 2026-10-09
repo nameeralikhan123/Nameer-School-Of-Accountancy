@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Profile pictures: users/{uid}/profile.jpg (or .png, .webp)
+    match /users/{uid}/profile.* {
+      // Students can read/write their own profile picture
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      
+      // Admins (custom claim) can read all
+      allow read: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // Optional: general user folder for any other uploads
+    match /users/{uid}/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
