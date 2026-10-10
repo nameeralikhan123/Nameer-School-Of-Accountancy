@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261009-9 -->
+    <!-- v: 20261010-1 -->
 
 <head>
     <meta charset="UTF-8">
@@ -24726,7 +24726,16 @@ const PDF_ZOOM_STEPS = [0, 50, 75, 100, 125, 150, 200, 300, 400];
 
 function pdfUrl(page, zoom) {
     const bits = [];
-    if (page && page > 0) bits.push('page=' + page);
+    /* Chapter page numbers in the book data are PRINTED pages. Every study
+       text carries `offset` pages of front matter ahead of printed page 1
+       (verified against the files: PRC 1 physical page 6 == printed page 1,
+       and all 13 books put every chapter start on its own title page).
+       The PDF viewer's page= parameter is PHYSICAL, so the offset has to be
+       added here. Without it every chapter jump and every book open landed in
+       the cover / front matter instead of the chapter. */
+    const printed = page && page > 0 ? page : 1;
+    const physical = Math.max(1, printed + (pdfState.offset || 0));
+    bits.push('page=' + physical);
     if (zoom && zoom > 0) bits.push('zoom=' + zoom);
     bits.push('view=FitH');
     return encodeURI(pdfState.file) + '#' + bits.join('&');
@@ -24738,9 +24747,12 @@ function openPdfReader(file, title, printedPage, opts) {
 
     pdfState.file = file;
     pdfState.title = title || file;
-    pdfState.total = opts.pdfPages || 0;
     pdfState.chapters = opts.chapters || [];
     pdfState.offset = opts.offset == null ? 5 : opts.offset;
+    /* `pdfPages` is the PHYSICAL page count of the file, but the reader shows
+       PRINTED page numbers so they line up with the chapter index. Subtracting
+       the front matter keeps the "n / total" label and the clamp honest. */
+    pdfState.total = opts.pdfPages ? Math.max(1, opts.pdfPages - pdfState.offset) : 0;
     pdfState.zoom = 0;
     pdfState.open = true;
 
@@ -24758,10 +24770,9 @@ function openPdfReader(file, title, printedPage, opts) {
     if (modal) modal.style.display = 'flex';
 
     pdfBuildChapterSelect();
+    // pdfGoPage also points the frame at the right page; setting src again
+    // here would re-request the whole (multi-MB) file a second time.
     pdfGoPage(startPage, true);
-
-    const frame = document.getElementById('pdf-frame');
-    if (frame) frame.src = pdfUrl(startPage, 0);
 }function pdfBuildChapterSelect() {
     const sel = document.getElementById('pdf-chapter-select');
     if (!sel) return;
