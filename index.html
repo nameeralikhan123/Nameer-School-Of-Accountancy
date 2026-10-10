@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261010-1 -->
+    <!-- v: 20261010-2 -->
 
 <head>
     <meta charset="UTF-8">
@@ -5718,6 +5718,7 @@ tr.pc-zero td { opacity: .8; }
                     </svg>
                 </button>
                 <select class="pdf-tb-select" id="pdf-chapter-select" onchange="pdfGoChapter(this.value)"
+                    onmousedown="pdfSelectArm(this)"
                     title="Jump to chapter" disabled>
                     <option value="">No chapter index</option>
                 </select>
@@ -24719,7 +24720,9 @@ const pdfState = {
     offset: 5,
     history: [],
     hIndex: -1,
-    open: false
+    open: false,
+    lastUrl: '',
+    selArmedValue: ''
 };
 
 const PDF_ZOOM_STEPS = [0, 50, 75, 100, 125, 150, 200, 300, 400];
@@ -24815,6 +24818,24 @@ function pdfSyncToolbar() {
     if (zoom) zoom.textContent = pdfState.zoom ? (pdfState.zoom + '%') : 'Auto';
 }
 
+/* Point the reader at a page of the PDF.
+   Assigning frame.src to the same document with only a different #fragment
+   is a same-document navigation: the browser keeps the already-rendered PDF
+   and never re-reads the page, so picking a chapter (or zooming) silently did
+   nothing. Bounce the frame through about:blank first so the viewer is forced
+   to load afresh and honour the new fragment. The file itself comes straight
+   back from the HTTP cache, so this does not re-download the whole book. */
+function pdfLoadUrl(url) {
+    const frame = document.getElementById('pdf-frame');
+    if (!frame) return;
+    const base = function (u) { return String(u).split('#')[0]; };
+    if (pdfState.lastUrl && base(pdfState.lastUrl) === base(url)) {
+        frame.src = 'about:blank';
+    }
+    pdfState.lastUrl = url;
+    frame.src = url;
+}
+
 function pdfGoPage(page, isReset) {
     let p = parseInt(page, 10);
     if (!p || p < 1) p = 1;
@@ -24838,8 +24859,7 @@ function pdfGoPage(page, isReset) {
     const sel = document.getElementById('pdf-chapter-select');
     if (sel && idx >= 0) sel.value = String(idx);
 
-    const frame = document.getElementById('pdf-frame');
-    if (frame) frame.src = pdfUrl(p, pdfState.zoom);
+    pdfLoadUrl(pdfUrl(p, pdfState.zoom));
     pdfSyncToolbar();
 }
 
@@ -24865,10 +24885,21 @@ function pdfGoForward() {
     pdfGoPage(pdfState.history[pdfState.hIndex], true);
 }
 
+/* Re-picking the chapter already shown fires no change event, so remember the
+   value the dropdown had before the click and force a reload in that case. */
+function pdfSelectArm(sel) {
+    pdfState.selArmedValue = sel.value;
+}
+
 function pdfGoChapter(value) {
     const idx = parseInt(value, 10);
     if (isNaN(idx) || !pdfState.chapters[idx]) return;
-    pdfGoPage(pdfState.chapters[idx].p);
+    const target = pdfState.chapters[idx].p;
+    if (pdfState.selArmedValue === value && pdfState.page === target) {
+        pdfLoadUrl(pdfUrl(target, pdfState.zoom));
+        return;
+    }
+    pdfGoPage(target);
 }
 
 function pdfStepChapter(delta) {
@@ -24888,15 +24919,13 @@ function pdfStepZoom(delta) {
     if (i < 0) i = 0;
     i = Math.max(0, Math.min(PDF_ZOOM_STEPS.length - 1, i + delta));
     pdfState.zoom = PDF_ZOOM_STEPS[i];
-    const frame = document.getElementById('pdf-frame');
-    if (frame) frame.src = pdfUrl(pdfState.page, pdfState.zoom);
+    pdfLoadUrl(pdfUrl(pdfState.page, pdfState.zoom));
     pdfSyncToolbar();
 }
 
 function pdfResetZoom() {
     pdfState.zoom = 0;
-    const frame = document.getElementById('pdf-frame');
-    if (frame) frame.src = pdfUrl(pdfState.page, 0);
+    pdfLoadUrl(pdfUrl(pdfState.page, 0));
     pdfSyncToolbar();
 }
 
@@ -24916,6 +24945,7 @@ function closePdfReader() {
     const frame = document.getElementById('pdf-frame');
     if (frame) frame.src = 'about:blank';
     pdfState.open = false;
+    pdfState.lastUrl = '';
     pdfState.history = [];
     pdfState.hIndex = -1;
 }
