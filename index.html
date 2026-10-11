@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261011-1 -->
+    <!-- v: 20261011-2 -->
 
 <head>
     <meta charset="UTF-8">
@@ -21731,23 +21731,56 @@ function practiceCentreMistakeBook() {
 }
 
 function practiceCentreRenderMistakeBook() {
-    const mb = practiceCentreMistakeBook();
-    if (!mb.entries || !mb.entries.length) {
+    const book = (typeof practiceMistakeBookFull === 'function')
+        ? practiceMistakeBookFull()
+        : { objective: [], objectiveCount: 0, written: practiceCentreMistakeBook(), writtenCount: 0 };
+    const obj = book.objective || [];
+    const mb = book.written || { entries: [] };
+
+    if (!obj.length && (!mb.entries || !mb.entries.length)) {
         practiceCentrePanel(practiceCentreHeader('Mistake book') +
-            '<p class="pc-note">No marks have been lost yet. Complete a session and the ' +
-            'patterns will appear here.</p>');
+            '<p class="pc-note">No mistakes on file yet. Complete a session and the ones you ' +
+            'miss will appear here.</p>' +
+            '<div class="pc-actions"><button type="button" class="pc-btn" id="pc-back">Back</button></div>');
+        document.querySelector('.pc-panel').querySelector('#pc-back')
+            .addEventListener('click', practiceCentreRenderSetup);
         return;
     }
-    const rows = mb.entries.map(function (e) {
-        return '<tr><td>' + practiceCentreEscape(e.errorType.replace(/_/g, ' ').toLowerCase()) + '</td>' +
-            '<td>' + practiceCentreEscape(e.criterionId) + '</td>' +
-            '<td class="pc-num">' + e.marksLost + '</td>' +
-            '<td class="pc-num">' + e.occurrences + '</td></tr>';
-    }).join('');
-    practiceCentrePanel(practiceCentreHeader('Mistake book') +
-        '<p class="pc-note">' + mb.entries.length + ' pattern(s) across your sessions.</p>' +
-        '<table class="pc-criteria"><thead><tr><th>Error</th><th>Criterion</th>' +
-        '<th>Marks lost</th><th>Times</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+
+    let body = '';
+    if (obj.length) {
+        body += '<p class="pc-note">' + obj.length + ' objective question' +
+            (obj.length === 1 ? '' : 's') + ' answered wrongly (most recent first).</p>';
+        body += obj.slice(0, 20).map(function (it) {
+            const chosen = (it.chosen === null || it.chosen === undefined)
+                ? 'blank' : String.fromCharCode(65 + it.chosen);
+            const correct = (typeof it.correct === 'number') ? String.fromCharCode(65 + it.correct) : '?';
+            return '<div class="pc-note" style="border-left:3px solid #ef4444; padding-left:10px; margin:10px 0;">' +
+                '<div style="font-size:0.72rem; color:#94a3b8;">' +
+                practiceCentreEscape(mmChapterLabel(it.chapter) || it.subjectId || '') + '</div>' +
+                '<div style="color:var(--text-main); font-weight:600;">' + (it.qText || '') + '</div>' +
+                '<div style="font-size:0.82rem;">Your answer: <b style="color:#f87171;">' + chosen +
+                '</b> &nbsp; Correct: <b style="color:#4ade80;">' + correct + '</b></div>' +
+                (it.working ? '<div style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">' +
+                    it.working + '</div>' : '') +
+                '</div>';
+        }).join('');
+    }
+
+    if (mb.entries && mb.entries.length) {
+        const rows = mb.entries.map(function (e) {
+            return '<tr><td>' + practiceCentreEscape(e.errorType.replace(/_/g, ' ').toLowerCase()) + '</td>' +
+                '<td>' + practiceCentreEscape(e.criterionId) + '</td>' +
+                '<td class="pc-num">' + e.marksLost + '</td>' +
+                '<td class="pc-num">' + e.occurrences + '</td></tr>';
+        }).join('');
+        body += '<p class="pc-note" style="margin-top:16px;">' + mb.entries.length +
+            ' written error pattern(s) across your sessions.</p>' +
+            '<table class="pc-criteria"><thead><tr><th>Error</th><th>Criterion</th>' +
+            '<th>Marks lost</th><th>Times</th></tr></thead><tbody>' + rows + '</tbody></table>';
+    }
+
+    practiceCentrePanel(practiceCentreHeader('Mistake book') + body +
         '<div class="pc-actions"><button type="button" class="pc-btn" id="pc-back">Back</button></div>');
     document.querySelector('.pc-panel').querySelector('#pc-back')
         .addEventListener('click', practiceCentreRenderSetup);
@@ -23115,6 +23148,30 @@ function initRevisionApp() {
                             answered: answered
                         };
                     });
+                    /* Snapshot every WRONG question - the text, both answer keys
+                       and the bank's own working - so the Mistake Book can show
+                       something learnable instead of only a count. Correct items
+                       are not stored: the mistake book only keeps mistakes, and
+                       it clears one automatically when a later attempt gets it
+                       right. */
+                    const markedWrong = qz.questions.reduce(function (acc, q, i) {
+                        const ans = qz.userAnswers[i];
+                        const answered = ans !== null && ans !== undefined;
+                        if (answered && ans === q.correct) return acc;
+                        acc.push({
+                            qid: q.id || (qz.chapterId + '-q' + (i + 1)),
+                            subjectId: qz.subjectId,
+                            chapter: qz.chapterId,
+                            qText: q.qText || q.question || '',
+                            options: (q.options || []).slice(),
+                            chosen: answered ? ans : null,
+                            correct: q.correct,
+                            working: q.working || q.explanation || '',
+                            at: new Date().toISOString(),
+                            source: 'Chapter quiz'
+                        });
+                        return acc;
+                    }, []);
                     practiceCentrePersistSession({
                         version: 'quiz-1',
                         sessionId: 'qz-' + qz.subjectId + '-' + qz.chapterId + '-' + Date.now().toString(36),
@@ -23135,6 +23192,7 @@ function initRevisionApp() {
                             };
                         }),
                         results: markedResults,
+                        wrong: markedWrong,
                         totals: { questions: nQ, awarded: correctCount, marks: nQ }
                     });
                     if (typeof renderRealStats === 'function') renderRealStats();
@@ -23759,13 +23817,32 @@ function initRevisionApp() {
 
                 // Save to history
                 const history = JSON.parse(localStorage.getItem('prc_mock_exam_history') || '[]');
+                const mockWrong = [];
+                currentMockExam.questions.forEach(function (q, idx) {
+                    const ua = currentMockExam.userAnswers[idx];
+                    if (ua !== undefined && ua === q.correct) return;
+                    mockWrong.push({
+                        qid: q.id || ('mock-' + (idx + 1)),
+                        subjectId: q.subject || currentMockExam.subjectKey || null,
+                        chapter: q.chapter || '',
+                        qText: q.question || '',
+                        options: (q.options || []).slice(),
+                        chosen: (ua === undefined) ? null : ua,
+                        correct: q.correct,
+                        working: q.explanation || '',
+                        at: pkDateStr(),
+                        source: 'Mock exam'
+                    });
+                });
                 history.push({
+                    subjectId: currentMockExam.subjectKey || null,
                     subjectTitle: currentMockExam.subjectTitle,
                     date: pkDateStr(),
                     timeTaken: `${timeTakenMins} mins`,
                     score: obtainedMarks,
                     totalMarks: currentMockExam.totalMarks,
-                    percentage: percentage
+                    percentage: percentage,
+                    wrong: mockWrong
                 });
                 localStorage.setItem('prc_mock_exam_history', JSON.stringify(history));
                 fsPushData('mockHistory');
@@ -25272,27 +25349,226 @@ document.addEventListener('click', function (e) {
 });
 
 /* ------------------------------------------------------------------ boot */
+
+/* ========================================================= mistake book (real)
+   The book merges the two kinds of mistake this app can actually evidence:
+
+   - OBJECTIVE questions answered wrongly (PRC chapter quizzes and mock exams).
+     Each carries the question, the option chosen, the correct option and the
+     bank's own working, so an entry is learnable rather than just a count. A
+     question answered wrongly earlier but answered correctly in a later attempt
+     drops out: the mistake has been corrected.
+
+   - WRITTEN-answer criteria that lost marks (the CAF practice centre),
+     aggregated by the error taxonomy into patterns.
+
+   Everything is read back from the student's own saved work; nothing is
+   invented, and with no evidence the book stays empty and says so. */
+function practiceObjectiveMistakes() {
+    const byKey = {};
+
+    function record(entry, isCorrect, whenMs) {
+        if (!entry || !entry.qid) return;
+        const key = (entry.subjectId || '') + '::' + entry.qid;
+        if (isCorrect) { delete byKey[key]; return; }
+        const prev = byKey[key];
+        if (!prev || (whenMs || 0) >= (prev._ts || 0)) {
+            byKey[key] = {
+                key: key,
+                qid: entry.qid,
+                subjectId: entry.subjectId || '',
+                chapter: entry.chapter || '',
+                qText: entry.qText || '',
+                options: entry.options || [],
+                chosen: (entry.chosen === undefined ? null : entry.chosen),
+                correct: entry.correct,
+                working: entry.working || '',
+                at: entry.at || '',
+                source: entry.source || '',
+                _ts: whenMs || 0
+            };
+        }
+    }
+
+    /* Practice sessions, oldest first, so a later correct answer clears an
+       earlier mistake on the same question. */
+    let sessions = [];
+    try {
+        const parsed = JSON.parse(localStorage.getItem('pc_sessions') || '[]');
+        if (Array.isArray(parsed)) sessions = parsed;
+    } catch (e) { sessions = []; }
+    sessions.sort(function (a, b) {
+        return evalDateValue(a && (a.finishedAt || a.startedAt))
+            - evalDateValue(b && (b.finishedAt || b.startedAt));
+    });
+    sessions.forEach(function (s) {
+        if (!s) return;
+        const whenMs = evalDateValue(s.finishedAt || s.startedAt);
+        const byId = {};
+        (s.questions || []).forEach(function (q) { if (q && q.id) byId[q.id] = q; });
+        const wrongById = {};
+        (s.wrong || []).forEach(function (w) { if (w && w.qid) wrongById[w.qid] = w; });
+        (s.results || []).forEach(function (r) {
+            if (!r || r.maxMarks !== 1) return;   /* objective items only */
+            const q = byId[r.questionId] || {};
+            const detail = wrongById[r.questionId] || {};
+            const ok = (r.awarded || 0) >= (r.maxMarks || 1);
+            record({
+                qid: r.questionId,
+                subjectId: q.subjectId || s.subjectId || '',
+                chapter: q.chapter || '',
+                qText: detail.qText || '',
+                options: detail.options || [],
+                chosen: detail.chosen,
+                correct: detail.correct,
+                working: detail.working || '',
+                at: s.finishedAt || s.startedAt || '',
+                source: s.mode === 'MOCK_EXAM' ? 'Mock exam' : 'Chapter quiz'
+            }, ok, whenMs);
+        });
+    });
+
+    /* Mock-exam history stores only the items answered wrongly, so a mock
+       mistake can be added but not cleared by a later attempt. */
+    let mocks = [];
+    try {
+        const parsed = JSON.parse(localStorage.getItem('prc_mock_exam_history') || '[]');
+        if (Array.isArray(parsed)) mocks = parsed;
+    } catch (e) { mocks = []; }
+    mocks.forEach(function (m) {
+        if (!m) return;
+        const whenMs = evalDateValue(m.date);
+        (m.wrong || []).forEach(function (w) {
+            record({
+                qid: w.qid,
+                subjectId: w.subjectId || m.subjectId || '',
+                chapter: w.chapter || '',
+                qText: w.qText || '',
+                options: w.options || [],
+                chosen: w.chosen,
+                correct: w.correct,
+                working: w.working || '',
+                at: m.date || '',
+                source: 'Mock exam'
+            }, false, whenMs);
+        });
+    });
+
+    const out = Object.keys(byKey).map(function (k) { return byKey[k]; });
+    out.sort(function (a, b) { return (b._ts || 0) - (a._ts || 0); });
+    out.forEach(function (it) { delete it._ts; });
+    /* Only items that can actually be shown as a question qualify. */
+    return out.filter(function (it) { return it.qText; });
+}
+
+function practiceMistakeBookFull() {
+    const written = (typeof practiceMistakeBook === 'function' && typeof practiceCentreLoadSessions === 'function')
+        ? practiceMistakeBook(practiceCentreLoadSessions())
+        : { totalErrorInstances: 0, entries: [] };
+    const objective = (typeof practiceObjectiveMistakes === 'function') ? practiceObjectiveMistakes() : [];
+    return {
+        objective: objective,
+        objectiveCount: objective.length,
+        written: written,
+        writtenCount: (written && written.totalErrorInstances) || 0
+    };
+}
+
+/* "prc1-ch3" -> "Chapter 3" for the mistake cards. */
+function mmChapterLabel(chapterId) {
+    const m = /-ch(\d+)$/.exec(String(chapterId || ''));
+    return m ? ('Chapter ' + m[1]) : String(chapterId || '');
+}
+
 function renderMistakesView() {
-    /* Render the real mistake book into the main-app mistakes view */
     const container = document.getElementById('mistakes-view-container');
     if (!container) return;
-    const mb = (typeof practiceCentreMistakeBook === 'function') ? practiceCentreMistakeBook() : {};
-    if (!mb.entries || !mb.entries.length) {
+
+    const book = (typeof practiceMistakeBookFull === 'function')
+        ? practiceMistakeBookFull()
+        : { objective: [], objectiveCount: 0, written: { entries: [], totalErrorInstances: 0 }, writtenCount: 0 };
+    const obj = book.objective || [];
+    const entries = (book.written && book.written.entries) || [];
+
+    if (!obj.length && !entries.length) {
         container.innerHTML = '<div class="card" style="text-align:center; padding:24px;">' +
-            '<p style="color:var(--text-muted);">No mistakes recorded yet. Complete a practice session and your stumbles will appear here.</p>' +
+            '<p style="color:var(--text-muted);">No mistakes recorded yet. Answer a chapter quiz or a mock exam, or complete a written practice session, and the ones you miss will appear here.</p>' +
             '</div>';
         return;
     }
-    const rows = mb.entries.map(function (e) {
-        return '<div class="card" style="margin-bottom:12px;">' +
-            '<div style="font-size:0.8rem; color:var(--rose-500); font-weight:700;">' +
-            (e.errorType ? e.errorType.replace(/_/g, ' ').toLowerCase() : 'General') + '</div>' +
-            '<h4 style="margin:6px 0;">' + (e.criterionId || 'Criterion') + '</h4>' +
-            '<p style="font-size:0.85rem; color:var(--text-muted);">' +
-            'Marks lost: ' + e.marksLost + ' &bull; Times: ' + e.occurrences + '</p>' +
+
+    const subjectLabel = function (sid) {
+        const s = (typeof mmSubjectsList !== 'undefined' ? mmSubjectsList : []).find(function (x) { return x.id === sid; });
+        return s ? (s.code || s.id) : (sid || '');
+    };
+    const letter = function (i) { return String.fromCharCode(65 + i); };
+    let html = '';
+
+    if (obj.length) {
+        html += '<div class="card" style="margin-bottom:16px;">' +
+            '<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">' +
+            '<h3 style="margin:0;">Objective questions to revisit</h3>' +
+            '<span class="badge badge-red">' + obj.length + '</span></div>' +
+            '<p style="color:var(--text-muted); font-size:0.85rem; margin:8px 0 0;">Every question you answered wrongly, most recent first. Answer one correctly in a later attempt and it leaves this list.</p>' +
             '</div>';
-    }).join('');
-    container.innerHTML = '<p class="pc-note" style="margin-bottom:12px;">' + mb.entries.length + ' error pattern(s) across your sessions.</p>' + rows;
+
+        html += obj.map(function (it) {
+            const opts = (it.options || []).map(function (opt, idx) {
+                const isCorrect = idx === it.correct;
+                const isChosen = it.chosen !== null && it.chosen === idx;
+                const tone = isCorrect ? 'var(--emerald-400)' : (isChosen ? 'var(--rose-500)' : 'var(--text-muted)');
+                const mark = isCorrect ? ' \u2714' : (isChosen ? ' \u2718' : '');
+                return '<div style="display:flex; gap:8px; align-items:baseline; font-size:0.9rem; color:' + tone + ';">' +
+                    '<span style="font-weight:700;">' + letter(idx) + '.</span>' +
+                    '<span>' + opt + mark + '</span></div>';
+            }).join('');
+
+            const yourLine = (it.chosen === null || it.chosen === undefined)
+                ? '<span style="color:var(--rose-500); font-weight:700;">You left this blank.</span>'
+                : '<span style="color:var(--rose-500); font-weight:700;">Your answer: ' + letter(it.chosen) + '</span>';
+            const correctLine = (typeof it.correct === 'number')
+                ? '<span style="color:var(--emerald-400); font-weight:700;">Correct answer: ' + letter(it.correct) + '</span>'
+                : '<span style="color:var(--emerald-400); font-weight:700;">Correct answer: \u2014</span>';
+
+            return '<div class="card" style="margin-bottom:12px; border-left:3px solid var(--rose-500);">' +
+                '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
+                '<span style="font-size:0.78rem; font-weight:700; color:var(--blue-400); text-transform:uppercase; letter-spacing:0.04em;">' +
+                mmEsc(subjectLabel(it.subjectId)) +
+                (it.chapter ? ' &bull; ' + mmEsc(mmChapterLabel(it.chapter)) : '') + '</span>' +
+                '<span style="font-size:0.72rem; color:var(--text-muted);">' +
+                mmEsc(it.source || '') + (it.at ? ' &bull; ' + mmEsc(String(it.at).slice(0, 10)) : '') + '</span>' +
+                '</div>' +
+                '<p style="margin:10px 0; color:var(--text-main); font-weight:600; line-height:1.5;">' + (it.qText || '') + '</p>' +
+                '<div style="display:flex; flex-direction:column; gap:4px; margin-bottom:10px;">' + opts + '</div>' +
+                '<p style="margin:0; font-size:0.88rem; display:flex; flex-wrap:wrap; gap:14px;">' + yourLine + correctLine + '</p>' +
+                (it.working ? '<div style="margin-top:10px; padding:10px 12px; background:var(--bg-input); border:1px solid var(--border-color); border-radius:8px; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Why:</strong> ' + it.working + '</div>' : '') +
+                '</div>';
+        }).join('');
+    }
+
+    if (entries.length) {
+        html += '<div class="card" style="margin:20px 0 16px;">' +
+            '<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">' +
+            '<h3 style="margin:0;">Written-answer error patterns</h3>' +
+            '<span class="badge badge-red">' + entries.length + '</span></div>' +
+            '<p style="color:var(--text-muted); font-size:0.85rem; margin:8px 0 0;">Where marks were lost in written practice, grouped so the pattern is visible rather than one bad answer at a time.</p>' +
+            '</div>';
+        html += entries.map(function (e) {
+            const hint = (typeof PRACTICE_ERROR_HINTS !== 'undefined' && PRACTICE_ERROR_HINTS[e.errorType]) || '';
+            return '<div class="card" style="margin-bottom:12px;">' +
+                '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
+                '<span style="font-size:0.8rem; font-weight:700; color:var(--rose-500);">' +
+                mmEsc(e.errorType ? e.errorType.replace(/_/g, ' ').toLowerCase() : 'General') + '</span>' +
+                '<span style="font-size:0.75rem; color:var(--text-muted);">' + e.occurrences + ' time' + (e.occurrences === 1 ? '' : 's') +
+                ' &bull; ' + e.marksLost + ' mark' + (e.marksLost === 1 ? '' : 's') + ' lost</span>' +
+                '</div>' +
+                '<h4 style="margin:8px 0 0;">' + mmEsc(e.criterionId || 'Criterion') + '</h4>' +
+                (hint ? '<p style="margin:8px 0 0; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Fix:</strong> ' + hint + '</p>' : '') +
+                '</div>';
+        }).join('');
+    }
+
+    container.innerHTML = html;
 }
 
 /* Live Pakistan date/time display */
@@ -25612,15 +25888,15 @@ function renderRealStats() {
         streakDays: streakDays
     });
 
-    /* Mistake badge: count from pc_review or sessions with low percent */
+    /* Mistake badge: the size of the book the Mistake Book tab actually shows
+       (objective wrong answers still uncorrected + written error patterns). */
     const mistakeBadge = document.getElementById('mistake-badge');
     if (mistakeBadge) {
         let mistakeCount = 0;
-        sessions.forEach(s => {
-            (s.results || []).forEach(r => {
-                if ((r.percent || 0) < 50) mistakeCount++;
-            });
-        });
+        try {
+            const book = (typeof practiceMistakeBookFull === 'function') ? practiceMistakeBookFull() : null;
+            if (book) mistakeCount = (book.objectiveCount || 0) + (book.writtenCount || 0);
+        } catch (e) { /* leave at zero */ }
         mistakeBadge.textContent = mistakeCount + ' Saved Error Item' + (mistakeCount === 1 ? '' : 's');
     }
 }
