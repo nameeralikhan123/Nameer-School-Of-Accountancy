@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261010-2 -->
+    <!-- v: 20261011-1 -->
 
 <head>
     <meta charset="UTF-8">
@@ -5976,6 +5976,12 @@ tr.pc-zero td { opacity: .8; }
 
             function selectMMChapter(chId) {
                 currentMMChapterId = chId;
+                try {
+                    const mmCh = (mmDataStore[currentMMSubjectId] || []).find(function (c) { return c.id === chId; });
+                    if (mmCh && typeof recordChapterStudied === 'function') {
+                        recordChapterStudied(currentMMSubjectId, chId, mmCh.title);
+                    }
+                } catch (e) { /* never block the mind map */ }
                 renderMMCanvas();
             }
 
@@ -19461,7 +19467,21 @@ function practiceCreateSession(opts) {
         finishedAt: null,
         ocrProvider: getOCRProvider().name,
         questions: questions.map(function (q) {
-            return { id: q.id, marks: q.marks, status: "unanswered" };
+            /* Carry the subject AND the chapter onto every question row. The
+               aggregate views count syllabus coverage from these two fields, so
+               without them a finished CAF session moved nothing on the
+               Evaluation or Progress pages. topicId looks like "caf1-ch2-t3",
+               so the chapter is the topic id with its trailing "-tN" stripped. */
+            const topicId = String((q && q.topicId) || '');
+            const chapter = (q && q.chapter) ||
+                (topicId ? topicId.replace(/-t\d+$/, '') : null);
+            return {
+                id: q.id,
+                subjectId: (q && q.subjectId) || o.subjectId || null,
+                chapter: chapter,
+                marks: q.marks,
+                status: "unanswered"
+            };
         }),
         answers: {},
         results: [],
@@ -21618,6 +21638,7 @@ function practiceCentreRenderSummary() {
     if (!C.session.finishedAt) {
         practiceFinish(C.session);
         practiceCentrePersistSession(C.session);
+        if (typeof renderRealStats === 'function') renderRealStats();
     }
     const totals = C.session;
     const t = totals && totals.totals;
@@ -22498,6 +22519,9 @@ function openCafChapter(bookId, chapterIndex) {
                 if (!book) return;
                 const chapter = book.chapters[chapterIndex];
                 if (!chapter) return;
+                if (typeof recordChapterStudied === 'function') {
+                    recordChapterStudied(bookId, bookId + '-ch' + chapter.n, chapter.t);
+                }
                 openPdfReader(book.file, book.code + ' - Ch ' + chapter.n + ': ' + chapter.t, chapter.p, buildReaderOpts(book));
             }
 
@@ -22963,7 +22987,8 @@ function initRevisionApp() {
                     questions: qList,
                     currentIndex: 0,
                     userAnswers: new Array(qList.length).fill(null),
-                    submitted: false
+                    submitted: false,
+                    startedAt: new Date().toISOString()
                 };
 
                 renderQuizPlayer();
@@ -23070,6 +23095,51 @@ function initRevisionApp() {
                 const percentage = Math.round((correctCount / currentQuizState.questions.length) * 100);
                 const activeSubject = mmSubjectsList.find(s => s.id === currentQuizState.subjectId);
 
+                /* Record this chapter quiz so the Dashboard, Evaluation and Progress
+                   views actually see it. Each question is worth one mark, and every
+                   question row carries its subject + chapter so topic coverage moves
+                   too. Without this the quiz was scored on screen and then thrown
+                   away, which is why every tracking view stayed at zero. */
+                try {
+                    const qz = currentQuizState;
+                    const nQ = qz.questions.length;
+                    const markedResults = qz.questions.map(function (q, i) {
+                        const ans = qz.userAnswers[i];
+                        const answered = ans !== null && ans !== undefined;
+                        const ok = answered && ans === q.correct;
+                        return {
+                            questionId: q.id || (qz.chapterId + '-q' + (i + 1)),
+                            awarded: ok ? 1 : 0,
+                            maxMarks: 1,
+                            percent: ok ? 100 : 0,
+                            answered: answered
+                        };
+                    });
+                    practiceCentrePersistSession({
+                        version: 'quiz-1',
+                        sessionId: 'qz-' + qz.subjectId + '-' + qz.chapterId + '-' + Date.now().toString(36),
+                        subjectId: qz.subjectId,
+                        label: (activeSubject ? activeSubject.code : qz.subjectId) +
+                            ' - Chapter ' + qz.chapterNumber + ' quiz',
+                        mode: 'CHAPTER_QUIZ',
+                        startedAt: qz.startedAt || new Date().toISOString(),
+                        finishedAt: new Date().toISOString(),
+                        questions: qz.questions.map(function (q, i) {
+                            const ans = qz.userAnswers[i];
+                            return {
+                                id: q.id || (qz.chapterId + '-q' + (i + 1)),
+                                subjectId: qz.subjectId,
+                                chapter: qz.chapterId,
+                                marks: 1,
+                                status: (ans === null || ans === undefined) ? 'unanswered' : 'answered'
+                            };
+                        }),
+                        results: markedResults,
+                        totals: { questions: nQ, awarded: correctCount, marks: nQ }
+                    });
+                    if (typeof renderRealStats === 'function') renderRealStats();
+                } catch (recErr) { /* never let recording block the results screen */ }
+
                 container.innerHTML = `
                     <div class="card" style="text-align:center; padding:36px 20px;">
                         <div style="width:64px; height:64px; margin:0 auto 12px; border-radius:50%; background:rgba(16,185,129,0.14); border:1px solid rgba(16,185,129,0.3); display:flex; align-items:center; justify-content:center; color:var(--emerald-400);">
@@ -23090,6 +23160,11 @@ function initRevisionApp() {
                                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Correct Answers</div>
                             </div>
                         </div>
+
+                        <p style="color:var(--text-muted); font-size:0.8rem; margin:0 0 20px 0;">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; color:var(--emerald-400);"><path d="M20 6L9 17l-5-5"/></svg>
+                            Saved to your Dashboard, Progress and Evaluation.
+                        </p>
 
                         <div style="display:flex; justify-content:center; gap:12px;">
                             <button class="btn btn-primary" onclick="startPracticeQuiz('${currentQuizState.subjectId}', '${currentQuizState.chapterId}')" style="display:inline-flex; align-items:center; gap:8px;">
@@ -23694,6 +23769,7 @@ function initRevisionApp() {
                 });
                 localStorage.setItem('prc_mock_exam_history', JSON.stringify(history));
                 fsPushData('mockHistory');
+                if (typeof renderRealStats === 'function') renderRealStats();
 
                 const container = document.getElementById('mock-exams-portal-container');
                 if (!container) return;
@@ -23917,7 +23993,8 @@ async function fetchProfileFromFirestore() {
 const FS_DATA_DOCS = {
     sessions:    { key: 'pc_sessions',           doc: 'sessions',    perItem: true, sub: true },
     reviews:     { key: 'pc_review',             doc: 'reviews',     perItem: false },
-    mockHistory: { key: 'prc_mock_exam_history', doc: 'mockHistory', perItem: false }
+    mockHistory: { key: 'prc_mock_exam_history', doc: 'mockHistory', perItem: false },
+    studyLog:    { key: 'nsa_study_log',         doc: 'studyLog',    perItem: false }
 };
 
 function fsReadLocal(key) {
@@ -24015,7 +24092,8 @@ async function fsPullData() {
 /* Delete the student's cloud progress (used by "Reset the entire application"). */
 function fsClearCloudData() {
     if (!currentUser || !currentUser.uid) return Promise.resolve();
-    const ops = [fsDataRef('reviews').delete(), fsDataRef('mockHistory').delete()];
+    const ops = [fsDataRef('reviews').delete(), fsDataRef('mockHistory').delete(),
+        fsDataRef('studyLog').delete()];
     ops.push(fsDataColl('sessions').get().then(function (snap) {
         const dels = [];
         snap.forEach(function (d) { dels.push(d.ref.delete()); });
@@ -24471,6 +24549,7 @@ function resetApplication() {
         localStorage.removeItem('pc_sessions');
         localStorage.removeItem('pc_review');
         localStorage.removeItem('prc_mock_exam_history');
+        localStorage.removeItem('nsa_study_log');
         localStorage.removeItem(HISTORY_KEY);
     } catch (e) { /* ignore */ }
     // Also wipe the student's cloud progress so it does not come back on next login
@@ -24972,6 +25051,9 @@ function openPrcChapter(file, chapterIndex) {
     const idx = Math.max(0, Math.min(book.chapters.length - 1, chapterIndex || 0));
     const ch = book.chapters[idx];
     if (!ch) return;
+    if (typeof recordChapterStudied === 'function') {
+        recordChapterStudied(book.id, book.id + '-ch' + ch.n, ch.t);
+    }
     openPdfReader(book.file, book.code + ' — Ch ' + ch.n + ': ' + ch.t, ch.p, {
         offset: book.offset,
         chapters: book.chapters,
@@ -25125,6 +25207,15 @@ function openPrcChapterDeep(file, printedPage, code) {
         ? Object.values(STUDY_BOOK_MAP).find(function (b) { return b.file === file; })
         : null;
     closeTopicModal();
+    try {
+        if (bm && typeof recordChapterStudied === 'function') {
+            let hit = (bm.chapters && bm.chapters[0]) || null;
+            for (let i = 0; bm.chapters && i < bm.chapters.length; i++) {
+                if (bm.chapters[i].p <= printedPage) hit = bm.chapters[i]; else break;
+            }
+            if (hit) recordChapterStudied(bm.id, bm.id + '-ch' + hit.n, hit.t);
+        }
+    } catch (e) { /* never block the reader */ }
     openPdfReader(file, (code || file) + ' — p.' + printedPage, printedPage, {
         offset: bm ? bm.offset : 5,
         chapters: bm ? bm.chapters : [],
@@ -25316,6 +25407,40 @@ function calcKey(tok, kind) {
     calcSetDisplay(calcExpr, '');
 }
 
+/* ---------------------------------------------------------------- study log
+   Chapters the student has actually opened, recorded from the Mind Maps and
+   the Study Library. Learning counts toward syllabus coverage and the activity
+   feed, but never adds marks or accuracy — only answers do that. */
+const STUDY_LOG_KEY = 'nsa_study_log';
+
+function getStudyLog() {
+    try {
+        const raw = localStorage.getItem(STUDY_LOG_KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed.filter(function (e) {
+            return e && e.subjectId && e.chapter;
+        }) : [];
+    } catch (e) { return []; }
+}
+
+function recordChapterStudied(subjectId, chapterId, chapterTitle) {
+    if (!subjectId || !chapterId) return;
+    const log = getStudyLog();
+    const at = new Date().toISOString();
+    const hit = log.filter(function (e) {
+        return e.subjectId === subjectId && e.chapter === chapterId;
+    })[0];
+    if (hit) {
+        hit.at = at;
+        if (chapterTitle) hit.title = chapterTitle;
+    } else {
+        log.push({ subjectId: subjectId, chapter: chapterId, title: chapterTitle || '', at: at });
+    }
+    try { localStorage.setItem(STUDY_LOG_KEY, JSON.stringify(log.slice(-400))); } catch (e) { /* quota */ }
+    try { if (typeof fsPushData === 'function') fsPushData('studyLog'); } catch (e) { /* offline */ }
+    if (typeof renderRealStats === 'function') renderRealStats();
+}
+
 function renderRealStats() {
     /* Read practice + mock history and paint the real numbers on the
        dashboard, evaluation, progress, and mistakes views. Everything
@@ -25377,6 +25502,12 @@ function renderRealStats() {
             topicMastery[sid].add(q.chapter || q.id);
         });
     });
+    /* Chapters opened for study count toward coverage as well. */
+    const studyLog = getStudyLog();
+    studyLog.forEach(function (e) {
+        if (!topicMastery[e.subjectId]) topicMastery[e.subjectId] = new Set();
+        topicMastery[e.subjectId].add(e.chapter);
+    });
 
     function masteryFor(subjectId, maxChapters) {
         return topicMastery[subjectId] ? Math.min(maxChapters, topicMastery[subjectId].size) : 0;
@@ -25413,6 +25544,13 @@ function renderRealStats() {
     mocks.forEach(m => {
         if (m.date) {
             const pkDate = new Date(new Date(m.date).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
+            daySet.add(pkDate.toDateString());
+        }
+    });
+    /* A day spent studying also keeps the streak alive. */
+    studyLog.forEach(function (e) {
+        if (e.at) {
+            const pkDate = new Date(new Date(e.at).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
             daySet.add(pkDate.toDateString());
         }
     });
@@ -25582,6 +25720,11 @@ function evalSubjectRows(agg) {
             row.sessions += 1;
             if (at && at > row.lastAt) row.lastAt = at;
         });
+    });
+
+    /* Chapters opened for study widen coverage (they never add marks). */
+    getStudyLog().forEach(function (e) {
+        if (e && e.subjectId && e.chapter) blank(e.subjectId).chapters[e.chapter] = 1;
     });
 
     return Object.keys(rows).map(function (sid) {
@@ -26354,12 +26497,14 @@ function plPaintBanner(agg) {
     }
     const note = document.getElementById('progress-streak-note');
     if (note) {
+        const studyCount = (typeof getStudyLog === 'function') ? getStudyLog().length : 0;
         note.textContent = days > 0
             ? 'You have recorded activity on ' + days + ' separate day' + (days === 1 ? '' : 's')
                 + ' — ' + agg.sessions.length + ' practice session' + (agg.sessions.length === 1 ? '' : 's')
-                + ' and ' + agg.mocks.length + ' mock attempt' + (agg.mocks.length === 1 ? '' : 's')
-                + ' on file. A day only counts once at least one question is answered.'
-            : 'No activity on record yet. Answer a question in the Practice Centre or sit a mock exam, and this counter starts today.';
+                + ', ' + agg.mocks.length + ' mock attempt' + (agg.mocks.length === 1 ? '' : 's')
+                + ' and ' + studyCount + ' chapter' + (studyCount === 1 ? '' : 's') + ' studied'
+                + ' on file. A day counts once you answer a question or open a chapter.'
+            : 'No activity on record yet. Answer a question in the Practice Centre, sit a mock exam or open a chapter, and this counter starts today.';
     }
     const tag = document.getElementById('progress-streak-tag');
     if (tag) {
@@ -26443,6 +26588,17 @@ function plPaintEvents(agg) {
             desc: (m.subjectTitle ? evalEscape(m.subjectTitle) + ' &middot; ' : '')
                 + 'scored <b>' + score + ' / ' + total + '</b> (<i>' + pct + '%</i>)'
                 + (mins ? ' &middot; ' + mins + ' min' : '')
+        });
+    });
+
+    /* Chapters studied — real learning activity, shown as its own event. */
+    getStudyLog().forEach(function (e) {
+        events.push({
+            ts: e.at ? Date.parse(e.at) : 0,
+            kind: 'study',
+            title: 'Chapter studied',
+            desc: evalEscape(evalSubjectMeta(e.subjectId).code)
+                + (e.title ? ' &middot; ' + evalEscape(e.title) : '')
         });
     });
 
