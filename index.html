@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261012-4 -->
+    <!-- v: 20261012-5 -->
 
 <head>
     <meta charset="UTF-8">
@@ -25671,21 +25671,25 @@ function pdfResolve(file) {
    say which URL was tried. This never blocks or replaces the normal load. */
 function pdfProbeFile(file) {
     const notice = pdfErrorNotice();
-    if (notice) { notice.style.display = 'none'; notice.textContent = ''; }
+    if (notice) {
+        notice.style.display = 'none';
+        const msg = notice.querySelector('[data-role="msg"]');
+        if (msg) msg.textContent = '';
+    }
     if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
     const url = pdfResolve(file);
     try {
         fetch(url, { method: 'HEAD', cache: 'no-store' }).then(function (res) {
             if (!res || (res.status !== 404 && res.status !== 410)) return;
-            if (notice) {
-                notice.textContent = 'This book file is missing on the server ' +
-                    '(HTTP ' + res.status + '). The reader tried: ' + url;
-                notice.style.display = 'block';
-            }
+            showPdfErrorNotice(url, res.status);
         }).catch(function () { /* offline or blocked: leave the frame alone */ });
     } catch (e) { /* fetch unavailable: leave the frame alone */ }
 }
 
+/* The banner has to stay legible over the reader frame, which is white - a
+   translucent tint with pale text washed out completely, which is how the
+   first version of this notice looked in the field. Solid dark red with white
+   text clears WCAG AA comfortably and cannot be washed out by any page. */
 function pdfErrorNotice() {
     let el = document.getElementById('pdf-frame-error');
     if (el) return el;
@@ -25695,12 +25699,60 @@ function pdfErrorNotice() {
     if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
     el = document.createElement('div');
     el.id = 'pdf-frame-error';
-    el.style.cssText = 'display:none; position:absolute; left:12px; right:12px; ' +
-        'top:12px; z-index:5; padding:10px 14px; border-radius:8px; ' +
-        'background:rgba(220,38,38,0.16); border:1px solid rgba(220,38,38,0.55); ' +
-        'color:#fecaca; font-size:13px; line-height:1.45; word-break:break-all;';
+    el.style.cssText = [
+        'display:none',
+        'position:absolute',
+        'left:16px',
+        'right:16px',
+        'top:16px',
+        'z-index:20',
+        'padding:14px 16px',
+        'border-radius:10px',
+        'background:#7f1d1d',
+        'border:1px solid #ef4444',
+        'color:#ffffff',
+        'font-size:14px',
+        'line-height:1.5',
+        'box-shadow:0 10px 28px rgba(0,0,0,0.35)'
+    ].join(';') + ';';
+    el.innerHTML =
+        '<div style="font-weight:700;font-size:15px;margin:0 0 6px;">' +
+        'This book is not published on the server</div>' +
+        '<div data-role="msg" style="margin:0 0 10px;"></div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">' +
+        '<a data-role="open" target="_blank" rel="noopener" ' +
+        'style="background:#ffffff;color:#7f1d1d;font-weight:700;text-decoration:none;' +
+        'padding:7px 13px;border-radius:7px;white-space:nowrap;">Open the PDF link</a>' +
+        '<a data-role="dl" style="color:#fecaca;text-decoration:underline;">Download it</a>' +
+        '</div>';
     host.appendChild(el);
     return el;
+}
+
+/* Fill the banner in and show it. Built with DOM nodes rather than innerHTML so
+   the URL coming back from the host can never be parsed as markup. */
+function showPdfErrorNotice(url, status) {
+    const notice = pdfErrorNotice();
+    if (!notice) return;
+    const open = notice.querySelector('[data-role="open"]');
+    const dl = notice.querySelector('[data-role="dl"]');
+    if (open) open.href = url;
+    if (dl) dl.href = url;
+    const msg = notice.querySelector('[data-role="msg"]');
+    if (msg) {
+        msg.textContent = 'The host answered HTTP ' + status + ' for ';
+        const code = document.createElement('code');
+        code.style.cssText = 'display:block;margin:6px 0;font-family:ui-monospace,' +
+            'SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;word-break:break-all;' +
+            'color:#fecaca;';
+        code.textContent = url;
+        msg.appendChild(code);
+        const why = document.createElement('span');
+        why.textContent = 'The file is not in the published site. Opening it again ' +
+            'will not help - it has to be uploaded to the repository and deployed.';
+        msg.appendChild(why);
+    }
+    notice.style.display = 'block';
 }
 
 function pdfUrl(page, zoom) {
