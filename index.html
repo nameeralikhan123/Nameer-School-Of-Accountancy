@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <!-- v: 20261012-3 -->
+    <!-- v: 20261012-4 -->
 
 <head>
     <meta charset="UTF-8">
@@ -25650,6 +25650,59 @@ const pdfState = {
 
 const PDF_ZOOM_STEPS = [0, 50, 75, 100, 125, 150, 200, 300, 400];
 
+/* Turn a book filename into the URL the reader will actually request.
+   Book files are stored next to the pages that open them and are referenced by
+   bare name ("CAF-1-ST.pdf"), but the site is not always served from a domain
+   root: on GitHub Pages a project lives under https://<user>.github.io/<repo>/.
+   Resolving against document.baseURI keeps the same behaviour there as it does
+   locally, encodes spaces in names like "PRC-1-ST FOA.pdf" into %20, and gives
+   the reader one place to report the exact URL when a book cannot be found. */
+function pdfResolve(file) {
+    try {
+        return new URL(String(file), document.baseURI).href;
+    } catch (e) {
+        return encodeURI(String(file));
+    }
+}
+
+/* A book opens inside an <iframe>. When the file is not actually published the
+   frame is simply blank, so a missing book is indistinguishable from a slow
+   one. Probe the resolved URL once (HEAD, no-store) and, only on a real 404,
+   say which URL was tried. This never blocks or replaces the normal load. */
+function pdfProbeFile(file) {
+    const notice = pdfErrorNotice();
+    if (notice) { notice.style.display = 'none'; notice.textContent = ''; }
+    if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
+    const url = pdfResolve(file);
+    try {
+        fetch(url, { method: 'HEAD', cache: 'no-store' }).then(function (res) {
+            if (!res || (res.status !== 404 && res.status !== 410)) return;
+            if (notice) {
+                notice.textContent = 'This book file is missing on the server ' +
+                    '(HTTP ' + res.status + '). The reader tried: ' + url;
+                notice.style.display = 'block';
+            }
+        }).catch(function () { /* offline or blocked: leave the frame alone */ });
+    } catch (e) { /* fetch unavailable: leave the frame alone */ }
+}
+
+function pdfErrorNotice() {
+    let el = document.getElementById('pdf-frame-error');
+    if (el) return el;
+    const frame = document.getElementById('pdf-frame');
+    if (!frame || !frame.parentNode) return null;
+    const host = frame.parentNode;
+    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+    el = document.createElement('div');
+    el.id = 'pdf-frame-error';
+    el.style.cssText = 'display:none; position:absolute; left:12px; right:12px; ' +
+        'top:12px; z-index:5; padding:10px 14px; border-radius:8px; ' +
+        'background:rgba(220,38,38,0.16); border:1px solid rgba(220,38,38,0.55); ' +
+        'color:#fecaca; font-size:13px; line-height:1.45; word-break:break-all;';
+    host.appendChild(el);
+    return el;
+}
+
 function pdfUrl(page, zoom) {
     const bits = [];
     /* Chapter page numbers in the book data are PRINTED pages. Every study
@@ -25664,7 +25717,7 @@ function pdfUrl(page, zoom) {
     bits.push('page=' + physical);
     if (zoom && zoom > 0) bits.push('zoom=' + zoom);
     bits.push('view=FitH');
-    return encodeURI(pdfState.file) + '#' + bits.join('&');
+    return pdfResolve(pdfState.file) + '#' + bits.join('&');
 }
 
 function openPdfReader(file, title, printedPage, opts) {
@@ -25692,13 +25745,14 @@ function openPdfReader(file, title, printedPage, opts) {
     const titleEl = document.getElementById('pdf-modal-title');
     const dl = document.getElementById('pdf-download-btn');
     if (titleEl) titleEl.textContent = pdfState.title;
-    if (dl) dl.href = encodeURI(file);
+    if (dl) dl.href = pdfResolve(file);
     if (modal) modal.style.display = 'flex';
 
     pdfBuildChapterSelect();
     // pdfGoPage also points the frame at the right page; setting src again
     // here would re-request the whole (multi-MB) file a second time.
     pdfGoPage(startPage, true);
+    pdfProbeFile(file);
 }function pdfBuildChapterSelect() {
     const sel = document.getElementById('pdf-chapter-select');
     if (!sel) return;

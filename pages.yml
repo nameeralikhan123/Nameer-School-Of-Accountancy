@@ -1,0 +1,66 @@
+# Publish the CA exam-prep app to GitHub Pages.
+#
+# Why a workflow instead of "deploy from a branch":
+#   The app is static - index.html + login.html plus the study-text PDFs that
+#   sit next to them. Deploying straight from the branch makes GitHub run Jekyll
+#   over the whole repository (there is a .nojekyll file too), and "the whole
+#   folder" also contains a ~1 GB Next.js dev app. That is exactly how the HTML
+#   can end up published while the large PDFs do not, which is the "app loads,
+#   books are 404" symptom.
+#
+# This workflow builds `_site/` with _build/tools/build_site.py, which copies
+# only the files the app actually opens and FAILS the job if any referenced PDF
+# is missing. The deployed artifact therefore provably contains every book.
+#
+# One-time setup on GitHub:
+#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build the Pages artifact
+        run: python _build/tools/build_site.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

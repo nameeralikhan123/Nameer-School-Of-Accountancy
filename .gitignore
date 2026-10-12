@@ -1,41 +1,29 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ---------------------------------------------------------------------------
+# What must NOT be committed
+# ---------------------------------------------------------------------------
+# This project is published to GitHub Pages as a plain static site: the app is
+# index.html + login.html plus the study-text PDFs that sit next to them. The
+# PDFs ARE part of the site and MUST be committed - they are deliberately not
+# listed here.
+#
+# prc-app/ is a separate Next.js development app. Its dependency and build
+# folders are ~1 GB (node_modules ~657 MB, .next ~362 MB). Committing them
+# bloats the repository past GitHub's practical limits and is a very common
+# reason a push or a Pages deployment silently drops the large PDFs while the
+# small HTML files still go through - which shows up as "the app loads but the
+# books are 404".
+prc-app/node_modules/
+prc-app/.next/
+prc-app/out/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# local Pages build output (see _build/tools/build_site.py)
+_site/
 
-# testing
-/coverage
+# Python bytecode caches
+**/__pycache__/
+*.pyc
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# OS / editor junk
 .DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+Thumbs.db
+desktop.ini
