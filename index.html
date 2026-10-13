@@ -5091,7 +5091,7 @@ tr.pc-zero td { opacity: .8; }
                     </div>
 
                     <div class="study-level-tabs" id="study-level-tabs">
-                        <button class="study-level-btn active" onclick="switchStudyLevel('prc')" id="tab-prc">
+                        <button class="study-level-btn active" onclick="applyTrackSwitch('prc')" data-track="prc" id="tab-prc">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
@@ -5099,7 +5099,7 @@ tr.pc-zero td { opacity: .8; }
                             <span>PRC &middot; Foundation Level</span>
                             <span class="badge badge-blue" style="margin-left:2px;">4 Volumes</span>
                         </button>
-                        <button class="study-level-btn" onclick="switchStudyLevel('caf')" id="tab-caf">
+                        <button class="study-level-btn" onclick="applyTrackSwitch('caf')" data-track="caf" id="tab-caf">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -5107,9 +5107,23 @@ tr.pc-zero td { opacity: .8; }
                             <span>CAF &middot; Advanced Level</span>
                             <span class="badge badge-gold" style="margin-left:2px;">9 Volumes</span>
                         </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acf')" data-track="acf" id="tab-acf" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Foundation Level</span>
+                        </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acs')" data-track="acs" id="tab-acs" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Skills Level</span>
+                        </button>
                     </div>
 
-                    <div id="study-prc-content" class="study-level-content active">
+                    <div id="study-prc-content" class="study-level-content active" data-track="prc">
                         <div class="grid-2">
                         <!-- BOOK 1: PRC 1 -->
                         <div class="card hoverable">
@@ -5267,10 +5281,15 @@ tr.pc-zero td { opacity: .8; }
                     </div><!-- /study-prc-content -->
 
                     <!-- CAF (ADVANCED LEVEL) STUDY TEXTS -->
-                    <div id="study-caf-content" class="study-level-content">
+                    <div id="study-caf-content" class="study-level-content" data-track="caf">
                         <!-- Summary strip + book cards rendered by JS -->
                         <div id="caf-study-library"></div>
                     </div>
+
+                    <!-- ACCA FOUNDATION / SKILLS STUDY TEXTS: volumes are added here
+                         when the ACCA study-text PDFs arrive. -->
+                    <div id="study-acf-content" class="study-level-content" data-track="acf"></div>
+                    <div id="study-acs-content" class="study-level-content" data-track="acs"></div>
                 </section>
 
                 <!-- VIEW 3: ROMAN URDU MIND MAPS -->
@@ -5282,7 +5301,7 @@ tr.pc-zero td { opacity: .8; }
 
                     <!-- LEVEL TABS: PRC / CAF -->
                     <div class="study-level-tabs" id="mm-level-tabs" style="margin-bottom:16px;">
-                        <button class="study-level-btn active" onclick="switchMMLevel('prc')" id="mm-tab-prc">
+                        <button class="study-level-btn active" onclick="applyTrackSwitch('prc')" data-track="prc" id="mm-tab-prc">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
@@ -5290,7 +5309,7 @@ tr.pc-zero td { opacity: .8; }
                             <span>PRC &middot; Foundation Level</span>
                             <span class="badge badge-blue" style="margin-left:2px;">4 Volumes</span>
                         </button>
-                        <button class="study-level-btn" onclick="switchMMLevel('caf')" id="mm-tab-caf">
+                        <button class="study-level-btn" onclick="applyTrackSwitch('caf')" data-track="caf" id="mm-tab-caf">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -5298,9 +5317,23 @@ tr.pc-zero td { opacity: .8; }
                             <span>CAF &middot; Advanced Level</span>
                             <span class="badge badge-gold" style="margin-left:2px;">9 Volumes</span>
                         </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acf')" data-track="acf" id="mm-tab-acf" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Foundation Level</span>
+                        </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acs')" data-track="acs" id="mm-tab-acs" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Skills Level</span>
+                        </button>
                     </div>
 
-                    <!-- SUBJECT TABS (populated per level) -->
+                    <!-- SUBJECT TABS (populated per track) -->
                     <div class="mm-subject-tabs" id="mm-subject-tabs-container">
                         <!-- Populated dynamically by JS -->
                     </div>
@@ -5334,7 +5367,7 @@ tr.pc-zero td { opacity: .8; }
 
                     <!-- LEVEL TABS: PRC / CAF -->
                     <div class="study-level-tabs" id="practice-level-tabs">
-                        <button class="study-level-btn active" onclick="switchPracticeLevel('prc')" id="practice-tab-prc">
+                        <button class="study-level-btn active" onclick="applyTrackSwitch('prc')" data-track="prc" id="practice-tab-prc">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
@@ -5342,13 +5375,27 @@ tr.pc-zero td { opacity: .8; }
                             <span>PRC &middot; Foundation Level</span>
                             <span class="badge badge-blue" style="margin-left:2px;">4 Volumes</span>
                         </button>
-                        <button class="study-level-btn" onclick="switchPracticeLevel('caf')" id="practice-tab-caf">
+                        <button class="study-level-btn" onclick="applyTrackSwitch('caf')" data-track="caf" id="practice-tab-caf">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                             </svg>
                             <span>CAF &middot; Advanced Level</span>
                             <span class="badge badge-gold" style="margin-left:2px;">9 Volumes</span>
+                        </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acf')" data-track="acf" id="practice-tab-acf" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Foundation Level</span>
+                        </button>
+                        <button class="study-level-btn" onclick="applyTrackSwitch('acs')" data-track="acs" id="practice-tab-acs" style="display:none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            <span>ACCA &middot; Skills Level</span>
                         </button>
                     </div>
 
@@ -5931,10 +5978,16 @@ tr.pc-zero td { opacity: .8; }
                                     <div class="pr-grid">
                                         <div class="pr-field">
                                             <label for="input-profile-level">Academic Level</label>
-                                            <select id="input-profile-level">
+                                            <select id="input-profile-level" onchange="applyTrackSwitch(this.value); setLevelPref(this.value);">
                                                 <option value="CAF">CAF &mdash; Advanced Level</option>
                                                 <option value="PRC">PRC &mdash; Foundation Level</option>
+                                                <option value="ACF">ACCA &mdash; Foundation Level</option>
+                                                <option value="ACS">ACCA &mdash; Skills Level</option>
                                             </select>
+                                            <p class="pr-hint" style="margin:6px 0 0;">Showing this track
+                                                narrows Study Library, Mind Maps, Practice Centre,
+                                                Mock Exams, Evaluation and Progress to it. All plans
+                                                are unlocked.</p>
                                         </div>
                                         <div class="pr-field">
                                             <label for="input-profile-session">Target Exam Attempt</label>
@@ -6381,10 +6434,9 @@ tr.pc-zero td { opacity: .8; }
                 const container = document.getElementById('mm-subject-tabs-container');
                 if (!container) return;
 
-                // Filter subjects by current level
+                // Filter subjects by the current track and the plan
                 const levelSubjects = mmSubjectsList.filter(s => {
-                    const isPRC = s.id.startsWith('prc');
-                    return (currentMMLevel === 'prc' && isPRC) || (currentMMLevel === 'caf' && !isPRC);
+                    return planLevelOf(s.id) === currentMMLevel && planAllowsSubject(s.id);
                 });
 
                 container.innerHTML = levelSubjects.map(s => `
@@ -6409,6 +6461,7 @@ tr.pc-zero td { opacity: .8; }
 
 
             function selectMMSubject(chId) {
+                if (!planAllowsSubject(chId)) { showPlanLock('this subject'); return; }
                 currentMMSubjectId = chId;
                 renderMMChaptersList();
                 renderMMCanvas();
@@ -6416,37 +6469,39 @@ tr.pc-zero td { opacity: .8; }
 
 
             function switchMMLevel(level) {
-                currentMMLevel = level;
+                currentMMLevel = planNormaliseTrack(level);
                 renderMMLevelTabs();
                 renderMMSubjectTabs();
 
-                // Auto-select first subject of the new level
-                const levelSubjects = mmSubjectsList.filter(s => {
-                    const isPRC = s.id.startsWith('prc');
-                    return (level === 'prc' && isPRC) || (level === 'caf' && !isPRC);
+                // Auto-select the first subject of the new track that the plan allows
+                const levelSubjects = mmSubjectsList.filter(function (s) {
+                    return planLevelOf(s.id) === currentMMLevel && planAllowsSubject(s.id);
                 });
                 if (levelSubjects.length > 0) {
                     selectMMSubject(levelSubjects[0].id);
+                } else {
+                    // No mind maps for this track yet: say so instead of leaving
+                    // the previous track's canvas on screen.
+                    var stale = document.getElementById('mm-canvas-container');
+                    var chapterList = document.getElementById('mm-chapter-list-container');
+                    var badge = document.getElementById('mm-chapter-count-badge');
+                    if (badge) badge.textContent = '0 Chapters';
+                    if (chapterList) chapterList.innerHTML = '';
+                    if (stale) {
+                        stale.innerHTML = planComingSoonHtml(
+                            planTrackMeta(currentMMLevel).label.replace(/\u00b7/g, '-') + ' mind maps'
+                        );
+                    }
                 }
-                
+
                 // Render CAF study library if switching to CAF level
-                if (level === 'caf') {
+                if (currentMMLevel === 'caf') {
                     renderCafStudyLibrary();
                 }
             }
 
             function renderMMLevelTabs() {
-                const btnPRC = document.getElementById('mm-tab-prc');
-                const btnCAF = document.getElementById('mm-tab-caf');
-                if (btnPRC && btnCAF) {
-                    if (currentMMLevel === 'prc') {
-                        btnPRC.classList.add('active');
-                        btnCAF.classList.remove('active');
-                    } else {
-                        btnCAF.classList.add('active');
-                        btnPRC.classList.remove('active');
-                    }
-                }
+                syncTrackTabs('mm-level-tabs', currentMMLevel);
             }
 
 
@@ -23513,18 +23568,24 @@ function renderCafStudyLibrary() {
     const container = document.getElementById('caf-study-library');
     if (!container) return;
 
+    const books = planFilterSubjects(CAF_BOOKS);
+    if (!books.length) {
+        container.innerHTML = planEmptyNoticeHtml('the CAF study library');
+        return;
+    }
+
     let totalChapters = 0;
-    CAF_BOOKS.forEach(function (b) { totalChapters += b.chapters.length; });
+    books.forEach(function (b) { totalChapters += b.chapters.length; });
 
     let html = '';
     html += '<div class="section-title">';
     html += '  <span>CAF Study Texts &amp; Chapter Navigator</span>';
-    html += '  <span class="badge badge-gold">Advanced Level &bull; ' + CAF_BOOKS.length +
+    html += '  <span class="badge badge-gold">Advanced Level &bull; ' + books.length +
             ' Volumes &bull; ' + totalChapters + ' Chapters</span>';
     html += '</div>';
     html += '<div class="study-level-tabs" id="caf-study-tabs">';
 
-    CAF_BOOKS.forEach(function (b) {
+    books.forEach(function (b) {
         const shortName = (CAF_TAB_META[b.id] || {}).short || b.code;
         const badgeStyle = 'background:rgba(' + hexToRgb(b.accent) + ',0.2); color:' +
             b.accent + '; border:1px solid ' + b.accent + ';';
@@ -23544,7 +23605,8 @@ function renderCafStudyLibrary() {
 
     container.innerHTML = html;
 
-    switchCafBook(currentCafBookId || (CAF_BOOKS[0] && CAF_BOOKS[0].id));
+    const startBook = books.find(function (b) { return b.id === currentCafBookId; }) || books[0];
+    switchCafBook(startBook ? startBook.id : '');
 }
 
 function switchCafBook(bookId) {
@@ -23559,6 +23621,7 @@ function switchCafBook(bookId) {
 
     const book = CAF_BOOKS.find(function (b) { return b.id === bookId; });
     if (!book) return;
+    if (!planAllowsSubject(bookId)) { showPlanLock(book.code + ' - ' + book.title); return; }
     currentCafBookId = bookId;
 
     let html = '';
@@ -23593,6 +23656,7 @@ function switchCafBook(bookId) {
 
 function openCafBook(file) {
     const book = CAF_BOOKS.find(function (b) { return b.file === file; });
+    if (book && !planAllowsSubject(book.id)) { showPlanLock(book.code + ' - ' + book.title); return; }
     if (!book) { openPdfReader(file, file, 1, { offset: 5 }); return; }
     openPdfReader(book.file, book.code + ' - ' + book.title, 1, buildReaderOpts(book));
 }
@@ -23601,6 +23665,7 @@ function openCafBook(file) {
 function openCafChapter(bookId, chapterIndex) {
                 const book = CAF_BOOKS.find(b => b.id === bookId);
                 if (!book) return;
+                if (!planAllowsSubject(bookId)) { showPlanLock(book.code + ' - ' + book.title); return; }
                 const chapter = book.chapters[chapterIndex];
                 if (!chapter) return;
                 if (typeof recordChapterStudied === 'function') {
@@ -23724,7 +23789,7 @@ function renderRevisionSubjectTabs() {
     const container = document.getElementById('revision-subject-tabs');
     if (!container) return;
 
-    container.innerHTML = mmSubjectsList.map(function (s) {
+    container.innerHTML = trackSubjects().map(function (s) {
         const score = rvSubjectScore(s.id);
         const isActive = s.id === revisionState.subjectId;
         const rgb = hexToRgb(s.color);
@@ -23789,7 +23854,13 @@ function renderRevisionContent() {
     if (!container) return;
 
     const subject = mmSubjectsList.find(function (s) { return s.id === revisionState.subjectId; })
-        || mmSubjectsList[0];
+        || trackSubjects()[0];
+    if (subject && (planLevelOf(subject.id) !== activeTrack() || !planAllowsSubject(subject.id))) {
+        container.innerHTML = planEmptyNoticeHtml(
+            planTrackMeta(activeTrack()).label.replace(/\u00b7/g, '-') + ' revision notes'
+        );
+        return;
+    }
     const chapters = mmDataStore[revisionState.subjectId] || [];
     const chapter = chapters.find(function (c) { return c.id === revisionState.chapterId; });
     const color = subject.color;
@@ -23896,6 +23967,7 @@ function revisionBookKey() {
 /* -------------------------------------------------------------- interactions */
 function selectRevisionSubject(subjectId) {
     if (!mmDataStore[subjectId]) return;
+    if (!planAllowsSubject(subjectId)) { showPlanLock('this subject'); return; }
     revisionState.subjectId = subjectId;
     revisionState.chapterId = '__all__';
     renderRevisionSubjectTabs();
@@ -23915,8 +23987,10 @@ function setRevisionFilter(filterId) {
 }
 
 function initRevisionApp() {
-    if (!mmDataStore[revisionState.subjectId]) {
-        revisionState.subjectId = mmSubjectsList.length ? mmSubjectsList[0].id : 'prc1';
+    if (!mmDataStore[revisionState.subjectId] || !planAllowsSubject(revisionState.subjectId)) {
+        const allowed = trackSubjects();
+        revisionState.subjectId = allowed.length ? allowed[0].id
+            : (mmSubjectsList.length ? mmSubjectsList[0].id : 'prc1');
     }
     renderRevisionSubjectTabs();
     renderRevisionChapterSidebar();
@@ -23929,7 +24003,16 @@ function initRevisionApp() {
             function initMindMapsApp() {
                 renderMMLevelTabs();
                 renderMMSubjectTabs();
-                selectMMSubject(currentMMSubjectId);
+                /* Start on a subject the plan actually includes. selectMMSubject
+                   is the click-time guard, so boot must never hand it a subject
+                   the plan excludes (that would pop the lock on first paint). */
+                if (!planAllowsSubject(currentMMSubjectId)) {
+                    const allowed = planFilterSubjects(mmSubjectsList);
+                    currentMMSubjectId = allowed.length ? allowed[0].id : '';
+                }
+                if (currentMMSubjectId && planAllowsSubject(currentMMSubjectId)) {
+                    selectMMSubject(currentMMSubjectId);
+                }
             }
 
             function initPracticeCenterApp() {
@@ -23939,18 +24022,14 @@ function initRevisionApp() {
             /* PRC and CAF practice live in the same centre, so they get the same
              * level switch the Mind Maps and Study Library views already use. */
             function practiceSubjectsForLevel(level) {
-                const wantCaf = level === 'caf';
                 return mmSubjectsList.filter(function (s) {
-                    return (String(s.id).indexOf('prc') === 0) !== wantCaf;
+                    return planLevelOf(s.id) === level && planAllowsSubject(s.id);
                 });
             }
 
             function switchPracticeLevel(level) {
-                currentPracticeLevel = level === 'caf' ? 'caf' : 'prc';
-                const prcBtn = document.getElementById('practice-tab-prc');
-                const cafBtn = document.getElementById('practice-tab-caf');
-                if (prcBtn) prcBtn.classList.toggle('active', currentPracticeLevel === 'prc');
-                if (cafBtn) cafBtn.classList.toggle('active', currentPracticeLevel === 'caf');
+                currentPracticeLevel = planNormaliseTrack(level);
+                syncTrackTabs('practice-level-tabs', currentPracticeLevel);
 
                 const list = practiceSubjectsForLevel(currentPracticeLevel);
                 const stillThere = list.some(function (s) { return s.id === currentPracticeSubjectId; });
@@ -23971,9 +24050,7 @@ function initRevisionApp() {
                 const titleEl = document.getElementById('practice-title-text');
                 if (titleEl) {
                     titleEl.textContent = 'Practice Center \u2014 ' +
-                        (currentPracticeLevel === 'caf'
-                            ? 'CAF \u00b7 Advanced Level'
-                            : 'PRC \u00b7 Foundation Level');
+                        planTrackMeta(currentPracticeLevel).label;
                 }
                 const badgeEl = document.getElementById('practice-scope-badge');
                 if (badgeEl) {
@@ -24000,6 +24077,7 @@ function initRevisionApp() {
             }
 
             function switchPracticeSubject(subjectId) {
+                if (!planAllowsSubject(subjectId)) { showPlanLock('this subject'); return; }
                 currentPracticeSubjectId = subjectId;
                 renderPracticeSubjectTabs();
                 renderPracticeChapterGrid(subjectId);
@@ -24106,6 +24184,7 @@ function prcLongformTrialBalanceHtml(tb) {
 }
 
 function startLongFormPractice(subjectId, chapterId, chapterTitle) {
+    if (!planAllowsSubject(subjectId)) { showPlanLock('this chapter'); return; }
     const list = prcLongformFor(subjectId, chapterId);
     if (!list || !list.length) return;
     PRC_LONGFORM_STATE.questions = list;
@@ -24482,6 +24561,13 @@ function mockSectionBGrade() {
 
                 const chapters = mmDataStore[subjectId] || [];
                 const activeSubject = mmSubjectsList.find(s => s.id === subjectId);
+                if (!activeSubject) {
+                    container.innerHTML = planComingSoonHtml(
+                        planTrackMeta(planLevelOf(subjectId) || currentPracticeLevel).label
+                            .replace(/\u00b7/g, '-') + ' practice chapters'
+                    );
+                    return;
+                }
                 const subjQuestions = practiceDataStore[subjectId] || {};
 
                 container.innerHTML = `
@@ -24535,6 +24621,7 @@ function mockSectionBGrade() {
             }
 
             function startPracticeQuiz(subjectId, chapterId) {
+                if (!planAllowsSubject(subjectId)) { showPlanLock('this chapter'); return; }
                 const chapters = mmDataStore[subjectId] || [];
                 const chObj = chapters.find(c => c.id === chapterId) || { chapterNumber: 1, title: 'Chapter Quiz' };
                 const subjQuestions = practiceDataStore[subjectId] || {};
@@ -25083,9 +25170,12 @@ function mockSectionBGrade() {
                 const container = document.getElementById('mock-exams-portal-container');
                 if (!container) return;
 
+                const mockKeys = trackMockKeys();
                 container.innerHTML = `
+                    ${mockKeys.length ? '' : planComingSoonHtml(
+                        planTrackMeta(activeTrack()).label.replace(/\u00b7/g, '-') + ' mock exams')}
                     <div class="grid-2" style="margin-top:20px;">
-                        ${Object.keys(mockExamDataStore).map(key => {
+                        ${mockKeys.map(key => {
                             const exam = mockExamDataStore[key];
                             return `
                                 <div class="card hoverable">
@@ -25625,6 +25715,7 @@ async function fetchProfileFromFirestore() {
         const userDoc = await db.collection('users').doc(currentUser.uid).get();
         if (userDoc.exists) {
             currentUserProfile = userDoc.data();
+            planCacheWrite(currentUserProfile);
             return currentUserProfile;
         }
     } catch (e) {
@@ -25776,12 +25867,14 @@ function saveProfile(p) {
     
     // Also sync to Firestore if user is signed in
     if (currentUser) {
+        // `level` is NOT written here. It is the plan, and the plan is set by
+        // the admin in the Console (see firestore.rules). A student editing
+        // their profile must never be able to change which content unlocks.
         db.collection('users').doc(currentUser.uid).update({
             name: p.name || '',
             crn: p.crn || '',
             phone: p.phone || '',
             email: p.email || '',
-            level: p.level || 'CAF',
             session: p.session || getActiveSessionId(),
             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         }).catch(e => console.warn('Firestore profile update failed:', e));
@@ -25891,7 +25984,24 @@ function renderProfileUI(opts) {
         setVal('input-profile-crn', p.crn);
         setVal('input-profile-phone', p.phone);
         setVal('input-profile-email', p.email);
-        setVal('input-profile-level', (p.level || 'CAF') === 'PRC' ? 'PRC' : 'CAF');
+        /* The dropdown lists every track, but only those the student's plan
+           includes can be picked -- that is what stops it being a self-service
+           upgrade. The choice is a display preference; the Firestore plan is
+           what actually gates content. */
+        const lvlSel = document.getElementById('input-profile-level');
+        if (lvlSel && lvlSel.options && lvlSel.options.length) {
+            let firstAllowed = '';
+            Array.prototype.forEach.call(lvlSel.options, function (o) {
+                const track = PLAN_TRACK_BY_CODE[String(o.value).toUpperCase()] || '';
+                const allowed = !!track && planAllowsLevel(track);
+                o.disabled = !allowed;
+                if (allowed && !firstAllowed) firstAllowed = o.value;
+            });
+            const pref = getLevelPref();
+            const prefTrack = PLAN_TRACK_BY_CODE[pref] || '';
+            const wanted = (pref && planAllowsLevel(prefTrack)) ? pref : firstAllowed;
+            if (wanted) lvlSel.value = wanted;
+        }
 
         // the dropdown lists exam attempts, so only honour a saved value that is
         // actually one of its options -- never inject the login session code
@@ -26054,12 +26164,17 @@ function saveStudentProfile(event) {
         return;
     }
 
+    /* The Academic Level dropdown is a local viewing preference, not a plan.
+       Access is decided by the Firestore `level`/`assignedSubjects`, which the
+       student cannot write, so this value is kept out of both the Firestore
+       update and the cached profile below. */
+    setLevelPref(level);
+
     // Carry the rest of the saved profile through so saving the form never
     // wipes fields the form does not show (plan, expiry, assigned subjects).
     const profileData = Object.assign({}, getProfile(), {
         name: name.trim(), crn: crn.trim(), phone: phone.trim(),
-        email: email.trim(), session: session,
-        level: level === 'PRC' ? 'PRC' : 'CAF'
+        email: email.trim(), session: session
     });
 
     // Save to localStorage
@@ -26068,9 +26183,16 @@ function saveStudentProfile(event) {
     /* getProfile() prefers the cached Firestore doc over localStorage, so merge
        the new values into that cache first. Without this the repaint below
        would show — and write back over the form — the previous values, which
-       made a successful save look like it had done nothing. */
+       made a successful save look like it had done nothing. `level` is
+       deliberately not merged: it is the plan, not a profile field. */
     if (currentUserProfile) {
-        currentUserProfile = Object.assign({}, currentUserProfile, profileData);
+        currentUserProfile = Object.assign({}, currentUserProfile, {
+            name: profileData.name,
+            crn: profileData.crn,
+            phone: profileData.phone,
+            email: profileData.email,
+            session: profileData.session
+        });
     }
 
     // Also sync to Firestore if user is signed in
@@ -26218,6 +26340,386 @@ function handleLogout() {
     auth.signOut().catch(e => console.warn('Firebase signOut failed:', e));
     
     window.location.replace('login.html');
+}
+
+/* ---------------------------------------------------------------- plan access
+ * The Firestore user document decides WHAT a paid student may open:
+ *   level            'PRC' | 'CAF' | 'BOTH'
+ *   assignedSubjects []  = the whole level; ['caf1','caf2'] = only those subjects.
+ * A non-empty assignedSubjects list is the explicit allow-list of subjects; when
+ * it does not mention a level, that level stays open in full. Every subject
+ * list, opener and quiz asks planAllowsSubject(), so a plan cannot be sidestepped
+ * by deep-linking into one view. PDF files are static assets on the same host, so
+ * this gates the app, not the raw downloads.
+ * ------------------------------------------------------------------------- */
+const NSA_PLAN_KEY = 'nsa_plan';
+/* BOTH/ALL still means these two only. It predates ACCA, and silently opening a
+ * track that has no content behind it would show a student empty views. */
+const PLAN_BOTH = ['prc', 'caf'];
+
+/* Every track the app can be sold, in display order. A track reaches a student
+ * only when their plan names it, so adding one here exposes nothing on its own. */
+const TRACKS = [
+    { id: 'prc', code: 'PRC', option: 'PRC', label: 'PRC \u00b7 Foundation Level' },
+    { id: 'caf', code: 'CAF', option: 'CAF', label: 'CAF \u00b7 Advanced Level' },
+    { id: 'acf', code: 'ACCA-F', option: 'ACF', label: 'ACCA \u00b7 Foundation Level' },
+    { id: 'acs', code: 'ACCA-S', option: 'ACS', label: 'ACCA \u00b7 Skills Level' }
+];
+
+/* OPEN ACCESS. While this is true every student sees every track and every
+ * subject, and the Firestore plan fields are ignored -- so the Academic Level
+ * dropdown simply chooses which track the app is showing. Flip it to false and
+ * per-student plan gating (`level` / `assignedSubjects` in Firestore) takes over
+ * again; nothing else has to change. */
+const PLAN_OPEN_ACCESS = true;
+const ALL_TRACKS = TRACKS.map(function (t) { return t.id; });
+
+/* Practice/data call CAF Vol I "caf4"; the study library calls the same volume
+ * "caf4v1". One alias stops a CAF-4-only plan from locking that volume out. */
+const PLAN_ALIASES = { caf4v1: 'caf4' };
+
+/* The Academic Level dropdown is a local viewing preference; it never unlocks
+ * anything. It is stored apart from the plan so a student cannot elevate
+ * themselves by editing their profile. */
+const NSA_LEVEL_PREF = 'nsa_level_pref';
+
+/* Two spellings reach this from different places: the dropdown's <option>
+   value (ACF) and a track's display code (ACCA-F). Both must resolve, or an
+   ACCA choice is silently dropped and the dropdown snaps back to the first
+   option. */
+const PLAN_TRACK_BY_CODE = {};
+TRACKS.forEach(function (t) {
+    PLAN_TRACK_BY_CODE[t.code] = t.id;
+    PLAN_TRACK_BY_CODE[t.option] = t.id;
+});
+
+function getLevelPref() {
+    try {
+        const v = localStorage.getItem(NSA_LEVEL_PREF) || '';
+        return PLAN_TRACK_BY_CODE[v] ? v : '';
+    } catch (e) { return ''; }
+}
+function setLevelPref(v) {
+    const track = PLAN_TRACK_BY_CODE[String(v || '').trim().toUpperCase()] || '';
+    try {
+        if (track) localStorage.setItem(NSA_LEVEL_PREF, planTrackMeta(track).option);
+        else localStorage.removeItem(NSA_LEVEL_PREF);
+    } catch (e) { /* quota */ }
+}
+
+function planNormSubject(id) {
+    const s = String(id || '').trim().toLowerCase();
+    return PLAN_ALIASES[s] || s;
+}
+
+function planLevelOf(id) {
+    const s = planNormSubject(id);
+    if (s.indexOf('caf') === 0) return 'caf';
+    if (s.indexOf('prc') === 0) return 'prc';
+    if (s.indexOf('acf') === 0) return 'acf';
+    if (s.indexOf('acs') === 0) return 'acs';
+    return '';
+}
+
+/* Map one plan token onto a track id. Returns null for the wildcard words,
+ * '' when the token names no track at all. */
+function planTrackFromToken(tok) {
+    const t = String(tok || '').trim().toLowerCase().replace(/[^a-z]/g, '');
+    if (!t) return '';
+    if (t === 'both' || t === 'all') return null;
+    if (t.indexOf('caf') === 0) return 'caf';
+    if (t.indexOf('prc') === 0) return 'prc';
+    if (t.indexOf('acf') === 0 || t.indexOf('accafoundation') === 0
+        || t.indexOf('accafound') === 0) return 'acf';
+    if (t.indexOf('acs') === 0 || t.indexOf('accaskill') === 0
+        || t.indexOf('accask') === 0 || t.indexOf('sks') === 0) return 'acs';
+    return '';
+}
+
+function planTrackMeta(id) {
+    return TRACKS.find(function (t) { return t.id === id; })
+        || { id: id, code: String(id || '').toUpperCase(), label: String(id || '').toUpperCase() };
+}
+
+/* The student's tracks, in the order they should appear in a level switcher. */
+function planTracksOrdered() {
+    return planLevels().map(planTrackMeta);
+}
+
+/* The track the app is currently showing. One track at a time: every view
+   below reads this, so switching the profile dropdown moves all of them. */
+function activeTrack() {
+    return planNormaliseTrack(
+        (typeof currentPracticeLevel !== 'undefined' && currentPracticeLevel) || 'prc'
+    );
+}
+
+/* Subjects of the active track, in the app's own order. Quick Revision and the
+   statistics were reading the whole list, which is how a student on one track
+   ended up looking at another's chapters. */
+function trackSubjects(track) {
+    const t = planNormaliseTrack(track || activeTrack());
+    return mmSubjectsList.filter(function (s) {
+        return planLevelOf(s.id) === t && planAllowsSubject(s.id);
+    });
+}
+
+/* Mock papers belonging to a track (they exist for PRC only so far). */
+function trackMockKeys(track) {
+    const t = planNormaliseTrack(track || activeTrack());
+    const store = (typeof mockExamDataStore !== 'undefined') ? mockExamDataStore : {};
+    return Object.keys(store).filter(function (k) {
+        return planLevelOf(k) === t && planAllowsSubject(k);
+    });
+}
+
+/* Accept a track id ('prc') or a plan code ('PRC', 'ACCA-FOUNDATION'). */
+function planResolveTrack(v) {
+    const s = String(v || '').trim().toLowerCase();
+    if (planLevels().indexOf(s) !== -1) return s;
+    return planTrackFromToken(s) || null;
+}
+
+/* A track the app may show right now: the one asked for when the plan allows
+   it, otherwise the first the plan does allow. */
+function planNormaliseTrack(v) {
+    const t = planResolveTrack(v);
+    if (t && planAllowsLevel(t)) return t;
+    return planLevels()[0] || 'prc';
+}
+
+/* One rule for every level switcher: show only the tabs the plan includes and
+   mark the active one. Tabs carry data-track, so a new track needs no wiring. */
+function syncTrackTabs(containerId, active) {
+    const box = document.getElementById(containerId);
+    if (!box) return;
+    box.querySelectorAll('.study-level-btn[data-track]').forEach(function (el) {
+        const id = el.getAttribute('data-track');
+        el.style.display = planAllowsLevel(id) ? '' : 'none';
+        el.classList.toggle('active', id === active);
+    });
+}
+
+/* "You have this; it is not here yet." Deliberately not the same message as
+   "not in your plan" -- an ACCA student must not be told to buy the plan they
+   already paid for. */
+function planComingSoonHtml(what) {
+    return '<div style="padding:32px 20px;text-align:center;color:var(--text-muted);">' +
+        '&#128214;<br><strong style="color:var(--text-main);">Not added yet</strong>' +
+        '<p style="margin:8px 0 0;line-height:1.6;">' + mmEsc(what) +
+        ' is not in the app yet. Your access is active &mdash; contact your ' +
+        'admin for the study texts.</p></div>';
+}
+
+function renderTrackNotice(containerId, track) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    el.innerHTML = planComingSoonHtml(planTrackMeta(track).label.replace(/\u00b7/g, '-'));
+}
+
+/* The single control behind the Academic Level dropdown AND the in-view level
+   tabs: pick a track and every view follows it, so two views can never show
+   different tracks. Mind Maps always repaint (they initialise before the
+   profile is known); Practice and Revision only once their view is open, so
+   boot never drops a premature notice into an empty container. */
+function applyTrackSwitch(level) {
+    const track = planNormaliseTrack(level);
+    const meta = planTrackMeta(track);
+    setLevelPref(meta.code);
+    currentStudyLevel = track;
+    currentMMLevel = track;
+    currentPracticeLevel = track;
+    switchStudyLevel(track);
+    if (typeof switchMMLevel === 'function') switchMMLevel(track);
+    if (viewInitialised.practice && typeof switchPracticeLevel === 'function') {
+        switchPracticeLevel(track);
+    }
+    /* The remaining views are not level-tab driven, so repaint them here. */
+    if (viewInitialised.revision && typeof renderRevisionSubjectTabs === 'function') {
+        const allowed = trackSubjects();
+        if (allowed.length && !planAllowsSubject(revisionState.subjectId)) {
+            revisionState.subjectId = allowed[0].id;
+        }
+        renderRevisionSubjectTabs();
+        renderRevisionChapterSidebar();
+        renderRevisionContent();
+    }
+    if (typeof renderRealStats === 'function') renderRealStats();
+    if (typeof renderMockExamsPortal === 'function' && currentView === 'mockexams') {
+        renderMockExamsPortal();
+    }
+
+    const lvlSel = document.getElementById('input-profile-level');
+    /* `option`, not `code`: only the option value exists in the <select>, so
+       assigning the display code would leave the control blank. */
+    if (lvlSel) lvlSel.value = meta.option;
+    return track;
+}
+
+/* The profile we trust right now: the live Firestore doc, else a per-uid plan
+ * cache written the last time we loaded it. Until either exists we do NOT lock
+ * anyone out - there is simply no plan to apply yet. */
+function planProfile() {
+    if (currentUserProfile) return currentUserProfile;
+    try {
+        const session = getSession();
+        const cached = JSON.parse(localStorage.getItem(NSA_PLAN_KEY) || 'null');
+        if (cached && session && cached.uid && cached.uid === session.uid) return cached;
+    } catch (e) { /* ignore */ }
+    return null;
+}
+
+function planCacheWrite(p) {
+    if (!p) return;
+    try {
+        localStorage.setItem(NSA_PLAN_KEY, JSON.stringify({
+            uid: (currentUser && currentUser.uid) || (getSession() && getSession().uid) || '',
+            level: p.level || '',
+            planType: p.planType || '',
+            assignedSubjects: Array.isArray(p.assignedSubjects) ? p.assignedSubjects : [],
+            accountStatus: p.accountStatus || '',
+            subscriptionStatus: p.subscriptionStatus || '',
+            accessEnabled: p.accessEnabled !== false,
+            expiryDate: p.expiryDate && p.expiryDate.toDate
+                ? p.expiryDate.toDate().toISOString() : (p.expiryDate || null)
+        }));
+    } catch (e) { /* quota */ }
+}
+
+/* `level` is one track, or several: 'PRC', 'CAF', 'ACF', 'ACCA-FOUNDATION',
+ * 'ACS', 'ACCA-SKILLS', or a list such as 'PRC,ACF'. */
+function planLevels() {
+    if (PLAN_OPEN_ACCESS) return ALL_TRACKS.slice();
+    const p = planProfile();
+    if (!p) return PLAN_BOTH.slice();
+
+    const raw = String(p.level || '').trim();
+    const out = [];
+    let wildcard = false;
+    if (raw) {
+        raw.split(/[,+/&\s]+/).forEach(function (tok) {
+            const t = planTrackFromToken(tok);
+            if (t === null) wildcard = true;
+            else if (t && out.indexOf(t) === -1) out.push(t);
+        });
+    }
+    if (out.length) return out;
+    /* 'BOTH'/'ALL' means PRC+CAF only -- it predates ACCA and must not open a
+       track that has no content behind it. */
+    if (wildcard) return PLAN_BOTH.slice();
+    /* No usable level: fall back to the plan code so existing accounts
+       (TRIAL, CAF_FULL, PRC_1, ACCA_FOUNDATION, ...) keep working. */
+    const pt = planTrackFromToken(p.planType);
+    if (pt) return [pt];
+    return PLAN_BOTH.slice();
+}
+
+function planAllowsLevel(level) {
+    return planLevels().indexOf(String(level || '').trim().toLowerCase()) !== -1;
+}
+
+function planAllowsSubject(subjectId) {
+    if (PLAN_OPEN_ACCESS) return true;
+    const key = planLevelOf(subjectId);
+    if (!key) return true;                      // unknown id: never lock out
+    if (!planAllowsLevel(key)) return false;
+    const p = planProfile();
+    if (!p) return true;
+    const assigned = (Array.isArray(p.assignedSubjects) ? p.assignedSubjects : [])
+        .map(planNormSubject).filter(Boolean);
+    if (!assigned.length) return true;          // whole level
+    const forLevel = assigned.filter(function (id) { return planLevelOf(id) === key; });
+    if (!forLevel.length) return true;          // this level not mentioned -> open
+    return forLevel.indexOf(planNormSubject(subjectId)) !== -1;
+}
+
+function planFilterSubjects(list) {
+    if (!Array.isArray(list)) return [];
+    return list.filter(function (s) { return !s || !s.id || planAllowsSubject(s.id); });
+}
+
+function planSignature(p) {
+    if (!p) return 'unknown';
+    return [
+        p.level || '',
+        p.planType || '',
+        p.accessEnabled !== false ? '1' : '0',
+        (Array.isArray(p.assignedSubjects) ? p.assignedSubjects : []).join(',')
+    ].join('|');
+}
+
+function planEmptyNoticeHtml(feature) {
+    return '<div style="padding:32px 20px;text-align:center;color:var(--text-muted);">' +
+        '&#128274;<br><strong style="color:var(--text-main);">Not in your plan</strong>' +
+        '<p style="margin:8px 0 0;line-height:1.6;">Your current plan does not include ' +
+        mmEsc(feature) + '. Contact your admin if you need it added.</p></div>';
+}
+
+/* One reusable lock overlay, built on first use. */
+function planLockOverlay() {
+    let el = document.getElementById('plan-lock-overlay');
+    if (el) return el;
+    el = document.createElement('div');
+    el.id = 'plan-lock-overlay';
+    el.style.cssText = 'position:fixed;inset:0;z-index:100000;display:none;align-items:center;' +
+        'justify-content:center;background:rgba(3,11,20,0.72);padding:20px;';
+    el.innerHTML = '<div role="alertdialog" aria-modal="true" style="max-width:440px;width:100%;' +
+        'background:var(--bg-surface,#0b1526);border:1px solid var(--border-color,#1e293b);' +
+        'border-radius:16px;padding:26px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,0.55);">' +
+        '<div style="font-size:2rem;line-height:1;margin-bottom:10px;">&#128274;</div>' +
+        '<h3 style="margin:0 0 10px;color:var(--text-main,#e2e8f0);">Not in your plan</h3>' +
+        '<p id="plan-lock-msg" style="margin:0 0 20px;color:var(--text-muted,#94a3b8);line-height:1.6;"></p>' +
+        '<button type="button" class="btn btn-primary" onclick="planLockClose()">Got it</button>' +
+        '</div>';
+    document.body.appendChild(el);
+    el.addEventListener('click', function (ev) { if (ev.target === el) planLockClose(); });
+    return el;
+}
+
+function planLockClose() {
+    const el = document.getElementById('plan-lock-overlay');
+    if (el) el.style.display = 'none';
+}
+
+function showPlanLock(feature) {
+    const el = planLockOverlay();
+    const msg = document.getElementById('plan-lock-msg');
+    if (msg) {
+        msg.textContent = 'Your plan does not include ' + (feature || 'this content') +
+            '. Contact your admin to upgrade if you need access.';
+    }
+    el.style.display = 'flex';
+}
+
+let planLastSignature = null;
+
+/* Apply the plan to every view that offers a level switch or a subject list.
+ * Skipped when the plan-relevant fields have not changed, so a Firestore
+ * snapshot never wipes a quiz that is in progress. */
+function applyPlanGating(force) {
+    const p = planProfile();
+    const sig = planSignature(p);
+    if (!force && sig === planLastSignature) return;
+    planLastSignature = sig;
+    try {
+        /* Restore the track the student last chose, or whatever the plan allows. */
+        const prefTrack = PLAN_TRACK_BY_CODE[getLevelPref()] || '';
+        applyTrackSwitch(prefTrack || currentStudyLevel);
+
+
+        if (viewInitialised.revision) {
+            if (!planAllowsSubject(revisionState.subjectId)) {
+                const allowed = trackSubjects();
+                revisionState.subjectId = allowed.length ? allowed[0].id
+                    : (mmSubjectsList.length ? mmSubjectsList[0].id : '');
+            }
+            renderRevisionSubjectTabs();
+            renderRevisionChapterSidebar();
+            renderRevisionContent();
+        }
+    } catch (e) {
+        console.warn('applyPlanGating failed:', e);
+    }
 }
 
 /* ------------------------------------------------------------- subscription access check */
@@ -26423,19 +26925,18 @@ function appGoHome() {
 let currentStudyLevel = 'prc';
 
 function switchStudyLevel(level) {
-    currentStudyLevel = level === 'caf' ? 'caf' : 'prc';
-    const prcBtn = document.getElementById('tab-prc');
-    const cafBtn = document.getElementById('tab-caf');
-    if (prcBtn) prcBtn.classList.toggle('active', currentStudyLevel === 'prc');
-    if (cafBtn) cafBtn.classList.toggle('active', currentStudyLevel === 'caf');
+    currentStudyLevel = planNormaliseTrack(level);
+    syncTrackTabs('study-level-tabs', currentStudyLevel);
 
-    const prcBox = document.getElementById('study-prc-content');
-    const cafBox = document.getElementById('study-caf-content');
-    if (prcBox) prcBox.classList.toggle('active', currentStudyLevel === 'prc');
-    if (cafBox) cafBox.classList.toggle('active', currentStudyLevel === 'caf');
+    document.querySelectorAll('#view-study .study-level-content[data-track]').forEach(function (box) {
+        box.classList.toggle('active', box.getAttribute('data-track') === currentStudyLevel);
+    });
 
     if (currentStudyLevel === 'caf' && typeof renderCafStudyLibrary === 'function') {
         renderCafStudyLibrary();
+    } else if (currentStudyLevel !== 'prc') {
+        /* A track the plan includes but that has no volumes behind it yet. */
+        renderTrackNotice('study-' + currentStudyLevel + '-content', currentStudyLevel);
     }
 }
 
@@ -26795,6 +27296,7 @@ function prcBookByFile(file) {
 
 function openPrcBook(file) {
     const book = prcBookByFile(file);
+    if (book && !planAllowsSubject(book.id)) { showPlanLock(book.code + ' \u2014 ' + book.title); return; }
     if (!book) { openPdfReader(file, file, 1, { offset: 5 }); return; }
     openPdfReader(book.file, book.code + ' — ' + book.title, 1, {
         offset: book.offset,
@@ -26805,6 +27307,7 @@ function openPrcBook(file) {
 
 function openPrcChapter(file, chapterIndex) {
     const book = prcBookByFile(file);
+    if (book && !planAllowsSubject(book.id)) { showPlanLock(book.code + ' \u2014 ' + book.title); return; }
     if (!book) { openPdfReader(file, file, 1, { offset: 5 }); return; }
     const idx = Math.max(0, Math.min(book.chapters.length - 1, chapterIndex || 0));
     const ch = book.chapters[idx];
@@ -26860,6 +27363,7 @@ function openTopicModal(topicId) {
     const found = mmFindTopic(topicId);
     const modal = document.getElementById('mm-topic-modal');
     if (!modal) return;
+    if (found && !planAllowsSubject(found.bookKey)) { showPlanLock('this topic'); return; }
     if (!found) {
         document.getElementById('mm-modal-badge').textContent = 'Not found';
         document.getElementById('mm-modal-title').textContent = 'Topic unavailable';
@@ -27447,6 +27951,13 @@ function renderRealStats() {
         }
     } catch (e) { /* ignore */ }
 
+    /* Progress belongs to the track on screen, not to every track the student
+       has ever opened. Sessions and mock attempts both carry a subjectId, so
+       one filter settles both. */
+    const statsTrack = activeTrack();
+    sessions = sessions.filter(function (s) { return planLevelOf(s.subjectId) === statsTrack; });
+    mocks = mocks.filter(function (m) { return planLevelOf(m.subjectId) === statsTrack; });
+
     /* Questions attempted: practice session results + mock questions */
     let practiceQCount = 0;
     let practiceAwarded = 0;
@@ -27650,13 +28161,15 @@ function evalSubjectMeta(sid) {
 
 /* Which half of the syllabus counts — mirrors the Practice Centre level switch. */
 function evalLevelSubjects() {
-    const level = (typeof currentPracticeLevel !== 'undefined' && currentPracticeLevel)
-        ? currentPracticeLevel : 'prc';
-    const wantCaf = level === 'caf';
-    const list = EVAL_SUBJECTS.filter(function (s) {
-        return (String(s.id).indexOf('prc') === 0) !== wantCaf;
+    const level = planNormaliseTrack(
+        (typeof currentPracticeLevel !== 'undefined' && currentPracticeLevel) || 'prc'
+    );
+    /* No fallback to the full list. Falling back handed a single-track student
+       every other track's subjects -- the one case where an empty list means
+       "this track has nothing yet", not "show everything". */
+    return EVAL_SUBJECTS.filter(function (s) {
+        return planLevelOf(s.id) === level && planAllowsSubject(s.id);
     });
-    return list.length ? list : EVAL_SUBJECTS;
 }
 
 /* Per-subject roll-up of every answered practice result. */
@@ -28858,6 +29371,7 @@ function bootAppShell() {
     const hash = (window.location.hash || '').replace(/^#\/?/, '');
     if (VIEW_META[hash]) start = hash;
     applyView(start, { silent: true });
+    applyPlanGating();
     updateHistButtons();
 
     window.addEventListener('hashchange', function () {
@@ -28890,6 +29404,8 @@ function initFirebaseAuth() {
 
             // Fetch fresh profile from Firestore (async), then re-render
             await fetchProfileFromFirestore();
+            planCacheWrite(currentUserProfile);
+            applyPlanGating();
             renderProfileUI();
 
             // Pull practice sessions / review decisions / mock history from
@@ -28925,6 +29441,8 @@ function startProfileListener(uid) {
         .onSnapshot(function(doc) {
             if (doc.exists) {
                 currentUserProfile = doc.data();
+                planCacheWrite(currentUserProfile);
+                applyPlanGating();
                 // Update UI with fresh subscription data
                 updateSubscriptionUI(currentUserProfile);
                 /* Repaint the card, sidebar and dashboard from the fresh doc.
