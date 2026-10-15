@@ -1,0 +1,224 @@
+/* ==================== CAF Practice Centre (overlay + launcher) ====================
+ * Scoped under .pc-* so nothing here can reach the existing quiz, mind-map or
+ * revision styling. The overlay is a fixed layer with its own stacking context
+ * because the practice view sits inside normal document flow.
+ * ============================================================================= */
+
+.pc-launcher {
+    margin: 14px 0 18px;
+    padding: 16px 18px;
+    border: 1px solid var(--border, #e2e5ea);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(99,102,241,.06), rgba(16,185,129,.05));
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; flex-wrap: wrap;
+}
+.pc-launcher-title { font-weight: 700; font-size: 15px; margin-bottom: 3px; }
+.pc-launcher-sub { font-size: 12.5px; opacity: .72; line-height: 1.5; max-width: 62ch; }
+
+.pc-overlay {
+    position: fixed; inset: 0; z-index: 9990;
+    background: rgba(15,18,24,.55);
+    backdrop-filter: blur(3px);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 28px 16px; overflow-y: auto;
+}
+.pc-overlay.pc-open { display: flex; }
+
+.pc-panel {
+    position: relative;
+    width: min(940px, 100%);
+    background: var(--bg, #fff);
+    border-radius: 16px;
+    border: 1px solid var(--border, #e2e5ea);
+    box-shadow: 0 24px 60px rgba(0,0,0,.28);
+    padding: 26px 30px 30px;
+    color: var(--text, #1b1f27);
+}
+.pc-close {
+    position: absolute; top: 14px; right: 16px;
+    width: 32px; height: 32px; border-radius: 8px;
+    border: 1px solid var(--border, #e2e5ea);
+    background: transparent; cursor: pointer; font-size: 14px; line-height: 1;
+}
+.pc-close:hover { background: rgba(0,0,0,.05); }
+
+.pc-head { border-bottom: 1px solid var(--border, #e2e5ea); padding-bottom: 14px; margin-bottom: 18px; }
+.pc-head-title { font-weight: 700; font-size: 17px; }
+.pc-head-sub { font-size: 12.5px; opacity: .75; margin-top: 3px; }
+.pc-head-ocr { font-size: 11.5px; opacity: .6; margin-top: 5px; }
+
+.pc-h { font-size: 13px; text-transform: uppercase; letter-spacing: .06em;
+        opacity: .6; margin: 22px 0 8px; }
+
+.pc-progress { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+               font-size: 12.5px; opacity: .8; margin-bottom: 12px; }
+.pc-badge { display: inline-block; padding: 2px 9px; border-radius: 999px;
+            font-size: 11px; font-weight: 600;
+            background: rgba(99,102,241,.12); color: inherit; }
+/* Verdicts on the weakness screen. The text is always the full word, so the
+ * colour is decoration rather than the message - a colour-blind reader loses
+ * nothing, and "Not enough evidence" is never coloured as a verdict. */
+.pc-v-weak { background: rgba(239,68,68,.18); }
+.pc-v-dev { background: rgba(245,158,11,.20); }
+.pc-v-strong { background: rgba(34,197,94,.18); }
+.pc-v-none { background: rgba(148,163,184,.20); }
+.pc-rec { padding: 10px 14px; margin-bottom: 10px;
+          background: rgba(99,102,241,.05);
+          border-left: 3px solid rgba(99,102,241,.5);
+          border-radius: 0 10px 10px 0; }
+.pc-rec .pc-btn { margin-top: 8px; }
+/* A coverage/score bar. Decoration only: the percentage sits beside it in the
+ * same row, so nothing on the analytics screen is carried by width or colour
+ * alone. */
+.pc-bar { display: inline-block; width: 110px; min-width: 54px; height: 7px;
+          border-radius: 999px; background: rgba(99,102,241,.14);
+          overflow: hidden; vertical-align: middle; }
+.pc-bar > span { display: block; height: 100%; border-radius: 999px;
+                 background: rgba(99,102,241,.65); }
+
+.pc-question {
+    font-size: 15px; line-height: 1.65; font-weight: 500;
+    padding: 14px 16px; margin-bottom: 16px;
+    background: rgba(99,102,241,.05);
+    border-left: 3px solid rgba(99,102,241,.5);
+    border-radius: 0 10px 10px 0;
+    white-space: pre-wrap;
+}
+
+.pc-textarea {
+    width: 100%; box-sizing: border-box;
+    font: inherit; font-size: 14px; line-height: 1.6;
+    padding: 12px 14px; border-radius: 10px;
+    border: 1px solid var(--border, #d7dbe0);
+    background: var(--bg-alt, #fbfbfd); color: inherit;
+    resize: vertical;
+}
+.pc-textarea:focus { outline: 2px solid rgba(99,102,241,.45); outline-offset: 1px; }
+
+.pc-upload { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.pc-file { font-size: 12.5px; display: inline-flex; align-items: center; gap: 7px;
+           padding: 7px 12px; border: 1px dashed var(--border, #c9ced6);
+           border-radius: 9px; cursor: pointer; }
+.pc-file input { display: none; }
+.pc-ocr-note { font-size: 12px; opacity: .75; }
+.pc-ocr-note.pc-warn { color: #b45309; opacity: 1; }
+
+.pc-mcq-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+.pc-mcq-cell { display: inline-flex; align-items: center; gap: 6px;
+               padding: 8px 14px; border: 1px solid var(--border, #d7dbe0);
+               border-radius: 9px; cursor: pointer; font-weight: 600; }
+.pc-mcq-cell input { accent-color: #6366f1; }
+
+.pc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.pc-btn {
+    font: inherit; font-size: 13.5px; font-weight: 600;
+    padding: 9px 18px; border-radius: 10px; cursor: pointer;
+    border: 1px solid var(--border, #d7dbe0);
+    background: transparent; color: inherit;
+}
+.pc-btn:hover:not(:disabled) { background: rgba(0,0,0,.05); }
+.pc-btn:disabled { opacity: .45; cursor: not-allowed; }
+.pc-btn-primary {
+    background: #6366f1; border-color: #6366f1; color: #fff;
+}
+.pc-btn-primary:hover:not(:disabled) { background: #4f46e5; }
+
+.pc-setup { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 16px; }
+.pc-field { display: flex; flex-direction: column; gap: 5px; font-size: 12px; }
+.pc-field span { font-weight: 600; opacity: .75; }
+.pc-field select {
+    font: inherit; font-size: 13.5px; padding: 8px 10px; border-radius: 9px;
+    border: 1px solid var(--border, #d7dbe0); background: var(--bg-alt, #fbfbfd);
+    color: inherit; min-width: 210px;
+}
+/* The source selector carries both labels and their counts, so it is given the full
+ * width of the row. The other three stay at their natural width. */
+.pc-field-wide { flex: 1 1 100%; }
+.pc-field-wide select { min-width: 0; width: 100%; }
+/* A disabled control must LOOK disabled. The difficulty tiers are switched off for
+ * official past-paper questions, and a control that is greyed only by the cursor is
+ * a control the candidate cannot tell is unavailable. */
+.pc-field select:disabled {
+    opacity: .5; cursor: not-allowed;
+    background: var(--bg-alt, #fbfbfd); color: inherit;
+}
+
+.pc-score { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; }
+.pc-score-num { font-size: 34px; font-weight: 800; line-height: 1; }
+.pc-score-num span { font-size: 17px; font-weight: 600; opacity: .55; margin-left: 3px; }
+.pc-score-pct { font-size: 14px; font-weight: 600; opacity: .7; }
+
+.pc-criteria { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+.pc-criteria th, .pc-criteria td { text-align: left; padding: 8px 10px;
+    border-bottom: 1px solid var(--border, #eceef1); vertical-align: top; }
+.pc-criteria th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; opacity: .6; }
+.pc-num { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
+.pc-bar { width: 90px; }
+.pc-bar span { display: block; height: 6px; border-radius: 3px; background: #10b981; }
+tr.pc-part .pc-bar span { background: #f59e0b; }
+tr.pc-zero .pc-bar span { background: #ef4444; }
+tr.pc-zero td { opacity: .8; }
+.pc-ev-cell { font-size: 11.5px; line-height: 1.5; }
+.pc-ev-hit { color: #047857; }
+.pc-ev-miss { color: #b91c1c; }
+
+.pc-expected, .pc-source, .pc-tip, .pc-warnbox, .pc-disclaimer, .pc-note {
+    font-size: 12.5px; line-height: 1.6; padding: 11px 13px;
+    border-radius: 10px; margin-bottom: 12px;
+}
+.pc-expected { background: rgba(16,185,129,.07); border: 1px solid rgba(16,185,129,.25); }
+.pc-expected-title { font-weight: 700; margin-bottom: 4px; font-size: 11.5px;
+                     text-transform: uppercase; letter-spacing: .05em; opacity: .7; }
+.pc-source { background: rgba(99,102,241,.06); }
+.pc-tip { background: rgba(245,158,11,.09); }
+.pc-warnbox { background: rgba(239,68,68,.09); border: 1px solid rgba(239,68,68,.3); }
+.pc-disclaimer { background: rgba(0,0,0,.04); font-style: italic; opacity: .8; }
+.pc-note { opacity: .75; }
+.pc-note code { font-size: 11.5px; background: rgba(0,0,0,.06);
+                padding: 1px 5px; border-radius: 4px; }
+
+/* Official Section A: a list of items, each with its own options. */
+.pc-mcq-item { border: 1px solid var(--border, #d7dbe0); border-radius: 10px;
+               padding: 14px; margin-bottom: 12px; background: var(--bg-alt, #fbfbfd); }
+.pc-mcq-item legend { font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+.pc-mcq-marks { font-weight: 500; opacity: .7; font-size: 12px; }
+.pc-mcq-stem { margin-bottom: 10px; line-height: 1.5; font-size: 13.5px; }
+.pc-mcq-options { display: flex; flex-direction: column; gap: 6px; }
+.pc-mcq-options .pc-mcq-cell { justify-content: flex-start; }
+.pc-mcq-options .pc-mcq-cell span { font-weight: 600; min-width: 22px; }
+
+/* Generated practice MCQ: single-row A/B/C/D grid. */
+.pc-mcq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.pc-mcq-grid .pc-mcq-cell { display: flex; align-items: center; gap: 8px; padding: 10px 12px;
+    border: 1px solid var(--border, #d7dbe0); border-radius: 9px; cursor: pointer;
+    background: var(--bg-alt, #fbfbfd); font-size: 13px; }
+.pc-mcq-grid input { accent-color: var(--accent, #4f46e5); }
+
+/* Content review screen (phase 17): a quieter launcher-style button, small
+ * helper text, a text input for the decision note, a sub-line for long register
+ * purposes, and status pills that read PASS / FAIL / reported at a glance. */
+.pc-btn-quiet { opacity: .78; }
+.pc-quiet { font-size: 12px; opacity: .6; }
+.pc-input {
+    font: inherit; font-size: 13px; padding: 8px 10px; border-radius: 9px;
+    border: 1px solid var(--border, #d7dbe0); background: var(--bg-alt, #fbfbfd);
+    color: inherit; width: min(340px, 100%); margin-right: 6px;
+}
+.pc-sub { font-size: 11.5px; opacity: .62; line-height: 1.45; }
+.pc-status-ok, .pc-status-fail, .pc-status-note {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 9px; border-radius: 999px; letter-spacing: .04em;
+    white-space: nowrap;
+}
+.pc-status-ok { background: rgba(16,185,129,.14); color: #047857; }
+.pc-status-fail { background: rgba(239,68,68,.14); color: #b91c1c; }
+.pc-status-note { background: rgba(245,158,11,.16); color: #b45309; }
+
+@media (max-width: 640px) {
+    .pc-panel { padding: 20px 16px 24px; border-radius: 12px; }
+    .pc-setup { flex-direction: column; align-items: stretch; }
+    .pc-field select { min-width: 0; width: 100%; }
+    .pc-launcher { flex-direction: column; align-items: flex-start; }
+}
+/* ==== end of CAF Practice Centre CSS ==== */

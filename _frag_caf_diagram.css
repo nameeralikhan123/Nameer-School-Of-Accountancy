@@ -1,0 +1,156 @@
+/* ---- CAF mind map diagrams ----
+   The diagram layer sits above the existing card grid. It is a document in its
+   own right - SVG on a light sheet, not a card floating on the dark shell - so
+   the tree stays readable and printable whatever theme is around it. */
+.mmd-panel,
+.mmd-detail {
+    background: #0b1220;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 14px;
+    padding: 14px 16px 16px;
+    margin: 0 0 16px;
+}
+
+.mmd-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 14px;
+    margin-bottom: 10px;
+}
+
+.mmd-head-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #e2e8f0;
+}
+
+.mmd-head-sub {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.mmd-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 2px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mmd-svg {
+    display: block;
+    height: auto;
+}
+
+.mmd-node rect {
+    transition: fill-opacity 0.12s ease;
+}
+
+.mmd-node:hover rect {
+    fill-opacity: 0.3;
+}
+
+.mmd-t {
+    font: 500 12px/15px "Segoe UI", system-ui, -apple-system, sans-serif;
+    fill: #0f172a;
+}
+
+.mmd-t-root {
+    font-weight: 700;
+    font-size: 12.5px;
+}
+
+.mmd-ref {
+    font: 600 10px/12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    fill: #64748b;
+}
+
+.mmd-badge {
+    font: 700 9px/11px "Segoe UI", system-ui, sans-serif;
+    fill: #64748b;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ---- topic detail ---- */
+.mmd-detail {
+    margin: 0 0 14px;
+    background: #0f172a;
+}
+
+.mmd-detail-h {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.mmd-kind-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0f172a;
+    background: var(--c, #93c5fd);
+}
+
+.mmd-detail-p {
+    font-size: 11.5px;
+    color: #94a3b8;
+}
+
+.mmd-block {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border-left: 3px solid #475569;
+    background: rgba(148, 163, 184, 0.08);
+}
+
+.mmd-block-h {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.mmd-block-b {
+    font-size: 13.5px;
+    line-height: 1.62;
+    color: #e2e8f0;
+}
+
+.mmd-b-what { border-left-color: #3b82f6; }
+.mmd-b-why { border-left-color: #8b5cf6; }
+.mmd-b-trap { border-left-color: #ef4444; }
+.mmd-b-eg { border-left-color: #22c55e; }
+.mmd-b-vocab { border-left-color: #f59e0b; }
+.mmd-b-how { border-left-color: #e2e8f0; }
+
+.mmd-ladder {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    line-height: 1.62;
+    color: #e2e8f0;
+}
+
+.mmd-ladder li { margin-bottom: 3px; }
+
+/* ---- narrow screens: let the sheet scroll rather than squash ---- */
+@media (max-width: 640px) {
+    .mmd-panel,
+    .mmd-detail { padding: 11px 12px 12px; border-radius: 12px; }
+    .mmd-block-b,
+    .mmd-ladder { font-size: 13px; }
+}
+/* ==== end of CAF mind map diagrams CSS ==== */
