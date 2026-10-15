@@ -22206,6 +22206,28 @@ function practiceCentreEscape(s) {
 
 /* ------------------------------------------------------------------ launcher */
 
+/* The launcher is one node in the practice view, but the practice view is shared by
+ * every track. It is shown only on the tracks that have written practice behind
+ * them - currently CAF, whose study text it marks against - and hidden on ACCA
+ * Foundation, ACCA Skills and PRC, which have none. Kept as a list rather than a
+ * single id so adding a track later is one entry, not a new condition. */
+function practiceCentreTracks() {
+    return ['caf'];
+}
+
+function practiceCentreVisible() {
+    if (typeof activeTrack !== 'function') return true;
+    return practiceCentreTracks().indexOf(activeTrack()) !== -1;
+}
+
+/* Show or hide the launcher to match the active track. Called on init and on every
+ * track switch, because the node persists while the track underneath it changes. */
+function syncPracticeCentreLauncher() {
+    const box = document.getElementById(PRACTICE_CENTRE_LAUNCHER_ID);
+    if (!box) return;
+    box.style.display = practiceCentreVisible() ? '' : 'none';
+}
+
 function initPracticeCentre() {
     if (document.getElementById(PRACTICE_CENTRE_LAUNCHER_ID)) return;
     const host = document.getElementById('practice-main-container');
@@ -22228,6 +22250,7 @@ function initPracticeCentre() {
     box.querySelector('#pc-open-btn').addEventListener('click', function () {
         practiceCentreOpen();
     });
+    syncPracticeCentreLauncher();
 }
 
 /* ------------------------------------------------------------------- overlay */
@@ -24026,6 +24049,366 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape' && PRACTICE_CENTRE.overlayOpen) practiceCentreClose();
     });
 });
+
+/* ===================== CAF-2 EXAM-STYLE LONG-FORM PAPER =====================
+ * The structure (19 chapters, per-chapter question counts) comes from the ICAP
+ * CAF-2 Question Bank. The questions are original and grounded in the ICAP CAF-2
+ * study text; none are official ICAP questions and no bank text is reproduced.
+ * ========================================================================== */
+
+/* The bank splits "Taxation of Individuals" and "Taxation of AOP" into two
+   chapters while the study text treats them as one, so study chapter 12 carries
+   the questions of both bank chapters 11 and 12. */
+function caf2ExamBankChaptersFor(studyChapter) {
+    if (typeof CAF2_EXAM_BANK === 'undefined') return [];
+    var n = Number(String(studyChapter).replace(/[^0-9]/g, ''));
+    if (!n) return [];
+    if (n === 12) return ['c11', 'c12'];
+    var key = 'c' + (n < 10 ? '0' + n : String(n));
+    return CAF2_EXAM_BANK.bank[key] ? [key] : [];
+}
+
+function caf2ExamFor(subjectId, chapterId) {
+    if (subjectId !== 'caf2' || typeof CAF2_EXAM_BANK === 'undefined') return [];
+    var out = [];
+    caf2ExamBankChaptersFor(chapterId).forEach(function (k) {
+        (CAF2_EXAM_BANK.bank[k] || []).forEach(function (q) { out.push(q); });
+    });
+    return out;
+}
+
+function caf2ExamMarks(list) {
+    return (list || []).reduce(function (a, q) { return a + (q.marks || 0); }, 0);
+}
+
+var CAF2_EXAM_STATE = { subjectId: null, chapterId: null, qs: [], i: 0,
+                        awarded: {}, revealed: {} };
+
+function caf2ExamEsc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+}
+
+function caf2ExamClose() {
+    var el = document.getElementById('caf2-exam-modal');
+    if (el) el.style.display = 'none';
+    CAF2_EXAM_STATE.qs = [];
+}
+
+function openCaf2Exam(subjectId, chapterId) {
+    if (typeof planAllowsSubject === 'function' && !planAllowsSubject(subjectId)) {
+        if (typeof showPlanLock === 'function') showPlanLock('this chapter');
+        return;
+    }
+    var qs = caf2ExamFor(subjectId, chapterId);
+    if (!qs.length) {
+        if (typeof showPlanLock === 'function') showPlanLock('the CAF-2 exam paper for this chapter');
+        return;
+    }
+    CAF2_EXAM_STATE = { subjectId: subjectId, chapterId: chapterId, qs: qs,
+                        i: 0, awarded: {}, revealed: {} };
+    var host = document.getElementById('caf2-exam-modal');
+    if (!host) {
+        caf2ExamMount();
+        host = document.getElementById('caf2-exam-modal');
+    }
+    if (!host) return;
+    host.style.display = 'flex';
+    caf2ExamPaint();
+}
+
+function caf2ExamPaint() {
+    var S = CAF2_EXAM_STATE;
+    var q = S.qs[S.i];
+    var host = document.getElementById('caf2-exam-modal');
+    var body = document.getElementById('caf2-exam-body');
+    if (!q || !body) return;
+    var total = caf2ExamMarks(S.qs);
+    var parts = (q.parts || []).map(function (p, idx) {
+        var key = q.id + ':' + idx;
+        var val = S.awarded[key];
+        var open = S.revealed[key];
+        return '<div style="border-left:3px solid var(--gold-500,#eab308); padding:10px 0 10px 14px; margin:14px 0;">'
+            + '<div style="font-weight:700; color:var(--text-main); font-size:0.95rem;">' + p.label + ' ' + caf2ExamEsc(p.text) + '</div>'
+            + '<div style="font-size:0.78rem; color:var(--text-muted); margin-top:3px;">' + (p.marks || 0) + ' mark(s)</div>'
+            + '<textarea rows="5" placeholder="Write your computational workings and answer here..." '
+            + 'style="width:100%; margin-top:8px; padding:10px; border-radius:10px; '
+            + 'background:var(--bg-input,#0d1527); color:var(--text-main); border:1px solid var(--border-color,#1e293b); font-family:Consolas, Monaco, monospace; font-size:0.88rem;" '
+            + 'oninput="caf2ExamDraft(\'' + key + '\', this.value)">' + caf2ExamEsc((window.__caf2draft && window.__caf2draft[key]) || '') + '</textarea>'
+            + '<div style="margin-top:8px; display:flex; gap:8px; align-items:center;">'
+            + '<button type="button" class="btn btn-outline" style="padding:6px 12px; font-size:0.8rem;" '
+            + 'onclick="caf2ExamReveal(\'' + key + '\')">' + (open ? 'Hide Model Solution' : 'Reveal Model Solution') + '</button>'
+            + '</div>'
+            + (open ? '<div style="margin-top:10px; padding:14px; border-radius:10px; background:rgba(74,222,128,0.06); '
+              + 'border:1px solid rgba(74,222,128,0.25);">'
+              + '<div style="font-size:0.8rem; font-weight:700; color:#4ade80; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Model Solution & Workings</div>'
+              + '<div style="font-size:0.88rem; color:var(--text-main); white-space:pre-wrap; font-family:Consolas, Monaco, monospace; line-height:1.55; background:rgba(0,0,0,0.3); padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); overflow-x:auto;">' + caf2ExamEsc(q.modelAnswer) + '</div>'
+              + (q.markingGuide ? '<div style="font-size:0.82rem; color:var(--text-muted); margin-top:10px;"><strong>Marking Rubric:</strong> ' + caf2ExamEsc(q.markingGuide) + '</div>' : '')
+              + (q.examinerWarn ? '<div style="font-size:0.82rem; color:#f87171; margin-top:8px; background:rgba(239,68,68,0.08); padding:8px 12px; border-radius:8px; border-left:3px solid #ef4444;"><strong>Examiner Note:</strong> ' + caf2ExamEsc(q.examinerWarn) + '</div>' : '')
+              + (q.statuteRef ? '<div style="font-size:0.80rem; color:var(--gold-400,#eab308); margin-top:6px;"><strong>Statutory Authority:</strong> ' + caf2ExamEsc(q.statuteRef) + '</div>' : '')
+              + (q.romanUrdu ? '<div style="font-size:0.82rem; color:var(--text-muted); margin-top:6px; font-style:italic;">' + caf2ExamEsc(q.romanUrdu) + '</div>' : '')
+              + '<div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;">'
+              + '<span style="font-size:0.8rem; color:var(--text-muted); margin-right:4px;">Award Marks:</span>'
+              + Array.from({ length: (p.marks || 0) + 1 }, function (_, m) {
+                  return '<button type="button" class="btn ' + (val === m ? 'btn-primary' : 'btn-outline')
+                      + '" style="padding:4px 10px; font-size:0.78rem;" '
+                      + 'onclick="caf2ExamAward(\'' + key + '\',' + m + ')">' + m + '</button>';
+              }).join('')
+              + '</div></div>' : '')
+            + '</div>';
+    }).join('');
+
+    body.innerHTML =
+        '<div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">'
+        + '<div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">'
+        + '<span class="badge badge-gold">Question ' + (S.i + 1) + ' of ' + S.qs.length + '</span>'
+        + '<span class="badge badge-blue">' + q.marks + ' marks &bull; paper ' + total + ' marks</span>'
+        + '<span class="badge badge-neutral">' + caf2ExamEsc(q.kind || 'Numerical Computation') + '</span>'
+        + (q.isNumerical ? '<span class="badge" style="background:rgba(34,197,94,0.15); color:#22c55e; border:1px solid rgba(34,197,94,0.3);">Numerical Focus</span>' : '')
+        + '</div>'
+        + '<div style="font-size:0.82rem; color:var(--text-muted);">' + (q.timeMinutes ? (q.timeMinutes + ' mins') : '') + '</div>'
+        + '</div>'
+        + '<h3 style="margin:14px 0 8px; color:var(--text-main); font-size:1.05rem; font-weight:700;">'
+        + caf2ExamEsc(q.title || ('Question ' + (S.i + 1))) + '</h3>'
+        + '<div style="margin:8px 0 14px; color:var(--text-main); font-size:0.88rem; line-height:1.6; white-space:pre-wrap; background:var(--bg-card,#131f37); padding:14px 16px; border-radius:10px; border:1px solid var(--border-color,#1e293b); font-family:Consolas, Monaco, monospace; overflow-x:auto;">'
+        + caf2ExamEsc(q.qText) + '</div>'
+        + parts
+        + '<div style="font-size:0.78rem; color:var(--text-muted); margin-top:14px; padding-top:8px; border-top:1px solid var(--border-color,#1e293b);">'
+        + 'Source: ' + caf2ExamEsc(q.source || 'ICAP CAF 2 Practice Exam')
+        + (q.statuteRef ? ' &bull; <strong>Ref:</strong> ' + caf2ExamEsc(q.statuteRef) : '')
+        + '</div>'
+        + '<div style="display:flex; gap:8px; margin-top:18px; flex-wrap:wrap;">'
+        + '<button type="button" class="btn btn-outline" style="padding:8px 14px;" '
+        + (S.i === 0 ? 'disabled ' : '') + 'onclick="caf2ExamGo(-1)">&larr; Previous</button>'
+        + '<button type="button" class="btn btn-primary" style="padding:8px 14px;" '
+        + (S.i >= S.qs.length - 1 ? 'disabled ' : '') + 'onclick="caf2ExamGo(1)">Next &rarr;</button>'
+        + '<button type="button" class="btn btn-gold" style="padding:8px 14px;" onclick="caf2ExamFinish()">Finish Paper</button>'
+        + '</div>';
+    var chTitle = (CAF2_EXAM_BANK.chapterTitles && CAF2_EXAM_BANK.chapterTitles[String(q.chapter)]) || q.chapterTitle || '';
+    document.getElementById('caf2-exam-title').textContent =
+        'CAF-2 Exam Paper — Chapter ' + q.chapter + ': ' + chTitle;
+}
+
+function caf2ExamDraft(key, val) {
+    window.__caf2draft = window.__caf2draft || {};
+    window.__caf2draft[key] = val;
+}
+
+function caf2ExamReveal(key) {
+    var S = CAF2_EXAM_STATE;
+    S.revealed[key] = !S.revealed[key];
+    caf2ExamPaint();
+}
+
+function caf2ExamAward(key, marks) {
+    var S = CAF2_EXAM_STATE;
+    S.awarded[key] = marks;
+    caf2ExamPaint();
+}
+
+function caf2ExamGo(step) {
+    var S = CAF2_EXAM_STATE;
+    var next = S.i + step;
+    if (next < 0 || next >= S.qs.length) return;
+    S.i = next;
+    caf2ExamPaint();
+}
+
+function caf2ExamFinish() {
+    var S = CAF2_EXAM_STATE;
+    var awarded = 0, possible = 0, attempted = 0;
+    S.qs.forEach(function (q) {
+        (q.parts || []).forEach(function (p, idx) {
+            var key = q.id + ':' + idx;
+            possible += p.marks || 0;
+            if (typeof S.awarded[key] === 'number') { awarded += S.awarded[key]; attempted++; }
+        });
+    });
+    var body = document.getElementById('caf2-exam-body');
+    if (typeof practiceCentrePersistSession === 'function') {
+        practiceCentrePersistSession({
+            version: 'caf2-exam-1',
+            sessionId: 'caf2ex-' + S.chapterId + '-' + Date.now().toString(36),
+            subjectId: 'caf2',
+            label: 'CAF-2 Exam Paper — ' + (S.qs[0] ? (S.qs[0].chapterTitle || '') : ''),
+            mode: 'EXAM_LONGFORM',
+            startedAt: new Date().toISOString(),
+            finishedAt: new Date().toISOString(),
+            totals: { questions: S.qs.length, awarded: awarded, marks: possible }
+        });
+    }
+    if (typeof renderRealStats === 'function') renderRealStats();
+    var pct = possible ? Math.round(awarded / possible * 100) : 0;
+    body.innerHTML = '<div style="text-align:center; padding:26px 10px;">'
+        + '<div class="badge badge-gold">Paper Complete</div>'
+        + '<div style="font-size:2.4rem; font-weight:800; margin:14px 0 4px; color:'
+        + (pct >= 50 ? '#4ade80' : '#f87171') + ';">' + pct + '%</div>'
+        + '<div style="color:var(--text-muted);">' + awarded + ' of ' + possible + ' marks'
+        + ' &bull; ' + attempted + ' parts marked</div>'
+        + '<p style="color:var(--text-muted); font-size:0.85rem; margin-top:16px; line-height:1.6;">'
+        + 'Marked against the model answer outline and the marking guidance. '
+        + 'These numerical questions are grounded in the ICAP CAF-2 syllabus '
+        + 'for exam-standard practice.</p>'
+        + '<button type="button" class="btn btn-primary" style="margin-top:10px;" onclick="caf2ExamClose()">Close</button>'
+        + '</div>';
+}
+
+function caf2ExamMount() {
+    if (document.getElementById('caf2-exam-modal')) return;
+    var el = document.createElement('div');
+    el.id = 'caf2-exam-modal';
+    el.style.cssText = 'position:fixed; inset:0; z-index:100001; display:none; '
+        + 'align-items:center; justify-content:center; padding:16px; '
+        + 'background:rgba(3,11,20,0.85);';
+    el.innerHTML = '<div style="max-width:960px; width:100%; max-height:92vh; overflow:auto; '
+        + 'background:var(--bg-surface,#0b1526); border:1px solid var(--border-color,#1e293b); '
+        + 'border-radius:16px; padding:24px; box-shadow:0 20px 40px rgba(0,0,0,0.6);">'
+        + '<div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">'
+        + '<h2 id="caf2-exam-title" style="margin:0; font-size:1.15rem; color:var(--text-main);">CAF-2 Exam Paper</h2>'
+        + '<button type="button" class="btn btn-outline" style="padding:6px 12px;" onclick="caf2ExamClose()">Close</button>'
+        + '</div>'
+        + '<div id="caf2-exam-body" style="margin-top:14px;"></div>'
+        + '</div>';
+    document.body.appendChild(el);
+    el.addEventListener('click', function (ev) { if (ev.target === el) caf2ExamClose(); });
+}
+
+if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', caf2ExamMount);
+    } else {
+        caf2ExamMount();
+    }
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && CAF2_EXAM_STATE.qs.length) caf2ExamClose();
+    });
+}
+/* ======================= end of CAF-2 exam paper UI ======================= */
+
+
+/* ===================== ACCA Foundation study library ======================
+ * The six uploaded ACCA Foundation study texts, filed by the paper their own
+ * syllabus names (the filenames were legacy and did not match their contents).
+ * A book without a reliable chapter table opens whole rather than showing
+ * page numbers that could be wrong.
+ * ========================================================================= */
+function accaBooks() {
+    return (typeof ACCA_FOUNDATION_BOOKS !== 'undefined') ? ACCA_FOUNDATION_BOOKS.books : [];
+}
+
+let currentAccaBookId = null;
+
+function renderAccaStudyLibrary() {
+    const container = document.getElementById('acca-study-library');
+    if (!container) return;
+    const books = accaBooks();
+    if (!books.length) {
+        container.innerHTML = planEmptyNoticeHtml('the ACCA Foundation study library');
+        return;
+    }
+    let totalChapters = 0;
+    books.forEach(function (b) { totalChapters += b.chapters.length; });
+
+    let html = '';
+    html += '<div class="section-title">';
+    html += '  <span>ACCA Foundation &mdash; Study Texts &amp; Chapter Navigator</span>';
+    html += '  <span class="badge badge-gold">Foundations in Accountancy &bull; ' + books.length +
+            ' Volumes &bull; ' + totalChapters + ' Chapters</span>';
+    html += '</div>';
+    html += '<div class="study-level-tabs" id="acca-study-tabs">';
+    books.forEach(function (b) {
+        const badgeStyle = 'background:rgba(' + hexToRgb(b.accent) + ',0.2); color:' +
+            b.accent + '; border:1px solid ' + b.accent + ';';
+        const cls = 'study-level-btn col' + (b.id === currentAccaBookId ? ' active' : '');
+        const tip = b.code + ' - ' + b.title + ' - ' + (b.chapters.length || 'no') +
+            ' chapters - ' + b.pdfPages + ' pages';
+        html += '<button type="button" class="' + cls + '" title="' + mmEsc(tip) + '"' +
+                ' onclick="switchAccaBook(\'' + b.id + '\')">';
+        html += '  <span class="caf-tab-code">' + mmEsc(b.code) + '</span>';
+        html += '  <span class="caf-tab-name">' + mmEsc(b.title) + '</span>';
+        html += '  <span class="badge" style="' + badgeStyle + '">' +
+                (b.chapters.length || b.sizeMB) + (b.chapters.length ? ' Chapters' : '') + '</span>';
+        html += '</button>';
+    });
+    html += '</div>';
+    html += '<div id="acca-book-content" class="study-level-content active"></div>';
+    container.innerHTML = html;
+
+    const start = books.find(function (b) { return b.id === currentAccaBookId; }) || books[0];
+    switchAccaBook(start ? start.id : '');
+}
+
+function switchAccaBook(bookId) {
+    document.querySelectorAll('#acca-study-tabs .study-level-btn').forEach(function (btn) {
+        btn.classList.remove('active');
+    });
+    const activeBtn = document.querySelector('#acca-study-tabs button[onclick*="' + bookId + '"]');
+    if (activeBtn) activeBtn.classList.add('active');
+
+    const container = document.getElementById('acca-book-content');
+    if (!container) return;
+    const book = accaBooks().find(function (b) { return b.id === bookId; });
+    if (!book) return;
+    currentAccaBookId = bookId;
+
+    let html = '';
+    html += '<div class="caf-book-header" style="background:' + book.accent + ';">';
+    html += '  <div>';
+    html += '    <h3>' + mmEsc(book.code) + ' &ndash; ' + mmEsc(book.title) + '</h3>';
+    html += '    <p>' + (book.chapters.length ? book.chapters.length + ' chapters &bull; ' : '') +
+            book.pdfPages + ' pages &bull; ' + mmEsc(book.edition) + ' &bull; ' + mmEsc(book.sizeMB) + '</p>';
+    html += '  </div>';
+    html += '  <button type="button" class="btn btn-outline" title="Open the whole ' +
+            mmEsc(book.code) + ' volume" onclick="openAccaBook(\'' + mmEsc(book.file) + '\')">';
+    html += '    <span>Open Full PDF</span>';
+    html += '  </button>';
+    html += '</div>';
+
+    if (book.chapters.length) {
+        html += '<div class="caf-chapter-list">';
+        book.chapters.forEach(function (c, ci) {
+            html += '<button type="button" class="caf-chapter-btn"' +
+                    ' title="' + mmEsc(c.t) + ' &mdash; opens the PDF at page ' + c.p + '"' +
+                    ' onclick="openAccaChapter(\'' + bookId + '\',' + ci + ')">';
+            html += '  <span class="caf-chapter-num">Ch ' + c.n + '</span>';
+            html += '  <span class="caf-chapter-name">' + mmEsc(c.t) + '</span>';
+            html += '  <span class="caf-chapter-page">p.' + c.p + '</span>';
+            html += '</button>';
+        });
+        html += '</div>';
+    } else {
+        html += '<div style="padding:24px; color:var(--text-muted); font-size:0.9rem;">' +
+                'This edition opens as a whole PDF. The chapter page map for this ' +
+                'edition could not be read reliably, so no (possibly wrong) chapter ' +
+                'numbers are shown &mdash; use Open Full PDF and the PDF\'s own contents page.' +
+                '</div>';
+    }
+    container.innerHTML = html;
+    enhanceTabStrip(document.getElementById('acca-study-tabs'));
+}
+
+function openAccaBook(file) {
+    const book = accaBooks().find(function (b) { return b.file === file; });
+    openPdfReader(file, book ? (book.code + ' - ' + book.title) : file, 1, {
+        offset: (book && book.offset) || 1,
+        chapters: (book && book.chapters) || [],
+        pdfPages: (book && book.pdfPages) || 0
+    });
+}
+
+function openAccaChapter(bookId, chapterIndex) {
+    const book = accaBooks().find(function (b) { return b.id === bookId; });
+    if (!book) return;
+    const chapter = book.chapters[chapterIndex];
+    if (!chapter) return;
+    openPdfReader(book.file, book.code + ' - ' + chapter.t, chapter.p, {
+        offset: book.offset || 1,
+        chapters: book.chapters,
+        pdfPages: book.pdfPages
+    });
+}
+/* ===================== end of ACCA Foundation study library UI ===================== */
 
 /* ==== end of CAF Practice Centre UI fragment ==== */
 /* ==== end of CAF Practice Centre block ==== */
