@@ -64,3 +64,21 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # The build job already proves the artifact is complete, but the whole
+      # point of this check is the step after that: the pages actually live on
+      # github.io. "The app loads and every book is 404" is exactly the failure
+      # a local build cannot see, so verify the real host and fail loudly.
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Wait for the CDN
+        run: sleep 20
+
+      - name: Verify every book is served by the live site
+        run: python _build/guards/verify_live_site.py "${{ steps.deployment.outputs.page_url }}"
