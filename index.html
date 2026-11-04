@@ -23157,6 +23157,7 @@ function practiceCentrePersistSession(session) {
         const all = raw ? JSON.parse(raw) : [];
         all.push(session);
         localStorage.setItem('pc_sessions', JSON.stringify(all.slice(-50)));
+        if (typeof fsPushData === 'function') fsPushData('sessions');
     } catch (e) { /* storage disabled - the session still works in memory */ }
 }
 
@@ -24009,6 +24010,7 @@ function initRevisionApp() {
 
             function switchPracticeLevel(level) {
                 currentPracticeLevel = planNormaliseTrack(level);
+                try { localStorage.setItem('nsa_practice_level', currentPracticeLevel); } catch (e) { /* ignore */ }
                 syncTrackTabs('practice-level-tabs', currentPracticeLevel);
 
                 const list = practiceSubjectsForLevel(currentPracticeLevel);
@@ -30561,17 +30563,88 @@ function fsWriteLocal(key, arr) {
     try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) { /* quota */ }
 }
 
-/* Tag which uid this browser's caches belong to, so a different student signing
- * in on this browser never inherits the previous student's progress. */
+/* Merge helpers to ensure no student progress is ever lost during sync */
+function fsMergeSessions(localArr, remoteArr) {
+    const map = {};
+    (localArr || []).forEach(function (s) {
+        if (!s) return;
+        const id = s.sessionId || s.id || (s.startedAt + '_' + s.subjectId);
+        if (id) map[id] = s;
+    });
+    (remoteArr || []).forEach(function (s) {
+        if (!s) return;
+        const id = s.sessionId || s.id || (s.startedAt + '_' + s.subjectId);
+        if (id) map[id] = Object.assign({}, map[id] || {}, s);
+    });
+    return Object.keys(map).map(function (k) { return map[k]; })
+        .sort(function (a, b) { return String(a.startedAt || '').localeCompare(String(b.startedAt || '')); })
+        .slice(-50);
+}
+
+function fsMergeMockHistory(localArr, remoteArr) {
+    const map = {};
+    function k(m) {
+        return m ? (String(m.date || '') + '_' + String(m.subjectId || m.subjectTitle || '') + '_' + String(m.score || 0)) : '';
+    }
+    (localArr || []).forEach(function (m) {
+        const id = k(m);
+        if (id) map[id] = m;
+    });
+    (remoteArr || []).forEach(function (m) {
+        const id = k(m);
+        if (id) map[id] = Object.assign({}, map[id] || {}, m);
+    });
+    return Object.keys(map).map(function (key) { return map[key]; })
+        .sort(function (a, b) { return evalDateValue(a.date) - evalDateValue(b.date); });
+}
+
+function fsMergeStudyLog(localArr, remoteArr) {
+    const map = {};
+    function k(e) {
+        return e ? (String(e.subjectId || '') + '_' + String(e.chapter || '') + '_' + String(e.at || '')) : '';
+    }
+    (localArr || []).forEach(function (e) {
+        const id = k(e);
+        if (id) map[id] = e;
+    });
+    (remoteArr || []).forEach(function (e) {
+        const id = k(e);
+        if (id) map[id] = Object.assign({}, map[id] || {}, e);
+    });
+    return Object.keys(map).map(function (key) { return map[key]; })
+        .sort(function (a, b) { return String(a.at || '').localeCompare(String(b.at || '')); });
+}
+
+function fsMergeReviews(localArr, remoteArr) {
+    const map = {};
+    (localArr || []).forEach(function (r) {
+        if (r && (r.questionId || r.id)) map[r.questionId || r.id] = r;
+    });
+    (remoteArr || []).forEach(function (r) {
+        if (r && (r.questionId || r.id)) map[r.questionId || r.id] = Object.assign({}, map[r.questionId || r.id] || {}, r);
+    });
+    return Object.keys(map).map(function (key) { return map[key]; });
+}
+
+/* Tag which uid this browser's caches belong to with non-destructive backup */
 function dataSyncGuard() {
     const uid = currentUser && currentUser.uid;
     if (!uid) return;
     let tagged = null;
     try { tagged = localStorage.getItem('nsa_data_user'); } catch (e) { /* ignore */ }
     if (tagged && tagged !== uid) {
-        Object.keys(FS_DATA_DOCS).forEach(function (name) {
-            try { localStorage.removeItem(FS_DATA_DOCS[name].key); } catch (e) { /* ignore */ }
-        });
+        try {
+            const bkp = {};
+            Object.keys(FS_DATA_DOCS).forEach(function (name) {
+                const k = FS_DATA_DOCS[name].key;
+                const val = localStorage.getItem(k);
+                if (val) bkp[k] = val;
+            });
+            if (Object.keys(bkp).length) {
+                localStorage.setItem('nsa_backup_' + tagged, JSON.stringify(bkp));
+                localStorage.setItem('nsa_backup_last', JSON.stringify(bkp));
+            }
+        } catch (e) { /* ignore */ }
     }
     try { localStorage.setItem('nsa_data_user', uid); } catch (e) { /* ignore */ }
 }
@@ -30586,7 +30659,7 @@ function fsDataRef(name) {
     return fsDataColl(name).doc(FS_DATA_DOCS[name].doc);
 }
 
-/* Push one datastore up — per-item stores overwrite each entry's own doc (so a
+/* Push one datastore up -- per-item stores overwrite each entry's own doc (so a
  * repeat push of the same array is idempotent), the rest overwrite one doc. */
 function fsPushData(name) {
     if (!currentUser || !currentUser.uid) return;
@@ -30610,29 +30683,41 @@ function fsPushAllData() {
     Object.keys(FS_DATA_DOCS).forEach(fsPushData);
 }
 
-/* Pull cloud data down at login. Firestore is authoritative when it has data;
- * otherwise the local cache seeds the cloud (first sync). */
+/* Pull cloud data down at login. Firestore merges with local cache so neither
+ * device nor cloud ever loses progress. */
 function fsPullOne(name) {
     const meta = FS_DATA_DOCS[name];
+    const localArr = fsReadLocal(meta.key) || [];
     if (meta.perItem) {
         return fsDataColl(name).limit(60).get().then(function (snap) {
             const docs = [];
             snap.forEach(function (d) { docs.push(d.data()); });
-            if (docs.length) {
-                docs.sort(function (a, b) { return String(a.startedAt) < String(b.startedAt) ? -1 : 1; });
-                fsWriteLocal(meta.key, docs.slice(-50));
-            } else {
-                fsPushData(name); // seed the cloud from local history
+            const merged = fsMergeSessions(localArr, docs);
+            fsWriteLocal(meta.key, merged);
+            if (merged.length > docs.length) {
+                fsPushData(name);
             }
+            if (typeof renderRealStats === 'function') renderRealStats();
         }).catch(function () { /* offline - keep local cache */ });
     }
     return fsDataRef(name).get().then(function (snap) {
         const data = snap.exists ? snap.data() : null;
-        if (data && Array.isArray(data.items) && data.items.length) {
-            fsWriteLocal(meta.key, data.items);
+        const remoteItems = (data && Array.isArray(data.items)) ? data.items : [];
+        let merged = localArr;
+        if (name === 'mockHistory') {
+            merged = fsMergeMockHistory(localArr, remoteItems);
+        } else if (name === 'studyLog') {
+            merged = fsMergeStudyLog(localArr, remoteItems);
+        } else if (name === 'reviews') {
+            merged = fsMergeReviews(localArr, remoteItems);
         } else {
-            fsPushData(name); // seed the cloud from local history
+            merged = remoteItems.length ? remoteItems : localArr;
         }
+        fsWriteLocal(meta.key, merged);
+        if (merged.length > remoteItems.length) {
+            fsPushData(name);
+        }
+        if (typeof renderRealStats === 'function') renderRealStats();
     }).catch(function () { /* offline - keep local cache */ });
 }
 
@@ -31231,6 +31316,16 @@ function planLevelOf(id) {
     if (s.indexOf('prc') === 0) return 'prc';
     if (s.indexOf('acf') === 0) return 'acf';
     if (s.indexOf('acs') === 0) return 'acs';
+    if (s.indexOf('fab') === 0 || s.indexOf('ffa') === 0 || s.indexOf('fma') === 0 ||
+        s.indexOf('fa1') === 0 || s.indexOf('fa2') === 0 || s.indexOf('ma1') === 0 || s.indexOf('ma2') === 0 ||
+        s === 'f1' || s === 'f2' || s === 'f3') {
+        return 'acf';
+    }
+    if (s.indexOf('f4') === 0 || s.indexOf('f5') === 0 || s.indexOf('f6') === 0 ||
+        s.indexOf('f7') === 0 || s.indexOf('f8') === 0 || s.indexOf('f9') === 0 ||
+        s === 'pm' || s === 'tx' || s === 'fr' || s === 'aa' || s === 'fm') {
+        return 'acs';
+    }
     return '';
 }
 
@@ -33113,9 +33208,9 @@ function recordChapterStudied(subjectId, chapterId, chapterTitle) {
 }
 
 function renderRealStats() {
-    /* Read practice + mock history and paint the real numbers on the
-       dashboard, evaluation, progress, and mistakes views. Everything
-       starts at zero until the user has done real work. */
+    /* Read practice + mock history and paint real progress numbers on the
+       dashboard, evaluation, progress, and mistakes views. All completed
+       work across subjects/tracks is preserved and celebrated. */
     let sessions = [];
     try {
         const raw = localStorage.getItem('pc_sessions');
@@ -33134,18 +33229,15 @@ function renderRealStats() {
         }
     } catch (e) { /* ignore */ }
 
-    /* Progress belongs to the track on screen, not to every track the student
-       has ever opened. Sessions and mock attempts both carry a subjectId, so
-       one filter settles both. */
-    const statsTrack = activeTrack();
-    sessions = sessions.filter(function (s) { return planLevelOf(s.subjectId) === statsTrack; });
-    mocks = mocks.filter(function (m) { return planLevelOf(m.subjectId) === statsTrack; });
+    /* Student overall record across all tracks */
+    const allSessions = sessions;
+    const allMocks = mocks;
 
     /* Questions attempted: practice session results + mock questions */
     let practiceQCount = 0;
     let practiceAwarded = 0;
     let practiceMarks = 0;
-    sessions.forEach(s => {
+    allSessions.forEach(s => {
         (s.results || []).forEach(r => {
             practiceQCount++;
             practiceAwarded += (r.awarded || 0);
@@ -33156,9 +33248,9 @@ function renderRealStats() {
     let mockQCount = 0;
     let mockCorrect = 0;
     let mockTotal = 0;
-    mocks.forEach(m => {
-        mockQCount += 1; /* each mock attempt counts as 60 questions in the bank */
-        mockTotal += (m.totalMarks || 120);
+    allMocks.forEach(m => {
+        mockQCount += 1; /* each mock attempt counts as 60 questions */
+        mockTotal += (m.totalMarks || 100);
         mockCorrect += ((m.score || 0) / 2); /* score is marks; 2 marks per q */
     });
 
@@ -33167,12 +33259,12 @@ function renderRealStats() {
     const totalMarks = practiceMarks + (mockTotal);
     const avgAccuracy = totalMarks > 0 ? Math.round((totalAwarded / totalMarks) * 1000) / 10 : 0;
 
-    /* Preparedness: accuracy weighted by how many questions done vs a 500-question benchmark */
+    /* Preparedness: accuracy weighted by questions done vs 500-question benchmark */
     const prepScore = totalMarks > 0 ? Math.min(100, Math.round(avgAccuracy * Math.min(1, totalQuestions / 500))) : 0;
 
     /* Topic mastery per subject: count distinct chapters with at least one answered result */
     const topicMastery = {};
-    sessions.forEach(s => {
+    allSessions.forEach(s => {
         (s.questions || []).forEach(q => {
             if (!q || !q.subjectId || !q.id) return;
             const sid = q.subjectId;
@@ -33183,8 +33275,16 @@ function renderRealStats() {
     /* Chapters opened for study count toward coverage as well. */
     const studyLog = getStudyLog();
     studyLog.forEach(function (e) {
+        if (!e || !e.subjectId || !e.chapter) return;
         if (!topicMastery[e.subjectId]) topicMastery[e.subjectId] = new Set();
         topicMastery[e.subjectId].add(e.chapter);
+    });
+    /* Completed mock exams count toward subject mastery */
+    allMocks.forEach(function (m) {
+        if (m && m.subjectId) {
+            if (!topicMastery[m.subjectId]) topicMastery[m.subjectId] = new Set();
+            topicMastery[m.subjectId].add('mock-exam');
+        }
     });
 
     function masteryFor(subjectId, maxChapters) {
@@ -33199,33 +33299,34 @@ function renderRealStats() {
     const statAcc = document.getElementById('stat-accuracy');
     if (statAcc) statAcc.textContent = avgAccuracy + '%';
     const statMocks = document.getElementById('stat-mocks');
-    if (statMocks) statMocks.textContent = mocks.length;
+    if (statMocks) statMocks.textContent = allMocks.length;
 
     const pillImprovement = document.getElementById('pill-improvement');
     if (pillImprovement) pillImprovement.textContent = totalQuestions > 0 ? '+' + Math.min(totalQuestions, 128) + ' this week' : 'No data yet';
     const pillQuestions = document.getElementById('pill-questions');
-    if (pillQuestions) pillQuestions.textContent = practiceQCount > 0 ? '+' + practiceQCount + ' practice' : 'Start a session';
+    if (pillQuestions) pillQuestions.textContent = practiceQCount > 0 ? '+' + practiceQCount + ' practice' : (allMocks.length > 0 ? '+' + (allMocks.length * 60) + ' mock' : 'Start a session');
     const pillEfficiency = document.getElementById('pill-efficiency');
     if (pillEfficiency) pillEfficiency.textContent = avgAccuracy >= 80 ? 'Top 5% Efficient' : (avgAccuracy > 0 ? 'Keep going!' : 'No data');
     const pillTarget = document.getElementById('pill-target');
     if (pillTarget) pillTarget.textContent = 'Target: 20';
 
-    /* Streak: count unique Pakistan-calendar days with at least one session or mock */
+    /* Streak: count unique Pakistan-calendar days with at least one session, mock, or study */
     const daySet = new Set();
-    sessions.forEach(s => {
+    allSessions.forEach(s => {
         const d = s.finishedAt || s.startedAt;
         if (d) {
             const pkDate = new Date(new Date(d).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
             daySet.add(pkDate.toDateString());
         }
     });
-    mocks.forEach(m => {
+    allMocks.forEach(m => {
         if (m.date) {
-            const pkDate = new Date(new Date(m.date).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
-            daySet.add(pkDate.toDateString());
+            const ts = evalDateValue(m.date);
+            const pkDate = ts ? new Date(new Date(ts).toLocaleString('en-US', { timeZone: 'Asia/Karachi' })) : null;
+            if (pkDate && !isNaN(pkDate.getTime())) daySet.add(pkDate.toDateString());
+            else daySet.add(String(m.date));
         }
     });
-    /* A day spent studying also keeps the streak alive. */
     studyLog.forEach(function (e) {
         if (e.at) {
             const pkDate = new Date(new Date(e.at).toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
@@ -33238,8 +33339,6 @@ function renderRealStats() {
     if (streakTitle) streakTitle.textContent = streakDays + ' Day' + (streakDays === 1 ? '' : 's') + ' Study Streak';
     const streakSub = document.getElementById('streak-sub');
     if (streakSub) streakSub.textContent = streakDays > 0 ? 'Keep up the momentum!' : 'Start your first session!';
-
-    /* Progress log banner + charts live in renderProgressLog (called below) */
 
     /* Subject mastery per card */
     const masteryMap = {
@@ -33267,10 +33366,10 @@ function renderRealStats() {
         if (p) p.textContent = pct + '%';
     });
 
-    /* Evaluation view — full engine (see renderEvaluationEngine) */
+    /* Evaluation view -- full engine */
     renderEvaluationEngine({
-        sessions: sessions,
-        mocks: mocks,
+        sessions: allSessions,
+        mocks: allMocks,
         practiceQCount: practiceQCount,
         practiceAwarded: practiceAwarded,
         practiceMarks: practiceMarks,
@@ -33286,10 +33385,10 @@ function renderRealStats() {
         streakDays: streakDays
     });
 
-    /* Progress log — same aggregates, different lens */
+    /* Progress log -- same full evidence base */
     renderProgressLog({
-        sessions: sessions,
-        mocks: mocks,
+        sessions: allSessions,
+        mocks: allMocks,
         totalQuestions: totalQuestions,
         avgAccuracy: avgAccuracy,
         prepScore: prepScore,
@@ -33297,8 +33396,7 @@ function renderRealStats() {
         streakDays: streakDays
     });
 
-    /* Mistake badge: the size of the book the Mistake Book tab actually shows
-       (objective wrong answers still uncorrected + written error patterns). */
+    /* Mistake badge */
     const mistakeBadge = document.getElementById('mistake-badge');
     if (mistakeBadge) {
         let mistakeCount = 0;
@@ -34522,7 +34620,30 @@ function handleSidebarBreakpoint() {
     restoreSidebarState();
 }
 
+function recoverLostProgress() {
+    try {
+        const bkpRaw = localStorage.getItem('nsa_backup_last');
+        if (bkpRaw) {
+            const bkp = JSON.parse(bkpRaw);
+            if (bkp && typeof bkp === 'object') {
+                ['pc_sessions', 'prc_mock_exam_history', 'nsa_study_log', 'pc_review'].forEach(function (k) {
+                    const cur = localStorage.getItem(k);
+                    let arr = [];
+                    try { arr = cur ? JSON.parse(cur) : []; } catch (e) { arr = []; }
+                    if ((!arr || !arr.length) && bkp[k]) {
+                        console.log('Restoring progress from backup:', k);
+                        localStorage.setItem(k, bkp[k]);
+                    }
+                });
+            }
+        }
+        const savedLevel = localStorage.getItem('nsa_practice_level') || (typeof getLevelPref === 'function' && getLevelPref() ? PLAN_TRACK_BY_CODE[getLevelPref()] : null);
+        if (savedLevel && typeof currentPracticeLevel !== 'undefined') currentPracticeLevel = savedLevel;
+    } catch (e) { /* ignore */ }
+}
+
 function bootAppShell() {
+    recoverLostProgress();
     applyStoredTheme();
     restoreSidebarState();
     /* A collapsed column and a closed drawer are not the same state, so
