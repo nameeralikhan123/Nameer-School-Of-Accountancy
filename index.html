@@ -32443,13 +32443,88 @@ document.addEventListener('click', function (e) {
 
    Everything is read back from the student's own saved work; nothing is
    invented, and with no evidence the book stays empty and says so. */
-function practiceObjectiveMistakes() {
+
+function getResolvedMistakesMap() {
+    try {
+        const raw = localStorage.getItem('prc_resolved_mistakes');
+        return (raw && typeof raw === 'string') ? JSON.parse(raw) : {};
+    } catch (e) {
+        return {};
+    }
+}
+
+function resolveMistakeItem(key) {
+    if (!key) return;
+    try {
+        const map = getResolvedMistakesMap();
+        map[key] = Date.now();
+        localStorage.setItem('prc_resolved_mistakes', JSON.stringify(map));
+        if (typeof renderMistakesView === 'function') renderMistakesView();
+        if (typeof renderRealStats === 'function') renderRealStats();
+    } catch (e) {}
+}
+
+function unresolveMistakeItem(key) {
+    if (!key) return;
+    try {
+        const map = getResolvedMistakesMap();
+        delete map[key];
+        localStorage.setItem('prc_resolved_mistakes', JSON.stringify(map));
+        if (typeof renderMistakesView === 'function') renderMistakesView();
+        if (typeof renderRealStats === 'function') renderRealStats();
+    } catch (e) {}
+}
+
+function clearAllResolvedMistakes() {
+    try {
+        localStorage.removeItem('prc_resolved_mistakes');
+        if (typeof renderMistakesView === 'function') renderMistakesView();
+        if (typeof renderRealStats === 'function') renderRealStats();
+    } catch (e) {}
+}
+
+function formatAnsLabel(val) {
+    if (val === null || val === undefined || val === '') return '—';
+    if (Array.isArray(val)) {
+        if (!val.length) return '—';
+        return val.map(function (v) {
+            return (typeof v === 'number') ? String.fromCharCode(65 + v) : String(v);
+        }).join(', ');
+    }
+    if (typeof val === 'number') return String.fromCharCode(65 + val);
+    if (typeof val === 'string' && /^[0-9]+$/.test(val)) {
+        return String.fromCharCode(65 + parseInt(val, 10));
+    }
+    return String(val);
+}
+
+function isOptionMatch(target, idx) {
+    if (target === null || target === undefined || target === '') return false;
+    if (Array.isArray(target)) {
+        return target.some(function (v) { return isOptionMatch(v, idx); });
+    }
+    if (typeof target === 'number') return target === idx;
+    const str = String(target).trim().toUpperCase();
+    if (str === String(idx)) return true;
+    if (str === String.fromCharCode(65 + idx)) return true;
+    return false;
+}
+
+function practiceObjectiveMistakes(includeResolved) {
     const byKey = {};
+    const resolvedMap = getResolvedMistakesMap();
 
     function record(entry, isCorrect, whenMs) {
         if (!entry || !entry.qid) return;
         const key = (entry.subjectId || '') + '::' + entry.qid;
-        if (isCorrect) { delete byKey[key]; return; }
+        if (isCorrect) {
+            delete byKey[key];
+            return;
+        }
+        const resolvedAt = resolvedMap[key];
+        const isResolved = !!(resolvedAt && resolvedAt >= (whenMs || 0));
+        if (isResolved && !includeResolved) return;
+
         const prev = byKey[key];
         if (!prev || (whenMs || 0) >= (prev._ts || 0)) {
             byKey[key] = {
@@ -32466,6 +32541,7 @@ function practiceObjectiveMistakes() {
                 working: entry.working || '',
                 at: entry.at || '',
                 source: entry.source || '',
+                resolved: isResolved,
                 _ts: whenMs || 0
             };
         }
@@ -32489,9 +32565,6 @@ function practiceObjectiveMistakes() {
         (s.questions || []).forEach(function (q) { if (q && q.id) byId[q.id] = q; });
         const wrongById = {};
         (s.wrong || []).forEach(function (w) { if (w && w.qid) wrongById[w.qid] = w; });
-        /* A long-form set marks every figure on its own scale, so its 2 and 3
-           mark figures belong here too. The varied marks this check screens
-           out come from the written-answer engine (CAF), not from these. */
         const longForm = s.mode === 'LONGFORM_QUIZ';
         (s.results || []).forEach(function (r) {
             if (!r) return;
@@ -32517,8 +32590,7 @@ function practiceObjectiveMistakes() {
         });
     });
 
-    /* Mock-exam history stores only the items answered wrongly, so a mock
-       mistake can be added but not cleared by a later attempt. */
+    /* Mock-exam history */
     let mocks = [];
     try {
         const parsed = JSON.parse(localStorage.getItem('prc_mock_exam_history') || '[]');
@@ -32552,14 +32624,14 @@ function practiceObjectiveMistakes() {
     return out.filter(function (it) { return it.qText; });
 }
 
-function practiceMistakeBookFull() {
+function practiceMistakeBookFull(includeResolved) {
     const written = (typeof practiceMistakeBook === 'function' && typeof practiceCentreLoadSessions === 'function')
         ? practiceMistakeBook(practiceCentreLoadSessions())
         : { totalErrorInstances: 0, entries: [] };
-    const objective = (typeof practiceObjectiveMistakes === 'function') ? practiceObjectiveMistakes() : [];
+    const objective = (typeof practiceObjectiveMistakes === 'function') ? practiceObjectiveMistakes(includeResolved) : [];
     return {
         objective: objective,
-        objectiveCount: objective.length,
+        objectiveCount: objective.filter(function(x) { return !x.resolved; }).length,
         written: written,
         writtenCount: (written && written.totalErrorInstances) || 0
     };
@@ -32571,107 +32643,325 @@ function mmChapterLabel(chapterId) {
     return m ? ('Chapter ' + m[1]) : String(chapterId || '');
 }
 
+var MISTAKE_BOOK_STATE = {
+    subjectFilter: 'all',
+    tab: 'objective', // 'objective', 'written', 'resolved'
+    searchQuery: '',
+    attemptingKey: null,
+    userAnswer: null,
+    attemptFeedback: null
+};
+
+function setMistakeSubjectFilter(sid) {
+    MISTAKE_BOOK_STATE.subjectFilter = sid;
+    renderMistakesView();
+}
+
+function setMistakeTab(tab) {
+    MISTAKE_BOOK_STATE.tab = tab;
+    renderMistakesView();
+}
+
+function setMistakeSearch(query) {
+    MISTAKE_BOOK_STATE.searchQuery = query || '';
+    renderMistakesView();
+}
+
+function startMistakeReAttempt(key) {
+    MISTAKE_BOOK_STATE.attemptingKey = key;
+    MISTAKE_BOOK_STATE.userAnswer = null;
+    MISTAKE_BOOK_STATE.attemptFeedback = null;
+    renderMistakesView();
+}
+
+function cancelMistakeReAttempt() {
+    MISTAKE_BOOK_STATE.attemptingKey = null;
+    MISTAKE_BOOK_STATE.userAnswer = null;
+    MISTAKE_BOOK_STATE.attemptFeedback = null;
+    renderMistakesView();
+}
+
+function selectMistakeOption(idx, isMulti) {
+    if (MISTAKE_BOOK_STATE.attemptFeedback) return;
+    if (isMulti) {
+        let cur = Array.isArray(MISTAKE_BOOK_STATE.userAnswer) ? MISTAKE_BOOK_STATE.userAnswer.slice() : [];
+        const existIdx = cur.indexOf(idx);
+        if (existIdx !== -1) cur.splice(existIdx, 1);
+        else cur.push(idx);
+        MISTAKE_BOOK_STATE.userAnswer = cur;
+    } else {
+        MISTAKE_BOOK_STATE.userAnswer = idx;
+    }
+    renderMistakesView();
+}
+
+function submitMistakeReAttempt(key, correctVal, isMulti) {
+    const ans = MISTAKE_BOOK_STATE.userAnswer;
+    if (ans === null || ans === undefined || (Array.isArray(ans) && ans.length === 0)) return;
+
+    let isCorrect = false;
+    if (isMulti && Array.isArray(correctVal) && Array.isArray(ans)) {
+        isCorrect = correctVal.length === ans.length && correctVal.every(function (v) { return isOptionMatch(ans, v); });
+    } else {
+        isCorrect = isOptionMatch(correctVal, ans);
+    }
+
+    if (isCorrect) {
+        MISTAKE_BOOK_STATE.attemptFeedback = { correct: true, msg: 'Correct! You mastered this question.' };
+        resolveMistakeItem(key);
+    } else {
+        MISTAKE_BOOK_STATE.attemptFeedback = { correct: false, msg: 'Still incorrect. Review the working below and try again.' };
+    }
+    renderMistakesView();
+}
+
 function renderMistakesView() {
     const container = document.getElementById('mistakes-view-container');
     if (!container) return;
 
     const book = (typeof practiceMistakeBookFull === 'function')
-        ? practiceMistakeBookFull()
+        ? practiceMistakeBookFull(true)
         : { objective: [], objectiveCount: 0, written: { entries: [], totalErrorInstances: 0 }, writtenCount: 0 };
-    const obj = book.objective || [];
+    
+    const allObj = book.objective || [];
     const entries = (book.written && book.written.entries) || [];
-
-    if (!obj.length && !entries.length) {
-        container.innerHTML = '<div class="card" style="text-align:center; padding:24px;">' +
-            '<p style="color:var(--text-muted);">No mistakes recorded yet. Answer a chapter quiz or a mock exam, or complete a written practice session, and the ones you miss will appear here.</p>' +
-            '</div>';
-        return;
-    }
+    const unresolvObj = allObj.filter(function (it) { return !it.resolved; });
+    const resolvedObj = allObj.filter(function (it) { return !!it.resolved; });
 
     const subjectLabel = function (sid) {
         const s = (typeof mmSubjectsList !== 'undefined' ? mmSubjectsList : []).find(function (x) { return x.id === sid; });
         return s ? (s.code || s.id) : (sid || '');
     };
     const letter = function (i) { return String.fromCharCode(65 + i); };
+
+    const subjMap = {};
+    allObj.forEach(function (it) {
+        if (it.subjectId) subjMap[it.subjectId] = (subjMap[it.subjectId] || 0) + 1;
+    });
+
+    let currentList = [];
+    if (MISTAKE_BOOK_STATE.tab === 'resolved') {
+        currentList = resolvedObj;
+    } else {
+        currentList = unresolvObj;
+    }
+
+    if (MISTAKE_BOOK_STATE.subjectFilter !== 'all') {
+        currentList = currentList.filter(function (it) {
+            return it.subjectId === MISTAKE_BOOK_STATE.subjectFilter;
+        });
+    }
+
+    if (MISTAKE_BOOK_STATE.searchQuery.trim()) {
+        const q = MISTAKE_BOOK_STATE.searchQuery.toLowerCase();
+        currentList = currentList.filter(function (it) {
+            return (it.qText || '').toLowerCase().indexOf(q) !== -1 ||
+                   (it.working || '').toLowerCase().indexOf(q) !== -1 ||
+                   (it.subjectId || '').toLowerCase().indexOf(q) !== -1;
+        });
+    }
+
     let html = '';
 
-    if (obj.length) {
-        html += '<div class="card" style="margin-bottom:16px;">' +
-            '<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">' +
-            '<h3 style="margin:0;">Objective questions to revisit</h3>' +
-            '<span class="badge badge-red">' + obj.length + '</span></div>' +
-            '<p style="color:var(--text-muted); font-size:0.85rem; margin:8px 0 0;">Every question you answered wrongly, most recent first. Answer one correctly in a later attempt and it leaves this list.</p>' +
-            '</div>';
+    html += '<div class="card" style="margin-bottom:18px; padding:18px 20px;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:14px;">' +
+        '<div>' +
+        '<h3 style="margin:0 0 4px 0; font-size:1.2rem; color:var(--text-main);">Mistake Review & Practice</h3>' +
+        '<p style="margin:0; font-size:0.85rem; color:var(--text-muted);">' +
+        'Re-attempt questions you previously missed until you achieve 100% mastery.' +
+        '</p>' +
+        '</div>' +
+        '<div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">' +
+        '<span class="badge badge-red">' + unresolvObj.length + ' Unresolved</span>' +
+        '<span class="badge badge-green">' + resolvedObj.length + ' Resolved</span>' +
+        (entries.length ? '<span class="badge badge-gold">' + entries.length + ' Written Patterns</span>' : '') +
+        '</div>' +
+        '</div>' +
 
-        html += obj.map(function (it) {
-            /* A pick-from-options item and a typed-figure item are both
-               objective mistakes, but they are answered differently, so they
-               are shown differently. */
-            const isOption = Array.isArray(it.options) && it.options.length > 0;
-            const opts = isOption ? (it.options || []).map(function (opt, idx) {
-                const isCorrect = idx === it.correct;
-                const isChosen = it.chosen !== null && it.chosen === idx;
-                const tone = isCorrect ? 'var(--emerald-400)' : (isChosen ? 'var(--rose-500)' : 'var(--text-muted)');
-                const mark = isCorrect ? ' \u2714' : (isChosen ? ' \u2718' : '');
-                return '<div style="display:flex; gap:8px; align-items:baseline; font-size:0.9rem; color:' + tone + ';">' +
-                    '<span style="font-weight:700;">' + letter(idx) + '.</span>' +
-                    '<span>' + opt + mark + '</span></div>';
+        '<div style="display:flex; gap:8px; border-bottom:1px solid var(--border-color); padding-bottom:12px; margin-bottom:14px; flex-wrap:wrap;">' +
+        '<button type="button" class="btn ' + (MISTAKE_BOOK_STATE.tab === 'objective' ? 'btn-primary' : 'btn-outline') + '" style="padding:6px 14px; font-size:0.82rem;" onclick="setMistakeTab(\'objective\')">' +
+        'Objective Mistakes (' + unresolvObj.length + ')' +
+        '</button>' +
+        (entries.length ? '<button type="button" class="btn ' + (MISTAKE_BOOK_STATE.tab === 'written' ? 'btn-primary' : 'btn-outline') + '" style="padding:6px 14px; font-size:0.82rem;" onclick="setMistakeTab(\'written\')">' +
+        'Written Error Patterns (' + entries.length + ')' +
+        '</button>' : '') +
+        '<button type="button" class="btn ' + (MISTAKE_BOOK_STATE.tab === 'resolved' ? 'btn-primary' : 'btn-outline') + '" style="padding:6px 14px; font-size:0.82rem;" onclick="setMistakeTab(\'resolved\')">' +
+        'Resolved Bank (' + resolvedObj.length + ')' +
+        '</button>' +
+        '</div>' +
+
+        (MISTAKE_BOOK_STATE.tab !== 'written' ? (
+        '<div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;">' +
+        '<div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">' +
+        '<button type="button" class="badge ' + (MISTAKE_BOOK_STATE.subjectFilter === 'all' ? 'badge-blue' : '') + '" style="cursor:pointer; border:1px solid var(--border-color); padding:5px 10px; background:' + (MISTAKE_BOOK_STATE.subjectFilter === 'all' ? 'var(--blue-500)' : 'var(--bg-input)') + '; color:' + (MISTAKE_BOOK_STATE.subjectFilter === 'all' ? '#fff' : 'var(--text-muted)') + ';" onclick="setMistakeSubjectFilter(\'all\')">All (' + allObj.length + ')</button>' +
+        Object.keys(subjMap).map(function (sid) {
+            const active = MISTAKE_BOOK_STATE.subjectFilter === sid;
+            return '<button type="button" class="badge ' + (active ? 'badge-blue' : '') + '" style="cursor:pointer; border:1px solid var(--border-color); padding:5px 10px; background:' + (active ? 'var(--blue-500)' : 'var(--bg-input)') + '; color:' + (active ? '#fff' : 'var(--text-muted)') + ';" onclick="setMistakeSubjectFilter(\'' + sid + '\')">' + subjectLabel(sid) + ' (' + subjMap[sid] + ')</button>';
+        }).join('') +
+        '</div>' +
+        '<div style="min-width:200px; flex:1; max-width:320px;">' +
+        '<input type="text" placeholder="Search questions or topics..." value="' + mmEsc(MISTAKE_BOOK_STATE.searchQuery) + '" style="width:100%; padding:7px 12px; font-size:0.82rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-input); color:var(--text-main);" oninput="setMistakeSearch(this.value)">' +
+        '</div>' +
+        '</div>'
+        ) : '') +
+        '</div>';
+
+    if (MISTAKE_BOOK_STATE.tab === 'written') {
+        if (!entries.length) {
+            html += '<div class="card" style="text-align:center; padding:32px;"><p style="color:var(--text-muted);">No written error patterns recorded yet.</p></div>';
+        } else {
+            html += entries.map(function (e) {
+                const hint = (typeof PRACTICE_ERROR_HINTS !== 'undefined' && PRACTICE_ERROR_HINTS[e.errorType]) || '';
+                return '<div class="card" style="margin-bottom:12px; border-left:3px solid var(--rose-500);">' +
+                    '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
+                    '<span style="font-size:0.8rem; font-weight:700; color:var(--rose-500);">' +
+                    mmEsc(e.errorType ? e.errorType.replace(/_/g, ' ').toLowerCase() : 'General') + '</span>' +
+                    '<span style="font-size:0.75rem; color:var(--text-muted);">' + e.occurrences + ' time' + (e.occurrences === 1 ? '' : 's') +
+                    ' &bull; ' + e.marksLost + ' mark' + (e.marksLost === 1 ? '' : 's') + ' lost</span>' +
+                    '</div>' +
+                    '<h4 style="margin:8px 0 0;">' + mmEsc(e.criterionId || 'Criterion') + '</h4>' +
+                    (hint ? '<p style="margin:8px 0 0; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Fix:</strong> ' + hint + '</p>' : '') +
+                    '</div>';
+            }).join('');
+        }
+        container.innerHTML = html;
+        return;
+    }
+
+    if (!currentList.length) {
+        html += '<div class="card" style="text-align:center; padding:36px 20px;">' +
+            '<div style="font-size:2.4rem; margin-bottom:10px;">' + (MISTAKE_BOOK_STATE.tab === 'resolved' ? '🎉' : '✨') + '</div>' +
+            '<h3 style="margin:0 0 6px 0; color:var(--text-main);">' +
+            (MISTAKE_BOOK_STATE.tab === 'resolved' ? 'No Resolved Mistakes Yet' : 'No Mistakes Found!') +
+            '</h3>' +
+            '<p style="color:var(--text-muted); font-size:0.88rem; max-width:480px; margin:0 auto 16px;">' +
+            (MISTAKE_BOOK_STATE.tab === 'resolved'
+                ? 'When you re-attempt questions and get them right, they will be logged here as mastered.'
+                : (allObj.length === 0
+                    ? 'Great job! You have no unresolved incorrect questions in your history. Practice quizzes and mock exam mistakes automatically appear here.'
+                    : 'No mistakes match your current filter. Try changing the subject filter or search term.')) +
+            '</p>' +
+            (allObj.length === 0 ? '<button type="button" class="btn btn-primary" onclick="switchView(\'practice\')">Go to Practice Centre</button>' : '') +
+            '</div>';
+        container.innerHTML = html;
+        return;
+    }
+
+    html += currentList.map(function (it) {
+        const isAttempting = MISTAKE_BOOK_STATE.attemptingKey === it.key;
+        const isOption = Array.isArray(it.options) && it.options.length > 0;
+        const isMulti = Array.isArray(it.correct);
+
+        if (isAttempting) {
+            const currentSelected = MISTAKE_BOOK_STATE.userAnswer;
+            const feedback = MISTAKE_BOOK_STATE.attemptFeedback;
+
+            const interactiveOptions = isOption ? (it.options || []).map(function (opt, idx) {
+                const isChecked = isMulti
+                    ? (Array.isArray(currentSelected) && currentSelected.indexOf(idx) !== -1)
+                    : (currentSelected === idx);
+                let optBorder = 'var(--border-color)';
+                let optBg = 'var(--bg-surface)';
+                let optColor = 'var(--text-main)';
+
+                if (feedback) {
+                    const isRightOption = isOptionMatch(it.correct, idx);
+                    if (isRightOption) {
+                        optBorder = 'var(--emerald-400)';
+                        optBg = 'rgba(16,185,129,0.1)';
+                        optColor = 'var(--emerald-400)';
+                    } else if (isChecked) {
+                        optBorder = 'var(--rose-500)';
+                        optBg = 'rgba(239,68,68,0.1)';
+                        optColor = 'var(--rose-500)';
+                    }
+                } else if (isChecked) {
+                    optBorder = 'var(--blue-400)';
+                    optBg = 'rgba(59,130,246,0.1)';
+                }
+
+                return '<div onclick="selectMistakeOption(' + idx + ', ' + isMulti + ')" style="display:flex; align-items:center; gap:12px; padding:12px 14px; margin-bottom:8px; border:1px solid ' + optBorder + '; background:' + optBg + '; border-radius:10px; cursor:pointer; transition:all 0.15s ease;">' +
+                    '<span style="width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.8rem; background:' + (isChecked ? 'var(--blue-500)' : 'var(--bg-input)') + '; color:' + (isChecked ? '#fff' : 'var(--text-muted)') + ';">' + letter(idx) + '</span>' +
+                    '<span style="flex:1; font-size:0.92rem; color:' + optColor + ';">' + opt + '</span>' +
+                    (feedback && isOptionMatch(it.correct, idx) ? '<span style="color:var(--emerald-400); font-weight:700;">✓ Correct</span>' : '') +
+                    (feedback && isChecked && !isOptionMatch(it.correct, idx) ? '<span style="color:var(--rose-500); font-weight:700;">✗ Chosen</span>' : '') +
+                    '</div>';
             }).join('') : '';
 
-            let yourLine = '';
-            let correctLine = '';
-            if (!isOption) {
-                yourLine = it.typed
-                    ? '<span style="color:var(--rose-500); font-weight:700;">You entered: ' + mmEsc(it.typed) + '</span>'
-                    : '<span style="color:var(--rose-500); font-weight:700;">You left this blank.</span>';
-                correctLine = '<span style="color:var(--emerald-400); font-weight:700;">Correct figure: '
-                    + mmEsc(it.correctText || String(it.correct)) + '</span>';
-            } else {
-                yourLine = (it.chosen === null || it.chosen === undefined)
-                    ? '<span style="color:var(--rose-500); font-weight:700;">You left this blank.</span>'
-                    : '<span style="color:var(--rose-500); font-weight:700;">Your answer: ' + letter(it.chosen) + '</span>';
-                correctLine = (typeof it.correct === 'number')
-                    ? '<span style="color:var(--emerald-400); font-weight:700;">Correct answer: ' + letter(it.correct) + '</span>'
-                    : '<span style="color:var(--emerald-400); font-weight:700;">Correct answer: \u2014</span>';
-            }
-
-            return '<div class="card" style="margin-bottom:12px; border-left:3px solid var(--rose-500);">' +
-                '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
-                '<span style="font-size:0.78rem; font-weight:700; color:var(--blue-400); text-transform:uppercase; letter-spacing:0.04em;">' +
-                mmEsc(subjectLabel(it.subjectId)) +
-                (it.chapter ? ' &bull; ' + mmEsc(mmChapterLabel(it.chapter)) : '') + '</span>' +
-                '<span style="font-size:0.72rem; color:var(--text-muted);">' +
-                mmEsc(it.source || '') + (it.at ? ' &bull; ' + mmEsc(String(it.at).slice(0, 10)) : '') + '</span>' +
+            return '<div class="card" style="margin-bottom:16px; border-left:4px solid var(--gold-400); padding:20px;">' +
+                '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">' +
+                '<span class="badge badge-gold">Re-Attempting Mistake</span>' +
+                '<button type="button" class="btn btn-outline" style="padding:4px 10px; font-size:0.78rem;" onclick="cancelMistakeReAttempt()">Exit Practice</button>' +
                 '</div>' +
-                '<p style="margin:10px 0; color:var(--text-main); font-weight:600; line-height:1.5;">' + (it.qText || '') + '</p>' +
-                (isOption ? '<div style="display:flex; flex-direction:column; gap:4px; margin-bottom:10px;">' + opts + '</div>' : '') +
-                '<p style="margin:0; font-size:0.88rem; display:flex; flex-wrap:wrap; gap:14px;">' + yourLine + correctLine + '</p>' +
-                (it.working ? '<div style="margin-top:10px; padding:10px 12px; background:var(--bg-input); border:1px solid var(--border-color); border-radius:8px; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Why:</strong> ' + it.working + '</div>' : '') +
+                '<p style="font-size:1.05rem; font-weight:600; color:var(--text-main); line-height:1.5; margin:0 0 14px 0;">' + (it.qText || '') + '</p>' +
+                (isOption ? interactiveOptions : (
+                    '<div style="margin-bottom:14px;"><input type="text" placeholder="Type your answer figure..." id="mistake-typed-ans" style="width:100%; padding:10px 14px; border:1px solid var(--border-color); border-radius:8px; background:var(--bg-input); color:var(--text-main); font-size:0.95rem;"></div>'
+                )) +
+                (feedback ? (
+                    '<div style="padding:12px 14px; border-radius:8px; margin:14px 0; background:' + (feedback.correct ? 'rgba(16,185,129,0.1)' : 'rgba(239,68,68,0.1)') + '; border:1px solid ' + (feedback.correct ? 'var(--emerald-400)' : 'var(--rose-500)') + ';">' +
+                    '<div style="font-weight:700; color:' + (feedback.correct ? 'var(--emerald-400)' : 'var(--rose-500)') + '; margin-bottom:4px;">' + feedback.msg + '</div>' +
+                    (it.working ? '<p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Explanation:</strong> ' + it.working + '</p>' : '') +
+                    '</div>'
+                ) : '') +
+                '<div style="display:flex; justify-content:flex-end; gap:10px; margin-top:14px;">' +
+                (!feedback ? (
+                    '<button type="button" class="btn btn-primary" onclick="submitMistakeReAttempt(\'' + it.key + '\', ' + JSON.stringify(it.correct) + ', ' + isMulti + ')">Check Answer</button>'
+                ) : (
+                    feedback.correct
+                        ? '<button type="button" class="btn btn-primary" onclick="cancelMistakeReAttempt()">Done</button>'
+                        : '<button type="button" class="btn btn-outline" onclick="startMistakeReAttempt(\'' + it.key + '\')">Try Again</button>'
+                )) +
+                '</div>' +
                 '</div>';
-        }).join('');
-    }
+        }
 
-    if (entries.length) {
-        html += '<div class="card" style="margin:20px 0 16px;">' +
-            '<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">' +
-            '<h3 style="margin:0;">Written-answer error patterns</h3>' +
-            '<span class="badge badge-red">' + entries.length + '</span></div>' +
-            '<p style="color:var(--text-muted); font-size:0.85rem; margin:8px 0 0;">Where marks were lost in written practice, grouped so the pattern is visible rather than one bad answer at a time.</p>' +
+        const opts = isOption ? (it.options || []).map(function (opt, idx) {
+            const isCorrect = isOptionMatch(it.correct, idx);
+            const isChosen = isOptionMatch(it.chosen, idx);
+            const tone = isCorrect ? 'var(--emerald-400)' : (isChosen ? 'var(--rose-500)' : 'var(--text-muted)');
+            const mark = isCorrect ? ' \u2714' : (isChosen ? ' \u2718' : '');
+            return '<div style="display:flex; gap:8px; align-items:baseline; font-size:0.88rem; color:' + tone + ';">' +
+                '<span style="font-weight:700;">' + letter(idx) + '.</span>' +
+                '<span>' + opt + mark + '</span></div>';
+        }).join('') : '';
+
+        const yourLine = isOption
+            ? '<span style="color:var(--rose-500); font-weight:700;">Your answer: ' + mmEsc(formatAnsLabel(it.chosen)) + '</span>'
+            : (it.typed
+                ? '<span style="color:var(--rose-500); font-weight:700;">You entered: ' + mmEsc(it.typed) + '</span>'
+                : '<span style="color:var(--rose-500); font-weight:700;">Left blank</span>');
+
+        const correctLine = isOption
+            ? '<span style="color:var(--emerald-400); font-weight:700;">Correct: ' + mmEsc(formatAnsLabel(it.correct)) + '</span>'
+            : '<span style="color:var(--emerald-400); font-weight:700;">Correct: ' + mmEsc(it.correctText || String(it.correct)) + '</span>';
+
+        return '<div class="card" style="margin-bottom:12px; border-left:3px solid ' + (it.resolved ? 'var(--emerald-400)' : 'var(--rose-500)') + ';">' +
+            '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
+            '<span style="font-size:0.78rem; font-weight:700; color:var(--blue-400); text-transform:uppercase; letter-spacing:0.04em;">' +
+            mmEsc(subjectLabel(it.subjectId)) +
+            (it.chapter ? ' &bull; ' + mmEsc(mmChapterLabel(it.chapter)) : '') +
+            '</span>' +
+            '<div style="display:flex; align-items:center; gap:8px;">' +
+            (it.resolved ? '<span class="badge badge-green" style="font-size:0.7rem;">Resolved</span>' : '') +
+            '<span style="font-size:0.72rem; color:var(--text-muted);">' +
+            mmEsc(it.source || '') + (it.at ? ' &bull; ' + mmEsc(String(it.at).slice(0, 10)) : '') +
+            '</span>' +
+            '</div>' +
+            '</div>' +
+            '<p style="margin:10px 0; color:var(--text-main); font-weight:600; line-height:1.5;">' + (it.qText || '') + '</p>' +
+            (isOption ? '<div style="display:flex; flex-direction:column; gap:4px; margin-bottom:10px;">' + opts + '</div>' : '') +
+            '<p style="margin:0 0 10px 0; font-size:0.88rem; display:flex; flex-wrap:wrap; gap:14px;">' + yourLine + correctLine + '</p>' +
+            (it.working ? '<div style="margin-top:10px; margin-bottom:12px; padding:10px 12px; background:var(--bg-input); border:1px solid var(--border-color); border-radius:8px; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Why:</strong> ' + it.working + '</div>' : '') +
+            '<div style="display:flex; justify-content:flex-end; gap:8px; margin-top:8px;">' +
+            (!it.resolved ? (
+                '<button type="button" class="btn btn-outline" style="padding:5px 12px; font-size:0.8rem;" onclick="resolveMistakeItem(\'' + it.key + '\')">Mark Understood</button>' +
+                '<button type="button" class="btn btn-primary" style="padding:5px 12px; font-size:0.8rem;" onclick="startMistakeReAttempt(\'' + it.key + '\')">Re-Attempt</button>'
+            ) : (
+                '<button type="button" class="btn btn-outline" style="padding:5px 12px; font-size:0.8rem;" onclick="unresolveMistakeItem(\'' + it.key + '\')">Move to Unresolved</button>'
+            )) +
+            '</div>' +
             '</div>';
-        html += entries.map(function (e) {
-            const hint = (typeof PRACTICE_ERROR_HINTS !== 'undefined' && PRACTICE_ERROR_HINTS[e.errorType]) || '';
-            return '<div class="card" style="margin-bottom:12px;">' +
-                '<div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;">' +
-                '<span style="font-size:0.8rem; font-weight:700; color:var(--rose-500);">' +
-                mmEsc(e.errorType ? e.errorType.replace(/_/g, ' ').toLowerCase() : 'General') + '</span>' +
-                '<span style="font-size:0.75rem; color:var(--text-muted);">' + e.occurrences + ' time' + (e.occurrences === 1 ? '' : 's') +
-                ' &bull; ' + e.marksLost + ' mark' + (e.marksLost === 1 ? '' : 's') + ' lost</span>' +
-                '</div>' +
-                '<h4 style="margin:8px 0 0;">' + mmEsc(e.criterionId || 'Criterion') + '</h4>' +
-                (hint ? '<p style="margin:8px 0 0; font-size:0.85rem; color:var(--text-muted); line-height:1.5;"><strong style="color:var(--text-main);">Fix:</strong> ' + hint + '</p>' : '') +
-                '</div>';
-        }).join('');
-    }
+    }).join('');
 
     container.innerHTML = html;
 }
