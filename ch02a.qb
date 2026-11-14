@@ -1,0 +1,833 @@
+@subject acfbe
+@chapter 2a
+@title Sources of Data
+@lo A2
+@topic t1 | Types of data | A2
+@topic t2 | Sources of data | A2
+@topic t3 | Big Data | A2
+@topic t4 | Sampling methods | A2
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: A company runs its own survey of customers to measure satisfaction with a new product. What type of data does it collect?
++ Primary data || It is collected specifically for this purpose.
+- Secondary data || Secondary data was collected for another purpose.
+- Continuous data only || The question concerns why it was collected, not its measurement.
+- Census data || A census covers the whole population; that is not stated.
+explain: Primary data is collected for the survey in question; secondary data already exists, collected for another purpose.
+mistake: Thinking all survey data is secondary.
+tip: Collected for this purpose = primary.
+src: Study text ch2a - types of data (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following is DISCRETE data?
++ The number of complaints received each day || It can only take whole-number values.
+- The weight of each bag of flour || Weight can take any value.
+- The time taken to serve a customer || Time can take any value.
+- The temperature in a warehouse || Temperature is continuous.
+explain: Discrete data takes countable values; continuous data can take any value within a range.
+mistake: Thinking measured quantities are discrete.
+tip: Counted = discrete; measured = continuous.
+src: Study text ch2a - discrete and continuous (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is a census?
++ A survey that examines every member of the population || It covers the whole population.
+- A survey of a random sample || That is sampling.
+- A list of all items in a population || That is a sampling frame.
+- A survey of one cluster only || That is cluster sampling.
+explain: A census is complete but usually expensive and slow; sampling is often more practical.
+mistake: Confusing a census with a sampling frame.
+tip: Census = everyone.
+src: Study text ch2a - census (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which list gives the "three Vs" commonly used to describe Big Data?
++ Volume, velocity and variety || These describe the scale, speed and range of formats.
+- Value, verification and validity || Not the three Vs listed.
+- Variance, volatility and volume || Not the three Vs listed.
+- Visibility, value and variety || Not the three Vs listed.
+explain: Big Data involves huge volumes, created and processed at high speed, in many different formats.
+mistake: Inventing extra Vs.
+tip: How much, how fast, how varied.
+src: Study text ch2a - Big Data (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is a sampling frame?
++ A numbered list of all the items in a population || It is needed for random sampling.
+- The sample that has been selected || That is the sample.
+- The size of the sample || Not the meaning.
+- A graph of the sample results || Not the meaning.
+explain: Random sampling needs a sampling frame so each item can be identified and selected.
+mistake: Confusing the frame with the sample.
+tip: Frame = full numbered list.
+src: Study text ch2a - sampling frame (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which of the following is an INTERNAL source of data for a business?
++ The payroll records || Records within the organisation are internal sources.
+- Government statistics on inflation || External.
+- A trade journal || External.
+- A competitor's website || External.
+explain: Internal sources include accounting records, records linked to the accounting system (payroll, production, sales) and staff knowledge.
+mistake: Thinking any financial data is internal.
+tip: Inside the business = internal.
+src: Study text ch2a - sources (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: In which sampling method does every item in the population have an equal chance of selection?
++ Simple random sampling || Each item has the same chance.
+- Quota sampling || Selection is left to interviewers.
+- Cluster sampling || Only one cluster is surveyed.
+- Convenience sampling || Not random.
+explain: Simple random sampling needs a sampling frame and gives every item an equal chance.
+mistake: Thinking quota sampling is random.
+tip: Equal chance = simple random.
+src: Study text ch2a - random sampling (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which description fits SECONDARY data?
++ Data originally collected for some other purpose || It is reused for a new purpose.
+- Data collected specifically for the current investigation || That is primary data.
+- Data that is always inaccurate || Secondary data can be accurate.
+- Data that is only qualitative || It can be quantitative.
+explain: Secondary data is cheaper and quicker to obtain but may not fit the current purpose exactly.
+mistake: Thinking secondary means less important.
+tip: Secondary = second-hand.
+src: Study text ch2a - secondary data (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which sampling method is NON-probability?
++ Quota sampling || The chance of each member being selected is not known.
+- Simple random sampling || Probability method.
+- Stratified random sampling || Probability method.
+- Systematic sampling || Probability method.
+explain: In probability sampling each member has a known chance of selection; quota sampling forfeits randomness.
+mistake: Thinking quota sampling is stratified.
+tip: Quota = interviewer chooses.
+src: Study text ch2a - probability vs non-probability (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is an example of QUALITATIVE data?
++ Customers' favourite colour of packaging || It is an attribute, not a measurement.
+- The number of units sold || Quantitative.
+- The cost of each order || Quantitative.
+- The hours worked by staff || Quantitative.
+explain: Quantitative data can be measured numerically; qualitative data describes attributes.
+mistake: Thinking all business data is quantitative.
+tip: Measured = quantitative; described = qualitative.
+src: Study text ch2a - types of data (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A population of 2,000 accountants includes 500 who work in partnerships. A stratified sample of 100 accountants is required. How many partnership accountants should be included?
+answer: 25
+tol: 0
+unit: people
+formula: Stratum sample = (stratum size / population) x sample size
+step: Partnership share of population = 500 / 2,000 = 25%.
+step: Sample from partnerships = 25% x 100 = 25.
+check: 500/2000*100
+explain: Stratified sampling takes a random sample from each stratum in proportion to its share of the population.
+mistake: Taking an equal number from each stratum.
+tip: Proportion in population = proportion in sample.
+src: Study text ch2a - stratified sampling (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A national survey selects 8 regions, then 5 towns in each region, then 200 people in each town. How many people are sampled in total?
+answer: 8000
+tol: 0
+unit: people
+formula: Total = regions x towns per region x people per town
+step: Towns sampled = 8 x 5 = 40.
+step: People sampled = 40 x 200 = 8,000.
+check: 8*5*200
+explain: Multistage sampling divides the population in stages, making large surveys practical.
+mistake: Adding instead of multiplying.
+tip: Multistage totals multiply.
+src: Study text ch2a - multistage sampling (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: A firm selects every 20th invoice from its numbered sales listing, starting from a randomly chosen number between 1 and 20. Which method is this?
++ Systematic sampling || Every nth item after a random start.
+- Simple random sampling || Not every selection is independently random.
+- Quota sampling || Not interviewer-selected.
+- Cluster sampling || Not a single subsection.
+explain: Systematic sampling is simple but can be biased if the list has a repeating pattern.
+mistake: Calling it simple random.
+tip: Every nth = systematic.
+src: Study text ch2a - systematic sampling (concept basis; original scenario)
+
+=== Q014
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: A market researcher must interview 50 men and 50 women aged over 60 in a shopping centre and chooses whom to approach. Which method is this?
++ Quota sampling || A set number from each group, chosen by the interviewer.
+- Stratified random sampling || Selection within groups would be random.
+- Systematic sampling || Not every nth person.
+- Census || Not the whole population.
+explain: Quota sampling is cheap and simple but not random, and interviewers may introduce bias.
+mistake: Confusing quota with stratified sampling.
+tip: Interviewer chooses = quota.
+src: Study text ch2a - quota sampling (concept basis; original scenario)
+
+=== Q015
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: A retailer wanting to survey customers chooses one town at random and surveys every customer in that town. Which method is this?
++ Cluster sampling || One subsection is chosen and all of it surveyed.
+- Multistage sampling || Multistage involves several stages of selection.
+- Quota sampling || Not interviewer quotas.
+- Systematic sampling || Not every nth item.
+explain: Cluster sampling is cheap but may be unrepresentative if the cluster differs from the population.
+mistake: Calling it multistage.
+tip: One whole cluster = cluster sampling.
+src: Study text ch2a - cluster sampling (concept basis; original scenario)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is the defining feature of a probability sampling method?
++ Each member of the population has a known chance of being selected || Selection probabilities are known.
+- The sample is chosen by the interviewer || That is quota sampling.
+- Every member is surveyed || That is a census.
+- The sample size is always 100 || Size is not the defining feature.
+explain: Probability methods include simple random, stratified, systematic and multistage sampling.
+mistake: Thinking probability means equal chance in every method.
+tip: Known chance = probability sampling.
+src: Study text ch2a - probability sampling (concept basis; original question)
+
+=== Q017
+type: mr
+level: S
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are drawbacks of simple random sampling?
++ It needs a sampling frame, which may not exist || A full list is required.
++ The selected items may be widely spread, making data collection costly || Random items may be scattered geographically.
+- Every item has an equal chance of selection || That is an advantage.
+- It is non-probability sampling || It is a probability method.
+explain: Random sampling may also, by chance, be unrepresentative of important groups.
+mistake: Listing its main advantage as a drawback.
+tip: Random is fair, but not always practical.
+src: Study text ch2a - random sampling (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which is a SECONDARY source of economic data?
++ Official government statistics || Collected by government for general use.
+- A firm's own customer interviews || Primary data.
+- The firm's sales ledger || Internal records, collected for accounting.
+- A focus group the firm runs || Primary data.
+explain: Main secondary sources include governments, banks, financial newspapers, trade journals, information bureaux, consultancies, libraries and the internet.
+mistake: Confusing internal records with secondary sources.
+tip: Published by others = secondary source.
+src: Study text ch2a - secondary sources (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which BEST describes "velocity" in the context of Big Data?
++ The speed at which data is created and must be processed || Big Data often arrives in real time.
+- The amount of data stored || That is volume.
+- The range of data formats || That is variety.
+- The accuracy of the data || Not one of the three Vs.
+explain: High velocity means data streams, such as online transactions, need rapid processing.
+mistake: Confusing velocity with volume.
+tip: Velocity = speed.
+src: Study text ch2a - three Vs (concept basis; original question)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t4
+status: review
+q: Match each sampling method with its description.
+pair: Simple random => Every item in the population has an equal chance
+pair: Stratified random => Random sample taken from each group in proportion
+pair: Systematic => Every nth item after a random start
+pair: Quota => Interviewers fill a set number from each group
+pair: Cluster => One subsection is chosen and all of it surveyed
+explain: Recognising each method lets you choose the right one for a situation.
+mistake: Confusing stratified with quota.
+tip: Random within groups = stratified; interviewer chooses = quota.
+src: Study text ch2a - sampling methods (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which item is CONTINUOUS data?
++ The length of telephone calls in minutes and seconds || Time can take any value.
+- The number of children in a family || Discrete.
+- The number of cars sold || Discrete.
+- Shoe sizes sold in whole and half sizes || These are fixed steps - discrete.
+explain: Continuous data can take any value within a range, limited only by the precision of measurement.
+mistake: Treating shoe sizes as continuous.
+tip: Can it be measured more precisely? Then continuous.
+src: Study text ch2a - continuous data (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which is a common CRITICISM of Big Data analysis?
++ It may find correlations that are mistaken for cause and effect || Correlation is not causation.
+- It always uses too little data || Big Data uses a great deal of data.
+- It can only analyse financial data || It covers many formats.
+- It is always slower than traditional analysis || It can be faster.
+explain: Criticisms include confusing correlation with causation, sampling bias and overconfidence in large datasets.
+mistake: Assuming more data guarantees better conclusions.
+tip: Big data can still give wrong answers.
+src: Study text ch2a - Big Data criticisms (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: When is systematic sampling MOST likely to give a biased sample?
++ When the population list has a repeating pattern that coincides with the sampling interval || Every nth item may always fall on the same type.
+- When a random start is used || A random start is part of the method.
+- When the population is large || Size alone does not cause bias.
+- When a sampling frame exists || A frame is needed.
+explain: For example, choosing every 7th day from a daily list would always pick the same weekday.
+mistake: Assuming systematic sampling is always unbiased.
+tip: Watch for patterns in the list.
+src: Study text ch2a - systematic sampling (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How can changes in interest rates in the economic environment affect a business?
++ They change the cost of borrowing and can affect customer demand || Economic factors affect costs and activity levels.
+- They have no effect on businesses || They do affect businesses.
+- They only affect banks || They affect all borrowers and spenders.
+- They change accounting standards || Not related.
+explain: The economic environment affects firms through activity levels, exchange rates, interest rates and inflation.
+mistake: Ignoring economic data as an external source.
+tip: Rates up - borrowing dearer, spending lower.
+src: Study text ch2a - economic environment (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: An auditor wants a sample of invoices that represents each of three branches in proportion to their number of invoices. Which method is MOST suitable?
++ Stratified random sampling || Each branch is a stratum sampled in proportion.
+- Quota sampling || Not random.
+- Cluster sampling of one branch || Ignores two branches.
+- Census || Examines every invoice, which may not be needed.
+explain: Stratified sampling ensures each group is represented in proportion.
+mistake: Choosing cluster sampling.
+tip: Represent each group fairly = stratified.
+src: Study text ch2a - stratified sampling (concept basis; original scenario)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A population has 6,000 items. A systematic sample of 150 items is required. What sampling interval should be used?
+answer: 40
+tol: 0
+unit: items
+formula: Sampling interval = population size / sample size
+step: 6,000 / 150 = 40.
+step: Select a random start between 1 and 40, then every 40th item.
+check: 6000/150
+explain: The interval spreads the sample evenly through the list.
+mistake: Dividing sample size by population.
+tip: Interval = N / n.
+src: Study text ch2a - systematic sampling (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How can Big Data help businesses?
++ By revealing trends and customer behaviour to target resources and support strategy || Analysis supports faster, better-targeted decisions.
+- By removing the need for any human judgement || Judgement is still needed.
+- By guaranteeing every forecast is correct || No forecast is guaranteed.
+- By replacing all financial records || Financial records are still required.
+explain: Uses include creating business value, understanding customers and supporting corporate strategy.
+mistake: Overstating what Big Data can do.
+tip: Insight, not certainty.
+src: Study text ch2a - Big Data uses (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is the difference between sample data and population data?
++ Sample data comes from a selection of the population; population data comes from every member || Coverage differs.
+- Sample data is always more accurate || Not necessarily.
+- Population data is always secondary || Not necessarily.
+- There is no difference || There is.
+explain: Sampling saves time and cost but introduces sampling error.
+mistake: Thinking a sample is the same as a census.
+tip: Some vs all.
+src: Study text ch2a - sample and population (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Why is quota sampling popular for market research?
++ It is cheap and simple, without needing a sampling frame || It is practical for street interviews.
+- It gives every person a known chance of selection || It is non-probability.
+- It eliminates interviewer bias || It can increase bias.
+- It examines every member of the population || That is a census.
+explain: Quota sampling trades statistical rigour for practicality.
+mistake: Thinking quota sampling is unbiased.
+tip: Cheap and quick, but not random.
+src: Study text ch2a - quota sampling (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which external source would MOST likely give detailed information about a specific industry's trends?
++ A trade journal || Trade journals focus on particular industries.
+- The firm's payroll || Internal.
+- The firm's cash book || Internal.
+- The firm's production records || Internal.
+explain: Trade journals, consultancies and information bureaux provide specialist secondary data.
+mistake: Choosing an internal record.
+tip: Industry trends = trade journals.
+src: Study text ch2a - secondary sources (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t4
+status: review
+q: Put the steps for selecting a systematic sample in order.
+item: Obtain a numbered list of the population
+item: Calculate the sampling interval (population / sample size)
+item: Choose a random starting point within the first interval
+item: Select every nth item from the starting point
+explain: A sampling frame and interval are needed before the random start and selection.
+mistake: Choosing the start before calculating the interval.
+tip: List, interval, start, select.
+src: Study text ch2a - systematic sampling (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: scenario
+topic: t1
+status: review
+q: A company uses last year's published industry report to estimate the size of its market. What are the advantage and risk of using this data?
++ It is cheap and quick (secondary), but it may be out of date or not fit the company's purpose exactly || Typical trade-off of secondary data.
+- It is primary data, so it fits exactly || It is secondary.
+- It is always more accurate than primary data || Not necessarily.
+- It is free from any limitations || It has limitations.
+explain: Secondary data saves cost but may not exactly match the current need.
+mistake: Assuming published data is always suitable.
+tip: Check the date and purpose of secondary data.
+src: Study text ch2a - secondary data (concept basis; original scenario)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How does multistage sampling make large surveys more practical?
++ It narrows the population in stages, so data collection is concentrated in selected areas || Fewer locations need to be visited.
+- It surveys every member of the population || That is a census.
+- It removes the need for any random selection || Random selection is used at each stage.
+- It always gives a perfectly representative sample || Not guaranteed.
+explain: Multistage sampling is often used for national surveys.
+mistake: Thinking multistage removes randomness.
+tip: Divide, select, then sample within.
+src: Study text ch2a - multistage sampling (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which BEST illustrates the "variety" dimension of Big Data?
++ Data from social media posts, videos, sensors and transaction records combined || Many formats.
+- A very large spreadsheet of sales figures only || Volume, but little variety.
+- Data processed in real time only || Velocity.
+- Data that is always accurate || Not a V.
+explain: Big Data includes structured and unstructured data in many formats.
+mistake: Confusing variety with volume.
+tip: Variety = many types.
+src: Study text ch2a - three Vs (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t4
+status: review
+important: 1
+q: Which list contains ONLY probability sampling methods?
++ Simple random, stratified, systematic, multistage || Each has a known chance of selection.
+- Quota, cluster, convenience, systematic || Quota and convenience are non-probability.
+- Census, quota, stratified, random || A census is not a sampling method and quota is non-probability.
+- Quota, simple random, multistage, stratified || Quota is non-probability.
+explain: Quota sampling is the main non-probability method in the syllabus.
+mistake: Including quota sampling.
+tip: Quota = no known chance.
+src: Study text ch2a - sampling methods (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A company has 1,200 employees: 720 in production, 360 in sales and 120 in administration. A stratified sample of 80 employees is required. How many SALES employees should be included?
+answer: 24
+tol: 0
+unit: people
+formula: Stratum sample = (stratum size / population) x sample size
+step: Sales share = 360 / 1,200 = 30%.
+step: Sales sample = 30% x 80 = 24.
+step: Check: production 48, sales 24, administration 8 = 80.
+check: 360/1200*80
+explain: Stratified samples mirror the population's composition.
+mistake: Splitting the sample equally (26.7 each).
+tip: Check that the strata add back to the total sample.
+src: Study text ch2a - stratified sampling (concept basis; original question)
+
+=== Q037
+type: mr
+level: C
+cat: scenario
+topic: t4
+status: review
+select: 2
+q: A company wants to survey opinions of its 50,000 customers, who are spread across the country, but has a limited budget and no complete customer list. Which TWO methods are MOST practical?
++ Quota sampling || It needs no sampling frame and is cheap.
++ Cluster sampling of selected areas || It concentrates data collection.
+- Simple random sampling from a full numbered list || No complete list exists.
+- A census of all customers || Too costly.
+explain: Practical constraints (cost, no frame, dispersion) often favour cluster or quota methods, accepting some loss of representativeness.
+mistake: Choosing a method requiring a sampling frame.
+tip: Check what resources each method needs.
+src: Study text ch2a - choosing methods (concept basis; original scenario)
+
+=== Q038
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: An analysis of Big Data shows that stores selling more umbrellas also sell more hot drinks. A manager concludes that umbrellas cause hot drink sales. What is the flaw?
++ The two may simply be linked by a third factor, such as rainy cold weather - correlation does not prove causation || A classic Big Data criticism.
+- Big Data cannot detect any relationships || It can detect correlations.
+- The data must be wrong || The correlation may be real.
+- Umbrellas must reduce hot drink sales || Not supported.
+explain: Large datasets can reveal patterns, but managers must avoid assuming cause and effect.
+mistake: Treating correlation as causation.
+tip: Look for a hidden common cause.
+src: Study text ch2a - Big Data criticisms (concept basis; original scenario)
+
+=== Q039
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: A sales list is ordered by day of the week, with seven entries per week. A trainee chooses every 7th entry for a systematic sample. What is the risk?
++ Every selected entry may fall on the same weekday, biasing the sample || The interval matches the pattern.
+- The sample will be too large || Size is not the issue.
+- It is not a probability method || It is, but it is biased here.
+- There is no risk || A pattern creates bias.
+explain: Systematic sampling is biased when the interval coincides with a pattern in the list.
+mistake: Overlooking patterns in ordered data.
+tip: Interval + pattern = bias.
+src: Study text ch2a - systematic sampling (concept basis; original scenario)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A researcher divides customers into age groups and lets interviewers choose who to interview until each group's target is met. A colleague calls this "stratified random sampling". Is this correct?
++ No - selection within groups is not random, so it is quota sampling || Interviewer choice makes it non-probability.
+- Yes - any grouping by age is stratified random sampling || Random selection within groups is required.
+- No - it is a census || Not every customer is interviewed.
+- Yes - quota and stratified sampling are identical || They differ in how individuals are selected.
+explain: Stratified and quota sampling both use groups; only stratified uses random selection within each group.
+mistake: Confusing the two because both use groups.
+tip: Groups + random = stratified; groups + interviewer choice = quota.
+src: Study text ch2a - stratified vs quota (concept basis; original scenario)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A company has 15 regions. It randomly selects 3 regions, then 4 branches in each selected region, then 25 customers at each selected branch. How many customers are sampled?
+answer: 300
+tol: 0
+unit: people
+formula: Total = regions selected x branches per region x customers per branch
+step: Branches selected = 3 x 4 = 12.
+step: Customers = 12 x 25 = 300.
+check: 3*4*25
+explain: In multistage sampling, the total sample is the product of the numbers selected at each stage. The 15 regions in the population do not enter the calculation.
+mistake: Multiplying by 15 regions instead of the 3 selected.
+tip: Use only the numbers SELECTED at each stage.
+src: Study text ch2a - multistage sampling (concept basis; original question)
+
+=== Q042
+type: match
+level: C
+cat: scenario
+topic: t4
+status: review
+q: Match each situation with the MOST appropriate sampling method.
+pair: A full numbered list exists and every item should have an equal chance => Simple random
+pair: The population has distinct groups that must each be represented in proportion => Stratified random
+pair: A long numbered list with no pattern and a need for simplicity => Systematic
+pair: A street survey with a small budget and no list of the population => Quota
+choice: Census
+explain: The choice depends on the available sampling frame, budget and the need for representativeness.
+mistake: Choosing a census when sampling is adequate.
+tip: Match method to resources and purpose.
+src: Study text ch2a - choosing a method (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A manager wants to forecast next year's labour costs and uses both the firm's payroll records and government forecasts of wage inflation. Which statement is correct?
++ Payroll records are an internal source; government forecasts are an external secondary source || Combining sources improves the forecast.
+- Both are internal sources || Government forecasts are external.
+- Both are primary data || Neither was collected for this forecast.
+- Payroll records are external || They are internal.
+explain: Good forecasts often combine internal records with external economic data.
+mistake: Calling government data primary.
+tip: Inside records + outside forecasts.
+src: Study text ch2a - sources (concept basis; original scenario)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: A survey records each customer's exact age in years and months. Later the results are grouped into "under 30", "30-50" and "over 50". What has happened to the data?
++ Continuous-type measurements have been grouped into categories, losing some detail || Grouping simplifies but loses precision.
+- Discrete data has become continuous || Grouping does not create continuity.
+- Primary data has become secondary || The purpose has not changed.
+- Qualitative data has become quantitative || Age was already quantitative.
+explain: Grouping data aids presentation but reduces the information available.
+mistake: Thinking grouping changes the data source.
+tip: Grouping = simpler but less precise.
+src: Study text ch2a - types of data (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: An online retailer analyses millions of website clicks in real time to change the products it recommends to each visitor. Which Big Data features are MOST evident?
++ High volume and high velocity || Millions of clicks processed in real time.
+- Low volume and low velocity || The opposite is described.
+- Only variety || Volume and speed are more evident.
+- None - this is ordinary bookkeeping || It is Big Data analysis.
+explain: Big Data enables real-time decisions such as personalised recommendations.
+mistake: Overlooking velocity.
+tip: Real time = velocity.
+src: Study text ch2a - Big Data (concept basis; original scenario)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why might a random sample still be UNREPRESENTATIVE?
++ By chance, it may include too many or too few items from particular groups || Randomness does not guarantee balance.
+- Because random samples are always biased || Not always.
+- Because random samples are too large || Size is not the issue.
+- Because random samples never use a sampling frame || They do use one.
+explain: Stratified sampling can reduce this risk by ensuring each group is represented.
+mistake: Assuming random means representative.
+tip: Random is fair, not guaranteed balanced.
+src: Study text ch2a - random sampling (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A stratified sample of 120 is drawn from 3,000 students: 1,800 undergraduates, 900 postgraduates and 300 research students. How many RESEARCH students should be sampled?
+answer: 12
+tol: 0
+unit: people
+formula: Stratum sample = (stratum size / population) x sample size
+step: Research share = 300 / 3,000 = 10%.
+step: 10% x 120 = 12.
+check: 300/3000*120
+explain: Each stratum's share of the sample equals its share of the population.
+mistake: Using the share of undergraduates by mistake.
+tip: Identify the correct stratum before calculating.
+src: Study text ch2a - stratified sampling (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: A council surveys every household in one randomly chosen street to estimate opinions across the whole city. What is the main weakness?
++ One street may not represent the whole city, so results may be biased || Cluster sampling risks unrepresentativeness.
+- It is too expensive compared with a census || A census of the city would cost more.
+- It gives every household in the city a known chance of being surveyed in that street || The weakness is representativeness.
+- It requires interviewer quotas || Not quota sampling.
+explain: Cluster sampling is cheap and convenient but may not reflect the population.
+mistake: Thinking any random choice ensures representativeness.
+tip: One cluster may be unusual.
+src: Study text ch2a - cluster sampling (concept basis; original scenario)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: When is a CENSUS more appropriate than a sample?
++ When the population is small and every item matters, such as auditing a few very large transactions || Complete coverage is feasible and valuable.
+- When the population is huge and resources are limited || Sampling is better then.
+- When speed is essential and the population is large || A census is slow.
+- Never - samples are always better || Censuses are appropriate in some cases.
+explain: Censuses avoid sampling error but are costly; samples are usually more practical for large populations.
+mistake: Thinking censuses are never used.
+tip: Small population + high importance = census.
+src: Study text ch2a - census (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which pairing is correct?
++ Discrete: countable values; continuous: any value within a range || This is the key distinction.
+- Discrete: any value; continuous: countable values || Reversed.
+- Primary: collected for another purpose; secondary: collected for this purpose || Reversed.
+- Qualitative: measured; quantitative: described || Reversed.
+explain: These classifications are basic but frequently tested.
+mistake: Reversing definitions.
+tip: Count = discrete; measure = continuous.
+src: Study text ch2a - types of data (concept basis; original question)

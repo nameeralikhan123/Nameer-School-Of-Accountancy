@@ -1,0 +1,882 @@
+@subject acffa2
+@chapter 18
+@title Interpretation of Financial Statements
+@lo G1
+@topic t1 | Profitability | G1
+@topic t2 | Liquidity and efficiency | G1
+@topic t3 | Gearing and interest cover | G1
+@topic t4 | Interpreting ratios | G1
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Revenue is $280,000 and gross profit is $84,000. What is the gross profit margin (%)?
+answer: 30
+tol: 0
+unit: %
+formula: Gross profit margin = gross profit / revenue x 100
+step: 84,000 / 280,000 = 0.30.
+step: Margin = 30%.
+check: 84000/280000*100
+explain: Compare with prior years and competitors.
+mistake: Dividing by cost of sales.
+tip: Over revenue.
+src: Study text ch18 - gross margin (concept basis; original figures)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which profit figure is used to calculate ROCE?
++ Profit before interest and tax || Matches capital including debt.
+- Profit after tax || Excludes interest effects wrongly.
+- Gross profit || Too early in the P/L.
+- Retained profit || Not appropriate.
+explain: Capital employed includes long-term debt, so profit before interest is used.
+mistake: Using profit after interest.
+tip: PBIT for ROCE.
+src: Study text ch18 - ROCE (concept basis; original question)
+
+=== Q003
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: Current assets are $96,000 and current liabilities are $64,000. What is the current ratio (:1)?
+answer: 1.5
+tol: 0.0001
+unit: :1
+formula: Current ratio = current assets / current liabilities
+step: 96,000 / 64,000.
+step: = 1.5 : 1.
+check: 96000/64000
+explain: Too high may mean idle assets; too low may mean liquidity problems.
+mistake: Inverting the ratio.
+tip: Assets over liabilities.
+src: Study text ch18 - current ratio (concept basis; original figures)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Why does higher gearing increase financial risk?
++ Interest on debt must be paid whatever the profit, unlike discretionary dividends || Fixed commitments.
+- Equity must be repaid on demand || It is not.
+- Debt has no cost || It does.
+- Gearing reduces sales || Not directly.
+explain: Interest cover shows how safely interest is covered.
+mistake: Ignoring the fixed nature of interest.
+tip: Interest is compulsory.
+src: Study text ch18 - gearing (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Profit before interest and tax is $42,000 and revenue is $280,000. What is the operating profit margin (%)?
+answer: 15
+tol: 0
+unit: %
+formula: Operating margin = PBIT / revenue x 100
+step: 42,000 / 280,000 = 0.15.
+step: Margin = 15%.
+check: 42000/280000*100
+explain: Affected by overhead control as well as gross margin.
+mistake: Using gross profit.
+tip: PBIT over revenue.
+src: Study text ch18 - operating margin (concept basis; original figures)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which asset is EXCLUDED from the quick (acid test) ratio?
++ Inventory || Least liquid current asset.
+- Trade receivables || Included.
+- Cash || Included.
+- Short-term investments || Usually included.
+explain: Inventory must be sold before it becomes cash.
+mistake: Including inventory.
+tip: Quick = no inventory.
+src: Study text ch18 - quick ratio (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: PBIT is $42,000 and interest payable is $4,000. What is interest cover (times)?
+answer: 10.5
+tol: 0.0001
+unit: times
+formula: Interest cover = PBIT / interest
+step: 42,000 / 4,000.
+step: = 10.5 times.
+check: 42000/4000
+explain: Low cover signals risk to lenders and shareholders.
+mistake: Using profit after interest.
+tip: Before interest over interest.
+src: Study text ch18 - interest cover (concept basis; original figures)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which user group is MOST interested in gearing and interest cover?
++ Lenders || Security of their loans.
+- Customers || Less concerned.
+- Employees only || Less directly.
+- Tax authorities || Not mainly.
+explain: Suppliers focus on liquidity; investors on returns.
+mistake: Mixing user needs.
+tip: Lenders watch debt.
+src: Study text ch18 - users (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which sales figure should be used for the receivables collection period?
++ Credit sales || Only credit sales create receivables.
+- Total sales including cash sales || Dilutes the ratio.
+- Gross profit || Not sales.
+- Cost of sales || Not correct.
+explain: Compare the result with credit terms.
+mistake: Using total sales.
+tip: Credit sales only.
+src: Study text ch18 - receivables days (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is the first step in interpreting financial statements?
++ Calculate relevant ratios, then compare them with benchmarks || Then explain and conclude.
+- Write a conclusion before calculating || Unsupported.
+- Ignore prior-year figures || Comparisons are essential.
+- Rely on one ratio only || Insufficient.
+explain: Calculate, compare, explain, conclude.
+mistake: Concluding from one figure.
+tip: Calculate and compare.
+src: Study text ch18 - approach (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: PBIT $42,000. Equity $160,000. Long-term loan $50,000.
+q: What is ROCE (%)?
+answer: 20
+tol: 0
+unit: %
+formula: ROCE = PBIT / (equity + non-current liabilities) x 100
+step: Capital employed = 160,000 + 50,000 = 210,000.
+step: ROCE = 42,000 / 210,000 = 20%.
+check: 42000/(160000+50000)*100
+explain: Capital employed includes long-term debt.
+mistake: Using equity only.
+tip: Equity + long-term debt.
+src: Study text ch18 - ROCE (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Current assets $96,000 (including inventory $40,000). Current liabilities $64,000.
+q: What is the quick ratio (:1)? Give your answer to three decimal places.
+answer: 0.875
+tol: 0.0005
+unit: :1
+formula: Quick = (current assets - inventory) / current liabilities
+step: 96,000 - 40,000 = 56,000.
+step: 56,000 / 64,000 = 0.875.
+check: (96000-40000)/64000
+explain: A quick ratio below 1 may be normal in some industries.
+mistake: Including inventory.
+tip: Strip inventory.
+src: Study text ch18 - quick ratio (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Inventory is $40,000 and cost of sales is $196,000. What is the inventory turnover period (days)? Give your answer to one decimal place.
+answer: 74.5
+tol: 0.05
+unit: days
+formula: Inventory days = inventory / cost of sales x 365
+step: 40,000 / 196,000 = 0.2041.
+step: x 365 = 74.5 days.
+check: 40000/196000*365
+explain: Rising inventory days may mean slow-moving stock.
+mistake: Using revenue.
+tip: Inventory over cost of sales.
+src: Study text ch18 - inventory days (concept basis; original figures)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO could explain a FALL in gross profit margin?
++ Selling prices were cut to win market share || Lower prices.
++ Purchase costs rose but could not be passed on || Higher costs.
+- Administrative expenses fell || Below gross profit.
+- Interest rates fell || Below operating profit.
+explain: Changes in sales mix can also affect the margin.
+mistake: Citing overheads.
+tip: Price and cost of sales.
+src: Study text ch18 - margin analysis (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t4
+status: review
+q: Match each ratio with what it mainly measures.
+pair: Gross profit margin => Pricing and purchasing performance
+pair: Current ratio => Short-term liquidity
+pair: Receivables days => Credit control efficiency
+pair: Interest cover => Ability to meet interest from profit
+explain: Ratios answer different questions.
+mistake: Mixing them up.
+tip: Each ratio, one question.
+src: Study text ch18 - ratio purposes (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Credit sales are $252,000 and trade receivables are $35,000. What is the receivables collection period (days)? Give your answer to one decimal place.
+answer: 50.7
+tol: 0.05
+unit: days
+formula: Collection period = receivables / credit sales x 365
+step: 35,000 / 252,000 = 0.1389.
+step: x 365 = 50.7 days.
+check: 35000/252000*365
+explain: Compare with the 30- or 60-day credit terms offered.
+mistake: Using total sales.
+tip: Credit sales base.
+src: Study text ch18 - receivables days (concept basis; original figures)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Interest-bearing debt is $50,000 and equity is $160,000. What is gearing measured as debt / equity (%)? Give your answer to two decimal places.
+answer: 31.25
+tol: 0.005
+unit: %
+formula: Gearing = debt / equity x 100
+step: 50,000 / 160,000 = 0.3125.
+step: Gearing = 31.25%.
+check: 50000/160000*100
+explain: Debt / (debt + equity) would be 23.8%.
+mistake: Mixing the two definitions.
+tip: State which definition.
+src: Study text ch18 - gearing (concept basis; original figures)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Revenue $280,000; capital employed $210,000.
+q: What is the net asset turnover?
++ 1.33 times || 280,000 / 210,000.
+- 0.75 times || Inverted.
+- 15% || Not turnover.
+- 20% || That is ROCE.
+formula: Net asset turnover = revenue / capital employed
+step: 280,000 / 210,000.
+step: = 1.33 times.
+check: 280000/210000
+explain: Operating margin 15% x turnover 1.33 = ROCE 20%.
+mistake: Inverting.
+tip: Revenue over capital.
+src: Study text ch18 - asset turnover (concept basis; original figures)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is ROCE linked to margin and asset turnover?
++ ROCE = operating profit margin x net asset turnover || Profit quality x activity.
+- ROCE = gross margin + asset turnover || Not additive.
+- ROCE = asset turnover / margin || Not correct.
+- They are unrelated || They are linked.
+explain: A low margin can be offset by high turnover.
+mistake: Adding the ratios.
+tip: Margin x turnover.
+src: Study text ch18 - ROCE link (concept basis; original question)
+
+=== Q020
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Trade payables are $28,000 and credit purchases are $204,400. What is the payables payment period (days)?
+answer: 50
+tol: 0.01
+unit: days
+formula: Payables days = payables / credit purchases x 365
+step: 28,000 / 204,400 = 0.137.
+step: x 365 = 50 days.
+check: 28000/204400*365
+explain: Taking longer conserves cash but may harm supplier relations.
+mistake: Using revenue.
+tip: Payables over purchases.
+src: Study text ch18 - payables days (concept basis; original figures)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A very HIGH current ratio could indicate what?
++ Inefficient use of resources, eg excess inventory or idle cash || Not always good.
+- Severe liquidity problems || That is a low ratio.
+- High gearing || Not related.
+- Strong gross margins || Not related.
+explain: Interpretation depends on the industry.
+mistake: Assuming higher is always better.
+tip: Too much can be wasteful.
+src: Study text ch18 - current ratio (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is a LIMITATION of ratio analysis?
++ Different accounting policies between companies can distort comparisons || Comparability issue.
+- Ratios are impossible to calculate || They can be calculated.
+- Ratios are always forward-looking || They are historic.
+- Ratios never need comparison || They do.
+explain: Inflation and window dressing also limit ratios.
+mistake: Over-relying on ratios.
+tip: Know the limits.
+src: Study text ch18 - limitations (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A trainee calculates ROCE using profit AFTER interest. What is the problem?
++ It mismatches profit with capital that includes debt; PBIT should be used || Inconsistent.
+- Nothing - any profit can be used || Not consistent.
+- ROCE must use gross profit || Not correct.
+- ROCE uses revenue || Not correct.
+explain: Interest is the return to lenders, who supply part of capital employed.
+mistake: Using the wrong profit.
+tip: Match numerator and denominator.
+src: Study text ch18 - ROCE (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Debt is $50,000 and equity is $160,000. What is gearing measured as debt / (debt + equity) (%)? Give your answer to one decimal place.
+answer: 23.8
+tol: 0.05
+unit: %
+formula: Gearing = debt / (debt + equity) x 100
+step: Debt + equity = 210,000.
+step: 50,000 / 210,000 = 23.8%.
+check: 50000/210000*100
+explain: Both definitions are acceptable if used consistently.
+mistake: Comparing figures calculated on different bases.
+tip: Be consistent.
+src: Study text ch18 - gearing (concept basis; original figures)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why may year-end inventory figures be unrepresentative for inventory days?
++ Seasonal businesses may hold unusually high or low inventory at the year end || Timing.
+- Inventory is never counted || It is counted.
+- Inventory is always valued at selling price || At cost or NRV.
+- Inventory has no cost || It does.
+explain: Average inventory gives a better picture.
+mistake: Ignoring seasonality.
+tip: Use averages where possible.
+src: Study text ch18 - inventory (concept basis; original question)
+
+=== Q026
+type: order
+level: S
+cat: concept
+topic: t4
+status: review
+q: Put the stages of interpreting financial statements in order.
+item: Calculate relevant ratios
+item: Compare with prior years, competitors or industry averages
+item: Explain possible causes of differences
+item: Draw conclusions for the user
+explain: Good answers explain, not just calculate.
+mistake: Stopping after calculation.
+tip: Calculate, compare, explain, conclude.
+src: Study text ch18 - approach (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Receivables days have risen from 35 to 55 days, while credit terms are 30 days. What does this suggest?
++ Credit control has weakened, or customers are struggling to pay || Collection is slower.
+- Customers are paying faster || Slower.
+- Inventory is moving faster || Not related.
+- Gearing has improved || Not related.
+explain: Longer collection ties up cash.
+mistake: Ignoring credit terms.
+tip: Compare with terms.
+src: Study text ch18 - receivables (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why is debt finance often cheaper than equity for a company?
++ Lenders face lower risk than shareholders, and interest is usually tax-deductible || Lower required return.
+- Debt never has to be repaid || It must be repaid.
+- Debt carries no interest || It does.
+- Equity is always free || It has a cost.
+explain: The trade-off is higher financial risk.
+mistake: Ignoring the risk.
+tip: Cheaper, but riskier.
+src: Study text ch18 - debt vs equity (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A company's operating margin is 12% and its net asset turnover is 1.5 times. What is ROCE (%)?
+answer: 18
+tol: 0.0001
+unit: %
+formula: ROCE = margin x turnover
+step: 12% x 1.5.
+step: = 18%.
+check: 12*1.5
+explain: The identity links the three ratios.
+mistake: Adding them.
+tip: Multiply.
+src: Study text ch18 - ROCE link (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee calculates inventory days using REVENUE. What is wrong?
++ Inventory is held at cost, so cost of sales should be used || Like for like.
+- Nothing is wrong || Inconsistent.
+- Gross profit should be used || Not correct.
+- Payables should be used || Not correct.
+explain: Using revenue understates inventory days.
+mistake: Mixing cost and selling price.
+tip: Cost with cost.
+src: Study text ch18 - inventory days (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Revenue rose by 20%, but the gross profit margin fell from 35% to 28%. What is the MOST likely explanation?
++ Prices were cut to increase sales volume || Volume up, margin down.
+- Purchase costs fell sharply || Would raise margin.
+- Administrative costs rose || Below gross profit.
+- Interest rates rose || Below operating profit.
+explain: Check whether total gross profit still increased.
+mistake: Linking overheads to gross margin.
+tip: Price and volume trade-off.
+src: Study text ch18 - interpretation (concept basis; original scenario)
+
+=== Q032
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Revenue $640,000; cost of sales $416,000; distribution costs $64,000; administrative expenses $80,000; finance costs $12,000. Equity $450,000; loan notes $150,000.
+q: What is ROCE (%)?
+answer: 13.3333
+tol: 0.01
+unit: %
+formula: ROCE = PBIT / (equity + loan notes) x 100
+step: PBIT = 640,000 - 416,000 - 64,000 - 80,000 = 80,000.
+step: ROCE = 80,000 / 600,000 = 13.33%.
+check: (640000-416000-64000-80000)/(450000+150000)*100
+explain: Finance costs are not deducted for ROCE.
+mistake: Deducting finance costs.
+tip: Use profit before interest.
+src: Study text ch18 - ROCE (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO actions would IMPROVE (shorten) the working capital cycle?
++ Collecting receivables faster || Fewer receivables days.
++ Holding less inventory || Fewer inventory days.
+- Paying suppliers sooner || Fewer payables days lengthens the cycle.
+- Offering longer credit to customers || Longer receivables days.
+explain: Cycle = inventory days + receivables days - payables days.
+mistake: Paying suppliers early to shorten the cycle.
+tip: Hold less, collect faster.
+src: Study text ch18 - working capital (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Inventory days 74; receivables days 51; payables days 50.
+q: What is the working capital cycle (days)?
+answer: 75
+tol: 0
+unit: days
+formula: Cycle = inventory days + receivables days - payables days
+step: 74 + 51 = 125.
+step: 125 - 50 = 75 days.
+check: 74+51-50
+explain: Cash is tied up for about 75 days.
+mistake: Adding payables days.
+tip: Payables shorten the cycle.
+src: Study text ch18 - cycle (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: Company A has gearing of 60% and Company B 20%. A trainee concludes A is always a worse investment. What is the flaw?
++ Higher gearing raises risk but can also raise returns to shareholders; context and industry matter || Not automatically worse.
+- Higher gearing always means losses || Not true.
+- Gearing has no effect on risk || It does.
+- B must be making losses || Not implied.
+explain: Stable businesses can support more debt.
+mistake: Judging on one ratio.
+tip: Consider context.
+src: Study text ch18 - gearing (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: PBIT $95,000. Loan notes $300,000 at 6% and a bank loan $100,000 at 8%.
+q: What is interest cover (times)? Give your answer to two decimal places.
+answer: 3.65
+tol: 0.005
+unit: times
+formula: Interest cover = PBIT / total interest
+step: Interest = 300,000 x 6% + 100,000 x 8% = 18,000 + 8,000 = 26,000.
+step: Cover = 95,000 / 26,000 = 3.65 times.
+check: 95000/26000
+explain: Include interest on every source of borrowing.
+mistake: Using only one loan's interest.
+tip: Total all interest.
+src: Study text ch18 - interest cover (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A retailer's quick ratio is 0.3 while its current ratio is 1.4. Is this necessarily a problem?
++ Not necessarily - retailers hold large inventories and sell for cash quickly, so low quick ratios are common || Industry context.
+- Yes - any quick ratio below 1 means insolvency || Too simplistic.
+- No - the quick ratio is never relevant || It is relevant.
+- Yes - the current ratio must equal the quick ratio || Not correct.
+explain: Compare with industry norms.
+mistake: Applying one benchmark to all industries.
+tip: Context matters.
+src: Study text ch18 - liquidity (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Opening inventory $36,000; closing inventory $44,000; cost of sales $292,000.
+q: Using AVERAGE inventory, what is the inventory turnover period (days)?
+answer: 50
+tol: 0.01
+unit: days
+formula: Inventory days = average inventory / cost of sales x 365
+step: Average = (36,000 + 44,000) / 2 = 40,000.
+step: 40,000 / 292,000 x 365 = 50 days.
+check: (36000+44000)/2/292000*365
+explain: Averages reduce year-end distortion.
+mistake: Using closing inventory only.
+tip: Average if possible.
+src: Study text ch18 - average inventory (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: What is "window dressing" in the context of ratios?
++ Arranging transactions near the year end to make ratios look better, eg delaying payments || Distorts ratios.
+- Decorating the head office || Not the meaning.
+- Revaluing assets every year || Not necessarily.
+- Publishing accounts on time || Not the meaning.
+explain: It is a limitation of year-end ratios.
+mistake: Trusting year-end ratios blindly.
+tip: Year-end figures can be managed.
+src: Study text ch18 - limitations (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each user with the ratios they focus on MOST.
+pair: Shareholders => ROCE and profit margins
+pair: Lenders => Gearing and interest cover
+pair: Suppliers => Current ratio and payables days
+pair: Management => All ratios, for control
+explain: Different users have different concerns.
+mistake: Assuming one set suits all.
+tip: Who is asking?
+src: Study text ch18 - users (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A company wants ROCE of 24%. Its net asset turnover is 1.6 times. What operating profit margin (%) is required?
+answer: 15
+tol: 0.0001
+unit: %
+formula: Margin = ROCE / asset turnover
+step: 24 / 1.6.
+step: = 15%.
+check: 24/1.6
+explain: Rearrange the ROCE identity.
+mistake: Multiplying.
+tip: Divide ROCE by turnover.
+src: Study text ch18 - ROCE link (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee says a falling inventory turnover period is "always bad". What is wrong?
++ Fewer inventory days usually means faster-moving inventory, which is generally good, unless shortages arise || Context.
+- It is always bad || Usually positive.
+- Inventory days never change || They do.
+- It means more inventory is held || Less.
+explain: Too little inventory may cause lost sales.
+mistake: Misreading the direction.
+tip: Fewer days = faster turnover.
+src: Study text ch18 - inventory days (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Gross margin is stable, but operating margin has fallen from 14% to 9%. Where should the analyst look?
++ Operating expenses such as distribution and administrative costs || Below gross profit.
+- Selling prices || Would affect gross margin.
+- Purchase costs || Would affect gross margin.
+- Tax charge || Below operating profit.
+explain: The gap between the two margins reflects overheads.
+mistake: Looking at cost of sales.
+tip: Stable gross, falling operating = overheads.
+src: Study text ch18 - margins (concept basis; original scenario)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Revenue $730,000, of which 20% is cash sales. Trade receivables $48,000.
+q: What is the receivables collection period (days)?
+answer: 30
+tol: 0.01
+unit: days
+formula: Days = receivables / credit sales x 365
+step: Credit sales = 730,000 x 80% = 584,000.
+step: 48,000 / 584,000 x 365 = 30 days.
+check: 48000/(730000*0.8)*365
+explain: Using total sales would give 24 days.
+mistake: Including cash sales.
+tip: Remove cash sales.
+src: Study text ch18 - credit sales (concept basis; original figures)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Interest cover has fallen from 9 times to 2 times. What does this suggest?
++ Profits only just cover interest, so financial risk has increased || Less safety margin.
+- Gearing has fallen || Likely risen or profits fallen.
+- Liquidity has improved || Not directly.
+- Interest rates are irrelevant || They matter.
+explain: Lenders may restrict further borrowing.
+mistake: Seeing lower cover as safer.
+tip: Lower cover = more risk.
+src: Study text ch18 - interest cover (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Last year: revenue $500,000; gross profit $175,000. This year: revenue $600,000; gross profit $186,000.
+q: By how many percentage points has the gross profit margin FALLEN?
+answer: 4
+tol: 0.0001
+unit: pp
+formula: Change = last year's margin - this year's margin
+step: Last year = 175,000 / 500,000 = 35%; this year = 186,000 / 600,000 = 31%.
+step: Fall = 35 - 31 = 4 percentage points.
+check: 175000/500000*100-186000/600000*100
+explain: Gross profit rose in total but the margin fell.
+mistake: Comparing gross profit totals only.
+tip: Compare percentages.
+src: Study text ch18 - trends (concept basis; original figures)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: How does inflation limit ratio analysis?
++ Historic-cost asset values may be understated, inflating ROCE and distorting comparisons over time || Older assets at old prices.
+- Inflation has no effect on ratios || It can.
+- Inflation only affects tax || Broader effect.
+- Inflation increases inventory days only || Broader effect.
+explain: Comparisons between old and new asset bases are affected.
+mistake: Ignoring price changes.
+tip: Old costs, new profits.
+src: Study text ch18 - inflation (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company's payables days have risen sharply from 40 to 85 days while cash balances fell. What is the MOST likely interpretation?
++ The company is delaying payments to suppliers because it is short of cash || Liquidity pressure.
+- The company is paying suppliers faster || Slower.
+- Suppliers have shortened credit terms || Would reduce days.
+- Inventory has fallen || Not related directly.
+explain: Suppliers may stop supplying if delays continue.
+mistake: Seeing longer payment as purely positive.
+tip: Stretching payables can signal trouble.
+src: Study text ch18 - payables (concept basis; original scenario)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which formula gives ROCE?
++ PBIT / (equity + non-current liabilities) x 100 || Core formula.
+- Profit after tax / equity x 100 || That is closer to ROE.
+- Gross profit / revenue x 100 || Gross margin.
+- Revenue / capital employed || Asset turnover.
+explain: ROCE = operating margin x asset turnover.
+mistake: Using profit after interest.
+tip: PBIT over capital employed.
+src: Study text ch18 - ROCE (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which set of formulas is correct?
++ Inventory days = inventory / cost of sales x 365; receivables days = receivables / credit sales x 365; payables days = payables / purchases x 365 || Core formulas.
+- Inventory days = inventory / revenue x 365 || Use cost of sales.
+- Receivables days = receivables / total sales x 365 || Use credit sales.
+- Payables days = payables / revenue x 365 || Use purchases.
+explain: Match each balance with the related flow.
+mistake: Mismatching bases.
+tip: Balance over related flow.
+src: Study text ch18 - efficiency ratios (concept basis; original question)

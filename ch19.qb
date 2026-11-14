@@ -1,0 +1,895 @@
+@subject acffa2
+@chapter 19
+@title Consolidated Statement of Financial Position
+@lo F6
+@topic t1 | Control and group terms | F6
+@topic t2 | The five workings | F6
+@topic t3 | Goodwill | F6
+@topic t4 | Intra-group items | F6
+@topic t5 | Mid-year acquisitions | F6
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What usually indicates that one company controls another?
++ Owning more than 50% of its voting shares || Majority voting power.
+- Owning 20% of its shares || Usually significant influence.
+- Being its main supplier || Not control.
+- Having the same auditors || Not control.
+explain: IFRS 10 defines control by power, variable returns and the link between them.
+mistake: Equating 20% with control.
+tip: Over 50% = control.
+src: Study text ch19 - control (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the non-controlling interest (NCI)?
++ The equity in a subsidiary not owned by the parent || Minority owners' share.
+- The parent's share of the subsidiary || That is the controlling interest.
+- A liability to the subsidiary || Not a liability.
+- Goodwill || Different item.
+explain: NCI is shown within equity in the consolidated SOFP.
+mistake: Showing NCI as a liability.
+tip: The bit the parent doesn't own.
+src: Study text ch19 - NCI (concept basis; original question)
+
+=== Q003
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: P paid $90,000 for 80% of S. The fair value of the NCI at acquisition was $20,000. S's net assets at acquisition were $90,000. What is goodwill ($)?
+answer: 20000
+tol: 0
+unit: $
+formula: Goodwill = consideration + FV of NCI - FV of net assets
+step: 90,000 + 20,000 = 110,000.
+step: 110,000 - 90,000 = $20,000.
+check: 90000+20000-90000
+explain: Goodwill is an intangible non-current asset.
+mistake: Forgetting the NCI.
+tip: Paid + NCI - net assets.
+src: Study text ch19 - goodwill (concept basis; original figures)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: In the consolidated SOFP, how much of the subsidiary's assets and liabilities are included?
++ 100%, even if the parent owns less than 100% || Full consolidation.
+- Only the parent's percentage || Not under IFRS 10.
+- None - only the investment is shown || Not consolidation.
+- 50% || Not correct.
+explain: The NCI's share is shown in equity.
+mistake: Proportionally consolidating.
+tip: Add 100%, then show NCI.
+src: Study text ch19 - consolidation (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is positive goodwill treated after acquisition?
++ Held as an intangible asset and tested for impairment annually || Not amortised.
+- Amortised over 5 years || Not under IFRS.
+- Written off to profit immediately || Not correct.
+- Credited to equity || Not correct.
+explain: Impairment losses reduce goodwill.
+mistake: Amortising goodwill.
+tip: Impair, don't amortise.
+src: Study text ch19 - goodwill (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: How are intra-group receivables and payables treated on consolidation?
++ They are cancelled out against each other || The group cannot owe itself.
+- They are added together || Overstates both.
+- Only the receivable is removed || Both are removed.
+- They are shown as investments || Not correct.
+explain: Reconcile cash and goods in transit first.
+mistake: Leaving intra-group balances.
+tip: Owe yourself = cancel.
+src: Study text ch19 - intra-group (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How does IFRS 13 describe fair value?
++ The price received to sell an asset or paid to transfer a liability between market participants at the measurement date || An exit price.
+- The original cost || Historical cost.
+- The book value in the subsidiary's accounts || Not fair value.
+- The price the parent paid || Consideration, not fair value of assets.
+explain: Subsidiary net assets are measured at fair value at acquisition.
+mistake: Using book values.
+tip: Exit price.
+src: Study text ch19 - fair value (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What happens to the parent's investment in the subsidiary on consolidation?
++ It is cancelled and replaced by goodwill and the subsidiary's net assets || Not shown separately.
+- It remains as a non-current asset || Cancelled.
+- It is added to share capital || Not correct.
+- It is expensed || Not correct.
+explain: The goodwill working uses the investment cost.
+mistake: Leaving the investment in.
+tip: Investment out, net assets in.
+src: Study text ch19 - cancellation (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which reserves are included in group retained earnings?
++ All of the parent's retained earnings plus the parent's share of the subsidiary's POST-acquisition retained earnings || W5.
+- All of both companies' retained earnings || Includes pre-acquisition.
+- Only the subsidiary's retained earnings || Not correct.
+- The parent's share of pre-acquisition reserves || Excluded.
+explain: Pre-acquisition reserves are part of net assets acquired.
+mistake: Including pre-acquisition profits.
+tip: Post-acquisition only.
+src: Study text ch19 - W5 (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is a parent company?
++ An entity that controls one or more other entities || IFRS 10.
+- Any company with shares || Not correct.
+- A company owned by another || That is a subsidiary.
+- A company with no subsidiaries || Not correct.
+explain: The controlled entity is a subsidiary.
+mistake: Reversing the terms.
+tip: Parent controls.
+src: Study text ch19 - terms (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: P owns 80% of S. FV of NCI at acquisition $20,000. S's retained earnings were $40,000 at acquisition and $55,000 at the reporting date.
+q: What is the NCI ($) in the consolidated SOFP?
+answer: 23000
+tol: 0
+unit: $
+formula: NCI = FV at acquisition + NCI % x post-acquisition reserves
+step: Post-acquisition = 55,000 - 40,000 = 15,000.
+step: NCI = 20,000 + 20% x 15,000 = $23,000.
+check: 20000+0.2*(55000-40000)
+explain: NCI shares in post-acquisition profits.
+mistake: Using total reserves.
+tip: Post-acquisition share.
+src: Study text ch19 - W4 (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: P's retained earnings $120,000. P owns 80% of S. S's post-acquisition retained earnings are $15,000.
+q: What are group retained earnings ($)?
+answer: 132000
+tol: 0
+unit: $
+formula: Group RE = P's RE + P% x S's post-acquisition RE
+step: 80% x 15,000 = 12,000.
+step: 120,000 + 12,000 = $132,000.
+check: 120000+0.8*15000
+explain: S's pre-acquisition reserves are excluded.
+mistake: Adding 100% of S's reserves.
+tip: Parent's share of post-acquisition.
+src: Study text ch19 - W5 (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: P sold goods to S at a mark-up of 25% on cost. At the year end, S still holds goods bought from P for $10,000. What is the unrealised profit (PURP) ($)?
+answer: 2000
+tol: 0
+unit: $
+formula: PURP = inventory x mark-up / (100 + mark-up)
+step: 10,000 x 25 / 125.
+step: = $2,000.
+check: 10000*25/125
+explain: Reduce group inventory and group retained earnings (seller = parent).
+mistake: Taking 25% of the transfer price.
+tip: Mark-up: x 25/125.
+src: Study text ch19 - PURP (concept basis; original question)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t4
+status: review
+select: 2
+q: When the PARENT sells goods to the subsidiary and some remain in inventory, which TWO adjustments are made?
++ Reduce consolidated inventory by the PURP || Inventory at cost to the group.
++ Reduce group retained earnings by the PURP || The parent made the profit.
+- Reduce the NCI by the PURP || NCI is not affected when P sells.
+- Increase goodwill by the PURP || Not related.
+explain: If the subsidiary sold, the PURP would reduce S's post-acquisition profits shared with NCI.
+mistake: Charging NCI when P sells.
+tip: Seller bears the PURP.
+src: Study text ch19 - PURP (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each working with its purpose.
+pair: W1 Group structure => Ownership % and NCI %
+pair: W2 Net assets => Subsidiary's net assets at acquisition and reporting date
+pair: W3 Goodwill => Consideration + NCI - net assets at acquisition
+pair: W5 Group retained earnings => Parent's RE + share of post-acquisition RE
+explain: W4 calculates the NCI.
+mistake: Mixing up workings.
+tip: Structure, net assets, goodwill, NCI, reserves.
+src: Study text ch19 - workings (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: P paid $90,000 for 80% of S. FV of NCI $20,000. S's book net assets at acquisition were $90,000, but S's land had a fair value $10,000 above book value.
+q: What is goodwill ($)?
+answer: 10000
+tol: 0
+unit: $
+formula: Goodwill = consideration + NCI - FV of net assets
+step: FV of net assets = 90,000 + 10,000 = 100,000.
+step: Goodwill = 90,000 + 20,000 - 100,000 = $10,000.
+check: 90000+20000-(90000+10000)
+explain: Fair value adjustments reduce goodwill.
+mistake: Using book values.
+tip: Adjust to fair value.
+src: Study text ch19 - FV adjustment (concept basis; original figures)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: P's inventory is $40,000 and S's is $25,000. There is a PURP of $2,000 on goods P sold to S. What is consolidated inventory ($)?
+answer: 63000
+tol: 0
+unit: $
+formula: Inventory = P + S - PURP
+step: 40,000 + 25,000 = 65,000.
+step: 65,000 - 2,000 = $63,000.
+check: 40000+25000-2000
+explain: The group holds the goods at cost to the group.
+mistake: Not deducting PURP.
+tip: Add, then remove PURP.
+src: Study text ch19 - inventory (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: P acquires S part-way through the year. How are S's reserves at the acquisition date found?
++ By time-apportioning S's profit for the year, assuming it accrues evenly || Pre-acquisition share.
+- By using S's closing reserves || Includes post-acquisition.
+- By using S's opening reserves only || Misses pre-acquisition profit.
+- By ignoring S's profit || Not correct.
+explain: Only profit after acquisition is post-acquisition.
+mistake: Using year-end reserves.
+tip: Time-apportion.
+src: Study text ch19 - mid-year (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: S's retained earnings were $30,000 on 1 January. Its profit for the year to 31 December was $24,000, earned evenly. P acquired S on 1 April.
+q: What were S's retained earnings ($) at the acquisition date?
+answer: 36000
+tol: 0
+unit: $
+formula: RE at acquisition = opening RE + profit x months before acquisition / 12
+step: Profit to 1 April = 24,000 x 3/12 = 6,000.
+step: RE at acquisition = 30,000 + 6,000 = $36,000.
+check: 30000+24000*3/12
+explain: Post-acquisition profit = 18,000.
+mistake: Using the full year's profit.
+tip: Count months before acquisition.
+src: Study text ch19 - mid-year (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Where is goodwill shown in the consolidated statement of financial position?
++ As an intangible non-current asset || Asset.
+- In equity || Not equity.
+- As a current asset || Not current.
+- As a liability || Not a liability.
+explain: Negative goodwill (a bargain purchase) is treated differently.
+mistake: Placing it in equity.
+tip: Intangible asset.
+src: Study text ch19 - presentation (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is the purpose of consolidated financial statements?
++ To present the parent and its subsidiaries as a single economic entity || Group view.
+- To show only the parent's own results || That is the parent's individual accounts.
+- To reduce tax || Not the purpose.
+- To replace the subsidiaries' own accounts || They still prepare their own.
+explain: Users see the whole group's resources and results.
+mistake: Thinking subsidiaries stop reporting.
+tip: One economic entity.
+src: Study text ch19 - purpose (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: P issued 20,000 of its own shares to acquire S. P's shares had a market value of $3 each at the acquisition date. What is the fair value of the consideration ($)?
+answer: 60000
+tol: 0
+unit: $
+formula: Consideration = shares issued x market value
+step: 20,000 x 3.
+step: = $60,000.
+check: 20000*3
+explain: Nominal value is irrelevant to fair value.
+mistake: Using nominal value.
+tip: Market value at acquisition.
+src: Study text ch19 - share consideration (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee includes 80% of the subsidiary's receivables in the consolidated SOFP because the parent owns 80%. What is wrong?
++ 100% of the subsidiary's assets are included; the NCI's share is shown in equity || Full consolidation.
+- Nothing is wrong || Not full consolidation.
+- Receivables should be excluded || They are included.
+- 20% should be included || Not correct.
+explain: Control means all the assets are controlled.
+mistake: Proportional consolidation.
+tip: Control = 100%.
+src: Study text ch19 - consolidation (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: P has a receivable of $7,000 from S. S shows a payable of $6,000 to P, because S sent $1,000 cash just before the year end that P had not received. What amount ($) is cancelled after recording the cash in transit?
+answer: 6000
+tol: 0
+unit: $
+formula: Cancel the agreed balance after adjusting for items in transit
+step: Record cash in transit in P: Dr cash 1,000; Cr receivable 1,000, leaving a receivable of 6,000.
+step: Cancel the 6,000 receivable against the 6,000 payable.
+check: 7000-1000
+explain: Group cash increases by the $1,000 in transit.
+mistake: Cancelling unequal balances.
+tip: Agree the balances first.
+src: Study text ch19 - cash in transit (concept basis; original figures)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: P acquired S on 1 October. The year end is 31 December. Which part of S's profit for the year is post-acquisition?
++ The profit for October to December only || After acquisition.
+- The whole year's profit || Includes pre-acquisition.
+- The profit for January to September || Pre-acquisition.
+- None of it || Three months are post-acquisition.
+explain: Only post-acquisition profit goes into group reserves.
+mistake: Including the full year.
+tip: After control starts.
+src: Study text ch19 - post-acquisition (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: At the reporting date, S has share capital $50,000 and retained earnings $55,000. A fair value adjustment of $10,000 (on land) arose at acquisition.
+q: What are S's net assets ($) at the reporting date in W2?
+answer: 115000
+tol: 0
+unit: $
+formula: Net assets = share capital + reserves + FV adjustments
+step: 50,000 + 55,000 = 105,000.
+step: Plus FV adjustment 10,000 = $115,000.
+check: 50000+55000+10000
+explain: FV adjustments appear in both W2 columns.
+mistake: Omitting the FV adjustment at the reporting date.
+tip: Same adjustment both columns.
+src: Study text ch19 - W2 (concept basis; original figures)
+
+=== Q027
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: P owns 80% of S, and NCI is measured at fair value. Goodwill is impaired by $4,000. By how much are group retained earnings reduced?
++ $3,200 || Parent's 80% share.
+- $4,000 || NCI bears 20%.
+- $800 || That is the NCI share.
+- $0 || The impairment is shared.
+formula: Parent's share = impairment x P%
+step: 4,000 x 80% = 3,200.
+step: NCI bears 800.
+check: 4000*0.8
+explain: Under the fair value method, NCI shares goodwill impairment.
+mistake: Charging the whole impairment to the parent.
+tip: Split by ownership.
+src: Study text ch19 - impairment (concept basis; original question)
+
+=== Q028
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the consolidation workings in their usual order.
+item: W1 Group structure
+item: W2 Net assets of the subsidiary
+item: W3 Goodwill
+item: W4 Non-controlling interest
+item: W5 Group retained earnings
+explain: W2 feeds both goodwill and NCI.
+mistake: Calculating goodwill before net assets.
+tip: 1 to 5.
+src: Study text ch19 - workings (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is DEFERRED consideration included in the cost of a subsidiary?
++ At its present value at the acquisition date || Time value of money.
+- At the full future amount || Overstates cost.
+- It is ignored || It is part of consideration.
+- As an expense when paid || Part of goodwill calculation.
+explain: The discount unwinds as a finance cost.
+mistake: Using the undiscounted amount.
+tip: Discount future payments.
+src: Study text ch19 - deferred consideration (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: P owns 45% of S's shares but, by agreement with other shareholders, can appoint the majority of S's board. Is S a subsidiary?
++ Yes - P has power over S, so control exists || Control is not only about share %.
+- No - P owns less than 50% || Control can arise otherwise.
+- No - it must be an associate automatically || Not if control exists.
+- Only if P owns 100% || Not required.
+explain: Majority ownership is usual evidence, but not the only route.
+mistake: Applying the 50% test mechanically.
+tip: Look for power.
+src: Study text ch19 - control (concept basis; original scenario)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: P owns 80% of S. FV of NCI at acquisition $20,000. S's post-acquisition retained earnings (before adjustment) $15,000. S sold goods to P at a margin of 20%; P still holds $15,000 of these goods.
+q: What is the NCI ($)?
+answer: 22400
+tol: 0
+unit: $
+formula: NCI = FV at acquisition + NCI% x (post-acquisition RE - PURP)
+step: PURP = 15,000 x 20% = 3,000; adjusted post-acquisition = 12,000.
+step: NCI = 20,000 + 20% x 12,000 = $22,400.
+check: 20000+0.2*(15000-15000*0.2)
+explain: When S is the seller, the PURP is shared with the NCI.
+mistake: Ignoring the PURP in NCI.
+tip: Seller = subsidiary → adjust W2.
+src: Study text ch19 - PURP and NCI (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: P's retained earnings $120,000. P owns 80% of S. S's post-acquisition retained earnings $15,000 before a $3,000 PURP on goods S sold to P.
+q: What are group retained earnings?
++ $129,600 || 120,000 + 80% x 12,000.
+- $132,000 || Ignores the PURP.
+- $129,000 || Deducts the full PURP from P.
+- $132,600 || Not correct.
+formula: Group RE = P's RE + P% x (S post-acquisition - PURP)
+step: Adjusted post-acquisition = 15,000 - 3,000 = 12,000.
+step: Group RE = 120,000 + 9,600 = $129,600.
+check: 120000+0.8*(15000-3000)
+explain: The NCI bears 20% of the PURP.
+mistake: Charging the whole PURP to group RE.
+tip: Share the PURP when S sells.
+src: Study text ch19 - W5 (concept basis; original figures)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: On 1 May P paid $76,000 for 60% of S. FV of NCI at acquisition $48,000. S: share capital $50,000; retained earnings at 1 January $40,000; profit for the year $36,000, earned evenly. Year end 31 December.
+q: What is goodwill ($)?
+answer: 22000
+tol: 0
+unit: $
+formula: Goodwill = consideration + NCI - net assets at acquisition
+step: RE at acquisition = 40,000 + 36,000 x 4/12 = 52,000; net assets = 50,000 + 52,000 = 102,000.
+step: Goodwill = 76,000 + 48,000 - 102,000 = $22,000.
+check: 76000+48000-(50000+40000+36000*4/12)
+explain: January to April profit is pre-acquisition.
+mistake: Using year-end reserves.
+tip: Time-apportion to the acquisition date.
+src: Study text ch19 - mid-year goodwill (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: As in the previous question: 60% acquired on 1 May; FV of NCI $48,000; S's profit for the year $36,000, earned evenly.
+q: What is the NCI at 31 December?
++ $57,600 || 48,000 + 40% x 24,000.
+- $62,400 || Uses the full year's profit.
+- $48,000 || Ignores post-acquisition profit.
+- $52,800 || Uses 20%.
+formula: NCI = FV at acquisition + NCI% x post-acquisition profit
+step: Post-acquisition profit = 36,000 x 8/12 = 24,000.
+step: NCI = 48,000 + 40% x 24,000 = $57,600.
+check: 48000+0.4*36000*8/12
+explain: Only 8 months' profit is post-acquisition.
+mistake: Including pre-acquisition profit.
+tip: Months after acquisition.
+src: Study text ch19 - mid-year NCI (concept basis; original figures)
+
+=== Q035
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO items do NOT appear in the consolidated SOFP?
++ The parent's investment in the subsidiary || Cancelled.
++ The subsidiary's share capital || Cancelled against the investment.
+- Goodwill || Shown as an intangible.
+- Non-controlling interest || Shown in equity.
+explain: Only the parent's share capital is shown.
+mistake: Adding the subsidiary's share capital.
+tip: Parent's capital only.
+src: Study text ch19 - cancellation (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee includes 80% of S's TOTAL retained earnings (including pre-acquisition) in group retained earnings. What is wrong?
++ Pre-acquisition reserves were bought and are part of net assets in goodwill; only post-acquisition reserves are included || Double counting.
+- Nothing is wrong || Overstates group RE.
+- 100% should be included || Not correct.
+- No subsidiary reserves should be included || Post-acquisition are included.
+explain: Group reserves reflect profit earned under the group's control.
+mistake: Including pre-acquisition profits.
+tip: Post only.
+src: Study text ch19 - W5 (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: At acquisition, S's building had a fair value $20,000 above its book value and a remaining life of 10 years. One year has passed since acquisition.
+q: By how much ($) are S's post-acquisition retained earnings reduced for extra depreciation on the fair value adjustment?
+answer: 2000
+tol: 0
+unit: $
+formula: Extra depreciation = FV adjustment / remaining life x years
+step: 20,000 / 10 = 2,000 a year.
+step: One year = $2,000.
+check: 20000/10*1
+explain: The adjustment at the reporting date is 18,000.
+mistake: Ignoring extra depreciation.
+tip: FV uplift depreciates too.
+src: Study text ch19 - FV depreciation (concept basis; original figures)
+
+=== Q038
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: At the year end, P has invoiced S for goods worth $3,000 that S has not yet received or recorded. What should happen on consolidation?
++ Record the goods in transit in S (inventory and payable), then cancel the matching intra-group balances || Agree first.
+- Ignore the difference || Balances would not cancel.
+- Write off $3,000 as an expense || Not correct.
+- Cancel only P's receivable || Both must agree.
+explain: Goods in transit increase group inventory.
+mistake: Cancelling unequal balances.
+tip: Adjust for in-transit items.
+src: Study text ch19 - goods in transit (concept basis; original scenario)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: P's receivables are $30,000 (including $6,000 owed by S) and S's receivables are $22,000. What are consolidated receivables ($)?
+answer: 46000
+tol: 0
+unit: $
+formula: Consolidated = P + S - intra-group
+step: 30,000 + 22,000 = 52,000.
+step: 52,000 - 6,000 = $46,000.
+check: 30000+22000-6000
+explain: The matching payable in S is also removed.
+mistake: Leaving intra-group balances.
+tip: Remove the internal debt.
+src: Study text ch19 - receivables (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each intra-group item with its consolidation treatment.
+pair: Intra-group receivable and payable => Cancel against each other
+pair: Unrealised profit, parent is seller => Reduce inventory and group retained earnings
+pair: Unrealised profit, subsidiary is seller => Reduce inventory and S's post-acquisition profit (shared with NCI)
+pair: Cash in transit to the parent => Add to group cash before cancelling
+explain: The group cannot trade with or owe itself.
+mistake: Charging all PURP to the parent.
+tip: Who sold?
+src: Study text ch19 - intra-group (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: NCI before impairment is $23,000. Goodwill (NCI at fair value) is impaired by $4,000. NCI owns 20%.
+q: What is the NCI ($) after impairment?
+answer: 22200
+tol: 0
+unit: $
+formula: NCI = NCI before - NCI% x impairment
+step: NCI share = 4,000 x 20% = 800.
+step: NCI = 23,000 - 800 = $22,200.
+check: 23000-4000*0.2
+explain: The parent bears $3,200 through group RE.
+mistake: Not sharing the impairment.
+tip: Split by %.
+src: Study text ch19 - impairment and NCI (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: When NCI is measured at fair value, why does goodwill include an NCI share?
++ The fair value of NCI includes the NCI's share of the subsidiary's goodwill || Full goodwill.
+- Because the parent pays for the NCI's shares || It doesn't.
+- Because NCI is a liability || It is equity.
+- It does not || It does.
+explain: This is known as the full goodwill method.
+mistake: Thinking goodwill belongs only to the parent.
+tip: Fair value NCI = full goodwill.
+src: Study text ch19 - NCI goodwill (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: P paid $50,000 cash at acquisition and will pay a further $33,000 one year later. P's cost of capital is 10%. What is the total fair value of consideration ($)?
+answer: 80000
+tol: 0
+unit: $
+formula: Consideration = cash now + deferred / (1 + r)
+step: PV of deferred = 33,000 / 1.10 = 30,000.
+step: Total = 50,000 + 30,000 = $80,000.
+check: 50000+33000/1.1
+explain: Deferred consideration is discounted.
+mistake: Using 83,000.
+tip: Discount the future payment.
+src: Study text ch19 - deferred consideration (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: P sold goods to S at a MARGIN of 25%; S holds $8,000 of these goods. A trainee calculates PURP as $8,000 x 25/125. What is the correct PURP?
++ $2,000 || Margin: 8,000 x 25%.
+- $1,600 || Treats margin as mark-up.
+- $8,000 || The whole inventory.
+- $2,500 || Not correct.
+formula: PURP with margin = inventory x margin %
+step: Margin is a % of selling (transfer) price.
+step: PURP = 8,000 x 25% = $2,000.
+check: 8000*0.25
+explain: Use x 25/125 only for a mark-up on cost.
+mistake: Confusing margin and mark-up.
+tip: Margin = straight %.
+src: Study text ch19 - PURP margin (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: P's share capital is $200,000 and S's share capital is $50,000. P owns 80% of S. What is consolidated share capital ($)?
+answer: 200000
+tol: 0
+unit: $
+formula: Consolidated share capital = parent's share capital only
+step: S's share capital is cancelled in goodwill and NCI workings.
+step: Consolidated = $200,000.
+check: 200000
+explain: The group's equity owners are the parent's shareholders plus the NCI.
+mistake: Adding S's share capital.
+tip: Parent only.
+src: Study text ch19 - share capital (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t5
+status: review
+q: P acquires S on 1 July. S's statement of profit or loss covers the full calendar year. How should S's pre-acquisition profit be treated in the consolidated SOFP?
++ It forms part of S's net assets at acquisition in the goodwill calculation || Pre-acquisition.
+- It is added to group retained earnings || Not post-acquisition.
+- It is shown as a separate reserve || Not correct.
+- It is ignored completely || It is in net assets at acquisition.
+explain: Only post-acquisition profit is group profit.
+mistake: Adding it to group reserves.
+tip: Before control = goodwill working.
+src: Study text ch19 - pre-acquisition (concept basis; original scenario)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: S sold goods to P at a mark-up of 50% on cost. P still holds goods it bought from S for $9,000. What is the PURP ($)?
+answer: 3000
+tol: 0
+unit: $
+formula: PURP = inventory x mark-up / (100 + mark-up)
+step: 9,000 x 50 / 150.
+step: = $3,000.
+check: 9000*50/150
+explain: As S is the seller, the PURP reduces S's post-acquisition profit.
+mistake: Taking 50% of 9,000.
+tip: Mark-up: x 50/150.
+src: Study text ch19 - PURP (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Where is the NCI shown in the consolidated statement of financial position?
++ Within equity, separately from the parent's equity || IFRS presentation.
+- As a non-current liability || Not a liability.
+- As a current liability || Not a liability.
+- As a deduction from goodwill || Not correct.
+explain: Total equity = parent's equity + NCI.
+mistake: Showing it as a liability.
+tip: NCI is equity.
+src: Study text ch19 - NCI presentation (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which formula gives goodwill on acquisition?
++ Fair value of consideration + fair value of NCI - fair value of net assets acquired || Core formula.
+- Consideration - share capital of S || Ignores reserves and NCI.
+- Net assets - consideration || Reversed.
+- Consideration + net assets || Not correct.
+explain: Goodwill is tested annually for impairment.
+mistake: Omitting NCI.
+tip: Paid + NCI - net assets.
+src: Study text ch19 - goodwill (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about group retained earnings (W5) is correct?
++ Parent's retained earnings + parent's share of subsidiary's post-acquisition retained earnings - PURP (if P sold) - parent's share of goodwill impairment || Core working.
+- All of both companies' retained earnings || Includes pre-acquisition.
+- Only the subsidiary's retained earnings || Not correct.
+- Parent's RE less NCI || Not correct.
+explain: NCI is calculated separately in W4.
+mistake: Including pre-acquisition reserves.
+tip: Parent + share of post.
+src: Study text ch19 - W5 (concept basis; original question)

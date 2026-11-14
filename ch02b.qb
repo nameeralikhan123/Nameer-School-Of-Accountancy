@@ -1,0 +1,865 @@
+@subject acfbe
+@chapter 2b
+@title Presenting Information
+@lo A3
+@topic t1 | Written reports | A3
+@topic t2 | Tables | A3
+@topic t3 | Charts | A3
+@topic t4 | Scatter diagrams and trend lines | A3
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: In a pie chart, a component makes up 25% of the total. What angle (degrees) should its segment have?
+answer: 90
+tol: 0
+unit: degrees
+formula: Segment angle = component % x 3.6 (= share x 360°)
+step: 360° represents 100%.
+step: 25% x 3.6 = 90°.
+check: 25*3.6
+explain: Each 1% of the total corresponds to 3.6 degrees of the circle.
+mistake: Using 100 instead of 360 as the full circle.
+tip: % x 3.6 = degrees.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: In a PERCENTAGE component bar chart, what is true of the bars?
++ All bars are the same length, representing 100% || Each bar shows components as percentages of its total.
+- Bar length shows the total value of each category || That is an ordinary component bar chart.
+- Each bar shows one item only || That is a simple bar chart.
+- Bars are drawn side by side for each component || That is a multiple bar chart.
+explain: Percentage component bar charts compare proportions, not absolute totals.
+mistake: Confusing percentage component with component bar charts.
+tip: Percentage bars are always full height.
+src: Study text ch2b - bar charts (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: On a scatter diagram, which variable is normally plotted on the x (horizontal) axis?
++ The independent variable || The variable that is thought to cause the change goes on the x axis.
+- The dependent variable || It goes on the y axis.
+- The total cost always || Total cost is usually dependent.
+- The time period only || Not necessarily.
+explain: For example, output (independent) on the x axis and total cost (dependent) on the y axis.
+mistake: Reversing the axes.
+tip: x = cause; y = effect.
+src: Study text ch2b - scatter diagrams (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Where should detailed calculations and supporting tables usually be placed in a formal report?
++ In appendices, cross-referenced from the main body || This keeps the main body short and readable.
+- At the start of the report before the purpose || This would hide the key message.
+- Nowhere - detail should be omitted entirely || Detail may be needed for reference.
+- In the title || Not appropriate.
+explain: Reports should be clear and easy to understand, with detail moved to appendices.
+mistake: Cluttering the main body.
+tip: Message in the body, detail in the appendix.
+src: Study text ch2b - written reports (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How many variables does a table usually present information about?
++ Two, arranged in rows and columns || A table is a matrix of two variables.
+- One only || One variable would be a list.
+- Four or more always || Not usual.
+- None - tables show text only || Tables show data.
+explain: Good tables have a clear title, labelled rows and columns, totals, stated units and source.
+mistake: Leaving out units or totals.
+tip: Rows x columns = two variables.
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: In the trend line equation y = a + bx, what does "a" represent when y is total cost?
++ Fixed cost (the intercept on the y axis) || Cost at zero output.
+- Variable cost per unit || That is b.
+- Activity level || That is x.
+- Total cost || That is y.
+explain: The intercept of the line of best fit estimates fixed costs; the slope estimates variable cost per unit.
+mistake: Reading a as the slope.
+tip: a = start point; b = slope.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which chart is MOST suitable for showing the relative sizes of the parts of a single total?
++ Pie chart || It shows components as shares of 360°.
+- Scatter diagram || It shows the relationship between two variables.
+- Simple bar chart || It shows the size of separate items.
+- Line graph of time || It shows trends.
+explain: Pie charts give a simple picture of proportions but no absolute values.
+mistake: Using a scatter diagram for proportions.
+tip: Parts of a whole = pie.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the usual purpose of a management report?
++ To initiate a decision or action || Reports support management decisions.
+- To entertain readers || Not the purpose.
+- To replace the financial statements || Not the purpose.
+- To record every transaction || That is the role of ledgers.
+explain: Reports can be for control, planning or decision-making, and routine or one-off.
+mistake: Writing reports without a clear purpose.
+tip: Purpose first.
+src: Study text ch2b - reports (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: In a multiple (compound) bar chart, how are components shown?
++ As separate bars side by side for each category || This allows direct comparison of components.
+- Stacked on top of each other in one bar || That is a component bar chart.
+- As segments of a circle || That is a pie chart.
+- As points on a graph || That is a scatter diagram.
+explain: Multiple bar charts compare components across categories directly.
+mistake: Confusing multiple and component bar charts.
+tip: Side by side = multiple.
+src: Study text ch2b - bar charts (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which feature should a good table include?
++ A clear title and stated units || Readers need to know what the figures represent.
+- No row or column labels || Labels are essential.
+- No totals under any circumstances || Totals are often helpful.
+- Unexplained abbreviations || These reduce clarity.
+explain: Guidelines: title, labelled rows and columns, totals, units, source and supporting percentages.
+mistake: Omitting units.
+tip: Title, labels, units, totals, source.
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A company's sales are $240,000 in total, of which Product X contributes $54,000. What angle (degrees) should Product X's segment have in a pie chart?
+answer: 81
+tol: 0
+unit: degrees
+formula: Angle = component / total x 360°
+step: Share = 54,000 / 240,000 = 22.5%.
+step: Angle = 22.5% x 360 = 81°.
+check: 54000/240000*360
+explain: Convert each component to a share of the total, then into degrees.
+mistake: Dividing by 100 instead of multiplying by 3.6.
+tip: Share x 360.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: In a pie chart, a segment for "Marketing costs" has an angle of 54°. Total costs are $800,000. What are marketing costs?
++ $120,000 || 54 / 360 = 15%; 15% x 800,000 = $120,000.
+- $43,200 || This multiplies 800,000 by 54 / 1,000.
+- $54,000 || This reads the angle as thousands of dollars.
+- $148,148 || This divides by 5.4 instead of multiplying by the share.
+formula: Value = angle / 360 x total
+step: Share = 54 / 360 = 0.15.
+step: Value = 0.15 x 800,000 = $120,000.
+check: 54/360*800000
+explain: Working backwards from an angle gives the component's value.
+mistake: Treating the angle as a percentage.
+tip: Angle / 360 = share.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A line of best fit passes through the y axis at $20 and has a slope of 0.9. Which equation describes it?
++ y = 20 + 0.9x || a = 20 (intercept), b = 0.9 (slope).
+- y = 0.9 + 20x || This swaps the intercept and slope.
+- y = 20.9x || This combines them incorrectly.
+- y = 20 - 0.9x || The slope is positive.
+formula: y = a + bx
+step: Intercept a = 20.
+step: Slope b = 0.9, so y = 20 + 0.9x.
+check: 20
+explain: The intercept is the value of y when x = 0; the slope is the change in y for each unit of x.
+mistake: Swapping a and b.
+tip: Intercept first, then slope times x.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A line of best fit on a scatter diagram shows monthly fixed costs of $10,000 and a total cost of $70,000 for 12,000 widgets. What is the estimated variable cost per widget ($)?
+answer: 5
+tol: 0
+unit: $
+formula: Variable cost per unit = (total cost - fixed cost) / units
+step: Variable costs at 12,000 widgets = 70,000 - 10,000 = $60,000.
+step: Per widget = 60,000 / 12,000 = $5.
+check: (70000-10000)/12000
+explain: The intercept gives fixed costs; the slope (here $5) gives variable cost per unit.
+mistake: Dividing total cost by units ($5.83).
+tip: Remove fixed cost before dividing.
+src: Study text ch2b - scatter diagrams (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A trend line gives y = 10,000 + 5x, where y is monthly cost ($) and x is widgets produced. What is the estimated cost of producing 15,000 widgets?
++ $85,000 || 10,000 + 5 x 15,000 = $85,000.
+- $75,000 || This omits the fixed cost.
+- $150,000 || This multiplies 15,000 by 10.
+- $10,005 || This adds only one unit's cost.
+formula: y = a + bx
+step: Variable cost = 5 x 15,000 = 75,000.
+step: Total = 10,000 + 75,000 = $85,000.
+check: 10000 + 5*15000
+explain: Trend line equations can be used to forecast within the range of data observed.
+mistake: Forgetting the intercept.
+tip: Always add a.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is a key DISADVANTAGE of pie charts?
++ They do not show absolute values and small segments are hard to compare || Pie charts show proportions only.
+- They cannot show proportions || That is their main use.
+- They require a scatter of data points || Not true.
+- They always show time trends || They do not show trends.
+explain: Pie charts give a simple picture of relative sizes but are hard to read precisely, especially when comparing two pies.
+mistake: Using pie charts to compare totals of different sizes.
+tip: Pie = proportions, not amounts.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q017
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO are important stylistic qualities of a good report?
++ Objectivity and balance || The report should present facts fairly.
++ Ease of understanding for the intended reader || The reader must be able to use it.
+- Including every available figure in the main body || Detail belongs in appendices.
+- Using technical jargon to impress the reader || Jargon reduces understanding.
+explain: Reports should be planned around the user, purpose, required information and timing.
+mistake: Prioritising detail over clarity.
+tip: Fair and clear.
+src: Study text ch2b - report style (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: scenario
+topic: t3
+status: review
+q: A manager wants to compare the sales of three products in each of four regions, so that the three products can be compared directly within each region. Which chart is MOST suitable?
++ A multiple (compound) bar chart || Side-by-side bars compare components directly.
+- A pie chart || Pie charts show parts of one total.
+- A simple bar chart || It shows one bar per item, not grouped comparisons.
+- A scatter diagram || It shows relationships between two variables.
+explain: Multiple bar charts make direct comparisons of components across categories easy.
+mistake: Using a pie chart for several categories.
+tip: Compare components side by side = multiple bar chart.
+src: Study text ch2b - choosing charts (concept basis; original scenario)
+
+=== Q019
+type: mcq
+level: S
+cat: scenario
+topic: t3
+status: review
+q: A manager wants to show both the total sales of each region and how each total is split between three products. Which chart is MOST suitable?
++ A component bar chart || Bar length shows the total and segments show the components.
+- A percentage component bar chart || All bars would be the same length, hiding the totals.
+- A pie chart || One pie shows only one total.
+- A scatter diagram || Not suitable.
+explain: Component bar charts show totals and their make-up; percentage versions show proportions only.
+mistake: Choosing the percentage version when totals matter.
+tip: Totals + breakdown = component bar chart.
+src: Study text ch2b - component bar charts (concept basis; original scenario)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each chart with what it is BEST used to show.
+pair: Simple bar chart => The size of each separate item
+pair: Component bar chart => Totals and how each total is made up
+pair: Percentage component bar chart => The proportions of components within each total
+pair: Pie chart => The share of each component in one total
+pair: Scatter diagram => The relationship between two variables
+explain: Choosing the right chart depends on what the reader needs to see.
+mistake: Using a percentage bar chart to show totals.
+tip: Match chart to message.
+src: Study text ch2b - charts (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which report format is MOST suitable for passing routine information to lower-level managers?
++ A short informal report || It suits less formal, lower-level information.
+- A lengthy formal report with appendices || Better for complex, senior-level issues.
+- A full set of financial statements || Not a report format for routine internal information.
+- A press release || External.
+explain: Formats: short formal (middle to senior management), short informal (lower-level information), memorandum report.
+mistake: Over-formalising routine communications.
+tip: Match the format to the reader.
+src: Study text ch2b - report formats (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How is a trend line usually drawn on a scatter diagram in this syllabus?
++ By eye, so that the points are spread evenly either side of the line || It is a line of best fit.
+- Through the first and last points only || This ignores the other data.
+- Through the origin always || Not necessarily.
+- Horizontally through the average || That ignores the relationship.
+explain: Once drawn, the line can be used to estimate fixed and variable costs or to predict values.
+mistake: Joining only two points.
+tip: Balance the points either side.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which question should be asked FIRST when planning a report?
++ Who is the user and what is the purpose of the report? || Content and format follow from the user and purpose.
+- How many pages can be written? || Length follows purpose.
+- Which font should be used? || Not a planning priority.
+- Which chart is most colourful? || Not a priority.
+explain: Planning questions: who the user is, the type and purpose of the report, what information is needed and when.
+mistake: Starting with format rather than purpose.
+tip: Who and why first.
+src: Study text ch2b - planning reports (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A pie chart shows four regions. North's segment is 126°. What percentage of total sales does North represent?
+answer: 35
+tol: 0
+unit: %
+formula: Percentage = angle / 3.6
+step: 126 / 360 = 0.35.
+step: 0.35 = 35%.
+check: 126/3.6
+explain: Converting between angles and percentages uses the factor 3.6.
+mistake: Dividing by 100.
+tip: Degrees / 3.6 = %.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why might a table include secondary statistics, such as percentages, alongside the main figures?
++ To help readers interpret the main figures, for example by showing shares or changes || They support the main data.
+- To replace the main figures || They supplement, not replace.
+- To make the table longer || Not the purpose.
+- Because percentages are always required by law || Not a legal requirement.
+explain: Supporting statistics make tables more informative.
+mistake: Presenting raw figures without context.
+tip: Add percentages to help interpretation.
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Since a computer-based exam cannot ask you to draw a chart, how are charts MOST likely to be examined?
++ By asking you to calculate values, label components, choose a suitable chart or interpret it || These test understanding without drawing.
+- By asking you to draw charts freehand || Not possible in a CBE.
+- They are never examined || They are examinable.
+- By asking you to colour charts || Not examined.
+explain: Expect questions on calculating angles or values, identifying chart types and drawing conclusions.
+mistake: Ignoring charts because drawing is not required.
+tip: Interpret, calculate, choose.
+src: Study text ch2b - exam focus (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: A scatter diagram of monthly production (x) against total cost (y) shows points rising roughly in a straight line. What does this suggest?
++ There is a positive linear relationship between output and cost || Cost rises as output rises.
+- Cost falls as output rises || The points rise.
+- There is no relationship || A clear pattern exists.
+- Output depends on cost || Cost depends on output.
+explain: A trend line through such points can estimate fixed and variable costs.
+mistake: Reversing dependent and independent variables.
+tip: Points rising left to right = positive relationship.
+src: Study text ch2b - scatter diagrams (concept basis; original scenario)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why is timeliness important for reports?
++ A report produced after the decision is made is of no use || Information must arrive in time.
+- Late reports are more accurate || Not necessarily.
+- Timeliness only matters for financial statements || It matters for all reports.
+- Reports should always be produced annually || Frequency depends on purpose.
+explain: Reports exist to support decisions; late ones cannot.
+mistake: Delaying reports to perfect them.
+tip: Good enough and on time beats perfect and late.
+src: Study text ch2b - reports (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A component bar for Region A has a total height of $500,000, with Product P making up $150,000 of it. If the same data were shown in a percentage component bar chart, what height would Product P's section be?
++ 30% || 150,000 / 500,000 = 30%.
+- 15% || This divides by 1,000,000.
+- $150,000 || A percentage chart shows percentages.
+- 50% || This uses the wrong figures.
+formula: Component % = component / total x 100
+step: 150,000 / 500,000 = 0.30.
+step: 0.30 x 100 = 30%.
+check: 150000/500000*100
+explain: Percentage component charts show each part as a share of its bar's total.
+mistake: Showing the absolute value.
+tip: Convert to % of that bar's total.
+src: Study text ch2b - bar charts (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the basic tool used for recording and manipulating management information in tables?
++ Spreadsheets || Spreadsheets organise data in rows and columns.
+- Pie charts || Charts present data, not manipulate it.
+- Memoranda || Memos communicate, not manipulate.
+- Ledgers only || Ledgers record transactions.
+explain: Spreadsheets make tables easy to build, calculate and update.
+mistake: Confusing presentation with manipulation.
+tip: Tables live in spreadsheets.
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put the steps for planning a report in a logical order.
+item: Identify the user
+item: Decide the purpose and type of report
+item: Identify the information needed
+item: Decide when the report is needed
+explain: User and purpose determine the information and timing.
+mistake: Gathering information before knowing the purpose.
+tip: Who, why, what, when.
+src: Study text ch2b - planning reports (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: In y = a + bx from a cost trend line, what does "b" represent?
++ Variable cost per unit (the slope) || b shows how much cost rises per unit of activity.
+- Fixed cost || That is a.
+- Total cost || That is y.
+- Activity level || That is x.
+explain: The slope of a cost line gives the variable cost per unit.
+mistake: Confusing b with a.
+tip: b = slope = variable cost.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: scenario
+topic: t3
+status: review
+q: A manager wants to show how the proportions of costs (materials, labour, overheads) have changed over five years, regardless of changes in total cost. Which chart fits BEST?
++ A percentage component bar chart for each year || It shows proportions consistently.
+- A simple bar chart of total costs || It shows totals, not proportions.
+- A scatter diagram || Not suitable.
+- A single pie chart || One pie shows one year only.
+explain: Percentage component bars remove the effect of changing totals to focus on proportions.
+mistake: Showing totals when proportions are needed.
+tip: Changing mix over time = percentage component bars.
+src: Study text ch2b - charts (concept basis; original scenario)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is a memorandum report?
++ A short report presented in a memo format, usually on A4 || It is a brief internal report.
+- A report to shareholders || That is external.
+- A detailed financial statement || Not the meaning.
+- A spreadsheet model || Not the meaning.
+explain: Report formats include short formal, short informal and memorandum reports.
+mistake: Confusing memo reports with formal reports.
+tip: Memo = brief internal.
+src: Study text ch2b - report formats (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: What is the angle for a component representing 40% of a pie chart?
++ 144° || 40 x 3.6 = 144°.
+- 40° || This uses the percentage directly.
+- 160° || This multiplies by 4.
+- 90° || This is 25%.
+formula: Angle = % x 3.6
+step: 40 x 3.6 = 144.
+check: 40*3.6
+explain: The full circle of 360° represents 100%.
+mistake: Equating percentage with degrees.
+tip: % x 3.6.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: Two pie charts show costs for Year 1 ($400,000) and Year 2 ($600,000). Materials take a 90° segment in both. Which statement is correct?
++ Materials cost rose from $100,000 to $150,000 although their segment angle stayed the same || Equal angles mean equal shares, not equal amounts.
+- Materials cost was the same in both years || Totals differ.
+- Materials cost fell in Year 2 || It rose.
+- The angle should have increased if cost rose || The share stayed at 25%.
+formula: Value = angle / 360 x total
+step: Year 1: 90/360 x 400,000 = 100,000.
+step: Year 2: 90/360 x 600,000 = 150,000.
+check: 90/360*400000
+explain: Pie charts hide absolute values, so comparing two pies can mislead.
+mistake: Assuming equal segments mean equal amounts.
+tip: Pies show shares; check the totals.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q037
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: A table of regional sales has no title, no units and no totals. Which TWO improvements are MOST important?
++ Add a clear title and state the units (for example $000) || Readers need to know what the figures represent.
++ Add row and column totals || Totals help interpretation.
+- Remove the column headings to save space || Labels are essential.
+- Replace the figures with colours only || Figures are needed.
+explain: Good tables have a title, labelled rows and columns, totals, units and source.
+mistake: Prioritising appearance over clarity.
+tip: Title, units, totals.
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A line of best fit passes through the points (2,000 units, $26,000) and (6,000 units, $42,000). What fixed cost ($) does it imply?
+answer: 18000
+tol: 0
+unit: $
+formula: Slope b = change in y / change in x; a = y - bx
+step: b = (42,000 - 26,000) / (6,000 - 2,000) = 16,000 / 4,000 = $4 per unit.
+step: a = 26,000 - (4 x 2,000) = $18,000.
+step: Check: 42,000 - (4 x 6,000) = $18,000.
+check: 26000 - 2000*(42000-26000)/(6000-2000)
+explain: Two points on the line give its slope and intercept.
+mistake: Using one point's average cost.
+tip: Slope first, then intercept.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A manager uses a percentage component bar chart to argue that Region B's sales have grown, because its bar is the same height as Region A's. What is wrong with this?
++ In a percentage component chart every bar is 100%, so bar height says nothing about the total sales || Only proportions are shown.
+- Region B must have higher sales || Not shown.
+- Region B must have lower sales || Not shown.
+- Bars in percentage charts show absolute values || They show percentages.
+explain: To compare totals, use a simple or component bar chart.
+mistake: Reading absolute values from percentage charts.
+tip: All percentage bars are the same height.
+src: Study text ch2b - bar charts (concept basis; original scenario)
+
+=== Q040
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: A trend line from a scatter diagram covers output between 1,000 and 5,000 units. A manager uses it to forecast cost at 20,000 units. What is the risk?
++ The relationship may not hold outside the range of observed data, so the forecast may be unreliable || Extrapolation is risky.
+- Trend lines can never be used for forecasting || They can within the range.
+- The forecast will always be too low || The direction of error is unknown.
+- There is no risk if the line is drawn neatly || Neatness does not justify extrapolation.
+explain: Like the high-low method, trend lines are most reliable within the relevant range.
+mistake: Extrapolating far beyond the data.
+tip: Stay within the data range.
+src: Study text ch2b - trend lines (concept basis; original scenario)
+
+=== Q041
+type: match
+level: C
+cat: scenario
+topic: t3
+status: review
+q: Match each information need with the MOST suitable presentation.
+pair: Show how one year's total costs are split between five categories => Pie chart
+pair: Compare monthly sales of two products side by side => Multiple bar chart
+pair: Investigate whether advertising spend relates to sales => Scatter diagram
+pair: Present exact sales figures by region and quarter => Table
+choice: Memorandum report only
+explain: The best method depends on whether the reader needs proportions, comparisons, relationships or precise values.
+mistake: Using charts where exact values are needed.
+tip: Exact values = table.
+src: Study text ch2b - presenting information (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: In a pie chart of total expenses of $360,000, Administration has a segment of 48° and Distribution 72°. By how much do Distribution costs exceed Administration costs?
++ $24,000 || (72 - 48) / 360 x 360,000 = $24,000.
+- $72,000 || This is Distribution costs alone.
+- $48,000 || This is Administration costs alone.
+- $120,000 || This adds the two costs.
+formula: Value = angle / 360 x total
+step: Distribution = 72/360 x 360,000 = $72,000.
+step: Administration = 48/360 x 360,000 = $48,000.
+step: Difference = $24,000.
+check: (72-48)/360*360000
+explain: When the total is $360,000, each degree equals $1,000.
+mistake: Reporting one component instead of the difference.
+tip: Read the requirement: difference, not value.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A report to the board is 40 pages long, with all calculations in the main body, and the recommendation appears on page 38. What is the main weakness?
++ The key message is buried; detail should be in appendices and the recommendation should be easy to find || Reports should be concise and clear.
+- The report is too short || It is long.
+- Recommendations should never be included || They usually should be.
+- The board prefers more calculations in the body || Unlikely.
+explain: Reports should be easy to understand, with the main body focused and detail in appendices.
+mistake: Thinking length shows quality.
+tip: Lead with the message.
+src: Study text ch2b - report style (concept basis; original scenario)
+
+=== Q044
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A scatter diagram plots total cost on the x axis and output on the y axis. What is wrong?
++ The axes are reversed - output (independent) should be on x and total cost (dependent) on y || Cost depends on output.
+- Nothing - either axis may be used without consequence || The equation y = a + bx assumes cost on y.
+- Scatter diagrams should show time on both axes || Not true.
+- Cost should never be plotted || Cost is often plotted.
+explain: Reversing axes changes the meaning of the intercept and slope.
+mistake: Ignoring which variable depends on which.
+tip: Effect on y, cause on x.
+src: Study text ch2b - scatter diagrams (concept basis; original scenario)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: Sales of $72,000 are shown in a pie chart where total sales are $480,000. What angle (degrees) should the segment have?
+answer: 54
+tol: 0
+unit: degrees
+formula: Angle = component / total x 360
+step: Share = 72,000 / 480,000 = 15%.
+step: Angle = 15% x 360 = 54°.
+check: 72000/480000*360
+explain: Every pie chart segment is the component's share of 360°.
+mistake: Using 100 instead of 360.
+tip: Share x 360.
+src: Study text ch2b - pie charts (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A manager needs a one-off report recommending whether to replace a machine. What type of report is this?
++ A special (one-off) decision report || It supports a specific decision.
+- A routine control report || It is not regular.
+- A statutory report || Not required by law.
+- A routine planning report || It is one-off.
+explain: Reports can be classified by purpose (control, planning, decision) and frequency (routine or special).
+mistake: Calling it routine.
+tip: One decision = special report.
+src: Study text ch2b - report types (concept basis; original scenario)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: When is a simple bar chart preferable to a pie chart?
++ When the reader needs to compare the absolute sizes of items accurately || Bar lengths are easier to compare.
+- When showing parts of a single whole only || Pie charts are designed for this.
+- When showing a relationship between two variables || Scatter diagrams are better.
+- Never || Bar charts are often better.
+explain: Bar charts make comparisons of size easier and show absolute values.
+mistake: Defaulting to pie charts.
+tip: Compare sizes = bars.
+src: Study text ch2b - charts (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+q: A trend line estimates monthly fixed costs of $8,000 and variable costs of $3.50 per unit. In a month, actual cost is $45,000 for 10,000 units. How does actual cost compare with the trend line estimate?
++ Actual is $2,000 above the estimate of $43,000 || 8,000 + 3.50 x 10,000 = 43,000.
+- Actual is $2,000 below the estimate || The estimate is lower than actual.
+- Actual equals the estimate || They differ.
+- Actual is $37,000 above || This omits variable costs from the estimate.
+formula: Estimate = a + bx
+step: Estimate = 8,000 + 3.50 x 10,000 = $43,000.
+step: Actual 45,000 - 43,000 = $2,000 above.
+check: 45000 - (8000 + 3.5*10000)
+explain: Trend lines give expected costs that can be compared with actual results.
+mistake: Leaving out fixed or variable cost.
+tip: Build the full estimate first.
+src: Study text ch2b - trend lines (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why should a table state the source of its data?
++ So that readers can judge reliability and check the data if needed || Sources support credibility.
+- Because sources make tables longer || Not the purpose.
+- Because sources are required to calculate totals || Not true.
+- Because sources replace units || Units are still needed.
+explain: Stating sources is part of good table design, particularly for secondary data.
+mistake: Omitting sources.
+tip: Where did the data come from?
+src: Study text ch2b - tables (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which list gives the main types of bar chart in the syllabus?
++ Simple, component (including percentage component) and multiple (compound) || These are the main types.
+- Pie, scatter and table || Not bar charts.
+- Line, area and radar || Not covered as bar chart types.
+- Primary, secondary and tertiary || Not chart types.
+explain: Each bar chart type shows different information.
+mistake: Listing non-bar charts.
+tip: Simple, component, multiple.
+src: Study text ch2b - bar charts (concept basis; original question)

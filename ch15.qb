@@ -1,0 +1,933 @@
+@subject acfma2
+@chapter 15
+@title Cost-Volume-Profit (CVP) Analysis
+@lo E1
+@topic t1 | Breakeven and margin of safety | E1
+@topic t2 | Changing price or costs | E1
+@topic t3 | CVP charts | E1
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is contribution per unit calculated?
++ Selling price per unit less variable cost per unit || Contribution is what each unit contributes towards fixed costs and then profit.
+- Selling price per unit less total cost per unit || Total cost per unit includes fixed cost, which gives profit per unit, not contribution.
+- Selling price per unit less fixed cost per unit || Contribution deducts variable costs, not fixed costs.
+- Total fixed costs divided by units sold || That is fixed cost per unit.
+explain: Contribution per unit = selling price - variable cost per unit. Total contribution first covers fixed costs; anything left is profit.
+mistake: Including fixed costs in contribution.
+tip: Contribution ignores fixed costs.
+src: Study text ch15 - contribution (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: At the breakeven point, which statement is true?
++ Total contribution equals total fixed costs || Profit is zero because contribution exactly covers fixed costs.
+- Total revenue equals total variable costs || That would leave nothing to cover fixed costs, so there would be a loss.
+- Contribution per unit equals fixed cost per unit at every output level || Fixed cost per unit changes with output.
+- Total fixed costs are zero || Fixed costs still exist; they are just covered.
+explain: Breakeven is where total revenue equals total costs, or equivalently where total contribution equals fixed costs.
+mistake: Thinking breakeven means revenue covers variable costs.
+tip: At breakeven: contribution = fixed costs; profit = 0.
+src: Study text ch15 - breakeven (concept basis; original question)
+
+=== Q003
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: A product sells for $40 per unit and has variable costs of $24 per unit. Fixed costs are $96,000 per year. What is the breakeven point in units?
+answer: 6000
+tol: 0
+unit: units
+formula: Breakeven point (units) = fixed costs / contribution per unit
+step: Contribution per unit = 40 - 24 = $16.
+step: Breakeven = 96,000 / 16 = 6,000 units.
+check: 96000/(40-24)
+explain: Each unit contributes $16 towards fixed costs, so 6,000 units are needed to cover $96,000.
+mistake: Dividing by the selling price (2,400 units).
+tip: Always divide fixed costs by CONTRIBUTION per unit.
+src: Study text ch15 - breakeven (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does the margin of safety measure?
++ How far sales can fall below budget before a loss is made || It is the gap between budgeted sales and breakeven sales.
+- The profit earned at the budgeted level of sales || Related, but the margin of safety is a sales measure, not a profit figure.
+- The difference between selling price and variable cost || That is contribution per unit.
+- The level of sales needed to earn a target profit || That is the target-profit sales level.
+explain: Margin of safety = budgeted sales - breakeven sales. It can be shown in units, revenue or as a percentage of budgeted sales.
+mistake: Confusing margin of safety with profit or contribution.
+tip: Margin of safety = cushion before loss.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: A product sells for $40 and has a variable cost of $24 per unit. What is its contribution to sales (C/S) ratio, as a percentage?
+answer: 40
+tol: 0
+unit: %
+formula: C/S ratio = contribution per unit / selling price per unit
+step: Contribution = 40 - 24 = $16.
+step: C/S ratio = 16 / 40 = 0.40 = 40%.
+check: (40-24)/40*100
+explain: The C/S ratio shows how much contribution each $1 of sales generates.
+mistake: Dividing variable cost by selling price (60%).
+tip: C/S ratio = contribution / sales.
+src: Study text ch15 - C/S ratio (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: On a profit/volume (P/V) chart, where does the profit line cross the vertical (profit) axis?
++ At a loss equal to total fixed costs || At zero sales there is no contribution, so the loss equals fixed costs.
+- At the breakeven point || Breakeven is where the line crosses the horizontal axis.
+- At zero || At zero sales the business makes a loss.
+- At the maximum profit || The vertical-axis point is the zero-sales position.
+explain: A P/V chart plots profit against sales. It starts at minus fixed costs and rises at the rate of contribution; breakeven is where it crosses the sales axis.
+mistake: Reading breakeven from the vertical axis.
+tip: Vertical axis = fixed costs (as a loss); horizontal axis crossing = breakeven.
+src: Study text ch15 - P/V chart (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: If a company raises its fixed costs and all other factors stay the same, what happens to the breakeven point?
++ It rises || More contribution, and therefore more units, is needed to cover the higher fixed costs.
+- It falls || Higher fixed costs need more units to cover them.
+- It stays the same || Breakeven depends on fixed costs.
+- It becomes zero || Breakeven exists while there are fixed costs.
+explain: Breakeven = fixed costs / contribution per unit. A higher numerator gives a higher breakeven point.
+mistake: Thinking fixed costs do not affect breakeven because they do not change with volume.
+tip: Use the formula to reason about every change.
+src: Study text ch15 - changing costs (concept basis; original question)
+
+=== Q008
+type: match
+level: F
+cat: concept
+topic: t1
+status: review
+q: Match each CVP measure with its formula.
+pair: Breakeven point in units => Fixed costs / contribution per unit
+pair: C/S ratio => Contribution per unit / selling price per unit
+pair: Breakeven revenue => Fixed costs / C/S ratio
+pair: Margin of safety => Budgeted sales - breakeven sales
+choice: Fixed costs / selling price per unit
+explain: These four formulas underpin most CVP questions. Dividing fixed costs by selling price ignores variable costs and is a common error.
+mistake: Choosing "fixed costs / selling price" for breakeven units.
+tip: Learn the formulas as a set.
+src: Study text ch15 - CVP formulas (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Budgeted sales are 8,000 units and the breakeven point is 6,000 units. What is the margin of safety in units?
+answer: 2000
+tol: 0
+unit: units
+formula: Margin of safety = budgeted sales - breakeven sales
+step: Budgeted sales = 8,000 units; breakeven = 6,000 units.
+step: 8,000 - 6,000 = 2,000 units.
+check: 8000-6000
+explain: Sales could fall by 2,000 units before the business makes a loss.
+mistake: Dividing instead of subtracting when units are asked for.
+tip: Read whether the answer is wanted in units, revenue or %.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which assumption underlies basic CVP analysis?
++ Fixed costs and variable cost per unit stay constant over the relevant range || Linear cost behaviour within the relevant range is assumed.
+- Selling price falls as more units are sold || Basic CVP assumes a constant selling price.
+- All costs are variable || CVP separates fixed and variable costs.
+- Inventory levels change every period || CVP assumes production equals sales.
+explain: CVP assumes a constant selling price, constant variable cost per unit, constant total fixed costs within the relevant range, and that production equals sales.
+mistake: Forgetting that the assumptions limit how far CVP results can be trusted.
+tip: Assumptions are often tested as "which is NOT an assumption".
+src: Study text ch15 - CVP assumptions (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product sells for $40 with a variable cost of $24 per unit. Fixed costs are $96,000. How many units must be sold to earn a profit of $32,000?
+answer: 8000
+tol: 0
+unit: units
+formula: Units for target profit = (fixed costs + target profit) / contribution per unit
+step: Contribution per unit = 40 - 24 = $16.
+step: Required contribution = 96,000 + 32,000 = $128,000.
+step: Units = 128,000 / 16 = 8,000.
+check: (96000+32000)/16
+explain: Contribution must cover fixed costs first and then provide the target profit.
+mistake: Forgetting to add the target profit to fixed costs.
+tip: Target profit questions = breakeven formula with the target added on top.
+src: Study text ch15 - target profit (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Fixed costs are $96,000 and the C/S ratio is 40%. What is the breakeven revenue?
++ $240,000 || 96,000 / 0.40 = $240,000.
+- $38,400 || This multiplies fixed costs by the ratio.
+- $134,400 || This adds 40% to fixed costs.
+- $160,000 || This divides by 60%, the variable cost ratio.
+formula: Breakeven revenue = fixed costs / C/S ratio
+step: 96,000 / 0.40 = $240,000.
+step: Check: 6,000 units x $40 = $240,000.
+check: 96000/0.4
+explain: The C/S ratio method gives breakeven in revenue directly, which is useful when unit data are not given.
+mistake: Multiplying instead of dividing.
+tip: Breakeven revenue = fixed costs / C/S ratio.
+src: Study text ch15 - breakeven revenue (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Budgeted sales are 8,000 units and breakeven is 6,000 units. What is the margin of safety as a percentage of budgeted sales?
+answer: 25
+tol: 0
+unit: %
+formula: Margin of safety % = (budgeted sales - breakeven sales) / budgeted sales x 100
+step: Margin of safety = 8,000 - 6,000 = 2,000 units.
+step: 2,000 / 8,000 x 100 = 25%.
+check: (8000-6000)/8000*100
+explain: The percentage is always calculated on BUDGETED sales.
+mistake: Dividing by breakeven sales (33.3%).
+tip: Denominator = budgeted sales.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A product currently sells for $40 with a variable cost of $24 and fixed costs of $96,000. If the price is cut to $36, what is the new breakeven point?
++ 8,000 units || New contribution = 36 - 24 = 12; 96,000 / 12 = 8,000.
+- 6,000 units || This is the old breakeven point.
+- 2,667 units || This divides fixed costs by the new selling price ($36) instead of by contribution.
+- 4,000 units || This divides by a contribution of $24.
+formula: Breakeven = fixed costs / new contribution per unit
+step: New contribution = 36 - 24 = $12.
+step: Breakeven = 96,000 / 12 = 8,000 units.
+check: 96000/(36-24)
+explain: A price cut reduces contribution per unit, so more units are needed to break even.
+mistake: Assuming a lower price automatically improves the result.
+tip: Recalculate contribution before recalculating breakeven.
+src: Study text ch15 - changing price (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Contribution is $16 per unit and fixed costs are $96,000. Fixed costs rise by $8,000. What is the new breakeven point (units)?
+answer: 6500
+tol: 0
+unit: units
+formula: Breakeven = fixed costs / contribution per unit
+step: New fixed costs = 96,000 + 8,000 = $104,000.
+step: Breakeven = 104,000 / 16 = 6,500 units.
+check: (96000+8000)/16
+explain: Each extra $16 of fixed cost requires one more unit to be sold to break even.
+mistake: Dividing only the increase by contribution (500 units) and stopping.
+tip: Increase in breakeven = increase in fixed costs / contribution per unit = 500 units.
+src: Study text ch15 - changing costs (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product has contribution of $16 per unit and fixed costs of $96,000. What profit is earned if 9,000 units are sold?
++ $48,000 || 9,000 x 16 - 96,000 = $48,000.
+- $144,000 || This is total contribution before fixed costs.
+- $96,000 || This is the fixed cost figure.
+- $32,000 || This is the profit at 8,000 units.
+formula: Profit = units x contribution per unit - fixed costs
+step: Contribution = 9,000 x 16 = $144,000.
+step: Profit = 144,000 - 96,000 = $48,000.
+check: 9000*16 - 96000
+explain: Profit is total contribution less fixed costs.
+mistake: Reporting contribution as profit.
+tip: Contribution - fixed costs = profit.
+src: Study text ch15 - profit calculation (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: On a traditional breakeven chart, where is the breakeven point?
++ Where the sales revenue line crosses the total cost line || Revenue equals total cost there.
+- Where the fixed cost line crosses the vertical axis || That shows the level of fixed costs.
+- Where the variable cost line crosses the sales line || The variable cost line is not normally drawn separately on a traditional chart.
+- At the highest point of the sales line || The highest point is the end of the volume range.
+explain: A breakeven chart shows fixed costs, total costs and sales revenue against volume. Breakeven is where revenue equals total cost.
+mistake: Reading breakeven from the fixed cost line.
+tip: Breakeven chart - revenue meets total cost; P/V chart - profit line meets the axis.
+src: Study text ch15 - breakeven charts (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Variable cost per unit increases while selling price and fixed costs stay the same. What is the effect?
++ Contribution per unit falls and the breakeven point rises || Higher variable cost reduces contribution, so more units are needed.
+- Contribution per unit rises and the breakeven point falls || Higher variable cost reduces contribution.
+- The breakeven point is unchanged because fixed costs are unchanged || Breakeven depends on contribution as well.
+- Only the margin of safety rises || The margin of safety falls as breakeven rises.
+explain: Breakeven = fixed costs / contribution per unit. Lower contribution means a higher breakeven point and a lower margin of safety.
+mistake: Thinking only fixed costs affect breakeven.
+tip: Trace each change through contribution, then breakeven, then margin of safety.
+src: Study text ch15 - changing costs (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Fixed costs are $96,000, selling price $40 and variable cost $26 per unit. How many WHOLE units must be sold to at least break even?
+answer: 6858
+tol: 0
+unit: units
+formula: Breakeven = fixed costs / contribution per unit, rounded UP to whole units
+step: Contribution = 40 - 26 = $14.
+step: 96,000 / 14 = 6,857.14 units.
+step: Selling 6,857 units leaves a small loss, so 6,858 whole units are needed.
+check: -(-96000//14)
+explain: When the breakeven calculation gives a fraction of a unit, round up to the next whole unit to avoid a loss.
+mistake: Rounding down to 6,857 units.
+tip: Breakeven in whole units always rounds UP.
+src: Study text ch15 - breakeven (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Sales revenue $500,000; variable costs $300,000; fixed costs $120,000.
+q: What is the breakeven revenue?
++ $300,000 || C/S ratio = 200,000 / 500,000 = 40%; 120,000 / 0.40 = $300,000.
+- $200,000 || This is total contribution.
+- $420,000 || This is total cost.
+- $120,000 || This is the fixed cost figure, not breakeven revenue.
+formula: Breakeven revenue = fixed costs / C/S ratio
+step: Contribution = 500,000 - 300,000 = $200,000.
+step: C/S ratio = 200,000 / 500,000 = 0.40.
+step: Breakeven revenue = 120,000 / 0.40 = $300,000.
+check: 120000/((500000-300000)/500000)
+explain: The C/S ratio can be found from total figures when unit data are not given.
+mistake: Confusing breakeven revenue with total cost.
+tip: When only totals are given, use the C/S ratio method.
+src: Study text ch15 - C/S ratio method (concept basis; original figures)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Sales revenue $500,000; variable costs $300,000; fixed costs $120,000. Breakeven revenue is $300,000.
+q: What is the margin of safety as a percentage of sales?
++ 40% || (500,000 - 300,000) / 500,000 = 40%.
+- 66.7% || This divides by breakeven revenue.
+- 60% || This is breakeven revenue as a percentage of sales.
+- 16% || This is profit as a percentage of sales.
+formula: Margin of safety % = (sales - breakeven sales) / sales x 100
+step: Margin of safety = 500,000 - 300,000 = $200,000.
+step: 200,000 / 500,000 = 40%.
+check: (500000-300000)/500000*100
+explain: Sales could fall by 40% before the business makes a loss.
+mistake: Dividing by breakeven revenue.
+tip: Margin of safety % uses budgeted (or actual) sales as the denominator.
+src: Study text ch15 - margin of safety (concept basis; original figures)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the main advantage of a contribution breakeven chart over a traditional breakeven chart?
++ Contribution can be seen directly, because the variable cost line is drawn first with fixed costs above it || The gap between sales and variable costs is visible.
+- It shows the breakeven point more accurately || Both charts give the same breakeven point.
+- It does not require fixed costs to be known || Fixed costs are still needed.
+- It shows profit at every level on the vertical axis || That is the P/V chart.
+explain: In a contribution chart the variable cost line starts from the origin and fixed costs are added above it, so contribution at any volume can be read off.
+mistake: Thinking different charts give different breakeven points.
+tip: All CVP charts show the same breakeven; they differ in what else is visible.
+src: Study text ch15 - CVP charts (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Fixed costs are $60,000, target profit is $30,000 and the C/S ratio is 30%. What sales revenue ($) is needed to achieve the target profit?
+answer: 300000
+tol: 0
+unit: $
+formula: Revenue for target profit = (fixed costs + target profit) / C/S ratio
+step: Required contribution = 60,000 + 30,000 = $90,000.
+step: Revenue = 90,000 / 0.30 = $300,000.
+check: (60000+30000)/0.3
+explain: Each $1 of sales gives $0.30 of contribution; $90,000 of contribution therefore needs $300,000 of sales.
+mistake: Forgetting to add the target profit.
+tip: Target profit in revenue uses the C/S ratio in place of contribution per unit.
+src: Study text ch15 - target profit (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: The breakeven point is 5,000 units and contribution is $12 per unit. What are total fixed costs?
++ $60,000 || At breakeven, contribution = fixed costs: 5,000 x 12.
+- $417 || This divides 5,000 by 12.
+- $5,012 || This adds the two figures.
+- $120,000 || This doubles the correct answer.
+formula: Fixed costs = breakeven units x contribution per unit
+step: At breakeven, total contribution = fixed costs.
+step: 5,000 x 12 = $60,000.
+check: 5000*12
+explain: Rearranging the breakeven formula gives fixed costs.
+mistake: Dividing instead of multiplying.
+tip: At breakeven: units x contribution = fixed costs.
+src: Study text ch15 - breakeven (concept basis; original question)
+
+=== Q025
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO changes would REDUCE a product's breakeven point (all other factors unchanged)?
++ An increase in selling price || Contribution per unit rises.
++ A decrease in fixed costs || Less contribution is needed to break even.
+- An increase in variable cost per unit || Contribution falls and breakeven rises.
+- An increase in budgeted sales volume || Budgeted volume affects the margin of safety, not breakeven.
+explain: Breakeven falls when contribution per unit rises (higher price or lower variable cost) or when fixed costs fall.
+mistake: Thinking higher budgeted sales lower breakeven.
+tip: Budgeted sales change the margin of safety, not breakeven.
+src: Study text ch15 - changing price or costs (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Fixed costs are $50,000, variable cost is $15 per unit and the breakeven point is 2,500 units. What is the selling price per unit ($)?
+answer: 35
+tol: 0
+unit: $
+formula: Contribution per unit = fixed costs / breakeven units; price = contribution + variable cost
+step: Contribution per unit = 50,000 / 2,500 = $20.
+step: Price = 20 + 15 = $35.
+check: 50000/2500 + 15
+explain: Working backwards from breakeven gives the contribution per unit and therefore the selling price.
+mistake: Stopping at the contribution of $20.
+tip: Price = contribution + variable cost.
+src: Study text ch15 - breakeven (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which of the following is NOT an assumption of basic CVP analysis?
++ Fixed costs change in proportion to sales volume || CVP assumes fixed costs are constant within the relevant range.
+- The selling price per unit is constant || This is a CVP assumption.
+- The variable cost per unit is constant || This is a CVP assumption.
+- Production volume equals sales volume || This is a CVP assumption.
+explain: CVP assumes linear revenue and cost behaviour, constant fixed costs and no change in inventory.
+mistake: Choosing a genuine assumption because it seems unrealistic.
+tip: "NOT an assumption" - find the statement that contradicts CVP.
+src: Study text ch15 - assumptions (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A business sells 8,000 units at $40 with a variable cost of $24 and fixed costs of $96,000. It wants a profit of $40,000 without changing volume or costs. What selling price is needed?
++ $41 || Required contribution per unit = (96,000 + 40,000) / 8,000 = $17; price = 17 + 24 = $41.
+- $17 || This is the required contribution per unit, not the price.
+- $57 || This adds the required contribution to $40 instead of to variable cost.
+- $42 || This rounds the required contribution up to $18.
+formula: Required contribution per unit = (fixed costs + target profit) / units; price = contribution + variable cost
+step: Required contribution = 96,000 + 40,000 = $136,000.
+step: Per unit = 136,000 / 8,000 = $17.
+step: Price = 17 + 24 = $41.
+check: (96000+40000)/8000 + 24
+explain: When volume is fixed, the target profit determines the contribution needed per unit, and therefore the price.
+mistake: Giving the contribution per unit as the price.
+tip: Finish the calculation - add variable cost back.
+src: Study text ch15 - changing price (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: On a P/V chart, what does the slope of the profit line represent?
++ The contribution earned per unit (or per $ of sales) || Each extra unit adds its contribution to profit.
+- The fixed cost per unit || Fixed costs determine where the line starts, not its slope.
+- The selling price per unit || The slope reflects contribution, which is price less variable cost.
+- The margin of safety || The margin of safety is a distance along the sales axis.
+explain: The P/V line starts at minus fixed costs and rises by the contribution of each unit sold. A steeper line means a higher contribution per unit.
+mistake: Linking the slope to selling price.
+tip: Intercept = fixed costs; slope = contribution.
+src: Study text ch15 - P/V chart (concept basis; original question)
+
+=== Q030
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each change with its effect on the breakeven point (all other factors unchanged).
+pair: Selling price rises => Breakeven falls
+pair: Fixed costs rise => Breakeven rises
+pair: Variable cost per unit falls => Breakeven falls
+pair: Budgeted sales volume rises => Breakeven unchanged
+explain: Breakeven = fixed costs / (price - variable cost). Budgeted volume does not appear in the formula.
+mistake: Thinking higher budgeted sales lower breakeven.
+tip: Check whether the changed item is in the formula.
+src: Study text ch15 - changing price or costs (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Budgeted sales are 8,000 units, breakeven is 6,000 units and contribution is $16 per unit. What is the budgeted profit?
++ $32,000 || Margin of safety 2,000 units x $16 = $32,000.
+- $128,000 || This is total contribution at budget.
+- $96,000 || This is total fixed costs.
+- $16,000 || This uses 1,000 units.
+formula: Profit = margin of safety (units) x contribution per unit
+step: Margin of safety = 8,000 - 6,000 = 2,000 units.
+step: Profit = 2,000 x 16 = $32,000.
+check: (8000-6000)*16
+explain: Sales up to breakeven cover fixed costs; every unit above breakeven adds its full contribution to profit.
+mistake: Reporting total contribution as profit.
+tip: Profit = margin of safety units x contribution per unit.
+src: Study text ch15 - margin of safety and profit (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Fixed costs do not change. Which decision rule maximises total profit?
++ Choose the option that maximises total contribution || With fixed costs unchanged, extra contribution is extra profit.
+- Choose the option with the highest selling price || A high price may reduce volume and total contribution.
+- Choose the option with the highest contribution per unit || A higher per-unit contribution can still give a lower total if volume falls.
+- Choose the option with the lowest breakeven point || A low breakeven does not guarantee the highest profit.
+explain: When fixed costs are unaffected by the choice, profit differences come only from total contribution.
+mistake: Focusing on per-unit figures instead of totals.
+tip: Compare TOTAL contribution across options.
+src: Study text ch15 - decisions (concept basis; original question)
+
+=== Q033
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company sells 10,000 units with contribution of $8 per unit. It expects a 10% increase in sales volume with no change in price, variable cost per unit or fixed costs. By how much ($) will profit increase?
+answer: 8000
+tol: 0
+unit: $
+formula: Change in profit = change in units x contribution per unit (fixed costs unchanged)
+step: Extra units = 10% x 10,000 = 1,000.
+step: Extra profit = 1,000 x 8 = $8,000.
+check: 0.1*10000*8
+explain: Because fixed costs do not change, each extra unit adds its full contribution to profit.
+mistake: Applying 10% to profit instead of to contribution.
+tip: Volume changes affect profit through contribution only.
+src: Study text ch15 - CVP and volume (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product's C/S ratio is 25% and fixed costs are $45,000. Budgeted sales revenue is $240,000. What is the margin of safety in revenue?
++ $60,000 || Breakeven revenue = 45,000 / 0.25 = 180,000; 240,000 - 180,000 = $60,000.
+- $180,000 || This is breakeven revenue.
+- $15,000 || This deducts fixed costs from budgeted contribution - which is profit.
+- $195,000 || This deducts fixed costs from budgeted sales.
+formula: Margin of safety = budgeted revenue - breakeven revenue
+step: Breakeven revenue = 45,000 / 0.25 = $180,000.
+step: Margin of safety = 240,000 - 180,000 = $60,000.
+check: 240000 - 45000/0.25
+explain: The margin of safety in revenue is the gap between budgeted and breakeven sales value.
+mistake: Giving the breakeven revenue as the answer.
+tip: Two steps: breakeven first, then the margin.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which formula gives the number of units needed to earn a target profit?
++ (Fixed costs + target profit) / contribution per unit || Contribution must cover fixed costs and then the profit.
+- Fixed costs / contribution per unit + target profit || The target profit must be divided by contribution too.
+- (Fixed costs + target profit) / selling price per unit || Divide by contribution, not price.
+- (Fixed costs - target profit) / contribution per unit || The target profit is added.
+explain: The target profit formula extends the breakeven formula by adding the target to fixed costs.
+mistake: Adding the target profit after dividing.
+tip: Put the target profit inside the brackets.
+src: Study text ch15 - target profit (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc, trap
+topic: t2
+status: review
+scenario: A product sells 8,000 units at $40 each, with a variable cost of $24 per unit and fixed costs of $96,000. Marketing proposes cutting the price to $36, which it expects to raise sales to 10,000 units.
+q: What is the effect of the proposal on profit?
++ Profit falls by $8,000 || Current profit 8,000 x 16 - 96,000 = 32,000; new profit 10,000 x 12 - 96,000 = 24,000.
+- Profit rises by $8,000 || Higher volume does not make up for the lower contribution per unit.
+- Profit rises by $32,000 || This multiplies the extra 2,000 units by the old contribution of $16.
+- Profit is unchanged || Total contribution changes from 128,000 to 120,000.
+formula: Profit = units x contribution per unit - fixed costs
+step: Current: 8,000 x (40 - 24) - 96,000 = $32,000.
+step: Proposed: 10,000 x (36 - 24) - 96,000 = $24,000.
+step: Change = 24,000 - 32,000 = -$8,000.
+check: (8000*16 - 96000) - (10000*12 - 96000)
+explain: A price cut reduces contribution on EVERY unit, not just the extra units. Total contribution falls unless volume rises enough.
+mistake: Valuing only the extra units at the old contribution.
+tip: Compare total contribution before and after.
+src: Study text ch15 - changing price (concept basis; original scenario)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A product sells 8,000 units at $40 each, with a variable cost of $24 per unit and fixed costs of $96,000. The price is to be cut to $36.
+q: How many units must be sold at the new price to keep profit at its current level?
+answer: 10667
+tol: 0
+unit: units
+formula: Units = (fixed costs + current profit) / new contribution per unit, rounded up
+step: Current profit = 8,000 x 16 - 96,000 = $32,000.
+step: New contribution = 36 - 24 = $12.
+step: Units = (96,000 + 32,000) / 12 = 10,666.67, so 10,667 whole units.
+check: -(-(96000+32000)//12)
+explain: Keeping profit constant after a price cut requires a large rise in volume (here about 33%).
+mistake: Using the old contribution of $16.
+tip: The current profit becomes the target profit.
+src: Study text ch15 - changing price (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: calc, mixed
+topic: t2
+status: review
+scenario: Current: price $50, variable cost $30, fixed costs $120,000, sales 9,000 units. Proposal: buy a machine that raises fixed costs by $30,000 but reduces variable cost to $25 per unit.
+q: What is the new breakeven point, and what happens to profit at 9,000 units?
++ 6,000 units; profit rises by $15,000 || New contribution 25; breakeven 150,000 / 25 = 6,000. Profit: 9,000 x 25 - 150,000 = 75,000 vs 9,000 x 20 - 120,000 = 60,000.
+- 6,000 units; profit falls by $15,000 || Profit rises because the extra contribution (45,000) exceeds the extra fixed cost (30,000).
+- 7,500 units; profit rises by $15,000 || 7,500 is the breakeven if fixed costs rose but variable cost did not fall.
+- 4,800 units; profit rises by $45,000 || This ignores the extra fixed costs.
+formula: Breakeven = fixed costs / contribution per unit; profit = units x contribution - fixed costs
+step: Old: contribution 20; breakeven 120,000 / 20 = 6,000; profit 9,000 x 20 - 120,000 = 60,000.
+step: New: contribution 25; breakeven 150,000 / 25 = 6,000; profit 9,000 x 25 - 150,000 = 75,000.
+step: Breakeven unchanged at 6,000 units; profit up $15,000.
+check: 150000/25
+explain: Changes in fixed and variable costs can offset each other in the breakeven point while still changing profit at a given volume.
+mistake: Judging the proposal by breakeven alone.
+tip: Check both breakeven (risk) and profit (return).
+src: Study text ch15 - changing costs (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+q: A company's profit is $36,000 when sales are $360,000, and $60,000 when sales are $420,000. Price and costs behave linearly. What is the breakeven revenue?
++ $270,000 || C/S ratio = 24,000 / 60,000 = 40%; fixed costs = 0.4 x 360,000 - 36,000 = 108,000; 108,000 / 0.4 = 270,000.
+- $108,000 || This is the fixed cost figure, not breakeven revenue.
+- $324,000 || This deducts the first profit from sales.
+- $300,000 || This uses a C/S ratio of 36%.
+formula: C/S ratio = change in profit / change in sales; breakeven revenue = fixed costs / C/S ratio
+step: Change in profit = 24,000; change in sales = 60,000; C/S ratio = 40% (fixed costs do not change).
+step: Fixed costs = contribution - profit = 0.4 x 360,000 - 36,000 = $108,000.
+step: Breakeven revenue = 108,000 / 0.4 = $270,000.
+check: (0.4*360000 - 36000)/0.4
+explain: Because fixed costs are constant, the change in profit equals the change in contribution, which gives the C/S ratio.
+mistake: Dividing profit by sales to find a "C/S ratio".
+tip: Two levels of activity - use the change method (like high-low).
+src: Study text ch15 - C/S ratio (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A student reads a P/V chart and says: "The line starts at -$80,000 on the profit axis, so the business breaks even at sales of $80,000." What is wrong with this statement?
++ -$80,000 is the loss at zero sales (the fixed costs); breakeven is where the line crosses the sales axis || The vertical intercept shows fixed costs, not breakeven sales.
+- Nothing - breakeven sales always equal fixed costs || Breakeven sales equal fixed costs divided by the C/S ratio.
+- The line should start at zero || A P/V line starts at minus fixed costs.
+- Breakeven is where the line is steepest || The P/V line is straight, with a constant slope.
+explain: On a P/V chart, the vertical intercept is minus fixed costs; breakeven is the sales level where profit is zero.
+mistake: Equating breakeven revenue with fixed costs.
+tip: Breakeven revenue is ALWAYS larger than fixed costs (unless the C/S ratio is 100%).
+src: Study text ch15 - P/V chart (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A product has a selling price of $25 and a C/S ratio of 32%. Fixed costs are $64,000 and budgeted sales are 10,000 units. What is the margin of safety as a percentage of budgeted sales?
+answer: 20
+tol: 0
+unit: %
+formula: Breakeven units = fixed costs / contribution per unit; margin of safety % = (budget - breakeven) / budget x 100
+step: Contribution per unit = 32% x 25 = $8.
+step: Breakeven = 64,000 / 8 = 8,000 units.
+step: Margin of safety = (10,000 - 8,000) / 10,000 = 20%.
+check: (10000 - 64000/(0.32*25))/10000*100
+explain: The C/S ratio converts price into contribution per unit, which then gives breakeven in units.
+mistake: Dividing fixed costs by the C/S ratio and comparing revenue with units.
+tip: Keep units with units and revenue with revenue.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q042
+type: mr
+level: C
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO statements about the margin of safety are correct?
++ A high margin of safety indicates a low risk of making a loss || Sales could fall a long way before a loss.
++ Profit equals the margin of safety in units multiplied by contribution per unit || All fixed costs are covered at breakeven, so units above it add pure contribution.
+- The margin of safety rises when fixed costs rise || Higher fixed costs raise breakeven and reduce the margin.
+- The margin of safety is measured from actual production, not sales || It is based on sales.
+explain: The margin of safety measures the cushion between expected sales and breakeven sales, and links directly to profit.
+mistake: Thinking higher fixed costs give more safety.
+tip: Margin of safety and profit move together.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: A product has contribution of $15 per unit and fixed costs of $90,000. Budgeted sales are 8,000 units. Management is considering advertising costing $12,000, which would raise sales to 9,000 units. Should it go ahead?
++ Yes - profit rises by $3,000, because the extra contribution of $15,000 exceeds the $12,000 cost || 1,000 extra units x 15 = 15,000 > 12,000.
+- No - breakeven rises from 6,000 to 6,800 units || Breakeven does rise, but profit still increases.
+- No - profit falls by $12,000 || This ignores the extra contribution.
+- Yes - profit rises by $15,000 || This ignores the advertising cost.
+formula: Change in profit = extra contribution - extra fixed costs
+step: Extra contribution = 1,000 x 15 = $15,000.
+step: Change in profit = 15,000 - 12,000 = +$3,000.
+check: 1000*15 - 12000
+explain: Incremental analysis compares the extra contribution with the extra fixed cost.
+mistake: Rejecting the proposal because breakeven rises.
+tip: Decisions are judged on profit; breakeven indicates risk.
+src: Study text ch15 - decisions (concept basis; original question)
+
+=== Q044
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each CVP chart feature with what it shows.
+pair: Vertical intercept of a P/V chart => Fixed costs (as a loss)
+pair: Gap between sales and total cost lines beyond breakeven => Profit
+pair: Gap between sales and variable cost lines on a contribution chart => Contribution
+pair: Horizontal distance between budgeted sales and breakeven => Margin of safety
+choice: Selling price per unit
+explain: Each chart highlights different measures. Reading the right gap or intercept is a common exam skill.
+mistake: Mixing up profit and contribution gaps.
+tip: Contribution gap uses VARIABLE cost; profit gap uses TOTAL cost.
+src: Study text ch15 - CVP charts (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A company cuts its selling price by 10%. Its C/S ratio was 40% before the cut and variable cost per unit is unchanged. What is the new C/S ratio?
++ 33.3% || Price 100 -> 90; variable cost 60; contribution 30; 30 / 90 = 33.3%.
+- 30% || This deducts 10 percentage points from 40%.
+- 36% || This reduces the ratio by 10% of itself.
+- 40% || The ratio changes because price changes but variable cost does not.
+formula: C/S ratio = (price - variable cost) / price
+step: Assume old price $100: variable cost = $60, contribution = $40.
+step: New price = $90; contribution = 90 - 60 = $30.
+step: New C/S ratio = 30 / 90 = 33.3%.
+check: (90-60)/90*100
+explain: Using an illustrative price of $100 makes percentage changes easy to work through.
+mistake: Subtracting percentage points directly.
+tip: Use $100 as a base price for percentage questions.
+src: Study text ch15 - changing price (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: At sales of 12,000 units a company makes a profit of $30,000. Its breakeven point is 9,000 units. What are total fixed costs ($)?
+answer: 90000
+tol: 0
+unit: $
+formula: Contribution per unit = profit / margin of safety units; fixed costs = breakeven units x contribution per unit
+step: Margin of safety = 12,000 - 9,000 = 3,000 units, earning the $30,000 profit.
+step: Contribution per unit = 30,000 / 3,000 = $10.
+step: Fixed costs = 9,000 x 10 = $90,000.
+check: 9000*30000/(12000-9000)
+explain: Profit is earned only on units above breakeven, which reveals contribution per unit.
+mistake: Dividing profit by total units (12,000).
+tip: Profit / margin of safety units = contribution per unit.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Product A has a breakeven point of 4,000 units and budgeted sales of 5,000 units. Product B has a breakeven point of 6,000 units and budgeted sales of 9,000 units. Which statement is correct?
++ Product B is less risky, with a margin of safety of 33.3% against 20% for A || A: 1,000 / 5,000 = 20%; B: 3,000 / 9,000 = 33.3%.
+- Product A is less risky because its breakeven point is lower || Risk depends on the margin of safety, not breakeven alone.
+- They are equally risky because both make a profit || Their margins of safety differ.
+- Product B is more risky because its breakeven point is higher || A higher breakeven point can still be well below budgeted sales.
+formula: Margin of safety % = (budget - breakeven) / budget x 100
+step: A: (5,000 - 4,000) / 5,000 = 20%.
+step: B: (9,000 - 6,000) / 9,000 = 33.3%.
+check: (9000-6000)/9000*100
+explain: The margin of safety percentage compares products of different sizes on a like-for-like basis.
+mistake: Comparing breakeven points alone.
+tip: Risk = how far sales can fall in percentage terms.
+src: Study text ch15 - margin of safety (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: Fixed costs are $120,000. The selling price is $60 and variable cost is $36 per unit. Fixed costs are expected to rise by 10% and variable cost per unit by $4. What is the new breakeven point?
++ 6,600 units || Fixed costs 132,000; contribution 60 - 40 = 20; 132,000 / 20 = 6,600.
+- 5,500 units || This includes the fixed cost rise but not the variable cost rise (132,000 / 24).
+- 6,000 units || This includes the variable cost rise but not the fixed cost rise (120,000 / 20).
+- 5,000 units || This is the original breakeven point.
+formula: Breakeven = new fixed costs / new contribution per unit
+step: New fixed costs = 120,000 x 1.10 = $132,000.
+step: New contribution = 60 - (36 + 4) = $20.
+step: Breakeven = 132,000 / 20 = 6,600 units.
+check: 120000*1.1/(60-40)
+explain: When several factors change at once, recalculate each part of the formula before dividing.
+mistake: Applying only one of the two changes.
+tip: Update numerator and denominator separately.
+src: Study text ch15 - changing costs (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: A company makes several products in a fixed sales mix. A manager calculates a single breakeven point using the average C/S ratio. Which limitation applies?
++ The breakeven point is valid only if the sales mix stays as assumed || A change in mix changes the average C/S ratio and the breakeven point.
+- A single breakeven point can never be calculated for more than one product || It can be, using the weighted average C/S ratio.
+- The average C/S ratio ignores fixed costs || Fixed costs are divided by the ratio; they are not ignored.
+- The breakeven point is always understated || It may be under- or overstated depending on how the mix changes.
+explain: Multi-product CVP relies on a constant mix. If sales shift towards low-contribution products, the real breakeven point is higher.
+mistake: Treating a multi-product breakeven as fixed regardless of mix.
+tip: Constant sales mix is an extra assumption when there is more than one product.
+src: Study text ch15 - CVP limitations (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: How is the breakeven point in sales revenue calculated?
++ Fixed costs / C/S ratio || Each $1 of sales covers C/S ratio dollars of fixed cost.
+- Fixed costs x C/S ratio || Multiplying gives a smaller figure than fixed costs.
+- Fixed costs / selling price || This gives units, and ignores variable costs.
+- Contribution / fixed costs || This is not a breakeven measure.
+explain: Breakeven revenue = fixed costs / C/S ratio, or breakeven units x selling price.
+mistake: Multiplying fixed costs by the ratio.
+tip: Check: breakeven revenue must be more than fixed costs.
+src: Study text ch15 - breakeven revenue (concept basis; original question)

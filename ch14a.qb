@@ -1,0 +1,921 @@
+@subject acfbe
+@chapter 14a
+@title Cost Variances
+@lo E2, D5
+@topic t1 | Variances basics | E2, D5
+@topic t2 | Material variances | E2, D5
+@topic t3 | Labour variances | E2, D5
+@topic t4 | Variable overhead variances | E2, D5
+@topic t5 | Fixed overhead variances | E2, D5
+@topic t6 | Causes and significance | E2, D5
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does a FAVOURABLE cost variance mean?
++ Actual cost was lower than standard cost || Better than expected.
+- Actual cost was higher than standard cost || Adverse.
+- Output was lower than budget || Not a cost variance.
+- The variance is not significant || Significance is separate.
+explain: Favourable is not always good - cheap materials may cause waste.
+mistake: Assuming favourable always means good management.
+tip: Cost below standard = F.
+src: Study text ch14a - variances (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: The standard price of material is $3 per kg. 24,000 kg were bought for $69,600. What is the material price variance ($)? (It is favourable.)
+answer: 2400
+tol: 0
+unit: $
+formula: Price variance = (standard price x actual quantity) - actual cost
+step: Standard cost of actual purchases = 24,000 x 3 = 72,000.
+step: Variance = 72,000 - 69,600 = $2,400 F.
+check: 24000*3-69600
+explain: The actual price was $2.90 per kg, below standard.
+mistake: Using the standard quantity for actual output.
+tip: Price variance uses actual quantity.
+src: Study text ch14a - material price (concept basis; original figures)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which labour variance is ALWAYS adverse?
++ Idle time variance || Hours paid but not worked.
+- Labour rate variance || Can be favourable.
+- Labour efficiency variance || Can be favourable.
+- Labour total variance || Can be favourable.
+explain: Idle time = idle hours x standard rate.
+mistake: Thinking idle time can be favourable.
+tip: Idle = always A.
+src: Study text ch14a - idle time (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t5
+status: review
+q: Budgeted fixed overhead is $54,000 and actual fixed overhead is $56,000. What is the fixed overhead expenditure variance ($)? (It is adverse.)
+answer: 2000
+tol: 0
+unit: $
+formula: Expenditure variance = budgeted fixed overhead - actual fixed overhead
+step: Budget = 54,000; actual = 56,000.
+step: Variance = 54,000 - 56,000 = 2,000 adverse.
+check: 56000-54000
+explain: The only fixed overhead variance under marginal costing.
+mistake: Using absorbed overhead instead of budget.
+tip: Budget vs actual.
+src: Study text ch14a - expenditure (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which quantity is used to calculate the material USAGE variance?
++ Standard quantity for actual output compared with actual quantity used, valued at standard price || Isolates efficiency in use.
+- Actual quantity purchased at actual price || Not usage.
+- Budgeted quantity at actual price || Not usage.
+- Actual quantity at standard price only || Needs comparison.
+explain: Valuing at standard price separates usage from price effects.
+mistake: Valuing usage at actual price.
+tip: Usage at standard price.
+src: Study text ch14a - usage (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Under MARGINAL costing, which fixed overhead variance arises?
++ Only the fixed overhead expenditure variance || No overhead is absorbed, so no volume variance.
+- Only the volume variance || That is absorption costing.
+- Both expenditure and volume variances || Volume arises only under absorption.
+- No fixed overhead variance at all || Expenditure variance arises.
+explain: Volume variances measure under/over-absorption due to output.
+mistake: Calculating volume variances under marginal costing.
+tip: Marginal = expenditure only.
+src: Study text ch14a - marginal costing (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: 300 hours of idle time were recorded. The standard labour rate is $12 per hour. What is the idle time variance ($)? (It is adverse.)
+answer: 3600
+tol: 0
+unit: $
+formula: Idle time variance = idle hours x standard rate
+step: Idle hours = 300; standard rate = 12.
+step: Variance = 300 x 12 = $3,600 A.
+check: 300*12
+explain: Idle time is paid but produces nothing.
+mistake: Using the actual rate.
+tip: Idle hours x standard rate.
+src: Study text ch14a - idle time (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t6
+status: review
+q: Which is a likely cause of an ADVERSE labour rate variance?
++ An unplanned pay rise or overtime premium || Higher rate paid.
+- Using a lower grade of labour || Usually favourable.
+- Staff working faster than expected || Efficiency, not rate.
+- Better quality materials || Affects efficiency.
+explain: Rate variances reflect the price paid per hour.
+mistake: Mixing rate and efficiency causes.
+tip: Paid more per hour = adverse rate.
+src: Study text ch14a - causes (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Under absorption costing, what does the fixed overhead TOTAL variance equal?
++ The under- or over-absorbed fixed overhead || Absorbed vs actual.
+- The expenditure variance only || Volume is also included.
+- Budgeted overhead - absorbed overhead || That is volume only.
+- Zero, always || Rarely.
+explain: Total = expenditure + volume.
+mistake: Missing the volume part.
+tip: Total = under/over-absorption.
+src: Study text ch14a - fixed total (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Why is the material price variance usually calculated when materials are PURCHASED?
++ So inventory can be held at standard cost and variances are reported promptly || Earliest point of control.
+- Because usage cannot be measured || It can.
+- Because it is required by law || Not legal.
+- To avoid calculating usage variances || Both are calculated.
+explain: Calculating at purchase isolates buying performance quickly.
+mistake: Using quantity used for the price variance when purchases differ.
+tip: Price at purchase.
+src: Study text ch14a - price variance timing (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Standard: 4 kg per unit at $3 per kg. Actual output 5,800 units; materials used 24,000 kg.
+q: What is the material usage variance?
++ $2,400 adverse || (23,200 - 24,000) x $3.
+- $2,400 favourable || More was used than standard.
+- $800 adverse || In kg, not $.
+- $3,200 adverse || Not supported.
+formula: Usage variance = (standard qty for actual output - actual qty used) x standard price
+step: Standard qty = 5,800 x 4 = 23,200 kg.
+step: (23,200 - 24,000) x 3 = -2,400, i.e. $2,400 adverse.
+check: (24000-5800*4)*3
+explain: 800 kg more than standard were used.
+mistake: Using budgeted output.
+tip: Standard qty for ACTUAL output.
+src: Study text ch14a - material usage (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Standard rate $12 per hour. 17,800 hours were paid at a cost of $217,160.
+q: What is the labour rate variance?
++ $3,560 adverse || Standard 213,600 vs actual 217,160.
+- $3,560 favourable || Actual rate is higher.
+- $3,600 adverse || Idle time variance.
+- $8,360 adverse || Total labour variance.
+formula: Rate variance = (actual hours paid x standard rate) - actual cost
+step: Standard cost of hours paid = 17,800 x 12 = 213,600.
+step: 213,600 - 217,160 = -3,560: adverse.
+check: 217160-17800*12
+explain: The actual rate was $12.20 per hour.
+mistake: Using hours worked instead of hours paid.
+tip: Rate variance uses hours PAID.
+src: Study text ch14a - labour rate (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Standard: 3 hours per unit at $12 per hour. Actual output 5,800 units. Hours worked 17,500 (hours paid 17,800).
+q: What is the labour efficiency variance ($)? (It is adverse.)
+answer: 1200
+tol: 0
+unit: $
+formula: Efficiency = (standard hours for actual output - actual hours worked) x standard rate
+step: Standard hours = 5,800 x 3 = 17,400.
+step: (17,400 - 17,500) x 12 = -1,200: $1,200 A.
+check: (17500-5800*3)*12
+explain: Use hours WORKED, not hours paid, for efficiency.
+mistake: Using hours paid (would mix in idle time).
+tip: Efficiency uses hours worked.
+src: Study text ch14a - efficiency (concept basis; original figures)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: Standard variable overhead rate is $2 per labour hour. Hours worked were 17,500 and actual variable overhead was $36,200.
+q: What is the variable overhead expenditure variance ($)? (It is adverse.)
+answer: 1200
+tol: 0
+unit: $
+formula: Expenditure = (actual hours worked x standard rate) - actual cost
+step: Expected cost for hours worked = 17,500 x 2 = 35,000.
+step: 35,000 - 36,200 = -1,200: $1,200 A.
+check: 36200-17500*2
+explain: Variable overhead is assumed to vary with hours worked.
+mistake: Using standard hours.
+tip: Hours worked x std rate vs actual.
+src: Study text ch14a - VOH expenditure (concept basis; original figures)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: Standard variable overhead rate $2 per hour. Standard hours for actual output 17,400; hours worked 17,500.
+q: What is the variable overhead efficiency variance?
++ $200 adverse || (17,400 - 17,500) x $2.
+- $200 favourable || More hours were worked than standard.
+- $1,200 adverse || That is labour efficiency.
+- $100 adverse || In hours, not $.
+formula: VOH efficiency = (standard hours - actual hours worked) x standard VOH rate
+step: Difference = 17,400 - 17,500 = -100 hours.
+step: Variance = 100 x 2 = $200 A.
+check: (17500-17400)*2
+explain: It uses the same hours as the labour efficiency variance.
+mistake: Using the labour rate.
+tip: Same hours, VOH rate.
+src: Study text ch14a - VOH efficiency (concept basis; original figures)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: Budgeted output 6,000 units; standard fixed overhead $9 per unit. Actual output 5,800 units.
+q: What is the fixed overhead volume variance?
++ $1,800 adverse || (5,800 - 6,000) x $9.
+- $1,800 favourable || Output was below budget.
+- $2,000 adverse || Expenditure variance.
+- $200 adverse || In units.
+formula: Volume = (actual output - budgeted output) x standard fixed overhead per unit
+step: Output shortfall = 200 units.
+step: Variance = 200 x 9 = $1,800 A (under-absorption).
+check: (6000-5800)*9
+explain: Producing less than budget under-absorbs fixed overhead.
+mistake: Reversing the sign.
+tip: Below budget output = adverse volume.
+src: Study text ch14a - volume (concept basis; original figures)
+
+=== Q017
+type: mr
+level: S
+cat: concept
+topic: t6
+status: review
+select: 2
+q: Which TWO could cause an ADVERSE material usage variance?
++ Poor quality materials causing more waste || More material used.
++ Inexperienced staff making errors || More waste.
+- Buying materials at a discount || Affects price.
+- Better machinery reducing waste || Favourable usage.
+explain: Interdependence: cheap materials may cause favourable price but adverse usage.
+mistake: Linking discounts to usage.
+tip: Waste = usage.
+src: Study text ch14a - causes (concept basis; original question)
+
+=== Q018
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each labour variance with the hours it uses.
+pair: Rate variance => Actual hours paid
+pair: Idle time variance => Idle hours (paid but not worked)
+pair: Efficiency variance => Actual hours worked vs standard hours
+pair: Total variance => Standard cost of actual output vs actual cost
+explain: Using the wrong hours is the most common labour variance error.
+mistake: Using hours paid for efficiency.
+tip: Paid, idle, worked.
+src: Study text ch14a - labour (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: Standard fixed overhead $9 per unit (based on budgeted output of 6,000 units). Actual output 5,800 units. Actual fixed overhead $56,000.
+q: What is the total fixed overhead variance ($)? (It is adverse.)
+answer: 3800
+tol: 0
+unit: $
+formula: Total = absorbed (actual output x std rate) - actual overhead
+step: Absorbed = 5,800 x 9 = 52,200.
+step: 52,200 - 56,000 = -3,800: $3,800 A (under-absorbed).
+check: 56000-5800*9
+explain: Total = expenditure 2,000 A + volume 1,800 A.
+mistake: Using budgeted output for absorption.
+tip: Absorbed vs actual.
+src: Study text ch14a - fixed total (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: Which is a reason to investigate a variance?
++ It is material and the cost is controllable || Worth investigating.
+- It is tiny and random || Not worth it.
+- It is caused by an outdated standard that is known about || Revise the standard instead.
+- The investigation cost exceeds the likely benefit || Not worthwhile.
+explain: Consider materiality, controllability, standard type, interdependence and cost vs benefit.
+mistake: Investigating everything.
+tip: Big and controllable.
+src: Study text ch14a - significance (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Standard: 4 kg per unit at $3 per kg. Actual output 5,800 units. 24,000 kg were bought and used, costing $69,600.
+q: What is the material TOTAL variance?
++ $0 - price $2,400 F and usage $2,400 A cancel out || Standard 69,600 = actual 69,600.
+- $4,800 adverse || Adds the two.
+- $2,400 favourable || Price only.
+- $2,400 adverse || Usage only.
+formula: Total = standard cost of actual output - actual cost
+step: Standard cost = 5,800 x 4 x 3 = 69,600.
+step: Actual = 69,600; total variance = 0.
+check: 5800*4*3-69600
+explain: A nil total can hide two significant offsetting variances.
+mistake: Not analysing the total.
+tip: Always split the total.
+src: Study text ch14a - interdependence (concept basis; original figures)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: Standard fixed overhead rate $3 per hour. Standard hours for actual output 17,400. Actual hours worked 17,500.
+q: What is the fixed overhead volume efficiency variance ($)? (It is adverse.)
+answer: 300
+tol: 0
+unit: $
+formula: Volume efficiency = (standard hours for actual output - actual hours worked) x std fixed rate per hour
+step: Difference = 17,400 - 17,500 = -100 hours.
+step: Variance = 100 x 3 = $300 A.
+check: (17500-17400)*3
+explain: It mirrors the labour efficiency variance in hours.
+mistake: Using budgeted hours.
+tip: Same hours as labour efficiency.
+src: Study text ch14a - volume efficiency (concept basis; original figures)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: Standard fixed overhead rate $3 per hour. Budgeted hours 18,000. Actual hours worked 17,500.
+q: What is the fixed overhead volume capacity variance ($)? (It is adverse.)
+answer: 1500
+tol: 0
+unit: $
+formula: Capacity = (actual hours worked - budgeted hours) x std fixed rate per hour
+step: Difference = 17,500 - 18,000 = -500 hours.
+step: Variance = 500 x 3 = $1,500 A.
+check: (18000-17500)*3
+explain: Fewer hours worked than budgeted = under-used capacity.
+mistake: Reversing the sign.
+tip: Worked < budget = adverse capacity.
+src: Study text ch14a - capacity (concept basis; original figures)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: How does the fixed overhead volume variance split into two parts?
++ Volume efficiency + volume capacity || Together they equal the volume variance.
+- Expenditure + efficiency || Expenditure is separate.
+- Price + usage || Material variances.
+- Rate + idle time || Labour variances.
+explain: Efficiency relates to how fast work was done; capacity to how many hours were worked.
+mistake: Including expenditure.
+tip: Volume = efficiency + capacity.
+src: Study text ch14a - volume split (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: What is an example of variance INTERDEPENDENCE?
++ Buying cheaper, lower-quality material gives a favourable price but adverse usage variance || One decision affects two variances.
+- A pay rise affecting only the rate variance || Single effect.
+- Rent rising, affecting expenditure only || Single effect.
+- A variance being both favourable and adverse || Not possible.
+explain: Variances should be interpreted together.
+mistake: Judging each variance alone.
+tip: Look for linked causes.
+src: Study text ch14a - interdependence (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: The standard price is $5 per kg. 4,000 kg were bought, and the material price variance was $1,000 adverse. What was the actual cost of the purchase ($)?
+answer: 21000
+tol: 0
+unit: $
+formula: Actual cost = standard cost of actual quantity + adverse price variance
+step: Standard cost = 4,000 x 5 = 20,000.
+step: Actual = 20,000 + 1,000 = $21,000.
+check: 4000*5+1000
+explain: The actual price was $5.25 per kg.
+mistake: Subtracting an adverse variance.
+tip: Adverse = actual is higher.
+src: Study text ch14a - working back (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee calculates the labour efficiency variance using hours PAID (including idle time). What is the effect?
++ Idle time is wrongly included in the efficiency variance; hours WORKED should be used || Idle time has its own variance.
+- No effect || It double counts idle time.
+- The rate variance is affected || Rate uses hours paid correctly.
+- The material variance is affected || Not related.
+explain: Separating idle time shows whether staff were efficient when working.
+mistake: Using hours paid.
+tip: Efficiency = hours worked.
+src: Study text ch14a - labour (concept basis; original question)
+
+=== Q028
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Standard: 3 hours per unit at $12 per hour. Actual output 5,800 units. Actual labour cost $217,160.
+q: What is the labour total variance ($)? (It is adverse.)
+answer: 8360
+tol: 0
+unit: $
+formula: Total = standard cost of actual output - actual cost
+step: Standard = 5,800 x 3 x 12 = 208,800.
+step: 208,800 - 217,160 = -8,360: $8,360 A.
+check: 217160-5800*3*12
+explain: This equals rate 3,560 A + idle 3,600 A + efficiency 1,200 A.
+mistake: Using budgeted output.
+tip: Check that the parts add up to the total.
+src: Study text ch14a - labour total (concept basis; original figures)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: Which is NOT one of the four general causes of variances?
++ The company's share price || Not a cause of cost variances.
+- An inappropriate standard || A cause.
+- Measurement errors || A cause.
+- Random or chance fluctuations || A cause.
+explain: The fourth cause is efficient or inefficient operations.
+mistake: Assuming every variance reflects performance.
+tip: Standard, measurement, chance, performance.
+src: Study text ch14a - causes (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Standard price $6 per kg. 2,000 kg were bought for $11,400. What is the price variance?
++ $600 favourable || Standard 12,000 vs actual 11,400.
+- $600 adverse || Paid less than standard.
+- $11,400 favourable || Actual cost.
+- $300 favourable || Not supported.
+formula: Price variance = (actual qty x standard price) - actual cost
+step: Standard cost = 2,000 x 6 = 12,000.
+step: 12,000 - 11,400 = $600 F.
+check: 2000*6-11400
+explain: Actual price = $5.70 per kg.
+mistake: Reversing the sign.
+tip: Paid less = favourable.
+src: Study text ch14a - price variance (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: What does an ADVERSE fixed overhead volume variance indicate?
++ Actual output was below budgeted output, so fixed overhead was under-absorbed || Fewer units carried the cost.
+- Actual fixed costs were above budget || That is expenditure.
+- Output was above budget || That gives favourable.
+- Labour rates rose || Labour rate variance.
+explain: Causes include strikes, breakdowns and lower demand.
+mistake: Confusing volume with expenditure.
+tip: Volume = output effect.
+src: Study text ch14a - volume (concept basis; original question)
+
+=== Q032
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put these steps for analysing labour variances in order.
+item: Calculate the rate variance using actual hours paid
+item: Calculate the idle time variance using idle hours
+item: Calculate the efficiency variance using actual hours worked
+item: Check that the variances add up to the total labour variance
+explain: The reconciliation catches arithmetic errors.
+mistake: Skipping the check.
+tip: Rate, idle, efficiency, reconcile.
+src: Study text ch14a - labour analysis (concept basis; original question)
+
+=== Q033
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Standard: 5 kg per unit at $4 per kg. Actual: 9,000 kg bought for $37,800; 8,600 kg used to make 1,700 units. Price variance is calculated at purchase.
+q: What are the material price and usage variances?
++ Price $1,800 A; usage $400 A || Price: 36,000 - 37,800; usage: (8,500 - 8,600) x 4.
+- Price $1,720 A; usage $400 A || Price based on quantity used.
+- Price $1,800 A; usage $400 F || Usage is adverse.
+- Price $1,800 F; usage $400 A || Price is adverse.
+formula: Price = (AQ purchased x SP) - actual cost; usage = (SQ - AQ used) x SP
+step: Price: 9,000 x 4 = 36,000 vs 37,800 = 1,800 A.
+step: Usage: standard 1,700 x 5 = 8,500 kg; (8,500 - 8,600) x 4 = 400 A.
+check: 37800-9000*4
+explain: Purchases and usage differ, so use the right quantity for each variance.
+mistake: Using quantity used for the price variance.
+tip: Price on bought; usage on used.
+src: Study text ch14a - material variances (concept basis; original figures)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Standard: 2 hours per unit at $15 per hour. Actual: 4,300 hours paid at $63,640; 4,150 hours worked; 2,100 units made.
+q: What is the labour efficiency variance ($)? (It is favourable.)
+answer: 750
+tol: 0
+unit: $
+formula: Efficiency = (standard hours for actual output - hours worked) x standard rate
+step: Standard hours = 2,100 x 2 = 4,200.
+step: (4,200 - 4,150) x 15 = $750 F.
+check: (4200-4150)*15
+explain: Idle time = 150 hours x 15 = $2,250 A; rate = 4,300 x 15 - 63,640 = $860 F.
+mistake: Using hours paid.
+tip: Worked hours only.
+src: Study text ch14a - labour (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Standard: 2 hours per unit at $15 per hour. Actual: 4,300 hours paid at $63,640; 4,150 hours worked; 2,100 units made.
+q: What is the labour rate variance?
++ $860 favourable || 64,500 standard vs 63,640 actual.
+- $860 adverse || The actual rate was below standard.
+- $2,250 adverse || That is the idle time variance.
+- $750 favourable || That is the efficiency variance.
+formula: Rate = (hours paid x standard rate) - actual cost
+step: Standard cost of hours paid = 4,300 x 15 = 64,500.
+step: 64,500 - 63,640 = $860 favourable (actual rate $14.80).
+check: 4300*15-63640
+explain: Total labour variance = 2,100 x 2 x 15 - 63,640 = 640 A = 860 F - 2,250 A + 750 F.
+mistake: Using hours worked for the rate variance.
+tip: Rate uses hours paid.
+src: Study text ch14a - labour rate (concept basis; original figures)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: Budgeted fixed overhead $120,000; budgeted output 10,000 units at 4 standard hours per unit. Actual output 10,500 units, using 41,000 hours. Actual fixed overhead $123,500.
+q: What is the fixed overhead volume variance ($)? (It is favourable.)
+answer: 6000
+tol: 0
+unit: $
+formula: Volume = (actual output - budgeted output) x standard fixed overhead per unit
+step: Standard fixed overhead per unit = 120,000 / 10,000 = $12.
+step: Volume = (10,500 - 10,000) x 12 = $6,000 F.
+check: (10500-10000)*120000/10000
+explain: Expenditure = 120,000 - 123,500 = 3,500 A; total = 126,000 - 123,500 = 2,500 F.
+mistake: Using hours instead of units without the hourly rate.
+tip: Above budget output = favourable volume.
+src: Study text ch14a - volume (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: Budgeted fixed overhead $120,000; budgeted output 10,000 units at 4 standard hours per unit (rate $3 per hour). Actual output 10,500 units, using 41,000 hours.
+q: What are the volume efficiency and volume capacity variances?
++ Efficiency $3,000 F; capacity $3,000 F || (42,000 - 41,000) x 3; (41,000 - 40,000) x 3.
+- Efficiency $3,000 A; capacity $3,000 F || Efficiency is favourable.
+- Efficiency $6,000 F; capacity $0 || Not split correctly.
+- Efficiency $1,000 F; capacity $1,000 F || In hours, not $.
+formula: Efficiency = (SH - AH) x rate; capacity = (AH - BH) x rate
+step: Standard hours = 10,500 x 4 = 42,000; budgeted hours = 40,000.
+step: Efficiency = (42,000 - 41,000) x 3 = 3,000 F; capacity = (41,000 - 40,000) x 3 = 3,000 F.
+check: (42000-41000)*3
+explain: Together they equal the $6,000 F volume variance.
+mistake: Using budgeted hours for efficiency.
+tip: SH vs AH; AH vs BH.
+src: Study text ch14a - volume split (concept basis; original figures)
+
+=== Q038
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: The purchasing manager reports a large favourable price variance after switching to a cheaper supplier. The production manager reports a large adverse usage variance and more machine downtime. What is the MOST likely conclusion?
++ The cheaper material is lower quality, so the saving is offset by extra waste and downtime || Interdependent variances.
+- Both managers performed well || Overall effect may be negative.
+- The production manager is solely to blame || The cause lies in purchasing.
+- The variances are unrelated || Likely linked.
+explain: Performance evaluation should consider linked variances together.
+mistake: Rewarding the price variance in isolation.
+tip: Follow the cause.
+src: Study text ch14a - interdependence (concept basis; original scenario)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Standard variable overhead is $4 per labour hour, with 1.5 hours per unit. Actual output 3,000 units; hours worked 4,400; actual variable overhead $18,040.
+q: What is the variable overhead EXPENDITURE variance ($)? (It is adverse.)
+answer: 440
+tol: 0
+unit: $
+formula: Expenditure = (hours worked x standard rate) - actual cost
+step: Expected cost for hours worked = 4,400 x 4 = 17,600.
+step: 17,600 - 18,040 = -440: $440 A.
+check: 18040-4400*4
+explain: Efficiency = (4,500 - 4,400) x 4 = 400 F, so the total is only 40 A - the parts tell a different story.
+mistake: Using standard hours (4,500) for the expenditure variance.
+tip: Expenditure uses hours worked.
+src: Study text ch14a - VOH variances (concept basis; original figures)
+
+=== Q040
+type: mr
+level: C
+cat: concept
+topic: t6
+status: review
+select: 2
+q: Which TWO are good reasons NOT to investigate a variance?
++ The expected cost of investigating exceeds the likely benefit || Not worthwhile.
++ The variance is small and consistent with random fluctuation || Not significant.
+- The variance is large and controllable || Should be investigated.
+- The variance has been adverse for several months running || A trend worth investigating.
+explain: Trends and controllable items deserve attention.
+mistake: Ignoring persistent variances.
+tip: Cost vs benefit; size and pattern.
+src: Study text ch14a - significance (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: The material usage variance was $1,200 adverse. The standard price is $4 per kg and the standard quantity for actual output was 6,000 kg. How many kg were actually used?
+answer: 6300
+tol: 0
+unit: kg
+formula: Actual qty = standard qty + adverse variance / standard price
+step: Excess kg = 1,200 / 4 = 300 kg.
+step: Actual used = 6,000 + 300 = 6,300 kg.
+check: 6000+1200/4
+explain: Adverse usage means more than standard was used.
+mistake: Subtracting the excess.
+tip: Variance / std price = kg difference.
+src: Study text ch14a - working back (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t5
+status: review
+q: A company uses MARGINAL costing. A trainee reports a fixed overhead volume variance of $4,000 adverse. What is wrong?
++ Under marginal costing there is no volume variance; only the expenditure variance arises || Fixed overheads are not absorbed.
+- Nothing is wrong || Volume variances need absorption.
+- The variance should be favourable || There should be none.
+- It should be reported as a material variance || Not related.
+explain: Volume variances arise from absorbing fixed costs into units.
+mistake: Applying absorption variances to marginal systems.
+tip: Marginal = no volume variance.
+src: Study text ch14a - marginal costing (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: The labour efficiency variance was $900 favourable. The standard rate is $18 per hour, the standard time is 1.5 hours per unit, and 2,950 hours were worked. How many units were produced?
+answer: 2000
+tol: 0
+unit: units
+formula: Standard hours = actual hours + favourable variance / std rate; units = standard hours / hours per unit
+step: Hours saved = 900 / 18 = 50; standard hours = 2,950 + 50 = 3,000.
+step: Units = 3,000 / 1.5 = 2,000.
+check: (2950+900/18)/1.5
+explain: Favourable efficiency means fewer hours were worked than standard.
+mistake: Subtracting the hours saved.
+tip: Work back through standard hours.
+src: Study text ch14a - working back (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: A large adverse labour efficiency variance arose because a batch of faulty material repeatedly jammed the machines. Who should be held responsible?
++ The manager responsible for buying or accepting the faulty material || The root cause lies there.
+- The production supervisor alone || The cause was outside their control.
+- Nobody - variances are random || There is a clear cause.
+- The sales manager || Not related.
+explain: Responsibility should follow the controllable cause.
+mistake: Blaming the department where the variance appears.
+tip: Find the root cause.
+src: Study text ch14a - responsibility (concept basis; original scenario)
+
+=== Q045
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+q: Standard fixed overhead is $12 per unit. Actual output was 7,000 units and actual fixed overhead was $82,000. What is the under- or over-absorption?
++ $2,000 over-absorbed || Absorbed 84,000 exceeds actual 82,000.
+- $2,000 under-absorbed || Absorbed exceeds actual.
+- $84,000 over-absorbed || Total absorbed.
+- $0 || There is a difference.
+formula: Absorbed = actual output x standard rate; compare with actual
+step: Absorbed = 7,000 x 12 = 84,000.
+step: 84,000 - 82,000 = 2,000 over-absorbed (favourable total variance).
+check: 7000*12-82000
+explain: Over-absorption increases profit when adjusted.
+mistake: Reversing under and over.
+tip: Absorbed > actual = over.
+src: Study text ch14a - absorption (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t6
+status: review
+q: A company investigates variances above 5% of standard cost. Why use a percentage rather than a fixed dollar amount?
++ It allows for the size of each cost, so variances are judged relative to what was expected || Materiality is relative.
+- Percentages are required by law || Not legal.
+- Dollar amounts cannot be calculated || They can.
+- It means no variances are investigated || Some will be.
+explain: A $1,000 variance may matter on a $5,000 cost but not on $500,000.
+mistake: Using one fixed amount for all costs.
+tip: Relative size.
+src: Study text ch14a - materiality (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Standard: 2.5 kg per unit at $4 per kg. Actual output 4,000 units, using 9,800 kg bought at $4.10 per kg (purchases equal usage).
+q: What is the material total variance?
++ $180 adverse || Price 980 A, usage 800 F.
+- $180 favourable || Total is adverse.
+- $980 adverse || Price only.
+- $800 favourable || Usage only.
+formula: Total = standard cost of actual output - actual cost
+step: Standard = 4,000 x 2.5 x 4 = 40,000; actual = 9,800 x 4.10 = 40,180.
+step: Total = 40,000 - 40,180 = 180 A.
+check: 9800*4.1-40000
+explain: Price variance 9,800 x 0.10 = 980 A; usage (10,000 - 9,800) x 4 = 800 F.
+mistake: Reporting only one component.
+tip: Split, then check the total.
+src: Study text ch14a - material variances (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why does the variable overhead efficiency variance use the same hours as the labour efficiency variance?
++ Variable overhead is assumed to be incurred in line with labour hours worked || Wasted hours waste overhead too.
+- Because variable overhead is a labour cost || It is an overhead.
+- Because it is required by law || Not legal.
+- It does not; it uses machine hours always || It uses the absorption basis, often labour hours.
+explain: If the absorption basis is machine hours, machine hours would be used instead.
+mistake: Using a different hours basis without reason.
+tip: Same driver, same hours.
+src: Study text ch14a - VOH efficiency (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which formula gives the material price variance?
++ (Standard price - actual price) x actual quantity purchased || Core formula.
+- (Standard qty - actual qty) x standard price || Usage variance.
+- (Standard price - actual price) x standard quantity || Wrong quantity.
+- Actual qty x actual price - budgeted cost || Not the price variance.
+explain: Usage variance = (SQ - AQ) x SP.
+mistake: Using standard quantity.
+tip: Price x actual quantity.
+src: Study text ch14a - price variance (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t5
+status: review
+important: 1
+q: Which formula gives the fixed overhead volume variance?
++ (Actual output - budgeted output) x standard fixed overhead per unit || Core formula.
+- Budgeted fixed overhead - actual fixed overhead || Expenditure variance.
+- (Actual hours - budgeted hours) x actual rate || Not correct.
+- Absorbed overhead - budgeted output || Not meaningful.
+explain: Volume variance = efficiency + capacity.
+mistake: Confusing volume and expenditure.
+tip: Output difference x standard rate.
+src: Study text ch14a - volume variance (concept basis; original question)

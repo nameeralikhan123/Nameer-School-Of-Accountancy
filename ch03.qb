@@ -1,0 +1,845 @@
+@subject acffa2
+@chapter 3
+@title Double-entry Bookkeeping
+@lo C1, C2
+@topic t1 | Business documents | C1, C2
+@topic t2 | Duality and the accounting equation | C1, C2
+@topic t3 | Debit and credit rules | C1, C2
+@topic t4 | Accounting systems and developments | C1, C2
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which document does a seller issue to reduce the amount a customer owes, for example after goods are returned?
++ Credit note || Reduces the customer's balance.
+- Debit note || Sent by the buyer to request a credit note.
+- Purchase order || Sent by the buyer to order goods.
+- Remittance advice || Sent with payment.
+explain: The customer may first send a debit note asking for credit.
+mistake: Confusing credit and debit notes.
+tip: Seller credits the customer.
+src: Study text ch3 - documents (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which entry records an INCREASE in an asset?
++ Debit || Assets increase on the left side.
+- Credit || Credits increase liabilities, income and capital.
+- Either, depending on the amount || Rules are fixed.
+- No entry is needed || Every change is recorded.
+explain: Remember DEAD CLIC.
+mistake: Crediting asset increases.
+tip: Asset up = debit.
+src: Study text ch3 - debit and credit (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What does the principle of duality mean?
++ Every transaction has two effects and is recorded twice || The basis of double entry.
+- Every business has two owners || Not the meaning.
+- Transactions are recorded in two currencies || Not the meaning.
+- Accounts are prepared twice a year || Not the meaning.
+explain: Total debits always equal total credits.
+mistake: Recording only one side.
+tip: Two effects, two entries.
+src: Study text ch3 - duality (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is the payment of rent by cheque recorded?
++ Debit rent expense; credit bank || Expense up, asset down.
+- Debit bank; credit rent expense || Reversed.
+- Debit rent; credit capital || Capital is not affected directly.
+- Debit payables; credit rent || Not a credit purchase.
+explain: Expenses are debits; cash leaving the bank is a credit.
+mistake: Debiting the bank for a payment.
+tip: Money out = credit bank.
+src: Study text ch3 - entries (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which document does a customer send with a payment, listing the invoices being paid?
++ Remittance advice || Helps the supplier match the payment.
+- Supplier statement || Sent by the supplier.
+- Goods received note || Records receipt of goods.
+- Quotation || States a price.
+explain: A receipt confirms payment has been received.
+mistake: Confusing with a supplier statement.
+tip: Remit = send money.
+src: Study text ch3 - documents (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which account normally has a CREDIT balance?
++ Trade payables || A liability.
+- Trade receivables || An asset.
+- Purchases || An expense.
+- Drawings || A debit.
+explain: Credit balances: liabilities, income, capital.
+mistake: Thinking payables are debits.
+tip: CLIC = credits.
+src: Study text ch3 - balances (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A business buys inventory on credit. What is the effect on the accounting equation?
++ Assets increase and liabilities increase || Inventory up, payables up.
+- Assets increase and equity increases || No profit yet.
+- Assets decrease and liabilities increase || Assets rise.
+- No change || Both sides change.
+explain: The equation stays in balance.
+mistake: Thinking equity rises.
+tip: Credit purchase = asset + liability.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is cloud accounting?
++ Using accounting software and data hosted on remote servers, accessed via the internet || Anywhere access.
+- Accounting for weather damage || Not the meaning.
+- Keeping paper records in a safe || Not cloud.
+- Using only spreadsheets on one computer || Local, not cloud.
+explain: Benefits include real-time access and automatic updates.
+mistake: Thinking it means offline storage.
+tip: Remote servers, online access.
+src: Study text ch3 - cloud accounting (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is a cash sale recorded?
++ Debit cash; credit sales || Asset up, income up.
+- Debit sales; credit cash || Reversed.
+- Debit receivables; credit sales || That is a credit sale.
+- Debit cash; credit capital || Not capital.
+explain: Income increases are credits.
+mistake: Debiting sales.
+tip: Income = credit.
+src: Study text ch3 - entries (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: In what order does information flow through the accounting system?
++ Source documents, books of prime entry, ledger accounts, trial balance, financial statements || The standard flow.
+- Trial balance, ledgers, source documents, financial statements || Wrong order.
+- Financial statements, trial balance, ledgers || Reversed.
+- Ledgers, source documents, books of prime entry || Wrong order.
+explain: Books of prime entry include day books and the cash book.
+mistake: Posting before recording in prime entry.
+tip: Document, day book, ledger, TB, accounts.
+src: Study text ch3 - process (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A bank account has debit entries of $5,000, $2,300 and $1,200, and credit entries of $3,100 and $900. What is the closing balance ($)? (It is a debit balance.)
+answer: 4500
+tol: 0
+unit: $
+formula: Balance = total debits - total credits
+step: Debits = 5,000 + 2,300 + 1,200 = 8,500; credits = 3,100 + 900 = 4,000.
+step: Balance = 8,500 - 4,000 = $4,500 debit (cash in hand).
+check: 5000+2300+1200-3100-900
+explain: The balance c/f is entered on the smaller (credit) side and brought down as a debit.
+mistake: Putting the balance b/f on the wrong side.
+tip: Bigger side wins.
+src: Study text ch3 - balancing (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A supplier's account shows credit entries of $4,000 and $2,500 (purchases) and a debit entry of $3,000 (payment). What is the balance owed ($)?
+answer: 3500
+tol: 0
+unit: $
+formula: Balance = total credits - total debits
+step: Credits = 4,000 + 2,500 = 6,500.
+step: Balance = 6,500 - 3,000 = $3,500 credit.
+check: 4000+2500-3000
+explain: A credit balance on a payable account is a liability.
+mistake: Treating the balance as a debit.
+tip: Payables = credit balance.
+src: Study text ch3 - balancing (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Goods costing $600 are sold on credit for $900. What is the effect on the accounting equation?
++ Assets increase by $300 and equity increases by $300 || Receivables +900, inventory -600, profit 300.
+- Assets increase by $900 and equity by $900 || Ignores inventory reduction.
+- Assets fall by $600 and liabilities rise by $600 || Not a liability.
+- No effect || Profit arises.
+explain: The profit increases equity.
+mistake: Ignoring cost of goods sold.
+tip: Profit = equity up.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO accounts normally have DEBIT balances?
++ Drawings || DEAD.
++ Motor vehicles || An asset.
+- Capital || A credit.
+- Sales revenue || Income - credit.
+explain: DEAD: debits for expenses, assets, drawings.
+mistake: Thinking drawings are credits.
+tip: DEAD CLIC.
+src: Study text ch3 - balances (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t1
+status: review
+q: Match each document with its purpose.
+pair: Purchase requisition => Internal request for goods
+pair: Purchase order => Order sent to the supplier
+pair: Goods received note => Records goods arriving
+pair: Sales invoice => Requests payment from the customer
+explain: Documents give evidence for each step of a transaction.
+mistake: Confusing requisition and order.
+tip: Request, order, receive, invoice.
+src: Study text ch3 - documents (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is a bank loan received recorded?
++ Debit bank; credit loan || Asset up, liability up.
+- Debit loan; credit bank || Reversed.
+- Debit bank; credit sales || Not income.
+- Debit bank; credit capital || Not owner's money.
+explain: Loans are liabilities, not income.
+mistake: Treating loans as income.
+tip: Borrowing = liability.
+src: Study text ch3 - entries (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: A trader starts business with $10,000 cash. She buys inventory on credit for $3,000, then sells goods that cost $1,200 for $2,000 cash.
+q: What is her equity ($) after these transactions?
+answer: 10800
+tol: 0
+unit: $
+formula: Equity = capital + profit
+step: Profit = 2,000 - 1,200 = 800.
+step: Equity = 10,000 + 800 = $10,800.
+check: 10000+2000-1200
+explain: Check: assets 12,000 cash + 1,800 inventory = 13,800; liabilities 3,000; equity 10,800.
+mistake: Counting the credit purchase as reducing equity.
+tip: Only profit changes equity here.
+src: Study text ch3 - accounting equation (concept basis; original figures)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How does the owner taking $500 cash for personal use get recorded?
++ Debit drawings; credit cash || Drawings reduce equity.
+- Debit cash; credit drawings || Reversed.
+- Debit wages; credit cash || Not an expense.
+- Debit capital; credit sales || Wrong accounts.
+explain: Drawings are not business expenses.
+mistake: Recording as wages.
+tip: Owner takes = drawings debit.
+src: Study text ch3 - drawings (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is a debit note?
++ A document sent by a buyer asking the seller to issue a credit note || Request for credit.
+- A document reducing what a customer owes, issued by the seller || That is a credit note.
+- A bank statement entry || Not related.
+- An invoice || Not related.
+explain: The seller responds with a credit note.
+mistake: Thinking the seller issues debit notes.
+tip: Buyer asks; seller credits.
+src: Study text ch3 - debit note (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What happens to income and expense account balances at the year end?
++ They are transferred to the statement of profit or loss and closed off || They start the new year at zero.
+- They are carried forward to next year || Asset, liability and capital balances are.
+- They are deleted without record || They are transferred.
+- They become liabilities || Not the treatment.
+explain: Asset, liability and capital balances are carried forward.
+mistake: Carrying forward income balances.
+tip: P/L accounts reset each year.
+src: Study text ch3 - closing off (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is a RISK of cloud accounting?
++ Data security depends on the provider and internet access || Loss of control.
+- Software must be installed on every machine || Not with cloud.
+- Data can only be accessed in the office || Cloud allows remote access.
+- Updates must be installed manually || Automatic in cloud.
+explain: Benefits include scalability and collaboration.
+mistake: Listing a benefit.
+tip: Security and dependence.
+src: Study text ch3 - cloud risks (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A business pays a supplier $800 it owed. What is the effect on the accounting equation?
++ Assets decrease by $800 and liabilities decrease by $800 || Cash down, payables down.
+- Assets decrease and equity decreases || No expense.
+- Liabilities increase || They fall.
+- No effect || Both sides fall.
+explain: Paying a liability does not affect profit.
+mistake: Treating payment as an expense.
+tip: Settling debt = both sides down.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is a credit purchase of goods for resale recorded?
++ Debit purchases; credit payables || Expense up, liability up.
+- Debit payables; credit purchases || Reversed.
+- Debit purchases; credit bank || That is a cash purchase.
+- Debit inventory; credit sales || Wrong accounts.
+explain: Purchases of goods for resale are debited to the purchases account.
+mistake: Crediting purchases.
+tip: Buy on credit = Cr payables.
+src: Study text ch3 - purchases (concept basis; original question)
+
+=== Q024
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the steps of balancing a ledger account in order.
+item: Total both the debit and credit sides
+item: Find the difference between the two totals
+item: Enter the difference as balance c/f on the smaller side
+item: Bring the balance down (b/f) on the opposite side
+explain: Both sides then show the same total.
+mistake: Bringing the balance down on the same side.
+tip: Total, difference, c/f, b/f.
+src: Study text ch3 - balancing (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which document confirms that a supplier has despatched goods and is often signed by the customer on delivery?
++ Despatch note (goods delivery note) || Evidence of delivery.
+- Purchase requisition || Internal request.
+- Quotation || Price offer.
+- Remittance advice || Sent with payment.
+explain: It is matched with the customer's goods received note.
+mistake: Confusing with the GRN.
+tip: Despatched = despatch note.
+src: Study text ch3 - documents (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A receivables account has a balance b/f of $2,400 (debit). Credit sales of $6,800 are made and $5,900 is received from customers. What is the closing balance ($)? (It is a debit.)
+answer: 3300
+tol: 0
+unit: $
+formula: Closing = opening + credit sales - cash received
+step: 2,400 + 6,800 = 9,200.
+step: 9,200 - 5,900 = $3,300.
+check: 2400+6800-5900
+explain: Receipts are credited to the receivables account.
+mistake: Adding receipts.
+tip: Sales add; receipts subtract.
+src: Study text ch3 - receivables account (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee records an electricity bill paid by bank as "Debit bank, Credit electricity". What is the effect?
++ Both accounts are wrong: the expense is understated and bank is overstated by twice the amount || Entries reversed.
+- No effect - debits and credits still agree || They agree but are wrong.
+- Only the bank is wrong || Both are wrong.
+- Only the expense is wrong || Both are wrong.
+explain: A reversal of entries does not show up in the trial balance.
+mistake: Reversing debit and credit.
+tip: Expense = debit; money out = credit.
+src: Study text ch3 - errors (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is the owner introducing a van worth $8,000 into the business recorded?
++ Debit motor van; credit capital || Asset up, equity up.
+- Debit capital; credit motor van || Reversed.
+- Debit motor van; credit sales || Not income.
+- Debit motor van; credit payables || Nothing is owed to a supplier.
+explain: Capital introduced can be cash or other assets.
+mistake: Treating it as income.
+tip: Owner contribution = capital.
+src: Study text ch3 - capital (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is an advantage of cloud accounting for a small business?
++ The business and its accountant can access up-to-date records at the same time from anywhere || Real-time collaboration.
+- No internet connection is ever needed || It is needed.
+- The business has full physical control of the servers || The provider controls them.
+- Data security risks disappear || They remain.
+explain: Capacity can also be scaled up or down easily.
+mistake: Ignoring the reliance on internet.
+tip: Anywhere, any time.
+src: Study text ch3 - cloud benefits (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A van is bought for $12,000 cash. What is the effect on the accounting equation?
++ One asset increases and another decreases; totals are unchanged || Van up, cash down.
+- Assets and liabilities both increase || Paid in cash.
+- Equity decreases by $12,000 || Not an expense.
+- Assets increase by $12,000 || Cash falls too.
+explain: Swapping one asset for another does not change totals.
+mistake: Treating the van as an expense.
+tip: Asset swap.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Opening position: assets $40,000, liabilities $15,000. During the month: credit sales $6,000 of goods costing $4,000; a loan of $5,000 received; drawings of $1,500 taken in cash.
+q: What is the closing equity?
++ $25,500 || 25,000 + 2,000 profit - 1,500 drawings.
+- $30,500 || Treats the loan as equity.
+- $27,000 || Ignores drawings.
+- $31,000 || Treats sales as profit.
+formula: Closing equity = opening equity + profit - drawings
+step: Opening equity = 40,000 - 15,000 = 25,000; profit = 6,000 - 4,000 = 2,000.
+step: Closing equity = 25,000 + 2,000 - 1,500 = $25,500.
+check: 40000-15000+6000-4000-1500
+explain: The loan increases assets and liabilities, not equity.
+mistake: Treating the loan as equity.
+tip: Loans are not equity.
+src: Study text ch3 - accounting equation (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which entry records goods returned BY a customer who bought on credit?
++ Debit sales returns; credit receivables || Income reduced, asset reduced.
+- Debit receivables; credit sales returns || Reversed.
+- Debit purchases returns; credit payables || That is goods returned to a supplier.
+- Debit cash; credit sales || Not a return.
+explain: Sales returns reduce revenue.
+mistake: Using purchases returns.
+tip: Customer returns = sales returns debit.
+src: Study text ch3 - returns (concept basis; original question)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Cash account: balance b/f $1,250 (debit); cash sales $3,400; capital introduced $2,000; wages paid $1,850; rent paid $900; drawings $600.
+q: What is the closing cash balance ($)?
+answer: 3300
+tol: 0
+unit: $
+formula: Closing = opening + receipts - payments
+step: Debits = 1,250 + 3,400 + 2,000 = 6,650.
+step: Credits = 1,850 + 900 + 600 = 3,350; balance = 6,650 - 3,350 = $3,300 debit.
+check: 1250+3400+2000-1850-900-600
+explain: Drawings are a payment out of cash like any other.
+mistake: Leaving out capital introduced.
+tip: All receipts in, all payments out.
+src: Study text ch3 - cash account (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee records a $2,000 credit sale as "Debit sales; credit receivables". Will the trial balance still balance, and what is wrong?
++ It will balance, but sales and receivables are both understated by $4,000 || Reversal error.
+- It will not balance || Equal debits and credits.
+- It will balance and nothing is wrong || Both accounts are wrong.
+- Only receivables is wrong || Both are wrong.
+explain: Reversal errors do not cause a trial balance difference.
+mistake: Assuming a balanced TB means no errors.
+tip: TB balance ≠ correctness.
+src: Study text ch3 - errors (concept basis; original question)
+
+=== Q035
+type: mr
+level: C
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO transactions involve a CREDIT to the bank account?
++ Paying wages by bank transfer || Money out.
++ Repaying part of a loan || Money out.
+- Receiving cash from a customer || Money in - debit.
+- Owner paying in extra capital || Money in - debit.
+explain: The bank is an asset; decreases are credits.
+mistake: Crediting receipts.
+tip: Money out = credit bank.
+src: Study text ch3 - bank entries (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A customer claims she was overcharged. The seller checks the purchase order, despatch note and invoice. What is the main purpose of matching these documents?
++ To confirm that goods ordered, delivered and invoiced agree in quantity and price || Three-way check.
+- To calculate depreciation || Not related.
+- To prepare the trial balance || Not directly.
+- To set next year's budget || Not related.
+explain: Document matching prevents errors and disputes.
+mistake: Ignoring source document controls.
+tip: Order = delivery = invoice.
+src: Study text ch3 - documents (concept basis; original scenario)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A business's assets total $86,000 and its capital account shows $52,000. Profit for the year of $9,000 has already been included in capital. What are total liabilities ($)?
+answer: 34000
+tol: 0
+unit: $
+formula: Liabilities = assets - equity
+step: Equity = 52,000 (including the profit).
+step: Liabilities = 86,000 - 52,000 = $34,000.
+check: 86000-52000
+explain: Do not add profit twice.
+mistake: Adding profit again.
+tip: Check what equity already includes.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: How is a discount received from a supplier for early payment recorded, alongside the payment?
++ Debit payables (full amount); credit bank (amount paid) and credit discount received (discount) || Discount received is income.
+- Debit discount received; credit payables || Reversed.
+- Debit bank; credit payables || Payment reduces bank.
+- Debit purchases; credit discount received || Wrong accounts.
+explain: The whole debt is cleared; the saving is income.
+mistake: Treating discount received as an expense.
+tip: Discount received = credit income.
+src: Study text ch3 - discounts (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Apart from producing financial statements, how can an accounting system help monitor a business?
++ By providing information such as aged receivables and inventory levels for credit and inventory control || Management information.
+- By setting tax rates || Not its role.
+- By auditing itself || Not possible.
+- By replacing managers || Not its role.
+explain: Good systems support day-to-day control.
+mistake: Seeing systems as only for year-end accounts.
+tip: Records support control.
+src: Study text ch3 - accounting systems (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee says "credit means good and debit means bad". Why is this misleading in bookkeeping?
++ Debit and credit simply mean left and right sides of an account; their meaning depends on the account type || No value judgement.
+- Credits always increase profit || Credits can reduce assets.
+- Debits always reduce profit || Asset debits do not.
+- The trainee is correct || Misleading.
+explain: An increase in cash (good) is a debit.
+mistake: Using everyday meanings.
+tip: Left and right, nothing more.
+src: Study text ch3 - debit and credit (concept basis; original question)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each transaction with its correct double entry.
+pair: Pay rent by bank => Dr rent, Cr bank
+pair: Sell goods on credit => Dr receivables, Cr sales
+pair: Buy goods on credit => Dr purchases, Cr payables
+pair: Receive cash from a credit customer => Dr bank, Cr receivables
+explain: Identify the two accounts and whether each goes up or down.
+mistake: Mixing up sides.
+tip: Two accounts, two directions.
+src: Study text ch3 - entries (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A supplier account: balance b/f $5,200 (credit); purchases on credit $8,700; payments $9,400; goods returned to supplier $650; discount received $250.
+q: What is the closing balance owed ($)?
+answer: 3600
+tol: 0
+unit: $
+formula: Closing = opening + purchases - payments - returns - discounts
+step: Credits = 5,200 + 8,700 = 13,900.
+step: Debits = 9,400 + 650 + 250 = 10,300; balance = 13,900 - 10,300 = $3,600 credit.
+check: 5200+8700-9400-650-250
+explain: Returns and discounts reduce what is owed.
+mistake: Adding returns.
+tip: Anything reducing debt is a debit.
+src: Study text ch3 - payables account (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Which transaction INCREASES equity?
++ Selling goods for more than they cost || Profit.
+- Buying a machine for cash || Asset swap.
+- Taking out a bank loan || Liability.
+- Paying a supplier || Both sides fall.
+explain: Profit and capital introduced increase equity.
+mistake: Thinking loans increase equity.
+tip: Profit grows equity.
+src: Study text ch3 - equity (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A customer pays $1,500 but does not say which invoices are being settled. Which document would have prevented the confusion?
++ A remittance advice listing the invoices paid || Matches payment to invoices.
+- A purchase requisition || Internal to the buyer.
+- A quotation || Before the sale.
+- A goods received note || Records delivery.
+explain: Supplier statements also help reconcile balances.
+mistake: Overlooking remittance advices.
+tip: Remittance explains payment.
+src: Study text ch3 - documents (concept basis; original scenario)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: What does a DEBIT balance on a supplier's (payables) account indicate?
++ The business has overpaid or has been given credit, so the supplier owes it money || Unusual balance.
+- The business owes the supplier more || That is a credit balance.
+- An error that can be ignored || It needs investigating.
+- Sales to that supplier || Not normally.
+explain: Debit balances on payables may be shown as receivables.
+mistake: Ignoring unusual balances.
+tip: Wrong-side balance = investigate.
+src: Study text ch3 - balances (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Opening equity $18,000. During the year: profit $7,200; capital introduced $3,000; drawings $4,500.
+q: What is closing equity ($)?
+answer: 23700
+tol: 0
+unit: $
+formula: Closing equity = opening + profit + capital introduced - drawings
+step: 18,000 + 7,200 + 3,000 = 28,200.
+step: 28,200 - 4,500 = $23,700.
+check: 18000+7200+3000-4500
+explain: Capital introduced and drawings are owner transactions, not profit.
+mistake: Subtracting capital introduced.
+tip: In adds; out subtracts.
+src: Study text ch3 - equity (concept basis; original figures)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which books of prime entry record credit sales and credit purchases?
++ Sales day book and purchases day book || Lists of invoices before posting.
+- The general ledger only || Ledgers come after prime entry.
+- The trial balance || A summary of balances.
+- The statement of financial position || Final output.
+explain: Totals from day books are posted to the ledger.
+mistake: Posting directly from documents to statements.
+tip: Day books first.
+src: Study text ch3 - books of prime entry (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee says buying inventory for cash reduces equity because cash goes down. What is wrong?
++ Inventory increases by the same amount, so total assets and equity are unchanged until the goods are sold || Asset swap.
+- Nothing is wrong || Equity is unchanged.
+- Equity increases || Not until sale.
+- Liabilities increase || Paid in cash.
+explain: Profit or loss arises only when goods are sold.
+mistake: Treating purchases as an immediate equity loss.
+tip: Cash to inventory = swap.
+src: Study text ch3 - accounting equation (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: What does the mnemonic DEAD CLIC represent?
++ Debit: expenses, assets, drawings; Credit: liabilities, income, capital || Debit and credit increases.
+- Debit: liabilities, income; Credit: assets, expenses || Reversed.
+- Documents, entries, accounts, debits || Not the meaning.
+- Credit: assets; Debit: capital || Wrong.
+explain: It shows which side records an increase.
+mistake: Reversing it.
+tip: DEAD on the left, CLIC on the right.
+src: Study text ch3 - debit and credit (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about double entry is correct?
++ Every transaction affects at least two accounts with equal debits and credits || Duality.
+- Some transactions need only a debit || Every transaction has two sides.
+- Debits always exceed credits || They are equal.
+- Only cash transactions use double entry || All transactions.
+explain: This keeps the accounting equation in balance.
+mistake: Recording one side only.
+tip: Equal and opposite.
+src: Study text ch3 - duality (concept basis; original question)

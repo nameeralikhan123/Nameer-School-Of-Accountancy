@@ -1,0 +1,844 @@
+@subject acfbe
+@chapter 3a
+@title Cost Classification
+@lo A4
+@topic t1 | Direct and indirect costs | A4
+@topic t2 | Ways to classify cost | A4
+@topic t3 | Cost codes | A4
+@topic t4 | Centres and units | A4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which description fits a DIRECT cost?
++ A cost that belongs entirely and identifiably to the item being costed, such as one product or job || It is wholly attributable to the cost object.
+- A cost shared by several products that must be apportioned || That is an indirect cost.
+- Any cost paid in cash || Payment method is irrelevant.
+- A cost that is always fixed || Direct costs are often variable.
+explain: Total cost = direct costs (prime cost) + overheads.
+mistake: Equating direct with variable.
+tip: Traceable in full = direct.
+src: Study text ch3a - direct costs (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is prime cost calculated?
++ Direct materials + direct labour + direct expenses || Prime cost is the total of direct costs.
+- Direct materials + production overheads || Overheads are not part of prime cost.
+- Total cost - direct labour || Not the definition.
+- Direct labour + administration overhead || Administration is not direct.
+explain: Prime cost excludes all overheads.
+mistake: Including production overhead in prime cost.
+tip: Prime = all direct costs.
+src: Study text ch3a - prime cost (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which BEST describes a cost unit?
++ A measurable piece of output, such as one product, batch or service delivered, whose cost is calculated || It is the basic control unit for costing.
+- A department where costs are collected || That is a cost centre.
+- A manager responsible for costs || That is a responsibility holder.
+- A code given to a cost || That is a cost code.
+explain: Examples include a room night in a hotel, a patient day in a hospital or a batch of products.
+mistake: Confusing cost unit with cost centre.
+tip: Unit = output; centre = place.
+src: Study text ch3a - cost unit (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: For what is a PROFIT centre manager accountable?
++ Both costs and revenues || Profit = revenue - cost.
+- Costs only || That is a cost centre.
+- Revenues only || That is a revenue centre.
+- Costs, revenues and capital investment || That is an investment centre.
+explain: Responsibility centres: cost, revenue, profit and investment centres.
+mistake: Confusing profit and investment centres.
+tip: Profit centre = costs + revenues.
+src: Study text ch3a - responsibility centres (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following is a production overhead?
++ The salary of a factory supervisor || It relates to production but cannot be traced to individual units.
+- Wood used in making tables || Direct material.
+- Wages of assembly workers making the product || Direct labour.
+- Salaries of the sales team || Selling overhead.
+explain: Production overheads include indirect materials, indirect wages and indirect expenses in the factory.
+mistake: Calling supervisors direct labour.
+tip: In the factory but not traceable = production overhead.
+src: Study text ch3a - production overhead (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is a cost centre?
++ A location, function or activity where costs are collected before being analysed further || It acts as a collecting place for costs.
+- A unit of output || That is a cost unit.
+- A centre responsible for revenue only || That is a revenue centre.
+- A centre measured by return on investment || That is an investment centre.
+explain: Costs are traced to cost centres first, then to cost units.
+mistake: Confusing centres with units.
+tip: Centre = collecting place.
+src: Study text ch3a - cost centre (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a DIRECT expense?
++ Royalties paid for each unit of a product made || They relate to a specific product.
+- Factory rent || Production overhead.
+- Office electricity || Administration overhead.
+- Delivery van insurance || Distribution overhead.
+explain: Direct expenses include hire of a special tool for a job, sub-contract work and royalties.
+mistake: Calling all expenses indirect.
+tip: Expense for one specific product = direct expense.
+src: Study text ch3a - direct expenses (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which is a feature of a good cost coding system?
++ Each code is unique and unambiguous || Every item has one code meaning one thing.
+- Codes vary in length randomly || Uniform length is preferred.
+- Codes are changed frequently without control || Codes should be centrally controlled.
+- Codes are long descriptions || Codes should be brief.
+explain: Good codes are unique, brief, comprehensive, elastic, uniform in length, unambiguous and centrally controlled.
+mistake: Allowing duplicate codes.
+tip: One code, one meaning.
+src: Study text ch3a - cost codes (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under which classification are costs grouped into production, administration, selling and distribution?
++ Classification by function || Costs are grouped by the activity they support.
+- Classification by behaviour || That is fixed/variable.
+- Classification by traceability || That is direct/indirect.
+- Classification by payment date || Not a classification basis.
+explain: Functional classification is used to prepare the full cost of sales and the statement of profit or loss.
+mistake: Confusing function with behaviour.
+tip: Function = which department's activity.
+src: Study text ch3a - classification (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which responsibility centre is accountable for costs, revenues AND capital investment?
++ Investment centre || Measured by return on investment.
+- Profit centre || Costs and revenues only.
+- Cost centre || Costs only.
+- Revenue centre || Revenues only.
+explain: A defining feature of an investment centre is that managers can buy capital assets.
+mistake: Confusing investment and profit centres.
+tip: Investment centre = profit + assets.
+src: Study text ch3a - investment centres (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product uses direct materials of $18, direct labour of $12, a direct expense (royalty) of $2 and production overhead of $9 per unit. What is the PRIME cost per unit ($)?
+answer: 32
+tol: 0
+unit: $
+formula: Prime cost = direct materials + direct labour + direct expenses
+step: 18 + 12 + 2 = $32.
+step: Production overhead ($9) is excluded from prime cost.
+check: 18+12+2
+explain: Prime cost includes all direct costs and no overheads.
+mistake: Adding production overhead ($41).
+tip: Prime = direct only.
+src: Study text ch3a - prime cost (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: In a period, a company's costs are: direct materials $600, direct labour $1,000, production overhead $500 and administration overhead $700. What total cost is included in production cost (and therefore in inventory and cost of sales)?
++ $2,100 || 600 + 1,000 + 500 = $2,100; administration is a period cost.
+- $2,800 || This includes administration overhead.
+- $1,600 || This is prime cost only.
+- $1,300 || This adds materials and administration.
+formula: Production cost = direct materials + direct labour + production overhead
+step: Production cost = 600 + 1,000 + 500 = $2,100.
+step: Administration overhead ($700) is a non-production cost, expensed in the period.
+check: 600+1000+500
+explain: Production costs are carried in inventory until goods are sold; non-production costs are expensed in the period incurred.
+mistake: Including administration costs in inventory.
+tip: Only factory costs go into inventory.
+src: Study text ch3a - production vs non-production (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Workers are paid an overtime premium because the factory is generally busy. How is the premium usually classified?
++ As production overhead || General overtime premium cannot be traced to particular products.
+- As direct labour || Only the basic rate is normally direct.
+- As selling overhead || It relates to production.
+- As administration overhead || It relates to production.
+explain: Overtime premium is overhead unless the overtime was worked at a specific customer's request, when it can be charged to that job.
+mistake: Treating all overtime pay as direct labour.
+tip: General overtime premium = overhead.
+src: Study text ch3a - overtime premium (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: scenario
+topic: t1
+status: review
+q: A customer asks for an urgent order to be completed over the weekend and agrees to pay for overtime. How should the overtime premium on that job be treated?
++ As a direct cost of that customer's job || It was caused by that customer's specific request.
+- As production overhead shared by all products || The cost is traceable to the job.
+- As administration overhead || Not administration.
+- As a selling overhead || Not selling.
+explain: When overtime is worked at a specific customer's request, the premium can be charged directly to that job.
+mistake: Always treating overtime premium as overhead.
+tip: Customer asked for it = charge it to the customer's job.
+src: Study text ch3a - overtime premium (concept basis; original scenario)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is idle time (paid time when workers cannot work, for example due to a machine breakdown) usually classified?
++ As production overhead || It cannot be traced to products.
+- As direct labour || No product was worked on.
+- As a direct expense || Not an expense on a product.
+- As selling overhead || It relates to production.
+explain: Idle time is normally treated as an overhead, and should be monitored because it represents wasted cost.
+mistake: Including idle time in direct labour.
+tip: No product worked on = overhead.
+src: Study text ch3a - idle time (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO are DISTRIBUTION overheads?
++ Wages of packers preparing goods for despatch || Distribution covers getting goods ready and delivering them.
++ Running costs of delivery vehicles || Distribution cost.
+- Salaries of sales representatives || Selling overhead.
+- Rent of the finance office || Administration overhead.
+explain: Selling overhead promotes sales; distribution overhead makes packed products ready for despatch and delivers them.
+mistake: Confusing selling with distribution.
+tip: Selling = getting orders; distribution = fulfilling them.
+src: Study text ch3a - overheads (concept basis; original question)
+
+=== Q017
+type: match
+level: S
+cat: concept
+topic: t1
+status: review
+q: Classify each cost for a furniture maker.
+pair: Timber used in chairs => Direct material
+pair: Wages of carpenters making chairs => Direct labour
+pair: Depreciation of factory machinery => Production overhead
+pair: Salary of the finance director => Administration overhead
+pair: Cost of producing a sales catalogue => Selling overhead
+explain: Direct costs are traceable to products; overheads are classified by the function they support.
+mistake: Calling factory depreciation administration.
+tip: Factory = production; office = administration; marketing = selling.
+src: Study text ch3a - classification (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is a responsibility centre?
++ An area of the organisation, such as a department, for whose results a named manager is held accountable || Managers are held accountable for it.
+- A unit of output || That is a cost unit.
+- A coding system || Not related.
+- An external auditor's office || Not related.
+explain: Cost, revenue, profit and investment centres are types of responsibility centre.
+mistake: Thinking responsibility centres are always profit centres.
+tip: Responsibility centre = manager accountable.
+src: Study text ch3a - responsibility centres (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: Which is the MOST appropriate cost unit for a hotel?
++ A room night || Hotel costs are related to rooms occupied per night.
+- The hotel building || That is a location, not a unit of service.
+- The reception department || That is a cost centre.
+- The hotel manager || A person, not a cost unit.
+explain: Service businesses choose cost units that reflect the service provided.
+mistake: Confusing cost units with cost centres.
+tip: What does the customer buy? That is the cost unit.
+src: Study text ch3a - cost units (concept basis; original scenario)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which classification of cost is MOST useful for planning and decision making?
++ Classification by behaviour (fixed, variable, semi-variable) || Knowing how costs change with activity supports planning.
+- Classification by function only || Useful for reporting, less for decisions.
+- Classification by the colour of invoices || Not meaningful.
+- Classification by payment method || Not meaningful.
+explain: Different classifications serve different purposes: traceability for product cost, function for reporting, behaviour for planning.
+mistake: Using functional classification for decisions.
+tip: Decisions need behaviour.
+src: Study text ch3a - classification purposes (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is a composite code?
++ A code in which different digits represent different classifications, such as cost centre and type of expense || It combines several classifications.
+- A code made of letters only || Not necessarily.
+- A single sequential number || That is a sequence code.
+- A code used only once || Not the definition.
+explain: For example, the first three digits may identify the cost centre and the next digits the type of expenditure.
+mistake: Confusing composite and sequence codes.
+tip: Composite = several meanings in one code.
+src: Study text ch3a - composite codes (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How are non-production costs treated in the financial statements?
++ They are charged as an expense in the period in which they are incurred || They are period costs.
+- They are included in closing inventory || Only production costs go into inventory.
+- They are capitalised as non-current assets || Not normally.
+- They are ignored || They reduce profit.
+explain: Production costs become part of inventory; non-production costs are expensed immediately.
+mistake: Including selling costs in inventory.
+tip: Non-production = period expense.
+src: Study text ch3a - production vs non-production (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which material cost would usually be treated as INDIRECT even though it is used in the product?
++ Glue and screws costing a negligible amount per unit || Tracing tiny amounts is not worthwhile.
+- The main timber in a table || Direct material.
+- Primary packing for each product || Usually direct.
+- Components bought in for each unit || Direct material.
+explain: Direct material excludes items that are negligible in amount or cost; these are treated as indirect materials.
+mistake: Insisting on tracing every tiny item.
+tip: Not worth tracing = indirect.
+src: Study text ch3a - direct materials (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What does it mean for a coding system to be "elastic"?
++ It has room to add new items without changing existing codes || Flexibility for growth.
+- Codes can be stretched to mean different things || Codes should be unambiguous.
+- Codes change length often || Uniform length is preferred.
+- Codes are written in rubber stamps || Not the meaning.
+explain: Elasticity lets the system expand as the business adds products, suppliers or cost centres.
+mistake: Confusing elasticity with ambiguity.
+tip: Elastic = room to grow.
+src: Study text ch3a - cost codes (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: A sales department is assessed only on whether it achieves its sales targets. What kind of responsibility centre is it?
++ A revenue centre || It is accountable for revenues only.
+- A cost centre || Not costs.
+- A profit centre || It is not accountable for costs too.
+- An investment centre || It is not accountable for assets.
+explain: Revenue centres are measured on sales compared with targets.
+mistake: Calling it a profit centre.
+tip: Sales only = revenue centre.
+src: Study text ch3a - revenue centres (concept basis; original scenario)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is a cost object?
++ Any activity, product or item for which a separate measurement of cost is wanted || It can be a product, department, customer or project.
+- Only the final product || Cost objects are wider.
+- The physical location of the factory || Not the definition.
+- A cost code || Not the definition.
+explain: Cost units and cost centres are both examples of cost objects.
+mistake: Thinking only products are cost objects.
+tip: Anything you want to cost.
+src: Study text ch3a - cost objects (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company's costs for a month were: direct materials $45,000; direct labour $30,000; production overhead $25,000; selling overhead $12,000; administration overhead $18,000. What is the total NON-production cost ($)?
+answer: 30000
+tol: 0
+unit: $
+formula: Non-production cost = selling + distribution + administration overheads
+step: Selling 12,000 + administration 18,000 = $30,000.
+step: Direct costs and production overhead are production costs.
+check: 12000+18000
+explain: Non-production costs are period costs charged against profit when incurred.
+mistake: Including production overhead.
+tip: Not made in the factory = non-production.
+src: Study text ch3a - production vs non-production (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: In what order are costs usually analysed in a costing system?
++ First collected in cost centres, then analysed into cost units || Cost centres act as collecting places.
+- First charged to cost units, then to cost centres || Reversed.
+- Only to cost units, never to centres || Centres are used.
+- Only to investment centres || Not all costs.
+explain: Costs are traced to cost centres and then absorbed into cost units.
+mistake: Reversing the order.
+tip: Centre first, then unit.
+src: Study text ch3a - centres and units (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which is an ADVANTAGE of using codes rather than descriptions?
++ Codes are briefer and less ambiguous, making analysis and computer processing easier || Codes support accurate analysis.
+- Codes are always longer than descriptions || They are briefer.
+- Codes remove the need for any accounts || Not true.
+- Codes can mean different things to different people || They should be unambiguous.
+explain: Cost codes speed up processing and reduce errors.
+mistake: Thinking codes add complexity without benefit.
+tip: Short and exact.
+src: Study text ch3a - cost codes (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: scenario
+topic: t1
+status: review
+q: A printing company hires a special laminating machine for one customer's job only. How is the hire cost classified?
++ Direct expense of that job || It is incurred specifically for that job.
+- Production overhead || It is traceable to one job.
+- Administration overhead || Not administrative.
+- Selling overhead || Not selling.
+explain: Hire of special equipment for a specific job is a direct expense.
+mistake: Calling all equipment costs overhead.
+tip: For one job only = direct.
+src: Study text ch3a - direct expenses (concept basis; original scenario)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Build up the cost of a product by putting these cost layers in the order they are added.
+item: Direct materials, labour and expenses (prime cost)
+item: Production overhead (giving production cost)
+item: Administration overhead
+item: Selling and distribution overhead (giving total cost)
+explain: Prime cost plus production overhead gives production cost; non-production overheads are added to reach total cost.
+mistake: Adding selling costs before production overhead.
+tip: Prime, production, then the rest.
+src: Study text ch3a - cost build-up (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: scenario
+topic: t4
+status: review
+q: Which is the MOST appropriate cost unit for a hospital ward?
++ A patient day || Costs relate to caring for patients each day.
+- The hospital car park || Not a unit of service.
+- The ward manager || A person.
+- The X-ray department || A cost centre.
+explain: Service organisations use cost units such as patient days, room nights or passenger miles.
+mistake: Choosing a department as a cost unit.
+tip: What service is delivered, per what?
+src: Study text ch3a - cost units (concept basis; original scenario)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: For which purpose is the classification into production and non-production costs MOST important?
++ Valuing inventory || Only production costs are included in inventory.
+- Deciding whether to accept a special order || Behaviour classification is more useful.
+- Setting sales targets || Not related.
+- Choosing cost codes || Not related.
+explain: Inventory is valued at production cost; non-production costs are period expenses.
+mistake: Using this classification for decisions.
+tip: Production/non-production = inventory valuation.
+src: Study text ch3a - classification purposes (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which description fits administration overhead?
++ Costs of directing, controlling and administering the organisation, such as office depreciation || These are general management costs.
+- Costs of making the product in the factory || Production cost.
+- Costs of delivering goods to customers || Distribution overhead.
+- Costs of advertising || Selling overhead.
+explain: Overheads are classified by function: production, administration, selling and distribution.
+mistake: Placing office costs in production overhead.
+tip: Office running costs = administration.
+src: Study text ch3a - administration overhead (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t4
+status: review
+important: 1
+q: Which list correctly matches each responsibility centre with what its manager is accountable for?
++ Cost centre: costs; revenue centre: revenues; profit centre: costs and revenues; investment centre: costs, revenues and capital investment || This is the full hierarchy.
+- Cost centre: revenues; profit centre: costs || Reversed.
+- Investment centre: costs only || Investment centres include assets.
+- Revenue centre: costs and revenues || That is a profit centre.
+explain: Investment centres are often measured by return on investment.
+mistake: Mixing up profit and investment centres.
+tip: Each level adds responsibility.
+src: Study text ch3a - responsibility centres (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc, trap
+topic: t1
+status: review
+q: Assembly workers are paid a basic rate of $14 per hour and $21 per hour for general overtime. In a week, a worker works 40 basic hours and 6 overtime hours on production. How much is classified as DIRECT labour?
++ $644 || All 46 hours at the basic rate: 46 x 14 = $644. The premium of 6 x $7 = $42 is overhead.
+- $686 || This includes the overtime premium in direct labour.
+- $560 || This excludes the overtime hours entirely.
+- $42 || This is the overtime premium only.
+formula: Direct labour = all productive hours x basic rate; overtime premium = overhead
+step: Total productive hours = 40 + 6 = 46.
+step: Direct labour = 46 x $14 = $644.
+step: Overtime premium = 6 x (21 - 14) = $42, treated as production overhead.
+check: 46*14
+explain: The basic rate for all hours worked on production is direct labour; the general overtime premium is overhead.
+mistake: Including the premium in direct labour or excluding overtime hours.
+tip: Overtime hours at basic rate = direct; premium = overhead.
+src: Study text ch3a - overtime (concept basis; original question)
+
+=== Q037
+type: mr
+level: C
+cat: scenario
+topic: t4
+status: review
+select: 2
+q: A divisional manager can set prices, control costs and decide whether to buy new machinery for her division. Which TWO statements are correct?
++ The division is an investment centre || She controls costs, revenues and capital investment.
++ Return on investment would be a suitable performance measure || It relates profit to capital employed.
+- The division is a cost centre || She also controls revenues and assets.
+- Her performance should be measured on costs alone || That ignores revenue and investment.
+explain: The ability to buy capital assets is the defining feature of an investment centre.
+mistake: Calling it a profit centre.
+tip: Can buy assets = investment centre.
+src: Study text ch3a - investment centres (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: In a month, a factory produced 1,000 units and sold 800. There was no opening inventory. Costs were: direct materials $20,000; direct labour $15,000; production overhead $10,000; selling and administration $9,000. What is the value ($) of closing inventory at production cost?
+answer: 9000
+tol: 0
+unit: $
+formula: Closing inventory = units in inventory x production cost per unit
+step: Production cost = 20,000 + 15,000 + 10,000 = $45,000; per unit = 45,000 / 1,000 = $45.
+step: Closing inventory = 200 units x $45 = $9,000.
+check: (20000+15000+10000)/1000*200
+explain: Only production costs are included in inventory; selling and administration are period costs.
+mistake: Including non-production costs ($10,800).
+tip: Inventory = production cost only.
+src: Study text ch3a - inventory valuation (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: A manager says all variable costs are direct costs and all fixed costs are indirect costs. Which counter-example shows this is wrong?
++ Electricity for factory machines varies with output but cannot be traced to individual units, so it is a variable indirect cost || Traceability and behaviour are separate classifications.
+- Direct materials vary with output || This supports the manager's view.
+- Factory rent is fixed and indirect || This supports the manager's view.
+- Assembly wages are direct || This supports the manager's view.
+explain: Direct/indirect is about traceability; fixed/variable is about behaviour. A cost can be variable yet indirect.
+mistake: Merging two classifications.
+tip: Traceable? Varies? Two separate questions.
+src: Study text ch3a - classification (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: In a composite code 225-410, "225" identifies the Paint shop cost centre and "410" identifies indirect materials. A clerk codes a purchase of paint for the Paint shop's machines as 410-225. What problem arises?
++ The cost may be posted to the wrong centre and expense type, because the order of the digits carries meaning || Composite codes depend on position.
+- No problem - the digits are the same || The order matters.
+- The code becomes elastic || Not relevant.
+- The paint becomes direct material || Coding does not change the nature of the cost.
+explain: Composite codes assign specific meanings to specific digit positions; transposition causes misallocation.
+mistake: Thinking digit order does not matter.
+tip: Position = meaning.
+src: Study text ch3a - composite codes (concept basis; original scenario)
+
+=== Q041
+type: match
+level: C
+cat: scenario
+topic: t4
+status: review
+q: Match each organisation with the MOST appropriate cost unit.
+pair: Airline => Passenger mile
+pair: Hotel => Room night
+pair: Accountancy practice => Chargeable hour
+pair: Printing firm => Batch or job
+choice: Cost centre
+explain: Cost units should reflect the output customers pay for.
+mistake: Choosing a department instead of a unit of output.
+tip: Unit = what is sold.
+src: Study text ch3a - cost units (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+q: A job uses direct materials $3,200, direct labour $1,800, sub-contract work $600 and production overhead $1,400. Selling costs of $500 relate to the job. What is the production cost of the job?
++ $7,000 || 3,200 + 1,800 + 600 + 1,400 = $7,000; selling costs are excluded.
+- $7,500 || This includes selling costs.
+- $5,600 || This is prime cost.
+- $5,000 || This omits sub-contract work and overhead.
+formula: Production cost = prime cost + production overhead
+step: Prime cost = 3,200 + 1,800 + 600 = $5,600 (sub-contract work is a direct expense).
+step: Production cost = 5,600 + 1,400 = $7,000.
+check: 3200+1800+600+1400
+explain: Sub-contract work for a specific job is a direct expense; selling costs are non-production.
+mistake: Leaving out direct expenses or adding selling costs.
+tip: Prime + production overhead = production cost.
+src: Study text ch3a - cost build-up (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A manager runs a branch that earns revenue and controls its costs, but all equipment purchases are decided by head office. She is evaluated on return on investment. What is the problem?
++ She is being judged on assets she does not control, because her branch is really a profit centre || Performance measures should match controllable items.
+- There is no problem - ROI suits all centres || ROI suits investment centres.
+- Her branch is a cost centre || She also controls revenue.
+- She should be judged on revenue only || She also controls costs.
+explain: Managers should be measured on items they can control; profit is suitable for profit centres, ROI for investment centres.
+mistake: Applying ROI to profit centres.
+tip: Measure what the manager controls.
+src: Study text ch3a - responsibility centres (concept basis; original scenario)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Machine operators were paid for 5 hours of idle time because materials arrived late. How should this be classified and why does it matter?
++ As production overhead, and it should be monitored because it is a cost with no output || Idle time is wasted cost.
+- As direct labour charged to the next job || No work was done on products.
+- As selling overhead || It is a production issue.
+- As a gain, because no materials were used || It is a cost.
+explain: Recording idle time separately highlights inefficiency such as late deliveries.
+mistake: Hiding idle time in direct labour.
+tip: Paid but not productive = overhead to investigate.
+src: Study text ch3a - idle time (concept basis; original scenario)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A company makes 2,000 units. Direct materials total $24,000, direct labour $16,000 and direct expenses $4,000. Production overhead is $18,000 and administration overhead $6,000. What is the production cost PER UNIT ($)?
+answer: 31
+tol: 0
+unit: $
+formula: Production cost per unit = (prime cost + production overhead) / units
+step: Prime cost = 24,000 + 16,000 + 4,000 = $44,000.
+step: Production cost = 44,000 + 18,000 = $62,000.
+step: Per unit = 62,000 / 2,000 = $31.
+check: (24000+16000+4000+18000)/2000
+explain: Administration overhead is excluded from production cost.
+mistake: Including administration overhead ($34).
+tip: Only production costs in production cost per unit.
+src: Study text ch3a - production cost (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: A cost of factory insurance is fixed, indirect and a production cost. What does this show about cost classification?
++ A single cost can be classified in several ways at once, depending on the purpose || Classifications are not mutually exclusive across bases.
+- Every cost belongs to one category only || Costs can be classified on several bases.
+- Insurance must always be a selling cost || It depends on what is insured.
+- Fixed costs cannot be production costs || Many production costs are fixed.
+explain: Traceability, function, behaviour and production/non-production are separate bases of classification.
+mistake: Thinking classifications compete.
+tip: Ask "classified for what purpose?"
+src: Study text ch3a - classification (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A company keeps adding new products but its coding system has no spare numbers, so new items are given codes that already exist. Which TWO features of good coding are being breached?
++ The codes are not elastic and are no longer unique || No room for growth leads to duplicate codes.
+- The codes are too brief and too uniform || Not the problem.
+- The codes are too unambiguous || Not a problem.
+- The codes are centrally controlled || Central control is good practice.
+explain: Elastic codes leave room for new items; unique codes prevent confusion.
+mistake: Not designing codes for future growth.
+tip: Plan for growth from the start.
+src: Study text ch3a - cost codes (concept basis; original scenario)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: In a period, a company produces and sells all its output. Production costs total $80,000 and non-production costs $25,000. Sales revenue is $130,000. What is profit?
++ $25,000 || 130,000 - 80,000 - 25,000 = $25,000.
+- $50,000 || This ignores non-production costs.
+- $105,000 || This is total cost.
+- $55,000 || This deducts only non-production costs.
+formula: Profit = sales - cost of sales (production cost) - non-production costs
+step: Cost of sales = $80,000 (all production sold).
+step: Profit = 130,000 - 80,000 - 25,000 = $25,000.
+check: 130000-80000-25000
+explain: When all output is sold, all production costs go to cost of sales; non-production costs are always period costs.
+mistake: Forgetting non-production costs.
+tip: Both cost types reduce profit eventually.
+src: Study text ch3a - statement of profit or loss (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why is a cost unit described as the basic CONTROL unit for costing?
++ Costs per unit can be compared over time and against standards to control efficiency || Unit costs reveal performance.
+- Because it is where costs are physically stored || Not the meaning.
+- Because only cost units have managers || Managers run centres.
+- Because cost units replace budgets || They do not.
+explain: Monitoring cost per unit supports pricing, budgeting and control.
+mistake: Confusing control units with responsibility centres.
+tip: Track cost per unit to control costs.
+src: Study text ch3a - cost units (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: How are overtime premium and idle time NORMALLY classified?
++ As production overhead, unless overtime is worked at a specific customer's request || The usual treatment is overhead.
+- Always as direct labour || Not usually.
+- As selling overhead || They relate to production.
+- As administration overhead || They relate to production.
+explain: This is a common exam trap.
+mistake: Treating all labour costs as direct.
+tip: Premium and idle time = overhead (usually).
+src: Study text ch3a - labour classification (concept basis; original question)

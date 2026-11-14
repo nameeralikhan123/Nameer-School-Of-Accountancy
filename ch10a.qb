@@ -1,0 +1,885 @@
+@subject acfbe
+@chapter 10a
+@title Budgeting
+@lo D1, D2
+@topic t1 | The planning and control cycle | D1, D2
+@topic t2 | Responsibility centres and controllability | D1, D2
+@topic t3 | Fixed vs flexible budgets | D1, D2
+@topic t4 | Spreadsheets for budgeting | D1, D2
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which description BEST fits a budget?
++ A plan expressed in money and quantities for the coming period || It puts numbers on the plan.
+- A record of last year's actual results || That is historical data.
+- A long-term mission statement || Not quantified or period-specific.
+- A list of the organisation's suppliers || Not a budget.
+explain: Budgets turn long-term plans into short-term targets.
+mistake: Confusing budgets with actual results.
+tip: Quantified + forthcoming.
+src: Study text ch10a - budget (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the FIRST step in the planning and control cycle?
++ Identify objectives || Everything follows from what the organisation wants to achieve.
+- Identify potential strategies || Second step.
+- Measure actual results || A control step.
+- Respond to divergences from plan || The last step.
+explain: The cycle has seven steps: five planning, two control.
+mistake: Starting with strategies.
+tip: Objectives first.
+src: Study text ch10a - cycle (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A manager is responsible for both costs and revenues but not for capital investment. What type of responsibility centre is this?
++ Profit centre || Costs and revenues.
+- Cost centre || Costs only.
+- Revenue centre || Revenues only.
+- Investment centre || Also includes capital invested.
+explain: Investment centres are measured on profit relative to capital employed.
+mistake: Confusing profit and investment centres.
+tip: Costs + revenues = profit centre.
+src: Study text ch10a - centres (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is a controllable cost?
++ A cost that can be influenced by its budget holder || The manager can affect it.
+- Any variable cost || Not all variable costs are controllable by every manager.
+- Any fixed cost || Many fixed costs are not controllable in the short term.
+- A cost apportioned from head office || Usually not controllable by the receiving manager.
+explain: Responsibility accounting holds managers to account only for controllable costs.
+mistake: Equating controllable with variable.
+tip: Can the manager influence it?
+src: Study text ch10a - controllability (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is a flexible budget?
++ A budget that recognises cost behaviour and changes as the level of activity changes || Variable costs flex; fixed costs do not.
+- A budget that never changes || That is a fixed budget.
+- A budget prepared after the period ends || Not the definition.
+- A budget that ignores fixed costs || Fixed costs are included.
+explain: Flexible budgets give meaningful control comparisons.
+mistake: Flexing fixed costs.
+tip: Flex with activity.
+src: Study text ch10a - flexible budget (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A cost has a fixed element of $8,000 and a variable element of $2.50 per unit. What is the flexed budget cost ($) for 6,000 units?
+answer: 23000
+tol: 0
+unit: $
+formula: Flexed cost = fixed cost + variable cost per unit x actual activity
+step: Variable = 6,000 x 2.50 = 15,000.
+step: Flexed cost = 8,000 + 15,000 = $23,000.
+check: 8000+2.5*6000
+explain: The fixed element is unchanged whatever the activity level.
+mistake: Flexing the fixed element as well.
+tip: Fixed stays fixed.
+src: Study text ch10a - flexed cost (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: In a spreadsheet, how must a formula begin?
++ With an equals sign (=) || For example =B6*1.1.
+- With a letter || That is a cell reference.
+- With a number || That would be a value.
+- With a bracket || Brackets control order of operations.
+explain: Formulae refer to other cells and recalculate automatically.
+mistake: Typing the formula without =.
+tip: Start with =.
+src: Study text ch10a - spreadsheets (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: For budgetary control, what should actual results be compared with?
++ The flexed budget for the actual level of activity || This compares like with like.
+- The original fixed budget || Distorted if activity differs.
+- Last year's actual results || Not a control budget.
+- The maximum capacity budget || Not relevant.
+explain: Comparing with the flexed budget isolates efficiency from volume effects.
+mistake: Using the fixed budget.
+tip: Actual vs flexed.
+src: Study text ch10a - control (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a purpose of budgeting?
++ To co-ordinate the activities of different departments || One of several purposes.
+- To guarantee profits || Budgets cannot guarantee results.
+- To replace the need for management || Managers still manage.
+- To record past transactions || That is financial accounting.
+explain: Other purposes: planning, communication, control, motivation and responsibility.
+mistake: Thinking budgets guarantee outcomes.
+tip: Plan, co-ordinate, communicate, control, motivate.
+src: Study text ch10a - purposes (concept basis; original question)
+
+=== Q010
+type: num
+level: F
+cat: calc
+topic: t4
+status: review
+q: Cells B2, B3 and B4 contain 10, 20 and 30. What value does =SUM(B2:B4) return?
+answer: 60
+tol: 0
+unit:
+formula: SUM adds every cell in the range
+step: The range B2:B4 covers three cells: 10, 20 and 30.
+step: 10 + 20 + 30 = 60.
+check: 10+20+30
+explain: The colon defines a range of cells.
+mistake: Thinking the range means only B2 and B4.
+tip: Colon = range.
+src: Study text ch10a - formulae (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Maintenance costs were $74,000 at 12,000 units and $58,000 at 8,000 units. Using the high-low method, what are the variable cost per unit and the fixed cost?
++ $4 per unit; fixed $26,000 || 16,000 / 4,000 units = $4; 74,000 - 48,000.
+- $6.17 per unit; fixed $0 || This divides total cost by units.
+- $4 per unit; fixed $58,000 || Fixed cost is not the low total.
+- $7.25 per unit; fixed $0 || Not supported.
+formula: VC per unit = (high cost - low cost) / (high units - low units)
+step: VC = (74,000 - 58,000) / (12,000 - 8,000) = 16,000 / 4,000 = $4.
+step: Fixed = 74,000 - 12,000 x 4 = $26,000.
+check: (74000-58000)/(12000-8000)
+explain: Split semi-variable costs before flexing them.
+mistake: Treating the whole cost as variable.
+tip: Difference in cost / difference in units.
+src: Study text ch10a - high-low (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Maintenance costs: fixed $26,000 plus $4 per unit.
+q: What is the flexed budget for maintenance ($) at 10,500 units?
+answer: 68000
+tol: 0
+unit: $
+formula: Flexed cost = fixed + variable rate x activity
+step: Variable = 10,500 x 4 = 42,000.
+step: Flexed = 26,000 + 42,000 = $68,000.
+check: 26000+4*10500
+explain: The high-low results let you flex to any activity level within the relevant range.
+mistake: Flexing the fixed element.
+tip: Fixed + rate x units.
+src: Study text ch10a - flexing (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is a fixed budget?
++ A budget that is not changed whatever the actual level of activity || Prepared at one planned level.
+- A budget containing only fixed costs || It includes all costs.
+- A budget that is flexed at the period end || That is a flexible budget.
+- A budget for a single department only || Not the definition.
+explain: Fixed budgets are useful for planning and where activity is predictable.
+mistake: Thinking "fixed" means fixed costs only.
+tip: Fixed = one activity level.
+src: Study text ch10a - fixed budget (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Budget: 10,000 units at $25 each. Actual sales: 9,000 units for $229,500.
+q: What is the flexed budget revenue?
++ $225,000 || 9,000 x $25.
+- $250,000 || Original budget.
+- $229,500 || Actual revenue.
+- $20,500 || Not a revenue figure.
+formula: Flexed revenue = actual units x budgeted price
+step: Actual units = 9,000; budgeted price = $25.
+step: Flexed revenue = 9,000 x 25 = $225,000.
+check: 9000*25
+explain: Actual revenue of $229,500 is $4,500 higher than the flexed budget, a favourable price effect.
+mistake: Comparing with the original $250,000.
+tip: Flex revenue too.
+src: Study text ch10a - flexed revenue (concept basis; original figures)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which cost is LEAST likely to be controllable by a production supervisor?
++ An apportioned share of head office rent || Decided elsewhere.
+- Overtime worked in the department || The supervisor schedules work.
+- Materials wastage in the department || The supervisor influences efficiency.
+- Consumables used in the department || Within the supervisor's influence.
+explain: Responsibility reports should separate controllable and uncontrollable items.
+mistake: Holding managers to account for apportioned costs.
+tip: Apportioned = usually uncontrollable.
+src: Study text ch10a - controllability (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are disadvantages of spreadsheets for budgeting?
++ Errors in formulae are easy to make and hard to spot || Errors can go unnoticed.
++ A model is only as good as its design and input data || Garbage in, garbage out.
+- They cannot recalculate when inputs change || They recalculate instantly.
+- They cannot perform what-if analysis || They are ideal for it.
+explain: Hidden formulae, security and version control are further risks.
+mistake: Assuming spreadsheet output is always correct.
+tip: Garbage in, garbage out.
+src: Study text ch10a - spreadsheets (concept basis; original question)
+
+=== Q017
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put these stages of the planning and control cycle in order.
+item: Identify objectives
+item: Identify potential strategies
+item: Evaluate strategies
+item: Choose alternative courses of action
+item: Implement the long-term plan through annual budgets
+item: Measure actual results and compare with the plan
+item: Respond to divergences from the plan
+explain: The first five steps are planning; the last two are control.
+mistake: Measuring before implementing.
+tip: Plan (5) then control (2).
+src: Study text ch10a - cycle (concept basis; original question)
+
+=== Q018
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each responsibility centre with what its manager controls.
+pair: Cost centre => Costs only
+pair: Revenue centre => Revenues only
+pair: Profit centre => Costs and revenues
+pair: Investment centre => Costs, revenues and capital invested
+explain: Performance measures should match the centre's responsibilities.
+mistake: Judging a cost centre on profit.
+tip: Scope grows from cost to investment.
+src: Study text ch10a - centres (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Budget: price $30 per unit; variable cost $18 per unit; fixed costs $50,000. Actual sales were 7,000 units.
+q: What is the flexed budget profit ($)?
+answer: 34000
+tol: 0
+unit: $
+formula: Flexed profit = actual units x budgeted contribution per unit - budgeted fixed costs
+step: Contribution per unit = 30 - 18 = 12; total = 7,000 x 12 = 84,000.
+step: Profit = 84,000 - 50,000 = $34,000.
+check: 7000*(30-18)-50000
+explain: Fixed costs are not flexed.
+mistake: Flexing fixed costs.
+tip: Contribution flexes; fixed costs don't.
+src: Study text ch10a - flexed profit (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Budgeted variable materials cost was $160,000 for 20,000 units. Actual output was 18,000 units and actual materials cost was $147,000. What is the materials variance against the flexed budget?
++ $3,000 adverse || Flexed 144,000; actual 147,000.
+- $13,000 favourable || Compares with the fixed budget.
+- $3,000 favourable || Actual cost exceeds the flexed budget.
+- $16,000 favourable || Not supported.
+formula: Variance = flexed budget - actual
+step: Flexed budget = 18,000 x (160,000 / 20,000) = 18,000 x 8 = 144,000.
+step: Actual 147,000 is $3,000 more than budget: adverse.
+check: 147000-18000*8
+explain: Against the fixed budget the result looks $13,000 favourable, but that is due to lower volume.
+mistake: Comparing with the fixed budget.
+tip: Flex first, then compare.
+src: Study text ch10a - flexed variance (concept basis; original figures)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which statement about fixed costs and controllability is correct?
++ A fixed cost may be uncontrollable in the short term but controllable in the long term or at a higher level || Controllability depends on time frame and level.
+- Fixed costs are never controllable by anyone || Someone decides them.
+- All fixed costs are controllable by every manager || Not true.
+- Fixed costs are always controllable in the short term || Often not.
+explain: For example, rent may be controllable by the directors who sign the lease.
+mistake: Assuming fixed = uncontrollable everywhere.
+tip: Who, and over what time frame?
+src: Study text ch10a - controllability (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Cell B6 contains 200. What value is displayed in a cell containing =B6*1.1?
+answer: 220
+tol: 0.0001
+unit:
+formula: The formula multiplies the value in B6 by 1.1
+step: B6 = 200.
+step: 200 x 1.1 = 220.
+check: 200*1.1
+explain: If B6 changes, the result updates automatically.
+mistake: Thinking the formula text is displayed.
+tip: Formula result shows; formula is in the bar.
+src: Study text ch10a - formulae (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What activity measure is MOST suitable for flexing a budget in a factory making many different products?
++ Standard hours or labour hours || A common measure across products.
+- Number of units produced || Units of different products cannot be added meaningfully.
+- Number of employees || Not an activity measure.
+- Floor area || Not an activity measure.
+explain: Units work only for a single product.
+mistake: Adding unlike units.
+tip: Mixed output = hours.
+src: Study text ch10a - activity measure (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which steps of the planning and control cycle are CONTROL steps?
++ Measuring actual results against the plan, and responding to divergences || The final two steps.
+- Identifying objectives and strategies || Planning.
+- Evaluating and choosing strategies || Planning.
+- Implementing the long-term plan || The last planning step.
+explain: Control involves comparing results with plan and acting on differences.
+mistake: Treating implementation as control.
+tip: Measure + respond = control.
+src: Study text ch10a - cycle (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A semi-variable power cost has a fixed element of $12,000 and a variable element of $3 per machine hour. What is the flexed budget at 4,500 machine hours?
++ $25,500 || 12,000 + 4,500 x 3.
+- $13,500 || Variable only.
+- $12,000 || Fixed only.
+- $54,000 || This multiplies fixed by 4.5.
+formula: Flexed cost = fixed + variable rate x hours
+step: Variable = 4,500 x 3 = 13,500.
+step: Flexed = 12,000 + 13,500 = $25,500.
+check: 12000+3*4500
+explain: Semi-variable costs are flexed only for their variable element.
+mistake: Ignoring the fixed element.
+tip: Both parts, only one flexes.
+src: Study text ch10a - semi-variable (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is "what-if" analysis in a spreadsheet?
++ Changing input values to see the effect on results || Also called sensitivity analysis.
+- Printing a spreadsheet || Not analysis.
+- Protecting cells with a password || Security.
+- Sorting data alphabetically || Not what-if.
+explain: Spreadsheets recalculate instantly, so scenarios can be compared quickly.
+mistake: Confusing with formatting tools.
+tip: Change inputs, see outputs.
+src: Study text ch10a - what-if (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee flexes a budget by multiplying ALL budgeted costs, including rent, by actual output / budgeted output. What is wrong?
++ Fixed costs such as rent should not be flexed; only variable costs change with activity || Rent stays the same.
+- Nothing - all costs should be flexed || Fixed costs are not.
+- Variable costs should not be flexed || They should.
+- Revenue should not be flexed || Revenue is flexed.
+explain: Flexing fixed costs gives false variances.
+mistake: Flexing fixed costs.
+tip: Never flex fixed costs.
+src: Study text ch10a - flexing (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How is the performance of an investment centre usually measured?
++ By return on capital employed (profit relative to capital invested) || Investment centres control capital.
+- By costs alone || Cost centre.
+- By revenue alone || Revenue centre.
+- By number of employees || Not a performance measure.
+explain: Investment centre managers decide on assets as well as costs and revenues.
+mistake: Using profit alone.
+tip: Capital in = return on capital.
+src: Study text ch10a - investment centres (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: What value does a spreadsheet return for the formula =2+3*4?
+answer: 14
+tol: 0
+unit:
+formula: Multiplication is done before addition unless brackets are used
+step: 3 x 4 = 12.
+step: 2 + 12 = 14.
+check: 2+3*4
+explain: =(2+3)*4 would return 20.
+mistake: Working left to right to get 20.
+tip: Brackets change the order.
+src: Study text ch10a - order of operations (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How can a budget motivate managers?
++ By setting targets that managers have agreed to and are rewarded for meeting || Agreed, achievable targets motivate.
+- By setting targets that are impossible to reach || These demotivate.
+- By keeping budgets secret from managers || Managers must know targets.
+- By ignoring actual results || Results must be compared.
+explain: Participation and achievable targets support motivation.
+mistake: Thinking tougher is always better.
+tip: Achievable and agreed.
+src: Study text ch10a - motivation (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Capacity is 50,000 units. Variable cost is $6 per unit and fixed costs are $90,000.
+q: What is the budgeted total cost at 80% capacity?
++ $330,000 || 40,000 x 6 + 90,000.
+- $390,000 || This is at 100%.
+- $312,000 || This flexes fixed costs to 80%.
+- $240,000 || Variable only.
+formula: Total cost = fixed + VC x units
+step: Units at 80% = 50,000 x 80% = 40,000.
+step: Total = 90,000 + 40,000 x 6 = $330,000.
+check: 90000+40000*6
+explain: A flexible budget can be prepared at several capacity levels for planning.
+mistake: Reducing fixed costs to 80%.
+tip: Fixed costs stay at 90,000.
+src: Study text ch10a - capacity levels (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which costing principle underlies a flexible budget?
++ Marginal costing - variable costs change with activity and fixed costs stay the same || Cost behaviour is key.
+- Absorption costing - fixed costs per unit stay the same || Fixed costs per unit change with volume.
+- Activity based costing only || Not the principle.
+- Target costing || Not the principle.
+explain: Flexible budgets separate fixed and variable costs.
+mistake: Absorbing fixed costs per unit.
+tip: Marginal principles.
+src: Study text ch10a - flexible budgets (concept basis; original question)
+
+=== Q033
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Fixed budget: 5,000 units; revenue $200,000; variable costs $120,000; fixed costs $45,000; profit $35,000. Actual: 5,500 units sold.
+q: What is the flexed budget profit?
++ $43,000 || Contribution 5,500 x 16 = 88,000 less 45,000.
+- $38,500 || This flexes profit by 10%.
+- $35,000 || The fixed budget profit.
+- $47,500 || Not supported.
+formula: Flexed profit = actual units x budgeted contribution per unit - fixed costs
+step: Contribution per unit = (200,000 - 120,000) / 5,000 = $16.
+step: Flexed profit = 5,500 x 16 - 45,000 = 88,000 - 45,000 = $43,000.
+check: 5500*16-45000
+explain: Profit does not rise in proportion to volume, because fixed costs don't change.
+mistake: Multiplying the whole profit by 110%.
+tip: Flex contribution, deduct fixed costs.
+src: Study text ch10a - flexed profit (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A department's costs are $8,000 below the fixed budget, but actual output was 20% lower than planned. The manager claims excellent cost control. What should the accountant do?
++ Compare actual costs with a budget flexed to the actual output before judging performance || The saving may just reflect lower activity.
+- Accept the claim, as costs are below budget || The comparison is unfair.
+- Reduce the next budget by $8,000 || Premature.
+- Compare with last year's costs || Not a flexed comparison.
+explain: Lower output naturally means lower variable costs.
+mistake: Using fixed budgets for control.
+tip: Flex before you judge.
+src: Study text ch10a - control (concept basis; original scenario)
+
+=== Q035
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A department's costs: materials $6 per unit (variable), labour $4 per unit (variable), supervision $15,000 (fixed), and power with $5,000 fixed plus $1 per unit. Actual output was 9,000 units and actual total cost was $122,500.
+q: What is the total cost variance ($) against the flexed budget? (Enter a positive number; it is adverse.)
+answer: 3500
+tol: 0
+unit: $
+formula: Variance = actual cost - flexed budget cost
+step: Flexed budget = 9,000 x (6 + 4 + 1) + 15,000 + 5,000 = 99,000 + 20,000 = 119,000.
+step: Variance = 122,500 - 119,000 = $3,500 adverse.
+check: 122500-(9000*11+15000+5000)
+explain: All fixed elements stay at budget; variable elements flex to 9,000 units.
+mistake: Flexing the fixed element of power.
+tip: Separate fixed and variable first.
+src: Study text ch10a - flexed variance (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A divisional manager's report shows an adverse variance on "head office IT recharge", allocated using a company-wide formula. Is it fair to hold the manager responsible?
++ No - the cost is apportioned and decided elsewhere, so it is not controllable by the manager || Report it separately.
+- Yes - every cost on a report is the manager's responsibility || Not under responsibility accounting.
+- Yes - IT costs are always variable || Not relevant.
+- No - because IT costs are never controllable by anyone || Someone at head office controls them.
+explain: Responsibility reports should distinguish controllable and uncontrollable costs.
+mistake: Holding managers to account for allocations.
+tip: Allocated = not controllable here.
+src: Study text ch10a - responsibility accounting (concept basis; original question)
+
+=== Q037
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: Total costs were $97,000 at 6,000 units and $115,000 at 8,000 units. What is the flexed budget at 7,500 units?
++ $110,500 || Fixed 43,000 + 7,500 x 9.
+- $106,000 || This uses the midpoint.
+- $121,250 || This scales the 6,000-unit cost.
+- $67,500 || Variable only.
+formula: VC = Δcost / Δunits; flexed = fixed + VC x units
+step: VC = (115,000 - 97,000) / 2,000 = $9; fixed = 115,000 - 8,000 x 9 = 43,000.
+step: Flexed = 43,000 + 7,500 x 9 = 43,000 + 67,500 = $110,500.
+check: 43000+7500*9
+explain: High-low first, then flex.
+mistake: Scaling total cost proportionately.
+tip: Split, then flex.
+src: Study text ch10a - high-low flexing (concept basis; original figures)
+
+=== Q038
+type: mr
+level: C
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO statements about fixed and flexible budgets are correct?
++ A fixed budget is useful for planning and where activity is predictable || It is set at one level.
++ A flexible budget allows variances to show efficiency rather than volume effects || Like with like.
+- A flexible budget changes fixed costs in proportion to activity || Fixed costs don't flex.
+- A fixed budget is the best basis for control when activity varies || A flexible budget is.
+explain: Both have a role: fixed for planning, flexible for control.
+mistake: Using fixed budgets for control under changing volumes.
+tip: Plan fixed; control flexed.
+src: Study text ch10a - comparison (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: A large budget spreadsheet has many hidden formulae and is edited by several staff. What is the MAIN risk?
++ Errors and unauthorised changes may go unnoticed and the logic is hard to check || Hidden formulae and poor version control.
+- The spreadsheet will refuse to recalculate || It will recalculate.
+- What-if analysis becomes impossible || Still possible.
+- The spreadsheet cannot produce charts || It can.
+explain: Controls such as protection, documentation and review reduce the risk.
+mistake: Trusting complex spreadsheets blindly.
+tip: Hidden logic = hidden errors.
+src: Study text ch10a - spreadsheet risks (concept basis; original question)
+
+=== Q040
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Budgeted at 10,000 units: revenue $400,000; materials $120,000; labour $80,000; production overhead $90,000 (of which $50,000 fixed); admin $40,000 (all fixed). Actual sales were 8,500 units.
+q: What is the flexed budget profit ($)?
+answer: 46000
+tol: 0
+unit: $
+formula: Flexed profit = units x contribution per unit - fixed costs
+step: Variable cost per unit = (120,000 + 80,000 + 40,000 variable overhead) / 10,000 = $24; price = 400,000 / 10,000 = $40; contribution = $16.
+step: Flexed contribution = 8,500 x 16 = 136,000; fixed costs = 50,000 + 40,000 = 90,000.
+step: Flexed profit = 136,000 - 90,000 = $46,000.
+check: 8500*16-90000
+explain: Only the variable $40,000 of production overhead flexes; the $50,000 fixed part and admin stay unchanged.
+mistake: Flexing all of production overhead.
+tip: Split mixed lines before flexing.
+src: Study text ch10a - flexed profit (concept basis; original figures)
+
+=== Q041
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A store manager controls prices, staffing and stock levels but has no say over the store building or fixtures, which head office buys. Head office judges the manager on return on capital employed. What is the problem?
++ The manager runs a profit centre but is judged as if running an investment centre || Capital is not under the manager's control.
+- None - all managers should be judged on ROCE || Only where they control capital.
+- The manager should be judged on revenue only || Costs are also controlled.
+- The store should be a cost centre || It earns revenue.
+explain: Performance measures should match the manager's area of control.
+mistake: Applying investment centre measures to profit centres.
+tip: Measure what they control.
+src: Study text ch10a - responsibility centres (concept basis; original scenario)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: Budgeted variable costs were $150,000 for 10,000 units. Actual output was 11,000 units and actual variable costs were $162,000. What is the variance against the flexed budget?
++ $3,000 favourable || Flexed 165,000 vs actual 162,000.
+- $12,000 adverse || Compares with the fixed budget.
+- $3,000 adverse || Actual is below the flexed budget.
+- $15,000 favourable || Not supported.
+formula: Variance = flexed budget - actual
+step: Flexed budget = 11,000 x 15 = 165,000.
+step: Actual 162,000 is 3,000 less: favourable.
+check: 165000-162000
+explain: The fixed budget comparison wrongly suggests overspending.
+mistake: Comparing with the fixed budget.
+tip: Higher output = higher flexed costs.
+src: Study text ch10a - flexed variance (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: A sales budget shows that 30% more units will be sold next year, and the production manager plans capacity accordingly. Which budget purpose does this BEST illustrate?
++ Co-ordination and communication between departments || Departments plan consistently.
+- Motivation only || Not the main point.
+- Recording historical transactions || Budgets look forward.
+- Responsibility accounting only || Not the main point.
+explain: Budgets ensure that departmental plans fit together.
+mistake: Missing the co-ordination role.
+tip: Budgets link departments.
+src: Study text ch10a - purposes (concept basis; original scenario)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: For which department would a FIXED budget be MOST suitable for control?
++ An administration department whose costs are mostly fixed and do not vary with output || Little to flex.
+- A production line with mostly variable costs and varying output || Needs flexing.
+- A sales team paid commission on sales || Variable.
+- A packing department paid per unit packed || Variable.
+explain: Fixed budgets work where activity is predictable or costs are fixed.
+mistake: Using fixed budgets for variable-cost departments.
+tip: Mostly fixed costs = fixed budget OK.
+src: Study text ch10a - fixed budget use (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: Cell B2 contains 40 and B3 contains 60. What value does =(B2+B3)/2 return?
+answer: 50
+tol: 0
+unit:
+formula: Brackets are evaluated first, then the division
+step: B2 + B3 = 40 + 60 = 100.
+step: 100 / 2 = 50.
+check: (40+60)/2
+explain: Without brackets, =B2+B3/2 would return 70.
+mistake: Ignoring the brackets.
+tip: Brackets first.
+src: Study text ch10a - formulae (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: A regional sales manager is accountable only for sales income achieved in the region. What type of responsibility centre is the region?
++ Revenue centre || Revenues only.
+- Cost centre || Costs only.
+- Profit centre || Costs and revenues.
+- Investment centre || Includes capital.
+explain: Revenue centre managers are assessed on sales achieved.
+mistake: Calling it a profit centre.
+tip: Revenue only = revenue centre.
+src: Study text ch10a - centres (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: Budgeted labour cost is $10 per unit (fully variable). Actual output was 4,800 units and actual labour cost was $49,200. What is the labour variance ($) against the flexed budget? (Enter a positive number; it is adverse.)
+answer: 1200
+tol: 0
+unit: $
+formula: Variance = actual - flexed budget
+step: Flexed budget = 4,800 x 10 = 48,000.
+step: Variance = 49,200 - 48,000 = $1,200 adverse.
+check: 49200-4800*10
+explain: The flexed budget shows what labour should have cost for actual output.
+mistake: Comparing with budgeted output.
+tip: Flex to actual output.
+src: Study text ch10a - flexed variance (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why should a flexible budget be used only within the relevant range of activity?
++ Outside the range, fixed costs may step up and variable rates may change || Cost behaviour assumptions may fail.
+- Flexible budgets cannot include fixed costs || They do.
+- Variable costs never change || They change with activity.
+- Spreadsheets cannot handle large ranges || Not the reason.
+explain: For example, a second supervisor may be needed above a certain output.
+mistake: Extrapolating far beyond known data.
+tip: Stay within the range.
+src: Study text ch10a - relevant range (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which formula gives a flexed budget cost?
++ Fixed cost + (variable cost per unit x actual activity) || The fixed element is unchanged.
+- Total budgeted cost x actual / budgeted activity || Flexes fixed costs too.
+- Variable cost per unit x budgeted activity || Uses budgeted, not actual, activity.
+- Fixed cost x actual activity || Not meaningful.
+explain: Only the variable element changes with activity.
+mistake: Flexing fixed costs.
+tip: Fixed + VC x actual.
+src: Study text ch10a - flexed cost (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: What is the principle of responsibility accounting?
++ Managers should be held accountable only for costs and revenues they can influence || Controllability is key.
+- Every manager is responsible for every cost || Not fair or useful.
+- Only directors are responsible for costs || Responsibility is delegated.
+- Costs should not be reported by manager || They are reported by centre.
+explain: Reports should separate controllable from uncontrollable items.
+mistake: Charging managers with allocations.
+tip: Control = accountability.
+src: Study text ch10a - responsibility accounting (concept basis; original question)

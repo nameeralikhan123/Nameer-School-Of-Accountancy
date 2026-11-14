@@ -1,0 +1,878 @@
+@subject acffa2
+@chapter 13
+@title Reconciliations
+@lo E1
+@topic t1 | Purpose of a bank reconciliation | E1
+@topic t2 | Two types of difference | E1
+@topic t3 | The reconciliation format | E1
+@topic t4 | Supplier statement reconciliations | E1
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does a bank reconciliation compare?
++ The cash at bank ledger account (cash book) with the bank statement || Explains differences.
+- Receivables with payables || Not a bank reconciliation.
+- Sales with purchases || Not related.
+- The trial balance with the SOFP || Not related.
+explain: It helps detect errors, fraud and unrecorded items.
+mistake: Thinking the bank statement is always right.
+tip: Cash book vs bank.
+src: Study text ch13 - purpose (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which item requires an adjustment to the CASH BOOK?
++ Bank charges shown only on the bank statement || Unrecorded item.
+- An unpresented cheque || Bank statement side.
+- An outstanding deposit || Bank statement side.
+- An error made by the bank || Bank statement side.
+explain: Unrecorded items and cash book errors are corrected in the ledger.
+mistake: Adjusting the cash book for timing differences.
+tip: Unknown to us = update cash book.
+src: Study text ch13 - differences (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How are unpresented cheques treated in a bank reconciliation?
++ Deducted from the bank statement balance || Not yet cleared by the bank.
+- Added to the bank statement balance || That is for outstanding deposits.
+- Deducted from the cash book || Already recorded there.
+- Ignored || They are reconciling items.
+explain: The bank will deduct them when presented.
+mistake: Adjusting the cash book.
+tip: Unpresented = deduct from bank.
+src: Study text ch13 - unpresented cheques (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which cash figure is shown in the statement of financial position?
++ The corrected (revised) cash book balance || After adjustments.
+- The bank statement balance || Includes timing differences.
+- The average of the two || Not correct.
+- The opening balance || Not correct.
+explain: Timing differences do not change the true position.
+mistake: Using the bank statement balance.
+tip: Revised cash book.
+src: Study text ch13 - SOFP figure (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How are outstanding deposits (lodgements) treated in a bank reconciliation?
++ Added to the bank statement balance || Not yet credited by the bank.
+- Deducted from the bank statement balance || That is for unpresented cheques.
+- Added to the cash book || Already recorded.
+- Ignored || Reconciling items.
+explain: The bank will credit them shortly.
+mistake: Adjusting the cash book.
+tip: Lodged but not cleared = add to bank.
+src: Study text ch13 - deposits (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A customer's cheque is returned unpaid by the bank. How is this recorded in the cash book?
++ Debit receivables; credit cash at bank || Reverse the receipt.
+- Debit cash at bank; credit receivables || That records a receipt.
+- No entry - it is a timing difference || The cash book must be updated.
+- Debit irrecoverable debts; credit bank || Not yet irrecoverable.
+explain: The customer owes the money again.
+mistake: Treating it as a timing difference.
+tip: Dishonoured = reverse.
+src: Study text ch13 - dishonoured cheques (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: On a bank statement, what does a CREDIT balance usually mean?
++ The account has money in it - the bank owes the customer || Mirror image of the cash book.
+- The account is overdrawn || That is a debit on a statement.
+- The bank has charged interest || Not necessarily.
+- An error has occurred || Not necessarily.
+explain: In the cash book, money in the bank is a debit.
+mistake: Reading the statement as if it were the cash book.
+tip: Bank's view is reversed.
+src: Study text ch13 - statement balances (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is a supplier statement reconciliation?
++ A comparison of the supplier's statement with the business's payables ledger account for that supplier || Explains differences.
+- A comparison of cash book and bank statement || Bank reconciliation.
+- A list of receivables || Aged receivables.
+- A trial balance || Not related.
+explain: Payments in transit are a common difference.
+mistake: Confusing with bank reconciliations.
+tip: Supplier statement vs our ledger.
+src: Study text ch13 - supplier statements (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A direct debit appears on the bank statement but has not been recorded in the cash book. What should happen?
++ Record it in the cash book as a payment || Unrecorded item.
+- Add it to the bank statement balance || Not a timing difference.
+- Ignore it || It must be recorded.
+- Treat it as an outstanding deposit || Not a deposit.
+explain: Standing orders are treated the same way.
+mistake: Treating it as a reconciling item.
+tip: Bank knows, we don't = update cash book.
+src: Study text ch13 - direct debits (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a purpose of a bank reconciliation?
++ To detect errors and possible fraud || A key control.
+- To calculate depreciation || Not related.
+- To value inventory || Not related.
+- To record sales tax || Not related.
+explain: It also confirms the cash figure for the SOFP.
+mistake: Seeing it as unnecessary paperwork.
+tip: Control over cash.
+src: Study text ch13 - purpose (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: The cash book shows a debit balance of $5,200. The bank statement shows bank charges of $45, a direct credit from a customer of $600 and a direct debit of $300, none yet in the cash book.
+q: What is the revised cash book balance ($)?
+answer: 5455
+tol: 0
+unit: $
+formula: Revised = cash book + receipts not recorded - payments not recorded
+step: 5,200 + 600 = 5,800.
+step: 5,800 - 45 - 300 = $5,455.
+check: 5200+600-45-300
+explain: This is the SOFP cash figure.
+mistake: Ignoring bank charges.
+tip: Update the cash book first.
+src: Study text ch13 - revised balance (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: The bank statement shows a credit balance of $6,100. Unpresented cheques total $1,400 and an outstanding deposit is $755.
+q: What is the balance ($) per the reconciliation, which should agree with the revised cash book?
+answer: 5455
+tol: 0
+unit: $
+formula: Bank statement - unpresented cheques + outstanding deposits
+step: 6,100 - 1,400 = 4,700.
+step: 4,700 + 755 = $5,455.
+check: 6100-1400+755
+explain: This agrees with the revised cash book.
+mistake: Adding unpresented cheques.
+tip: Cheques out; deposits in.
+src: Study text ch13 - reconciliation (concept basis; original figures)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO items are reconciling items on the BANK STATEMENT side?
++ Cheques written but not yet presented to the bank || Timing difference.
++ An error made by the bank || Bank's error.
+- Bank interest charged || Cash book item.
+- A standing order paid by the bank || Cash book item.
+explain: Unrecorded items and cash book errors go in the cash book.
+mistake: Mixing sides.
+tip: Timing and bank errors = bank side.
+src: Study text ch13 - two types (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each item with where it is adjusted.
+pair: Bank charges => Cash book
+pair: Unpresented cheque => Bank statement balance (deduct)
+pair: Outstanding lodgement => Bank statement balance (add)
+pair: Cash book transposition error => Cash book
+explain: The cash book is corrected; the statement is reconciled.
+mistake: Correcting the cash book for timing differences.
+tip: Our errors = our book.
+src: Study text ch13 - classification (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A customer receipt of $540 was recorded in the cash book as $450. By how much ($) must the cash book balance be increased?
+answer: 90
+tol: 0
+unit: $
+formula: Correction = correct amount - recorded amount
+step: 540 - 450.
+step: = $90 increase.
+check: 540-450
+explain: Transposition errors are divisible by 9.
+mistake: Adding 540 again.
+tip: Correct the difference only.
+src: Study text ch13 - errors (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What are the two main stages of preparing a bank reconciliation?
++ Update the cash book, then reconcile the bank statement balance to the revised cash book || Standard approach.
+- Reconcile first, then ignore the cash book || Cash book must be updated.
+- Change the bank statement figures || Statements are not changed.
+- Prepare the trial balance first || Not needed.
+explain: Both stages should arrive at the same figure.
+mistake: Skipping the cash book update.
+tip: Update, then reconcile.
+src: Study text ch13 - format (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: The cash book shows an overdraft of $2,000. Bank charges of $80 have not been recorded.
+q: What is the revised cash book overdraft ($)?
+answer: 2080
+tol: 0
+unit: $
+formula: Revised overdraft = overdraft + unrecorded charges
+step: Overdraft = -2,000.
+step: -2,000 - 80 = -2,080 (overdraft of $2,080).
+check: 2000+80
+explain: Charges make the overdraft larger.
+mistake: Reducing the overdraft.
+tip: Treat overdrafts as negatives.
+src: Study text ch13 - overdrafts (concept basis; original figures)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: The bank statement shows an overdraft of $1,800. Unpresented cheques are $900 and an outstanding lodgement is $620.
+q: What balance should the revised cash book show?
++ Overdraft of $2,080 || -1,800 - 900 + 620.
+- Overdraft of $1,520 || Signs reversed for cheques.
+- Credit of $280 || Not correct.
+- Overdraft of $3,320 || Adds lodgement wrongly.
+formula: Statement balance - unpresented + outstanding lodgements
+step: -1,800 - 900 = -2,700.
+step: -2,700 + 620 = -2,080: overdraft $2,080.
+check: -1800-900+620
+explain: Agrees with the revised cash book overdraft.
+mistake: Treating the overdraft as positive.
+tip: Use negatives.
+src: Study text ch13 - overdraft reconciliation (concept basis; original figures)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: A supplier's statement shows a payment the business sent on the last day of the month as not yet received. What type of difference is this?
++ A payment in transit (timing difference) || Will clear shortly.
+- An error by the business || Not an error.
+- An unrecorded invoice || Not an invoice.
+- A disputed item || Not disputed.
+explain: No adjustment to the ledger is needed.
+mistake: Adjusting the ledger.
+tip: In transit = timing.
+src: Study text ch13 - supplier differences (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Interest received from the bank appears on the bank statement only. How is it treated?
++ Debit cash at bank; credit interest received in the cash book || Unrecorded receipt.
+- Deduct it from the bank statement balance || Not a timing difference.
+- Add it to the bank statement balance || Not correct.
+- Ignore it || Must be recorded.
+explain: Direct credits are treated the same way.
+mistake: Treating it as a reconciling item.
+tip: Update the cash book.
+src: Study text ch13 - interest (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: A supplier's statement shows $8,400 owed. The business's ledger shows $6,900. A payment of $1,200 is in transit and an invoice of $300 has not yet been recorded by the business.
+q: After recording the invoice, what will the business's ledger balance be ($)?
+answer: 7200
+tol: 0
+unit: $
+formula: Revised ledger = ledger + unrecorded invoice
+step: 6,900 + 300 = 7,200.
+step: Statement 8,400 - payment in transit 1,200 = 7,200 - they agree.
+check: 6900+300
+explain: The payment in transit is a timing difference.
+mistake: Adjusting the ledger for the payment.
+tip: Record omissions, reconcile timing.
+src: Study text ch13 - supplier reconciliation (concept basis; original figures)
+
+=== Q022
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee deducts unpresented cheques from the CASH BOOK balance. What is wrong?
++ The cheques are already recorded in the cash book; they are deducted from the bank statement balance || Double counting.
+- Nothing is wrong || Double counts.
+- They should be added to the cash book || Not correct.
+- They should be ignored || They are reconciling items.
+explain: Cash would be understated twice.
+mistake: Adjusting the wrong side.
+tip: Already in our book.
+src: Study text ch13 - unpresented cheques (concept basis; original question)
+
+=== Q023
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the bank reconciliation steps in order.
+item: Compare the cash book with the bank statement and tick matching items
+item: Update the cash book for unrecorded items and errors
+item: Calculate the revised cash book balance
+item: Reconcile the bank statement balance for timing differences and bank errors
+explain: The two figures should then agree.
+mistake: Reconciling before updating.
+tip: Tick, update, revise, reconcile.
+src: Study text ch13 - steps (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: The bank has wrongly charged another customer's cheque to the business's account. How is this treated?
++ As a reconciling item on the bank statement side, and the bank is asked to correct it || Bank error.
+- Recorded in the cash book as a payment || Not the business's payment.
+- Ignored || Must be reconciled.
+- Written off as an expense || Not an expense.
+explain: The cash book is not changed for bank errors.
+mistake: Recording the bank's error.
+tip: Bank error = bank side.
+src: Study text ch13 - bank errors (concept basis; original question)
+
+=== Q025
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: The cash book shows a debit balance of $3,600. A customer's cheque for $350 has been dishonoured, and a standing order of $120 has not been recorded. What is the revised cash book balance ($)?
+answer: 3130
+tol: 0
+unit: $
+formula: Revised = balance - dishonoured cheque - standing order
+step: 3,600 - 350 = 3,250.
+step: 3,250 - 120 = $3,130.
+check: 3600-350-120
+explain: Both items reduce cash.
+mistake: Adding the dishonoured cheque.
+tip: Bounced = money out.
+src: Study text ch13 - updates (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Why might a business send aged statements to customers?
++ To remind them of amounts owed and any overdue balances || Credit control.
+- To pay suppliers || Not related.
+- To calculate depreciation || Not related.
+- To record sales tax || Not related.
+explain: Customers can query differences early.
+mistake: Thinking statements are only for suppliers.
+tip: Remind and chase.
+src: Study text ch13 - customer statements (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A trainee uses the bank statement balance as the cash figure in the SOFP "because the bank is always right". What is wrong?
++ The bank statement excludes timing differences and may contain errors; the revised cash book is used || Correct figure.
+- Nothing is wrong || Not correct.
+- The SOFP should show zero cash || Not correct.
+- The opening cash figure should be used || Not correct.
+explain: Unpresented cheques have already been paid out by the business.
+mistake: Using the statement figure.
+tip: Revised cash book.
+src: Study text ch13 - SOFP (concept basis; original question)
+
+=== Q028
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The revised cash book balance is $7,800 (debit). Unpresented cheques total $2,300 and outstanding deposits $1,100. What should the bank statement show ($)?
+answer: 9000
+tol: 0
+unit: $
+formula: Bank statement = revised cash book + unpresented cheques - outstanding deposits
+step: 7,800 + 2,300 = 10,100.
+step: 10,100 - 1,100 = $9,000 (credit).
+check: 7800+2300-1100
+explain: Work backwards from the cash book to the statement.
+mistake: Reversing the adjustments.
+tip: Reverse the formula.
+src: Study text ch13 - working back (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which item is a TIMING difference?
++ A cheque paid to a supplier on the last day of the year that the bank has not yet processed || Will clear later.
+- Bank charges not in the cash book || Unrecorded item.
+- A transposition error in the cash book || Cash book error.
+- A dishonoured cheque || Cash book adjustment.
+explain: Timing differences resolve themselves in the next period.
+mistake: Confusing with unrecorded items.
+tip: Just not cleared yet.
+src: Study text ch13 - timing (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: An invoice appears on the supplier's statement but not in the business's ledger. What should the business do?
++ Check the invoice is valid and, if so, record it in the payables ledger || Unrecorded invoice.
+- Ignore it until the next statement || Should be followed up.
+- Deduct it from the statement balance || Only if a timing difference.
+- Pay it immediately without checking || Should be verified.
+explain: Disputed items should be raised with the supplier.
+mistake: Paying without checking.
+tip: Verify then record.
+src: Study text ch13 - supplier reconciliation (concept basis; original question)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Cash book debit balance $12,450. Bank statement items not in the cash book: bank charges $65; direct credit $1,320; direct debit $410. A cheque payment of $285 was entered in the cash book as $258.
+q: What is the revised cash book balance ($)?
+answer: 13268
+tol: 0
+unit: $
+formula: Revised = balance + credits - charges - direct debits - error correction
+step: 12,450 + 1,320 - 65 - 410 = 13,295.
+step: Error: payment understated by 27; 13,295 - 27 = $13,268.
+check: 12450+1320-65-410-(285-258)
+explain: The payment was 27 more than recorded, reducing cash.
+mistake: Correcting the error the wrong way.
+tip: Payment understated = cash too high.
+src: Study text ch13 - revised balance (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Revised cash book balance $13,268 debit. Unpresented cheques $3,940. Outstanding lodgement $2,150. The bank wrongly debited a $500 cheque of another customer to the account.
+q: What balance should the bank statement show?
++ $14,558 credit || 13,268 + 3,940 - 2,150 - 500.
+- $15,058 credit || Ignores the bank error.
+- $11,978 credit || Signs reversed.
+- $13,268 credit || No reconciling items applied.
+formula: Statement = revised cash book + unpresented - lodgements - bank's wrong debit
+step: 13,268 + 3,940 - 2,150 = 15,058.
+step: The bank wrongly took out 500, so the statement shows 14,558.
+check: 13268+3940-2150-500
+explain: The bank error lowers the statement balance.
+mistake: Ignoring the bank error.
+tip: Think about what the bank did.
+src: Study text ch13 - full reconciliation (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO items should be entered in the cash book when preparing a reconciliation?
++ A standing order for insurance paid by the bank || Unrecorded payment.
++ A BACS receipt from a customer shown on the statement || Unrecorded receipt.
+- An outstanding lodgement || Timing difference.
+- A cheque not yet presented || Timing difference.
+explain: Timing differences are only reconciling items.
+mistake: Recording timing differences.
+tip: Only what we didn't know.
+src: Study text ch13 - cash book updates (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: The bank statement shows an overdraft of $4,600. Unpresented cheques are $2,100 and outstanding lodgements $3,400.
+q: What is the correct cash balance ($)? (Enter a negative number for an overdraft.)
+answer: -3300
+tol: 0
+unit: $
+formula: Correct = statement balance - unpresented + lodgements
+step: -4,600 - 2,100 = -6,700.
+step: -6,700 + 3,400 = -3,300 (overdraft).
+check: -4600-2100+3400
+explain: The overdraft is a current liability in the SOFP.
+mistake: Treating the overdraft as positive.
+tip: Signs carefully.
+src: Study text ch13 - overdraft (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee records an outstanding lodgement as a receipt in the cash book again. What is the effect?
++ Cash is overstated, because the deposit was already recorded || Double counting.
+- No effect || Double counted.
+- Cash is understated || Overstated.
+- Receivables are overstated || Receivables are reduced too much.
+explain: Outstanding lodgements are only reconciling items.
+mistake: Double recording.
+tip: Already in the book.
+src: Study text ch13 - lodgements (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Supplier statement balance $15,750. Ledger balance $12,180. Differences: payment of $2,500 in transit; credit note of $430 not yet received by the business (on the statement); invoice of $1,500 on the statement not recorded by the business.
+q: After the business records the missing items, what is its revised ledger balance ($)?
+answer: 13250
+tol: 0
+unit: $
+formula: Revised ledger = ledger + unrecorded invoice - unrecorded credit note
+step: 12,180 + 1,500 - 430 = 13,250.
+step: Statement 15,750 - payment in transit 2,500 = 13,250 - agreed.
+check: 12180+1500-430
+explain: The payment in transit is a timing difference only.
+mistake: Adjusting the ledger for the payment.
+tip: Record omissions; reconcile timing.
+src: Study text ch13 - supplier reconciliation (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A cashier prepares the bank reconciliation and also writes and records all cheques. Why is this a control weakness?
++ The same person could hide fraud in the reconciliation; duties should be segregated || Lack of segregation.
+- Reconciliations are not needed || They are needed.
+- The bank prepares reconciliations || The business does.
+- Cashiers are not allowed to see bank statements || Not the issue.
+explain: An independent person should prepare or review it.
+mistake: Ignoring segregation of duties.
+tip: Different people, different jobs.
+src: Study text ch13 - controls (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: The cash book balance is $8,920 debit. The receipts column was overcast by $200. Bank charges of $55 and interest received of $38 appear only on the statement.
+q: What is the revised cash book balance ($)?
+answer: 8703
+tol: 0
+unit: $
+formula: Revised = balance - overcast - charges + interest
+step: 8,920 - 200 = 8,720.
+step: 8,720 - 55 + 38 = $8,703.
+check: 8920-200-55+38
+explain: Overcasting receipts overstated cash.
+mistake: Adding the overcast.
+tip: Overcast receipts = reduce cash.
+src: Study text ch13 - errors (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why can't unpresented cheques be ignored in a reconciliation?
++ They explain why the bank statement balance is higher than the cash book || Timing difference.
+- Because they are cash book errors || They are not errors.
+- Because they are bank errors || Not bank errors.
+- Because they are income || Not income.
+explain: Without them, the balances will not agree.
+mistake: Ignoring them.
+tip: They explain the gap.
+src: Study text ch13 - unpresented cheques (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each supplier statement difference with its treatment.
+pair: Payment in transit => Timing difference - no ledger adjustment
+pair: Invoice not recorded by the business => Record it in the ledger if valid
+pair: Disputed invoice => Raise with the supplier
+pair: Credit note issued by supplier not yet recorded => Record it in the ledger
+explain: Only genuine omissions or errors change the ledger.
+mistake: Adjusting for timing differences.
+tip: Timing vs omission vs dispute.
+src: Study text ch13 - supplier differences (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Bank statement credit balance $9,780. Unpresented cheques: #301 $1,250; #302 $890; #305 $2,140. Outstanding lodgement $3,600.
+q: What is the balance ($) per the reconciliation?
+answer: 9100
+tol: 0
+unit: $
+formula: Statement - unpresented cheques + outstanding lodgements
+step: Unpresented total = 1,250 + 890 + 2,140 = 4,280.
+step: 9,780 - 4,280 + 3,600 = $9,100.
+check: 9780-(1250+890+2140)+3600
+explain: This should equal the revised cash book.
+mistake: Missing one cheque.
+tip: Total the cheques first.
+src: Study text ch13 - reconciliation (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: The cash book shows a debit balance of $500 and the bank statement shows "$500 DR". A trainee says they agree. What is wrong?
++ On a bank statement, DR means overdrawn, so the two balances are opposite || Mirror image.
+- Nothing is wrong || They are opposite.
+- Both show an overdraft || Cash book debit = money in the bank.
+- Both show money in the bank || Statement shows overdrawn.
+explain: Read statement balances from the bank's point of view.
+mistake: Reading DR the same way.
+tip: Bank's debit = your overdraft.
+src: Study text ch13 - mirror image (concept basis; original scenario)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A cash book was undercast by $1,000 on the payments side, and a receipt of $360 was recorded twice. The original balance was $6,740 debit. What is the revised balance ($)?
+answer: 5380
+tol: 0
+unit: $
+formula: Revised = balance - payments undercast - duplicated receipt
+step: 6,740 - 1,000 = 5,740.
+step: 5,740 - 360 = $5,380.
+check: 6740-1000-360
+explain: Both errors overstated cash.
+mistake: Adding the undercast.
+tip: Payments undercast = cash too high.
+src: Study text ch13 - errors (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: How often should bank reconciliations ideally be prepared?
++ Regularly, such as monthly, so errors and fraud are found quickly || Timely control.
+- Only at the year end || Too infrequent.
+- Never, if the bank is reliable || Always needed.
+- Only when an auditor asks || Too late.
+explain: Frequent reconciliations keep differences small.
+mistake: Leaving it to the year end.
+tip: Little and often.
+src: Study text ch13 - frequency (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Revised cash book: overdraft $1,250. Unpresented cheques $3,800. Outstanding lodgements $1,950.
+q: What balance ($) should the bank statement show? (Enter a negative number if overdrawn.)
+answer: 600
+tol: 0
+unit: $
+formula: Statement = revised cash book + unpresented - lodgements
+step: -1,250 + 3,800 = 2,550.
+step: 2,550 - 1,950 = $600 in credit.
+check: -1250+3800-1950
+explain: The bank shows money in hand because cheques have not cleared.
+mistake: Keeping the overdraft sign throughout.
+tip: Reverse the reconciliation.
+src: Study text ch13 - working back (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A large unpresented cheque from four months ago is still not cleared. What should be considered?
++ Whether the cheque has been lost, cancelled or is stale, and whether to reverse it in the cash book || Investigate old items.
+- Nothing - it is a normal timing difference || Too old.
+- Deduct it twice || Not correct.
+- Record it as income || Not income.
+explain: Old reconciling items may hide errors.
+mistake: Leaving old items unexamined.
+tip: Old timing differences = investigate.
+src: Study text ch13 - stale items (concept basis; original scenario)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Cash book debit $3,870. Unrecorded: bank charges $90; dishonoured customer cheque $420; direct credit $1,150. Unpresented cheques $2,060; outstanding lodgement $780.
+q: What does the bank statement show ($)?
+answer: 5790
+tol: 0
+unit: $
+formula: Revised cash book, then statement = revised + unpresented - lodgements
+step: Revised = 3,870 - 90 - 420 + 1,150 = 4,510.
+step: Statement = 4,510 + 2,060 - 780 = $5,790.
+check: 3870-90-420+1150+2060-780
+explain: Both stages are needed.
+mistake: Applying timing differences to the cash book.
+tip: Two stages.
+src: Study text ch13 - full reconciliation (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: What is the MAIN benefit of reconciling supplier statements regularly?
++ Errors, missing invoices and disputes are identified before payment || Accurate payables.
+- It removes the need to pay suppliers || Not true.
+- It increases purchases || Not related.
+- It replaces the bank reconciliation || Different control.
+explain: It also protects supplier relationships.
+mistake: Paying statements without checking.
+tip: Check before paying.
+src: Study text ch13 - benefits (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about bank reconciliations is correct?
++ Unrecorded items and cash book errors adjust the cash book; timing differences and bank errors adjust the bank statement balance || Core rule.
+- All differences adjust the cash book || Timing differences do not.
+- All differences adjust the bank statement || Unrecorded items do not.
+- The bank statement balance goes in the SOFP || Revised cash book.
+explain: Both sides should then agree.
+mistake: Mixing up sides.
+tip: Ours vs theirs.
+src: Study text ch13 - summary (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which reconciliation formula is correct?
++ Bank statement - unpresented cheques + outstanding deposits ± bank errors = revised cash book || Core formula.
+- Bank statement + unpresented cheques - outstanding deposits = cash book || Signs reversed.
+- Cash book + unpresented cheques = bank statement - deposits || Partly reversed.
+- Cash book = bank statement always || Not true.
+explain: Treat overdrafts as negative numbers.
+mistake: Reversing signs.
+tip: Cheques out, deposits in.
+src: Study text ch13 - formula (concept basis; original question)

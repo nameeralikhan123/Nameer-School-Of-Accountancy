@@ -1,0 +1,882 @@
+@subject acffa2
+@chapter 4
+@title Recording Transactions and Events
+@lo C1
+@topic t1 | Cash, credit and bank transactions | C1
+@topic t2 | Returns | C1
+@topic t3 | Sales tax | C1
+@topic t4 | Discounts | C1
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Goods are sold for $1,000 before sales tax. Sales tax is 20%. How much sales tax ($) is charged?
+answer: 200
+tol: 0
+unit: $
+formula: Sales tax = net price x rate
+step: Net price = 1,000; rate = 20%.
+step: Tax = 1,000 x 20% = $200 (gross $1,200).
+check: 1000*0.2
+explain: The customer pays $1,200; the seller owes $200 to the tax authority.
+mistake: Recording sales at $1,200.
+tip: Net x rate.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is OUTPUT tax?
++ Sales tax charged on sales, owed to the tax authority || A liability.
+- Sales tax paid on purchases || Input tax.
+- Income tax on profits || Not sales tax.
+- A trade discount || Not tax.
+explain: Input tax on purchases is recoverable.
+mistake: Reversing input and output.
+tip: Output = sales.
+src: Study text ch4 - output tax (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is a credit sale recorded (ignoring sales tax)?
++ Debit receivables; credit sales || Asset up, income up.
+- Debit sales; credit receivables || Reversed.
+- Debit cash; credit sales || That is a cash sale.
+- Debit receivables; credit purchases || Wrong account.
+explain: When the customer pays: Dr bank, Cr receivables.
+mistake: Debiting cash for a credit sale.
+tip: Credit sale = receivable.
+src: Study text ch4 - credit sales (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How are goods returned TO a supplier, originally bought on credit, recorded?
++ Debit payables; credit purchases returns || Liability down, purchases reduced.
+- Debit purchases returns; credit payables || Reversed.
+- Debit sales returns; credit receivables || That is a customer return.
+- Debit bank; credit purchases || Not a cash refund here.
+explain: Purchases returns are also called returns outwards.
+mistake: Using sales returns.
+tip: Back to supplier = returns outwards.
+src: Study text ch4 - returns (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: How is a TRADE discount recorded?
++ The sale or purchase is simply recorded at the price after the discount || No separate entry.
+- As a separate expense || Not recorded separately.
+- As discount received income || That is a settlement discount.
+- As an increase in sales || Not correct.
+explain: Trade discounts are given for volume or loyalty.
+mistake: Recording the trade discount separately.
+tip: Trade discount = just record net.
+src: Study text ch4 - trade discounts (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is petty cash?
++ A small amount of notes and coins kept to pay minor expenses || Small sums.
+- The main business bank account || Not petty.
+- A short-term loan || Not petty cash.
+- Cash owed by customers || Receivables.
+explain: The imprest system keeps a fixed float.
+mistake: Confusing with the bank account.
+tip: Petty = small.
+src: Study text ch4 - petty cash (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: An invoice shows a gross total of $1,440, including sales tax at 20%. How much sales tax ($) does it contain?
+answer: 240
+tol: 0
+unit: $
+formula: Tax in gross = gross x rate / (100 + rate)
+step: 1,440 x 20 / 120.
+step: = $240 (net $1,200).
+check: 1440*20/120
+explain: Taking 20% of the gross amount gives the wrong answer ($288).
+mistake: Using 20% of gross.
+tip: Gross: x 20/120.
+src: Study text ch4 - gross amounts (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: At what amount are sales recorded in the sales account of a sales-tax-registered business?
++ Net of sales tax || Tax is not the business's income.
+- Gross including sales tax || Overstates revenue.
+- At cost || Not revenue.
+- At the tax amount only || Not revenue.
+explain: The tax element is credited to the sales tax account.
+mistake: Recording sales gross.
+tip: Revenue is net.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is a settlement discount?
++ A discount offered for paying early || Encourages prompt payment.
+- A discount for buying in bulk || Trade discount.
+- A tax refund || Not a discount.
+- A price increase for late payment || Not a discount.
+explain: Whether it is taken depends on the customer.
+mistake: Confusing with trade discount.
+tip: Settle early = discount.
+src: Study text ch4 - settlement discount (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How are goods returned BY a credit customer recorded?
++ Debit sales returns; credit receivables || Revenue reduced, receivable reduced.
+- Debit receivables; credit sales returns || Reversed.
+- Debit payables; credit purchases returns || Supplier return.
+- Debit purchases; credit receivables || Wrong account.
+explain: Sales returns are also called returns inwards.
+mistake: Using purchases returns.
+tip: Customer return = returns inwards.
+src: Study text ch4 - returns (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A credit sale of $3,000 net, plus sales tax at 20%, is made. Which entries are correct?
++ Dr receivables $3,600; Cr sales $3,000; Cr sales tax $600 || Gross to receivable.
+- Dr receivables $3,000; Cr sales $3,000 || Ignores tax.
+- Dr receivables $3,600; Cr sales $3,600 || Revenue gross.
+- Dr sales tax $600; Cr sales $600 || Wrong.
+formula: Gross = net x 1.2
+step: Tax = 3,000 x 20% = 600; gross = 3,600.
+step: Receivable gross; sales net; tax as a liability.
+check: 3000*1.2
+explain: Output tax is a credit (liability).
+mistake: Debiting sales tax on a sale.
+tip: Sale: Cr sales tax.
+src: Study text ch4 - sales tax entries (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: For a quarter, output tax is $18,000 and input tax is $11,500. How much ($) is payable to the tax authority?
+answer: 6500
+tol: 0
+unit: $
+formula: Payable = output tax - input tax
+step: 18,000 - 11,500.
+step: = $6,500 payable.
+check: 18000-11500
+explain: The credit balance on the sales tax account is a liability.
+mistake: Adding the two.
+tip: Output less input.
+src: Study text ch4 - sales tax account (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Goods with a list price of $2,000 are sold with a 10% trade discount. Sales tax is 20%. What is the gross amount ($) on the invoice?
+answer: 2160
+tol: 0
+unit: $
+formula: Gross = list price x (1 - trade discount) x (1 + tax rate)
+step: Net after trade discount = 2,000 x 90% = 1,800.
+step: Tax = 1,800 x 20% = 360; gross = $2,160.
+check: 2000*0.9*1.2
+explain: Sales tax is calculated after the trade discount.
+mistake: Calculating tax on the list price.
+tip: Discount first, then tax.
+src: Study text ch4 - discounts and tax (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A company sells goods for $5,000 (ignore sales tax) and offers a 3% settlement discount. It EXPECTS the customer to take the discount. What revenue is recorded at the date of sale?
++ $4,850 || Net of the expected discount.
+- $5,000 || That applies if the discount is not expected.
+- $150 || The discount only.
+- $5,150 || Adds the discount.
+formula: Revenue = price x (1 - discount) when the discount is expected
+step: Discount = 5,000 x 3% = 150.
+step: Revenue = 5,000 - 150 = $4,850.
+check: 5000*0.97
+explain: IFRS 15 treats the discount as variable consideration.
+mistake: Recording the full price.
+tip: Expected discount = record net.
+src: Study text ch4 - settlement discount (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A purchaser receives a $4,000 invoice and pays within the discount period, taking a 2% settlement discount. Which entries record the payment?
++ Dr payables $4,000; Cr bank $3,920; Cr discount received $80 || Discount received is income.
+- Dr payables $3,920; Cr bank $3,920 || Leaves $80 owed.
+- Dr discount received $80; Cr payables $80 || Wrong direction.
+- Dr purchases $80; Cr bank $80 || Wrong.
+formula: Payment = invoice x (1 - discount)
+step: Discount = 4,000 x 2% = 80; paid = 3,920.
+step: Clear the full payable; credit the saving to income.
+check: 4000
+explain: The purchaser initially records the invoice at full amount.
+mistake: Reducing purchases instead.
+tip: Discount received = income.
+src: Study text ch4 - discount received (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO entries record a credit PURCHASE of $500 net plus sales tax at 20%?
++ Debit purchases $500 and debit sales tax $100 || Net cost and recoverable input tax.
++ Credit payables $600 || Gross amount owed.
+- Credit sales tax $100 || Output tax is credited on sales.
+- Debit payables $600 || Payables are credited.
+explain: Input tax is an asset (recoverable).
+mistake: Crediting input tax.
+tip: Purchase: Dr sales tax.
+src: Study text ch4 - input tax (concept basis; original question)
+
+=== Q017
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each return with its double entry.
+pair: Customer returns credit goods => Dr sales returns, Cr receivables
+pair: Customer returns cash goods (refund) => Dr sales returns, Cr bank
+pair: Business returns credit goods to supplier => Dr payables, Cr purchases returns
+pair: Business returns cash goods (refund received) => Dr bank, Cr purchases returns
+explain: The other side depends on how the goods were paid for.
+mistake: Mixing inwards and outwards.
+tip: Who returned, and how was it paid?
+src: Study text ch4 - returns (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A business runs an imprest petty cash system with a float of $300. During the month, vouchers total $214. How much ($) is needed to restore the float?
+answer: 214
+tol: 0
+unit: $
+formula: Top-up = total of vouchers paid
+step: Cash remaining = 300 - 214 = 86.
+step: Top-up = 300 - 86 = $214.
+check: 300-(300-214)
+explain: Top-up: Dr petty cash, Cr bank.
+mistake: Topping up by the float amount.
+tip: Replace what was spent.
+src: Study text ch4 - imprest system (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What does a DEBIT balance on the sales tax account at the period end mean?
++ Input tax exceeds output tax, so a refund is due from the tax authority || An asset.
+- More tax is owed to the tax authority || That is a credit balance.
+- An error, always || It can be legitimate.
+- Sales were recorded gross || Not necessarily.
+explain: Exporters or businesses buying heavily may have refunds due.
+mistake: Thinking the balance is always a liability.
+tip: Debit = refund due.
+src: Study text ch4 - sales tax balance (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Who ultimately bears sales tax?
++ The final consumer || Businesses collect and pass it on.
+- The manufacturer || Recovers its input tax.
+- The wholesaler || Recovers its input tax.
+- The retailer || Recovers its input tax.
+explain: Registered businesses act as collectors.
+mistake: Thinking businesses bear the tax.
+tip: End consumer pays.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A cash purchase of stationery costs $360 including sales tax at 20%. How should the expense be recorded?
++ Dr stationery $300; Dr sales tax $60; Cr bank $360 || Expense is net.
+- Dr stationery $360; Cr bank $360 || Ignores recoverable tax.
+- Dr stationery $288; Dr sales tax $72; Cr bank $360 || Tax taken as 20% of gross.
+- Dr stationery $300; Cr sales tax $60; Cr bank $240 || Wrong.
+formula: Net = gross / 1.2
+step: Net = 360 / 1.2 = 300; tax = 60.
+step: Expense net, input tax as asset, bank gross.
+check: 360/1.2
+explain: Registered businesses record expenses net of recoverable tax.
+mistake: Taking 20% of the gross amount.
+tip: Gross / 1.2.
+src: Study text ch4 - input tax (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: A seller did NOT expect the customer to take a settlement discount, so recorded the full price. The customer then pays early and takes the discount. What adjustment is needed?
++ Reduce revenue by the discount: Dr revenue, Cr receivables || Adjust when taken.
+- Record discount allowed as income || It reduces income.
+- No adjustment is needed || The receivable would remain.
+- Debit receivables || Increases the debt.
+explain: IFRS 15 adjusts the transaction price.
+mistake: Leaving the receivable uncleared.
+tip: Taken unexpectedly = reduce revenue.
+src: Study text ch4 - settlement discount (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A list price of $5,000 is subject to a 20% trade discount, then sales tax at 20%. What is the net sales revenue ($) recorded?
+answer: 4000
+tol: 0
+unit: $
+formula: Revenue = list price x (1 - trade discount)
+step: Trade discount = 5,000 x 20% = 1,000.
+step: Revenue = 5,000 - 1,000 = $4,000 (tax 800 is separate).
+check: 5000*0.8
+explain: Neither the trade discount nor sales tax appears in revenue.
+mistake: Including tax in revenue.
+tip: Net of discount and tax.
+src: Study text ch4 - trade discount (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is the top-up of an imprest petty cash float recorded?
++ Debit petty cash; credit bank || Cash moves from bank to petty cash.
+- Debit bank; credit petty cash || Reversed.
+- Debit expenses; credit bank || Expenses are recorded from vouchers.
+- Debit petty cash; credit capital || Not capital.
+explain: Expenses are debited when vouchers are recorded.
+mistake: Debiting expenses with the top-up.
+tip: Refill the tin.
+src: Study text ch4 - petty cash (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee debits the sales tax account with the tax on a credit SALE. What is wrong?
++ Output tax on sales is a liability and should be credited || Tax collected is owed.
+- Nothing is wrong || It should be credited.
+- Sales tax should be ignored on sales || It must be recorded.
+- It should be debited to sales || Wrong.
+explain: Input tax on purchases is debited.
+mistake: Reversing the tax entry.
+tip: Sale = credit tax.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is a bank payments report analysed and posted?
++ Each column (payables, wages, rent, etc.) is debited to its account, with the total credited to bank || One credit, many debits.
+- Each payment is credited to its expense account || Expenses are debits.
+- The total is debited to bank || Payments reduce bank.
+- It is not posted to the ledger || It is posted.
+explain: Analysis columns save time in posting.
+mistake: Crediting expenses.
+tip: Debit the analysis, credit the bank.
+src: Study text ch4 - bank payments (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: An invoice includes sales tax at 17.5% and has a gross total of $2,350. How much sales tax ($) does it contain?
+answer: 350
+tol: 0
+unit: $
+formula: Tax = gross x rate / (100 + rate)
+step: 2,350 x 17.5 / 117.5.
+step: = $350 (net $2,000).
+check: 2350*17.5/117.5
+explain: The same method works for any rate.
+mistake: Taking 17.5% of the gross.
+tip: Gross x r/(100+r).
+src: Study text ch4 - gross amounts (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Why might a supplier offer a settlement discount?
++ To encourage customers to pay sooner and improve cash flow || Prompt payment.
+- To increase order volumes || Trade discount.
+- To avoid sales tax || Not possible.
+- To increase receivables || The opposite.
+explain: The cost of the discount should be weighed against the cash benefit.
+mistake: Confusing the purposes of discounts.
+tip: Pay early, pay less.
+src: Study text ch4 - settlement discount (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Where is "returns outwards" shown in the statement of profit or loss?
++ As a deduction from purchases within cost of sales || Reduces purchases.
+- As a deduction from sales || That is returns inwards.
+- As an expense || Not an expense.
+- As income below gross profit || Not income.
+explain: Returns inwards are deducted from revenue.
+mistake: Deducting returns outwards from sales.
+tip: Outwards = purchases.
+src: Study text ch4 - returns presentation (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is a cash purchase of goods for resale recorded (ignoring sales tax)?
++ Debit purchases; credit bank || Expense up, asset down.
+- Debit bank; credit purchases || Reversed.
+- Debit purchases; credit payables || That is a credit purchase.
+- Debit inventory; credit sales || Wrong.
+explain: Inventory is adjusted only at the period end.
+mistake: Debiting inventory directly.
+tip: Cash purchase = Cr bank.
+src: Study text ch4 - cash purchases (concept basis; original question)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: During a quarter (all figures net): credit sales $90,000 and cash sales $15,000, all standard-rated at 20%; purchases $62,000 standard-rated at 20%; wages $20,000 (no sales tax).
+q: How much sales tax ($) is payable for the quarter?
+answer: 8600
+tol: 0
+unit: $
+formula: Payable = output tax - input tax
+step: Output = (90,000 + 15,000) x 20% = 21,000; input = 62,000 x 20% = 12,400.
+step: Payable = 21,000 - 12,400 = $8,600.
+check: (90000+15000)*0.2-62000*0.2
+explain: Wages carry no sales tax.
+mistake: Including wages.
+tip: Only taxable items.
+src: Study text ch4 - sales tax (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A seller sells goods for $8,000 net of sales tax (20%) and offers a 5% settlement discount. The customer is expected to take the discount. Sales tax is calculated on the discounted amount.
+q: What amount is debited to receivables at the date of sale?
++ $9,120 || (8,000 x 95%) x 1.2.
+- $9,600 || Ignores the discount.
+- $7,600 || Ignores tax.
+- $9,500 || Not supported.
+formula: Receivable = net x (1 - discount) x (1 + tax)
+step: Discounted net = 8,000 x 95% = 7,600; tax = 1,520.
+step: Receivable = 7,600 + 1,520 = $9,120.
+check: 8000*0.95*1.2
+explain: Revenue recorded is $7,600.
+mistake: Calculating tax on the undiscounted amount.
+tip: Discount, then tax.
+src: Study text ch4 - discounts and tax (concept basis; original figures)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: The sales tax account had a credit balance of $4,200 b/f. Output tax for the quarter was $15,600 and input tax $9,800. The opening balance was paid during the quarter.
+q: What is the closing balance ($) on the sales tax account? (It is a credit balance.)
+answer: 5800
+tol: 0
+unit: $
+formula: Closing = opening + output - input - payment
+step: 4,200 + 15,600 - 9,800 = 10,000.
+step: Less payment 4,200 = $5,800 credit.
+check: 4200+15600-9800-4200
+explain: Payments to the tax authority are debited to the account.
+mistake: Forgetting the payment.
+tip: Track the account like any ledger.
+src: Study text ch4 - sales tax account (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A trainee records a 10% trade discount on a $1,000 sale as "Dr discount allowed $100". What is wrong?
++ Trade discounts are not recorded separately; the sale is simply recorded at $900 || No discount account.
+- It should be credited to discount received || Not a purchase.
+- It should increase sales || Not correct.
+- Nothing is wrong || Trade discounts are not posted.
+explain: Only the net price is recorded.
+mistake: Posting trade discounts.
+tip: Trade = invisible.
+src: Study text ch4 - trade discounts (concept basis; original question)
+
+=== Q035
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO statements about settlement discounts are correct?
++ A seller records revenue net of the discount if the customer is expected to take it || Variable consideration.
++ A purchaser records discount received as income when the discount is taken || Purchaser's treatment.
+- Settlement discounts are deducted at the point of sale regardless of payment || Trade discounts are.
+- Purchasers record the invoice net of all possible settlement discounts || They record the full amount.
+explain: Exam questions state whether the discount is expected.
+mistake: Treating settlement like trade discounts.
+tip: Seller: expected? Purchaser: taken?
+src: Study text ch4 - settlement discounts (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Petty cash float $250. Vouchers: postage $36, cleaning $48, travel $54 and stationery $42 plus sales tax $8.40 recoverable.
+q: How much ($) is needed to restore the imprest float?
+answer: 188.4
+tol: 0.001
+unit: $
+formula: Top-up = total paid out
+step: Total = 36 + 48 + 54 + 42 + 8.40 = 188.40.
+step: Top-up = $188.40.
+check: 36+48+54+42+8.4
+explain: Expenses are debited net; the recoverable tax is debited to the sales tax account.
+mistake: Leaving out the tax paid.
+tip: Replace every cent spent.
+src: Study text ch4 - petty cash (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A small business is NOT registered for sales tax. It buys equipment for $1,200 including $200 of sales tax. How should it record the purchase?
++ At $1,200, because it cannot recover the input tax || Tax is part of the cost.
+- At $1,000 with $200 input tax recoverable || Only if registered.
+- At $200 || Not correct.
+- It should not record the purchase || It must be recorded.
+explain: Non-registered businesses treat sales tax as part of the cost.
+mistake: Recovering tax when unregistered.
+tip: Can't recover = include in cost.
+src: Study text ch4 - unregistered businesses (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A seller records a $6,000 sale at full price because it does not expect the customer to take a 2% settlement discount. The customer unexpectedly pays within the discount period.
+q: How much ($) is received from the customer?
+answer: 5880
+tol: 0
+unit: $
+formula: Received = invoice x (1 - discount)
+step: Discount = 6,000 x 2% = 120.
+step: Received = 6,000 - 120 = $5,880; revenue is reduced by $120.
+check: 6000*0.98
+explain: Dr bank 5,880; Dr revenue 120; Cr receivables 6,000.
+mistake: Recording the $120 as an expense.
+tip: Reduce revenue.
+src: Study text ch4 - discount taken (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which entry records interest received on a business bank deposit?
++ Debit bank; credit interest received || Income.
+- Debit interest received; credit bank || Reversed.
+- Debit bank; credit capital || Not capital.
+- Debit receivables; credit bank || Wrong.
+explain: Interest received is shown as other income.
+mistake: Crediting capital.
+tip: Income = credit.
+src: Study text ch4 - bank receipts (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee records all credit sales gross, including 20% sales tax, in the sales account. What is the effect?
++ Revenue is overstated and the sales tax liability is understated || Tax is not income.
+- No effect || Revenue is wrong.
+- Revenue is understated || Overstated.
+- Receivables are overstated || Receivables are correct gross.
+explain: The tax portion belongs to the tax authority.
+mistake: Recording revenue gross.
+tip: Net revenue, gross receivable.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each discount with how it is recorded.
+pair: Trade discount given => Record the sale net, no separate entry
+pair: Settlement discount expected to be taken by customer => Record revenue net of the discount
+pair: Settlement discount taken by the business as purchaser => Credit discount received
+pair: Settlement discount not expected but taken by customer => Reduce revenue when taken
+explain: The treatment depends on the type of discount and who gives it.
+mistake: Treating all discounts the same.
+tip: Trade vs settlement, seller vs buyer.
+src: Study text ch4 - discounts (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Credit sales $48,000; returns inwards $2,300; credit purchases $31,000; returns outwards $1,100.
+q: What is net revenue ($) for the period?
+answer: 45700
+tol: 0
+unit: $
+formula: Net revenue = sales - returns inwards
+step: Sales = 48,000.
+step: Less returns inwards 2,300 = $45,700.
+check: 48000-2300
+explain: Returns outwards reduce purchases, not revenue.
+mistake: Deducting returns outwards from sales.
+tip: Inwards = from customers.
+src: Study text ch4 - returns (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why are a registered business's purchases recorded net of sales tax?
++ The input tax is recoverable, so it is not a cost to the business || Recorded as an asset.
+- Because purchases are never taxed || They often are.
+- Because tax is added to revenue instead || Not correct.
+- To reduce profit || Not the reason.
+explain: The recoverable tax is offset against output tax.
+mistake: Including recoverable tax in costs.
+tip: Recoverable = not a cost.
+src: Study text ch4 - input tax (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A customer paid $600 cash for goods, then returned them and received a cash refund. Which entry records the return?
++ Debit sales returns; credit bank || Cash refunded.
+- Debit sales returns; credit receivables || The sale was for cash.
+- Debit bank; credit sales returns || Reversed.
+- Debit payables; credit purchases returns || Supplier return.
+explain: The credit entry depends on how the customer originally paid.
+mistake: Crediting receivables for a cash sale.
+tip: Cash sale, cash refund.
+src: Study text ch4 - returns (concept basis; original scenario)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A purchaser buys goods with a list price of $12,000. The supplier gives a 15% trade discount and offers a further 2% settlement discount, which the purchaser takes. Ignore sales tax.
+q: How much ($) does the purchaser pay?
+answer: 9996
+tol: 0
+unit: $
+formula: Payment = list x (1 - trade) x (1 - settlement)
+step: After trade discount: 12,000 x 85% = 10,200.
+step: After settlement discount: 10,200 x 98% = $9,996 (discount received $204).
+check: 12000*0.85*0.98
+explain: Purchases are recorded at $10,200; discount received $204.
+mistake: Adding the percentages (17%).
+tip: Apply discounts in sequence.
+src: Study text ch4 - discounts (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: In an imprest system, what should cash in the petty cash tin plus the vouchers always equal?
++ The fixed float || A built-in control.
+- Total sales || Not related.
+- The bank balance || Not related.
+- Zero || Not correct.
+explain: Any shortfall indicates loss or error.
+mistake: Not reconciling petty cash.
+tip: Cash + vouchers = float.
+src: Study text ch4 - imprest control (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A purchaser takes a $150 settlement discount. A trainee records it by debiting discount received. What is wrong?
++ Discount received is income and should be credited; payables are debited || Entry reversed.
+- Nothing is wrong || Reversed.
+- It should reduce sales || Not the purchaser's sales.
+- It should be ignored || It must be recorded.
+explain: Full entry: Dr payables, Cr bank, Cr discount received.
+mistake: Debiting discount received.
+tip: Discount received = credit.
+src: Study text ch4 - discount received (concept basis; original question)
+
+=== Q048
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: All items include sales tax at 20%: credit sales $96,000 gross; credit purchases $57,600 gross.
+q: What is the net sales tax payable ($)?
+answer: 6400
+tol: 0
+unit: $
+formula: Tax in gross = gross x 20/120; payable = output - input
+step: Output = 96,000 x 20/120 = 16,000; input = 57,600 x 20/120 = 9,600.
+step: Payable = 16,000 - 9,600 = $6,400.
+check: 96000*20/120-57600*20/120
+explain: Work out the tax element of each gross figure first.
+mistake: Taking 20% of gross amounts.
+tip: Gross x 1/6 at 20%.
+src: Study text ch4 - sales tax (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which entries record a credit sale with sales tax?
++ Dr receivables (gross); Cr sales (net); Cr sales tax (tax) || Core entry.
+- Dr receivables (net); Cr sales (gross) || Wrong amounts.
+- Dr sales tax; Cr sales || Wrong.
+- Dr sales (gross); Cr receivables || Reversed.
+explain: For purchases, input tax is debited.
+mistake: Recording sales gross.
+tip: Gross debtor, net sale, tax credit.
+src: Study text ch4 - sales tax (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t4
+status: review
+important: 1
+q: Which statement correctly contrasts trade and settlement discounts?
++ Trade discounts are deducted at the point of sale; settlement discounts depend on early payment || Core contrast.
+- Both are recorded as expenses || Neither is an expense.
+- Trade discounts depend on early payment || Settlement does.
+- Settlement discounts are always ignored || They are recorded.
+explain: Sales tax is calculated after trade discount.
+mistake: Mixing them up.
+tip: Trade = volume; settlement = speed.
+src: Study text ch4 - discounts (concept basis; original question)

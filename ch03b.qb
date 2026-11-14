@@ -1,0 +1,923 @@
+@subject acfbe
+@chapter 3b
+@title Cost Behaviour
+@lo A4
+@topic t1 | Cost behaviour patterns | A4
+@topic t2 | High-low method | A4
+@topic t3 | Linear equations | A4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: A company doubles its output from 5,000 units to 10,000 units. Its factory rent is fixed. What happens to rent per unit?
++ It halves || Total rent is unchanged, but it is spread over twice as many units, so rent per unit halves.
+- It doubles || Total rent does not change with output, so the amount per unit cannot rise as output rises.
+- It stays the same || That describes VARIABLE cost per unit, not fixed cost per unit.
+- It falls to zero || Rent is still paid; the amount per unit falls but never reaches zero.
+explain: A fixed cost stays the same in TOTAL whatever the output (within the relevant range). Because the same total is divided by more units, fixed cost per unit falls as output rises.
+mistake: Saying fixed cost per unit is constant. It is the TOTAL that is constant; the per-unit figure falls.
+tip: Always ask "total or per unit?" before answering a cost behaviour question.
+src: Study text ch3b - fixed costs (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which statement about a variable cost is correct?
++ Total variable cost rises in proportion to output, while cost per unit stays constant || A variable cost varies directly with output, so the cost per unit is constant.
+- Total variable cost is constant, while cost per unit falls as output rises || This describes a fixed cost.
+- Both total and per-unit variable cost rise as output rises || Per-unit cost is constant for a linear variable cost.
+- Total variable cost stays constant within certain ranges of activity || This describes a step cost.
+explain: For a (linear) variable cost such as direct material, each extra unit adds the same cost. Total cost therefore rises in line with output and cost per unit is constant.
+mistake: Thinking the cost per unit of a variable cost rises with output.
+tip: Fixed - total constant, per unit falls. Variable - total rises, per unit constant.
+src: Study text ch3b - variable costs (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: A warehouse needs one forklift driver for every 2,000 orders a week or part of that number. How does the cost of forklift drivers behave?
++ As a step cost || The cost is fixed within ranges of activity and jumps when another driver is needed.
+- As a variable cost || A variable cost rises smoothly with every extra unit. Here the cost only changes at certain activity levels.
+- As a fixed cost || The cost changes when activity passes 2,000, 4,000 orders and so on, so it is not fixed over all activity levels.
+- As a curvilinear cost || A curvilinear cost changes continuously along a curve, not in jumps.
+explain: A step cost is fixed within a range of activity and then rises to a new fixed level when activity passes a threshold - for example when an extra supervisor or driver is needed.
+mistake: Calling it variable because it increases with activity. It increases in steps, not continuously.
+tip: Words such as "for every ... or part of" signal a step cost.
+src: Study text ch3b - step costs (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following is the BEST example of a semi-variable cost?
++ A mobile phone contract with a fixed monthly line rental plus a charge for each call || It has a fixed element (line rental) and a variable element (charge per call).
+- Straight-line depreciation on a delivery van || Straight-line depreciation is the same each period - a fixed cost.
+- Direct material used in production || Direct material varies directly with output - a variable cost.
+- Annual business rates on a factory || Business rates are a period charge - a fixed cost.
+explain: A semi-variable (mixed) cost contains a fixed part and a variable part. Utility bills with a standing charge, or salary plus commission, are classic examples.
+mistake: Picking direct material because it "varies". Semi-variable costs need BOTH a fixed and a variable element.
+tip: Look for two parts in the description - a flat charge AND a usage charge.
+src: Study text ch3b - semi-variable costs (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Total cost is expressed as y = a + bx, where x is the number of units produced. What does "a" represent?
++ Total fixed cost || "a" is the intercept - the value of y when x = 0, which is the fixed cost.
+- Variable cost per unit || The variable cost per unit is "b", the gradient.
+- Total variable cost || Total variable cost is bx.
+- Total cost || Total cost is y.
+explain: In y = a + bx, y is total cost (dependent variable), x is activity (independent variable), a is the intercept (fixed cost) and b is the gradient (variable cost per unit).
+mistake: Mixing up a and b. Remember that "a" stands alone, just as fixed cost does not change with x.
+tip: Write the four meanings beside the equation whenever it appears in a question.
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is meant by "cost behaviour"?
++ How total and unit costs respond when the level of activity rises or falls || This is what cost behaviour describes.
+- The way costs are classified as direct or indirect || That is classification by traceability, not behaviour.
+- The way costs are recorded in the cost ledger || Recording is bookkeeping, not behaviour.
+- The way managers react when costs exceed budget || That is management control, not cost behaviour.
+explain: Cost behaviour describes how costs change as activity changes. Knowing it is essential for budgeting, decision making and control.
+mistake: Confusing cost behaviour (fixed/variable) with cost classification by function or traceability.
+tip: "Behaviour" always means "response to a change in activity".
+src: Study text ch3b - cost behaviour (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: When using the high-low method, which two periods should be selected?
++ The periods with the highest and lowest levels of activity || The method uses the extremes of ACTIVITY, because activity is what drives the change in cost.
+- The periods with the highest and lowest total costs || A frequent trap: the highest cost may not occur at the highest activity.
+- The first and last periods in the data || Order in time is irrelevant to the method.
+- Any two periods, as long as they are consecutive || The method specifically uses the activity extremes.
+explain: The high-low method splits a semi-variable cost into fixed and variable parts using the highest and lowest activity levels and their related costs.
+mistake: Choosing the highest and lowest COST figures.
+tip: Circle the activity column first, then pick the matching costs.
+src: Study text ch3b - high-low method (concept basis; original question)
+
+=== Q008
+type: match
+level: F
+cat: concept
+topic: t1
+status: review
+q: Match each cost with the way it behaves.
+pair: Rent of a factory building => Fixed cost
+pair: Raw material used in each product => Variable cost
+pair: Electricity with a standing charge plus a rate per kWh => Semi-variable cost
+pair: One supervisor for every 10 machine operators (or part) => Step cost
+choice: Curvilinear cost
+explain: Rent is a period charge (fixed). Materials vary directly with output (variable). Electricity has two elements (semi-variable). Supervision jumps when another supervisor is needed (step).
+mistake: Calling the supervisor cost variable because it rises with activity.
+tip: An unused option (here "curvilinear") is a common distractor in matching questions.
+src: Study text ch3b - cost behaviour patterns (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A worker is paid a basic $200 per week plus $4 for every item produced. Using y = a + bx, what is the worker's pay ($) in a week in which 50 items are produced?
+answer: 400
+tol: 0
+unit: $
+formula: y = a + bx
+step: Identify a = $200 (fixed weekly pay) and b = $4 (pay per item); x = 50.
+step: y = 200 + (4 x 50) = 200 + 200 = $400.
+check: 200 + 4*50
+explain: The basic pay is the fixed element (a) and the piece rate is the variable element (b). Substituting the activity level gives total pay.
+mistake: Forgetting to add the fixed element and answering $200 (variable pay only).
+tip: Substitute x into the equation exactly as written - don't drop "a".
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Within the relevant range, what happens to TOTAL fixed cost when output increases by 20%?
++ It stays the same || Total fixed cost is unaffected by output within the relevant range.
+- It increases by 20% || That is the behaviour of total variable cost.
+- It falls by 20% || Total fixed cost does not fall; only fixed cost PER UNIT falls.
+- It increases, but by less than 20% || That describes a semi-variable cost.
+explain: Fixed costs are period charges. Within the relevant range of output, the total does not change when activity changes.
+mistake: Confusing total fixed cost with fixed cost per unit.
+tip: The phrase "within the relevant range" tells you the normal fixed/variable assumptions apply.
+src: Study text ch3b - fixed costs (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Production and total production costs for four months were: January 12,000 units, $58,000; February 18,000 units, $76,000; March 15,000 units, $67,000; April 9,000 units, $49,000.
+q: Applying the high-low method, calculate the variable cost of each unit ($).
+answer: 3
+tol: 0
+unit: $
+formula: Variable cost per unit = (cost at high activity - cost at low activity) / (high units - low units)
+step: Highest activity: February, 18,000 units, $76,000. Lowest activity: April, 9,000 units, $49,000.
+step: Change in cost = 76,000 - 49,000 = $27,000. Change in units = 18,000 - 9,000 = 9,000.
+step: Variable cost per unit = 27,000 / 9,000 = $3.
+check: (76000-49000)/(18000-9000)
+explain: The change in total cost between the highest and lowest activity levels is caused only by the variable cost, because fixed cost is the same at both levels.
+mistake: Dividing total cost by units at one level (for example 76,000 / 18,000), which mixes fixed and variable cost.
+tip: Write "high" and "low" rows in a two-line table, then subtract.
+src: Study text ch3b - high-low method (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Production and total production costs for four months were: January 12,000 units, $58,000; February 18,000 units, $76,000; March 15,000 units, $67,000; April 9,000 units, $49,000.
+q: Using the high-low method, what is the total fixed cost per month?
++ $22,000 || 76,000 - (18,000 x $3) = $22,000.
+- $49,000 || This is total cost at the low level, which still includes variable cost.
+- $27,000 || This is the change in total cost, which is the variable element only.
+- $40,000 || This takes 76,000 - (12,000 x $3), using the wrong number of units for the high level.
+formula: Fixed cost = total cost at high (or low) activity - (units x variable cost per unit)
+step: Variable cost per unit = (76,000 - 49,000) / (18,000 - 9,000) = $3.
+step: Fixed cost = 76,000 - (18,000 x 3) = 76,000 - 54,000 = $22,000.
+step: Check at the low level: 49,000 - (9,000 x 3) = $22,000.
+check: 76000 - 18000*3
+explain: Once the variable cost per unit is known, the fixed cost is the remainder of total cost at either the high or the low point.
+mistake: Subtracting the variable cost for a different activity level from the total cost.
+tip: Calculate fixed cost at both points - if the answers differ, you have made an error.
+src: Study text ch3b - high-low method (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Using the high-low method on its production data, a company has found that its variable cost is $3 per unit and its fixed cost is $22,000 per month.
+q: What is the expected total production cost ($) for a month in which 14,000 units are produced?
+answer: 64000
+tol: 0
+unit: $
+formula: Total cost = fixed cost + (units x variable cost per unit)
+step: Variable cost = 14,000 x $3 = $42,000.
+step: Total cost = 22,000 + 42,000 = $64,000.
+check: 22000 + 14000*3
+explain: The cost equation y = 22,000 + 3x can be used to forecast cost at any activity level within the relevant range.
+mistake: Multiplying fixed cost by the change in activity, as if it were variable.
+tip: Forecasting with a cost equation is the most common follow-up to a high-low calculation.
+src: Study text ch3b - high-low method (concept basis; original figures)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A straight line passes through the points (10, 35) and (30, 95). What is the gradient of the line?
+answer: 3
+tol: 0
+formula: Gradient = (y2 - y1) / (x2 - x1)
+step: y2 - y1 = 95 - 35 = 60.
+step: x2 - x1 = 30 - 10 = 20.
+step: Gradient = 60 / 20 = 3.
+check: (95-35)/(30-10)
+explain: The gradient measures how much y changes for each one-unit change in x. In a cost equation it is the variable cost per unit.
+mistake: Dividing the x difference by the y difference (20 / 60).
+tip: "Rise over run" - change in y on top.
+src: Study text ch3b - gradient (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A cost equation is given as 5y = 20x + 150, where y is total cost and x is output. What is the fixed cost (the intercept)?
++ 30 || Dividing by 5 gives y = 30 + 4x, so the intercept is 30.
+- 150 || 150 is the constant before the equation is rearranged into the form y = a + bx.
+- 20 || 20 is the coefficient of x before rearranging; it is not the intercept.
+- 4 || 4 is the gradient (variable cost per unit) after rearranging.
+formula: y = a + bx
+step: Divide every term by 5: y = 4x + 30.
+step: Rewrite as y = 30 + 4x, so a = 30 and b = 4.
+check: 150/5
+explain: The intercept and gradient can only be read off once the equation is in the form y = a + bx.
+mistake: Reading the intercept from an equation that has not been rearranged.
+tip: If y has a number in front of it, divide everything by that number first.
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A graph of total cost (vertical axis) against output (horizontal axis) is a straight line that starts at the origin and rises at a constant slope. Which type of cost does the graph show?
++ A variable cost || Zero cost at zero output and a constant slope mean a constant cost per unit - a linear variable cost.
+- A fixed cost || A fixed cost is a horizontal line.
+- A semi-variable cost || A semi-variable cost line starts above the origin (at the fixed element).
+- A step cost || A step cost looks like a staircase.
+explain: Graph shapes: fixed = horizontal line; variable = straight line from the origin; semi-variable = straight line starting above the origin; step = staircase; curvilinear = curve.
+mistake: Confusing a line from the origin (variable) with one that starts above the origin (semi-variable).
+tip: Look first at where the line meets the vertical axis - that is the fixed cost.
+src: Study text ch3b - interpreting cost graphs (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A company's fixed production overheads are $60,000 per period. What is the fixed overhead cost per unit ($) if 6,000 units are produced?
+answer: 10
+tol: 0
+unit: $
+formula: Fixed cost per unit = total fixed cost / units produced
+step: Total fixed cost = $60,000; units produced = 6,000.
+step: 60,000 / 6,000 = $10 per unit.
+check: 60000/6000
+explain: Total fixed cost is constant, so the cost per unit depends on how many units share it. At 4,000 units it would be $15; at 6,000 units it is $10.
+mistake: Assuming the per-unit fixed cost from another output level still applies.
+tip: Recalculate fixed cost per unit every time output changes.
+src: Study text ch3b - fixed costs per unit (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product has fixed costs of $40,000 per period and a variable cost of $6 per unit. What is the total cost of producing 8,000 units in a period?
++ $88,000 || 40,000 + (8,000 x 6) = $88,000.
+- $48,000 || This is the variable cost only.
+- $40,000 || This is the fixed cost only.
+- $128,000 || This treats the fixed cost as if it were a further $10 per unit variable cost (40,000 + 8,000 x 6 + 8,000 x 5).
+formula: Total cost = fixed cost + (units x variable cost per unit)
+step: Variable cost = 8,000 x $6 = $48,000.
+step: Total cost = 40,000 + 48,000 = $88,000.
+check: 40000 + 8000*6
+explain: Total cost combines the fixed element, which does not change, and the variable element, which depends on output.
+mistake: Leaving out one of the two elements.
+tip: Write y = a + bx and substitute - it prevents missing a part.
+src: Study text ch3b - total cost (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Electricity is charged at a standing charge of $1,200 per quarter plus $0.15 per kWh. What is the electricity cost ($) for a quarter in which 20,000 kWh are used?
+answer: 4200
+tol: 0
+unit: $
+formula: Semi-variable cost = fixed element + (usage x rate)
+step: Variable element = 20,000 x $0.15 = $3,000.
+step: Total = 1,200 + 3,000 = $4,200.
+check: 1200 + 20000*0.15
+explain: Electricity with a standing charge is a semi-variable cost. The standing charge is fixed; the usage charge varies with consumption.
+mistake: Ignoring the standing charge or treating it as a per-kWh rate.
+tip: Semi-variable costs are just small cost equations - a + bx.
+src: Study text ch3b - semi-variable costs (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A salesperson earns a basic salary of $18,000 per year plus commission of 2% of sales. What is the total cost of the salesperson in a year when sales are $600,000?
++ $30,000 || 18,000 + (2% x 600,000) = 18,000 + 12,000 = $30,000.
+- $12,000 || This is the commission only.
+- $18,360 || This adds 2% of the salary rather than 2% of sales.
+- $36,000 || This doubles the basic salary instead of adding commission.
+formula: Total = fixed salary + (commission rate x sales)
+step: Commission = 2% x 600,000 = $12,000.
+step: Total = 18,000 + 12,000 = $30,000.
+check: 18000 + 0.02*600000
+explain: Salary plus commission is a semi-variable cost: the salary is fixed and the commission varies with sales.
+mistake: Applying the percentage to the wrong base.
+tip: Read carefully what the percentage is "of".
+src: Study text ch3b - semi-variable costs (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A factory employs one supervisor for every 5,000 units of monthly output, or part of that number. Each supervisor costs $3,000 per month. What is the supervision cost ($) in a month when output is 12,000 units?
+answer: 9000
+tol: 0
+unit: $
+formula: Number of supervisors = output / capacity per supervisor, rounded UP
+step: 12,000 / 5,000 = 2.4, so 3 supervisors are needed (a part requires a full supervisor).
+step: Cost = 3 x $3,000 = $9,000.
+check: 3*3000
+explain: Supervision is a step cost. Because a "part" of 5,000 units still needs a full supervisor, the number must be rounded up.
+mistake: Using 2.4 supervisors ($7,200) or rounding down to 2 ($6,000).
+tip: "or part of" always means round UP.
+src: Study text ch3b - step costs (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is meant by the "relevant range" in cost behaviour analysis?
++ The range of activity within which fixed costs stay fixed and variable costs stay linear || The usual cost behaviour assumptions are valid only within this range.
+- The range of prices the company can charge for its products || Pricing is not part of the relevant range concept.
+- The difference between the highest and lowest costs in a period || This is not the definition; it is also not what the high-low method uses.
+- The range of costs that are relevant to a decision || "Relevant costs" for decisions are a different idea.
+explain: Outside the relevant range, a fixed cost may step up (for example a new factory) and variable cost per unit may change (for example bulk discounts or overtime). Forecasts are reliable only within the range.
+mistake: Confusing the relevant range with relevant costing.
+tip: If a forecast is for an activity level far outside the data, mention the relevant range.
+src: Study text ch3b - relevant range (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A supplier offers progressively larger discounts as order quantities increase, so the cost per kilogram falls as more is bought. How would the total material cost line appear on a graph?
++ As a curve that becomes less steep as output rises || The cost per unit falls, so the slope of the total cost line gradually decreases - a curvilinear cost.
+- As a straight line through the origin || This would mean a constant cost per kilogram.
+- As a horizontal line || This would mean the cost does not change with quantity.
+- As a staircase || A staircase shows a step cost, not a gradually falling unit cost.
+explain: When the cost per unit changes continuously with volume (bulk discounts, learning effects), total cost is curvilinear rather than a straight line.
+mistake: Assuming all variable costs are linear.
+tip: Falling unit cost = flattening curve; rising unit cost (e.g. overtime) = steepening curve.
+src: Study text ch3b - curvilinear costs (concept basis; original question)
+
+=== Q024
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO of the following statements about fixed costs are correct?
++ Fixed cost per unit decreases as output increases || The same total is shared by more units.
++ Fixed costs are often described as period costs || They are incurred for a period of time rather than per unit.
+- Fixed costs never change in total in any circumstances || They can change outside the relevant range, or when prices rise (e.g. a rent review).
+- Fixed cost per unit is constant at all levels of output || It is the total, not the per-unit amount, that is constant.
+explain: Fixed costs are period charges. Their total is constant within the relevant range, but they can change if the range is exceeded or prices change, and the amount per unit falls as output rises.
+mistake: Treating "fixed" as "can never change".
+tip: Words like "never" and "all" make statements easy to test - look for exceptions.
+src: Study text ch3b - fixed costs (concept basis; original question)
+
+=== Q025
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO of the following are semi-variable costs?
++ A sales manager's pay consisting of a basic salary plus a bonus per unit sold || A fixed salary plus a variable bonus.
++ A delivery van's cost, made up of insurance and road tax plus fuel || Insurance and tax are fixed; fuel varies with mileage.
+- Piece-rate pay of $2 per unit produced, with no basic pay || With no fixed element this is a pure variable cost.
+- A factory manager's annual salary || A salary that does not change with output is a fixed cost.
+explain: A semi-variable cost has both a fixed element and a variable element.
+mistake: Choosing piece-rate pay because it relates to labour like the other options.
+tip: Test each option: is there something paid regardless of activity AND something that depends on activity?
+src: Study text ch3b - semi-variable costs (concept basis; original question)
+
+=== Q026
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the steps of the high-low method in the correct order.
+item: Identify the periods with the highest and lowest activity levels
+item: Calculate the difference in total cost and the difference in activity between those periods
+item: Divide the cost difference by the activity difference to find the variable cost per unit
+item: Deduct the total variable cost at either level from total cost to find the fixed cost
+item: Use the resulting cost equation to forecast cost at another activity level
+explain: The method moves from selecting the two data points, to the variable cost per unit, to the fixed cost, and finally to forecasting.
+mistake: Trying to find the fixed cost before the variable cost per unit is known.
+tip: Learn the method as a routine - it appears in many forms.
+src: Study text ch3b - high-low method (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Maintenance costs and machine hours for two months were: highest activity, 4,800 hours with costs of $31,400; lowest activity, 2,800 hours with costs of $23,400.
+q: What is the fixed element of the monthly maintenance cost ($)?
+answer: 12200
+tol: 0
+unit: $
+formula: Variable cost per hour = change in cost / change in hours; fixed cost = total cost - variable cost
+step: Variable cost per hour = (31,400 - 23,400) / (4,800 - 2,800) = 8,000 / 2,000 = $4 per hour.
+step: Fixed cost = 31,400 - (4,800 x 4) = 31,400 - 19,200 = $12,200.
+step: Check: 23,400 - (2,800 x 4) = $12,200.
+check: 31400 - 4800*(31400-23400)/(4800-2800)
+explain: The activity measure need not be units of output - here it is machine hours. The method is the same.
+mistake: Stopping after finding the variable cost per hour.
+tip: Read the requirement: is it asking for the variable rate or the fixed cost?
+src: Study text ch3b - high-low method (concept basis; original figures)
+
+=== Q028
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: A maintenance cost has a fixed element of $12,200 per month and a variable element of $4 per machine hour.
+q: What is the expected maintenance cost for a month with 3,500 machine hours?
++ $26,200 || 12,200 + (3,500 x 4) = $26,200.
+- $14,000 || This is the variable element only.
+- $15,700 || This adds the hours to the fixed cost instead of multiplying hours by the rate.
+- $24,400 || This doubles the fixed cost.
+formula: y = a + bx
+step: Variable cost = 3,500 x 4 = $14,000.
+step: Total = 12,200 + 14,000 = $26,200.
+check: 12200 + 3500*4
+explain: The cost equation y = 12,200 + 4x forecasts the cost for any number of machine hours within the relevant range.
+mistake: Adding the hours to the fixed cost.
+tip: Keep track of units: hours x $ per hour = $.
+src: Study text ch3b - forecasting with cost equations (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Total costs were $70,000 at an output of 10,000 units and $86,000 at an output of 14,000 units.
+q: What will be the total cost PER UNIT ($) at an output of 20,000 units? Give your answer to two decimal places.
+answer: 5.50
+tol: 0.005
+unit: $
+formula: Variable cost per unit = change in cost / change in units; cost per unit = total cost / units
+step: Variable cost per unit = (86,000 - 70,000) / (14,000 - 10,000) = $4.
+step: Fixed cost = 70,000 - (10,000 x 4) = $30,000.
+step: Total cost at 20,000 units = 30,000 + (20,000 x 4) = $110,000.
+step: Cost per unit = 110,000 / 20,000 = $5.50.
+check: (70000 - 10000*4 + 20000*4)/20000
+explain: Cost per unit falls as output rises because the fixed cost is spread over more units, while the variable cost per unit stays at $4.
+mistake: Extrapolating the cost per unit at 10,000 units ($7.00) or 14,000 units ($6.14).
+tip: Build the cost equation first, then calculate total and per-unit figures.
+src: Study text ch3b - cost per unit (concept basis; original figures)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why does the total cost per unit of a product usually fall as output rises within the relevant range?
++ Fixed costs are spread over a larger number of units || Fixed cost per unit falls while variable cost per unit stays constant, so total cost per unit falls.
+- Variable cost per unit falls as output rises || Within the relevant range, linear variable cost per unit is constant.
+- Total fixed costs fall as output rises || Total fixed costs stay the same.
+- Total variable costs fall as output rises || Total variable costs rise as output rises.
+explain: Cost per unit = fixed cost per unit + variable cost per unit. Only the fixed part changes per unit as output changes.
+mistake: Attributing the fall to lower variable costs.
+tip: Split any "cost per unit" question into its fixed and variable parts.
+src: Study text ch3b - cost per unit (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: The high-low method gives a variable cost of $3 per unit. Total cost is $76,000 at 18,000 units.
+q: Which equation describes total cost (y) for output x?
++ y = 22,000 + 3x || Fixed cost = 76,000 - (18,000 x 3) = 22,000, and variable cost per unit is 3.
+- y = 3 + 22,000x || This swaps the intercept and the gradient.
+- y = 76,000 + 3x || 76,000 is total cost at one activity level, not the fixed cost.
+- y = 54,000 + 3x || 54,000 is the variable cost at 18,000 units, not the fixed cost.
+formula: y = a + bx; a = total cost - bx
+step: b = 3 (given).
+step: a = 76,000 - (3 x 18,000) = 22,000.
+check: 76000 - 3*18000
+explain: The cost equation expresses fixed cost as the intercept and variable cost per unit as the gradient.
+mistake: Using total cost at one level as the intercept.
+tip: Test your equation by substituting x = 18,000 - it should give 76,000.
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What does a NEGATIVE gradient on a straight-line graph show?
++ y falls as x rises, so the line slopes downwards from left to right || A negative b means each increase in x reduces y.
+- y rises as x rises, but more slowly || That is a positive but small gradient.
+- The line crosses the vertical axis below zero || That is a negative intercept, not a negative gradient.
+- The line is horizontal || A horizontal line has a gradient of zero.
+explain: The sign of b tells you the direction of slope: positive slopes upwards, negative slopes downwards, zero is horizontal. The size of b tells you how steep the line is.
+mistake: Confusing a negative gradient with a negative intercept.
+tip: Gradient = direction and steepness; intercept = where the line starts.
+src: Study text ch3b - gradients (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A cost graph is shaped like a staircase - flat for a range of output, then rising sharply, then flat again. Which cost could it represent?
++ The rent of extra storage units, each hired when stock exceeds the capacity of the existing units || Each new unit adds a fixed amount once capacity is exceeded - a step cost.
+- Direct material cost || This would be a straight line through the origin.
+- A managing director's salary || This would be a horizontal line.
+- Electricity with a standing charge and a usage charge || This would be a straight line starting above the origin.
+explain: A staircase graph is the shape of a step cost: fixed within ranges of activity, rising to a new level when a threshold is crossed.
+mistake: Thinking of the rising parts only and choosing a variable cost.
+tip: Sketch each option's graph quickly and compare it with the description.
+src: Study text ch3b - step costs (concept basis; original question)
+
+=== Q034
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: In the cost equation y = a + bx, match each symbol with its meaning.
+pair: y => Total cost (dependent variable)
+pair: x => Level of activity (independent variable)
+pair: a => Fixed cost (intercept)
+pair: b => Variable cost per unit (gradient)
+choice: Total variable cost
+explain: y depends on x. a is where the line crosses the y-axis (fixed cost). b is the slope (variable cost per unit). Total variable cost would be bx, which is not a single symbol.
+mistake: Matching b with "total variable cost".
+tip: Learn the four meanings as a set; examiners often ask for one of them.
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q035
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which of the following costs is NOT a variable cost for a manufacturer?
++ Insurance of the factory building || Insurance is a period charge that does not change with output - a fixed cost.
+- Raw materials used in each unit || This varies directly with output.
+- Royalties paid per unit produced || A royalty per unit varies directly with output.
+- Packaging for each unit sold || Packaging per unit varies directly with volume.
+explain: Variable costs change in total with output and are constant per unit. Building insurance is incurred for a period regardless of output.
+mistake: Overlooking per-unit royalties as a variable cost.
+tip: Ask "if output doubled, would this cost double?"
+src: Study text ch3b - fixed and variable costs (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc, trap
+topic: t2
+status: review
+scenario: Monthly production and costs were: January 12,000 units, $58,000; February 18,000 units, $76,000; March 15,000 units, $79,000 (including a one-off repair); April 9,000 units, $49,000.
+q: Applying the high-low method, how much variable cost does each unit carry?
++ $3.00 || Highest activity (18,000 units, $76,000) and lowest activity (9,000 units, $49,000): 27,000 / 9,000 = $3.00.
+- $5.00 || This uses the highest COST (March, $79,000 at 15,000 units) instead of the highest activity: 30,000 / 6,000.
+- $4.50 || This compares the highest cost (March) with February: an incorrect pairing.
+- $2.50 || This pairs February with March, which are not the activity extremes.
+formula: Variable cost per unit = (cost at high activity - cost at low activity) / (high units - low units)
+step: Highest activity is February (18,000 units), not March - March has the highest COST.
+step: Lowest activity is April (9,000 units).
+step: (76,000 - 49,000) / (18,000 - 9,000) = 27,000 / 9,000 = $3.00.
+check: (76000-49000)/(18000-9000)
+explain: The high-low method selects data points by activity, because activity is what causes the variable element of cost to change. A month with an unusual cost (here a one-off repair) is a classic trap.
+mistake: Selecting the month with the highest cost.
+tip: Before calculating, underline the highest and lowest ACTIVITY figures.
+src: Study text ch3b - high-low method (concept basis; original figures)
+
+=== Q037
+type: num
+level: C
+cat: calc, trap
+topic: t2
+status: review
+scenario: When output exceeds 20,000 units, fixed costs increase by $8,000 because extra storage must be hired. Total costs were $95,000 at 15,000 units and $133,000 at 25,000 units. Variable cost per unit is the same at all levels.
+q: What is the expected total cost ($) at an output of 22,000 units?
+answer: 124000
+tol: 0
+unit: $
+formula: Remove the step before applying high-low; then total cost = fixed cost (including any step) + variable cost
+step: Remove the step from the high level: 133,000 - 8,000 = $125,000 (on the same fixed-cost basis as 15,000 units).
+step: Variable cost per unit = (125,000 - 95,000) / (25,000 - 15,000) = 30,000 / 10,000 = $3.
+step: Fixed cost below 20,000 units = 95,000 - (15,000 x 3) = $50,000.
+step: At 22,000 units the step applies: 50,000 + 8,000 + (22,000 x 3) = $124,000.
+check: (95000 - 15000*3) + 8000 + 22000*3
+explain: A step in fixed costs between the two data points distorts the high-low calculation unless it is removed first. It must then be added back for forecasts above the threshold.
+mistake: Applying high-low without removing the step (giving $3.80 per unit) or forgetting to add the step back for 22,000 units.
+tip: Ask "do the high and low points share the same fixed costs?" before using high-low.
+src: Study text ch3b - high-low with stepped fixed costs (concept basis; original figures)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Total costs were $50,000 for 10,000 units in Year 1 and $79,000 for 16,000 units in Year 2. All costs rose by 10% between Year 1 and Year 2.
+q: Applying the high-low method, calculate the variable cost of each unit at Year 2 prices ($).
+answer: 4
+tol: 0
+unit: $
+formula: Restate both costs to the same price level, then apply high-low
+step: Restate Year 1 cost at Year 2 prices: 50,000 x 1.10 = $55,000.
+step: Variable cost per unit = (79,000 - 55,000) / (16,000 - 10,000) = 24,000 / 6,000 = $4.
+check: (79000 - 50000*1.1)/(16000-10000)
+explain: If prices change between periods, part of the cost difference is inflation, not activity. Restating one cost to the other's price level removes this effect.
+mistake: Ignoring the price change: (79,000 - 50,000) / 6,000 = $4.83.
+tip: Any mention of a price rise between periods means "adjust before you calculate".
+src: Study text ch3b - high-low with price changes (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A company's monthly overheads were $41,000 when 2,000 machine hours were worked and $53,000 when 3,500 machine hours were worked. Next month 3,000 machine hours are planned.
+q: What overhead cost should be budgeted for next month?
++ $49,000 || Variable rate = 12,000 / 1,500 = $8 per hour; fixed = 41,000 - 16,000 = $25,000; budget = 25,000 + 24,000 = $49,000.
+- $45,429 || This scales $53,000 by 3,000/3,500, treating all of the overhead as variable.
+- $61,500 || This scales $41,000 by 3,000/2,000, treating all of the overhead as variable.
+- $24,000 || This is the variable element only.
+formula: Variable rate = change in cost / change in hours; budget = fixed + (hours x rate)
+step: Variable rate = (53,000 - 41,000) / (3,500 - 2,000) = $8 per hour.
+step: Fixed cost = 41,000 - (2,000 x 8) = $25,000.
+step: Budget = 25,000 + (3,000 x 8) = $49,000.
+check: (41000 - 2000*8) + 3000*8
+explain: A semi-variable cost cannot be forecast by simple proportion, because the fixed part does not change with hours.
+mistake: Scaling the total cost in proportion to hours.
+tip: Never scale a semi-variable cost proportionally - separate it first.
+src: Study text ch3b - high-low and forecasting (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: calc, trap
+topic: t3
+status: review
+q: A relationship is given as 2y - 8x = -12. What are the intercept and gradient of the line when it is written as y = a + bx?
++ Intercept -6, gradient 4 || 2y = 8x - 12, so y = 4x - 6, i.e. y = -6 + 4x.
+- Intercept -12, gradient 8 || This reads the figures before rearranging.
+- Intercept 6, gradient -4 || The signs have been reversed in rearranging.
+- Intercept -3, gradient 4 || This divides the constant by 4 instead of by 2 (the coefficient of y).
+formula: Rearrange to y = a + bx
+step: Add 8x to both sides: 2y = 8x - 12.
+step: Divide by 2: y = 4x - 6, i.e. y = -6 + 4x.
+check: -12/2
+explain: Rearranging must keep the signs correct. Only after rearranging can a and b be read directly.
+mistake: Making a sign error when moving 8x across the equals sign.
+tip: Move terms carefully: what is subtracted on one side is added on the other.
+src: Study text ch3b - linear equations (concept basis; original question)
+
+=== Q041
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+scenario: A trainee was asked to estimate fixed costs using the high-low method. The data showed: Month 1, 6,000 units, cost $40,000; Month 2, 9,000 units, cost $46,000; Month 3, 4,000 units, cost $34,000; Month 4, 7,000 units, cost $47,000. The trainee calculated: (47,000 - 34,000) / (7,000 - 4,000) = $4.33 per unit.
+q: What error did the trainee make?
++ The trainee used the highest cost (Month 4) instead of the highest activity (Month 2) || The high point should be Month 2 with 9,000 units.
+- The trainee should have used the lowest cost and the highest cost in the formula || That is exactly the error the trainee made.
+- The trainee should have divided the change in units by the change in cost || The formula is change in cost divided by change in units.
+- The trainee should have used all four months in the calculation || The high-low method deliberately uses only two points.
+step: Correct high point: Month 2 (9,000 units, $46,000). Correct low point: Month 3 (4,000 units, $34,000).
+step: Correct variable cost per unit = (46,000 - 34,000) / (9,000 - 4,000) = $2.40.
+explain: Identifying incorrect workings is a common exam task. Here the selection of data points is wrong, so everything that follows is wrong.
+mistake: Checking only the arithmetic and missing that the wrong months were selected.
+tip: In "find the error" questions, check the method before the arithmetic.
+src: Study text ch3b - high-low method (concept basis; original scenario)
+
+=== Q042
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO of the following are limitations of the high-low method?
++ It uses only two data points, which may not be representative || All other observations are ignored, so unusual high or low periods distort the result.
++ It assumes that the relationship between cost and activity is linear || If costs are curvilinear or include steps, the result is misleading unless adjusted.
+- It cannot be used when the activity measure is machine hours || Any activity measure can be used.
+- It always produces a negative fixed cost || A negative fixed cost can occur with unrepresentative data, but it is not the usual result.
+explain: The high-low method is simple but relies on two observations and on a linear relationship within the relevant range.
+mistake: Thinking the method only works with units of output.
+tip: Simplicity is its strength; reliance on two points is its weakness.
+src: Study text ch3b - high-low method (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Total costs were $70,000 at 10,000 units and $86,000 at 14,000 units.
+q: What percentage of total cost at 10,000 units is fixed cost? Give your answer to one decimal place.
+answer: 42.9
+tol: 0.1
+unit: %
+formula: Fixed % = fixed cost / total cost x 100
+step: Variable cost per unit = (86,000 - 70,000) / 4,000 = $4.
+step: Fixed cost = 70,000 - 40,000 = $30,000.
+step: 30,000 / 70,000 x 100 = 42.9%.
+check: 30000/70000*100
+explain: Knowing the fixed proportion of cost helps managers understand how cost per unit will react to changes in output.
+mistake: Dividing fixed cost by the cost at the other activity level.
+tip: Make sure the fixed cost and total cost relate to the same activity level.
+src: Study text ch3b - semi-variable costs (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A cost equation y = 15,000 + 2.5x was estimated from data for output levels between 5,000 and 30,000 units. A manager uses it to budget costs for 45,000 units. Which statement is MOST appropriate?
++ The budget may be unreliable because 45,000 units is outside the relevant range of the data || Fixed costs may step up and variable costs per unit may change outside the observed range.
+- The budget is reliable because the equation is linear || Linearity is an assumption that holds only within the relevant range.
+- The budget will be too high because fixed cost per unit falls at higher output || The equation already reflects the fall in fixed cost per unit; the real issue is extrapolation.
+- The budget should use a fixed cost of $15,000 x 1.5 because output is 50% higher than 30,000 || Fixed costs do not rise in proportion to output.
+explain: Cost equations estimated from historical data are only valid within the range of that data. Extrapolating beyond it ignores possible steps in fixed cost and changes in variable rates.
+mistake: Assuming a linear equation holds at any activity level.
+tip: Comment on the relevant range whenever a forecast is outside the data provided.
+src: Study text ch3b - relevant range (concept basis; original scenario)
+
+=== Q045
+type: num
+level: C
+cat: calc, mixed
+topic: t1
+status: review
+q: A factory's monthly costs are: rent $40,000; variable costs $5 per unit; and supervisors costing $25,000 each per month, with one supervisor needed for every 6,000 units of output or part thereof. What is the total monthly cost ($) for an output of 14,000 units?
+answer: 185000
+tol: 0
+unit: $
+formula: Total cost = fixed + step + variable
+step: Supervisors: 14,000 / 6,000 = 2.33, so 3 supervisors x 25,000 = $75,000.
+step: Variable cost: 14,000 x 5 = $70,000.
+step: Total: 40,000 + 75,000 + 70,000 = $185,000.
+check: 40000 + 3*25000 + 14000*5
+explain: Total cost may combine fixed, step and variable elements. Each must be calculated using its own behaviour.
+mistake: Rounding 2.33 supervisors down to 2, giving $160,000.
+tip: List every cost with its behaviour before adding.
+src: Study text ch3b - step and variable costs (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A product has fixed costs of $120,000 per period and a variable cost of $10 per unit. By how much ($) does the total cost PER UNIT fall when output rises from 5,000 to 8,000 units?
+answer: 9
+tol: 0
+unit: $
+formula: Cost per unit = fixed cost / units + variable cost per unit
+step: At 5,000 units: 120,000 / 5,000 + 10 = 24 + 10 = $34.
+step: At 8,000 units: 120,000 / 8,000 + 10 = 15 + 10 = $25.
+step: Fall = 34 - 25 = $9.
+check: (120000/5000+10)-(120000/8000+10)
+explain: Only the fixed cost per unit changes; the variable cost per unit stays at $10.
+mistake: Thinking variable cost per unit also falls.
+tip: The fall in total cost per unit equals the fall in fixed cost per unit.
+src: Study text ch3b - cost per unit (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: A graph of total cost against output is a straight line. It crosses the vertical axis at $10,000 and shows a total cost of $30,000 at 4,000 units. What is the variable cost per unit ($)?
+answer: 5
+tol: 0
+unit: $
+formula: Gradient = (y2 - y1) / (x2 - x1)
+step: The intercept gives the point (0, 10,000).
+step: Gradient = (30,000 - 10,000) / (4,000 - 0) = 20,000 / 4,000 = $5.
+check: (30000-10000)/4000
+explain: The intercept is the fixed cost; the slope between any two points on the line is the variable cost per unit.
+mistake: Dividing total cost by units (30,000 / 4,000 = $7.50), which includes fixed cost.
+tip: Use the intercept as the first point when calculating the gradient from a graph.
+src: Study text ch3b - interpreting cost graphs (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: Above normal capacity, workers must be paid an overtime premium, so each extra unit costs more labour than the last. How does the total labour cost behave above normal capacity?
++ It is curvilinear, with the line becoming steeper as output rises || The cost per unit rises, so the slope of the total cost line increases.
+- It is a linear variable cost || A linear variable cost has a constant cost per unit.
+- It becomes a fixed cost || The cost still changes with output.
+- It is curvilinear, with the line becoming flatter as output rises || A flattening curve shows a FALLING cost per unit (e.g. bulk discounts).
+explain: When unit cost rises with output (overtime premiums, diminishing returns), total cost is a curve that steepens. When unit cost falls (discounts, learning), the curve flattens.
+mistake: Remembering that curvilinear costs exist but getting the direction of the curve wrong.
+tip: Rising unit cost - steeper; falling unit cost - flatter.
+src: Study text ch3b - curvilinear costs (concept basis; original question)
+
+=== Q049
+type: match
+level: C
+cat: scenario
+topic: t1
+status: review
+scenario: Four costs were recorded at three output levels. Cost W: $8,000 at 2,000 units, $8,000 at 4,000 units, $8,000 at 6,000 units. Cost X: $6,000, $12,000, $18,000. Cost Y: $5,000, $7,000, $9,000. Cost Z: $4,000, $4,000, $8,000.
+q: Match each cost with its behaviour.
+pair: Cost W => Fixed cost
+pair: Cost X => Variable cost
+pair: Cost Y => Semi-variable cost
+pair: Cost Z => Step cost
+explain: W is constant (fixed). X rises in proportion: $3 per unit with nothing at zero (variable). Y rises by $1 per unit but would be $3,000 at zero output, so it has a fixed element (semi-variable). Z is flat, then jumps (step).
+mistake: Calling Y variable because it rises steadily. Check whether the cost is proportional: $5,000 for 2,000 units would mean $2.50 per unit, but the increase is only $1 per unit, so part of the cost is fixed.
+tip: Test proportionality: if output doubles, does cost double exactly?
+src: Study text ch3b - cost behaviour patterns (concept basis; original figures)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which formula gives the variable cost per unit in the high-low method?
++ (Total cost at highest activity - total cost at lowest activity) / (highest activity - lowest activity) || This isolates the variable element, because fixed cost is the same at both points.
+- (Highest total cost - lowest total cost) / (activity at highest cost - activity at lowest cost) || This selects points by cost, not by activity.
+- Total cost at highest activity / highest activity || This gives an average cost per unit that includes fixed cost.
+- (Highest activity - lowest activity) / (total cost at highest activity - total cost at lowest activity) || This is upside down.
+explain: The high-low method divides the change in total cost by the change in activity between the highest and lowest activity levels.
+mistake: Selecting points by cost or inverting the fraction.
+tip: Learn it as "change in cost over change in activity, using activity extremes".
+src: Study text ch3b - high-low method (concept basis; original question)

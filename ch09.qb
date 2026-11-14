@@ -1,0 +1,897 @@
+@subject acffa2
+@chapter 9
+@title Accruals and Prepayments
+@lo D4
+@topic t1 | The accruals concept | D4
+@topic t2 | Accruals and prepayments | D4
+@topic t3 | Proforma T-accounts | D4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does the accruals concept require?
++ Income and expenses are recognised in the period they relate to, not when cash moves || Match to the period.
+- Only cash transactions are recorded || Cash accounting.
+- Expenses are recorded when paid || Ignores timing.
+- Income is recorded when received || Ignores timing.
+explain: Year-end adjustments make the accounts reflect the period.
+mistake: Following cash flows.
+tip: Period, not payment.
+src: Study text ch9 - accruals concept (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A business paid $7,200 for electricity during the year. At the year end, $1,100 is owed for electricity used. What is the electricity expense ($) for the year?
+answer: 8300
+tol: 0
+unit: $
+formula: Expense = paid + closing accrual
+step: Paid = 7,200; owed = 1,100.
+step: Expense = 7,200 + 1,100 = $8,300.
+check: 7200+1100
+explain: The $1,100 is shown as a current liability.
+mistake: Charging only the cash paid.
+tip: Used but unpaid = add.
+src: Study text ch9 - accrued expense (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is an ACCRUED expense shown in the statement of financial position?
++ As a current liability || Owed at the year end.
+- As a current asset || That is a prepayment.
+- As a non-current asset || Not an asset.
+- It is not shown || It must be shown.
+explain: Entry: Dr expense, Cr accruals.
+mistake: Showing accruals as assets.
+tip: Owe it = liability.
+src: Study text ch9 - presentation (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is a PREPAID expense shown in the statement of financial position?
++ As a current asset || Paid for future benefit.
+- As a current liability || That is an accrual.
+- As revenue || Not income.
+- It is not shown || It must be shown.
+explain: Entry: Dr prepayments, Cr expense.
+mistake: Adding prepayments to the expense.
+tip: Paid ahead = asset.
+src: Study text ch9 - prepayments (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A company received rent of $48,000 during the year, of which $12,000 relates to next year. What rental income ($) is recognised this year?
+answer: 36000
+tol: 0
+unit: $
+formula: Income = received - amount received in advance
+step: Received = 48,000; relating to next year = 12,000.
+step: Income = 48,000 - 12,000 = $36,000.
+check: 48000-12000
+explain: The $12,000 is deferred income, a liability.
+mistake: Recognising all cash received.
+tip: Received early = liability.
+src: Study text ch9 - prepaid income (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the double entry for an accrued expense?
++ Debit expense; credit accruals || Expense up, liability up.
+- Debit accruals; credit expense || Reversed.
+- Debit prepayments; credit expense || That is a prepayment.
+- Debit bank; credit expense || No cash moves.
+explain: The accrual reverses in the next period.
+mistake: Crediting the expense.
+tip: Accrual = Cr accruals.
+src: Study text ch9 - entries (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is accrued INCOME?
++ Income earned in the period but not yet received || A current asset.
+- Income received before it is earned || Deferred income.
+- An expense not yet paid || Accrued expense.
+- An expense paid in advance || Prepayment.
+explain: Entry: Dr accrued income, Cr income.
+mistake: Confusing with deferred income.
+tip: Earned, not received = asset.
+src: Study text ch9 - accrued income (concept basis; original question)
+
+=== Q008
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: Insurance of $18,000 was paid on 1 October for the 12 months to 30 September next year. The year end is 31 December. What is the prepayment ($) at the year end?
+answer: 13500
+tol: 0
+unit: $
+formula: Prepayment = payment x months after year end / 12
+step: Months relating to next year = January to September = 9.
+step: Prepayment = 18,000 x 9/12 = $13,500.
+check: 18000*9/12
+explain: The expense this year is $4,500 (3 months).
+mistake: Using 3 months for the prepayment.
+tip: Count months beyond the year end.
+src: Study text ch9 - time apportionment (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What effect does a prepayment have on profit?
++ It reduces the expense, so profit increases || Part of the cost belongs to next year.
+- It increases the expense, so profit falls || That is an accrual.
+- No effect on profit || It does affect profit.
+- It increases revenue || Not revenue.
+explain: The prepaid amount is carried forward as an asset.
+mistake: Adding prepayments to expenses.
+tip: Prepay = smaller expense.
+src: Study text ch9 - effect on profit (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is income received in advance (deferred income) classified?
++ Current liability || Not yet earned.
+- Current asset || That is accrued income.
+- Revenue for the current year || Not yet earned.
+- Equity || Not equity.
+explain: Entry: Dr income, Cr deferred income.
+mistake: Treating it as an asset.
+tip: Received early = owe the service.
+src: Study text ch9 - deferred income (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Telephone costs: opening accrual $1,200; cash paid in the year $14,000; closing accrual $1,800.
+q: What is the telephone expense ($) for the year?
+answer: 14600
+tol: 0
+unit: $
+formula: Expense = paid - opening accrual + closing accrual
+step: 14,000 - 1,200 = 12,800.
+step: 12,800 + 1,800 = $14,600.
+check: 14000-1200+1800
+explain: Part of this year's payments settled last year's accrual.
+mistake: Ignoring the opening accrual.
+tip: Opening accrual reduces this year's charge.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Rent: opening prepayment $3,000; cash paid in the year $22,000; closing prepayment $4,000.
+q: What is the rent expense ($) for the year?
+answer: 21000
+tol: 0
+unit: $
+formula: Expense = paid + opening prepayment - closing prepayment
+step: 22,000 + 3,000 = 25,000.
+step: 25,000 - 4,000 = $21,000.
+check: 22000+3000-4000
+explain: The opening prepayment is an expense of this year.
+mistake: Reversing the prepayment adjustments.
+tip: Opening prepayment adds; closing deducts.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Electricity: opening accrual $2,000; opening prepayment $1,500; cash paid $30,000; closing accrual $2,500; closing prepayment $1,000.
+q: What is the electricity expense for the year?
++ $31,000 || 30,000 - 2,000 + 2,500 + 1,500 - 1,000.
+- $30,000 || Cash only.
+- $29,000 || Signs reversed.
+- $37,000 || Adds everything.
+formula: Expense = paid - opening accrual + closing accrual + opening prepayment - closing prepayment
+step: 30,000 - 2,000 + 2,500 = 30,500.
+step: 30,500 + 1,500 - 1,000 = $31,000.
+check: 30000-2000+2500+1500-1000
+explain: Draw the T-account to keep the signs right.
+mistake: Reversing one adjustment.
+tip: Use the proforma.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO items are current ASSETS?
++ Prepaid insurance || Paid in advance.
++ Interest earned but not yet received || Accrued income.
+- Wages owed to staff at the year end || Accrued expense - liability.
+- Rent received in advance from a tenant || Deferred income - liability.
+explain: Assets: prepayments and accrued income.
+mistake: Mixing accrued income and deferred income.
+tip: Something owed TO us or paid ahead = asset.
+src: Study text ch9 - classification (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each item with its classification.
+pair: Expense incurred but unpaid => Current liability (accrual)
+pair: Expense paid in advance => Current asset (prepayment)
+pair: Income earned but not received => Current asset (accrued income)
+pair: Income received in advance => Current liability (deferred income)
+explain: The four adjustments mirror each other.
+mistake: Mixing the income items.
+tip: Who owes whom?
+src: Study text ch9 - classification (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Annual rent was $20,000 until 31 March, when it increased to $24,000 a year. The year end is 31 December. What is the rent expense ($) for the year?
+answer: 23000
+tol: 0
+unit: $
+formula: Expense = old rate x months / 12 + new rate x months / 12
+step: January-March: 20,000 x 3/12 = 5,000.
+step: April-December: 24,000 x 9/12 = 18,000; total = $23,000.
+check: 20000*3/12+24000*9/12
+explain: Time-apportion when rates change.
+mistake: Using one rate for the year.
+tip: Split by months.
+src: Study text ch9 - time apportionment (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A $50,000 loan at 6% a year was taken out on 1 September. No interest has been paid by the year end of 31 December. What interest accrual ($) is needed?
+answer: 1000
+tol: 0
+unit: $
+formula: Accrual = loan x rate x months / 12
+step: Months = September to December = 4.
+step: 50,000 x 6% x 4/12 = $1,000.
+check: 50000*0.06*4/12
+explain: The interest is an expense of this year even though unpaid.
+mistake: Charging a full year.
+tip: Interest accrues with time.
+src: Study text ch9 - interest accrual (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: In the expense T-account, on which side is an OPENING accrual brought forward?
++ Credit side || It was a liability at the start.
+- Debit side || That is an opening prepayment.
+- Either side || It is fixed.
+- It is not brought forward || It is.
+explain: An opening prepayment is a debit b/f.
+mistake: Debiting opening accruals.
+tip: Liability = credit.
+src: Study text ch9 - T-accounts (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company omits a year-end accrual of $900 for cleaning costs. What is the effect?
++ Profit is overstated by $900 and liabilities understated by $900 || Expense missing.
+- Profit is understated by $900 || Overstated.
+- Assets are overstated || Liabilities understated.
+- No effect || Both are wrong.
+formula: Expense should include the accrual
+step: Cleaning expense is understated by 900.
+step: Profit is overstated and the liability is missing.
+check: 900
+explain: Omitted accruals flatter profit.
+mistake: Reversing the effect.
+tip: Missing expense = profit too high.
+src: Study text ch9 - errors (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the double entry for income received in advance?
++ Debit income; credit deferred income (liability) || Remove it from this year's income.
+- Debit deferred income; credit income || Reversed.
+- Debit accrued income; credit income || That is accrued income.
+- Debit bank; credit income || Already recorded when received.
+explain: It will be released to income next year.
+mistake: Creating an asset.
+tip: Received early = Cr liability.
+src: Study text ch9 - deferred income (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Rental income: opening accrued income $3,000; opening deferred income $2,000; cash received $40,000; closing accrued income $5,000; closing deferred income $4,000.
+q: What rental income ($) is recognised for the year?
+answer: 40000
+tol: 0
+unit: $
+formula: Income = received - opening accrued + closing accrued + opening deferred - closing deferred
+step: 40,000 - 3,000 + 5,000 = 42,000.
+step: 42,000 + 2,000 - 4,000 = $40,000.
+check: 40000-3000+5000+2000-4000
+explain: The adjustments happen to cancel out here.
+mistake: Reversing the income adjustments.
+tip: Income proforma mirrors expenses.
+src: Study text ch9 - income T-account (concept basis; original figures)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Where are accruals usually presented in the statement of financial position?
++ Within trade and other payables (current liabilities) || Grouped with payables.
+- Within trade and other receivables || That is prepayments.
+- Within equity || Not equity.
+- Within non-current assets || Not assets.
+explain: Prepayments are within trade and other receivables.
+mistake: Grouping with receivables.
+tip: Accruals with payables.
+src: Study text ch9 - presentation (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A year's insurance of $9,600 was paid on 1 May. The year end is 31 December. What is the insurance expense ($) for this year?
+answer: 6400
+tol: 0
+unit: $
+formula: Expense = payment x months in this year / 12
+step: Months in this year = May to December = 8.
+step: 9,600 x 8/12 = $6,400 (prepayment $3,200).
+check: 9600*8/12
+explain: Four months relate to next year.
+mistake: Expensing the full amount.
+tip: Months used this year.
+src: Study text ch9 - prepayments (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee shows a $2,500 accrual for wages owed as a current ASSET. What is wrong?
++ An accrued expense is a liability, so liabilities are understated and assets overstated || Wrong classification.
+- Nothing is wrong || It is a liability.
+- It should be non-current || It is current.
+- It should be in equity || Not equity.
+explain: Net assets are overstated by $5,000.
+mistake: Calling accruals assets.
+tip: Owe staff = liability.
+src: Study text ch9 - classification (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why are accruals and prepayments needed in addition to recording cash transactions?
++ Cash often moves in a different period from when the expense or income arises || Timing differences.
+- To increase profit || Not the purpose.
+- To reduce tax || Not the purpose.
+- Because cash records are always wrong || Not the reason.
+explain: They apply the accruals concept.
+mistake: Thinking cash records suffice.
+tip: Timing differences.
+src: Study text ch9 - purpose (concept basis; original question)
+
+=== Q026
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the steps of preparing an expense T-account in order.
+item: Bring down opening accruals and prepayments
+item: Post cash paid during the year
+item: Enter closing accruals and prepayments
+item: Find the balancing figure as the profit or loss charge
+explain: The balancing figure is the expense for the year.
+mistake: Forgetting the opening balances.
+tip: Open, cash, close, balance.
+src: Study text ch9 - T-account (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Commission of $2,400 earned in December will not be received until February. Commission received during the year was $18,600. What commission income ($) is recognised for the year (no opening balances)?
+answer: 21000
+tol: 0
+unit: $
+formula: Income = received + closing accrued income
+step: Received = 18,600; earned but unreceived = 2,400.
+step: Income = $21,000.
+check: 18600+2400
+explain: Accrued income is a current asset.
+mistake: Ignoring income earned but unreceived.
+tip: Earned counts.
+src: Study text ch9 - accrued income (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: An accrual was made at last year end for $800 of gas. What happens to it this year?
++ It reverses: the payment this year clears the liability rather than adding to this year's expense || Opening accrual reduces the charge.
+- It is added to this year's expense again || Double counting.
+- It is written off to equity || Not correct.
+- It becomes a prepayment || Not correct.
+explain: The T-account handles this automatically.
+mistake: Double counting.
+tip: Opening accrual is a credit b/f.
+src: Study text ch9 - reversal (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the double entry for a prepaid expense at the year end?
++ Debit prepayments; credit expense || Asset up, expense down.
+- Debit expense; credit prepayments || Reversed.
+- Debit expense; credit accruals || That is an accrual.
+- Debit bank; credit prepayments || No cash moves.
+explain: The prepayment is released next year.
+mistake: Crediting prepayments.
+tip: Prepay = Dr asset.
+src: Study text ch9 - entries (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Quarterly rent of $1,500 is payable in arrears. At the year end, one quarter's rent is unpaid. Payments of $4,500 were made in the year. What is the rent expense ($)?
+answer: 6000
+tol: 0
+unit: $
+formula: Expense = paid + accrual
+step: Paid = 4,500 (three quarters); unpaid = 1,500.
+step: Expense = $6,000 (four quarters).
+check: 4500+1500
+explain: A full year's rent must be charged.
+mistake: Charging only payments.
+tip: Full year's cost.
+src: Study text ch9 - accrual (concept basis; original question)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Insurance: at 1 January the prepayment was $2,700. On 1 April the company paid $14,400 for 12 months from 1 April. The year end is 31 December.
+q: What is the insurance expense ($) for the year?
+answer: 13500
+tol: 0
+unit: $
+formula: Expense = opening prepayment + payment - closing prepayment
+step: Closing prepayment = 14,400 x 3/12 = 3,600.
+step: Expense = 2,700 + 14,400 - 3,600 = $13,500.
+check: 2700+14400-14400*3/12
+explain: The opening prepayment covered January to March.
+mistake: Ignoring the opening prepayment.
+tip: Old prepayment + new cost used.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Wages: opening accrual $3,400; paid during the year $96,500; closing accrual $2,900.
+q: What wages expense is charged to profit or loss?
++ $96,000 || 96,500 - 3,400 + 2,900.
+- $96,500 || Cash only.
+- $99,400 || Ignores the opening accrual.
+- $102,800 || Adds both.
+formula: Expense = paid - opening accrual + closing accrual
+step: 96,500 - 3,400 = 93,100.
+step: 93,100 + 2,900 = $96,000.
+check: 96500-3400+2900
+explain: The SOFP shows an accrual of $2,900.
+mistake: Adding the opening accrual.
+tip: Opening accrual comes off.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO adjustments INCREASE reported profit?
++ Recognising a prepaid expense || Reduces the expense.
++ Recognising accrued income || Increases income.
+- Recognising an accrued expense || Increases the expense.
+- Recognising deferred income || Reduces income.
+explain: Asset adjustments raise profit; liability adjustments lower it.
+mistake: Thinking all adjustments lower profit.
+tip: Asset side = profit up.
+src: Study text ch9 - effects (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A tenant pays rent of $3,000 per quarter in advance on 1 February, 1 May, 1 August and 1 November. The landlord's year end is 31 December.
+q: How much deferred income ($) does the landlord show at 31 December?
+answer: 1000
+tol: 0
+unit: $
+formula: Deferred = advance payment x months after year end / 3
+step: The 1 November payment covers November to January.
+step: January relates to next year: 3,000 x 1/3 = $1,000.
+check: 3000/3
+explain: Rental income for the year is 12,000 - 1,000 + any opening deferral.
+mistake: Deferring the whole quarter.
+tip: Months into next year.
+src: Study text ch9 - deferred income (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee calculates an expense as "cash paid + opening prepayment + closing prepayment". What is wrong?
++ The closing prepayment should be DEDUCTED, as it relates to next year || Wrong sign.
+- Nothing is wrong || Sign error.
+- The opening prepayment should be deducted || It is added.
+- Prepayments should be ignored || They must be included.
+explain: Expense = paid + opening prepayment - closing prepayment.
+mistake: Adding the closing prepayment.
+tip: Closing prepayment = next year.
+src: Study text ch9 - T-account (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A $120,000 loan at 5% a year was taken out on 1 March. Interest is paid half-yearly in arrears; the first payment of $3,000 was made on 31 August. The year end is 31 December.
+q: What interest accrual ($) is required at the year end?
+answer: 2000
+tol: 0
+unit: $
+formula: Accrual = interest for months unpaid
+step: Interest for September to December = 120,000 x 5% x 4/12 = 2,000.
+step: Accrual = $2,000 (total expense 5,000).
+check: 120000*0.05*4/12
+explain: Interest from 1 September has not yet been paid.
+mistake: Accruing a full half-year.
+tip: Unpaid months only.
+src: Study text ch9 - interest (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A company pays a 2-year software maintenance contract of $24,000 in advance at the start of Year 1. How should this be treated at the end of Year 1?
++ Expense $12,000; prepayment of $12,000 as a current asset || Next year's service is prepaid.
+- Expense $24,000 in Year 1 || Ignores accruals.
+- Capitalise $24,000 as a non-current asset || A service, not an asset to depreciate here.
+- Expense nothing until Year 2 || Year 1 benefited.
+explain: Only the portion relating to Year 1 is an expense.
+mistake: Expensing all cash paid.
+tip: Spread over the service period.
+src: Study text ch9 - prepayments (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Rates: opening prepayment $1,800; cash paid $9,600 on 1 April for the 12 months to 31 March next year. Year end 31 December.
+q: What is the rates expense ($) for the year?
+answer: 9000
+tol: 0
+unit: $
+formula: Expense = opening prepayment + paid - closing prepayment
+step: Closing prepayment = 9,600 x 3/12 = 2,400.
+step: Expense = 1,800 + 9,600 - 2,400 = $9,000.
+check: 1800+9600-9600*3/12
+explain: January to March was covered by last year's payment.
+mistake: Ignoring the opening balance.
+tip: Use the T-account.
+src: Study text ch9 - T-account (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: A company records a prepayment of $3,000 when it should have recorded an accrual of $3,000 for the same expense. What is the effect on profit?
++ Profit is overstated by $6,000 || The expense is $3,000 too low instead of $3,000 too high.
+- Profit is overstated by $3,000 || The swing is double.
+- No effect || There is an effect.
+- Profit is understated by $6,000 || Overstated.
+formula: Swing = prepayment wrongly deducted + accrual wrongly omitted
+step: The prepayment reduces the expense by 3,000.
+step: The missing accrual leaves it 3,000 too low as well: 6,000 in total.
+check: 3000+3000
+explain: Net assets are also overstated by $6,000.
+mistake: Thinking the error is $3,000.
+tip: Wrong direction = double effect.
+src: Study text ch9 - errors (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t2
+status: review
+q: Match each year-end adjustment with its double entry.
+pair: Accrued expense => Dr expense, Cr accruals
+pair: Prepaid expense => Dr prepayments, Cr expense
+pair: Accrued income => Dr accrued income, Cr income
+pair: Deferred income => Dr income, Cr deferred income
+explain: Each adjustment moves an amount into the correct period.
+mistake: Reversing entries.
+tip: Asset debit, liability credit.
+src: Study text ch9 - entries (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Interest receivable account: opening accrued income $600; cash received $4,200; closing accrued income $900.
+q: What interest income ($) is recognised for the year?
+answer: 4500
+tol: 0
+unit: $
+formula: Income = received - opening accrued income + closing accrued income
+step: 4,200 - 600 = 3,600.
+step: 3,600 + 900 = $4,500.
+check: 4200-600+900
+explain: Part of the cash received was last year's income.
+mistake: Adding the opening accrued income.
+tip: Opening accrued income comes off.
+src: Study text ch9 - income T-account (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A gym sells annual memberships for cash in advance. At the year end, many memberships still have months to run. How should the unused portion be treated?
++ As deferred income (a current liability) until the service is provided || Not yet earned.
+- As revenue when cash is received || Ignores accruals.
+- As accrued income || That is earned but unreceived.
+- As a prepayment asset || The gym received the cash.
+explain: Revenue is recognised as the service is provided.
+mistake: Recognising all cash as revenue.
+tip: Owe the service = liability.
+src: Study text ch9 - deferred income (concept basis; original scenario)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Light and heat: opening accrual $650; closing accrual $720; expense charged in profit or loss $8,400.
+q: How much cash ($) was paid for light and heat during the year?
+answer: 8330
+tol: 0
+unit: $
+formula: Paid = expense + opening accrual - closing accrual
+step: 8,400 + 650 = 9,050.
+step: 9,050 - 720 = $8,330.
+check: 8400+650-720
+explain: Work back through the T-account.
+mistake: Reversing the accruals.
+tip: Rearrange the proforma.
+src: Study text ch9 - working back (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee classifies rent received in advance from a tenant as "accrued income". What is wrong?
++ It is deferred income, a liability, not accrued income, an asset || Received before earned.
+- Nothing is wrong || It is deferred income.
+- It should be a prepaid expense || Not an expense.
+- It should be ignored || It must be recorded.
+explain: Accrued income is earned but not yet received.
+mistake: Mixing up the income terms.
+tip: Cash first = deferred.
+src: Study text ch9 - classification (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A business pays a cleaning contractor $450 per month in arrears; the December invoice is paid in January. Payments made in the year (January to December) totalled $5,400, including last year's December invoice.
+q: What is the cleaning expense ($) for the year?
+answer: 5400
+tol: 0
+unit: $
+formula: Expense = paid - opening accrual + closing accrual
+step: Opening accrual (last December) = 450; closing accrual (this December) = 450.
+step: Expense = 5,400 - 450 + 450 = $5,400 (12 months x 450).
+check: 5400-450+450
+explain: When the accruals are equal, the expense equals cash paid.
+mistake: Adding the closing accrual without removing the opening one.
+tip: Twelve months' cost.
+src: Study text ch9 - accruals (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which Conceptual Framework idea underlies accruals and prepayments?
++ Accrual accounting - effects are shown in the periods in which they occur || Not cash timing.
+- Going concern || Related, but not the core idea here.
+- Business entity || Not relevant.
+- Materiality || Not the core idea.
+explain: Accrual accounting gives a better picture of performance than cash.
+mistake: Citing going concern.
+tip: Accruals basis.
+src: Study text ch9 - framework (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Motor expenses: opening prepayment (insurance) $1,100; opening accrual (fuel) $380; cash paid $12,600; closing prepayment $1,250; closing accrual $420.
+q: What is the motor expense charge ($) for the year?
+answer: 12490
+tol: 0
+unit: $
+formula: Expense = paid + opening prepayment - opening accrual - closing prepayment + closing accrual
+step: 12,600 + 1,100 - 380 = 13,320.
+step: 13,320 - 1,250 + 420 = $12,490.
+check: 12600+1100-380-1250+420
+explain: One account can hold both an accrual and a prepayment for different items.
+mistake: Netting the opening balances on the wrong sides.
+tip: Prepayments debit; accruals credit.
+src: Study text ch9 - combined T-account (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why might a business choose not to accrue a very small expense, such as a $15 invoice received after the year end?
++ Materiality - the amount would not affect users' decisions || Cost of adjusting outweighs benefit.
+- Because accruals are optional || They are required where material.
+- Because small invoices are illegal || Not true.
+- To increase profit deliberately || Not a valid reason.
+explain: Consistency in applying a threshold is important.
+mistake: Thinking every cent must be accrued.
+tip: Immaterial = may ignore.
+src: Study text ch9 - materiality (concept basis; original scenario)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about year-end adjustments is correct?
++ Accrued expenses and deferred income are liabilities; prepayments and accrued income are assets || Core classification.
+- All four adjustments are liabilities || Two are assets.
+- All four adjustments are assets || Two are liabilities.
+- Prepayments are liabilities || They are assets.
+explain: Each adjustment moves income or expense into the right period.
+mistake: Mixing classifications.
+tip: Owe = liability; owed or paid ahead = asset.
+src: Study text ch9 - summary (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which formula gives the profit or loss expense charge?
++ Cash paid - opening accrual + closing accrual + opening prepayment - closing prepayment || Proforma result.
+- Cash paid + opening accrual - closing accrual || Signs reversed.
+- Cash paid only || Ignores accruals.
+- Cash paid + all accruals and prepayments || Wrong signs.
+explain: The income proforma mirrors this with accrued and deferred income.
+mistake: Reversing signs.
+tip: Draw the T-account.
+src: Study text ch9 - proforma (concept basis; original question)

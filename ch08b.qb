@@ -1,0 +1,899 @@
+@subject acfbe
+@chapter 8b
+@title Process Costing, Joint Products and By-Products
+@lo C4
+@topic t1 | Joint products vs by-products | C4
+@topic t2 | Apportioning joint costs | C4
+@topic t3 | Accounting for by-products | C4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What are joint products?
++ Two or more products separated in the same process, each having a significant value || Each one matters commercially.
+- A main product and a product of little value || That describes a main product and a by-product.
+- Products made in separate factories || They come from one common process.
+- Products that are always sold together || Joint products are sold separately.
+explain: Joint products share common costs up to the point of separation.
+mistake: Treating any secondary output as a joint product.
+tip: Joint = all of significant value.
+src: Study text ch8b - joint products (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is a by-product?
++ An output of a joint process with relatively little value compared with the main product || Its value is incidental.
+- The main output of a process || That is a main or joint product.
+- A product that is always scrapped || By-products are usually sold.
+- A product made in a separate process || It arises from the joint process.
+explain: Sawdust from a timber mill is a classic example.
+mistake: Calling every output a joint product.
+tip: Small value = by-product.
+src: Study text ch8b - by-products (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the split-off point?
++ The point in a process where joint products and by-products become separately identifiable || Before it, costs are shared.
+- The point where products are sold || That is the point of sale.
+- The end of the accounting period || Not related.
+- The point where abnormal loss arises || Not related.
+explain: Costs before the split-off point are joint (common) costs.
+mistake: Treating further processing costs as joint costs.
+tip: Split-off = products separate.
+src: Study text ch8b - split-off (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: Joint costs of $60,000 are incurred to produce 4,000 units of P and 6,000 units of Q. Using the physical units method, how much joint cost ($) is apportioned to P?
+answer: 24000
+tol: 0
+unit: $
+formula: Share = joint cost x product units / total units
+step: Total units = 4,000 + 6,000 = 10,000.
+step: P = 60,000 x 4,000 / 10,000 = $24,000.
+check: 60000*4000/10000
+explain: The physical method shares costs in proportion to output quantity.
+mistake: Using sales units.
+tip: Units of production, not sales.
+src: Study text ch8b - physical method (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is the MOST common treatment of the income from a by-product?
++ Its net realisable value is deducted from the cost of the main product(s) || It reduces joint costs.
+- It is apportioned a share of joint costs || By-products are usually not apportioned joint costs.
+- It is ignored || It is recorded.
+- It is added to the joint costs || It reduces them.
+explain: NRV = sales value less further processing and selling costs after split-off.
+mistake: Apportioning joint costs to a by-product.
+tip: By-product NRV reduces joint cost.
+src: Study text ch8b - by-product accounting (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which method of apportioning joint costs is the MOST widely used?
++ Sales value at split-off || Higher-value products bear more cost.
+- Physical measurement || Used, but less widely.
+- Equal shares || Not a standard method.
+- Labour hours || Not used for joint costs.
+explain: The sales value method avoids making low-value products look loss-making.
+mistake: Assuming physical units is preferred.
+tip: Sales value is most common.
+src: Study text ch8b - methods (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is an example of a by-product?
++ Sawdust from a furniture maker's timber cutting || Of small value compared with the furniture.
+- Petrol from an oil refinery || A joint product of significant value.
+- Diesel from an oil refinery || A joint product.
+- Finished tables from a furniture factory || The main product.
+explain: By-products are incidental outputs with low value.
+mistake: Calling high-value refinery outputs by-products.
+tip: Incidental + low value = by-product.
+src: Study text ch8b - examples (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How are costs incurred AFTER the split-off point treated?
++ As further processing costs of the specific product concerned || They are not shared.
+- As joint costs shared between all products || Only pre-separation costs are joint.
+- As by-product costs || Not necessarily.
+- As abnormal losses || Not a loss.
+explain: Only common costs before separation are apportioned.
+mistake: Including further processing costs in joint costs.
+tip: After split-off = product-specific.
+src: Study text ch8b - further processing (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A by-product sells for $3 per kg. Packaging and selling costs after split-off are $0.50 per kg. 2,000 kg are produced. What is the by-product's total net realisable value ($)?
+answer: 5000
+tol: 0
+unit: $
+formula: NRV = (sales value - further costs after split-off) x quantity
+step: NRV per kg = 3.00 - 0.50 = $2.50.
+step: Total NRV = 2,000 x 2.50 = $5,000.
+check: 2000*(3-0.5)
+explain: Only costs after split-off are deducted to find NRV.
+mistake: Using gross sales value ($6,000).
+tip: NRV = sales less further costs.
+src: Study text ch8b - NRV (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Why must joint costs be apportioned between joint products?
++ To value closing inventory and report the cost and profit of each product || Accounting needs a cost per product.
+- Because joint costs can be traced directly to each product || They cannot be traced.
+- To reduce total joint costs || Apportionment does not change the total.
+- Because by-products require it || By-products are usually not apportioned costs.
+explain: Joint costs are common, so an apportionment basis is needed.
+mistake: Thinking apportionment changes total costs.
+tip: Apportion for inventory and profit reporting.
+src: Study text ch8b - purpose (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs are $90,000. Output: X 3,000 units selling at $20; Y 5,000 units selling at $12. Joint costs are apportioned by sales value of production at split-off.
+q: How much joint cost is apportioned to X?
++ $45,000 || X sales value 60,000 of 120,000 total = 50%.
+- $33,750 || This uses physical units (3/8).
+- $56,250 || This uses Y's units for X.
+- $60,000 || This is X's sales value.
+formula: Share = joint cost x product sales value / total sales value
+step: Sales values: X 3,000 x 20 = 60,000; Y 5,000 x 12 = 60,000; total 120,000.
+step: X = 90,000 x 60,000 / 120,000 = $45,000.
+check: 90000*60000/120000
+explain: Equal sales values mean an equal split of joint cost.
+mistake: Using units.
+tip: Sales value of production.
+src: Study text ch8b - sales value method (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs are $90,000. Output: X 3,000 units selling at $20; Y 5,000 units selling at $12.
+q: Using the physical units method, how much joint cost is apportioned to Y?
++ $56,250 || 90,000 x 5,000 / 8,000.
+- $45,000 || This is the sales value method.
+- $33,750 || This is X's share.
+- $60,000 || This is Y's sales value.
+formula: Share = joint cost x product units / total units
+step: Total units = 8,000.
+step: Y = 90,000 x 5,000 / 8,000 = $56,250.
+check: 90000*5000/8000
+explain: Physical measurement ignores the different values of products.
+mistake: Applying sales value weights.
+tip: Physical = quantity only.
+src: Study text ch8b - physical method (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: When can the physical measurement method give misleading results?
++ When products are measured in different units or have very different values per unit || A low-value product may appear loss-making.
+- When all products have identical values || It works well then.
+- When joint costs are small || Not the issue.
+- When there is no by-product || Not relevant.
+explain: Physical apportionment gives each unit the same cost regardless of value.
+mistake: Assuming physical measurement always fair.
+tip: Different values = prefer sales value.
+src: Study text ch8b - limitations (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Joint process costs are $50,000. A by-product with NRV of $4,000 is produced alongside two joint products. Using the most common treatment, what joint cost ($) is apportioned between the joint products?
+answer: 46000
+tol: 0
+unit: $
+formula: Net joint cost = joint costs - by-product NRV
+step: Joint costs = $50,000.
+step: Less by-product NRV $4,000 = $46,000 to apportion.
+check: 50000-4000
+explain: The by-product reduces the cost borne by the main products.
+mistake: Apportioning $50,000 including the by-product.
+tip: Deduct NRV first.
+src: Study text ch8b - by-products (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee apportions joint costs using the number of units SOLD of each product. What is wrong?
++ Joint costs should be apportioned on units (or sales value) PRODUCED, not sold || Costs relate to production.
+- Nothing - units sold is correct || Not the rule.
+- Joint costs should be apportioned on selling prices only || Selling prices alone ignore quantity.
+- Joint costs should not be apportioned at all || They must be, for inventory valuation.
+explain: Closing inventory needs a cost per unit based on production.
+mistake: Using sales quantities.
+tip: Production, not sales.
+src: Study text ch8b - production basis (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO statements about joint products and by-products are correct?
++ Joint products each have a significant sales value || That is the definition.
++ A by-product's NRV is usually deducted from joint costs || Most common method.
+- By-products are apportioned the largest share of joint costs || They usually receive none.
+- Joint products are identifiable before the split-off point || They become identifiable at split-off.
+explain: The value of the output determines its classification.
+mistake: Reversing the treatments.
+tip: Value decides classification.
+src: Study text ch8b - classification (concept basis; original question)
+
+=== Q017
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each by-product treatment with its description.
+pair: Most common method => Deduct NRV from the cost of the main products
+pair: Revenue approach => Add by-product income to sales of the main product
+pair: Other income approach => Show by-product sales as a separate incidental income
+pair: Cost of sales approach => Treat by-product sales as a reduction in cost of goods sold
+explain: All four treatments recognise the by-product's value in some way.
+mistake: Apportioning joint cost to the by-product.
+tip: Most common: NRV off joint cost.
+src: Study text ch8b - by-product treatments (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $120,000. Product A: 10,000 kg at $8 per kg. Product B: 20,000 kg at $2 per kg. Joint costs are apportioned by sales value at split-off.
+q: How much joint cost is apportioned to B?
++ $40,000 || B sales value 40,000 of 120,000 = 1/3.
+- $80,000 || This is A's share.
+- $60,000 || This is a 50/50 split.
+- $26,667 || This uses kg and value incorrectly.
+formula: Share = joint cost x product sales value / total sales value
+step: Sales values: A 10,000 x 8 = 80,000; B 20,000 x 2 = 40,000; total 120,000.
+step: B = 120,000 x 40,000 / 120,000 = $40,000.
+check: 120000*40000/120000
+explain: Under physical measurement B would bear 2/3 ($80,000) despite lower value.
+mistake: Using kg.
+tip: Value weights.
+src: Study text ch8b - sales value method (concept basis; original figures)
+
+=== Q019
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $120,000. Product A: 10,000 kg at $8 per kg. Product B: 20,000 kg at $2 per kg. Joint costs are apportioned by physical measurement (kg).
+q: What profit or loss does Product B show, if all output is sold?
++ Loss of $40,000 || B revenue 40,000 less apportioned cost 80,000.
+- Profit of $0 || The cost is $80,000.
+- Profit of $40,000 || This uses the sales value method.
+- Loss of $80,000 || This ignores revenue.
+formula: Profit = revenue - apportioned joint cost
+step: B cost = 120,000 x 20,000 / 30,000 = $80,000.
+step: B revenue = 40,000; result = 40,000 - 80,000 = -40,000 (a loss of $40,000).
+check: 40000-80000
+explain: This shows why physical measurement can be misleading for low-value products.
+mistake: Concluding B should be dropped - joint costs are incurred anyway.
+tip: Apportioned losses are not decision-relevant.
+src: Study text ch8b - physical method limitations (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is net realisable value (NRV) of a by-product calculated?
++ Sales value less further processing and selling costs incurred after split-off || Costs before split-off are joint.
+- Sales value plus further processing costs || Costs are deducted.
+- Sales value less a share of joint costs || Joint costs are not deducted.
+- Cost of production less sales value || Reversed.
+explain: NRV measures the net cash benefit from the by-product.
+mistake: Forgetting selling costs.
+tip: Sales less post-split costs.
+src: Study text ch8b - NRV (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: 8,000 units of Product M are produced and apportioned joint costs of $32,000. 6,500 units are sold. What is the value ($) of M's closing inventory, assuming no opening inventory?
+answer: 6000
+tol: 0
+unit: $
+formula: Closing inventory = (production - sales) x cost per unit produced
+step: Cost per unit = 32,000 / 8,000 = $4.
+step: Closing inventory = (8,000 - 6,500) x 4 = 1,500 x 4 = $6,000.
+check: (8000-6500)*32000/8000
+explain: Cost per unit is based on production, not sales.
+mistake: Dividing by units sold.
+tip: Production cost per unit.
+src: Study text ch8b - inventory valuation (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which feature distinguishes joint products from a main product with a by-product?
++ The relative sales value of the outputs || Joint products are each significant; a by-product is minor.
+- Whether the outputs come from one process || Both come from a common process.
+- Whether there is a split-off point || Both have one.
+- Whether further processing occurs || Either can be processed further.
+explain: Classification depends on commercial significance.
+mistake: Focusing on the physical process.
+tip: Value decides.
+src: Study text ch8b - classification (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $72,000. Output: R 2,500 litres at $16; S 5,000 litres at $7; T 2,500 litres at $6. Joint costs are apportioned by sales value of production.
+q: What joint cost is apportioned to S?
++ $28,000 || S sales value 35,000 of 90,000 total.
+- $36,000 || This uses litres (5,000 of 10,000).
+- $24,000 || This is an equal three-way split.
+- $35,000 || This is S's sales value.
+formula: Share = joint cost x product sales value / total sales value
+step: Sales values: R 2,500 x 16 = 40,000; S 5,000 x 7 = 35,000; T 2,500 x 6 = 15,000; total 90,000.
+step: S = 72,000 x 35,000 / 90,000 = $28,000.
+check: 72000*35000/90000
+explain: Check: R 32,000 + S 28,000 + T 12,000 = 72,000.
+mistake: Using litres.
+tip: Shares must add back to the joint cost.
+src: Study text ch8b - sales value method (concept basis; original figures)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why is the sales value method often considered fairer than the physical measurement method?
++ It matches the joint cost borne by each product to its ability to generate revenue || High-value products bear more cost.
+- It always gives each product the same profit in total || It gives the same profit MARGIN, not the same total.
+- It ignores joint costs || It apportions them.
+- It uses units sold || It uses production.
+explain: Under the sales value method each joint product earns the same gross margin percentage.
+mistake: Thinking it equalises total profit.
+tip: Sales value = equal margin %.
+src: Study text ch8b - comparison (concept basis; original question)
+
+=== Q025
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: A joint process costs $84,000. It produces two joint products and 3,000 kg of a by-product, which sells for $2.40 per kg after packing costs of $0.40 per kg.
+q: What net joint cost ($) is left to apportion between the joint products?
+answer: 78000
+tol: 0
+unit: $
+formula: Net joint cost = joint cost - by-product NRV
+step: By-product NRV = 3,000 x (2.40 - 0.40) = $6,000.
+step: Net joint cost = 84,000 - 6,000 = $78,000.
+check: 84000-3000*(2.4-0.4)
+explain: The NRV of the by-product reduces the cost apportioned to joint products.
+mistake: Deducting the gross sales value ($7,200).
+tip: NRV, not gross sales.
+src: Study text ch8b - by-products (concept basis; original figures)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How are joint products shown in the process account?
++ As separate output lines, each valued at its apportioned share of joint cost || Each product's output is credited separately.
+- As a single output line with no split || Each product is shown.
+- As abnormal gains || Not gains.
+- As debits to the process account || Output is a credit.
+explain: The process account credits each joint product with its share of costs.
+mistake: Combining joint products into one line.
+tip: One credit line per joint product.
+src: Study text ch8b - process accounts (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $48,000 are apportioned by sales value. Product J: 4,000 units at $15. Product K: 2,000 units at $30.
+q: What is the joint cost per unit of K?
++ $12.00 || K gets 24,000 / 2,000 units.
+- $8.00 || This is the physical method.
+- $6.00 || This is J's cost per unit.
+- $24.00 || This is K's total share in thousands.
+formula: Cost per unit = apportioned joint cost / units produced
+step: Sales values: J 60,000; K 60,000; each gets 24,000.
+step: K per unit = 24,000 / 2,000 = $12.
+check: 48000*60000/120000/2000
+explain: K has a higher selling price, so it bears a higher cost per unit.
+mistake: Dividing by total units.
+tip: Share then divide by that product's units.
+src: Study text ch8b - sales value method (concept basis; original figures)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: If a by-product is treated as "other income", what effect does this have on the joint costs apportioned?
++ None - joint costs are apportioned in full and by-product sales appear separately as income || Joint costs are not reduced.
+- Joint costs are reduced by the by-product NRV || That is the most common method, not this one.
+- Joint costs are increased || Not affected upward.
+- Joint costs become zero || Not affected that way.
+explain: Different by-product treatments affect where the income appears, not total profit.
+mistake: Mixing up the treatments.
+tip: Other income = separate line.
+src: Study text ch8b - by-products (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Does the method of apportioning joint costs change the TOTAL profit of the business for the period, if all output is sold?
++ No - it only changes how profit is split between products || Total cost and revenue are the same.
+- Yes - the sales value method always gives a higher total profit || Totals are unchanged.
+- Yes - physical measurement reduces total profit || Totals are unchanged.
+- It depends on the by-product only || Not the point.
+explain: When there is closing inventory, the method can affect profit through inventory valuation.
+mistake: Thinking the method creates profit.
+tip: Apportionment splits, it does not create.
+src: Study text ch8b - effect on profit (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee apportions joint costs to a by-product using the sales value method alongside the joint products. What is the usual error here?
++ A by-product is normally not apportioned joint costs; its NRV is deducted from joint costs instead || Treating it as a joint product overcomplicates and misclassifies it.
+- Nothing - all outputs must share joint costs || By-products normally do not.
+- The by-product should bear all joint costs || Not correct.
+- The by-product should be valued at selling price plus joint cost || Not a method.
+explain: Classification as a by-product drives the treatment.
+mistake: Treating the by-product as a joint product.
+tip: By-product: deduct, don't apportion.
+src: Study text ch8b - by-products (concept basis; original question)
+
+=== Q031
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Joint costs of $36,000 are apportioned by weight. Product E is 1,200 kg and Product F is 1,800 kg. What is the joint cost per kg ($)?
+answer: 12
+tol: 0
+unit: $
+formula: Cost per kg = joint cost / total kg
+step: Total weight = 1,200 + 1,800 = 3,000 kg.
+step: Cost per kg = 36,000 / 3,000 = $12.
+check: 36000/3000
+explain: Under the physical method, every kg bears the same joint cost.
+mistake: Dividing by one product's weight.
+tip: Physical = same cost per unit of measure.
+src: Study text ch8b - physical method (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is the BEST example of joint products?
++ Petrol, kerosene and naphtha from crude oil refining || Each has significant value.
+- Sawdust from timber || A by-product.
+- Shavings from metal cutting || A by-product or scrap.
+- A custom-built kitchen || Job costing.
+explain: Refining produces several products from one common process.
+mistake: Calling low-value residues joint products.
+tip: Several valuable outputs = joint products.
+src: Study text ch8b - examples (concept basis; original question)
+
+=== Q033
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put these steps for apportioning joint costs by sales value in order.
+item: Calculate the net joint cost (deducting any by-product NRV)
+item: Calculate the sales value of each joint product's production
+item: Find each product's share of total sales value
+item: Multiply the net joint cost by each product's share
+explain: Check that the shares add back to the net joint cost.
+mistake: Using sales quantities.
+tip: Net cost, values, shares, apportion.
+src: Study text ch8b - method (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Joint costs $100,000. Joint products: G 6,000 units at $10; H 4,000 units at $25. By-product Z: 2,000 kg with NRV $2.50 per kg. Z's NRV is deducted from joint costs; the remainder is apportioned by sales value.
+q: How much joint cost is apportioned to H?
++ $59,375 || Net cost 95,000 x 100,000 / 160,000.
+- $62,500 || This ignores the by-product NRV.
+- $35,625 || This is G's share.
+- $38,000 || This uses physical units.
+formula: H share = (joint cost - by-product NRV) x H sales value / total sales value
+step: Net joint cost = 100,000 - 2,000 x 2.50 = $95,000.
+step: Sales values: G 60,000; H 100,000; total 160,000.
+step: H = 95,000 x 100,000 / 160,000 = $59,375.
+check: 95000*100000/160000
+explain: Check: G 35,625 + H 59,375 = 95,000.
+mistake: Forgetting to deduct the by-product NRV.
+tip: Deduct NRV, then apportion.
+src: Study text ch8b - combined (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $60,000. Product U: 3,000 units produced, 2,400 sold, at $20. Product V: 2,000 units produced, 2,000 sold, at $30. Joint costs are apportioned by sales value of production.
+q: What is the value of U's closing inventory?
++ $6,000 || U share 30,000 / 3,000 = $10 per unit x 600.
+- $7,200 || This uses units sold to find cost per unit.
+- $12,000 || This is at selling price.
+- $4,800 || Not supported.
+formula: Closing inventory = (production - sales) x cost per unit produced
+step: Sales values of production: U 60,000; V 60,000; U share = 30,000.
+step: U cost per unit = 30,000 / 3,000 = $10; closing inventory = 600 x 10 = $6,000.
+check: 600*30000/3000
+explain: Production-based figures give the cost of each unit made.
+mistake: Basing the split on sales values of units SOLD.
+tip: Production for both the split and the per-unit cost.
+src: Study text ch8b - inventory (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: Under physical apportionment, a joint product shows a loss. The sales director proposes stopping production of it. What is the key flaw in this argument?
++ Joint costs are incurred anyway; stopping one joint product would lose its revenue without saving the joint costs || Apportioned joint costs are not relevant to the decision.
+- Joint products always make a profit || Not true.
+- The loss is caused by the by-product || Not related.
+- The product cannot be stopped legally || Not the point.
+explain: Decisions should compare incremental revenue and costs, not apportioned costs.
+mistake: Using apportioned costs for decisions.
+tip: Apportioned joint costs are not decision-relevant.
+src: Study text ch8b - decision use (concept basis; original scenario)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $54,000 are apportioned by sales value at split-off. Product N: 3,000 units at $12. Product O: 1,500 units at $24.
+q: What is the gross profit ($) of N if all of N is sold?
+answer: 9000
+tol: 0
+unit: $
+formula: Gross profit = revenue - apportioned joint cost
+step: Sales values: N 36,000; O 36,000; each bears 27,000.
+step: N profit = 36,000 - 27,000 = $9,000.
+check: 36000-54000*36000/72000
+explain: Each product earns the same margin (25%) under the sales value method.
+mistake: Apportioning by units, giving N 36,000 of cost and zero profit.
+tip: Sales value = equal margin %.
+src: Study text ch8b - profit (concept basis; original figures)
+
+=== Q038
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee includes $8,000 of further processing costs for Product A in the joint costs to be apportioned between A and B. What is the effect?
++ Product B is overcharged with part of A's specific further processing cost || Only pre-separation costs should be shared.
+- There is no effect on either product || B bears costs that are not its own.
+- A's cost is overstated || A's cost is understated.
+- Total costs increase || The total is unchanged.
+explain: Further processing costs belong only to the product that incurs them.
+mistake: Pooling post-separation costs.
+tip: After split-off = specific.
+src: Study text ch8b - further processing (concept basis; original question)
+
+=== Q039
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are reasons for apportioning joint costs between joint products?
++ To value closing inventory of each product || Inventory valuation needs a cost.
++ To report the cost and profit of each product || Management reporting.
+- To decide whether to continue the joint process for one product only || Apportioned costs are not relevant to that decision.
+- To reduce the total joint costs incurred || Apportionment does not reduce costs.
+explain: Apportionment supports financial reporting, not short-term decisions.
+mistake: Using it for decisions.
+tip: Reporting, not deciding.
+src: Study text ch8b - purpose (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A process costs $40,000 and produces main product M (8,000 units) and a by-product B (1,000 units). B sells for $3 per unit and has selling costs of $1 per unit.
+q: Using the most common by-product treatment, what is M's cost per unit?
++ $4.75 || (40,000 - 2,000) / 8,000.
+- $5.00 || This ignores the by-product.
+- $4.44 || This spreads cost over 9,000 units.
+- $4.63 || This deducts gross sales value.
+formula: Main product cost per unit = (joint cost - by-product NRV) / main product units
+step: By-product NRV = 1,000 x (3 - 1) = $2,000.
+step: M cost per unit = (40,000 - 2,000) / 8,000 = $4.75.
+check: (40000-2000)/8000
+explain: The by-product reduces the cost of the main product.
+mistake: Deducting gross sales ($3,000) giving $4.625.
+tip: NRV, then divide by main units.
+src: Study text ch8b - by-products (concept basis; original figures)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t2
+status: review
+q: Match each item with the correct treatment.
+pair: Common costs before split-off => Apportioned between joint products
+pair: Costs after split-off for one product => Charged to that product only
+pair: By-product NRV => Deducted from joint costs
+pair: Sales value of production => Basis of the most widely used apportionment method
+explain: These rules prevent costs being shifted between products.
+mistake: Pooling specific costs.
+tip: Before = share; after = specific.
+src: Study text ch8b - treatments (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $45,000. Product C: 1,000 kg at $30. Product D: 2,000 kg at $15. Product E: 3,000 kg at $5.
+q: Under the PHYSICAL method, which product shows a loss (all output sold)?
++ E - revenue 15,000 against cost 22,500 || E bears 3/6 of 45,000.
+- C - revenue 30,000 against cost 7,500 || C makes a profit.
+- D - revenue 30,000 against cost 15,000 || D makes a profit.
+- None of the products || E makes a loss.
+formula: Physical share = joint cost x kg / total kg
+step: Cost per kg = 45,000 / 6,000 = $7.50; E cost = 3,000 x 7.50 = $22,500.
+step: E revenue = 3,000 x 5 = $15,000; loss $7,500.
+check: 3000*5
+explain: The low-value product looks loss-making under physical apportionment.
+mistake: Concluding E should be dropped.
+tip: Physical method distorts low-value products.
+src: Study text ch8b - physical method (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A dairy produces cream (high value) and skimmed milk. Over time, skimmed milk sales grow to 40% of total revenue. How should skimmed milk be classified now?
++ As a joint product, because it now has significant value || Classification follows relative value.
+- Still as a by-product, because classification never changes || Classification can change.
+- As scrap || It has significant value.
+- As an abnormal gain || Not a loss or gain.
+explain: If a by-product's value becomes significant, it should be treated as a joint product.
+mistake: Keeping outdated classifications.
+tip: Reassess relative value.
+src: Study text ch8b - classification (concept basis; original scenario)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $66,000 are apportioned by sales value of production. Product P: 5,000 units at $9. Product Q: 2,500 units at $26.
+q: What is Q's share of joint costs ($)?
+answer: 39000
+tol: 0
+unit: $
+formula: Share = joint cost x product sales value / total sales value
+step: Sales values: P 5,000 x 9 = 45,000; Q 2,500 x 26 = 65,000; total 110,000.
+step: Q = 66,000 x 65,000 / 110,000 = $39,000.
+check: 66000*65000/110000
+explain: Check: P 27,000 + Q 39,000 = 66,000. Physical units would give Q only 22,000.
+mistake: Using units, which favours the high-value product.
+tip: Shares must add back to the joint cost.
+src: Study text ch8b - sales value method (concept basis; original figures)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: A by-product's NRV is deducted from joint costs. If the by-product's selling price falls, what happens to the cost of the main products?
++ It increases, because a smaller NRV is deducted from joint costs || Less is subtracted.
+- It decreases || The deduction is smaller.
+- It is unchanged || The deduction changes.
+- It becomes zero || Not possible.
+explain: Main product cost = joint costs - by-product NRV.
+mistake: Reversing the direction.
+tip: Lower NRV = higher main product cost.
+src: Study text ch8b - by-products (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Joint costs $80,000. Product W: 4,000 units at $15. Product Y: 5,000 units at $8.
+q: Under the sales value method, what gross margin percentage does each product earn?
++ 20% || Total revenue 100,000 less cost 80,000 = 20,000.
+- 25% || This is profit as a % of cost.
+- 40% || Not supported.
+- 50% || Not supported.
+formula: Margin % = (total revenue - joint cost) / total revenue
+step: Total sales value = 60,000 + 40,000 = 100,000.
+step: Margin = (100,000 - 80,000) / 100,000 = 20%.
+check: (100000-80000)/100000*100
+explain: The sales value method gives every joint product the same margin percentage.
+mistake: Calculating a mark-up on cost.
+tip: Same margin for each.
+src: Study text ch8b - margins (concept basis; original figures)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Which statement about apportioning joint costs is correct?
++ Any basis of apportionment is arbitrary to some degree, because joint costs cannot be traced to specific products || No basis is "correct".
+- Physical measurement gives the true cost of each product || It is still an apportionment.
+- Sales value gives the true cost of each product || Also an apportionment.
+- Joint costs can be traced directly using time sheets || They are common.
+explain: Joint cost apportionment is a convention for reporting purposes.
+mistake: Treating apportioned costs as precise.
+tip: Joint cost splits are conventions.
+src: Study text ch8b - limitations (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Joint costs $30,000. By-product: 500 kg sold at $4 per kg; further processing $500 and selling costs $300 in total.
+q: What is the by-product's NRV?
++ $1,200 || 2,000 - 500 - 300.
+- $2,000 || Gross sales value.
+- $1,500 || Ignores selling costs.
+- $1,700 || Ignores further processing.
+formula: NRV = sales value - further processing - selling costs
+step: Sales value = 500 x 4 = $2,000.
+step: NRV = 2,000 - 500 - 300 = $1,200.
+check: 500*4-500-300
+explain: Net joint cost = 30,000 - 1,200 = $28,800.
+mistake: Omitting one of the post-split costs.
+tip: Deduct all post-split costs.
+src: Study text ch8b - NRV (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which statement BEST summarises the treatment of joint products and by-products?
++ Joint products share joint costs; a by-product's NRV is usually deducted from joint costs || Core rule.
+- Both share joint costs equally || Not the rule.
+- By-products absorb all joint costs || Not the rule.
+- Neither is costed || Joint products are costed.
+explain: Classification depends on relative value; treatment follows classification.
+mistake: Reversing the treatments.
+tip: Joint = share; by-product = deduct NRV.
+src: Study text ch8b - summary (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: When applying the sales value method, which sales value must be used?
++ The sales value of each product's PRODUCTION at the split-off point || Not sales made, not selling prices alone.
+- The sales value of units SOLD in the period || Uses sales, not production.
+- The selling price per unit only || Ignores quantity.
+- The sales value after further processing, always || The split-off value is used where available.
+explain: Using production ensures closing inventory is valued consistently.
+mistake: Using units sold.
+tip: Production x price at split-off.
+src: Study text ch8b - sales value method (concept basis; original question)

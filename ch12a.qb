@@ -1,0 +1,862 @@
+@subject acfbe
+@chapter 12a
+@title Capital Expenditure Budgeting
+@lo D6
+@topic t1 | Capital vs revenue | D6
+@topic t2 | Self-constructed assets | D6
+@topic t3 | Capital expenditure budgets | D6
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item is capital expenditure?
++ Building an extension to the factory || It adds a non-current asset with new earning capacity.
+- Repainting the existing office || Maintenance - revenue.
+- Paying staff wages || Revenue.
+- Buying raw materials for resale || Revenue.
+explain: Capital expenditure acquires or improves non-current assets.
+mistake: Treating maintenance as capital.
+tip: New or improved asset = capital.
+src: Study text ch12a - capital vs revenue (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item is revenue expenditure?
++ Repairing a broken window in the shop || It restores existing capacity.
+- Buying a new delivery van || Capital.
+- Installing a new production line || Capital.
+- Adding a storey to an office block || Capital.
+explain: Revenue expenditure is charged to profit or loss in the period.
+mistake: Capitalising repairs.
+tip: Repairs = revenue.
+src: Study text ch12a - revenue expenditure (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is capital expenditure treated in the accounts?
++ Recorded as a non-current asset in the statement of financial position and depreciated || Cost is spread over its life.
+- Charged in full to profit or loss when paid || That is revenue expenditure.
+- Ignored || It is recorded.
+- Added to revenue || Not income.
+explain: Depreciation matches the cost to the periods that benefit.
+mistake: Expensing capital items.
+tip: Capitalise, then depreciate.
+src: Study text ch12a - accounting (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is capital INCOME?
++ Proceeds from selling an old machine || Sale of a non-trading asset.
+- Sales of goods to customers || Revenue income.
+- Interest received on deposits || Revenue income.
+- Dividends received || Revenue income.
+explain: Revenue income comes from trading and investments.
+mistake: Treating asset sale proceeds as sales.
+tip: Asset sale = capital income.
+src: Study text ch12a - income (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A company builds its own storage shed using materials costing $4,000 and its own employees' labour costing $2,500. What amount ($) should be capitalised?
+answer: 6500
+tol: 0
+unit: $
+formula: Capitalised cost = materials + labour + directly attributable overheads
+step: Materials = 4,000; labour = 2,500.
+step: Capitalised = 4,000 + 2,500 = $6,500.
+check: 4000+2500
+explain: Labour used to build an asset is part of its cost.
+mistake: Expensing the labour.
+tip: Self-built = capitalise its costs.
+src: Study text ch12a - self-constructed assets (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How are minor, recurring purchases of equipment usually controlled in a capital budget?
++ Through an annual capital expenditure allowance || No individual appraisal needed.
+- By full individual project appraisal || For major projects.
+- By treating them as revenue expenditure || They are still capital.
+- They are not controlled || They are.
+explain: Major projects are appraised and authorised individually.
+mistake: Appraising every small item in detail.
+tip: Small and recurring = allowance.
+src: Study text ch12a - capital budgets (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Why does the distinction between capital and revenue expenditure matter?
++ Misclassification misstates both profit and the value of assets || It affects matching.
+- It only affects tax and nothing else || Profit and assets are affected.
+- It has no effect on financial statements || It has a large effect.
+- It only matters for cash budgets || Cash is the same either way.
+explain: Capital items are spread over the asset's life; revenue items hit the current period.
+mistake: Thinking it is just labelling.
+tip: Wrong label = wrong profit.
+src: Study text ch12a - importance (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How should repayment of a bank loan be classified?
++ As a capital transaction, not revenue expenditure || Repaying finance is not an expense.
+- As revenue expenditure || Interest is revenue; the principal is not.
+- As capital expenditure on an asset || No asset is acquired.
+- As revenue income || Not income.
+explain: Raising and repaying finance are capital transactions.
+mistake: Charging loan repayments to profit.
+tip: Principal is not an expense.
+src: Study text ch12a - finance transactions (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is the FIRST stage of the capital expenditure process?
++ Identifying investment opportunities || Everything follows from here.
+- Appraising the project || Follows data collection.
+- Authorising the project || Later.
+- Post-completion audit || The final stage.
+explain: Then data collection, appraisal, authorisation, implementation and monitoring follow.
+mistake: Starting with appraisal.
+tip: Identify first.
+src: Study text ch12a - process (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item is revenue income?
++ Interest received on a bank deposit || Investment income is revenue.
+- Proceeds from selling a building || Capital.
+- Proceeds from a share issue || Capital.
+- A new bank loan received || Capital.
+explain: Revenue income includes trading and investment income.
+mistake: Treating finance raised as income.
+tip: Trading and investment = revenue.
+src: Study text ch12a - revenue income (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company builds a new workshop: materials $40,000; own labour $25,000; production overheads directly attributable to the build $10,000; general administration costs $5,000. What should be capitalised ($)?
+answer: 75000
+tol: 0
+unit: $
+formula: Capitalised = materials + labour + directly attributable overheads
+step: 40,000 + 25,000 + 10,000 = 75,000.
+step: General administration ($5,000) is not directly attributable and is expensed.
+check: 40000+25000+10000
+explain: Only costs of bringing the asset into use are capitalised.
+mistake: Capitalising general admin.
+tip: Directly attributable only.
+src: Study text ch12a - self-constructed (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A new machine costs $50,000. Delivery costs $2,000, installation $3,000, and the first annual service contract $1,500. What is the capital expenditure?
++ $55,000 || Price, delivery and installation.
+- $56,500 || Includes the service contract.
+- $50,000 || Excludes delivery and installation.
+- $53,000 || Excludes installation.
+formula: Capital cost = purchase price + costs of getting the asset ready for use
+step: 50,000 + 2,000 + 3,000 = 55,000.
+step: The service contract is a running cost - revenue.
+check: 50000+2000+3000
+explain: Costs to bring the asset into working condition are capitalised.
+mistake: Capitalising running costs.
+tip: Get it ready = capital; keep it running = revenue.
+src: Study text ch12a - asset cost (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A $20,000 machine (10% straight-line depreciation per year) is wrongly charged to profit or loss as an expense. What is the effect on year 1 profit?
++ Understated by $18,000 || Expensed 20,000 instead of depreciation 2,000.
+- Understated by $20,000 || Ignores depreciation that should have been charged.
+- Overstated by $18,000 || Profit is understated.
+- No effect || Profit is affected.
+formula: Effect = amount expensed - correct depreciation
+step: Correct charge = 20,000 x 10% = 2,000.
+step: Overcharge = 20,000 - 2,000 = 18,000; profit is understated.
+check: 20000-20000*0.1
+explain: Non-current assets are also understated by $18,000.
+mistake: Forgetting depreciation.
+tip: Compare with the correct charge.
+src: Study text ch12a - misclassification (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A company replaces worn-out tiles on its existing roof. How is this classified?
++ Revenue expenditure - it maintains the existing asset || No improvement in capacity.
+- Capital expenditure - the roof is a non-current asset || Repairs are revenue.
+- Capital income || Not income.
+- Revenue income || Not income.
+explain: Restoring condition is maintenance, not improvement.
+mistake: Capitalising because the roof is an asset.
+tip: Restore = revenue; improve = capital.
+src: Study text ch12a - repairs (concept basis; original question)
+
+=== Q015
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO items are capital expenditure?
++ Purchase of land for a new warehouse || Acquires a non-current asset.
++ Legal fees on buying a building || Part of acquisition cost.
+- Annual insurance of vehicles || Running cost.
+- Fuel for delivery vans || Running cost.
+explain: Costs of acquiring assets are capitalised.
+mistake: Expensing acquisition costs.
+tip: Acquisition costs are capital.
+src: Study text ch12a - classification (concept basis; original question)
+
+=== Q016
+type: match
+level: S
+cat: concept
+topic: t1
+status: review
+q: Match each item with its classification.
+pair: Purchase of a new computer system => Capital expenditure
+pair: Servicing existing computers => Revenue expenditure
+pair: Proceeds from selling an old vehicle => Capital income
+pair: Sales of goods to customers => Revenue income
+explain: Classify by what the item does to the business.
+mistake: Mixing income and expenditure classes.
+tip: Asset vs running vs trading.
+src: Study text ch12a - classification (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How are major capital projects normally handled in the capital budget?
++ Each is appraised individually and authorised before inclusion || Large sums need scrutiny.
+- They are covered by the annual minor-items allowance || That is for small purchases.
+- They are approved automatically || Approval is needed.
+- They are treated as revenue spending || They are capital.
+explain: Authorisation levels usually rise with project size.
+mistake: Treating major projects like minor purchases.
+tip: Big = individual appraisal.
+src: Study text ch12a - major projects (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A van with a carrying amount of $3,000 is sold for $4,000. What is the profit on disposal ($)?
+answer: 1000
+tol: 0
+unit: $
+formula: Profit on disposal = proceeds - carrying amount
+step: Proceeds = 4,000; carrying amount = 3,000.
+step: Profit = 4,000 - 3,000 = $1,000.
+check: 4000-3000
+explain: The $4,000 proceeds are capital income; only the $1,000 gain goes to profit or loss.
+mistake: Treating all proceeds as revenue.
+tip: Gain = proceeds less carrying amount.
+src: Study text ch12a - disposals (concept basis; original question)
+
+=== Q019
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the stages of the capital expenditure process in order.
+item: Identify investment opportunities
+item: Collect data and forecast cash flows
+item: Appraise the project
+item: Authorise the project
+item: Implement the project
+item: Monitor and carry out a post-completion audit
+explain: Post-completion audits improve future forecasting.
+mistake: Authorising before appraisal.
+tip: Find, forecast, appraise, approve, do, review.
+src: Study text ch12a - process (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A company's own maintenance team spends two weeks building a new loading bay. How should their wages for that time be treated?
++ Capitalised as part of the cost of the loading bay || Labour on a self-built asset is capital.
+- Charged to profit or loss as normal wages || That ignores the asset created.
+- Treated as capital income || Not income.
+- Ignored || It is a cost.
+explain: Their normal maintenance work would be revenue expenditure.
+mistake: Expensing labour on self-built assets.
+tip: Building an asset = capitalise.
+src: Study text ch12a - self-constructed (concept basis; original scenario)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A $6,000 repair is wrongly capitalised (no depreciation charged in the year). What is the effect on profit for the year?
++ Overstated by $6,000 || The expense was omitted.
+- Understated by $6,000 || Profit is overstated.
+- No effect || Profit is affected.
+- Overstated by $600 || Not supported.
+formula: Effect = expense wrongly omitted
+step: The repair should have been expensed: 6,000.
+step: Capitalising it overstates profit and assets by 6,000.
+check: 6000
+explain: Capitalising revenue items flatters profit.
+mistake: Thinking capitalising is harmless.
+tip: Capitalised expense = profit overstated.
+src: Study text ch12a - misclassification (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which appraisal methods are commonly used for capital projects?
++ Payback, net present value and internal rate of return || Covered in the next chapter.
+- High-low and regression || Cost estimation.
+- FIFO and AVCO || Inventory valuation.
+- Equivalent units || Process costing.
+explain: Appraisal compares the costs and benefits of the project.
+mistake: Confusing appraisal with cost estimation.
+tip: Payback, NPV, IRR.
+src: Study text ch12a - appraisal (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A machine costing $120,000 is ordered in Q1. A 25% deposit is paid in Q1 and the balance on delivery in Q2. What payment ($) appears in the Q2 cash budget?
+answer: 90000
+tol: 0
+unit: $
+formula: Q2 payment = cost - deposit
+step: Deposit = 120,000 x 25% = 30,000.
+step: Balance = 120,000 - 30,000 = $90,000.
+check: 120000*0.75
+explain: Capital budgets feed into the cash budget by timing of payment.
+mistake: Showing the full cost in one quarter.
+tip: Follow the payment terms.
+src: Study text ch12a - capital budget and cash (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is NOT revenue expenditure?
++ Upgrading a machine so it produces 30% more output || Improves earning capacity - capital.
+- Routine servicing of a machine || Revenue.
+- Replacing a worn drive belt || Revenue.
+- Cleaning the factory || Revenue.
+explain: Improvements to earning capacity are capital.
+mistake: Calling upgrades repairs.
+tip: More capacity = capital.
+src: Study text ch12a - improvements (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is a post-completion audit?
++ A review of a project after implementation, comparing actual results with the forecasts || Learns lessons.
+- An audit of the financial statements || External audit.
+- Approval of a new project || Authorisation.
+- A check of petty cash || Not related.
+explain: It discourages over-optimistic forecasts.
+mistake: Confusing with statutory audit.
+tip: Look back, learn.
+src: Study text ch12a - post-completion audit (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How are proceeds from a new share issue classified?
++ A capital transaction - finance raised, not revenue income || Not income from trading.
+- Revenue income || Not trading income.
+- Revenue expenditure || Not expenditure.
+- Capital expenditure || Not spending.
+explain: Raising finance appears in the cash budget but not in profit.
+mistake: Treating finance as income.
+tip: Finance is not income.
+src: Study text ch12a - finance (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A trainee records the $8,000 proceeds from selling an old machine as sales revenue. What is wrong?
++ The proceeds are capital income; only any gain over carrying amount affects profit, and not as sales || Sales are trading income.
+- Nothing is wrong || It is not trading income.
+- The proceeds should be expensed || They are income.
+- The proceeds should be ignored || They must be recorded.
+explain: Including asset sales in revenue overstates trading performance.
+mistake: Treating asset disposals as sales.
+tip: Disposal ≠ sale of goods.
+src: Study text ch12a - capital income (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why do capital budgets often cover several years?
++ Major projects take time to plan, build and pay for || Spending spans periods.
+- Because revenue budgets cover one month || Not the reason.
+- Because capital items are never paid for || They are paid.
+- To avoid depreciation || Not related.
+explain: Capital budgets feed into the cash budget and budgeted SOFP.
+mistake: Limiting capital planning to one year.
+tip: Long projects, long budgets.
+src: Study text ch12a - capital budgets (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which cost of building a company's own asset should NOT be capitalised?
++ General head office administration costs || Not directly attributable.
+- Materials used in the build || Capitalised.
+- Wages of staff working on the build || Capitalised.
+- Production overhead directly attributable to the build || Capitalised.
+explain: Only costs of bringing the asset into use are included.
+mistake: Capitalising general overheads.
+tip: Directly attributable only.
+src: Study text ch12a - self-constructed (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Spending in the year: new delivery van $28,000; van road tax $400; fuel $3,600; signwriting the company logo on the new van before use $600.
+q: What is the total capital expenditure ($)?
+answer: 28600
+tol: 0
+unit: $
+formula: Capital = asset cost + costs to get it ready for use
+step: Van 28,000 + signwriting before use 600 = 28,600.
+step: Road tax and fuel are running costs (revenue).
+check: 28000+600
+explain: Costs incurred to make the asset ready for use are capitalised.
+mistake: Capitalising running costs.
+tip: Ready for use = capital.
+src: Study text ch12a - classification (concept basis; original figures)
+
+=== Q031
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Who usually authorises a very large capital project?
++ The board of directors || Authorisation levels rise with size.
+- Any junior employee || Not appropriate.
+- The external auditor || Not their role.
+- The customer || Not their role.
+explain: Smaller items may be authorised by departmental managers.
+mistake: Thinking all spending is approved at one level.
+tip: Bigger spend, higher authority.
+src: Study text ch12a - authorisation (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is interest paid on a loan used to buy machinery classified?
++ Revenue expenditure || It is a finance cost of the period.
+- Capital expenditure || It does not acquire an asset.
+- Capital income || It is paid, not received.
+- Part of the machine's cost, always || Not for a purchased asset in this syllabus.
+explain: The loan principal is a capital transaction; interest is a revenue expense.
+mistake: Treating interest as capital.
+tip: Interest = revenue cost.
+src: Study text ch12a - finance costs (concept basis; original question)
+
+=== Q033
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A company builds a showroom: materials $65,000; own staff wages $40,000 (of which $4,000 was for time spent on normal maintenance elsewhere); site-specific supervision $8,000; share of head office marketing $6,000.
+q: What should be capitalised?
++ $109,000 || 65,000 + 36,000 + 8,000.
+- $113,000 || Includes maintenance wages.
+- $119,000 || Includes maintenance and marketing.
+- $105,000 || Excludes supervision.
+formula: Capitalise directly attributable costs only
+step: Wages on the build = 40,000 - 4,000 = 36,000.
+step: Capitalised = 65,000 + 36,000 + 8,000 = $109,000.
+check: 65000+36000+8000
+explain: Maintenance wages and head office marketing are revenue costs.
+mistake: Capitalising unrelated costs.
+tip: Only what built the asset.
+src: Study text ch12a - self-constructed (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+q: A $30,000 extension (depreciated at 5% per year straight-line) is wrongly expensed in year 1. What is the effect on year 1 profit and on non-current assets at the year end?
++ Profit understated by $28,500; non-current assets understated by $28,500 || 30,000 - 1,500.
+- Profit understated by $30,000; assets understated by $30,000 || Ignores depreciation.
+- Profit overstated by $28,500 || Profit is understated.
+- No effect on assets || Assets are understated.
+formula: Effect = expensed amount - correct depreciation
+step: Correct depreciation = 30,000 x 5% = 1,500.
+step: Effect = 30,000 - 1,500 = 28,500 on both profit and assets.
+check: 30000-30000*0.05
+explain: In later years, profit will be overstated as no depreciation is charged.
+mistake: Forgetting depreciation.
+tip: Compare with correct treatment.
+src: Study text ch12a - misclassification (concept basis; original question)
+
+=== Q035
+type: mr
+level: C
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO are capital transactions that are NOT capital expenditure?
++ Receiving a new long-term bank loan || Finance raised.
++ Repaying the principal of a loan || Finance repaid.
+- Buying a new machine || Capital expenditure.
+- Paying staff salaries || Revenue expenditure.
+explain: Finance transactions are neither revenue items nor asset purchases.
+mistake: Treating finance as expenditure or income.
+tip: Finance in/out = capital transaction.
+src: Study text ch12a - other capital transactions (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A manager splits a $90,000 equipment purchase into three $30,000 orders to stay below the $50,000 limit that needs board approval. What is the main problem?
++ It bypasses the authorisation controls designed for major capital spending || Large projects need proper scrutiny.
+- It changes the classification to revenue || Still capital.
+- It increases depreciation || Not the issue.
+- It is the recommended practice || It is not.
+explain: Authorisation limits protect against poor or unapproved investment.
+mistake: Viewing limits as paperwork.
+tip: Splitting orders defeats control.
+src: Study text ch12a - authorisation (concept basis; original scenario)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A capital budget includes: new IT system $80,000 payable 50% in Q1 and 50% in Q3; vehicle $25,000 payable in Q2; minor equipment allowance $12,000 spread evenly over four quarters.
+q: What capital payments ($) are budgeted for Q3?
+answer: 43000
+tol: 0
+unit: $
+formula: Q3 payments = IT instalment + allowance for the quarter
+step: IT in Q3 = 80,000 x 50% = 40,000; allowance = 12,000 / 4 = 3,000.
+step: Q3 total = 40,000 + 3,000 = $43,000.
+check: 80000*0.5+12000/4
+explain: The vehicle is paid in Q2, so it is not in Q3.
+mistake: Including items paid in other quarters.
+tip: Follow each payment's timing.
+src: Study text ch12a - capital budget (concept basis; original figures)
+
+=== Q038
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: A company replaces an old manual machine with a new automated one that doubles output. How is the cost classified?
++ Capital expenditure - it acquires an asset with greater earning capacity || A replacement that improves capacity.
+- Revenue expenditure - it is just a replacement || The new asset is capital.
+- Repairs expense || Not a repair.
+- Capital income || Not income.
+explain: Replacing an entire asset is capital, even more so if it improves capacity.
+mistake: Calling replacements repairs.
+tip: Whole new asset = capital.
+src: Study text ch12a - replacement (concept basis; original scenario)
+
+=== Q039
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee charges $15,000 of employee wages to profit or loss, although the employees spent the period building a new warehouse for the company. What is the effect?
++ Profit and non-current assets are both understated || The wages should be capitalised.
+- Profit is overstated || It is understated.
+- No effect || Both are misstated.
+- Only cash is affected || Cash is the same either way.
+explain: Self-constructed asset costs are capitalised.
+mistake: Expensing construction labour.
+tip: Building an asset = asset cost.
+src: Study text ch12a - self-constructed (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: What is the main benefit of a post-completion audit for FUTURE capital budgeting?
++ It encourages more realistic forecasts and helps learn from mistakes || Managers know results will be checked.
+- It changes the original decision || The decision is made.
+- It recovers money already spent || Spending is sunk.
+- It replaces the need for appraisal || Appraisal still needed.
+explain: Comparing actual with forecast improves future decisions.
+mistake: Seeing it as pointless after the event.
+tip: Learn for next time.
+src: Study text ch12a - post-completion audit (concept basis; original question)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each capital budgeting stage with an example activity.
+pair: Identify opportunities => Managers propose a new warehouse
+pair: Forecast cash flows => Estimate costs and savings for each year
+pair: Authorise => The board approves the project
+pair: Post-completion audit => Compare actual savings with forecasts
+explain: Each stage has a distinct purpose.
+mistake: Merging appraisal and authorisation.
+tip: Propose, forecast, approve, review.
+src: Study text ch12a - process (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Items paid in the year: new machine $45,000; installation of the machine $2,500; machine operator training on first use $1,200; repairs to existing machines $3,800; extension to factory $60,000.
+q: What is total capital expenditure ($)?
+answer: 107500
+tol: 0
+unit: $
+formula: Capital = asset costs + costs of getting assets ready
+step: Machine 45,000 + installation 2,500 + extension 60,000 = 107,500.
+step: Training and repairs are revenue expenditure.
+check: 45000+2500+60000
+explain: Staff training is not part of an asset's cost.
+mistake: Capitalising training.
+tip: Training = revenue.
+src: Study text ch12a - classification (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: How does misclassifying capital expenditure as revenue expenditure affect the cash budget?
++ No effect - cash paid is the same whichever way it is classified || Classification affects profit, not cash.
+- Cash is overstated || Cash is unchanged.
+- Cash is understated || Cash is unchanged.
+- Cash is doubled || Not possible.
+explain: Profit and assets are misstated; cash is not.
+mistake: Linking classification to cash.
+tip: Cash is cash.
+src: Study text ch12a - effects (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A company's board approves capital projects based only on managers' enthusiasm, with no cash flow forecasts. What should be introduced FIRST?
++ A requirement to forecast cash flows and appraise projects before authorisation || Decisions need evidence.
+- Higher depreciation rates || Not relevant.
+- Treating projects as revenue items || Wrong classification.
+- Removing the board's approval role || Weakens control.
+explain: Appraisal methods such as NPV need forecast cash flows.
+mistake: Approving projects without analysis.
+tip: Forecast, appraise, then approve.
+src: Study text ch12a - process (concept basis; original scenario)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A firm builds a machine for its own use: components $18,000; direct labour 400 hours at $20; production overhead absorbed at $15 per direct labour hour (directly attributable); a share of general selling costs $2,000.
+q: What should the machine be capitalised at ($)?
+answer: 32000
+tol: 0
+unit: $
+formula: Capitalised = materials + labour + attributable production overhead
+step: Labour = 400 x 20 = 8,000; overhead = 400 x 15 = 6,000.
+step: Cost = 18,000 + 8,000 + 6,000 = $32,000 (selling costs excluded).
+check: 18000+400*20+400*15
+explain: Selling costs never form part of an asset's cost.
+mistake: Including selling costs.
+tip: Production costs only.
+src: Study text ch12a - self-constructed (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Where do the figures in a capital expenditure budget flow to?
++ The cash budget and the budgeted statement of financial position || Payments and asset balances.
+- Only the sales budget || Not related.
+- Only the labour budget || Not related.
+- Nowhere - it stands alone || It feeds other budgets.
+explain: Depreciation from new assets also flows to the budgeted P/L.
+mistake: Treating capital budgets in isolation.
+tip: Capital budget feeds the master budget.
+src: Study text ch12a - links (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: A trainee classifies the cost of an extra floor added to an office building as "repairs". What is the correct classification and why?
++ Capital expenditure - it adds to the asset and increases its capacity || Not maintenance.
+- Revenue expenditure - all building work is repairs || Not all.
+- Capital income || Not income.
+- Revenue income || Not income.
+explain: An extension is a capital improvement.
+mistake: Labelling improvements as repairs.
+tip: Bigger asset = capital.
+src: Study text ch12a - classification (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which concept explains why capital expenditure is spread over several periods?
++ Matching - the cost is charged to the periods that benefit from the asset || Through depreciation.
+- Prudence alone || Not the main reason.
+- Going concern alone || Not the main reason.
+- Materiality alone || Not the main reason.
+explain: Revenue expenditure benefits only the current period.
+mistake: Charging long-life costs in one year.
+tip: Match cost to benefit.
+src: Study text ch12a - matching (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which statement BEST distinguishes capital from revenue expenditure?
++ Capital acquires or improves non-current assets; revenue maintains them or covers day-to-day running || Core distinction.
+- Capital is always larger in amount || Size does not decide.
+- Revenue is always paid in cash || Both may be.
+- Capital is charged in full to profit immediately || It is depreciated.
+explain: Classification depends on the nature of the spending, not its size.
+mistake: Classifying by amount.
+tip: Acquire/improve vs maintain/run.
+src: Study text ch12a - summary (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: How are the costs of a self-constructed non-current asset treated?
++ Directly attributable materials, labour and overheads are capitalised || Not expensed.
+- All costs are expensed || They are capitalised.
+- Only materials are capitalised || Labour and attributable overheads too.
+- General admin costs are capitalised || Not directly attributable.
+explain: The asset is then depreciated over its useful life.
+mistake: Expensing labour.
+tip: Built it = capitalise it.
+src: Study text ch12a - self-constructed (concept basis; original question)

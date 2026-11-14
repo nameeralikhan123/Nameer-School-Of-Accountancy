@@ -1,0 +1,875 @@
+@subject acffa2
+@chapter 14
+@title The Trial Balance, Errors and Suspense Accounts
+@lo E2, E3
+@topic t1 | The trial balance | E2, E3
+@topic t2 | Types of error | E2, E3
+@topic t3 | Suspense accounts | E2, E3
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is a trial balance?
++ A list of all ledger account balances at a point in time, with total debits and total credits || A check on double entry.
+- The statement of financial position || Not the same.
+- A list of bank transactions || Not correct.
+- A list of customers only || Not correct.
+explain: Equal totals suggest, but do not prove, accuracy.
+mistake: Thinking a balanced TB means no errors.
+tip: All balances, two columns.
+src: Study text ch14 - trial balance (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which error causes the trial balance NOT to balance?
++ A debit entry posted but the credit entry omitted || Single-sided.
+- A transaction omitted completely || Both sides missing.
+- An entry posted to the wrong customer's account || Commission.
+- Debit and credit reversed || Reversal.
+explain: Only errors making debits differ from credits show up.
+mistake: Thinking omissions unbalance the TB.
+tip: One-sided = imbalance.
+src: Study text ch14 - errors (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: The cost of a new van is debited to motor expenses. What type of error is this?
++ Error of principle || Wrong type of account (capital vs revenue).
+- Error of commission || Same type, wrong account.
+- Error of omission || Not omitted.
+- Casting error || Not an addition error.
+explain: The trial balance still balances.
+mistake: Calling it commission.
+tip: Wrong type = principle.
+src: Study text ch14 - principle (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Why is a suspense account opened?
++ To make the trial balance agree temporarily while the difference is investigated || Temporary.
+- To hold cash || Not cash.
+- To record capital || Not capital.
+- To store fixed assets || Not assets.
+explain: It must be cleared before the accounts are finalised.
+mistake: Leaving it in the final accounts.
+tip: Temporary holding account.
+src: Study text ch14 - suspense (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A trial balance shows total debits of $145,600 and total credits of $148,300. What balance ($) is opened in the suspense account? (It is a debit balance.)
+answer: 2700
+tol: 0
+unit: $
+formula: Suspense = difference between totals, on the short side
+step: 148,300 - 145,600 = 2,700.
+step: Debits are short, so suspense is a debit of $2,700.
+check: 148300-145600
+explain: The suspense balance goes on the side that is short.
+mistake: Putting it on the larger side.
+tip: Fill the short side.
+src: Study text ch14 - opening suspense (concept basis; original figures)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A sale to customer A is posted to customer B's account. What type of error is this?
++ Error of commission || Right type, wrong account.
+- Error of principle || Same type of account.
+- Error of omission || It was recorded.
+- Error of original entry || Amount is correct.
+explain: The trial balance still balances.
+mistake: Calling it principle.
+tip: Same type, wrong account = commission.
+src: Study text ch14 - commission (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: An invoice for $45 is recorded as $54 in both the sales and receivables accounts. What type of error is this?
++ Error of original entry (transposition) || Wrong amount both sides.
+- Single-sided entry || Both sides posted.
+- Error of principle || Correct accounts.
+- Error of omission || Recorded.
+explain: Transposition differences are divisible by 9.
+mistake: Expecting a suspense entry.
+tip: Same wrong amount both sides = balances.
+src: Study text ch14 - original entry (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which account normally has a DEBIT balance in the trial balance?
++ Rent expense || Expense.
+- Sales revenue || Credit.
+- Capital || Credit.
+- Trade payables || Credit.
+explain: Debits: assets, expenses, drawings.
+mistake: Placing income as a debit.
+tip: DEAD CLIC.
+src: Study text ch14 - balances (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which errors are corrected WITHOUT using the suspense account?
++ Errors that did not cause the trial balance to disagree, such as omission or principle || Both sides were posted.
+- Single-sided entries || Use suspense.
+- Casting errors in one account || Use suspense.
+- Unequal debit and credit amounts || Use suspense.
+explain: Only imbalance errors involve suspense.
+mistake: Using suspense for every correction.
+tip: Balanced error = no suspense.
+src: Study text ch14 - corrections (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A difference of $360 in the trial balance may be caused by which error?
++ A transposition in one account, as the difference is divisible by 9 || Clue.
+- An omitted transaction || No difference.
+- A reversal of entries || No difference.
+- An error of commission || No difference.
+explain: Transposed digits create differences divisible by 9.
+mistake: Ignoring the 9 test.
+tip: Divisible by 9 = check transpositions.
+src: Study text ch14 - transposition (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A credit sale of $2,400 was credited to sales but not debited to receivables. What is the correcting journal?
++ Dr receivables $2,400; Cr suspense $2,400 || Complete the missing side.
+- Dr suspense $2,400; Cr sales $2,400 || Sales is already correct.
+- Dr receivables $2,400; Cr sales $2,400 || Double counts sales.
+- Dr sales $2,400; Cr receivables $2,400 || Reverses the sale.
+formula: Correction = what should have been - what was done; other side to suspense
+step: Sales was credited correctly; receivables debit missing.
+step: Dr receivables 2,400; Cr suspense 2,400.
+check: 2400
+explain: Profit is not affected.
+mistake: Crediting sales again.
+tip: Fix the missing side via suspense.
+src: Study text ch14 - single-sided (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A machine costing $5,000 was debited to repairs. Ignoring depreciation, by how much ($) does profit change when the error is corrected?
+answer: 5000
+tol: 0
+unit: $
+formula: Profit change = expense removed
+step: Correction: Dr machinery 5,000; Cr repairs 5,000.
+step: Expenses fall by 5,000, so profit rises by $5,000.
+check: 5000
+explain: No suspense entry is needed.
+mistake: Using suspense.
+tip: Capital wrongly expensed = profit up on correction.
+src: Study text ch14 - principle (concept basis; original question)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO errors do NOT cause the trial balance to disagree?
++ Debit and credit entries reversed || Reversal.
++ Two errors that exactly cancel each other || Compensating.
+- Only the debit side of an entry posted || Single-sided.
+- The sales account added up incorrectly || Casting error.
+explain: Errors of omission, commission, principle and original entry also balance.
+mistake: Thinking reversals unbalance the TB.
+tip: Equal debits and credits still.
+src: Study text ch14 - errors (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each error with its type.
+pair: Transaction left out completely => Omission
+pair: Posted to the wrong account of the same type => Commission
+pair: Capital item posted as an expense => Principle
+pair: Same wrong amount used on both sides => Original entry
+explain: None of these unbalances the TB.
+mistake: Mixing commission and principle.
+tip: Type of account decides.
+src: Study text ch14 - error types (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: The sales account was undercast (added up short) by $1,000. What is the correcting journal?
++ Dr suspense $1,000; Cr sales $1,000 || Sales must increase.
+- Dr sales $1,000; Cr suspense $1,000 || Reduces sales.
+- Dr receivables $1,000; Cr sales $1,000 || Receivables are correct.
+- No journal - casting errors balance || They unbalance the TB.
+formula: Only one account is wrong; the other side goes to suspense
+step: Sales should be 1,000 higher (credit).
+step: Dr suspense 1,000; Cr sales 1,000.
+check: 1000
+explain: Profit rises by $1,000.
+mistake: Debiting sales.
+tip: Undercast credit = credit it.
+src: Study text ch14 - casting error (concept basis; original question)
+
+=== Q016
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the steps for correcting an error in order.
+item: Identify what entry was actually made
+item: Identify what entry should have been made
+item: Prepare a journal for the difference
+item: Post any one-sided difference to the suspense account
+explain: Then check whether profit is affected.
+mistake: Guessing the journal.
+tip: Was, should be, difference.
+src: Study text ch14 - correction method (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: If the CREDIT side of the trial balance is short, what balance does the suspense account have?
++ A credit balance || It fills the short side.
+- A debit balance || That is when debits are short.
+- No balance || There is a difference.
+- It depends on profit || Not related.
+explain: The suspense balance makes the TB agree temporarily.
+mistake: Putting it on the longer side.
+tip: Short side.
+src: Study text ch14 - suspense side (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A payment of $1,730 was recorded in both accounts as $1,370. By how much ($) are both accounts understated?
+answer: 360
+tol: 0
+unit: $
+formula: Error = correct amount - recorded amount
+step: 1,730 - 1,370.
+step: = $360 (divisible by 9).
+check: 1730-1370
+explain: This is an error of original entry; no suspense.
+mistake: Expecting a TB difference.
+tip: Both sides wrong equally.
+src: Study text ch14 - transposition (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: A $500 rent payment was credited to bank but not debited to rent. What is the correcting journal and the effect on profit?
++ Dr rent $500; Cr suspense $500; profit falls by $500 || Expense was missing.
+- Dr suspense $500; Cr rent $500; profit rises || Reversed.
+- Dr rent $500; Cr bank $500; profit falls || Bank is already correct.
+- No journal; no effect || A correction is needed.
+formula: Complete the missing debit via suspense
+step: Bank credit is correct; rent debit is missing.
+step: Dr rent 500; Cr suspense 500; expenses up.
+check: 500
+explain: Recording the missing expense reduces profit.
+mistake: Crediting bank again.
+tip: Missing expense = profit down.
+src: Study text ch14 - single-sided (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which statement about a balancing trial balance is correct?
++ It shows debits equal credits, but errors such as omissions may still exist || Limited check.
+- It proves the accounts are correct || It does not.
+- It proves there is no fraud || It does not.
+- It means no suspense account was ever needed || Not necessarily.
+explain: Several error types do not affect the totals.
+mistake: Over-relying on the TB.
+tip: Balanced ≠ correct.
+src: Study text ch14 - limitations (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Electricity of $300 is debited to bank and credited to electricity. What type of error is this?
++ Reversal of entries || Debit and credit swapped.
+- Error of omission || Recorded.
+- Error of principle || Correct accounts.
+- Single-sided entry || Both sides posted.
+explain: Correcting requires twice the amount: Dr electricity 600, Cr bank 600.
+mistake: Correcting by the original amount only.
+tip: Reversal = double the correction.
+src: Study text ch14 - reversal (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: An electricity payment of $300 was recorded as Dr bank, Cr electricity. What amount ($) is needed in the correcting journal (Dr electricity, Cr bank)?
+answer: 600
+tol: 0
+unit: $
+formula: Correction for a reversal = 2 x amount
+step: Remove the wrong entry (300) and post the right one (300).
+step: Journal = $600.
+check: 300*2
+explain: Profit falls by $600 when corrected.
+mistake: Using $300.
+tip: Undo and redo.
+src: Study text ch14 - reversal correction (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee corrects an error of principle (a van debited to motor expenses) by "Dr vans, Cr suspense". What is wrong?
++ Both sides were originally posted, so the correction is Dr vans, Cr motor expenses - suspense is not involved || No TB imbalance.
+- Nothing is wrong || Suspense is wrong.
+- The correction should be Dr suspense, Cr vans || Not correct.
+- No correction is needed || One is needed.
+explain: Using suspense would create a new imbalance.
+mistake: Using suspense for balanced errors.
+tip: Balanced error = no suspense.
+src: Study text ch14 - principle correction (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is a compensating error?
++ Two separate errors of equal amount that cancel out in the trial balance || Hidden.
+- One error that corrects itself || Not the meaning.
+- An error that the bank makes || Not the meaning.
+- An error of principle || Different type.
+explain: The TB balances despite two mistakes.
+mistake: Thinking they cause imbalance.
+tip: Two wrongs hide each other.
+src: Study text ch14 - compensating (concept basis; original question)
+
+=== Q025
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: A suspense account was opened with a debit balance of $1,260. Errors found: a $900 rent payment was credited to bank but not debited to rent; discount allowed of $360 was omitted from the discount allowed account but recorded in receivables.
+q: What is the suspense balance ($) after correcting both errors?
+answer: 0
+tol: 0
+unit: $
+formula: Suspense = opening balance - corrections
+step: Dr rent 900, Cr suspense 900; Dr discount allowed 360, Cr suspense 360.
+step: 1,260 - 900 - 360 = 0.
+check: 1260-900-360
+explain: Profit falls by $1,260 after the corrections.
+mistake: Leaving a balance.
+tip: Corrections should clear suspense.
+src: Study text ch14 - clearing suspense (concept basis; original figures)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Can a suspense account balance appear in the final published financial statements?
++ No - it must be investigated and cleared first || Temporary only.
+- Yes, as a current asset || Not allowed.
+- Yes, as equity || Not allowed.
+- Yes, if it is small || It should be cleared.
+explain: All errors should be corrected before finalising.
+mistake: Leaving suspense balances.
+tip: Clear before finalising.
+src: Study text ch14 - suspense (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The discount received account was debited with $250 instead of being credited. Receivables and payables were posted correctly. What is the correcting entry amount ($) to discount received (credit)?
+answer: 500
+tol: 0
+unit: $
+formula: Correction = twice the amount (remove wrong debit, add correct credit)
+step: Wrong debit 250 removed: Cr 250; correct credit 250 added: Cr 250.
+step: Cr discount received 500; Dr suspense 500.
+check: 250*2
+explain: The TB was out by $500, so suspense is involved.
+mistake: Correcting by $250.
+tip: Wrong side in one account = 2x.
+src: Study text ch14 - wrong side (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A purchase invoice is never entered in the books. What type of error is this, and does the TB balance?
++ Error of omission; the TB still balances || Both sides missing.
+- Single-sided error; the TB does not balance || Neither side posted.
+- Error of principle; TB does not balance || Not principle.
+- Casting error; TB balances || Not casting.
+explain: Supplier statement reconciliations can reveal omissions.
+mistake: Expecting a TB difference.
+tip: Nothing posted = balanced.
+src: Study text ch14 - omission (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Correction journals sometimes change profit. Which correction INCREASES profit?
++ Moving a capital item wrongly charged to expenses into non-current assets || Expense removed.
+- Recording an omitted expense || Decreases profit.
+- Correcting an overcast sales account || Decreases revenue.
+- Moving an expense between two expense accounts || No change.
+explain: Prepare a statement of adjustments to profit for several corrections.
+mistake: Assuming corrections never affect profit.
+tip: Remove expense = profit up.
+src: Study text ch14 - profit effect (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A trainee says, "Our trial balance agrees, so our accounts have no errors." Which error could still exist?
++ An invoice posted to the wrong supplier's account || Commission - balances.
+- A debit posted without a credit || Would unbalance.
+- An account added up wrongly || Would unbalance.
+- Unequal debit and credit amounts || Would unbalance.
+explain: Many errors leave the TB in balance.
+mistake: Over-trusting the TB.
+tip: Balanced ≠ correct.
+src: Study text ch14 - limits (concept basis; original question)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Draft profit is $48,000. Errors found: a machine costing $5,000 was debited to repairs (depreciation at 10% a year, full year); an accrual of $800 for electricity was omitted; the sales account was undercast by $1,000.
+q: What is the corrected profit ($)?
+answer: 52700
+tol: 0
+unit: $
+formula: Corrected profit = draft + adjustments
+step: Machine: +5,000 - depreciation 500 = +4,500; accrual: -800.
+step: Sales undercast: +1,000; corrected = 48,000 + 4,500 - 800 + 1,000 = $52,700.
+check: 48000+5000-500-800+1000
+explain: Each correction is considered separately.
+mistake: Forgetting the new depreciation.
+tip: Capitalised assets need depreciation.
+src: Study text ch14 - profit adjustments (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: Cash sales of $640 were recorded correctly in the bank account but credited to the sales account as $460. What is the correcting journal?
++ Dr suspense $180; Cr sales $180 || Sales understated by 180.
+- Dr sales $180; Cr suspense $180 || Reduces sales.
+- Dr bank $180; Cr sales $180 || Bank is correct.
+- Dr suspense $640; Cr sales $640 || Overcorrects.
+formula: Difference = 640 - 460
+step: Sales is short by 180 on the credit side.
+step: Dr suspense 180; Cr sales 180.
+check: 640-460
+explain: Profit rises by $180.
+mistake: Debiting bank.
+tip: Only the wrong account changes.
+src: Study text ch14 - unequal entries (concept basis; original question)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO errors require a suspense account entry when corrected?
++ The total of the purchases day book was posted to purchases but not to payables || One side missing.
++ A $95 payment was debited to wages as $59 but credited to bank as $95 || Unequal amounts.
+- A sale was posted to the wrong customer || Commission.
+- Rent paid was debited to rates || Commission.
+explain: Only errors that unbalanced the TB use suspense.
+mistake: Using suspense for commission errors.
+tip: Unequal = suspense.
+src: Study text ch14 - suspense (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A suspense account has a CREDIT balance of $1,450. Errors: (1) the sales account was undercast by $1,000; (2) a $450 payment to a supplier was debited to payables but not credited to bank.
+q: After both errors are corrected (clearing the suspense account), by how much ($) does profit increase?
+answer: 1000
+tol: 0
+unit: $
+formula: Profit effect = corrections to income and expense accounts only
+step: (1) Dr suspense 1,000; Cr sales 1,000 - sales rises by 1,000.
+step: (2) Dr suspense 450; Cr bank 450 - no profit effect; suspense = 1,450 - 1,000 - 450 = 0.
+check: 1000
+explain: Only the sales correction touches profit or loss.
+mistake: Treating the bank correction as a profit item.
+tip: SOFP corrections don't change profit.
+src: Study text ch14 - suspense clearing (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee opens a suspense account with a debit balance when the trial balance credits exceed debits. Is this correct?
++ Yes - the debit side is short, so the suspense balance is a debit || Fill the short side.
+- No - it should be a credit || The debit side is short.
+- No - suspense accounts are never debits || They can be.
+- It depends on profit || Not related.
+explain: Credits exceeding debits means debits are short.
+mistake: Reading the difference the wrong way.
+tip: Which side is smaller?
+src: Study text ch14 - suspense side (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Draft profit $62,500. Corrections: (1) rent paid of $1,200 recorded only in bank; (2) drawings of $800 debited to wages; (3) closing inventory overstated by $1,500.
+q: What is the corrected profit ($)?
+answer: 60600
+tol: 0
+unit: $
+formula: Corrected profit = draft ± each adjustment
+step: (1) Rent expense -1,200; (2) remove wages expense +800 (drawings are not an expense).
+step: (3) Inventory overstated -1,500; corrected = 62,500 - 1,200 + 800 - 1,500 = $60,600.
+check: 62500-1200+800-1500
+explain: Only (1) involves suspense.
+mistake: Treating drawings as an expense.
+tip: Analyse each error's P/L effect.
+src: Study text ch14 - profit statement (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Insurance paid of $600 was debited to the rates account. What type of error is this and does profit change on correction?
++ Error of commission; profit is unchanged, as both are expenses || Moves between expenses.
+- Error of principle; profit changes || Same type of account.
+- Omission; profit changes || It was recorded.
+- Single-sided; suspense needed || Both sides posted.
+explain: Correction: Dr insurance, Cr rates.
+mistake: Thinking profit changes.
+tip: Expense to expense = no profit effect.
+src: Study text ch14 - commission (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: A trial balance has total debits of $286,450. The suspense account has a CREDIT balance of $1,750. What are total credits ($) before the suspense account is added?
+answer: 284700
+tol: 0
+unit: $
+formula: Credits = debits - credit suspense
+step: A credit suspense balance fills a credit shortfall.
+step: Credits = 286,450 - 1,750 = $284,700.
+check: 286450-1750
+explain: After adding suspense, both sides total 286,450.
+mistake: Adding the suspense to debits.
+tip: Suspense fills the short side.
+src: Study text ch14 - TB totals (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: After clearing all known errors, the suspense account still has a small balance. What should the accountant do?
++ Continue investigating; there are further errors to find || Suspense must be nil.
+- Write the balance off to profit without explanation || Not appropriate.
+- Show it as a current asset || Not allowed.
+- Add it to capital || Not appropriate.
+explain: Unexplained balances can hide larger errors.
+mistake: Writing off unexplained differences.
+tip: Keep looking.
+src: Study text ch14 - investigation (concept basis; original scenario)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each error with its correcting journal.
+pair: Cash sale $200 credited to sales, not debited to bank => Dr bank 200, Cr suspense 200
+pair: Repairs $300 debited to equipment => Dr repairs 300, Cr equipment 300
+pair: Rent $150 debited to rates => Dr rent 150, Cr rates 150
+pair: Wages account overcast by $90 => Dr suspense 90, Cr wages 90
+explain: Only one-sided or casting errors use suspense.
+mistake: Using suspense for commission or principle.
+tip: Was it balanced?
+src: Study text ch14 - journals (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: The total of the sales day book, $12,600, was posted to receivables but credited to sales as $12,060. What is the effect ($) on profit when corrected?
+answer: 540
+tol: 0
+unit: $
+formula: Effect = correct sales - recorded sales
+step: 12,600 - 12,060 = 540.
+step: Dr suspense 540; Cr sales 540; profit up $540.
+check: 12600-12060
+explain: Divisible by 9 - a transposition in one account.
+mistake: Adjusting receivables.
+tip: Fix the wrong side only.
+src: Study text ch14 - transposition (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee says a casting error in the wages account "doesn't matter because the trial balance will show it". Why is this a weak view?
++ The TB shows a difference but not where it is; the error still misstates profit until corrected || Detection is not correction.
+- The trainee is right; no action is needed || Correction is needed.
+- Casting errors never affect profit || They can.
+- The bank will correct it || Not the bank's role.
+explain: Investigate and correct through suspense.
+mistake: Assuming detection fixes errors.
+tip: Find and fix.
+src: Study text ch14 - casting (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: The suspense account was opened with a debit balance of $730. Errors: (1) a cheque for $280 paid to a supplier was credited to bank but not debited to payables; (2) the discount allowed account was undercast by $90; (3) interest received of $360 was credited to interest received but not debited to bank.
+q: What is the suspense balance ($) after correcting these three errors? (Enter 0 if cleared.)
+answer: 0
+tol: 0
+unit: $
+formula: Suspense = opening debit - corrections crediting suspense
+step: (1) Dr payables 280, Cr suspense 280; (3) Dr bank 360, Cr suspense 360.
+step: (2) Dr discount allowed 90, Cr suspense 90; balance = 730 - 280 - 360 - 90 = 0.
+check: 730-280-360-90
+explain: All three errors left the debit side short; profit falls by $90 (discount allowed).
+mistake: Thinking the interest correction affects profit.
+tip: Each error explains part of the difference.
+src: Study text ch14 - suspense (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why might a business prepare a "statement of adjustments to profit" after correcting errors?
++ To show how the draft profit changes to the corrected profit, error by error || Transparent reconciliation.
+- To calculate tax only || Not the purpose.
+- To clear the suspense account automatically || Journals do that.
+- To replace the trial balance || Not the purpose.
+explain: Only corrections affecting income or expenses change profit.
+mistake: Including SOFP-only corrections as profit changes.
+tip: List each P/L effect.
+src: Study text ch14 - adjustments to profit (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A purchase invoice for $2,340 was recorded in both purchases and payables as $3,240. By how much ($) is profit understated?
+answer: 900
+tol: 0
+unit: $
+formula: Overstated expense = recorded - correct
+step: 3,240 - 2,340 = 900.
+step: Purchases overstated by 900, so profit understated by $900.
+check: 3240-2340
+explain: Original entry error; no suspense.
+mistake: Using suspense.
+tip: Both sides wrong = no suspense.
+src: Study text ch14 - original entry (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A clerk posts a customer receipt of $1,000 to the correct customer's account but debits the cash account with $100. What kind of error is this?
++ Unequal entries - the trial balance will not balance || Different amounts.
+- Commission || Accounts are correct.
+- Omission || Both sides posted.
+- Compensating || Only one error.
+explain: Correction: Dr cash 900, Cr suspense 900.
+mistake: Missing the imbalance.
+tip: Different amounts = suspense.
+src: Study text ch14 - unequal entries (concept basis; original scenario)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: When an error is corrected through the suspense account, what happens to the trial balance?
++ It still balances, and the suspense balance is reduced by the correction || Moves toward nil.
+- It stops balancing || Corrections keep it balanced.
+- The suspense account doubles || Not correct.
+- Nothing changes || Suspense reduces.
+explain: When all errors are fixed, suspense is nil.
+mistake: Expecting imbalance after corrections.
+tip: Corrections shrink suspense.
+src: Study text ch14 - process (concept basis; original question)
+
+=== Q048
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Draft profit $34,200. Corrections: (1) sales returns of $650 were credited to sales returns instead of debited (receivables correctly credited); (2) a payment for office equipment of $2,000 was debited to stationery.
+q: What is the corrected profit ($)?
+answer: 34900
+tol: 0
+unit: $
+formula: Corrected = draft - returns correction + equipment correction
+step: (1) Returns should be debit 650 but were credited 650: correction Dr 1,300, reducing profit by 1,300.
+step: (2) Remove stationery expense +2,000; corrected = 34,200 - 1,300 + 2,000 = $34,900.
+check: 34200-1300+2000
+explain: Wrong-side errors need double the amount.
+mistake: Correcting returns by 650.
+tip: Wrong side = double.
+src: Study text ch14 - profit adjustments (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which errors leave the trial balance in balance?
++ Omission, commission, principle, original entry, reversal and compensating errors || Six balanced types.
+- Single-sided and casting errors || These unbalance it.
+- Only casting errors || Unbalance.
+- No errors ever balance || Several do.
+explain: Only imbalance errors use the suspense account.
+mistake: Thinking all errors show up.
+tip: Learn the six.
+src: Study text ch14 - errors (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which statement about suspense accounts is correct?
++ A suspense account is temporary and is cleared by correcting the errors that caused the TB difference || Core rule.
+- It is a permanent asset account || Temporary.
+- It is used for all error corrections || Only imbalance errors.
+- Its balance is always shown in the SOFP || Must be cleared.
+explain: The balance sits on the TB's short side.
+mistake: Using it for balanced errors.
+tip: Temporary; clear it.
+src: Study text ch14 - suspense (concept basis; original question)

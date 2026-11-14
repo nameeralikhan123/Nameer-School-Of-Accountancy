@@ -1,0 +1,889 @@
+@subject acffa2
+@chapter 17
+@title Statement of Cash Flows
+@lo F4
+@topic t1 | Profit, cash and IAS 7 | F4
+@topic t2 | The three classifications | F4
+@topic t3 | Operating cash flows: indirect method | F4
+@topic t4 | Working out individual cash flows | F4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under IAS 7, in which section is the purchase of property, plant and equipment shown?
++ Investing activities || Spending on long-term assets.
+- Operating activities || Not trading.
+- Financing activities || Not finance.
+- It is not shown || It is shown.
+explain: Proceeds from selling PPE are also investing.
+mistake: Placing it in operating.
+tip: Long-term assets = investing.
+src: Study text ch17 - classification (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Using the indirect method, how is depreciation treated?
++ Added back to profit before tax || Non-cash expense.
+- Deducted from profit || It was already deducted.
+- Shown in investing activities || Not a cash flow.
+- Ignored || It must be added back.
+explain: Depreciation reduced profit but used no cash.
+mistake: Deducting depreciation.
+tip: Non-cash expense = add back.
+src: Study text ch17 - indirect method (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: An INCREASE in trade receivables during the year is treated how in the indirect method?
++ Deducted from profit || Cash not yet collected.
+- Added to profit || Reversed.
+- Shown in financing || Not finance.
+- Ignored || Working capital matters.
+explain: An increase in payables is added.
+mistake: Adding receivable increases.
+tip: Assets up = cash down.
+src: Study text ch17 - working capital (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Where are proceeds from issuing shares shown?
++ Financing activities || Raising capital.
+- Investing activities || Not an asset purchase.
+- Operating activities || Not trading.
+- Not shown || They are shown.
+explain: New loans and loan repayments are also financing.
+mistake: Calling it investing.
+tip: Raising money = financing.
+src: Study text ch17 - financing (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t4
+status: review
+q: The tax liability was $8,000 at the start of the year and $9,000 at the end. The tax charge in profit or loss was $10,000. How much tax ($) was paid?
+answer: 9000
+tol: 0
+unit: $
+formula: Tax paid = opening liability + charge - closing liability
+step: 8,000 + 10,000 = 18,000.
+step: 18,000 - 9,000 = $9,000.
+check: 8000+10000-9000
+explain: Tax paid appears in operating activities.
+mistake: Using the P/L charge.
+tip: Reconstruct the tax account.
+src: Study text ch17 - tax paid (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Why is a statement of cash flows useful?
++ It shows how the business generated and used cash, which helps assess liquidity || Cash is vital.
+- It shows profit for the year || That is the P/L.
+- It values the business || Not its purpose.
+- It replaces the SOFP || Not a replacement.
+explain: A profitable business can still fail through lack of cash.
+mistake: Equating profit and cash.
+tip: Cash keeps you alive.
+src: Study text ch17 - purpose (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Where are dividends PAID by a company usually shown?
++ Financing activities || Payment to providers of finance.
+- Investing activities || Not an asset.
+- Never shown || Paid dividends are shown.
+- In profit before tax || Not an expense.
+explain: Proposed dividends never appear.
+mistake: Including proposed dividends.
+tip: Paid only.
+src: Study text ch17 - dividends (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: An INCREASE in trade payables during the year is treated how in the indirect method?
++ Added to profit || Cash not yet paid out.
+- Deducted from profit || Reversed.
+- Shown in financing || Not finance.
+- Ignored || It affects cash.
+explain: Liabilities up = cash conserved.
+mistake: Deducting payable increases.
+tip: Liabilities up = cash up.
+src: Study text ch17 - payables (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a DRAWBACK of the statement of cash flows?
++ It is historic and does not show profitability || Limited view.
+- It is easy to manipulate with accounting policies || Harder than profit.
+- It ignores liquidity || It focuses on it.
+- It is not required by IAS 7 || It is required.
+explain: Timing near the year end can also distort it.
+mistake: Thinking cash is easily manipulated by policies.
+tip: Cash ≠ profit.
+src: Study text ch17 - drawbacks (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is a PROFIT on disposal of PPE treated in the indirect method?
++ Deducted from profit before tax || The cash proceeds are in investing.
+- Added to profit || That is for a loss.
+- Shown in financing || Not finance.
+- Ignored || Must be adjusted.
+explain: The full proceeds appear in investing activities.
+mistake: Adding profits on disposal.
+tip: Gain out; proceeds in investing.
+src: Study text ch17 - disposals (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Profit before tax $50,000; depreciation $12,000; loss on disposal $1,000; finance costs $3,000; increase in inventories $4,000; increase in receivables $2,500; increase in payables $1,800.
+q: What is cash generated from operations ($)?
+answer: 61300
+tol: 0
+unit: $
+formula: Cash generated = PBT + non-cash items + finance costs ± working capital
+step: 50,000 + 12,000 + 1,000 + 3,000 = 66,000.
+step: 66,000 - 4,000 - 2,500 + 1,800 = $61,300.
+check: 50000+12000+1000+3000-4000-2500+1800
+explain: Interest and tax paid are deducted next.
+mistake: Adding asset increases.
+tip: Add back, then working capital.
+src: Study text ch17 - indirect method (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Interest payable was $500 at the start of the year and $300 at the end. The interest expense was $3,000. How much interest ($) was paid?
+answer: 3200
+tol: 0
+unit: $
+formula: Interest paid = opening + expense - closing
+step: 500 + 3,000 = 3,500.
+step: 3,500 - 300 = $3,200.
+check: 500+3000-300
+explain: Interest paid is usually in operating activities.
+mistake: Using the expense.
+tip: Reconstruct the payable.
+src: Study text ch17 - interest paid (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: PPE carrying amount: opening $120,000; closing $150,000. Depreciation $12,000. Disposals at carrying amount $5,000. Revaluation gain $10,000.
+q: What was the cash spent ($) on PPE purchases?
+answer: 37000
+tol: 0
+unit: $
+formula: Purchases = closing - opening + depreciation + disposals - revaluation
+step: 150,000 - 120,000 + 12,000 + 5,000 = 47,000.
+step: 47,000 - 10,000 = $37,000.
+check: 150000-120000+12000+5000-10000
+explain: Revaluations increase the asset without cash.
+mistake: Ignoring the revaluation.
+tip: Rebuild the PPE account.
+src: Study text ch17 - PPE purchases (concept basis; original figures)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO items are ADDED BACK to profit before tax in the indirect method?
++ Depreciation || Non-cash.
++ Increase in an allowance for receivables || Non-cash charge.
+- Profit on disposal of PPE || Deducted.
+- Increase in inventories || Deducted.
+explain: Finance costs and losses on disposal are also added back.
+mistake: Adding back gains.
+tip: Non-cash charges back.
+src: Study text ch17 - add-backs (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each cash flow with its IAS 7 section.
+pair: Proceeds from sale of machinery => Investing activities
+pair: Repayment of a bank loan => Financing activities
+pair: Income tax paid => Operating activities
+pair: Dividends received => Investing activities
+explain: Interest paid is usually operating.
+mistake: Placing dividends received in financing.
+tip: Trading, assets, finance.
+src: Study text ch17 - classification (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: An asset with a carrying amount of $5,000 was sold at a loss of $1,000. What were the cash proceeds ($)?
+answer: 4000
+tol: 0
+unit: $
+formula: Proceeds = carrying amount - loss (or + profit)
+step: 5,000 - 1,000.
+step: = $4,000 (investing inflow).
+check: 5000-1000
+explain: The loss is added back in operating activities.
+mistake: Using the carrying amount.
+tip: CA ± gain/loss.
+src: Study text ch17 - proceeds (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Retained earnings were $60,000 at the start of the year and $80,000 at the end. Profit for the year was $35,000. What dividends ($) were paid, assuming no other movements?
+answer: 15000
+tol: 0
+unit: $
+formula: Dividends = opening RE + profit - closing RE
+step: 60,000 + 35,000 = 95,000.
+step: 95,000 - 80,000 = $15,000.
+check: 60000+35000-80000
+explain: Shown in financing activities.
+mistake: Subtracting profit.
+tip: Rebuild retained earnings.
+src: Study text ch17 - dividends paid (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the difference between the direct and indirect methods?
++ Only the way operating cash flow is presented; both give the same net operating cash flow || Same answer.
+- The direct method gives a higher cash figure || Same figure.
+- Only the indirect method is allowed || Both are allowed.
+- They classify investing flows differently || Investing is the same.
+explain: The direct method shows gross receipts and payments.
+mistake: Thinking the figures differ.
+tip: Two routes, one answer.
+src: Study text ch17 - methods (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Share capital rose from $100,000 to $130,000 and share premium from $20,000 to $35,000 during the year (no bonus issue). How much cash ($) was raised from issuing shares?
+answer: 45000
+tol: 0
+unit: $
+formula: Cash raised = increase in share capital + increase in share premium
+step: 30,000 + 15,000.
+step: = $45,000 (financing inflow).
+check: (130000-100000)+(35000-20000)
+explain: A bonus issue would not raise cash.
+mistake: Counting only share capital.
+tip: Capital + premium.
+src: Study text ch17 - share issues (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Where does a proposed final dividend (declared after the year end) appear in the statement of cash flows?
++ It does not appear || No cash has been paid.
+- Financing activities || Not yet paid.
+- Operating activities || Not paid.
+- Investing activities || Not paid.
+explain: Only dividends actually paid appear.
+mistake: Including proposed dividends.
+tip: No cash, no line.
+src: Study text ch17 - proposed dividends (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Loans were $40,000 at the start of the year and $25,000 at the end. What financing cash flow ($) arises? (Enter as a negative number for an outflow.)
+answer: -15000
+tol: 0
+unit: $
+formula: Loan flow = closing - opening
+step: 25,000 - 40,000 = -15,000.
+step: A repayment of $15,000 (outflow).
+check: 25000-40000
+explain: An increase would be an inflow.
+mistake: Reporting an inflow.
+tip: Debt down = cash out.
+src: Study text ch17 - loans (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why are finance costs ADDED BACK in the indirect method?
++ Interest paid is shown separately, so the expense is added back to avoid double counting || Separate line.
+- Because interest is never paid || It is paid.
+- Because interest is an investing item || Usually operating.
+- Because finance costs are income || They are expenses.
+explain: Interest paid is then deducted in cash terms.
+mistake: Leaving the expense in and deducting interest paid.
+tip: Replace expense with cash.
+src: Study text ch17 - finance costs (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Cash and cash equivalents were $3,000 at the start of the year. At the end, there was an overdraft of $2,000. What was the net change ($)? (Enter a negative number for a decrease.)
+answer: -5000
+tol: 0
+unit: $
+formula: Net change = closing - opening
+step: -2,000 - 3,000.
+step: = -5,000 (decrease).
+check: -2000-3000
+explain: Overdrafts repayable on demand may be part of cash equivalents.
+mistake: Treating the overdraft as positive.
+tip: Signs matter.
+src: Study text ch17 - net change (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee ADDS an increase in inventories of $6,000 to profit. What is the effect on reported operating cash flow?
++ Overstated by $12,000 || Should be deducted.
+- Overstated by $6,000 || The swing is double.
+- Understated by $6,000 || Overstated.
+- No effect || There is an effect.
+formula: Error = 2 x the item
+step: Correct treatment: -6,000; trainee: +6,000.
+step: Difference = 12,000 overstated.
+check: 6000*2
+explain: Buying more inventory uses cash.
+mistake: Adding asset increases.
+tip: Inventory up = cash down.
+src: Study text ch17 - working capital (concept basis; original question)
+
+=== Q025
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put these steps of the indirect method in order.
+item: Start with profit before tax
+item: Add back non-cash expenses and finance costs; deduct non-cash gains
+item: Adjust for changes in inventories, receivables and payables
+item: Deduct interest paid and tax paid
+explain: The result is net cash from operating activities.
+mistake: Adjusting working capital before add-backs (order of presentation).
+tip: Profit, non-cash, working capital, interest and tax.
+src: Study text ch17 - indirect method (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Credit sales were $200,000. Receivables were $15,000 at the start and $18,000 at the end. How much cash ($) was received from customers?
+answer: 197000
+tol: 0
+unit: $
+formula: Receipts = sales + opening receivables - closing receivables
+step: 200,000 + 15,000 = 215,000.
+step: 215,000 - 18,000 = $197,000.
+check: 200000+15000-18000
+explain: Used in the direct method.
+mistake: Reversing opening and closing.
+tip: Rebuild receivables.
+src: Study text ch17 - direct method (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What are cash equivalents?
++ Short-term, highly liquid investments readily convertible to known amounts of cash with insignificant risk of change in value || IAS 7 idea.
+- Inventory || Not cash.
+- Long-term investments || Not short-term.
+- Trade receivables || Not cash equivalents.
+explain: For example, short-term deposits.
+mistake: Including receivables.
+tip: Nearly cash.
+src: Study text ch17 - cash equivalents (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Where is interest RECEIVED usually shown under IAS 7 in the FA syllabus?
++ Investing activities || Return on investments.
+- Financing activities || That is for interest paid alternatives.
+- Not shown || It is shown.
+- Deducted in operating || Not deducted.
+explain: Interest received is deducted from profit and shown in investing.
+mistake: Leaving it in operating profit.
+tip: Return on investment = investing.
+src: Study text ch17 - interest received (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: trap
+topic: t4
+status: review
+q: A trainee shows the tax CHARGE in the P/L as the tax paid. Why is this wrong?
++ Tax paid = opening liability + charge - closing liability, which may differ from the charge || Cash vs accrual.
+- The charge always equals tax paid || Rarely.
+- Tax is never shown in cash flows || It is shown.
+- Tax is a financing item || Operating.
+explain: The tax liability changes over the year.
+mistake: Using accrual figures.
+tip: Reconstruct the account.
+src: Study text ch17 - tax paid (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Cash generated from operations $61,300; interest paid $3,200; tax paid $9,000.
+q: What is net cash from operating activities ($)?
+answer: 49100
+tol: 0
+unit: $
+formula: Net = cash generated - interest paid - tax paid
+step: 61,300 - 3,200 = 58,100.
+step: 58,100 - 9,000 = $49,100.
+check: 61300-3200-9000
+explain: This subtotal is often the most important figure.
+mistake: Forgetting tax.
+tip: Generated, then interest and tax.
+src: Study text ch17 - operating total (concept basis; original figures)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Profit before tax $86,000. Depreciation $24,000. Profit on disposal $3,500. Finance costs $5,000. Investment income $1,200. Inventories decreased by $2,800; receivables increased by $6,100; payables decreased by $1,900.
+q: What is cash generated from operations ($)?
+answer: 105100
+tol: 0
+unit: $
+formula: PBT + depreciation - gain + finance costs - investment income ± working capital
+step: 86,000 + 24,000 - 3,500 + 5,000 - 1,200 = 110,300.
+step: 110,300 + 2,800 - 6,100 - 1,900 = $105,100.
+check: 86000+24000-3500+5000-1200+2800-6100-1900
+explain: Inventory decreases release cash; payable decreases use cash.
+mistake: Reversing the decrease adjustments.
+tip: Think about cash direction.
+src: Study text ch17 - indirect method (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: PPE at cost: opening $400,000; closing $470,000. During the year, assets costing $60,000 were sold. No revaluations.
+q: What were PPE purchases?
++ $130,000 || 470,000 - 400,000 + 60,000.
+- $70,000 || Ignores disposals.
+- $10,000 || Wrong sign.
+- $60,000 || Disposals only.
+formula: Purchases = closing cost - opening cost + disposals at cost
+step: 470,000 - 400,000 = 70,000.
+step: 70,000 + 60,000 = $130,000.
+check: 470000-400000+60000
+explain: Using cost avoids the need for depreciation.
+mistake: Forgetting disposals.
+tip: At cost: add disposals back.
+src: Study text ch17 - PPE at cost (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO items are FINANCING activities?
++ Cash received from a new long-term loan || Finance.
++ Dividends paid to shareholders || Finance.
+- Cash paid to buy a delivery van || Investing.
+- Cash received from customers || Operating.
+explain: Share issues and loan repayments are also financing.
+mistake: Calling asset purchases financing.
+tip: Owners and lenders = financing.
+src: Study text ch17 - financing (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Tax: opening current tax liability $14,500; P/L tax charge $18,200; closing current tax liability $16,300.
+q: What tax was paid ($)?
+answer: 16400
+tol: 0
+unit: $
+formula: Tax paid = opening + charge - closing
+step: 14,500 + 18,200 = 32,700.
+step: 32,700 - 16,300 = $16,400.
+check: 14500+18200-16300
+explain: Operating outflow.
+mistake: Using the closing liability.
+tip: T-account.
+src: Study text ch17 - tax paid (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A company revalued its land upwards by $50,000 during the year. A trainee includes $50,000 in PPE purchases. What is wrong?
++ A revaluation is not a cash flow; it must be removed when calculating purchases || Non-cash increase.
+- Nothing is wrong || It is not cash.
+- It should be shown in financing || Not cash.
+- It should be added to operating cash flow || Not cash.
+explain: Revaluations increase carrying amount without cash.
+mistake: Treating revaluations as purchases.
+tip: Strip non-cash increases.
+src: Study text ch17 - revaluations (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: PPE carrying amounts: opening $280,000; closing $315,000. Depreciation $42,000. An asset with carrying amount $18,000 was sold for $21,000. No revaluations.
+q: What was the total net cash outflow ($) from investing activities (purchases less disposal proceeds)?
+answer: 74000
+tol: 0
+unit: $
+formula: Net investing = purchases - proceeds
+step: Purchases = 315,000 - 280,000 + 42,000 + 18,000 = 95,000.
+step: Net outflow = 95,000 - 21,000 = $74,000.
+check: (315000-280000+42000+18000)-21000
+explain: The $3,000 profit is deducted in operating activities.
+mistake: Using carrying amount as proceeds.
+tip: Purchases less proceeds.
+src: Study text ch17 - investing (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A company reports a large profit but net cash from operating activities is negative. What is the MOST likely explanation?
++ Large increases in inventories and receivables have absorbed cash || Working capital.
+- Depreciation was very high || Added back.
+- The company issued shares || Financing.
+- Dividends were paid || Financing.
+explain: Rapid growth often strains cash.
+mistake: Assuming profit means cash.
+tip: Working capital eats cash.
+src: Study text ch17 - interpretation (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Retained earnings: opening $145,000; closing $172,000. Profit for the year $48,000. A transfer of $3,000 was made from the revaluation surplus to retained earnings.
+q: What dividends ($) were paid?
+answer: 24000
+tol: 0
+unit: $
+formula: Dividends = opening + profit + transfers in - closing
+step: 145,000 + 48,000 + 3,000 = 196,000.
+step: 196,000 - 172,000 = $24,000.
+check: 145000+48000+3000-172000
+explain: Include all movements in retained earnings.
+mistake: Ignoring the transfer.
+tip: Account for every movement.
+src: Study text ch17 - dividends (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why does a decrease in an allowance for receivables get DEDUCTED in the indirect method?
++ It is a non-cash credit that increased profit without any cash inflow || Reverse non-cash income.
+- It represents cash paid out || No cash.
+- It is a financing item || Not finance.
+- It should be added back || Increases are added back.
+explain: Non-cash gains are reversed out of profit.
+mistake: Adding it back.
+tip: Non-cash gain = deduct.
+src: Study text ch17 - allowance movements (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each item with its indirect method adjustment.
+pair: Depreciation => Add back
+pair: Profit on disposal => Deduct
+pair: Increase in receivables => Deduct
+pair: Increase in payables => Add
+explain: Adjust for non-cash items and working capital changes.
+mistake: Reversing signs.
+tip: Cash direction decides.
+src: Study text ch17 - adjustments (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Purchases (all on credit) $140,000. Payables: opening $16,000; closing $19,500. Wages paid $38,000. Other operating expenses paid $22,000.
+q: What were total cash payments ($) to suppliers and employees and for other operating expenses (direct method)?
+answer: 196500
+tol: 0
+unit: $
+formula: Payments = (purchases + opening payables - closing payables) + wages + other expenses
+step: Suppliers = 140,000 + 16,000 - 19,500 = 136,500.
+step: Total = 136,500 + 38,000 + 22,000 = $196,500.
+check: 140000+16000-19500+38000+22000
+explain: The direct method lists gross payments.
+mistake: Using purchases as payments.
+tip: Rebuild payables.
+src: Study text ch17 - direct method (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee shows a bonus issue of shares as a financing inflow. What is wrong?
++ A bonus issue raises no cash, so it does not appear in the statement of cash flows || Non-cash.
+- Nothing is wrong || No cash.
+- It should be investing || No cash.
+- It should be operating || No cash.
+explain: Exclude bonus issues when working out share issue cash.
+mistake: Including bonus issues.
+tip: No cash, no line.
+src: Study text ch17 - bonus issues (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Share capital: opening $200,000; closing $260,000. Share premium: opening $40,000; closing $50,000. During the year there was a bonus issue of $20,000 funded from share premium.
+q: What cash ($) was raised from share issues?
+answer: 70000
+tol: 0
+unit: $
+formula: Cash = total increase in capital and premium (bonus issue nets to nil)
+step: Share capital +60,000 (20,000 of it bonus); premium +10,000 after a 20,000 bonus deduction.
+step: Cash = 40,000 + 30,000 = $70,000.
+check: (260000-200000)+(50000-40000)
+explain: The bonus issue moves amounts within equity, so the total increase is cash.
+mistake: Subtracting the bonus issue twice.
+tip: Total equity increase from shares = cash.
+src: Study text ch17 - share issues (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Why is a cash flow statement harder to manipulate than profit?
++ Cash flows are factual movements, less affected by accounting estimates and policies || Objective.
+- It is audited more strictly || Not the reason.
+- It contains no figures || It does.
+- It is prepared by the bank || Not true.
+explain: Timing of transactions near year end can still distort it.
+mistake: Thinking it cannot be distorted at all.
+tip: Cash is cash.
+src: Study text ch17 - benefits (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Net cash from operating activities $49,100. Net cash used in investing activities $74,000. Net cash from financing activities $20,000. Opening cash $8,000.
+q: What is closing cash ($)?
+answer: 3100
+tol: 0
+unit: $
+formula: Closing = opening + operating - investing + financing
+step: 49,100 - 74,000 + 20,000 = -4,900.
+step: 8,000 - 4,900 = $3,100.
+check: 8000+49100-74000+20000
+explain: The statement reconciles to the SOFP cash figure.
+mistake: Adding investing outflows.
+tip: Net change plus opening.
+src: Study text ch17 - reconciliation (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: A company's PPE account shows a large increase, but the investing section shows small purchases. What is the MOST likely explanation?
++ Assets were revalued upwards or acquired without cash (eg under finance arrangements) || Non-cash increases.
+- Depreciation was very high || Reduces PPE.
+- Disposals were large || Reduces PPE.
+- The statement is always wrong || Not a valid conclusion.
+explain: Non-cash increases do not appear in cash flows.
+mistake: Expecting all PPE increases to be cash.
+tip: Look for non-cash movements.
+src: Study text ch17 - interpretation (concept basis; original scenario)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Interest receivable: opening $400; closing $650. Investment income in profit or loss $2,100.
+q: How much interest ($) was received in cash?
+answer: 1850
+tol: 0
+unit: $
+formula: Received = opening receivable + income - closing receivable
+step: 400 + 2,100 = 2,500.
+step: 2,500 - 650 = $1,850.
+check: 400+2100-650
+explain: Shown in investing activities.
+mistake: Using the income figure.
+tip: Rebuild the receivable.
+src: Study text ch17 - interest received (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which item would be DEDUCTED from profit before tax in the indirect method?
++ Investment income included in profit || Shown in investing.
+- Depreciation || Added back.
+- Loss on disposal || Added back.
+- Finance costs || Added back.
+explain: The cash received is shown in investing activities.
+mistake: Leaving investment income in operating.
+tip: Investing income out.
+src: Study text ch17 - deductions (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which classification is correct under IAS 7?
++ Operating: cash from trading, tax, interest paid; Investing: PPE bought and sold; Financing: shares, loans, dividends paid || Core classification.
+- Operating: share issues || Financing.
+- Investing: dividends paid || Financing.
+- Financing: purchase of PPE || Investing.
+explain: Interest and dividends received are investing.
+mistake: Mixing sections.
+tip: Trading, assets, funding.
+src: Study text ch17 - classification (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: In the indirect method, how are working capital changes treated?
++ Deduct increases in inventories and receivables; add increases in payables (reverse for decreases) || Core rule.
+- Add increases in inventories || Deduct.
+- Deduct increases in payables || Add.
+- Ignore them || They matter.
+explain: Asset increases use cash; liability increases save cash.
+mistake: Reversing signs.
+tip: Assets up = cash down.
+src: Study text ch17 - working capital (concept basis; original question)

@@ -1,0 +1,905 @@
+@subject acfbe
+@chapter 12b
+@title Methods of Project Appraisal
+@lo D6, D7
+@topic t1 | Payback and the time value of money | D6, D7
+@topic t2 | Net present value | D6, D7
+@topic t3 | Annuities and perpetuities | D6, D7
+@topic t4 | IRR and ARR | D6, D7
+@topic t5 | Relevant costs | D6, D7
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does the payback period measure?
++ The time taken for a project's cash inflows to recover the initial investment || A liquidity-focused measure.
+- The project's profit as a % of investment || That is ARR.
+- The discount rate giving zero NPV || That is IRR.
+- The present value of all cash flows || That is NPV.
+explain: Payback uses cash flows, not profits.
+mistake: Using accounting profit.
+tip: How quickly is the money back?
+src: Study text ch12b - payback (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: A project costs $72,000 and produces cash inflows of $18,000 a year. What is the payback period (years)?
+answer: 4
+tol: 0
+unit: years
+formula: Payback = initial investment / annual cash inflow (even flows)
+step: Investment = 72,000; annual inflow = 18,000.
+step: Payback = 72,000 / 18,000 = 4 years.
+check: 72000/18000
+explain: With even inflows, simply divide.
+mistake: Using profit after depreciation.
+tip: Cost / annual cash.
+src: Study text ch12b - payback (concept basis; original question)
+
+=== Q003
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: $2,000 is invested at 5% a year compound interest. What will it be worth ($) after 2 years?
+answer: 2205
+tol: 0.01
+unit: $
+formula: S = P(1 + r)^n
+step: S = 2,000 x 1.05^2.
+step: 1.05^2 = 1.1025; S = 2,000 x 1.1025 = $2,205.
+check: 2000*1.05**2
+explain: Interest is earned on interest in the second year.
+mistake: Using simple interest ($2,200).
+tip: Compound = interest on interest.
+src: Study text ch12b - compounding (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: What is the present value ($) of $5,500 receivable in one year, if the interest rate is 10%?
+answer: 5000
+tol: 0.01
+unit: $
+formula: PV = S / (1 + r)^n
+step: PV = 5,500 / 1.10.
+step: PV = $5,000.
+check: 5500/1.1
+explain: $5,000 invested at 10% would grow to $5,500 in one year.
+mistake: Deducting 10% of 5,500 ($4,950).
+tip: Divide by (1 + r).
+src: Study text ch12b - discounting (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the decision rule for a single project using NPV?
++ Accept if NPV is positive; reject if negative || A positive NPV adds to shareholder wealth.
+- Accept if NPV is negative || Destroys wealth.
+- Accept only if payback is under 2 years || Not the NPV rule.
+- Accept if IRR is below the cost of capital || Reversed IRR rule.
+explain: For mutually exclusive projects, choose the highest positive NPV.
+mistake: Mixing NPV and IRR rules.
+tip: Positive NPV = go.
+src: Study text ch12b - NPV rule (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is the internal rate of return (IRR)?
++ The discount rate at which a project's NPV is zero || Its break-even return.
+- The company's cost of capital || The benchmark, not IRR.
+- The average accounting profit as a % of investment || ARR.
+- The time taken to recover the investment || Payback.
+explain: Accept the project if IRR exceeds the cost of capital.
+mistake: Confusing IRR with the cost of capital.
+tip: IRR = rate where NPV = 0.
+src: Study text ch12b - IRR (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Which cost is NOT relevant to a decision?
++ A market research fee already paid last month || Sunk cost.
+- Extra materials that must be bought for the project || Incremental.
+- Wages for extra staff hired for the project || Incremental.
+- Rent of a new site needed for the project || Incremental.
+explain: Relevant costs are future, incremental cash flows.
+mistake: Including sunk costs.
+tip: Already spent = irrelevant.
+src: Study text ch12b - relevant costs (concept basis; original question)
+
+=== Q008
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: What is the present value ($) of $500 received every year forever, starting in one year, at a discount rate of 5%?
+answer: 10000
+tol: 0
+unit: $
+formula: PV of perpetuity = annual cash flow / r
+step: Annual flow = 500; r = 0.05.
+step: PV = 500 / 0.05 = $10,000.
+check: 500/0.05
+explain: The first flow must arise at the end of year 1.
+mistake: Multiplying by r.
+tip: Cash / rate.
+src: Study text ch12b - perpetuity (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: In discounted cash flow calculations, what discount factor applies to a cash flow at year 0?
++ 1.000 || Year 0 is now, so no discounting.
+- 0.909 at 10% || That is year 1.
+- 0 || Cash now is worth its full amount.
+- It depends on the project life || Year 0 is always 1.000.
+explain: Cash flows are assumed to occur at the end of each year.
+mistake: Discounting the initial outlay.
+tip: Now = factor 1.
+src: Study text ch12b - timing (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: What is an opportunity cost?
++ The benefit forgone by choosing one option instead of the next best alternative || A relevant cost.
+- A cost already incurred || Sunk cost.
+- A fixed cost apportioned to a project || Not relevant.
+- The original purchase price of an asset || Historical cost.
+explain: Opportunity costs are included in relevant costing.
+mistake: Ignoring benefits forgone.
+tip: What do we give up?
+src: Study text ch12b - opportunity cost (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A project costs $50,000. Cash inflows are $15,000 in year 1, $20,000 in year 2, $25,000 in year 3 and $10,000 in year 4. Assuming inflows arise evenly during each year, what is the payback period (years)?
+answer: 2.6
+tol: 0.001
+unit: years
+formula: Payback = full years + remaining amount / next year's inflow
+step: After year 2: 15,000 + 20,000 = 35,000 recovered; 15,000 still needed.
+step: Year 3 fraction = 15,000 / 25,000 = 0.6; payback = 2.6 years.
+check: 2+15000/25000
+explain: A cumulative cash flow table makes uneven payback easy.
+mistake: Averaging the inflows.
+tip: Cumulate, then interpolate.
+src: Study text ch12b - payback (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A project costs $20,000 now and produces inflows of $9,000 a year for 3 years. The cost of capital is 10% (3-year annuity factor 2.487). What is the NPV and the decision?
++ $2,383 positive - accept || 9,000 x 2.487 - 20,000.
+- $7,000 positive - accept || Ignores discounting.
+- $2,383 negative - reject || Sign error.
+- $22,383 positive - accept || Ignores the outlay.
+formula: NPV = annual inflow x annuity factor - outlay
+step: PV of inflows = 9,000 x 2.487 = 22,383.
+step: NPV = 22,383 - 20,000 = $2,383; positive, so accept.
+check: 9000*2.487-20000
+explain: The project earns more than 10% a year.
+mistake: Forgetting to discount.
+tip: PV in minus PV out.
+src: Study text ch12b - NPV (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A bank pays 2% interest per quarter, compounded quarterly. What is the effective annual rate (%)? Give your answer to two decimal places.
+answer: 8.24
+tol: 0.01
+unit: %
+formula: (1 + R) = (1 + r)^n
+step: 1.02^4 = 1.0824.
+step: R = 1.0824 - 1 = 8.24%.
+check: (1.02**4-1)*100
+explain: The effective rate is higher than 4 x 2% = 8% because of compounding.
+mistake: Multiplying 2% by 4.
+tip: Compound the periods.
+src: Study text ch12b - effective rate (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A project costs $100,000 and has a scrap value of $20,000. Average annual profit after depreciation is $9,000. What is the ARR (%) based on average investment?
+answer: 15
+tol: 0
+unit: %
+formula: ARR = average annual profit / average investment x 100
+step: Average investment = (100,000 + 20,000) / 2 = 60,000.
+step: ARR = 9,000 / 60,000 x 100 = 15%.
+check: 9000/((100000+20000)/2)*100
+explain: ARR uses accounting profit and ignores the time value of money.
+mistake: Using initial investment only.
+tip: Average investment includes scrap.
+src: Study text ch12b - ARR (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A project's NPV is $4,000 at 10% and -$1,000 at 15%. Using interpolation, what is the IRR (%)?
+answer: 14
+tol: 0.001
+unit: %
+formula: IRR = A + [NPV_A / (NPV_A - NPV_B)] x (B - A)
+step: NPV_A - NPV_B = 4,000 - (-1,000) = 5,000.
+step: IRR = 10 + 4,000 / 5,000 x 5 = 10 + 4 = 14%.
+check: 10+4000/(4000+1000)*5
+explain: Interpolation gives an approximation.
+mistake: Subtracting 1,000 instead of adding.
+tip: Range of NPVs = gap between them.
+src: Study text ch12b - IRR (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t5
+status: review
+select: 2
+q: Which TWO costs are relevant to a decision?
++ An opportunity cost of using a scarce resource || Benefit forgone.
++ An avoidable fixed cost specific to the project || Attributable fixed cost.
+- Depreciation on existing equipment || Non-cash.
+- Apportioned head office overheads || Will be incurred anyway.
+explain: Relevant costs are future, incremental cash flows.
+mistake: Including non-cash or allocated items.
+tip: Future, cash, incremental.
+src: Study text ch12b - relevant costs (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: What is the present value ($) of $3,000 a year for 5 years, starting in one year, at 10%? (5-year annuity factor at 10% = 3.791)
+answer: 11373
+tol: 0
+unit: $
+formula: PV = annual cash flow x annuity factor
+step: Annuity factor = 3.791.
+step: PV = 3,000 x 3.791 = $11,373.
+check: 3000*3.791
+explain: An annuity factor is the sum of the individual discount factors.
+mistake: Discounting only one year.
+tip: Equal flows = annuity factor.
+src: Study text ch12b - annuities (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is a disadvantage of the payback method?
++ It ignores cash flows after the payback period || Later returns are not considered.
+- It is difficult to calculate || It is simple.
+- It uses accounting profits || It uses cash flows.
+- It ignores liquidity || It focuses on liquidity.
+explain: Simple payback also ignores the time value of money.
+mistake: Thinking payback measures overall profitability.
+tip: Ignores what happens after.
+src: Study text ch12b - payback limits (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The annuity factor at 10% for years 1-5 is 3.791 and for years 1-2 is 1.736. What is the annuity factor for a cash flow received in years 3 to 5?
+answer: 2.055
+tol: 0.0005
+unit:
+formula: Delayed annuity factor = factor (1 to last year) - factor (1 to year before first flow)
+step: Factor years 1-5 = 3.791; factor years 1-2 = 1.736.
+step: Years 3-5 = 3.791 - 1.736 = 2.055.
+check: 3.791-1.736
+explain: Subtracting removes the years with no cash flow.
+mistake: Subtracting the factor for years 1-3.
+tip: Deduct the years before it starts.
+src: Study text ch12b - delayed annuity (concept basis; original question)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t4
+status: review
+q: Match each appraisal method with what it measures.
+pair: Payback => Time to recover the initial investment
+pair: NPV => Surplus of present value inflows over outflows
+pair: IRR => Discount rate at which NPV is zero
+pair: ARR => Average profit as a % of average investment
+explain: Only NPV and IRR allow for the time value of money.
+mistake: Mixing up IRR and ARR.
+tip: Time, value, rate, profit %.
+src: Study text ch12b - methods (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why are interest payments EXCLUDED from NPV cash flows?
++ The cost of finance is already allowed for by discounting at the cost of capital || Including interest would double count.
+- Interest is not a real cost || It is real.
+- Interest is always paid by shareholders || Not true.
+- Interest is a non-cash item || It is paid in cash.
+explain: The discount rate represents the return required by providers of finance.
+mistake: Including interest in cash flows.
+tip: Discounting covers finance.
+src: Study text ch12b - finance costs (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: A project costs $10,000 and generates $4,000 a year for 4 years. At 10%, the present values of the inflows are: year 1 $3,636; year 2 $3,304; year 3 $3,004; year 4 $2,732.
+q: What is the discounted payback period (years), to two decimal places?
+answer: 3.02
+tol: 0.005
+unit: years
+formula: Discounted payback = years until cumulative PV recovers the investment
+step: Cumulative PV after year 3 = 3,636 + 3,304 + 3,004 = 9,944; 56 still needed.
+step: Year 4 fraction = 56 / 2,732 = 0.02; discounted payback = 3.02 years.
+check: 3+(10000-3636-3304-3004)/2732
+explain: Simple payback would be 2.5 years; discounting makes it longer.
+mistake: Using undiscounted flows.
+tip: Discounted payback > simple payback.
+src: Study text ch12b - discounted payback (concept basis; original figures)
+
+=== Q023
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: Materials bought last year for $2,000 are in inventory. They have no other use and could be sold for scrap for $1,200. What is their relevant cost if used on a new contract?
++ $1,200 || The scrap value forgone.
+- $2,000 || The historical cost is sunk.
+- $3,200 || Not supported.
+- $0 || Scrap value is given up.
+formula: Relevant cost = benefit forgone (opportunity cost)
+step: Historical cost $2,000 is sunk.
+step: Using them forgoes scrap proceeds of $1,200.
+check: 1200
+explain: If the materials were used regularly, replacement cost would be relevant.
+mistake: Using historical cost.
+tip: What do we lose by using them?
+src: Study text ch12b - relevant materials (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: What is the present value ($) of $20,000 received at the end of year 3, at 10%? (Year 3 discount factor = 0.751)
+answer: 15020
+tol: 0
+unit: $
+formula: PV = cash flow x discount factor
+step: Discount factor = 0.751.
+step: PV = 20,000 x 0.751 = $15,020.
+check: 20000*0.751
+explain: Money received later is worth less today.
+mistake: Using the annuity factor.
+tip: Single flow = single factor.
+src: Study text ch12b - discounting (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which is an advantage of NPV?
++ It considers all relevant cash flows and the time value of money || Maximises shareholder wealth.
+- It is expressed as a percentage, which managers prefer || IRR is a percentage.
+- It ignores the cost of capital || It uses it.
+- It focuses only on liquidity || Payback does.
+explain: A disadvantage is that the cost of capital may be hard to estimate.
+mistake: Confusing NPV and IRR features.
+tip: All cash flows, discounted.
+src: Study text ch12b - NPV merits (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: $10,000 is invested at 8% a year compound interest. What will it be worth ($) after 3 years? Give your answer to the nearest cent.
+answer: 12597.12
+tol: 0.01
+unit: $
+formula: S = P(1 + r)^n
+step: 1.08^3 = 1.259712.
+step: S = 10,000 x 1.259712 = $12,597.12.
+check: 10000*1.08**3
+explain: Simple interest would give only $12,400.
+mistake: Using simple interest.
+tip: Raise to the power n.
+src: Study text ch12b - compounding (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: A project's IRR is 14% and the cost of capital is 11%. What should the company do?
++ Accept, because the IRR exceeds the cost of capital || NPV at 11% will be positive.
+- Reject, because the IRR exceeds the cost of capital || Reversed.
+- Reject, because 14% is too high || Higher is better.
+- It cannot be decided || It can.
+explain: An IRR above the cost of capital implies a positive NPV for conventional cash flows.
+mistake: Reversing the rule.
+tip: IRR > cost of capital = accept.
+src: Study text ch12b - IRR rule (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee includes annual depreciation of $5,000 as a cash outflow in an NPV calculation. What is wrong?
++ Depreciation is not a cash flow; the asset's cost is already included as the initial outflow || Including it double counts.
+- Nothing is wrong || It is not a cash flow.
+- Depreciation should be added as an inflow || It is not a cash flow at all.
+- Depreciation should be discounted at a higher rate || Not relevant.
+explain: DCF methods use cash flows only.
+mistake: Including non-cash items.
+tip: No cash = no entry.
+src: Study text ch12b - DCF cash flows (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: What is the present value ($) of $2,000 a year in perpetuity, starting in one year, at 8%?
+answer: 25000
+tol: 0
+unit: $
+formula: PV = annual flow / r
+step: Annual flow = 2,000; r = 0.08.
+step: PV = 2,000 / 0.08 = $25,000.
+check: 2000/0.08
+explain: A perpetuity factor is simply 1 / r.
+mistake: Using an annuity factor.
+tip: Forever = divide by r.
+src: Study text ch12b - perpetuity (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which profit figure is used in the ARR calculation?
++ Average annual profit after depreciation || ARR is a profit-based measure.
+- Average annual cash flow before depreciation || That is for payback or NPV.
+- Total profit before depreciation || Not the definition.
+- Net present value || Not ARR.
+explain: ARR ignores the time value of money.
+mistake: Using cash flows.
+tip: ARR = profit after depreciation.
+src: Study text ch12b - ARR (concept basis; original question)
+
+=== Q031
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A machine costs $40,000 and is depreciated at $4,000 a year. It generates annual profit (after depreciation) of $6,000. What is its payback period (years)?
+answer: 4
+tol: 0
+unit: years
+formula: Payback = cost / annual cash inflow; cash = profit + depreciation
+step: Annual cash inflow = 6,000 + 4,000 = 10,000.
+step: Payback = 40,000 / 10,000 = 4 years.
+check: 40000/(6000+4000)
+explain: Depreciation is added back because it is not a cash outflow.
+mistake: Using profit, giving 6.7 years.
+tip: Add back depreciation.
+src: Study text ch12b - payback (concept basis; original question)
+
+=== Q032
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the steps of an NPV calculation in order.
+item: Identify the relevant cash flows
+item: Determine when each cash flow occurs
+item: Apply the discount factor for each year
+item: Add the present values to find the NPV
+item: Accept the project if the NPV is positive
+explain: Exclude non-cash items and finance costs at step 1.
+mistake: Discounting before identifying relevant flows.
+tip: What, when, discount, sum, decide.
+src: Study text ch12b - NPV steps (concept basis; original question)
+
+=== Q033
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Two mutually exclusive projects; cost of capital 10% (3-year annuity factor 2.487). Project A: cost $30,000, inflows $13,000 a year for 3 years. Project B: cost $50,000, inflows $21,000 a year for 3 years.
+q: Which project should be chosen?
++ Project A, NPV $2,331 || A 2,331 vs B 2,227.
+- Project B, NPV $2,227 || Lower NPV.
+- Project B, because its inflows are larger || Choose on NPV.
+- Neither, as both NPVs are negative || Both are positive.
+formula: NPV = inflow x annuity factor - cost
+step: A = 13,000 x 2.487 - 30,000 = 32,331 - 30,000 = 2,331.
+step: B = 21,000 x 2.487 - 50,000 = 52,227 - 50,000 = 2,227.
+check: 13000*2.487-30000
+explain: For mutually exclusive projects, choose the highest NPV.
+mistake: Choosing on size of inflows.
+tip: Highest NPV wins.
+src: Study text ch12b - mutually exclusive (concept basis; original figures)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: A project has an NPV of $2,383 and annual inflows over 3 years (annuity factor 2.487). By how much ($) could the annual inflow fall before the NPV becomes zero? Round to the nearest dollar.
+answer: 958
+tol: 0.5
+unit: $
+formula: Breakeven fall in annual inflow = NPV / annuity factor
+step: NPV = 2,383; annuity factor = 2.487.
+step: Fall = 2,383 / 2.487 = $958.
+check: 2383/2.487
+explain: This sensitivity shows how much margin for error the project has.
+mistake: Dividing by the number of years.
+tip: NPV / annuity factor.
+src: Study text ch12b - breakeven (concept basis; original figures)
+
+=== Q035
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: A contract needs 100 hours of skilled labour, paid $15 per hour. Skilled staff are fully busy on other work earning a contribution of $5 per hour (after labour cost) and would be diverted. What is the relevant labour cost ($)?
+answer: 2000
+tol: 0
+unit: $
+formula: Relevant cost = hours x (wage rate + contribution forgone per hour)
+step: Cost per hour = 15 + 5 = $20.
+step: Relevant cost = 100 x 20 = $2,000.
+check: 100*(15+5)
+explain: The opportunity cost of diverting busy staff is the lost contribution.
+mistake: Using the wage rate only.
+tip: Busy staff = wage + lost contribution.
+src: Study text ch12b - relevant labour (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+q: A contract needs 500 kg of material. 300 kg are in inventory, bought at $4 per kg; the current replacement cost is $6 per kg. The material is used regularly in production. What is the relevant cost?
++ $3,000 || All 500 kg at replacement cost $6.
+- $2,400 || Values 300 kg at historical cost.
+- $2,000 || All at historical cost.
+- $1,200 || 200 kg only.
+formula: Relevant cost of regularly used material = quantity x replacement cost
+step: Inventory used will have to be replaced at $6.
+step: Relevant cost = 500 x 6 = $3,000.
+check: 500*6
+explain: Historical cost is sunk.
+mistake: Using historical cost for inventory.
+tip: Regularly used = replacement cost.
+src: Study text ch12b - relevant materials (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A credit card charges 1.5% interest per month. What is the effective annual rate (%)? Give your answer to two decimal places.
+answer: 19.56
+tol: 0.01
+unit: %
+formula: (1 + R) = (1 + r)^12
+step: 1.015^12 = 1.1956.
+step: R = 19.56%.
+check: (1.015**12-1)*100
+explain: The nominal rate would be 18% (1.5% x 12).
+mistake: Multiplying by 12.
+tip: Compound the months.
+src: Study text ch12b - effective rate (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A project's NPV is $2,383 at 10% and -$1,046 at 20%.
+q: Using interpolation, what is the IRR (%)? Give your answer to two decimal places.
+answer: 16.95
+tol: 0.01
+unit: %
+formula: IRR = A + [NPV_A / (NPV_A - NPV_B)] x (B - A)
+step: NPV range = 2,383 + 1,046 = 3,429.
+step: IRR = 10 + (2,383 / 3,429) x 10 = 10 + 6.95 = 16.95%.
+check: 10+2383/(2383+1046)*10
+explain: One positive and one negative NPV make the estimate more reliable.
+mistake: Using 2,383 - 1,046 as the range.
+tip: Add the absolute NPVs.
+src: Study text ch12b - IRR (concept basis; original figures)
+
+=== Q039
+type: mr
+level: C
+cat: concept
+topic: t5
+status: review
+select: 2
+q: Which TWO items are NOT relevant costs?
++ A committed lease payment that must be paid whatever is decided || Committed cost.
++ A notional rent charged on a factory the company owns and has no other use for || Notional cost.
+- Overtime that must be worked only if the project goes ahead || Incremental.
+- Contribution lost from displaced work || Opportunity cost.
+explain: Committed, notional and sunk costs are not relevant.
+mistake: Including notional charges.
+tip: Only cash that changes.
+src: Study text ch12b - non-relevant (concept basis; original question)
+
+=== Q040
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A machine costs $80,000, has a 4-year life and no scrap value. Total cash inflows over its life are $112,000, and depreciation is straight-line.
+q: What is the ARR (%) on average investment?
+answer: 20
+tol: 0
+unit: %
+formula: ARR = average annual profit / average investment x 100
+step: Total profit = 112,000 - 80,000 depreciation = 32,000; average = 8,000 a year.
+step: Average investment = (80,000 + 0) / 2 = 40,000; ARR = 8,000 / 40,000 = 20%.
+check: (112000-80000)/4/((80000+0)/2)*100
+explain: Total depreciation over the life equals cost less scrap.
+mistake: Using cash flow instead of profit.
+tip: Profit = cash - depreciation.
+src: Study text ch12b - ARR (concept basis; original figures)
+
+=== Q041
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: Project X has a payback of 2 years and NPV of $5,000. Project Y has a payback of 3 years and NPV of $12,000. They are mutually exclusive and the company has no liquidity problems. Which should be chosen?
++ Project Y, because it adds more to shareholder wealth || NPV is the primary criterion.
+- Project X, because it pays back faster || Payback ignores later cash flows.
+- Neither || Both have positive NPV.
+- Both || They are mutually exclusive.
+explain: Payback may matter more when cash is tight.
+mistake: Choosing on payback alone.
+tip: NPV first unless liquidity is critical.
+src: Study text ch12b - method conflict (concept basis; original scenario)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: A machine costs $15,000 and saves $5,000 a year for 4 years. The cost of capital is 10% (4-year annuity factor 3.170). What is the NPV?
++ $850 || 5,000 x 3.170 - 15,000.
+- $5,000 || Ignores discounting.
+- $15,850 || Ignores the outlay.
+- $1,700 || Not supported.
+formula: NPV = annual saving x annuity factor - cost
+step: PV of savings = 5,000 x 3.170 = 15,850.
+step: NPV = 15,850 - 15,000 = $850.
+check: 5000*3.17-15000
+explain: Positive NPV, so the machine is worthwhile.
+mistake: Forgetting the outlay.
+tip: Savings are inflows.
+src: Study text ch12b - NPV (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A project is financed by a 7% loan. A trainee deducts the annual loan interest from the cash flows AND discounts at the 7% cost of capital. What is the error?
++ Finance costs are counted twice; interest should be excluded because discounting already allows for it || Double counting.
+- The discount rate should be 0% || Not correct.
+- Interest should be added as an inflow || Not correct.
+- There is no error || It double counts.
+explain: Cash flows should exclude all financing flows.
+mistake: Including interest.
+tip: Discount, don't deduct interest.
+src: Study text ch12b - finance (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: A company owns a machine (annual depreciation $2,000). If used on a contract, it cannot be hired out, losing hire income of $3,500. Running costs on the contract would be $800. What is the relevant cost ($) of using the machine?
+answer: 4300
+tol: 0
+unit: $
+formula: Relevant cost = hire income forgone + incremental running costs
+step: Hire income lost = 3,500; running costs = 800.
+step: Relevant cost = 3,500 + 800 = $4,300 (depreciation excluded).
+check: 3500+800
+explain: Historical depreciation is non-cash and not relevant.
+mistake: Including depreciation.
+tip: Lost income + extra costs.
+src: Study text ch12b - machine costs (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Which is a known problem with IRR?
++ Unconventional cash flows (with more than one change of sign) can produce more than one IRR || Ambiguity.
+- It ignores the time value of money || It allows for it.
+- It cannot be expressed as a percentage || It is a percentage.
+- It always agrees with NPV for mutually exclusive projects || It can conflict.
+explain: IRR also ignores the size of a project.
+mistake: Trusting IRR in all cases.
+tip: Sign changes = multiple IRRs.
+src: Study text ch12b - IRR problems (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: How does discounted payback compare with simple payback?
++ It is longer, because later cash flows are reduced by discounting || And it allows for the time value of money.
+- It is always shorter || Discounting reduces flows.
+- It considers all cash flows after payback || It still ignores them.
+- It uses accounting profit || It uses cash.
+explain: Both still ignore cash flows after the payback point.
+mistake: Thinking discounted payback considers all flows.
+tip: Discounted = slower payback.
+src: Study text ch12b - discounted payback (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+q: A saver can choose 12% a year compounded annually, or 1% a month compounded monthly. What is the effective annual rate of the monthly option?
++ 12.68% || 1.01^12 - 1.
+- 12.00% || The nominal rate.
+- 11.36% || Not supported.
+- 13.00% || Not supported.
+formula: (1 + R) = (1 + r)^n
+step: 1.01^12 = 1.1268.
+step: Effective rate = 12.68%, better than 12% for the saver.
+check: (1.01**12-1)*100
+explain: More frequent compounding raises the effective rate.
+mistake: Treating them as equal.
+tip: Compare effective rates.
+src: Study text ch12b - effective rates (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: What does the cost of capital represent in NPV analysis?
++ The return required by the providers of finance, used as the discount rate || The benchmark return.
+- The project's IRR || The IRR is compared with it.
+- The total cost of the project || Not the meaning.
+- The interest on one specific loan only || It reflects the overall cost of funds.
+explain: A positive NPV means the project beats this required return.
+mistake: Using the project's own IRR as the discount rate.
+tip: Required return = discount rate.
+src: Study text ch12b - cost of capital (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about NPV is correct?
++ NPV = PV of inflows - PV of outflows, discounted at the cost of capital; accept if positive || Core rule.
+- NPV = total inflows - total outflows, undiscounted || Ignores time value.
+- Accept if NPV is negative || Reject.
+- NPV includes depreciation and interest || Excludes both.
+explain: Cash flows are assumed to arise at the end of each year.
+mistake: Forgetting to discount.
+tip: Discounted surplus.
+src: Study text ch12b - NPV (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t5
+status: review
+important: 1
+q: Which description BEST defines a relevant cost?
++ A future, incremental cash flow arising as a direct result of the decision || Core definition.
+- Any cost shown in the financial statements || Not necessarily relevant.
+- Any cost already incurred || Sunk.
+- Any fixed cost || Usually not relevant unless attributable.
+explain: Sunk, committed, notional and non-cash costs are not relevant.
+mistake: Including sunk costs.
+tip: Future, cash, incremental.
+src: Study text ch12b - relevant costs (concept basis; original question)

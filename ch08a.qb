@@ -1,0 +1,901 @@
+@subject acfbe
+@chapter 8a
+@title Process Costing
+@lo C4
+@topic t1 | Process costing basics | C4
+@topic t2 | Losses and gains | C4
+@topic t3 | Closing work in progress | C4
+@topic t4 | Opening WIP: FIFO vs weighted average | C4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: In which type of business is process costing MOST appropriate?
++ An oil refinery producing a continuous flow of identical output || Separate units cannot be identified.
+- A builder constructing individual houses to order || Job or contract costing suits this.
+- A printer producing separate customer orders || Job or batch costing suits this.
+- An accountancy firm charging clients by the hour || Service costing suits this.
+explain: Process costing is used where production is continuous and output is homogeneous, such as chemicals, oil and food.
+mistake: Using process costing for customised jobs.
+tip: Continuous + identical = process costing.
+src: Study text ch8a - process costing (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is NORMAL loss valued in a process account?
++ At its scrap value, if any; it is not given a share of process costs || Normal loss is expected and absorbed by good output.
+- At the full cost per unit of good output || That applies to abnormal loss.
+- At selling price || Not used.
+- At twice the cost per unit || Not used.
+explain: The cost of normal loss is spread over good output; any scrap value reduces process costs.
+mistake: Valuing normal loss at full cost.
+tip: Normal loss = no cost (scrap value only).
+src: Study text ch8a - normal loss (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is an abnormal loss?
++ Actual loss greater than the expected (normal) loss || The excess is unexpected.
+- Actual loss less than normal loss || That is an abnormal gain.
+- The loss expected in the process || That is normal loss.
+- Any loss sold for scrap || Scrap applies to both normal and abnormal loss.
+explain: Abnormal loss is valued at the same cost per unit as good output and charged to profit or loss.
+mistake: Confusing abnormal loss with abnormal gain.
+tip: More lost than expected = abnormal loss.
+src: Study text ch8a - abnormal loss (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: 1,000 units are input to a process costing $4,500. Normal loss is 10% of input with no scrap value. What is the cost per unit of expected output ($)?
+answer: 5
+tol: 0
+unit: $
+formula: Cost per unit = (process costs - scrap value of normal loss) / expected output
+step: Expected output = 1,000 - 10% x 1,000 = 900 units.
+step: Cost per unit = 4,500 / 900 = $5.
+check: 4500/900
+explain: Dividing by expected output spreads the cost of normal loss over good units.
+mistake: Dividing by input units ($4.50).
+tip: Divide by expected output.
+src: Study text ch8a - cost per unit (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What are equivalent units?
++ Notional whole units representing incomplete work, used to share costs between finished output and work in progress || They convert partly finished units into full-unit equivalents.
+- Units that have been scrapped || Not the meaning.
+- Units sold at the same price || Not the meaning.
+- Units produced in another process || Not the meaning.
+explain: For example, 300 units 50% complete equal 150 equivalent units of work.
+mistake: Counting partly complete units as whole units.
+tip: Units x % complete.
+src: Study text ch8a - equivalent units (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: At the end of a period, 300 units of work in progress are 50% complete for conversion costs. How many equivalent units of conversion are in closing WIP?
+answer: 150
+tol: 0
+unit: units
+formula: Equivalent units = units x % complete
+step: Units = 300; degree of completion = 50%.
+step: 300 x 50% = 150 equivalent units.
+check: 300*0.5
+explain: Equivalent units are calculated separately for each cost element.
+mistake: Counting all 300 units.
+tip: Partly done = partly counted.
+src: Study text ch8a - equivalent units (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is an abnormal gain?
++ Actual loss LESS than normal loss || The process performed better than expected.
+- Actual loss greater than normal loss || That is abnormal loss.
+- A profit on selling scrap || Not the definition.
+- An increase in selling price || Not related.
+explain: Abnormal gains are valued at the full cost per unit and credited, after allowing for scrap value forgone.
+mistake: Reversing gain and loss.
+tip: Less lost than expected = gain.
+src: Study text ch8a - abnormal gain (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a feature of process costing?
++ Goods finished in stage one are passed on as raw input for stage two || Costs flow through sequential processes.
+- Each unit is costed separately to customer specification || That is job costing.
+- No losses are expected || Losses are common.
+- Costs are collected for each customer || They are collected per process.
+explain: Features: continuous production, homogeneous output, costs per process, common losses and WIP.
+mistake: Applying job costing features.
+tip: Process to process.
+src: Study text ch8a - features (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Where is the scrap value of NORMAL loss recorded?
++ As a credit to the process account, reducing process costs || It lowers the cost per unit of good output.
+- As a debit to the process account || That would increase costs.
+- In the abnormal loss account only || The abnormal loss account deals with abnormal loss scrap.
+- As sales revenue of the main product || Scrap is not main product revenue.
+explain: The cost per unit formula deducts the scrap value of normal loss from process costs.
+mistake: Debiting the process account.
+tip: Normal loss scrap = credit process.
+src: Study text ch8a - scrap (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Under the FIFO method of valuing process output, which units are assumed to be completed FIRST?
++ The opening work in progress || Opening WIP is finished before new units.
+- Units started this period || These follow opening WIP.
+- Closing work in progress || Closing WIP is unfinished.
+- Abnormal loss units || Not the assumption.
+explain: Under FIFO, only this period's costs are used to calculate cost per equivalent unit.
+mistake: Averaging opening WIP costs under FIFO.
+tip: First in, first finished.
+src: Study text ch8a - FIFO (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Input 1,000 units costing $4,500. Normal loss 10% of input, no scrap value. Actual output 860 units.
+q: What is the value of the abnormal loss?
++ $200 || Abnormal loss = 900 - 860 = 40 units x $5 = $200.
+- $700 || This values all 140 lost units.
+- $500 || This values normal loss.
+- $180 || This uses $4.50 per unit.
+formula: Abnormal loss = expected output - actual output; value = units x cost per unit
+step: Expected output = 900; cost per unit = 4,500 / 900 = $5.
+step: Abnormal loss = 900 - 860 = 40 units x $5 = $200.
+check: (900-860)*5
+explain: Abnormal loss is valued at full cost because it is unexpected and should be highlighted.
+mistake: Valuing total loss rather than just the abnormal part.
+tip: Only the excess loss is costed.
+src: Study text ch8a - abnormal loss (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: 2,000 units are input to a process at a cost of $19,200. Normal loss is 5% of input and can be sold as scrap for $2 per unit. What is the cost per unit of expected output ($)?
+answer: 10
+tol: 0
+unit: $
+formula: Cost per unit = (process costs - scrap value of normal loss) / expected output
+step: Normal loss = 5% x 2,000 = 100 units; scrap value = 100 x 2 = $200.
+step: Expected output = 2,000 - 100 = 1,900 units.
+step: Cost per unit = (19,200 - 200) / 1,900 = $10.
+check: (19200-100*2)/1900
+explain: Scrap value of normal loss reduces the cost borne by good output.
+mistake: Forgetting to deduct scrap value.
+tip: Costs less scrap of normal loss, over expected output.
+src: Study text ch8a - scrap (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Input 2,000 units costing $19,200. Normal loss 5% with scrap value $2 per unit. Cost per unit of expected output $10. Actual output 1,850 units.
+q: What is the NET cost of abnormal loss charged to profit or loss?
++ $400 || Abnormal loss 50 units x $10 = 500, less scrap 50 x $2 = 100.
+- $500 || This ignores the scrap value of abnormal loss.
+- $300 || This deducts too much scrap.
+- $1,500 || This values all 150 lost units.
+formula: Net abnormal loss = abnormal loss units x (cost per unit - scrap value)
+step: Abnormal loss = 1,900 - 1,850 = 50 units at $10 = $500.
+step: Scrap of abnormal loss = 50 x 2 = $100; net = $400.
+check: 50*(10-2)
+explain: The abnormal loss account is debited at full cost and credited with scrap proceeds.
+mistake: Ignoring scrap on abnormal loss.
+tip: Full cost less scrap.
+src: Study text ch8a - abnormal loss account (concept basis; original figures)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Input 2,000 units costing $19,200. Normal loss 5% with scrap value $2 per unit. Cost per unit of expected output $10. Actual output 1,930 units.
+q: What is the NET abnormal gain credited to profit or loss?
++ $240 || Gain 30 units x $10 = 300, less scrap forgone 30 x $2 = 60.
+- $300 || This ignores the scrap value forgone.
+- $360 || This adds the scrap value.
+- $60 || This is the scrap forgone only.
+formula: Net abnormal gain = gain units x (cost per unit - scrap value)
+step: Abnormal gain = 1,930 - 1,900 = 30 units at $10 = $300.
+step: Scrap revenue forgone (these units were expected to be lost and sold) = 30 x 2 = $60; net gain = $240.
+check: 30*(10-2)
+explain: Because fewer units were lost, less scrap is available to sell, which reduces the benefit.
+mistake: Forgetting the scrap value forgone.
+tip: Gain at cost less scrap forgone.
+src: Study text ch8a - abnormal gain account (concept basis; original figures)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How is the cost of disposing of NORMAL loss treated?
++ Added to the process costs || It is an expected cost of running the process.
+- Charged to the abnormal loss account || That is for abnormal loss disposal costs.
+- Ignored || It is a cost.
+- Deducted from scrap revenue of the main product || Not the treatment.
+explain: Disposal costs of abnormal loss go to the abnormal loss account.
+mistake: Charging normal loss disposal to profit or loss directly.
+tip: Expected costs belong in the process.
+src: Study text ch8a - disposal costs (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: A process started 5,000 units. Materials cost $20,000 (added at the start) and conversion costs were $13,800. 4,200 units were completed; 800 units remain in WIP, 100% complete for materials and 50% complete for conversion. There were no losses and no opening WIP.
+q: What is the cost per equivalent unit of conversion ($)?
+answer: 3
+tol: 0
+unit: $
+formula: Cost per EU = conversion cost / total conversion equivalent units
+step: Conversion EU = 4,200 completed + 800 x 50% = 4,200 + 400 = 4,600.
+step: Cost per EU = 13,800 / 4,600 = $3.
+check: 13800/(4200+800*0.5)
+explain: Each cost element has its own equivalent units and cost per unit.
+mistake: Using 5,000 units for conversion.
+tip: Separate EU for each element.
+src: Study text ch8a - equivalent units (concept basis; original figures)
+
+=== Q017
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Materials cost per equivalent unit $4 (WIP 100% complete); conversion cost per equivalent unit $3. 4,200 units completed; 800 units in closing WIP, 50% complete for conversion.
+q: What is the value of closing work in progress?
++ $4,400 || Materials 800 x 4 = 3,200; conversion 400 x 3 = 1,200.
+- $5,600 || This treats WIP as fully complete for conversion.
+- $3,200 || This omits conversion cost.
+- $2,800 || This values WIP at 50% for materials too.
+formula: WIP value = Σ(equivalent units x cost per EU) for each element
+step: Materials: 800 EU x $4 = $3,200.
+step: Conversion: 400 EU x $3 = $1,200; total $4,400.
+check: 800*4+400*3
+explain: Check: finished goods 4,200 x $7 = 29,400; 29,400 + 4,400 = 33,800 = total costs.
+mistake: Using one completion percentage for both elements.
+tip: Element by element.
+src: Study text ch8a - WIP valuation (concept basis; original figures)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Under the WEIGHTED AVERAGE method, which costs are used to calculate the cost per equivalent unit?
++ The value of opening WIP plus the costs incurred this period || Costs are averaged across opening WIP and this period.
+- Only this period's costs || That is FIFO.
+- Only the opening WIP value || Incomplete.
+- Only closing WIP costs || Not the method.
+explain: Weighted average blends the cost of the previous and current periods.
+mistake: Using only current costs under weighted average.
+tip: Weighted average = opening + current.
+src: Study text ch8a - weighted average (concept basis; original question)
+
+=== Q019
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO statements about process losses are correct?
++ Abnormal loss and abnormal gain are valued at the same cost per unit as good output || Highlighting them at full cost aids control.
++ The scrap value of normal loss reduces the cost per unit of good output || It is credited to the process account.
+- Normal loss is valued at the full cost per unit || It is valued at scrap value only.
+- Abnormal gains are ignored in the accounts || They are recorded.
+explain: Normal loss is expected; abnormal results are highlighted separately.
+mistake: Costing normal loss.
+tip: Normal = scrap value; abnormal = full cost.
+src: Study text ch8a - losses (concept basis; original question)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each item with its treatment in process costing.
+pair: Normal loss => Valued at scrap value only
+pair: Abnormal loss => Valued at full cost per unit and charged to profit or loss (net of scrap)
+pair: Abnormal gain => Valued at full cost per unit and credited to profit or loss (net of scrap forgone)
+pair: Disposal cost of normal loss => Added to process costs
+explain: These treatments ensure expected costs are borne by good output and unexpected results are highlighted.
+mistake: Valuing normal loss at full cost.
+tip: Expected vs unexpected.
+src: Study text ch8a - treatments (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: In the four-step process costing framework, what is the FIRST step?
++ Determine output and losses, including equivalent units || The physical flow is established first.
+- Complete the process accounts || That is the last step.
+- Calculate the total cost of output || That follows the cost per unit.
+- Calculate the cost per unit || That follows determining output.
+explain: Steps: output and losses, cost per unit, total cost of output and losses, complete the accounts.
+mistake: Calculating costs before the physical flow.
+tip: Units first, then dollars.
+src: Study text ch8a - framework (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: 4,000 units are input to a process. Normal loss is 8% of input. Actual output is 3,600 units. How many units of abnormal loss are there?
+answer: 80
+tol: 0
+unit: units
+formula: Abnormal loss = expected output - actual output
+step: Normal loss = 8% x 4,000 = 320; expected output = 3,680.
+step: Abnormal loss = 3,680 - 3,600 = 80 units.
+check: 4000*0.92-3600
+explain: Total loss is 400 units, of which 320 are normal and 80 abnormal.
+mistake: Calling the whole 400 units abnormal.
+tip: Expected minus actual.
+src: Study text ch8a - losses (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why are equivalent units usually calculated SEPARATELY for materials and conversion costs?
++ The degree of completion of WIP often differs between cost elements || Materials may be added at the start; conversion builds up gradually.
+- Because materials are never complete || They are often 100% complete.
+- Because conversion costs are always 100% complete || They are usually partly complete.
+- Because the totals must be different by law || Not a legal issue.
+explain: Separate equivalent units give accurate costs per unit for each element.
+mistake: Using one percentage for all elements.
+tip: Different completion, different EU.
+src: Study text ch8a - equivalent units (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: In a process, costs were $36,000 for 6,000 units input. Normal loss is 10% with no scrap value. Actual output was 5,500 units. What is the value of good output?
++ $36,666.67 || Cost per unit = 36,000 / 5,400 = 6.667; but output 5,500 includes a gain of 100 units: 5,500 x 6.667.
+- $36,000 || The abnormal gain adds value to output.
+- $33,000 || This uses $6 per unit.
+- $39,600 || This uses $7.20 per unit.
+formula: Output value = actual good units x cost per expected unit
+step: Expected output = 6,000 - 600 = 5,400; cost per unit = 36,000 / 5,400 = $6.667.
+step: Actual output 5,500 > 5,400, so there is an abnormal gain of 100 units.
+step: Output value = 5,500 x 6.667 = $36,666.67 (the gain of $666.67 is credited to the abnormal gain account).
+check: 5500*36000/5400
+explain: With an abnormal gain, good output is valued at more than total process cost; the excess is the abnormal gain.
+mistake: Valuing output at total input cost.
+tip: Good units x cost per expected unit.
+src: Study text ch8a - abnormal gain (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: An exam question gives the degree of completion of opening WIP for each cost element. Which method is usually expected?
++ FIFO || The completion percentages are needed to calculate work done this period on opening WIP.
+- Weighted average || It does not need opening WIP completion percentages.
+- Job costing || Not process costing.
+- Marginal costing || Not the method in question.
+explain: If completion percentages for opening WIP are not given, weighted average is usually expected.
+mistake: Ignoring the clue in the question.
+tip: Completion of opening WIP given = FIFO.
+src: Study text ch8a - method choice (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why is abnormal loss valued at the full cost per unit rather than at scrap value?
++ To highlight its cost to management, since it reflects unexpected inefficiency || It is charged separately to profit or loss.
+- Because it is part of normal operations || It is not.
+- To increase the value of good output || It does not.
+- Because scrap cannot be sold || Scrap may be sold.
+explain: Keeping abnormal loss out of good output's cost stops inefficiency being hidden in product costs.
+mistake: Spreading abnormal loss over good output.
+tip: Abnormal = visible.
+src: Study text ch8a - abnormal loss (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: A process started 5,000 units with materials of $20,000 added at the start and conversion costs of $13,800. 4,200 units were completed and 800 units are in closing WIP (100% materials, 50% conversion). No losses or opening WIP.
+q: What is the value ($) of the 4,200 completed units?
+answer: 29400
+tol: 0
+unit: $
+formula: Finished output value = completed units x total cost per equivalent unit
+step: Materials EU = 5,000; cost per EU = 20,000 / 5,000 = $4.
+step: Conversion EU = 4,600; cost per EU = 13,800 / 4,600 = $3. Total = $7 per unit.
+step: Finished output = 4,200 x 7 = $29,400.
+check: 4200*(20000/5000+13800/4600)
+explain: Completed units carry the full cost per equivalent unit of every element.
+mistake: Using input units for conversion EU.
+tip: Completed units are 100% for all elements.
+src: Study text ch8a - output valuation (concept basis; original figures)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: In the abnormal GAIN account, what does the DEBIT entry for scrap value represent?
++ Scrap revenue forgone because fewer units were lost than expected || Less scrap is available to sell.
+- Extra scrap revenue earned || Fewer units were scrapped.
+- The full cost of the gain || That is credited.
+- The disposal cost of normal loss || Not this entry.
+explain: The net abnormal gain is the full-cost gain less scrap revenue forgone.
+mistake: Thinking an abnormal gain increases scrap sales.
+tip: Gain = less scrap to sell.
+src: Study text ch8a - abnormal gain account (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which statement about the output of one process is correct?
++ It is transferred to the next process as an input cost || Costs accumulate as products move through processes.
+- It is always sold immediately || It may move to the next process.
+- It is never valued || It is valued at cost per unit.
+- It is treated as abnormal loss || Not unless lost unexpectedly.
+explain: In later processes, transferred-in costs are usually 100% complete.
+mistake: Forgetting transferred-in costs in later processes.
+tip: Process 1 output = Process 2 input.
+src: Study text ch8a - features (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Under FIFO, how is the value of finished output made up?
++ The b/f value of opening WIP plus the cost to complete it, plus the cost of units started and finished this period || Opening WIP is completed first.
+- Only units started and finished this period || Opening WIP completed is also output.
+- Opening WIP at its b/f value only || The cost to complete must be added.
+- An average of all costs || That is weighted average.
+explain: FIFO separates the treatment of opening WIP from new units.
+mistake: Omitting the cost of completing opening WIP.
+tip: Opening WIP: b/f + finish it.
+src: Study text ch8a - FIFO (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put the four steps of the process costing framework in order.
+item: Determine output, losses and equivalent units
+item: Calculate the cost per unit (per equivalent unit)
+item: Calculate the total cost of output, losses and WIP
+item: Complete the process and related accounts
+explain: Working through the steps in order avoids most process costing errors.
+mistake: Skipping the physical flow.
+tip: Units, rate, totals, accounts.
+src: Study text ch8a - framework (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A process has input of 10,000 kg, normal loss of 5% and actual output of 9,500 kg. What does this show?
++ 500 kg normal loss only - no abnormal loss or gain || Expected output is 9,500 kg.
+- An abnormal loss of 500 kg || All of the loss is normal.
+- An abnormal gain of 500 kg || Actual equals expected.
+- An abnormal loss of 9,500 kg || Not correct.
+formula: Expected output = input - normal loss
+step: Normal loss = 5% x 10,000 = 500 kg; expected output = 9,500 kg.
+step: Actual output 9,500 = expected, so no abnormal loss or gain.
+check: 10000*0.05
+explain: Abnormal results arise only when actual output differs from expected output.
+mistake: Treating all loss as abnormal.
+tip: Compare with expected output.
+src: Study text ch8a - losses (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which exam limitation does the Study Guide state for process costing questions?
++ Losses and work in progress will not be examined in the SAME process || Questions combine them only in separate processes.
+- Abnormal gains are not examinable || They are examinable.
+- Equivalent units are not examinable || They are examinable.
+- FIFO is not examinable || It is examinable.
+explain: Knowing this limit helps you recognise what each question is testing.
+mistake: Over-complicating exam answers.
+tip: Losses OR WIP, not both in one process.
+src: Study text ch8a - exam scope (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Process costs are $12,000 for 1,000 kg input. Normal loss is 20% with no scrap value. Actual output is 750 kg. What is the abnormal loss?
++ 50 kg valued at $750 || Expected output 800; abnormal loss 50 kg x $15.
+- 250 kg valued at $3,000 || This values all loss.
+- 50 kg valued at $600 || This uses $12 per kg.
+- 200 kg valued at $3,000 || This is normal loss.
+formula: Cost per kg = costs / expected output; abnormal loss = expected - actual
+step: Expected output = 800 kg; cost per kg = 12,000 / 800 = $15.
+step: Abnormal loss = 800 - 750 = 50 kg x $15 = $750.
+check: 1000*0.8-750
+explain: Output 750 kg is valued at $11,250; 11,250 + 750 = 12,000.
+mistake: Using input to find cost per kg.
+tip: Check that output + abnormal loss = total cost.
+src: Study text ch8a - abnormal loss (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which formula gives the cost per unit of expected output?
++ (Process costs - scrap value of normal loss) / expected output || Expected output = input - normal loss.
+- Process costs / input units || Ignores normal loss.
+- (Process costs + scrap value of normal loss) / actual output || Wrong signs and base.
+- Process costs / actual output || Distorted by abnormal results.
+explain: This rate values good output, abnormal loss and abnormal gain.
+mistake: Dividing by actual output.
+tip: Expected, not actual.
+src: Study text ch8a - cost per unit (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Weighted average method. Opening WIP 500 units: materials $2,000, conversion $900. Costs this period: materials $18,000, conversion $15,550. 4,600 units were completed. Closing WIP 400 units: 100% complete for materials, 25% complete for conversion.
+q: What is the cost per equivalent unit of conversion ($)? Give your answer to two decimal places.
+answer: 3.50
+tol: 0.005
+unit: $
+formula: Cost per EU = (opening WIP cost + period cost) / (completed units + closing WIP EU)
+step: Conversion EU = 4,600 + 400 x 25% = 4,600 + 100 = 4,700.
+step: Conversion cost = 900 + 15,550 = $16,450.
+step: Cost per EU = 16,450 / 4,700 = $3.50.
+check: (900+15550)/(4600+400*0.25)
+explain: Weighted average combines opening WIP value with current costs and includes all completed units.
+mistake: Leaving out the opening WIP cost.
+tip: Weighted average = include opening WIP cost.
+src: Study text ch8a - weighted average (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Weighted average method. Opening WIP 500 units: materials $2,000, conversion $900. Period costs: materials $18,000, conversion $15,550. 4,600 units completed. Closing WIP 400 units (100% materials, 25% conversion). Cost per EU: materials $4.00, conversion $3.50.
+q: What is the value of closing WIP?
++ $1,950 || 400 x 4 + 100 x 3.50 = 1,600 + 350.
+- $3,000 || This treats WIP as 100% complete for conversion.
+- $1,600 || This omits conversion cost.
+- $1,400 || This uses 25% for materials as well.
+formula: WIP = Σ(EU x cost per EU)
+step: Materials: 400 EU x $4 = $1,600.
+step: Conversion: 100 EU x $3.50 = $350; total $1,950.
+check: 400*4+100*3.5
+explain: Check: completed 4,600 x $7.50 = 34,500; 34,500 + 1,950 = 36,450 = total costs.
+mistake: Applying 25% to materials.
+tip: Use each element's own completion.
+src: Study text ch8a - weighted average (concept basis; original figures)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: FIFO method. Opening WIP 400 units (100% materials, 60% conversion), value $3,000. Started this period 3,600 units. Costs this period: materials $14,400, conversion $12,530. Completed 3,700 units. Closing WIP 300 units (100% materials, 40% conversion).
+q: How many equivalent units of CONVERSION were produced this period?
+answer: 3580
+tol: 0
+unit: units
+formula: FIFO EU = work to complete opening WIP + units started and finished + closing WIP EU
+step: Complete opening WIP: 400 x 40% = 160.
+step: Started and finished: 3,700 - 400 = 3,300.
+step: Closing WIP: 300 x 40% = 120. Total = 160 + 3,300 + 120 = 3,580.
+check: 400*0.4+3300+300*0.4
+explain: FIFO counts only work done in THIS period.
+mistake: Counting opening WIP as fully worked this period.
+tip: Opening WIP: only the remaining %.
+src: Study text ch8a - FIFO (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: FIFO method. Opening WIP 400 units (100% materials, 60% conversion), value $3,000. Started 3,600 units. Period costs: materials $14,400, conversion $12,530. Completed 3,700 units. Closing WIP 300 units (100% materials, 40% conversion). FIFO EU: materials 3,600; conversion 3,580.
+q: What is the value of completed output?
++ $28,310 || 3,000 b/f + 160 x 3.50 + 3,300 x 7.50 = 3,000 + 560 + 24,750.
+- $27,750 || This values all completed units at $7.50.
+- $24,750 || This omits opening WIP.
+- $29,930 || This is total cost including closing WIP.
+formula: FIFO output = opening WIP b/f + cost to complete + started and finished x full cost
+step: Cost per EU: materials 14,400 / 3,600 = $4; conversion 12,530 / 3,580 = $3.50.
+step: Complete opening WIP: 160 x 3.50 = $560; started and finished: 3,300 x 7.50 = $24,750.
+step: Output = 3,000 + 560 + 24,750 = $28,310.
+check: 3000+160*3.5+3300*7.5
+explain: Check: closing WIP 300 x 4 + 120 x 3.50 = 1,620; 28,310 + 1,620 = 29,930 = all costs.
+mistake: Valuing opening WIP units at the current full cost.
+tip: Reconcile to total cost.
+src: Study text ch8a - FIFO (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee calculates cost per unit by dividing process costs by ACTUAL output when there is an abnormal loss. What is the effect?
++ Good output is overvalued, because the cost of abnormal loss is hidden in it || Abnormal loss should be highlighted separately.
+- Good output is undervalued || It is overvalued.
+- There is no effect || The cost per unit is distorted.
+- Abnormal loss is overvalued || It disappears into good output.
+explain: Using expected output keeps abnormal results separate for control.
+mistake: Dividing by actual output.
+tip: Expected output, always.
+src: Study text ch8a - cost per unit (concept basis; original question)
+
+=== Q041
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO statements about FIFO and weighted average are correct?
++ FIFO cost per unit reflects only the current period's costs || It measures current efficiency.
++ Weighted average blends opening WIP costs with current costs || It averages across periods.
+- FIFO and weighted average always give the same output values || They differ when costs change.
+- Weighted average requires opening WIP completion percentages || FIFO needs them.
+explain: FIFO is better for judging current performance; weighted average is simpler.
+mistake: Thinking the methods are identical.
+tip: FIFO = this period; WA = blend.
+src: Study text ch8a - comparison (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: Input is 5,000 kg costing $48,200. Normal loss is 6% of input, sold as scrap at $5 per kg, and normal loss disposal costs are $300. What is the cost per kg of expected output ($)?
+answer: 10
+tol: 0
+unit: $
+formula: Cost per unit = (process costs + normal loss disposal costs - scrap value of normal loss) / expected output
+step: Normal loss = 300 kg; scrap value = 300 x 5 = $1,500; expected output = 4,700 kg.
+step: Net cost = 48,200 + 300 - 1,500 = $47,000.
+step: Cost per kg = 47,000 / 4,700 = $10.
+check: (48200+300-1500)/4700
+explain: Disposal costs of normal loss increase process costs; scrap value reduces them.
+mistake: Ignoring disposal costs.
+tip: Add disposal, deduct scrap.
+src: Study text ch8a - disposal costs (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A process regularly shows abnormal gains every month. What should management consider?
++ Whether the normal loss allowance is set too high, so expected output is understated || Persistent gains suggest the standard needs revising.
+- Nothing, because gains are always good || Persistent gains distort costs.
+- Increasing the normal loss percentage further || That would worsen the issue.
+- Valuing the gains at zero || They are valued at full cost.
+explain: Normal loss rates should reflect realistic expectations.
+mistake: Ignoring persistent abnormal results.
+tip: Persistent abnormal = revise the norm.
+src: Study text ch8a - control (concept basis; original scenario)
+
+=== Q044
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each feature with FIFO or weighted average.
+pair: Uses only this period's costs to find cost per EU => FIFO
+pair: Includes opening WIP value in the costs averaged => Weighted average
+pair: Requires opening WIP completion percentages => FIFO
+pair: Counts all completed units plus closing WIP EU => Weighted average
+explain: The two methods differ in how they treat opening WIP.
+mistake: Mixing up the methods.
+tip: FIFO separates; WA blends.
+src: Study text ch8a - comparison (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: In a process with an abnormal gain, a trainee credits the abnormal gain account with the scrap value of the gained units instead of debiting it. What is wrong?
++ Scrap value forgone should be DEBITED to the abnormal gain account, reducing the net gain || Fewer units are available to sell as scrap.
+- Nothing - scrap should be credited || The gain means less scrap revenue.
+- Scrap should be ignored for gains || It affects the net gain.
+- The gain should be valued at scrap value only || It is valued at full cost.
+explain: Net gain = gain at full cost - scrap value forgone.
+mistake: Thinking gains increase scrap revenue.
+tip: Gain = lost scrap sales.
+src: Study text ch8a - abnormal gain (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: In Process 2, transferred-in costs from Process 1 were $36,000 for 6,000 units, added materials were $11,200 and conversion costs $8,400. 5,000 units were completed and 1,000 units remain in WIP: 100% complete for transferred-in costs, 60% for added materials and 40% for conversion. No losses and no opening WIP.
+q: What is the cost per equivalent unit of ADDED MATERIALS ($)?
+answer: 2
+tol: 0
+unit: $
+formula: Cost per EU = cost / (completed units + WIP EU)
+step: Added materials EU = 5,000 + 1,000 x 60% = 5,600.
+step: Cost per EU = 11,200 / 5,600 = $2.
+check: 11200/5600
+explain: Each element in a later process has its own equivalent units, including transferred-in costs.
+mistake: Using 100% completion for added materials.
+tip: Transferred-in is usually 100% complete.
+src: Study text ch8a - later processes (concept basis; original figures)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Why can't individual units be costed separately in process costing?
++ Output is continuous and homogeneous, so costs are averaged over all units produced || Units are indistinguishable.
+- Because units are always lost || Losses do not prevent costing.
+- Because process costing is illegal for individual units || Not true.
+- Because there are no costs to allocate || There are costs.
+explain: Process costing averages costs over output for each process.
+mistake: Thinking process costing is less precise by choice.
+tip: Identical units = average cost.
+src: Study text ch8a - process costing (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Materials cost $20,000 for 5,000 equivalent units. Conversion cost $13,800 for 4,600 equivalent units. Completed output 4,200 units; closing WIP 800 units (100% materials, 50% conversion).
+q: Which statement correctly checks that all costs are accounted for?
++ Completed $29,400 + closing WIP $4,400 = $33,800, which equals total costs || 20,000 + 13,800 = 33,800.
+- Completed $33,600 + closing WIP $4,400 = $38,000 || Completed output is overstated.
+- Completed $29,400 + closing WIP $5,600 = $35,000 || WIP is overstated.
+- Completed $25,200 + closing WIP $8,600 = $33,800 || Both are wrong.
+formula: Total costs = finished output + closing WIP (+ abnormal losses)
+step: Cost per unit = 4 + 3 = $7; completed = 4,200 x 7 = $29,400.
+step: WIP = 800 x 4 + 400 x 3 = $4,400; total = $33,800.
+check: 4200*7
+explain: Reconciling to total costs is the best way to catch errors.
+mistake: Skipping the check.
+tip: Always reconcile.
+src: Study text ch8a - checking (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A process has normal loss of 5% and abnormal loss this month. The production manager asks for the abnormal loss to be spread over good output "to keep the loss account small". Why should this be refused?
++ It would hide inefficiency in product costs and overstate the value of good output || Abnormal loss must be visible to management.
+- Abnormal loss must always be zero || It can arise.
+- It would reduce product costs || It would increase them.
+- Normal loss would increase || Not relevant.
+explain: Separate abnormal loss accounting supports control and accurate inventory valuation.
+mistake: Hiding abnormal loss.
+tip: Make problems visible.
+src: Study text ch8a - abnormal loss (concept basis; original scenario)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: How are equivalent units of closing WIP calculated?
++ Number of WIP units x percentage complete, for each cost element || EU reflect the work done.
+- Number of WIP units, regardless of completion || Ignores completion.
+- Completed units x percentage complete || Completed units are 100%.
+- Input units x normal loss % || Not equivalent units.
+explain: Materials are often 100% complete; conversion costs are usually partly complete.
+mistake: Using one percentage for all elements.
+tip: Units x % complete per element.
+src: Study text ch8a - equivalent units (concept basis; original question)

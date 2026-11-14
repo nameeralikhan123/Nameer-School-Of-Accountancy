@@ -1,0 +1,896 @@
+@subject acfbe
+@chapter 14b
+@title Sales Variances and Operating Statements
+@lo E3
+@topic t1 | Sales variances | E3
+@topic t2 | Operating statements | E3
+@topic t3 | Deriving actual data | E3
+@topic t4 | Control action | E3
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: The standard selling price is $25. 1,200 units were sold for $31,200. What is the selling price variance ($)? (It is favourable.)
+answer: 1200
+tol: 0
+unit: $
+formula: Selling price variance = actual revenue - (actual units sold x standard price)
+step: Standard revenue for actual sales = 1,200 x 25 = 30,000.
+step: 31,200 - 30,000 = $1,200 F.
+check: 31200-1200*25
+explain: The actual price was $26 per unit.
+mistake: Using budgeted units.
+tip: Actual units sold.
+src: Study text ch14b - selling price variance (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Under ABSORPTION costing, at what value is the sales volume variance calculated?
++ Standard profit per unit || Sales volume profit variance.
+- Standard selling price per unit || Overstates the effect.
+- Standard contribution per unit || Marginal costing.
+- Actual profit per unit || Standards are used.
+explain: Under marginal costing, standard contribution is used.
+mistake: Valuing at selling price.
+tip: Absorption = profit.
+src: Study text ch14b - volume variance (concept basis; original question)
+
+=== Q003
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Budgeted sales were 5,000 units and actual sales were 4,600 units. Standard profit is $6 per unit. What is the sales volume profit variance ($)? (It is adverse.)
+answer: 2400
+tol: 0
+unit: $
+formula: Sales volume profit variance = (actual units - budgeted units) x standard profit per unit
+step: Shortfall = 4,600 - 5,000 = -400 units.
+step: Variance = 400 x 6 = $2,400 A.
+check: (5000-4600)*6
+explain: Fewer units sold means less standard profit earned.
+mistake: Using selling price.
+tip: Units x standard profit.
+src: Study text ch14b - volume variance (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What does an operating statement do?
++ Reconciles budgeted profit with actual profit through the variances || Explains the difference.
+- Lists the company's assets || That is a SOFP.
+- Shows only cash flows || Cash budget.
+- Records sales invoices || Not its role.
+explain: Favourable variances are added and adverse variances deducted.
+mistake: Thinking it shows only costs.
+tip: Budget to actual, via variances.
+src: Study text ch14b - operating statement (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which variance does NOT appear in a MARGINAL costing operating statement?
++ Fixed overhead volume variance || No overhead is absorbed under marginal costing.
+- Fixed overhead expenditure variance || It does appear.
+- Sales volume contribution variance || It does appear.
+- Material price variance || It does appear.
+explain: Marginal statements value volume at contribution and have no FOH volume variance.
+mistake: Including a volume variance.
+tip: Marginal = no FOH volume.
+src: Study text ch14b - marginal statements (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Standard selling price is $30 and standard variable cost is $18. Budgeted sales were 5,000 units and actual sales 4,600 units. What is the sales volume contribution variance ($)? (It is adverse.)
+answer: 4800
+tol: 0
+unit: $
+formula: Volume contribution variance = (actual units - budgeted units) x standard contribution per unit
+step: Standard contribution = 30 - 18 = $12.
+step: Variance = 400 x 12 = $4,800 A.
+check: (5000-4600)*(30-18)
+explain: This is used in marginal costing operating statements.
+mistake: Using standard profit.
+tip: Marginal = contribution.
+src: Study text ch14b - volume contribution (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which quantity is used in the selling price variance?
++ Actual quantity sold || Isolates the price effect on actual sales.
+- Budgeted quantity || Used in the volume variance.
+- Quantity produced || Sales variances use sales.
+- Standard quantity of materials || Not related.
+explain: Price variance = (actual price - standard price) x actual quantity sold.
+mistake: Using budgeted quantity.
+tip: Price x actual sold.
+src: Study text ch14b - price variance (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: When should a variance be investigated?
++ When the expected benefits of investigating and correcting it exceed the costs || Cost-benefit rule.
+- Always, whatever the size || Inefficient.
+- Never || Loses control.
+- Only when it is favourable || Both types matter.
+explain: Control limits and trends help identify significant variances.
+mistake: Investigating everything.
+tip: Benefit > cost.
+src: Study text ch14b - control action (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: In an operating statement, how are ADVERSE variances treated?
++ Deducted from budgeted (or standard) profit || They reduce profit.
+- Added to budgeted profit || Favourable variances are added.
+- Ignored || They are included.
+- Shown only in a note || They are in the reconciliation.
+explain: The statement ends at actual profit.
+mistake: Adding adverse variances.
+tip: A = subtract; F = add.
+src: Study text ch14b - operating statement (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What action is appropriate for a variance caused by random, chance fluctuation?
++ No action - a standard is an average within a normal range || Nothing to correct.
+- Dismiss the manager responsible || Not caused by performance.
+- Revise the standard immediately || Not needed for random effects.
+- Change the recording system || Not a measurement error.
+explain: Different causes call for different actions.
+mistake: Over-reacting to random variances.
+tip: Random = leave it.
+src: Study text ch14b - control action (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: The standard price is $40. 3,000 units were sold for $119,100. What is the selling price variance?
++ $900 adverse || Standard revenue 120,000 vs actual 119,100.
+- $900 favourable || Revenue was lower than standard.
+- $119,100 favourable || Actual revenue.
+- $3,000 adverse || Not supported.
+formula: Price variance = actual revenue - actual units x standard price
+step: Standard revenue = 3,000 x 40 = 120,000.
+step: 119,100 - 120,000 = -900: $900 A.
+check: 120000-119100
+explain: The actual price was $39.70.
+mistake: Using budgeted units.
+tip: Lower price = adverse.
+src: Study text ch14b - price variance (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A company cuts its selling price to increase sales. What variance pattern is MOST likely?
++ Adverse selling price variance and favourable sales volume variance || Interdependence.
+- Favourable price and favourable volume || The price is lower.
+- Adverse price and adverse volume || Volume should rise.
+- No variances || Prices changed.
+explain: The two variances should be judged together.
+mistake: Judging the price variance alone.
+tip: Price down, volume up.
+src: Study text ch14b - interdependence (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The labour rate variance was $2,600 adverse on 13,000 hours paid. The standard rate is $8.00 per hour. What was the actual rate per hour ($)?
+answer: 8.2
+tol: 0.001
+unit: $
+formula: Actual rate = standard rate + adverse variance / hours paid
+step: Variance per hour = 2,600 / 13,000 = $0.20.
+step: Actual rate = 8.00 + 0.20 = $8.20.
+check: 8+2600/13000
+explain: Adverse means the actual rate is higher.
+mistake: Subtracting the variance.
+tip: Adverse = add.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The sales volume profit variance was $1,500 favourable. Standard profit is $5 per unit and actual sales were 2,300 units. What were budgeted sales (units)?
+answer: 2000
+tol: 0
+unit: units
+formula: Budgeted units = actual units - favourable variance / standard profit
+step: Extra units sold = 1,500 / 5 = 300.
+step: Budget = 2,300 - 300 = 2,000 units.
+check: 2300-1500/5
+explain: Favourable volume means actual sales exceeded budget.
+mistake: Adding the 300 units.
+tip: Favourable = actual above budget.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Absorption costing. Budgeted profit $30,000. Sales volume profit variance $2,400 A. Selling price variance $1,500 F. Cost variances: material $800 A; labour $1,100 F; variable overhead $300 A; fixed overhead expenditure $2,000 A; fixed overhead volume $1,200 A.
+q: What is the actual profit?
++ $25,900 || 30,000 - 2,400 + 1,500 - 800 + 1,100 - 300 - 2,000 - 1,200.
+- $34,100 || Signs reversed.
+- $27,100 || Omits the volume variance.
+- $27,600 || Standard profit on actual sales.
+formula: Actual profit = budgeted profit + F variances - A variances
+step: Standard profit on actual sales = 30,000 - 2,400 = 27,600; add price 1,500 = 29,100.
+step: Cost variances net = -800 + 1,100 - 300 - 2,000 - 1,200 = -3,200; actual = 25,900.
+check: 30000-2400+1500-800+1100-300-2000-1200
+explain: Working down an operating statement step by step avoids sign errors.
+mistake: Adding adverse variances.
+tip: F add, A subtract.
+src: Study text ch14b - operating statement (concept basis; original figures)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are differences between a marginal and an absorption costing operating statement?
++ The sales volume variance is valued at standard contribution, not standard profit || Marginal uses contribution.
++ There is no fixed overhead volume variance || Only expenditure appears.
+- Material variances are excluded || They appear in both.
+- The selling price variance is calculated differently || It is the same in both.
+explain: Only a minority of candidates remembered these differences in a past exam.
+mistake: Including a volume variance in marginal statements.
+tip: Contribution, no volume.
+src: Study text ch14b - statements (concept basis; original question)
+
+=== Q017
+type: match
+level: S
+cat: concept
+topic: t4
+status: review
+q: Match each cause of a variance with the appropriate action.
+pair: Measurement error => Correct the recording system
+pair: Out-of-date standard => Revise the standard
+pair: Inefficient operations => Take corrective action
+pair: Random fluctuation => No action needed
+explain: The right response depends on the cause.
+mistake: Blaming staff for an out-of-date standard.
+tip: Fix the cause, not the symptom.
+src: Study text ch14b - control action (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Budgeted profit is $30,000 and the sales volume profit variance is $2,400 adverse. What is the standard profit on actual sales ($)?
+answer: 27600
+tol: 0
+unit: $
+formula: Standard profit on actual sales = budgeted profit +/- sales volume profit variance
+step: Budgeted profit = 30,000.
+step: Less adverse volume variance 2,400 = $27,600.
+check: 30000-2400
+explain: This is the first sub-total in an absorption operating statement.
+mistake: Adding the adverse variance.
+tip: Budget, then volume.
+src: Study text ch14b - statement layout (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why is the sales volume variance NOT valued at selling price?
++ Selling more units also incurs more cost, so the profit effect is measured by profit or contribution per unit || Revenue alone overstates the effect.
+- Because selling price is unknown || It is known.
+- Because volume variances are always zero || Not true.
+- Because selling price is a fixed cost || Not a cost.
+explain: Absorption uses standard profit; marginal uses standard contribution.
+mistake: Valuing at selling price.
+tip: Volume x margin, not price.
+src: Study text ch14b - volume variance (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: The selling price variance was $900 adverse on 3,000 units sold. The standard price is $40. What was the actual selling price per unit?
++ $39.70 || 40 - 900 / 3,000.
+- $40.30 || Adds the variance.
+- $39.10 || Not supported.
+- $37.00 || Not supported.
+formula: Actual price = standard price - adverse variance / units sold
+step: Variance per unit = 900 / 3,000 = 0.30.
+step: Actual price = 40 - 0.30 = $39.70.
+check: 40-900/3000
+explain: Adverse price variance = lower actual price.
+mistake: Adding the variance.
+tip: Adverse price = cheaper sale.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: A variance arises because a clerk recorded material issues to the wrong job. What action is appropriate?
++ Correct the recording system and procedures || It is a measurement error.
+- Revise the standard || The standard is fine.
+- Penalise the production team || Not their performance.
+- Ignore it permanently || Errors should be fixed.
+explain: Measurement errors distort variances without any real performance issue.
+mistake: Treating recording errors as inefficiency.
+tip: Bad data = fix data.
+src: Study text ch14b - measurement errors (concept basis; original question)
+
+=== Q022
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the lines of an absorption costing operating statement in order.
+item: Budgeted profit
+item: Sales volume profit variance
+item: Standard profit on actual sales
+item: Selling price variance
+item: Cost variances
+item: Actual profit
+explain: Cost variances include material, labour, overhead expenditure and volume.
+mistake: Placing the price variance before standard profit on actual sales.
+tip: Budget, volume, standard, price, costs, actual.
+src: Study text ch14b - statement layout (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Marginal costing. Budgeted profit $30,000. Sales volume contribution variance $4,800 A. Selling price variance $1,500 F. Material $800 A; labour $1,100 F; variable overhead $300 A; fixed overhead expenditure $2,000 A.
+q: What is the actual profit ($)?
+answer: 24700
+tol: 0
+unit: $
+formula: Actual profit = budgeted profit + F - A variances (no volume variance)
+step: 30,000 - 4,800 + 1,500 = 26,700.
+step: 26,700 - 800 + 1,100 - 300 - 2,000 = 24,700.
+check: 30000-4800+1500-800+1100-300-2000
+explain: No fixed overhead volume variance appears under marginal costing.
+mistake: Adding a volume variance.
+tip: Marginal: contribution volume, no FOH volume.
+src: Study text ch14b - marginal statement (concept basis; original figures)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What could cause an ADVERSE sales volume variance?
++ A competitor launching a cheaper product, reducing demand || Fewer units sold.
+- An increase in selling price with no change in demand || Price variance.
+- A fall in material prices || Cost variance.
+- Selling more units than budgeted || Favourable.
+explain: Economic conditions and marketing also affect volume.
+mistake: Linking cost changes to sales volume.
+tip: Fewer sold = adverse volume.
+src: Study text ch14b - causes (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How can control limits help decide whether to investigate a variance?
++ Variances outside a set range (eg ±5% of standard) are treated as significant || Focuses attention.
+- They remove all variances || Not possible.
+- They set the selling price || Not related.
+- They replace standards || Standards are still needed.
+explain: Trends of small variances in one direction may also be worth investigating.
+mistake: Investigating every small variance.
+tip: Outside the limits = look.
+src: Study text ch14b - control limits (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The material price variance was $1,560 favourable on 7,800 kg bought. The standard price is $5.00 per kg. What was the actual price per kg ($)?
+answer: 4.8
+tol: 0.001
+unit: $
+formula: Actual price = standard price - favourable variance / quantity
+step: Variance per kg = 1,560 / 7,800 = 0.20.
+step: Actual price = 5.00 - 0.20 = $4.80.
+check: 5-1560/7800
+explain: Favourable means the actual price was lower.
+mistake: Adding the variance.
+tip: Favourable price = cheaper.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A trainee calculates the selling price variance using BUDGETED sales quantity. What is wrong?
++ It should use ACTUAL quantity sold, so price and volume effects are not mixed || Volume is separate.
+- Nothing is wrong || It mixes effects.
+- It should use quantity produced || Sales variances use sales.
+- It should use standard profit || That is volume.
+explain: The volume variance captures the effect of quantity.
+mistake: Using budgeted quantity.
+tip: Price variance = actual sold.
+src: Study text ch14b - price variance (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Material prices have risen 15% across the market since standards were set. A large adverse price variance results. What is the BEST response?
++ Revise the standard so future variances reflect controllable performance || The standard is out of date.
+- Discipline the buyer || Not their fault.
+- Ignore it forever || Outdated standards mislead.
+- Change the recording system || Not a measurement error.
+explain: The variance is due to a planning error, not operations.
+mistake: Blaming buyers for inflation.
+tip: Old standard = revise it.
+src: Study text ch14b - out-of-date standards (concept basis; original scenario)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Budgeted sales were 8,000 units at a standard contribution of $13.40 per unit. Actual sales were 8,500 units. What is the sales volume contribution variance ($)? (It is favourable.)
+answer: 6700
+tol: 0
+unit: $
+formula: Variance = (actual units - budgeted units) x standard contribution
+step: Extra units = 8,500 - 8,000 = 500.
+step: Variance = 500 x 13.40 = $6,700 F.
+check: (8500-8000)*13.4
+explain: More units sold earn more standard contribution.
+mistake: Using selling price.
+tip: Units x contribution.
+src: Study text ch14b - volume contribution (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Under marginal costing, how are fixed overheads treated in the operating statement?
++ Budgeted fixed overhead is deducted from contribution, and only the expenditure variance is shown || No volume variance.
+- They are absorbed into product costs || Absorption costing.
+- They are ignored entirely || They are included.
+- A volume variance is calculated || Not under marginal costing.
+explain: Fixed costs are treated as period costs.
+mistake: Absorbing fixed costs.
+tip: Marginal = period cost.
+src: Study text ch14b - marginal statement (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Standard selling price $50, standard full cost $38. Budgeted sales 2,000 units; actual sales 1,850 units at $52. What are the selling price and sales volume profit variances?
++ Price $3,700 F; volume $1,800 A || 1,850 x 2 and 150 x 12.
+- Price $4,000 F; volume $1,800 A || Price uses budgeted units.
+- Price $3,700 F; volume $7,500 A || Volume at selling price.
+- Price $3,700 A; volume $1,800 F || Signs reversed.
+formula: Price = (AP - SP) x actual units; volume = (actual - budget) x standard profit
+step: Price = (52 - 50) x 1,850 = 3,700 F.
+step: Volume = (1,850 - 2,000) x (50 - 38) = 150 x 12 = 1,800 A.
+check: (52-50)*1850
+explain: Higher prices may have reduced volume - interdependence.
+mistake: Valuing volume at selling price.
+tip: Price on actual; volume on profit.
+src: Study text ch14b - sales variances (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: When working back from a variance to an actual figure, which relationship is used?
++ Variance = standard - actual (for costs), so actual = standard -/+ variance || Rearrange the formula.
+- Variance = actual x standard || Not correct.
+- Actual = variance only || Incomplete.
+- Standard = variance x 2 || Not correct.
+explain: Use a symbol for the unknown and solve.
+mistake: Applying the sign the wrong way.
+tip: Adverse cost: actual > standard.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Absorption costing. Budget: 4,000 units at a standard price of $45 and standard full cost of $33. Actual: 4,200 units sold for $187,950. Total cost variances are $3,100 adverse.
+q: What is the actual profit ($)?
+answer: 46250
+tol: 0
+unit: $
+formula: Actual = budgeted profit + volume variance + price variance - net adverse cost variances
+step: Budgeted profit = 4,000 x 12 = 48,000; volume = 200 x 12 = 2,400 F; standard profit on actual sales = 50,400.
+step: Price = 187,950 - 4,200 x 45 = 187,950 - 189,000 = 1,050 A.
+step: Actual = 50,400 - 1,050 - 3,100 = $46,250.
+check: 4000*12+200*12+(187950-4200*45)-3100
+explain: Each line can be checked independently.
+mistake: Valuing volume at price.
+tip: Build up the statement line by line.
+src: Study text ch14b - operating statement (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Standard: price $20, variable cost $12, fixed cost $5 per unit (based on budgeted output and sales of 6,000 units). Actual sales and production 5,500 units.
+q: What are the sales volume variances under absorption and marginal costing?
++ Absorption $1,500 A; marginal $4,000 A || 500 x $3 profit; 500 x $8 contribution.
+- Absorption $4,000 A; marginal $1,500 A || Reversed.
+- Both $10,000 A || At selling price.
+- Both $1,500 A || Marginal uses contribution.
+formula: Volume = (actual - budget) x standard profit (absorption) or contribution (marginal)
+step: Standard profit = 20 - 12 - 5 = 3; contribution = 20 - 12 = 8.
+step: Absorption = 500 x 3 = 1,500 A; marginal = 500 x 8 = 4,000 A.
+check: 500*3
+explain: The difference (2,500) is matched by the FOH volume variance under absorption.
+mistake: Using one rate for both.
+tip: Profit vs contribution.
+src: Study text ch14b - comparison (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: The sales manager is praised for a $5,000 favourable selling price variance, but the sales volume variance is $9,000 adverse after a price rise. What is the BEST assessment?
++ The price rise appears to have reduced overall profit by $4,000, so it may not have been a good decision || Look at both variances.
+- The sales manager performed well because of the favourable price variance || Ignores volume.
+- The volume variance is unrelated to the price rise || Likely related.
+- Both variances should be ignored || They matter.
+explain: Interdependent variances must be judged together.
+mistake: Praising one variance in isolation.
+tip: Net effect matters.
+src: Study text ch14b - interdependence (concept basis; original scenario)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Standard: 3 kg per unit at $6 per kg. Actual output 2,000 units. Material usage variance $1,800 favourable.
+q: How many kg were actually used?
+answer: 5700
+tol: 0
+unit: kg
+formula: Actual kg = standard kg for actual output - favourable variance / standard price
+step: Standard kg = 2,000 x 3 = 6,000; kg saved = 1,800 / 6 = 300.
+step: Actual = 6,000 - 300 = 5,700 kg.
+check: 2000*3-1800/6
+explain: Favourable usage means less material than standard.
+mistake: Adding the saving.
+tip: Favourable usage = fewer kg.
+src: Study text ch14b - deriving data (concept basis; original figures)
+
+=== Q037
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO factors suggest a variance SHOULD be investigated?
++ It has been adverse and growing for several months || A trend.
++ It is large relative to the standard and the cost is controllable || Material and controllable.
+- It is tiny and appears randomly || Not significant.
+- It arises from a known, temporary measurement problem already fixed || Already dealt with.
+explain: Trends and materiality are key signals.
+mistake: Ignoring trends of small variances.
+tip: Big, controllable or trending.
+src: Study text ch14b - investigation (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Standard labour: 2 hours per unit at $10 per hour. Actual: 1,000 units made; labour rate variance $450 adverse; labour efficiency variance $600 favourable; no idle time.
+q: What was the actual labour cost ($)?
+answer: 19850
+tol: 0
+unit: $
+formula: Actual cost = standard cost of actual output + adverse - favourable variances
+step: Standard cost = 1,000 x 2 x 10 = 20,000.
+step: Actual = 20,000 + 450 - 600 = $19,850.
+check: 1000*2*10+450-600
+explain: Hours worked = 2,000 - 60 = 1,940; actual rate = 19,850 / 1,940.
+mistake: Applying the signs the wrong way.
+tip: Adverse adds to cost; favourable reduces it.
+src: Study text ch14b - deriving data (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: In a marginal costing operating statement, a trainee starts with budgeted profit, then values the sales volume variance at standard PROFIT per unit. What is wrong?
++ Under marginal costing, sales volume is valued at standard CONTRIBUTION per unit || Fixed costs don't vary with volume.
+- Nothing is wrong || Wrong basis.
+- Volume should be valued at selling price || Overstates.
+- There should be no volume variance at all || The sales volume variance does exist.
+explain: Only the FOH volume variance disappears under marginal costing; the sales volume variance remains.
+mistake: Mixing the two systems.
+tip: Marginal = contribution.
+src: Study text ch14b - marginal statement (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why do actual profits under absorption and marginal costing differ in operating statements when production and sales volumes differ?
++ Absorption costing carries fixed overhead in inventory, while marginal costing charges it in full to the period || Inventory valuation differs.
+- Selling prices differ between the methods || Prices are the same.
+- Material costs differ || Same.
+- They never differ || They can.
+explain: When production equals sales, the two profits are the same.
+mistake: Thinking the methods always agree.
+tip: Inventory change = profit difference.
+src: Study text ch14b - absorption vs marginal (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Budget: 10,000 units at $18, standard variable cost $10.50. Actual: 9,400 units sold for $172,020.
+q: What is the TOTAL of the selling price and sales volume contribution variances ($)? (It is adverse.)
+answer: 1680
+tol: 0
+unit: $
+formula: Total = price variance + volume contribution variance
+step: Price = 172,020 - 9,400 x 18 = 172,020 - 169,200 = 2,820 F.
+step: Volume = (9,400 - 10,000) x (18 - 10.50) = 600 x 7.50 = 4,500 A.
+step: Net = 4,500 A - 2,820 F = $1,680 A.
+check: 4500-(172020-9400*18)
+explain: The higher price ($18.30) did not make up for the lost volume.
+mistake: Netting variances with the wrong signs.
+tip: Net F against A.
+src: Study text ch14b - sales variances (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why might a large FAVOURABLE variance be worth investigating?
++ It may reveal a standard that is too loose, or good practice worth copying elsewhere || Favourable is not always "good news".
+- Favourable variances never need investigation || They can be informative.
+- It always means fraud || Not necessarily.
+- It shows the standard is perfect || Suggests the opposite.
+explain: Both adverse and favourable variances can signal problems with standards.
+mistake: Only investigating adverse variances.
+tip: Big either way = look.
+src: Study text ch14b - investigation (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: The standard selling price is $15. 4,000 units were sold and the selling price variance was $2,000 adverse. What was the actual sales revenue ($)?
+answer: 58000
+tol: 0
+unit: $
+formula: Actual revenue = actual units x standard price - adverse price variance
+step: Standard revenue = 4,000 x 15 = 60,000.
+step: Actual = 60,000 - 2,000 = $58,000.
+check: 4000*15-2000
+explain: The actual price was $14.50.
+mistake: Adding an adverse sales variance.
+tip: Adverse sales = less revenue.
+src: Study text ch14b - deriving data (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Budgeted profit $50,000. Variances: sales volume profit $3,000 F; selling price $2,500 A; material $1,200 A; labour $800 F; fixed overhead expenditure $4,100 A.
+q: What is the actual profit ($)?
+answer: 46000
+tol: 0
+unit: $
+formula: Actual profit = budgeted profit + F - A
+step: 50,000 + 3,000 - 2,500 = 50,500.
+step: 50,500 - 1,200 + 800 - 4,100 = $46,000.
+check: 50000+3000-2500-1200+800-4100
+explain: Net variances = 4,000 A.
+mistake: Reversing signs.
+tip: Add F, subtract A.
+src: Study text ch14b - operating statement (concept basis; original figures)
+
+=== Q045
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A company switches to a premium material and raises its price. Results show a favourable selling price variance and an adverse material price variance. How should these be viewed?
++ Together, as one decision caused both; the net effect on profit is what matters || Interdependence.
+- Separately, rewarding sales and blaming purchasing || Ignores the link.
+- As unrelated random events || Clearly linked.
+- Only the material variance matters || Both matter.
+explain: Responsibility should reflect the decision that caused both.
+mistake: Judging departments in isolation.
+tip: One decision, two variances.
+src: Study text ch14b - interdependence (concept basis; original scenario)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: Standard selling price is $60 and standard full cost is $48. Budgeted sales were 1,500 units and actual sales 1,620 units. What is the sales volume profit variance ($)? (It is favourable.)
+answer: 1440
+tol: 0
+unit: $
+formula: Variance = (actual - budgeted units) x standard profit
+step: Standard profit = 60 - 48 = 12; extra units = 120.
+step: Variance = 120 x 12 = $1,440 F.
+check: (1620-1500)*(60-48)
+explain: Standard profit is used under absorption costing.
+mistake: Using selling price ($7,200).
+tip: Extra units x standard profit.
+src: Study text ch14b - volume variance (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+q: Investigating a variance would cost $3,000. If a problem is found, correcting it would save an estimated $5,000, but there is only a 40% chance a correctable problem exists. Should it be investigated?
++ No - the expected saving of $2,000 is less than the $3,000 cost || 40% x 5,000 = 2,000.
+- Yes - the saving of $5,000 exceeds the cost || Ignores probability.
+- Yes - all variances must be investigated || Not cost-effective.
+- No - variances are never investigated || Not the rule.
+formula: Expected benefit = probability x saving; compare with cost
+step: Expected saving = 40% x 5,000 = 2,000.
+step: 2,000 < 3,000 cost: do not investigate.
+check: 0.4*5000
+explain: Investigate only when expected benefits exceed costs.
+mistake: Ignoring probability.
+tip: Expected benefit vs cost.
+src: Study text ch14b - cost-benefit (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Which variance is calculated in exactly the same way in BOTH absorption and marginal costing operating statements?
++ Selling price variance || Price x actual units in both.
+- Sales volume variance || Profit vs contribution.
+- Fixed overhead volume variance || Absorption only.
+- Fixed overhead total variance || Differs between the systems.
+explain: Cost variances for materials, labour and VOH are also the same.
+mistake: Thinking every variance changes.
+tip: Price variance is common to both.
+src: Study text ch14b - statements (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which formula gives the selling price variance?
++ (Actual price - standard price) x actual quantity sold || Core formula.
+- (Actual units - budgeted units) x standard profit || Volume variance.
+- (Actual price - standard price) x budgeted quantity || Wrong quantity.
+- Actual revenue - budgeted revenue || Mixes price and volume.
+explain: Sales volume variance = (actual - budget units) x standard profit or contribution.
+mistake: Using budgeted quantity.
+tip: Price x actual sold.
+src: Study text ch14b - price variance (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which pair describes the two key differences in a MARGINAL costing operating statement?
++ Sales volume variance at standard contribution, and no fixed overhead volume variance || Remember both.
+- No selling price variance, and no material variances || These appear.
+- Sales volume at selling price, and no labour variances || Wrong.
+- Fixed overhead volume variance only, and no expenditure variance || Reversed.
+explain: Under marginal costing, actual fixed overhead is deducted in full.
+mistake: Including a FOH volume variance.
+tip: Contribution, no volume.
+src: Study text ch14b - marginal statement (concept basis; original question)

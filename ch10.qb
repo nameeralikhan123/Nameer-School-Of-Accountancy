@@ -1,0 +1,884 @@
+@subject acffa2
+@chapter 10
+@title Receivables
+@lo D5
+@topic t1 | Trade receivables and credit | D5
+@topic t2 | Irrecoverable debts | D5
+@topic t3 | Allowance for receivables | D5
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the double entry to write off an irrecoverable debt?
++ Debit irrecoverable debts expense; credit trade receivables || Remove the asset, charge profit.
+- Debit trade receivables; credit irrecoverable debts expense || Reversed.
+- Debit allowance for receivables; credit sales || Not correct.
+- Debit sales; credit bank || Not correct.
+explain: The write-off is an expense of the period.
+mistake: Reducing sales instead.
+tip: Expense up, receivable down.
+src: Study text ch10 - write-off (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is the allowance for receivables?
++ An estimate of receivables that may not be collected, deducted from receivables || A contra asset.
+- Debts definitely written off || That is an irrecoverable debt.
+- A liability to customers || Not a liability.
+- Cash set aside in a bank account || Not cash.
+explain: It reflects expected credit losses.
+mistake: Treating it as a liability.
+tip: Possible loss = allowance.
+src: Study text ch10 - allowance (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which amount relating to the allowance for receivables is charged to profit or loss?
++ Only the increase or decrease in the allowance || The movement.
+- The whole closing allowance every year || Double counts.
+- Nothing - it goes to equity || It affects profit.
+- The opening allowance || Not correct.
+explain: Increases are expenses; decreases are credits.
+mistake: Charging the whole balance.
+tip: Charge the change.
+src: Study text ch10 - movement (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Receivables after write-offs are $40,000. An allowance of 5% is required. What is the closing allowance ($)?
+answer: 2000
+tol: 0
+unit: $
+formula: Allowance = % x receivables after write-offs
+step: 40,000 x 5%.
+step: = $2,000.
+check: 40000*0.05
+explain: Net receivables in the SOFP = $38,000.
+mistake: Using receivables before write-offs.
+tip: Write off first.
+src: Study text ch10 - allowance (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is an aged receivables analysis used for?
++ Showing how long balances have been outstanding, to support credit control and estimate the allowance || Credit management.
+- Calculating depreciation || Not related.
+- Valuing inventory || Not related.
+- Recording sales tax || Not related.
+explain: Older debts are more likely to be irrecoverable.
+mistake: Ignoring the ageing.
+tip: Older = riskier.
+src: Study text ch10 - aged analysis (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A debt previously written off is unexpectedly paid. How is the receipt recorded?
++ Debit bank; credit irrecoverable debts expense (or recoveries) || Do not reinstate the receivable.
+- Debit receivables; credit bank || Reversed.
+- Debit bank; credit sales || Not a new sale.
+- Debit allowance; credit bank || Not correct.
+explain: The recovery reduces the irrecoverable debts expense.
+mistake: Recording it as a sale.
+tip: Recovery = credit the expense.
+src: Study text ch10 - recoveries (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is a BENEFIT of selling on credit?
++ It can increase sales and attract new customers || Competitive advantage.
+- Cash is received sooner || Later.
+- There is no risk of non-payment || There is risk.
+- It reduces administration || Increases it.
+explain: Costs include financing and bad debt risk.
+mistake: Ignoring the cost of credit.
+tip: More sales, more risk.
+src: Study text ch10 - credit (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: When is a debt classed as irrecoverable?
++ When it is definitely not going to be received, eg the customer is bankrupt with no assets || Certain loss.
+- When it is one day overdue || Not certain.
+- Whenever a customer complains || Not enough.
+- At the end of every year || Not a rule.
+explain: Uncertain debts are covered by the allowance instead.
+mistake: Writing off doubtful debts too early.
+tip: Certain = write off; possible = allowance.
+src: Study text ch10 - irrecoverable debts (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is the entry for an INCREASE in the allowance for receivables?
++ Debit irrecoverable debts expense; credit allowance for receivables || Expense up, contra asset up.
+- Debit allowance; credit irrecoverable debts expense || That is a decrease.
+- Debit receivables; credit allowance || Not correct.
+- Debit allowance; credit receivables || That would be a write-off pattern.
+explain: The allowance is a credit balance.
+mistake: Debiting the allowance.
+tip: Increase allowance = credit it.
+src: Study text ch10 - allowance entries (concept basis; original question)
+
+=== Q010
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Receivables are $40,000 and the allowance for receivables is $2,000. What carrying amount ($) is shown in the statement of financial position?
+answer: 38000
+tol: 0
+unit: $
+formula: Carrying amount = receivables - allowance
+step: 40,000 - 2,000.
+step: = $38,000.
+check: 40000-2000
+explain: The allowance is a deduction from the asset.
+mistake: Showing the allowance as a liability.
+tip: Net it off.
+src: Study text ch10 - presentation (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Receivables before write-offs $42,000. Irrecoverable debts of $2,000 are written off. The allowance is to be 5% of receivables. The opening allowance was $1,500.
+q: What is the total irrecoverable debts expense for the year?
++ $2,500 || Write-off 2,000 + increase in allowance 500.
+- $4,000 || Charges the whole allowance.
+- $2,100 || Uses receivables before write-off.
+- $500 || Omits the write-off.
+formula: Expense = write-offs + increase in allowance
+step: Closing allowance = (42,000 - 2,000) x 5% = 2,000; increase = 2,000 - 1,500 = 500.
+step: Expense = 2,000 + 500 = $2,500.
+check: 2000+(42000-2000)*0.05-1500
+explain: Write off first, then calculate the allowance.
+mistake: Calculating the allowance before the write-off.
+tip: Write off, then allow.
+src: Study text ch10 - expense (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: The opening allowance for receivables is $3,000. The required closing allowance is $2,400. What is the effect ($) on profit? (Enter the amount; it is a credit to profit or loss.)
+answer: 600
+tol: 0
+unit: $
+formula: Movement = closing allowance - opening allowance
+step: 2,400 - 3,000 = -600.
+step: A decrease of $600 is credited to profit or loss.
+check: 3000-2400
+explain: Entry: Dr allowance 600; Cr irrecoverable debts expense 600.
+mistake: Charging the closing allowance.
+tip: Lower allowance = profit up.
+src: Study text ch10 - decrease (concept basis; original question)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO statements about irrecoverable debts are correct?
++ They are written off by crediting trade receivables || Removes the asset.
++ A later recovery is credited to the irrecoverable debts expense or a recoveries account || Not to receivables.
+- They are deducted from sales revenue || They are an expense.
+- They are added to the allowance for receivables || Written off directly.
+explain: The allowance covers debts that are doubtful, not certain losses.
+mistake: Reducing revenue.
+tip: Certain loss = expense.
+src: Study text ch10 - irrecoverable debts (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each event with its double entry.
+pair: Write off an irrecoverable debt => Dr irrecoverable debts expense, Cr receivables
+pair: Increase the allowance => Dr irrecoverable debts expense, Cr allowance
+pair: Decrease the allowance => Dr allowance, Cr irrecoverable debts expense
+pair: Recover a debt previously written off => Dr bank, Cr irrecoverable debts expense
+explain: All movements pass through the irrecoverable debts expense.
+mistake: Reinstating recovered debts.
+tip: One expense account, four events.
+src: Study text ch10 - entries (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Receivables control: balance b/f $18,000; credit sales $120,000; cash received $110,000; sales returns $3,000; irrecoverable debts written off $1,500; contra with payables $2,000.
+q: What is the closing receivables balance ($)?
+answer: 21500
+tol: 0
+unit: $
+formula: C/f = b/f + credit sales - receipts - returns - write-offs - contras
+step: 18,000 + 120,000 = 138,000.
+step: 138,000 - 110,000 - 3,000 - 1,500 - 2,000 = $21,500.
+check: 18000+120000-110000-3000-1500-2000
+explain: Contras offset amounts owed to and by the same party.
+mistake: Adding returns.
+tip: Everything reducing debt is a credit.
+src: Study text ch10 - receivables account (concept basis; original figures)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why must irrecoverable debts be written off BEFORE calculating a percentage allowance?
++ Otherwise the allowance would include debts already removed, overstating it || Avoid double counting.
+- Because IAS 1 requires alphabetical order || Not the reason.
+- To increase receivables || Not the effect.
+- It does not matter || It does.
+explain: The allowance applies to the remaining receivables.
+mistake: Applying the % to gross receivables.
+tip: Clean the balance first.
+src: Study text ch10 - order (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Receivables $30,000. One customer owing $1,000 is in serious difficulty and a full specific allowance is needed. A further 2% allowance is required on the remaining balances.
+q: What is the total required allowance ($)?
+answer: 1580
+tol: 0
+unit: $
+formula: Allowance = specific + % x remaining receivables
+step: Specific = 1,000; remaining = 29,000 x 2% = 580.
+step: Total = 1,000 + 580 = $1,580.
+check: 1000+(30000-1000)*0.02
+explain: Do not apply the % to the specifically covered debt.
+mistake: Applying 2% to the full 30,000.
+tip: Specific first, then general.
+src: Study text ch10 - specific allowance (concept basis; original figures)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: When a written-off debt is recovered, why is the receivable NOT reinstated?
++ It was removed from receivables when written off; the receipt simply reduces the expense || Simpler and correct.
+- Because recoveries are illegal || Not true.
+- Because the customer still owes the money || They have paid.
+- Because recoveries go to equity || Not equity.
+explain: Some systems reinstate then clear the debt; the net effect is the same.
+mistake: Recording a new sale.
+tip: Cash in, expense down.
+src: Study text ch10 - recoveries (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Write-offs in the year $1,800. Opening allowance $2,200; required closing allowance $2,200. A debt of $400 written off last year was recovered.
+q: What is the irrecoverable debts expense ($) for the year?
+answer: 1400
+tol: 0
+unit: $
+formula: Expense = write-offs + change in allowance - recoveries
+step: Change in allowance = 0.
+step: Expense = 1,800 + 0 - 400 = $1,400.
+check: 1800+(2200-2200)-400
+explain: An unchanged allowance has no profit effect.
+mistake: Charging the allowance again.
+tip: Write-offs, change, recoveries.
+src: Study text ch10 - expense (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is a COST of offering credit to customers?
++ The business must finance the period until customers pay || Working capital cost.
+- Sales usually fall || They usually rise.
+- Customers pay immediately || Not credit.
+- There are no administration costs || There are.
+explain: Credit control systems aim to balance sales with risk.
+mistake: Ignoring financing cost.
+tip: Credit ties up cash.
+src: Study text ch10 - credit costs (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: The opening allowance is $1,500 and the required closing allowance is $2,000. A trainee charges $2,000 to profit or loss. What is wrong?
++ Only the increase of $500 should be charged || The opening $1,500 was charged last year.
+- Nothing is wrong || Double counts.
+- $3,500 should be charged || Not correct.
+- Nothing should be charged || The increase is charged.
+explain: The allowance account carries the balance forward.
+mistake: Charging the whole balance.
+tip: Charge the movement.
+src: Study text ch10 - movement (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is a customer's dishonoured (bounced) cheque recorded?
++ Debit receivables; credit bank || The debt is reinstated.
+- Debit bank; credit receivables || That records a receipt.
+- Debit irrecoverable debts; credit bank || Not yet irrecoverable.
+- No entry is needed || The receipt must be reversed.
+explain: The original receipt is reversed.
+mistake: Writing it off immediately.
+tip: Bounced = reverse the receipt.
+src: Study text ch10 - dishonoured cheques (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Receivables at the year end are $64,000 before writing off a $4,000 irrecoverable debt. The allowance is 3% of receivables. What is the closing allowance ($)?
+answer: 1800
+tol: 0
+unit: $
+formula: Allowance = (receivables - write-off) x %
+step: 64,000 - 4,000 = 60,000.
+step: 60,000 x 3% = $1,800.
+check: (64000-4000)*0.03
+explain: Net receivables = 60,000 - 1,800 = 58,200.
+mistake: Using 64,000.
+tip: Write off first.
+src: Study text ch10 - allowance (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the entry for a DECREASE in the allowance for receivables?
++ Debit allowance for receivables; credit irrecoverable debts expense || Reduces the allowance, increases profit.
+- Debit irrecoverable debts; credit allowance || That is an increase.
+- Debit receivables; credit allowance || Not correct.
+- Debit allowance; credit receivables || Not correct.
+explain: A decrease is a credit to profit or loss.
+mistake: Crediting the allowance for a decrease.
+tip: Decrease = debit allowance.
+src: Study text ch10 - decrease (concept basis; original question)
+
+=== Q025
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the year-end steps for receivables in order.
+item: Write off irrecoverable debts
+item: Calculate receivables after write-offs
+item: Calculate the required closing allowance
+item: Charge or credit the movement in the allowance to profit or loss
+explain: Order matters to avoid double counting.
+mistake: Calculating the allowance first.
+tip: Write off, total, allow, adjust.
+src: Study text ch10 - procedure (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Where is the allowance for receivables shown in the statement of financial position?
++ Deducted from trade receivables within current assets || Contra asset.
+- As a current liability || Not a liability.
+- In equity || Not equity.
+- As a non-current asset || Not an asset in its own right.
+explain: Only the net figure is often shown on the face.
+mistake: Showing it as a liability.
+tip: Receivables less allowance.
+src: Study text ch10 - presentation (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: During the year $3,200 of debts were written off and $600 was recovered from debts written off in an earlier year. The allowance did not change. What is the irrecoverable debts expense ($)?
+answer: 2600
+tol: 0
+unit: $
+formula: Expense = write-offs - recoveries +/- allowance change
+step: 3,200 - 600 = 2,600.
+step: No allowance change: expense = $2,600.
+check: 3200-600
+explain: Recoveries reduce the expense.
+mistake: Adding recoveries.
+tip: Recoveries offset write-offs.
+src: Study text ch10 - expense (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which concept explains why an allowance for receivables is made?
++ Receivables should not be overstated; expected credit losses are recognised in the period || Prudent, faithful measurement.
+- Going concern || Not the main reason.
+- Business entity || Not relevant.
+- Historical cost || Not the reason.
+explain: The allowance gives a realistic receivables figure.
+mistake: Thinking allowances are optional.
+tip: Don't overstate assets.
+src: Study text ch10 - purpose (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee records a recovered written-off debt of $500 as "Dr bank, Cr sales". What is wrong?
++ It is not a new sale; credit the irrecoverable debts expense or recoveries || Revenue overstated.
+- Nothing is wrong || Revenue is overstated.
+- It should be Dr receivables, Cr bank || Not correct.
+- It should be ignored || Cash must be recorded.
+explain: Sales should reflect only goods or services supplied.
+mistake: Treating recoveries as sales.
+tip: Recovery ≠ sale.
+src: Study text ch10 - recoveries (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Receivables $50,000 after write-offs; required allowance 4%; opening allowance $2,600.
+q: What amount ($) is charged to profit or loss for the change in the allowance?
+answer: -600
+tol: 0
+unit: $
+formula: Change = closing - opening
+step: Closing = 50,000 x 4% = 2,000.
+step: Change = 2,000 - 2,600 = -600 (a credit to profit or loss).
+check: 50000*0.04-2600
+explain: A negative charge is a credit, increasing profit.
+mistake: Reporting a charge of 2,000.
+tip: Lower requirement = credit.
+src: Study text ch10 - movement (concept basis; original figures)
+
+=== Q031
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Receivables before write-offs $85,000. Write-offs $5,000. Required allowance 5% of remaining receivables. Opening allowance $3,000. Recovery of a debt written off two years ago $700.
+q: What is the irrecoverable debts expense for the year?
++ $5,300 || 5,000 + 1,000 - 700.
+- $6,000 || Omits the recovery.
+- $8,300 || Charges the whole allowance.
+- $9,250 || Allowance on 85,000.
+formula: Expense = write-offs + increase in allowance - recoveries
+step: Closing allowance = 80,000 x 5% = 4,000; increase = 1,000.
+step: Expense = 5,000 + 1,000 - 700 = $5,300.
+check: 5000+(85000-5000)*0.05-3000-700
+explain: Net receivables = 80,000 - 4,000 = 76,000.
+mistake: Missing the recovery.
+tip: Three components.
+src: Study text ch10 - expense (concept basis; original figures)
+
+=== Q032
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Receivables before write-offs $85,000. Write-offs $5,000. Required allowance 5%.
+q: What is the carrying amount ($) of receivables in the statement of financial position?
+answer: 76000
+tol: 0
+unit: $
+formula: Carrying amount = receivables after write-offs - allowance
+step: 85,000 - 5,000 = 80,000.
+step: 80,000 - 4,000 = $76,000.
+check: (85000-5000)*0.95
+explain: The allowance reduces the asset to its expected collectible amount.
+mistake: Deducting only one item.
+tip: Write-offs and allowance both reduce.
+src: Study text ch10 - presentation (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO items are CREDITED to the trade receivables account?
++ Cash received from customers || Reduces debt.
++ Irrecoverable debts written off || Reduces debt.
+- Credit sales || Debited.
+- Dishonoured cheques || Debited.
+explain: Sales returns and contras are also credits.
+mistake: Crediting sales.
+tip: Reductions = credits.
+src: Study text ch10 - receivables account (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: At the year end, a customer owing $8,000 is in administration. The administrator says unsecured creditors will receive nothing. A second customer owing $3,000 is 4 months late but still trading. How should these be treated?
++ Write off the $8,000; consider the $3,000 within the allowance || Certain vs doubtful.
+- Write off both || The second is not certain.
+- Include both in the allowance only || The first is certain.
+- Ignore both || Both need attention.
+explain: Certainty decides between write-off and allowance.
+mistake: Writing off doubtful debts.
+tip: Certain = write off.
+src: Study text ch10 - judgement (concept basis; original scenario)
+
+=== Q035
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Aged receivables: current $40,000 (1% allowance); 1-2 months $15,000 (5%); over 2 months $5,000 (20%).
+q: What is the required allowance ($)?
+answer: 2150
+tol: 0
+unit: $
+formula: Allowance = Σ(balance x % for its age band)
+step: 400 + 750 + 1,000 = 2,150.
+step: Total allowance = $2,150.
+check: 40000*0.01+15000*0.05+5000*0.2
+explain: Older balances carry higher percentages.
+mistake: Applying one rate.
+tip: Rate per age band.
+src: Study text ch10 - aged analysis (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee shows the allowance for receivables of $2,000 as a current liability. What is the effect on net current assets?
++ None in total, but presentation is wrong; receivables are overstated and liabilities too || Net figure same, gross misleading.
+- Net current assets are overstated by $2,000 || Both sides move.
+- Net current assets are understated by $4,000 || Not correct.
+- Profit is overstated || Profit unaffected by presentation.
+explain: The allowance must be deducted from receivables.
+mistake: Presenting it as a liability.
+tip: Contra asset.
+src: Study text ch10 - presentation (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Receivables account for the year: closing balance $26,400; cash received $142,000; sales returns $4,600; irrecoverable debts $2,100; opening balance $22,500.
+q: What were credit sales ($) for the year?
+answer: 152600
+tol: 0
+unit: $
+formula: Credit sales = closing + receipts + returns + write-offs - opening
+step: 26,400 + 142,000 + 4,600 + 2,100 = 175,100.
+step: 175,100 - 22,500 = $152,600.
+check: 26400+142000+4600+2100-22500
+explain: Credit sales is the balancing figure.
+mistake: Omitting returns or write-offs.
+tip: Rebuild the account.
+src: Study text ch10 - working back (concept basis; original figures)
+
+=== Q038
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: What is a contra between receivables and payables?
++ Offsetting an amount owed by a customer against an amount owed to the same party as a supplier || Dr payables, Cr receivables.
+- Writing off a debt || Not a contra.
+- Increasing the allowance || Not a contra.
+- Recording a cash sale || Not a contra.
+explain: Only the net amount is then settled.
+mistake: Reversing the contra entry.
+tip: Same party, both ways.
+src: Study text ch10 - contras (concept basis; original question)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Year 1: receivables $60,000, allowance 3%. Year 2: receivables $48,000, allowance 3%. No write-offs in Year 2.
+q: What is the effect ($) of the allowance movement on Year 2 profit? (Enter as a positive credit amount.)
+answer: 360
+tol: 0
+unit: $
+formula: Movement = opening allowance - closing allowance
+step: Opening = 1,800; closing = 1,440.
+step: Decrease = $360, credited to profit or loss.
+check: 60000*0.03-48000*0.03
+explain: Lower receivables need a lower allowance.
+mistake: Charging the closing allowance.
+tip: Smaller allowance = credit.
+src: Study text ch10 - movement (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A wholesaler's aged analysis shows that balances over 90 days have doubled since last year. What action is MOST appropriate?
++ Tighten credit control and review whether a larger allowance is needed || Risk has risen.
+- Reduce the allowance || Risk has risen.
+- Ignore it as long as sales are rising || Risky.
+- Write off all receivables || Excessive.
+explain: Ageing is an early warning of collection problems.
+mistake: Ignoring old balances.
+tip: Old balances = act.
+src: Study text ch10 - credit control (concept basis; original scenario)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t1
+status: review
+q: Match each item with its side of the trade receivables account.
+pair: Opening balance => Debit
+pair: Credit sales => Debit
+pair: Sales returns => Credit
+pair: Contra with payables => Credit
+explain: Debits increase what customers owe; credits reduce it.
+mistake: Putting returns on the debit side.
+tip: Increase Dr; decrease Cr.
+src: Study text ch10 - receivables account (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Opening allowance $4,500. Year-end receivables $96,000 including a $6,000 debt now known to be irrecoverable. Required allowance 4% of remaining receivables.
+q: What is the total irrecoverable debts expense ($)?
+answer: 5100
+tol: 0
+unit: $
+formula: Expense = write-off + (closing - opening allowance)
+step: Remaining = 90,000; closing allowance = 3,600; change = 3,600 - 4,500 = -900.
+step: Expense = 6,000 - 900 = $5,100.
+check: 6000+(96000-6000)*0.04-4500
+explain: The fall in allowance partly offsets the write-off.
+mistake: Ignoring the allowance decrease.
+tip: Combine both effects.
+src: Study text ch10 - combined (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee calculates a 5% allowance on $70,000 BEFORE writing off a $10,000 irrecoverable debt. What is the error?
++ The allowance is overstated by $500 (5% of the debt already written off) || Should be 3,000 not 3,500.
+- No error || Overstated.
+- The allowance is understated || Overstated.
+- The write-off should be added to the allowance || Not correct.
+formula: Error = % x write-off
+step: Wrong: 70,000 x 5% = 3,500; right: 60,000 x 5% = 3,000.
+step: Overstatement = 500.
+check: 10000*0.05
+explain: The written-off debt is double counted.
+mistake: Wrong order.
+tip: Write off first.
+src: Study text ch10 - order (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: How does writing off an irrecoverable debt affect the statement of financial position and profit?
++ Receivables fall and profit falls by the same amount || Asset and profit down.
+- Receivables rise and profit rises || Reversed.
+- Only cash changes || No cash moves.
+- No effect || There is an effect.
+explain: The write-off recognises a real loss.
+mistake: Thinking cash changes.
+tip: No cash, but a loss.
+src: Study text ch10 - effect (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: The allowance account shows: opening balance $2,750; closing required $3,300. Write-offs $1,900; recoveries $300.
+q: What is the irrecoverable debts expense ($)?
+answer: 2150
+tol: 0
+unit: $
+formula: Expense = write-offs + increase in allowance - recoveries
+step: Increase = 3,300 - 2,750 = 550.
+step: Expense = 1,900 + 550 - 300 = $2,150.
+check: 1900+(3300-2750)-300
+explain: All three items meet in one expense account.
+mistake: Leaving out the recovery.
+tip: Write-offs + movement - recoveries.
+src: Study text ch10 - expense (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which BEST describes "expected credit losses"?
++ An estimate of amounts that may not be collected, recognised before the loss is certain || Basis of the allowance.
+- Debts already written off || Certain losses.
+- Interest charged to late payers || Income.
+- Sales returns || Not credit losses.
+explain: The allowance reflects expected losses.
+mistake: Waiting until debts are certain.
+tip: Expected, not certain.
+src: Study text ch10 - ECL (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: After the year end but before the accounts are approved, a major customer goes bankrupt; the debt existed at the year end. How should it be treated?
++ As evidence of a condition at the year end - write off (or provide for) the debt in this year's accounts || Adjusting information.
+- Ignore it until next year || It relates to this year's balance.
+- Treat it as a new sale next year || Not correct.
+- Only disclose it, with no adjustment || An adjustment is needed.
+explain: Events after the reporting period are covered in a later chapter.
+mistake: Ignoring post year-end evidence.
+tip: Existed at year end = adjust.
+src: Study text ch10 - judgement (concept basis; original scenario)
+
+=== Q048
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Receivables b/f $14,200. Credit sales $86,000. Receipts $79,500, including $800 of cheques that were later dishonoured. Irrecoverable debts $1,100.
+q: What is the closing receivables balance ($)?
+answer: 20400
+tol: 0
+unit: $
+formula: C/f = b/f + sales - receipts + dishonoured cheques - write-offs
+step: 14,200 + 86,000 - 79,500 = 20,700.
+step: 20,700 + 800 - 1,100 = $20,400.
+check: 14200+86000-79500+800-1100
+explain: Dishonoured cheques reinstate the debt.
+mistake: Ignoring the dishonour.
+tip: Bounced = add back.
+src: Study text ch10 - receivables account (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which statement about the allowance for receivables is correct?
++ Calculate it after write-offs, and charge only the movement to profit or loss || Core rules.
+- Charge the whole closing allowance every year || Only the movement.
+- Calculate it before write-offs || After.
+- Show it as a liability || Contra asset.
+explain: Recoveries also reduce the expense.
+mistake: Charging the whole allowance.
+tip: After write-offs; movement only.
+src: Study text ch10 - allowance (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which formula gives the irrecoverable debts expense?
++ Debts written off + increase (or - decrease) in allowance - recoveries || Core formula.
+- Closing allowance + write-offs || Not the movement.
+- Write-offs - increase in allowance || Wrong sign.
+- Recoveries + write-offs || Recoveries reduce the charge.
+explain: All three items pass through one expense account.
+mistake: Adding recoveries.
+tip: Write-offs, movement, recoveries.
+src: Study text ch10 - expense (concept basis; original question)

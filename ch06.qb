@@ -1,0 +1,913 @@
+@subject acffa2
+@chapter 6
+@title Non-current Assets: Acquisition and Depreciation
+@lo D2
+@topic t1 | Non-current assets and capitalisation | D2
+@topic t2 | Depreciation (IAS 16) | D2
+@topic t3 | Accounting for depreciation | D2
+@topic t4 | Changing estimates | D2
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following items would a car dealership classify as a non-current asset?
++ The showroom building it uses to display cars || The building is held for continuing use in the business over more than one period.
+- Cars held in the showroom for sale to customers || Cars held for resale are inventory, a current asset.
+- Cash held in the business bank account || Cash is a current asset.
+- Amounts owed by customers who bought cars on credit || Trade receivables are current assets.
+explain: A non-current asset is held for continuing use in the business (not for resale) and is expected to be used for more than one accounting period. What is a non-current asset for one business may be inventory for another.
+mistake: Classifying an item by what it is (a car) rather than why it is held (for resale or for use).
+tip: Ask "is it held to use or to sell?"
+src: Study text ch6 - non-current assets (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is capital expenditure on a non-current asset treated in the financial statements?
++ It is recognised as an asset in the statement of financial position || Capital expenditure is capitalised and then depreciated over the asset's useful life.
+- It is charged in full as an expense in the statement of profit or loss || That is the treatment of revenue expenditure.
+- It is deducted directly from the owner's capital || Capital expenditure buys an asset; it does not reduce capital.
+- It is shown as a liability in the statement of financial position || An asset purchase does not itself create a liability (unless bought on credit, when the liability is the payable, not the expenditure).
+explain: Capital expenditure (buying or improving non-current assets) is capitalised. Revenue expenditure (day-to-day running costs, repairs) is charged to profit or loss.
+mistake: Confusing "capital expenditure" with "capital" (the owner's interest).
+tip: Capital expenditure -> SOFP; revenue expenditure -> P/L.
+src: Study text ch6 - capital and revenue expenditure (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which description of depreciation is consistent with IAS 16?
++ Spreading an asset's cost, less its residual value, in a systematic way across the years it is expected to be used || This captures the IAS 16 idea of allocating the depreciable amount over the useful life.
+- A method of building up cash to replace the asset at the end of its life || Depreciation is a non-cash allocation; it does not set cash aside.
+- The fall in the market value of an asset during the year || Depreciation allocates cost; it does not measure market value.
+- The amount by which an asset has been repaired during the year || Repairs are revenue expenditure, unrelated to depreciation.
+explain: Depreciation spreads the cost (less residual value) of an asset over the periods that benefit from using it, following the matching concept.
+mistake: Thinking depreciation provides funds for replacement or tracks market value.
+tip: Depreciation = allocation of cost, not valuation.
+src: Study text ch6 - IAS 16 depreciation (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is the double entry to record the annual depreciation charge?
++ Dr Depreciation expense, Cr Accumulated depreciation || The expense goes to profit or loss; the accumulated depreciation account reduces the asset in the SOFP.
+- Dr Accumulated depreciation, Cr Depreciation expense || This is the reverse entry.
+- Dr Depreciation expense, Cr Non-current asset cost || The cost account is kept at cost; depreciation is accumulated in a separate account.
+- Dr Non-current asset cost, Cr Bank || Depreciation is a non-cash expense; no bank entry is made.
+explain: The cost of the asset is kept in the cost account. Depreciation is built up separately in the accumulated depreciation account, and the expense is charged to profit or loss.
+mistake: Crediting the cost account directly.
+tip: Carrying amount = cost - accumulated depreciation; both balances are kept.
+src: Study text ch6 - accounting for depreciation (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which of the following non-current assets is normally NOT depreciated?
++ Freehold land || Land normally has an unlimited useful life, so it is not depreciated.
+- A freehold building || Buildings have a limited life and are depreciated.
+- Office furniture || Furniture wears out and is depreciated.
+- A delivery vehicle || Vehicles wear out and are depreciated.
+explain: Depreciation applies to assets with a limited useful life. Land is the usual exception; buildings on the land are still depreciated.
+mistake: Depreciating the land element of a land and buildings purchase.
+tip: When a property price includes land, split it before calculating depreciation.
+src: Study text ch6 - depreciation (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is the carrying amount of a non-current asset calculated?
++ Cost less accumulated depreciation || This is the carrying amount shown in the statement of financial position.
+- Cost less residual value || This is the depreciable amount.
+- Cost less the current year's depreciation charge only || All depreciation to date must be deducted, not just this year's.
+- Market value less selling costs || Under the cost model, carrying amount is based on cost, not market value.
+explain: The carrying amount (net book value) is the cost of the asset less all depreciation charged on it to date.
+mistake: Deducting only the current year's depreciation.
+tip: "Accumulated" means all years so far.
+src: Study text ch6 - carrying amount (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following is revenue expenditure?
++ Repainting the outside of an office building || This maintains the building in its existing condition, so it is expensed.
+- Building an extension that increases floor space || An extension improves the asset, so it is capitalised.
+- Delivery costs for a new machine || Delivery costs bring the asset to working condition and are capitalised.
+- Professional fees for the purchase of a factory || Directly attributable professional fees are capitalised.
+explain: Revenue expenditure maintains assets in their existing condition and is charged to profit or loss. Capital expenditure acquires or improves non-current assets.
+mistake: Treating any spending on a building as capital.
+tip: Improvement or life extension = capital; maintenance or repair = revenue.
+src: Study text ch6 - capital vs revenue expenditure (concept basis; original question)
+
+=== Q008
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A machine costs $10,000, has a residual value of $2,000 and a useful life of 4 years. What is the annual straight-line depreciation charge ($)?
+answer: 2000
+tol: 0
+unit: $
+formula: Straight-line depreciation = (cost - residual value) / useful life
+step: Depreciable amount = 10,000 - 2,000 = $8,000.
+step: Annual charge = 8,000 / 4 = $2,000.
+check: (10000-2000)/4
+explain: The straight-line method charges the same amount each year, spreading the depreciable amount evenly over the useful life.
+mistake: Ignoring the residual value ($2,500).
+tip: Always deduct the residual value before dividing by the life.
+src: Study text ch6 - straight-line method (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the MAIN purpose of a non-current asset register?
++ To record details of each asset and act as a control over the physical assets || The register lists cost, location, depreciation and other details, and can be checked against the assets themselves.
+- To replace the nominal ledger accounts for non-current assets || The register supports the ledger; it does not replace it.
+- To record the market value of each asset every month || The register records cost and depreciation details, not monthly market values.
+- To list the business's suppliers of non-current assets || Supplier details are not its main purpose.
+explain: The asset register records cost, purchase date, description, serial number, location, depreciation method and carrying amount for each asset. Physical checks and reconciliation to the ledger provide control.
+mistake: Thinking the register is part of the double-entry system.
+tip: Register = memorandum record + control tool.
+src: Study text ch6 - asset register (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: How often should the useful life and residual value of an item of property, plant and equipment be reviewed under IAS 16?
++ At least at each financial year end || IAS 16 requires the review at least annually.
+- Only when the asset is sold || Estimates must be reviewed while the asset is in use.
+- Every five years || IAS 16 requires at least an annual review.
+- Never - they are fixed when the asset is bought || Estimates can and should change if expectations change.
+explain: Useful life, residual value and depreciation method are estimates. They are reviewed at least annually and changed if expectations differ from previous estimates.
+mistake: Believing the original estimates can never change.
+tip: Estimates are reviewed annually; changes are applied prospectively.
+src: Study text ch6 - changing estimates (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Belmont Co bought a machine. The supplier's list price was $48,000, less a 10% trade discount. Belmont also paid: delivery $1,500; installation $2,300; testing before use $600; import duty $1,800; training for operators $900; and a one-year maintenance contract $1,200.
+q: At what amount ($) should the machine be capitalised?
+answer: 49400
+tol: 0
+unit: $
+formula: Cost = purchase price (net of trade discount) + import duties + directly attributable costs
+step: Purchase price net of trade discount = 48,000 x 90% = $43,200.
+step: Add directly attributable costs: delivery 1,500 + installation 2,300 + testing 600 + import duty 1,800 = $6,200.
+step: Exclude training ($900) and the maintenance contract ($1,200), which are expensed.
+step: Cost = 43,200 + 6,200 = $49,400.
+check: 48000*0.9 + 1500 + 2300 + 600 + 1800
+explain: IAS 16 cost includes the purchase price after trade discounts, import duties and costs directly attributable to bringing the asset to working condition. Training and maintenance are running costs.
+mistake: Capitalising training or the maintenance contract, or forgetting to deduct the trade discount.
+tip: For each cost ask: is it needed to get the asset ready for use?
+src: Study text ch6 - cost of PPE (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: An asset with a capitalised cost of $49,400 has an estimated residual value of $4,400 and a useful life of 5 years. What is the annual straight-line depreciation charge?
++ $9,000 || (49,400 - 4,400) / 5 = $9,000.
+- $9,880 || This ignores the residual value: 49,400 / 5.
+- $10,760 || This adds the residual value: (49,400 + 4,400) / 5.
+- $11,250 || This divides by 4 years instead of 5.
+formula: (Cost - residual value) / useful life
+step: Depreciable amount = 49,400 - 4,400 = $45,000.
+step: Annual charge = 45,000 / 5 = $9,000.
+check: (49400-4400)/5
+explain: Straight-line depreciation spreads the depreciable amount evenly over the useful life.
+mistake: Forgetting the residual value.
+tip: Depreciable amount first, then divide.
+src: Study text ch6 - straight-line method (concept basis; original figures)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A vehicle costing $20,000 is depreciated at 25% per year on the reducing balance basis. What is the depreciation charge ($) in its THIRD year of use? Give your answer to two decimal places.
+answer: 2812.50
+tol: 0.005
+unit: $
+formula: Reducing balance charge = rate x carrying amount at the start of the year
+step: Year 1: 25% x 20,000 = 5,000; carrying amount 15,000.
+step: Year 2: 25% x 15,000 = 3,750; carrying amount 11,250.
+step: Year 3: 25% x 11,250 = $2,812.50.
+check: 20000*0.75*0.75*0.25
+explain: Under the reducing balance method the rate is applied to the carrying amount, so the charge falls each year. It suits assets that give more benefit in early years.
+mistake: Applying 25% to the original cost every year ($5,000).
+tip: Reducing balance always uses the carrying amount brought forward.
+src: Study text ch6 - reducing balance (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company's year end is 31 December. It bought a machine for $36,000 on 1 April 20X5. The machine is depreciated straight-line over 6 years with no residual value, charged pro rata for months owned. What is the depreciation charge ($) for the year ended 31 December 20X5?
+answer: 4500
+tol: 0
+unit: $
+formula: Annual charge x months owned / 12
+step: Annual charge = 36,000 / 6 = $6,000.
+step: Months owned in 20X5: April to December = 9 months.
+step: Charge = 6,000 x 9/12 = $4,500.
+check: 36000/6*9/12
+explain: When the policy is to charge depreciation pro rata, the charge in the year of purchase reflects the number of months the asset was owned.
+mistake: Counting 8 months (forgetting April) or charging a full year.
+tip: Count months on your fingers from the purchase month to the year-end month, inclusive.
+src: Study text ch6 - pro rata depreciation (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc, trap
+topic: t2
+status: review
+q: At 1 January 20X6 a business had plant costing $200,000. On 1 July 20X6 it bought more plant costing $40,000. Plant is depreciated at 10% per year straight-line on cost, with a FULL year's charge in the year of acquisition and none in the year of disposal. No plant was fully depreciated. What is the depreciation charge for the year ended 31 December 20X6?
++ $24,000 || 10% x (200,000 + 40,000) = $24,000, because a full year is charged on additions.
+- $22,000 || This charges the addition pro rata (6 months), which is not the stated policy.
+- $20,000 || This ignores the addition.
+- $4,000 || This is the charge on the addition only.
+formula: Charge = rate x cost of all plant held, under the full-year policy
+step: Existing plant: 10% x 200,000 = $20,000.
+step: Addition: full-year policy, so 10% x 40,000 = $4,000.
+step: Total = $24,000.
+check: 0.1*(200000+40000)
+explain: The depreciation policy decides how additions are treated. With a full-year policy the month of purchase does not matter.
+mistake: Applying pro rata time apportionment when the policy says a full year.
+tip: Underline the depreciation policy before calculating.
+src: Study text ch6 - depreciation policies (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Using the same facts as before - plant of $200,000 at 1 January 20X6, an addition of $40,000 on 1 July 20X6, 10% straight-line on cost - but with depreciation charged PRO RATA on a monthly basis, what is the depreciation charge for the year ended 31 December 20X6?
++ $22,000 || 20,000 on existing plant + 10% x 40,000 x 6/12 = 2,000; total $22,000.
+- $24,000 || This charges a full year on the addition.
+- $21,000 || This charges only 3 months on the addition.
+- $20,000 || This ignores the addition.
+formula: Charge = rate x cost x months owned / 12
+step: Existing plant: 10% x 200,000 = $20,000.
+step: Addition: 10% x 40,000 x 6/12 = $2,000 (July to December).
+step: Total = $22,000.
+check: 0.1*200000 + 0.1*40000*6/12
+explain: A pro rata policy charges depreciation only for the months an asset is owned.
+mistake: Counting the wrong number of months for the addition.
+tip: Same facts, different policy, different answer - the policy is everything.
+src: Study text ch6 - pro rata depreciation (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A van cost $22,000, has a residual value of $2,000 and a useful life of 4 years. It is depreciated straight-line. What is its carrying amount ($) at the end of its second year?
+answer: 12000
+tol: 0
+unit: $
+formula: Carrying amount = cost - accumulated depreciation
+step: Annual charge = (22,000 - 2,000) / 4 = $5,000.
+step: Accumulated depreciation after 2 years = $10,000.
+step: Carrying amount = 22,000 - 10,000 = $12,000.
+check: 22000 - 2*(22000-2000)/4
+explain: Carrying amount deducts all depreciation to date from cost.
+mistake: Deducting the residual value as well ($10,000).
+tip: Residual value is used to calculate the charge; it is not deducted again.
+src: Study text ch6 - carrying amount (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: calc, trap
+topic: t2
+status: review
+q: A business paid $500,000 for a property, of which $200,000 relates to the land. The building has a useful life of 50 years and no residual value. What is the annual depreciation charge?
++ $6,000 || Only the building is depreciated: 300,000 / 50 = $6,000.
+- $10,000 || This depreciates the land as well: 500,000 / 50.
+- $4,000 || This depreciates the land instead of the building.
+- $0 || The building has a limited life and must be depreciated.
+formula: Depreciation = (building cost - residual value) / useful life
+step: Building cost = 500,000 - 200,000 = $300,000.
+step: Charge = 300,000 / 50 = $6,000.
+check: (500000-200000)/50
+explain: Land normally has an unlimited life and is not depreciated, so the land and building elements must be separated.
+mistake: Depreciating the whole property price.
+tip: "Of which ... relates to land" is your signal to split the cost.
+src: Study text ch6 - land and buildings (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Equipment costing $15,000 is depreciated at 20% per year straight-line on cost. It was bought exactly three years ago. What is the balance ($) on the accumulated depreciation account?
+answer: 9000
+tol: 0
+unit: $
+formula: Accumulated depreciation = annual charge x years
+step: Annual charge = 20% x 15,000 = $3,000.
+step: After 3 years: 3 x 3,000 = $9,000.
+check: 0.2*15000*3
+explain: Straight-line depreciation as a percentage of cost gives the same charge each year, so accumulated depreciation grows by equal amounts.
+mistake: Giving the carrying amount ($6,000) instead of accumulated depreciation.
+tip: Read whether the question asks for accumulated depreciation or carrying amount.
+src: Study text ch6 - accumulated depreciation (concept basis; original question)
+
+=== Q020
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Plant costing $50,000 is depreciated at 20% per year on the reducing balance basis. What is the accumulated depreciation ($) after three full years?
+answer: 24400
+tol: 0
+unit: $
+formula: Carrying amount after n years = cost x (1 - rate)^n
+step: Carrying amount after 3 years = 50,000 x 0.8 x 0.8 x 0.8 = $25,600.
+step: Accumulated depreciation = 50,000 - 25,600 = $24,400.
+step: (Check by year: 10,000 + 8,000 + 6,400 = 24,400.)
+check: 50000 - 50000*0.8**3
+explain: Reducing balance charges a fixed percentage of the opening carrying amount, so the annual charge falls each year.
+mistake: Calculating 3 x 20% x 50,000 = $30,000 (straight-line on cost).
+tip: Check reducing balance answers year by year.
+src: Study text ch6 - reducing balance (concept basis; original question)
+
+=== Q021
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 3
+q: Which THREE of the following costs should be included in the cost of a new factory machine?
++ Site preparation costs || Directly attributable to bringing the asset to working condition.
++ Professional fees of the engineer who supervised installation || Directly attributable professional fees are capitalised.
++ Costs of testing that the machine works properly || Testing before use is directly attributable.
+- Costs of an advertising campaign for products the machine will make || Advertising is an operating cost, not part of the asset.
+- Staff training on the new machine || Training is expensed.
+explain: IAS 16 includes in cost the purchase price and all costs directly attributable to bringing the asset to the location and condition needed for it to operate as intended.
+mistake: Including training, because it is incurred because of the new machine.
+tip: "Because of the asset" is not enough - it must be needed to make the asset ready for use.
+src: Study text ch6 - cost of PPE (concept basis; original question)
+
+=== Q022
+type: match
+level: S
+cat: concept
+topic: t1
+status: review
+q: Classify each item of expenditure by a hotel.
+pair: Building ten new bedrooms => Capital expenditure
+pair: Replacing broken windows with identical glass => Revenue expenditure
+pair: Legal fees on buying the hotel's freehold => Capital expenditure
+pair: Annual service of the hotel lifts => Revenue expenditure
+pair: Installing a new lift where none existed => Capital expenditure
+explain: Expenditure that creates or improves a non-current asset is capital. Expenditure that keeps an asset in its existing condition is revenue.
+mistake: Treating the replacement windows as capital. Like-for-like replacement of a small part is a repair.
+tip: Compare the asset before and after the spending: improved = capital; restored = revenue.
+src: Study text ch6 - capital vs revenue expenditure (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A company's delivery vans give much more service in their early years than later, when they need frequent repairs. Which depreciation method BEST reflects this pattern?
++ Reducing balance || Higher charges in early years match the higher benefit received then.
+- Straight-line || Equal charges each year suit assets that give even benefit.
+- No depreciation until the vans are sold || IAS 16 requires depreciation over the useful life.
+- Revaluation each year instead of depreciation || Revaluation does not replace depreciation.
+explain: IAS 16 requires the method to reflect the pattern in which the asset's benefits are consumed. Reducing balance gives larger charges early on.
+mistake: Choosing straight-line because it is the most common method.
+tip: Link "more benefit early" to reducing balance.
+src: Study text ch6 - choice of method (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which of the following is NOT a reason why assets are depreciated?
++ To build up a cash fund for replacing the asset || Depreciation is a non-cash expense and sets no cash aside.
+- To match the cost of the asset with the periods that benefit from its use || This is the main reason (accruals/matching).
+- To reflect wear and tear from use || Use and wear are causes of depreciation.
+- To reflect obsolescence through technological change || Obsolescence is a cause of depreciation.
+explain: Depreciation arises from use, wear and tear, the passage of time and obsolescence. It allocates cost to the periods that benefit; it does not generate or retain cash.
+mistake: Thinking depreciation leaves cash in the business for replacement.
+tip: Depreciation has no cash entry - so it cannot create a fund.
+src: Study text ch6 - depreciation (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: scenario
+topic: t1
+status: review
+q: Arden Co spent $25,000 extending a warehouse to increase storage space and $3,000 repainting the existing warehouse. How much should be charged as an expense in the statement of profit or loss (ignoring depreciation)?
++ $3,000 || Only the repainting is revenue expenditure; the extension improves the asset and is capitalised.
+- $28,000 || This expenses the extension as well.
+- $25,000 || This expenses the extension and capitalises the repainting - the wrong way round.
+- $0 || The repainting is a repair and must be expensed.
+explain: Subsequent expenditure is capitalised only if it improves the asset beyond its original standard (here, more space). Repainting maintains it and is expensed.
+mistake: Capitalising all spending on a building.
+tip: Separate each item of spending and classify it on its own.
+src: Study text ch6 - subsequent expenditure (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Where are the depreciation charge for the year and the accumulated depreciation shown in the financial statements?
++ Charge: statement of profit or loss; accumulated depreciation: deducted from cost in the SOFP || The expense reduces profit; the accumulated balance reduces the asset's carrying amount.
+- Both in the statement of profit or loss || Accumulated depreciation is a balance sheet figure.
+- Charge: SOFP as a liability; accumulated depreciation: P/L || This reverses the treatment and misclassifies both.
+- Both as current liabilities in the SOFP || Neither is a liability.
+explain: The depreciation expense is charged against profit each year. Accumulated depreciation is netted against cost to give the carrying amount of the asset.
+mistake: Treating accumulated depreciation as a liability because it has a credit balance.
+tip: Accumulated depreciation is a contra-asset, not a liability.
+src: Study text ch6 - presentation (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: An asset bought on 1 January 20X1 for $60,000 was being depreciated straight-line over 10 years with no residual value. On 1 January 20X4 its REMAINING useful life was revised to 5 years. What is the depreciation charge ($) for 20X4?
+answer: 8400
+tol: 0
+unit: $
+formula: Revised charge = (carrying amount at date of change - residual value) / remaining useful life
+step: Annual charge 20X1-20X3 = 60,000 / 10 = $6,000; accumulated depreciation at 1 January 20X4 = 3 x 6,000 = $18,000.
+step: Carrying amount at 1 January 20X4 = 60,000 - 18,000 = $42,000.
+step: Revised charge = 42,000 / 5 = $8,400.
+check: (60000 - 3*60000/10)/5
+explain: A change in useful life is a change in accounting estimate, applied prospectively: the carrying amount at the date of change is spread over the remaining life. Prior years are not restated.
+mistake: Dividing the original cost by a new total life (60,000 / 8 = $7,500).
+tip: Change in estimate = carrying amount / REMAINING life.
+src: Study text ch6 - change in useful life (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: A company revises the useful life of its machinery. How is this change accounted for under IAS 8 and IAS 16?
++ Prospectively, as a change in accounting estimate || The new estimate affects the current and future periods only.
+- Retrospectively, as a change in accounting policy, restating prior years || A change in useful life is an estimate, not a policy.
+- Retrospectively, as the correction of a prior period error || The original estimate was reasonable at the time, so it was not an error.
+- By writing the whole adjustment off to retained earnings || No adjustment is made to prior periods.
+explain: Revisions of useful life, residual value and depreciation method are changes in accounting estimates and are applied prospectively.
+mistake: Restating prior years' depreciation.
+tip: Estimates move forward only; policies and errors go back.
+src: Study text ch6 - changes in estimates (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A computer costing $4,800 has an expected life of 3 years and a residual value of $300. It is bought on the first day of the financial year. What is its carrying amount at the end of year 1 using the straight-line method?
++ $3,300 || Charge = (4,800 - 300) / 3 = 1,500; carrying amount = 4,800 - 1,500 = $3,300.
+- $3,200 || This ignores the residual value in the charge: 4,800 - 1,600.
+- $3,000 || This deducts the residual value as well as the charge.
+- $1,500 || This is the depreciation charge, not the carrying amount.
+formula: Carrying amount = cost - accumulated depreciation
+step: Annual charge = (4,800 - 300) / 3 = $1,500.
+step: Carrying amount = 4,800 - 1,500 = $3,300.
+check: 4800 - (4800-300)/3
+explain: The residual value reduces the annual charge, but the carrying amount is still cost less depreciation to date.
+mistake: Subtracting the residual value from the carrying amount.
+tip: Residual value appears only in the depreciation calculation.
+src: Study text ch6 - straight-line method (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A company builds a new storeroom using its own employees. Which cost should NOT be included in the cost of the storeroom?
++ The cost of materials wasted because of a design error || Abnormal wastage is not a cost of bringing the asset into use and is expensed.
+- Wages of employees for the time spent building the storeroom || Labour directly attributable to construction is capitalised.
+- Materials used in the construction || Materials used are part of the asset's cost.
+- Hire of equipment used during construction || Directly attributable to construction.
+explain: Self-constructed assets are capitalised at the directly attributable costs of construction. Abnormal costs, such as wastage from errors, are expensed.
+mistake: Capitalising every cost incurred during construction.
+tip: Abnormal = expense, even if it occurred during construction.
+src: Study text ch6 - self-constructed assets (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A VAT-registered business buys a machine for $12,000 plus recoverable sales tax of $2,400. At what amount should the machine be recorded?
++ $12,000 || Sales tax that the business can reclaim is not part of the asset's cost.
+- $14,400 || Recoverable sales tax is reclaimed, so it is not a cost to the business.
+- $9,600 || The sales tax is not deducted from the net price.
+- $2,400 || This is the tax only.
+explain: Only costs the business bears are capitalised. Recoverable sales tax is a receivable from the tax authority, not part of the cost of the asset.
+mistake: Capitalising the gross amount including recoverable tax.
+tip: Recoverable tax - exclude; irrecoverable tax - include.
+src: Study text ch6 and ch4 - cost of PPE and sales tax (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: At 1 January a business had machinery costing $90,000 with accumulated depreciation of $36,000. The depreciation charge for the year is $9,000 and there were no additions or disposals. What is the carrying amount of the machinery at 31 December?
++ $45,000 || 90,000 - (36,000 + 9,000) = $45,000.
+- $54,000 || This is the carrying amount at 1 January.
+- $81,000 || This deducts only the current year's charge.
+- $63,000 || This adds the charge to the opening carrying amount.
+formula: Carrying amount = cost - closing accumulated depreciation
+step: Closing accumulated depreciation = 36,000 + 9,000 = $45,000.
+step: Carrying amount = 90,000 - 45,000 = $45,000.
+check: 90000 - 36000 - 9000
+explain: Accumulated depreciation increases each year by the depreciation charge.
+mistake: Using only the opening or only the current-year depreciation.
+tip: Update the accumulated depreciation balance first, then deduct it from cost.
+src: Study text ch6 - accounting for depreciation (concept basis; original question)
+
+=== Q033
+type: order
+level: S
+cat: concept
+topic: t4
+status: review
+q: Put the steps for calculating depreciation after a change in useful life in the correct order.
+item: Calculate accumulated depreciation up to the date of the change using the old estimate
+item: Find the carrying amount at the date of the change
+item: Deduct the revised residual value from the carrying amount
+item: Divide by the remaining useful life to find the new annual charge
+explain: Changes in estimates are applied prospectively: work out where the asset stands at the date of change, then spread what is left over the remaining life.
+mistake: Starting from the original cost instead of the carrying amount.
+tip: Old estimate up to the change; new estimate from the change onwards.
+src: Study text ch6 - changes in estimates (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: When does capitalisation of costs for an item of property, plant and equipment stop?
++ When the asset is in the location and condition necessary for it to operate as intended || Costs incurred after that point are not part of the asset's cost.
+- When the asset is fully paid for || Payment date does not decide capitalisation.
+- When the asset reaches full production capacity || Start-up losses and low early output are not capitalised; recognition stops when the asset is ready for use.
+- At the end of the financial year in which it is bought || The financial year end is irrelevant.
+explain: Only costs of bringing the asset to working condition are capitalised. Once it is ready for use, running costs and start-up losses are expensed.
+mistake: Capitalising costs incurred after the asset was ready because it was not yet used at full capacity.
+tip: "Ready for use" is the cut-off, not "being used" or "paid for".
+src: Study text ch6 - capitalisation (concept basis; original question)
+
+=== Q035
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: What is the formula for the depreciable amount of an asset?
++ Cost (or revalued amount) less residual value || This is the amount to be allocated over the asset's useful life.
+- Cost less accumulated depreciation || That is the carrying amount.
+- Cost divided by useful life || That is the straight-line charge with no residual value.
+- Residual value less cost || This is the wrong way round and would be negative.
+explain: The depreciable amount is the part of an asset's cost that will be used up in the business. It is spread over the useful life.
+mistake: Confusing depreciable amount with carrying amount.
+tip: Depreciable amount = what will be consumed; carrying amount = what is left on the books.
+src: Study text ch6 - depreciable amount (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A machine cost $80,000 on 1 January 20X1. It was depreciated straight-line over 8 years with a residual value of $8,000. On 1 January 20X4 the residual value was revised to $13,000; the remaining useful life of 5 years is unchanged. What is the depreciation charge ($) for 20X4?
+answer: 8000
+tol: 0
+unit: $
+formula: Revised charge = (carrying amount at date of change - revised residual value) / remaining life
+step: Original charge = (80,000 - 8,000) / 8 = $9,000 per year.
+step: Carrying amount at 1 January 20X4 = 80,000 - (3 x 9,000) = $53,000.
+step: Revised charge = (53,000 - 13,000) / 5 = $8,000.
+check: (80000 - 3*(80000-8000)/8 - 13000)/5
+explain: A change in residual value is a change in accounting estimate. The carrying amount less the NEW residual value is spread over the remaining life.
+mistake: Recalculating from cost: (80,000 - 13,000) / 8 = $8,375.
+tip: Prospective changes always start from the carrying amount.
+src: Study text ch6 - changes in residual value (concept basis; original question)
+
+=== Q037
+type: mcq
+level: C
+cat: calc, trap
+topic: t1
+status: review
+q: A $4,000 repair to machinery was wrongly capitalised as an addition at the start of the year. The company depreciates machinery at 20% straight-line, with a full year's charge in the year of acquisition. What is the effect of the error on profit for the year?
++ Profit is overstated by $3,200 || The $4,000 expense was omitted, but $800 depreciation was charged on it: net overstatement 4,000 - 800 = $3,200.
+- Profit is overstated by $4,000 || This ignores the depreciation charged on the wrongly capitalised amount.
+- Profit is understated by $800 || The extra depreciation reduces profit, but the missing $4,000 expense has a larger effect in the other direction.
+- Profit is overstated by $4,800 || The depreciation should be deducted, not added.
+formula: Effect on profit = expense omitted - depreciation wrongly charged
+step: Correct treatment: expense $4,000 in profit or loss.
+step: Actual treatment: capitalised, with depreciation of 20% x 4,000 = $800 charged.
+step: Profit is too high by 4,000 - 800 = $3,200.
+check: 4000 - 0.2*4000
+explain: Capitalising revenue expenditure overstates profit in the year of the error, partly offset by the depreciation charged on the wrongly capitalised amount.
+mistake: Forgetting that depreciation was charged on the item.
+tip: Compare "what was done" with "what should have been done" line by line in profit or loss.
+src: Study text ch6 - capital vs revenue errors (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: calc, trap
+topic: t2
+status: review
+q: At 1 January 20X7 a company's plant cost $150,000. On 1 March 20X7 it bought plant costing $24,000, and on 1 September 20X7 it sold plant that had cost $30,000. Plant is depreciated at 10% per year straight-line on cost, with a full year's charge in the year of acquisition and none in the year of disposal. No plant was fully depreciated. What is the depreciation charge for the year ended 31 December 20X7?
++ $14,400 || 10% x (150,000 - 30,000 + 24,000) = $14,400.
+- $17,400 || This also charges depreciation on the plant sold, which the policy excludes.
+- $12,000 || This ignores the addition as well as excluding the disposal.
+- $16,400 || This charges the sold plant pro rata for 8 months (2,000) instead of excluding it.
+formula: Charge = rate x cost of plant held at the year end (full year on additions, none on disposals)
+step: Plant held at the year end = 150,000 - 30,000 + 24,000 = $144,000.
+step: Charge = 10% x 144,000 = $14,400.
+check: 0.1*(150000-30000+24000)
+explain: A "full year in the year of acquisition, none in the year of disposal" policy means the charge is based on the cost of assets held at the year end.
+mistake: Time-apportioning additions or disposals when the policy says full year / none.
+tip: Under this policy, simply depreciate the closing cost.
+src: Study text ch6 - depreciation policies (concept basis; original question)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A company's year end is 30 June. It bought equipment for $27,000 on 1 October 20X5 and depreciates equipment at 30% per year on the reducing balance basis, charged pro rata for months owned in the year of purchase. What is the carrying amount ($) of the equipment at 30 June 20X7? Give your answer to two decimal places.
+answer: 14647.50
+tol: 0.005
+unit: $
+formula: Reducing balance charge = rate x opening carrying amount (x months / 12 in the year of purchase)
+step: Year to 30 June 20X6: owned October to June = 9 months; charge = 27,000 x 30% x 9/12 = $6,075; carrying amount = $20,925.
+step: Year to 30 June 20X7: charge = 30% x 20,925 = $6,277.50.
+step: Carrying amount at 30 June 20X7 = 20,925 - 6,277.50 = $14,647.50.
+check: (27000 - 27000*0.3*9/12)*0.7
+explain: In the year of purchase the reducing balance charge is time-apportioned. From then on the full rate is applied to the opening carrying amount.
+mistake: Charging a full year in the year of purchase (giving $13,230) or applying 30% to cost in year 2.
+tip: Lay out a year-by-year table: opening CA, charge, closing CA.
+src: Study text ch6 - reducing balance with pro rata (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A bookkeeper recorded the year's depreciation of $7,500 as Dr Accumulated depreciation $7,500, Cr Depreciation expense $7,500. What is the effect of this error?
++ Profit is overstated by $15,000 and non-current assets are overstated by $15,000 || The entry should have reduced profit by 7,500 but increased it by 7,500 - a swing of 15,000. Likewise for the carrying amount.
+- Profit is overstated by $7,500 and non-current assets are overstated by $7,500 || This treats the error as an omission; a reversed entry doubles the effect.
+- There is no effect because the debit and credit are equal || A reversed entry still balances, but both accounts are wrong.
+- Profit is understated by $15,000 || The reversed entry increases profit, it does not reduce it.
+step: Correct entry: Dr Depreciation expense 7,500, Cr Accumulated depreciation 7,500.
+step: Actual entry is the reverse, so each account is wrong by 2 x 7,500 = $15,000.
+explain: A reversal of entries is an error that the trial balance will not detect, because debits still equal credits. Its effect is twice the amount of the transaction.
+mistake: Thinking a reversed entry has the same effect as an omitted entry.
+tip: Omission = 1x the amount; reversal = 2x the amount.
+src: Study text ch6 and ch14 - depreciation entries and errors (concept basis; original question)
+
+=== Q041
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: A company changes its depreciation method for vehicles from straight-line to reducing balance because the pattern of use has changed. Which TWO statements are correct?
++ The change is a change in accounting estimate || IAS 16 treats a change in depreciation method as a change in estimate.
++ The current carrying amount is depreciated using the new method from the date of change || The change is applied prospectively.
+- Prior year financial statements must be restated using the new method || That would be retrospective application, used for policy changes and errors.
+- The cumulative difference is charged to profit or loss in the year of change || No catch-up adjustment is made; the new method simply applies from now on.
+explain: The depreciation method reflects the expected pattern of consumption of benefits. If that pattern changes, the method changes prospectively as a change in estimate.
+mistake: Treating the change of method as a change in accounting policy.
+tip: Method, life and residual value changes are all estimates under IAS 16.
+src: Study text ch6 - changes in estimates (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Holt Co bought a machine and incurred these costs: purchase price $60,000; delivery $2,000; installation $3,000; losses of $1,500 during the first month while output built up to normal levels; and $800 to relocate the machine within the factory two years later. What is the initial cost of the machine?
++ $65,000 || 60,000 + 2,000 + 3,000 = $65,000. Start-up losses and later relocation are not capitalised.
+- $66,500 || This includes start-up losses, which are operating costs.
+- $67,300 || This includes both start-up losses and relocation.
+- $60,000 || Delivery and installation are directly attributable and must be capitalised.
+formula: Cost = purchase price + directly attributable costs up to the asset being ready for use
+step: Capitalise: 60,000 + 2,000 + 3,000 = $65,000.
+step: Expense: start-up losses ($1,500) and relocation ($800).
+check: 60000+2000+3000
+explain: IAS 16 stops capitalisation when the asset is ready for use. Initial operating losses and the cost of relocating or reorganising later are not part of cost.
+mistake: Capitalising start-up losses because the machine was "not yet fully working".
+tip: Ready for use is the cut-off point.
+src: Study text ch6 - cost of PPE (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: calc, mixed
+topic: t2
+status: review
+q: At 1 January 20X8 a company's equipment had a cost of $120,000 and accumulated depreciation of $48,000. On 1 April 20X8 it bought equipment costing $20,000. Equipment is depreciated at 20% reducing balance with a full year's charge in the year of acquisition. What is the depreciation charge for 20X8?
++ $18,400 || 20% x (120,000 - 48,000 + 20,000) = 20% x 92,000 = $18,400.
+- $28,000 || This applies 20% to total cost (140,000), as if straight-line on cost.
+- $14,400 || This ignores the addition: 20% x 72,000.
+- $17,400 || This charges the addition pro rata for 9 months, which is not the policy.
+formula: Reducing balance charge = rate x carrying amount (including additions under a full-year policy)
+step: Opening carrying amount = 120,000 - 48,000 = $72,000.
+step: Add the addition (full-year policy): 72,000 + 20,000 = $92,000.
+step: Charge = 20% x 92,000 = $18,400.
+check: 0.2*(120000-48000+20000)
+explain: Reducing balance is applied to carrying amount. With a full-year policy, additions are included for a full year regardless of the purchase date.
+mistake: Applying the rate to cost instead of carrying amount.
+tip: Combine the policy (full-year) with the method (reducing balance) in one calculation.
+src: Study text ch6 - depreciation (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A building's market value rose during the year. The company uses the cost model. The finance director says, "We need not depreciate the building this year because it is worth more than we paid." Is the director correct?
++ No - depreciation allocates cost over useful life and is required even when market value rises || Depreciation is not a valuation exercise; a rise in market value does not remove the need to depreciate.
+- Yes - an asset that is gaining value is not being used up || Buildings still wear out and have a limited life.
+- Yes - IAS 16 suspends depreciation when market value exceeds cost || There is no such rule.
+- No - but the building must instead be written down to market value || Market value is above cost, so there is nothing to write down.
+explain: Depreciation allocates the depreciable amount over the useful life. Changes in market value do not stop this allocation, though a rising residual value could reduce the charge.
+mistake: Thinking depreciation tracks market value.
+tip: Depreciation = allocation; valuation is a separate matter (revaluation, impairment).
+src: Study text ch6 - depreciation (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: An asset cost $36,000 on 1 January 20X2 and was depreciated straight-line over 6 years with no residual value. On 1 January 20X5 the TOTAL useful life was revised from 6 years to 9 years (that is, from the original purchase date). What is the depreciation charge ($) for 20X5?
+answer: 3000
+tol: 0
+unit: $
+formula: Revised charge = carrying amount at date of change / remaining useful life
+step: Original charge = 36,000 / 6 = $6,000; three years to 1 January 20X5 = $18,000; carrying amount = $18,000.
+step: Remaining life = 9 - 3 = 6 years.
+step: Revised charge = 18,000 / 6 = $3,000.
+check: (36000 - 3*36000/6)/(9-3)
+explain: When a question gives a revised TOTAL life, deduct the years already used to find the remaining life.
+mistake: Dividing by 9 years (giving $2,000) instead of the 6 remaining years.
+tip: Check whether the revised life is total or remaining before dividing.
+src: Study text ch6 - change in useful life (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: The non-current asset register shows a total carrying amount of $412,000, but the nominal ledger shows $437,000. Which of the following would explain the difference?
++ A machine with a carrying amount of $25,000 was scrapped and removed from the register, but not from the ledger || The ledger still includes an asset the register has removed, so the ledger is $25,000 higher.
+- Depreciation of $25,000 was posted to the ledger but not entered in the register || This would make the LEDGER lower than the register, not higher.
+- A new asset costing $25,000 was entered in the register but not in the ledger || This would also make the register higher than the ledger.
+- The register records assets at cost while the ledger records them at carrying amount || Both are being compared at carrying amount.
+step: Ledger - register = 437,000 - 412,000 = $25,000: the ledger is higher.
+step: Only the scrapped machine leaves the ledger higher by $25,000.
+explain: Reconciling the asset register to the ledger reveals unrecorded disposals, additions and depreciation. The direction of the difference tells you which record is missing an entry.
+mistake: Identifying a cause of the right size but the wrong direction.
+tip: Work out which balance is higher, then test each explanation's direction.
+src: Study text ch6 - asset register (concept basis; original scenario)
+
+=== Q047
+type: match
+level: C
+cat: scenario
+topic: t4
+status: review
+q: Match each situation with the correct accounting treatment.
+pair: Useful life of a machine is revised from 8 to 10 years => Spread carrying amount over remaining life from now on
+pair: Last year's depreciation was calculated using the wrong cost figure => Correct as a prior period error
+pair: Delivery van becomes used more evenly over its life => Change method prospectively as a change in estimate
+pair: A $500 repair is made to a machine => Charge to profit or loss as an expense
+choice: Restate all prior years as a change in accounting policy
+explain: Revisions of life and method are changes in estimates (prospective). A miscalculation is an error (corrected retrospectively under IAS 8). Repairs are revenue expenditure.
+mistake: Treating every change as retrospective.
+tip: Estimate = prospective; error and policy change = retrospective.
+src: Study text ch6 - changing estimates (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: mixed
+topic: t1
+status: review
+q: A company buys a machine on credit for $30,000 (no trade discount). It pays $1,000 for delivery in cash. Which is the correct record of these transactions?
++ Dr Plant and machinery $31,000; Cr Payables $30,000; Cr Cash $1,000 || The asset includes delivery; the price is owed to the supplier and delivery is paid in cash.
+- Dr Plant and machinery $30,000; Dr Delivery expense $1,000; Cr Payables $31,000 || Delivery is capitalised and was paid in cash, not owed.
+- Dr Plant and machinery $31,000; Cr Cash $31,000 || The machine was bought on credit.
+- Dr Payables $30,000; Dr Cash $1,000; Cr Plant and machinery $31,000 || This reverses every entry.
+step: Asset cost = 30,000 + 1,000 = $31,000 (debit).
+step: Credits: payables $30,000 (credit purchase) and cash $1,000.
+explain: Capitalised costs are debited to the asset account. The credits reflect how each amount was settled.
+mistake: Expensing the delivery cost or crediting the wrong account.
+tip: Build the debit (cost) and credits (how paid) separately.
+src: Study text ch6 and ch3 - recording acquisitions (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: An asset cost $40,000. Its residual value is estimated at $5,000 and its useful life at 5 years. It is depreciated at 35% reducing balance. What is the depreciation charge in year 1?
++ $14,000 || Reducing balance applies the rate to the carrying amount (cost in year 1): 35% x 40,000. The residual value is not deducted.
+- $12,250 || This deducts the residual value first: 35% x 35,000. The rate is applied to the carrying amount.
+- $7,000 || This is straight-line: (40,000 - 5,000) / 5.
+- $8,000 || This is straight-line ignoring the residual value: 40,000 / 5.
+formula: Reducing balance charge = rate x carrying amount
+step: Year 1 carrying amount = cost = $40,000.
+step: Charge = 35% x 40,000 = $14,000.
+check: 0.35*40000
+explain: Under reducing balance, the rate is chosen so that the carrying amount approaches the residual value by the end of the asset's life. The residual value is not deducted before applying the rate.
+mistake: Deducting the residual value before applying a reducing balance rate.
+tip: Residual value is deducted for straight-line, not for reducing balance.
+src: Study text ch6 - reducing balance (concept basis; original question)
+
+=== Q050
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: A business depreciates its assets at 20% reducing balance. Which statement about the annual charge is correct?
++ The charge falls each year because the rate is applied to a falling carrying amount || 20% of a smaller carrying amount each year gives a smaller charge.
+- The charge is the same each year || That is straight-line depreciation.
+- The charge rises each year as the asset gets older || Reducing balance gives the opposite pattern.
+- The charge is 20% of the original cost each year || That is straight-line on cost.
+explain: Reducing balance charges a constant percentage of the carrying amount, so the charge falls over time.
+mistake: Applying the percentage to cost.
+tip: Reducing balance = percentage of carrying amount; straight-line = equal amounts.
+src: Study text ch6 - reducing balance (concept basis; original question)

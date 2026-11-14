@@ -1,0 +1,898 @@
+@subject acfbe
+@chapter 10b
+@title The Budgetary Process
+@lo D3
+@topic t1 | Budget administration and timetable | D3
+@topic t2 | Functional budgets | D3
+@topic t3 | Cash budgets | D3
+@topic t4 | Master budget | D3
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the principal budget factor?
++ The factor that limits the organisation's activities, so it must be budgeted first || Usually sales demand.
+- The largest cost in the budget || Not necessarily limiting.
+- The budget officer || A person, not a factor.
+- The final cash balance || An output of the budget.
+explain: It could also be materials, labour or machine capacity.
+mistake: Starting with production when sales limits activity.
+tip: Find the limit first.
+src: Study text ch10b - principal budget factor (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: Budgeted sales are 900 units. Opening finished goods inventory is 80 units and closing inventory is to be 120 units. How many units should be produced?
+answer: 940
+tol: 0
+unit: units
+formula: Production = sales + closing inventory - opening inventory
+step: Sales 900 + closing 120 = 1,020.
+step: Less opening 80 = 940 units.
+check: 900+120-80
+explain: Production must cover sales and build inventory up to the closing level.
+mistake: Adding opening and deducting closing inventory.
+tip: Plus closing, minus opening.
+src: Study text ch10b - production budget (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which item should NOT appear in a cash budget?
++ Depreciation || It is not a cash flow.
+- Purchase of a new machine || A capital payment.
+- Receipts from credit customers || Cash inflow.
+- Proceeds of a new loan || Capital receipt.
+explain: Cash budgets include revenue and capital cash flows but no non-cash items.
+mistake: Including depreciation.
+tip: No cash, no entry.
+src: Study text ch10b - cash budget (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What does the master budget consist of?
++ The budgeted statement of profit or loss, budgeted statement of financial position and cash budget || It consolidates all functional budgets.
+- The sales budget only || One functional budget.
+- The budget manual || Instructions, not a budget.
+- Last year's financial statements || Historical.
+explain: Closing balances in the SOFP come from the functional and cash budgets.
+mistake: Thinking the master budget is the sales budget.
+tip: P/L + SOFP + cash.
+src: Study text ch10b - master budget (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the budget manual?
++ A set of instructions on budget responsibilities, procedures, forms and records || It guides preparation.
+- The approved master budget || That is the output.
+- The minutes of the budget committee || Committee records.
+- A list of variances || Control report.
+explain: It helps everyone follow the same procedures and timetable.
+mistake: Confusing the manual with the budget itself.
+tip: Manual = how-to guide.
+src: Study text ch10b - budget manual (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: 940 units are to be produced. Each unit uses 3 kg of material. What is the material usage budget (kg)?
+answer: 2820
+tol: 0
+unit: kg
+formula: Usage = production units x material per unit
+step: Production = 940 units; material per unit = 3 kg.
+step: Usage = 940 x 3 = 2,820 kg.
+check: 940*3
+explain: Usage is based on production, not sales.
+mistake: Using sales units.
+tip: Production drives usage.
+src: Study text ch10b - usage budget (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Who should ideally prepare each departmental budget?
++ The manager responsible for achieving it, with help from the accountant || Ownership improves commitment.
+- The external auditor || Not their role.
+- The accountant alone || Managers should be involved.
+- The shareholders || Not their role.
+explain: Participation improves accuracy and motivation.
+mistake: Thinking accountants set all budgets.
+tip: Those who deliver should prepare.
+src: Study text ch10b - administration (concept basis; original question)
+
+=== Q008
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Credit sales for a month are $50,000. Opening receivables are $8,000 and closing receivables are $10,000. How much cash ($) is received from customers?
+answer: 48000
+tol: 0
+unit: $
+formula: Receipts = sales + opening receivables - closing receivables
+step: 50,000 + 8,000 = 58,000.
+step: 58,000 - 10,000 = $48,000.
+check: 50000+8000-10000
+explain: An increase in receivables means less cash collected than sales.
+mistake: Reversing opening and closing.
+tip: Rising receivables = less cash.
+src: Study text ch10b - receipts (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: When sales demand is the principal budget factor, which budget is prepared FIRST?
++ Sales budget || Everything else depends on it.
+- Production budget || Follows sales.
+- Cash budget || Near the end.
+- Materials purchases budget || Follows production.
+explain: The order is sales, production, materials, labour, overheads, then cash and master budget.
+mistake: Starting with production.
+tip: PBF budget first.
+src: Study text ch10b - order (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the main role of the budget committee?
++ To co-ordinate and administer the budgeting process || It includes representatives of each function.
+- To audit the financial statements || Auditors' role.
+- To set share prices || Not related.
+- To prepare the payroll || Not its role.
+explain: The budget officer acts as its secretary.
+mistake: Thinking the committee prepares all budgets itself.
+tip: Committee co-ordinates.
+src: Study text ch10b - committee (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Material usage is 2,820 kg. Opening material inventory is 300 kg and closing inventory is to be 400 kg. Material costs $5 per kg. What is the material purchases budget?
++ $14,600 || 2,920 kg x $5.
+- $14,100 || Usage x price, ignoring inventory change.
+- $13,600 || Inventory adjustment reversed.
+- $2,920 || Quantity, not value.
+formula: Purchases = (usage + closing inventory - opening inventory) x price
+step: Quantity = 2,820 + 400 - 300 = 2,920 kg.
+step: Value = 2,920 x 5 = $14,600.
+check: (2820+400-300)*5
+explain: Work out quantities first, then value them.
+mistake: Valuing before adjusting for inventory.
+tip: Quantity first.
+src: Study text ch10b - purchases budget (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Budgeted sales are 5,000 units. Opening finished goods inventory is 600 units and closing inventory is planned at 450 units. How many units should be produced?
+answer: 4850
+tol: 0
+unit: units
+formula: Production = sales + closing inventory - opening inventory
+step: 5,000 + 450 = 5,450.
+step: 5,450 - 600 = 4,850 units.
+check: 5000+450-600
+explain: Inventory is being run down, so production is less than sales.
+mistake: Producing more than sales when inventory falls.
+tip: Falling inventory = produce less.
+src: Study text ch10b - production budget (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Sales are made on credit: 40% of customers pay in the month of sale and 60% in the following month. February sales are $25,000 and March sales are $30,000. What are the cash receipts in March?
++ $27,000 || 40% x 30,000 + 60% x 25,000.
+- $30,000 || March sales.
+- $28,000 || Pattern reversed.
+- $22,000 || Not supported.
+formula: Receipts = % of this month's sales + % of last month's sales
+step: From March sales: 30,000 x 40% = 12,000.
+step: From February sales: 25,000 x 60% = 15,000; total = 27,000.
+check: 30000*0.4+25000*0.6
+explain: Draw up a receipts table by month of sale.
+mistake: Applying the percentages to the wrong months.
+tip: This month's % + last month's %.
+src: Study text ch10b - collection pattern (concept basis; original figures)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Purchases for a month are $20,000. Opening payables are $4,000 and closing payables are $5,000. How much is paid ($) to suppliers?
+answer: 19000
+tol: 0
+unit: $
+formula: Payments = purchases + opening payables - closing payables
+step: 20,000 + 4,000 = 24,000.
+step: 24,000 - 5,000 = $19,000.
+check: 20000+4000-5000
+explain: Rising payables mean less cash paid than purchases.
+mistake: Reversing the adjustment.
+tip: Rising payables = less cash out.
+src: Study text ch10b - payments (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which is NOT a reason why profit and cash differ?
++ Sales are recorded at selling price || Both profit and cash use selling price.
+- Depreciation reduces profit but is not a cash flow || A reason.
+- Credit sales are recorded before cash is received || A timing reason.
+- Buying a non-current asset is a cash outflow but not an expense || A capital reason.
+explain: Timing, non-cash items, capital items and inventory changes cause differences.
+mistake: Assuming profit equals cash.
+tip: Timing, non-cash, capital, inventory.
+src: Study text ch10b - profit vs cash (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: 2,000 units are to be made. Each needs 2 standard hours, but the workforce is expected to work at 80% efficiency. Labour is paid $12 per hour. What is the labour cost budget?
++ $60,000 || 2,000 x 2 / 0.8 = 5,000 hours x $12.
+- $48,000 || Ignores efficiency.
+- $38,400 || Multiplies by 80%.
+- $57,600 || Not supported.
+formula: Hours = production x standard hours / efficiency
+step: Hours needed = 2,000 x 2 / 0.80 = 5,000 hours.
+step: Cost = 5,000 x 12 = $60,000.
+check: 2000*2/0.8*12
+explain: Lower efficiency means more hours are needed.
+mistake: Multiplying by 80% instead of dividing.
+tip: Inefficiency needs more hours.
+src: Study text ch10b - labour budget (concept basis; original question)
+
+=== Q017
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put these budget preparation stages in order.
+item: Communicate budget policy and guidelines
+item: Determine the principal budget factor
+item: Prepare the sales budget
+item: Prepare the other functional budgets
+item: Negotiate, co-ordinate and review the budgets
+item: Accept the master budget
+explain: Budgets are reviewed during the period once accepted.
+mistake: Starting with functional budgets.
+tip: Policy, factor, sales, others, review, accept.
+src: Study text ch10b - timetable (concept basis; original question)
+
+=== Q018
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each budget with its formula.
+pair: Production (units) => Sales + closing FG inventory - opening FG inventory
+pair: Material usage => Production units x material per unit
+pair: Material purchases (units) => Usage + closing material inventory - opening material inventory
+pair: Cash from customers => Sales + opening receivables - closing receivables
+explain: These links keep the functional budgets consistent.
+mistake: Reversing inventory adjustments.
+tip: Plus closing, minus opening.
+src: Study text ch10b - formulas (concept basis; original question)
+
+=== Q019
+type: mr
+level: S
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO actions are suitable for a SHORT-TERM cash surplus?
++ Investing the surplus short term to earn interest || Earn a return.
++ Paying suppliers early to obtain discounts || Saves cost.
+- Raising a long-term loan || For long-term deficits.
+- Arranging an overdraft || For short-term deficits.
+explain: Long-term surpluses could fund expansion or repay debt.
+mistake: Matching actions to the wrong situation.
+tip: Short-term surplus: invest or pay early.
+src: Study text ch10b - cash management (concept basis; original question)
+
+=== Q020
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Goods are sold at cost plus 50%. Budgeted sales are $90,000. What is the budgeted cost of sales ($)?
+answer: 60000
+tol: 0
+unit: $
+formula: Cost of sales = sales / 1.5
+step: Sales = 150% of cost.
+step: Cost of sales = 90,000 / 1.5 = $60,000.
+check: 90000/1.5
+explain: A 50% mark-up equals a margin of one third.
+mistake: Taking 50% off sales ($45,000).
+tip: Divide by 1.5.
+src: Study text ch10b - master budget (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Budgeted cost of sales is $60,000. Opening inventory is $7,000 and closing inventory is to be $9,000. What are budgeted purchases?
++ $62,000 || 60,000 + 9,000 - 7,000.
+- $58,000 || Adjustment reversed.
+- $60,000 || Ignores inventory change.
+- $76,000 || Adds both.
+formula: Purchases = cost of sales + closing inventory - opening inventory
+step: 60,000 + 9,000 = 69,000.
+step: 69,000 - 7,000 = $62,000.
+check: 60000+9000-7000
+explain: Building inventory requires extra purchases.
+mistake: Reversing the inventory adjustment.
+tip: Plus closing, minus opening.
+src: Study text ch10b - purchases (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is a standard hour?
++ The amount of work achievable at standard efficiency in one hour || A common output measure.
+- Any hour worked by an employee || That is an actual hour.
+- An hour of overtime || Not the definition.
+- An hour of idle time || Not productive.
+explain: Standard hours allow different products to be added together.
+mistake: Equating with clock hours.
+tip: Work, not time.
+src: Study text ch10b - standard hour (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Opening cash is $5,000. Budgeted receipts are $27,000 and budgeted payments are $30,000. What is the closing cash balance ($)?
+answer: 2000
+tol: 0
+unit: $
+formula: Closing cash = opening cash + receipts - payments
+step: 5,000 + 27,000 = 32,000.
+step: 32,000 - 30,000 = $2,000.
+check: 5000+27000-30000
+explain: The closing balance becomes next month's opening balance.
+mistake: Ignoring the opening balance.
+tip: Opening + in - out.
+src: Study text ch10b - cash balance (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the main purpose of a cash budget?
++ To identify cash surpluses and shortfalls in advance so action can be planned || Plan financing.
+- To calculate profit || That is the budgeted P/L.
+- To value inventory || Not its purpose.
+- To record depreciation || Not a cash flow.
+explain: Early warning allows overdrafts to be arranged or surpluses invested.
+mistake: Confusing cash and profit.
+tip: Cash budgets warn early.
+src: Study text ch10b - purpose (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: 4,500 productive labour hours are needed. Idle time is expected to be 10% of hours paid. How many hours must be paid for?
++ 5,000 || 4,500 / 0.90.
+- 4,950 || Adds 10% of productive hours.
+- 4,050 || Deducts idle time.
+- 4,500 || Ignores idle time.
+formula: Hours paid = productive hours / (1 - idle %)
+step: Productive hours = 90% of paid hours.
+step: Paid = 4,500 / 0.90 = 5,000 hours.
+check: 4500/0.9
+explain: Idle time is paid but not productive.
+mistake: Adding 10% of productive hours.
+tip: Divide by (1 - idle %).
+src: Study text ch10b - idle time (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Where does the closing receivables figure in the budgeted statement of financial position come from?
++ The receipts workings in the cash budget (sales not yet collected) || The SOFP picks up closing balances.
+- The production budget || Units, not receivables.
+- The labour budget || Not related.
+- The budget manual || Not a figure source.
+explain: The master budget ties all budgets together.
+mistake: Calculating receivables independently.
+tip: SOFP = closing balances from workings.
+src: Study text ch10b - master budget (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee calculates production as "sales + opening inventory - closing inventory". What is wrong?
++ The inventory adjustments are reversed; production = sales + closing - opening || Closing inventory must be produced.
+- Nothing is wrong || The signs are reversed.
+- Opening inventory should be ignored || It reduces production.
+- Production should equal sales || Only if inventory is unchanged.
+explain: Opening inventory is available to sell, so less needs to be made.
+mistake: Reversing the adjustments.
+tip: Need closing; have opening.
+src: Study text ch10b - production (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which could be the principal budget factor for a company with strong demand but a shortage of skilled staff?
++ Skilled labour hours || Labour limits output.
+- Sales demand || Demand is not limiting.
+- Depreciation || Not a limiting factor.
+- The budget committee || Not a factor.
+explain: The limiting factor should be budgeted first.
+mistake: Assuming sales is always the PBF.
+tip: Whatever limits activity.
+src: Study text ch10b - PBF (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Customers pay as follows: 30% in the month of sale, 65% in the following month, and 5% become irrecoverable. March sales are $36,000 and April sales are $40,000.
+q: What are cash receipts ($) in April?
+answer: 35400
+tol: 0
+unit: $
+formula: Receipts = % of this month's sales + % of last month's sales
+step: From April sales: 40,000 x 30% = 12,000.
+step: From March sales: 36,000 x 65% = 23,400; total = 35,400.
+check: 40000*0.3+36000*0.65
+explain: Irrecoverable debts never become cash, so they are excluded.
+mistake: Including the 5% irrecoverable amount.
+tip: Bad debts = no cash.
+src: Study text ch10b - receipts (concept basis; original figures)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How long is a typical operating budget period?
++ One year, often divided into months or quarters || Capital budgets may be longer.
+- One week only || Too short.
+- Ten years || Too long for operating budgets.
+- Indefinite || Budgets cover a defined period.
+explain: Subdividing helps monitor progress during the year.
+mistake: Confusing operating and capital budgets.
+tip: Year, split into months.
+src: Study text ch10b - budget period (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Budgeted overhead costs are $25,000 per month, including $3,000 of depreciation. Overheads are paid in the month incurred. What is the monthly cash payment for overheads?
++ $22,000 || Exclude depreciation.
+- $25,000 || Includes depreciation.
+- $28,000 || Adds depreciation.
+- $3,000 || Depreciation only.
+formula: Cash overheads = total overheads - non-cash items
+step: Total overheads = 25,000.
+step: Less depreciation 3,000 = $22,000 cash.
+check: 25000-3000
+explain: Depreciation is an accounting charge, not a payment.
+mistake: Leaving depreciation in.
+tip: Strip non-cash items.
+src: Study text ch10b - cash budget (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which action is MOST suitable for a LONG-TERM cash deficit?
++ Raising long-term finance, such as a loan or share issue || Matches the duration.
+- Using an overdraft indefinitely || Overdrafts are short-term.
+- Delaying payments to suppliers for years || Not sustainable.
+- Investing in short-term deposits || That is for surpluses.
+explain: Match the finance to the length of the need.
+mistake: Using short-term fixes for long-term problems.
+tip: Long need = long finance.
+src: Study text ch10b - deficits (concept basis; original question)
+
+=== Q033
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Sales budget: 6,000 units. Finished goods: opening 800, closing 1,000. Each unit uses 4 kg of material. Raw materials: opening 3,000 kg, closing 2,500 kg. Material price $2.50 per kg.
+q: What is the material purchases budget?
++ $60,750 || Purchases 24,300 kg x $2.50.
+- $62,000 || Uses 6,200 x 4 kg, ignoring the material inventory change.
+- $60,000 || Uses sales units instead of production.
+- $63,250 || Material inventory adjustment reversed.
+formula: Purchases = (production x kg + closing - opening material) x price
+step: Production = 6,000 + 1,000 - 800 = 6,200 units; usage = 6,200 x 4 = 24,800 kg.
+step: Purchases = 24,800 + 2,500 - 3,000 = 24,300 kg x $2.50 = $60,750.
+check: (6200*4+2500-3000)*2.5
+explain: Two inventory adjustments are needed: finished goods and raw materials.
+mistake: Missing one of the inventory adjustments.
+tip: Sales to production to usage to purchases.
+src: Study text ch10b - chain of budgets (concept basis; original figures)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: 60% of customers pay in the month of sale and receive a 2% discount; the other 40% pay in the following month. April sales are $45,000 and May sales are $50,000.
+q: What are cash receipts ($) in May?
+answer: 47400
+tol: 0
+unit: $
+formula: Receipts = this month's sales x % x (1 - discount) + last month's sales x %
+step: From May sales: 50,000 x 60% x 98% = 29,400.
+step: From April sales: 45,000 x 40% = 18,000; total = 47,400.
+check: 50000*0.6*0.98+45000*0.4
+explain: The discount reduces the cash received from early payers.
+mistake: Ignoring the discount.
+tip: Discount only on early payers.
+src: Study text ch10b - receipts with discount (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Purchases are paid for one month after purchase. January purchases $12,000; February purchases $14,000. February wages $8,000 are paid in the month. Quarterly rent of $6,000 is paid in February. February depreciation is $1,000.
+q: What are total cash payments in February?
++ $26,000 || 12,000 + 8,000 + 6,000.
+- $27,000 || Includes depreciation.
+- $28,000 || Uses February purchases.
+- $20,000 || Omits rent.
+formula: Payments = last month's purchases + wages + rent paid
+step: Purchases paid in February = January purchases 12,000.
+step: Total = 12,000 + 8,000 + 6,000 = $26,000 (depreciation excluded).
+check: 12000+8000+6000
+explain: Rent is recorded when paid, not spread monthly, in a cash budget.
+mistake: Spreading the quarterly rent.
+tip: Cash moves when paid.
+src: Study text ch10b - payments (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee shows an irrecoverable debt write-off of $2,000 as a cash payment in the cash budget. What is the correct treatment?
++ Exclude it; the debt simply never becomes a receipt, so cash receipts are lower || No cash leaves the business.
+- Show it as a payment, as the trainee did || It is not a payment.
+- Show it as a receipt || Nothing is received.
+- Show it twice to be prudent || Not correct.
+explain: Irrecoverable debts reduce receipts; they are not separate payments.
+mistake: Treating write-offs as outflows.
+tip: Lower receipts, no payment.
+src: Study text ch10b - non-cash items (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: Budgeted sales are $120,000 and goods are sold at cost plus 25%. What is the budgeted gross profit ($)?
+answer: 24000
+tol: 0
+unit: $
+formula: Gross profit = sales - sales / (1 + mark-up)
+step: Cost of sales = 120,000 / 1.25 = 96,000.
+step: Gross profit = 120,000 - 96,000 = $24,000.
+check: 120000-120000/1.25
+explain: A 25% mark-up equals a 20% margin.
+mistake: Taking 25% of sales ($30,000).
+tip: Mark-up on cost.
+src: Study text ch10b - budgeted P/L (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: Senior management sets departmental budgets without consulting managers. Managers later say the targets are unrealistic and stop trying to meet them. Which stage of the budget process was neglected?
++ Negotiating budgets with the managers responsible for them || Participation builds commitment.
+- Determining the principal budget factor || Not the issue.
+- Preparing the cash budget || Not the issue.
+- Writing the budget manual || Not the main issue.
+explain: Imposed budgets can demotivate.
+mistake: Thinking accurate numbers alone ensure success.
+tip: Involve those who deliver.
+src: Study text ch10b - negotiation (concept basis; original scenario)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Closing finished goods inventory each month is 20% of the following month's sales. January sales are 1,000 units and February sales are 1,200 units. Opening inventory for January is 200 units.
+q: How many units should be produced in January?
+answer: 1040
+tol: 0
+unit: units
+formula: Production = sales + closing inventory - opening inventory
+step: Closing January inventory = 20% x 1,200 = 240.
+step: Production = 1,000 + 240 - 200 = 1,040.
+check: 1000+0.2*1200-200
+explain: Closing inventory linked to next month's sales is common in exam questions.
+mistake: Using January's own sales for closing inventory.
+tip: Closing = % of NEXT month.
+src: Study text ch10b - production (concept basis; original figures)
+
+=== Q040
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are part of the master budget?
++ The budgeted statement of financial position || Part of the master budget.
++ The cash budget || Part of the master budget.
+- The budget manual || Instructions, not a budget.
+- Last year's audited financial statements || Historical.
+explain: The budgeted statement of profit or loss completes the set.
+mistake: Including the budget manual.
+tip: P/L, SOFP and cash.
+src: Study text ch10b - master budget (concept basis; original question)
+
+=== Q041
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A cash budget shows deficits in months 3 and 4 caused by a seasonal inventory build-up, followed by surpluses from month 5. What is the MOST suitable action?
++ Arrange a short-term overdraft to cover months 3 and 4 || A temporary deficit needs temporary finance.
+- Issue new shares || Long-term finance for a short need.
+- Sell non-current assets || Drastic for a short-term need.
+- Do nothing until month 3 || Planning ahead is the point.
+explain: The cash budget gives time to arrange the overdraft in advance.
+mistake: Using long-term finance for seasonal needs.
+tip: Match finance to duration.
+src: Study text ch10b - deficits (concept basis; original scenario)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: The opening cash balance is an overdraft of $2,000. Receipts are $30,000 and payments $25,500. What is the closing balance?
++ $2,500 in hand || -2,000 + 30,000 - 25,500.
+- $6,500 in hand || Treats the overdraft as positive.
+- $2,500 overdrawn || Sign error.
+- $4,500 in hand || Ignores the opening balance.
+formula: Closing = opening + receipts - payments
+step: -2,000 + 30,000 = 28,000.
+step: 28,000 - 25,500 = 2,500 in hand.
+check: -2000+30000-25500
+explain: An overdraft is a negative opening balance.
+mistake: Adding the overdraft as cash.
+tip: Overdraft = negative.
+src: Study text ch10b - cash balance (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A manufacturer can sell everything it makes, but a key raw material is rationed by the supplier. Which budget should be prepared FIRST?
++ A budget based on the materials available, as materials are the principal budget factor || The limit drives everything else.
+- The sales budget, as always || Sales is not limiting here.
+- The cash budget || Comes later.
+- The labour budget || Not limiting.
+explain: Identifying the true limiting factor avoids impossible plans.
+mistake: Always starting with sales.
+tip: Start with the constraint.
+src: Study text ch10b - PBF (concept basis; original scenario)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: 1,000 units are to be produced, each needing 2 kg of finished material. 20% of material input is lost in production. How many kg of material must be input?
+answer: 2500
+tol: 0
+unit: kg
+formula: Input = required output / (1 - loss %)
+step: Required = 1,000 x 2 = 2,000 kg.
+step: Input = 2,000 / 0.80 = 2,500 kg.
+check: 1000*2/0.8
+explain: Wastage is a % of input, so divide rather than add 20%.
+mistake: Adding 20% to get 2,400 kg.
+tip: Loss on input = divide.
+src: Study text ch10b - usage with wastage (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Why should budgets be reviewed during the budget period?
++ To respond to changed conditions and compare progress with the plan || Budgets support ongoing control.
+- To change targets whenever results are poor || That undermines control.
+- Because budgets are only estimates and can be ignored || They guide action.
+- To prepare the budget manual || Not the purpose.
+explain: Review allows corrective action and, if needed, revised forecasts.
+mistake: Treating the budget as fixed and forgotten.
+tip: Budget, monitor, act.
+src: Study text ch10b - review (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: December credit sales are $40,000. Customers pay 40% in the month of sale and 60% the following month. What closing receivables ($) appear in the budgeted statement of financial position at 31 December?
+answer: 24000
+tol: 0
+unit: $
+formula: Closing receivables = sales not yet collected
+step: Collected in December = 40% x 40,000 = 16,000.
+step: Outstanding = 40,000 x 60% = $24,000.
+check: 40000*0.6
+explain: The SOFP picks up closing balances from the cash budget workings.
+mistake: Showing the full month's sales.
+tip: Uncollected balance.
+src: Study text ch10b - closing balances (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: Each unit needs 3 standard hours and efficiency is expected to be 75%. A trainee budgets 3 x 75% = 2.25 hours per unit. What is the effect?
++ Labour hours and cost are understated; 4 hours per unit are needed || 3 / 0.75 = 4.
+- Labour hours are overstated || Understated.
+- There is no effect || Hours are wrong.
+- Only materials are affected || Labour is affected.
+formula: Hours per unit = standard hours / efficiency
+step: Correct = 3 / 0.75 = 4 hours.
+step: The trainee's 2.25 hours understates by 1.75 hours per unit.
+check: 3/0.75
+explain: Inefficient workers need MORE time, never less.
+mistake: Multiplying by efficiency.
+tip: Low efficiency = more hours.
+src: Study text ch10b - labour efficiency (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why does a cash budget include capital items such as the purchase of machinery?
++ They are real cash flows that affect the cash position, even though they are not expenses || Cash budgets cover revenue and capital items.
+- To calculate depreciation || Depreciation is excluded.
+- Because they are expenses in the P/L || They are capitalised.
+- They should not be included || They must be.
+explain: Large capital payments often cause the biggest cash swings.
+mistake: Excluding capital items.
+tip: Cash out is cash out.
+src: Study text ch10b - capital items (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which formula gives the production budget in units?
++ Sales + closing finished goods inventory - opening finished goods inventory || Core formula.
+- Sales + opening inventory - closing inventory || Reversed.
+- Sales - closing inventory || Incomplete.
+- Opening inventory + closing inventory || Not meaningful.
+explain: Units first; costs follow from functional budgets.
+mistake: Reversing inventory.
+tip: Plus closing, minus opening.
+src: Study text ch10b - production budget (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which statement about cash budgets is correct?
++ They include revenue and capital cash flows but exclude non-cash items such as depreciation || Core rule.
+- They include depreciation as a payment || Not a cash flow.
+- They exclude loan receipts || Capital receipts are included.
+- They are the same as the budgeted P/L || Profit and cash differ.
+explain: Timing differences mean cash and profit diverge.
+mistake: Including non-cash items.
+tip: Only real cash.
+src: Study text ch10b - cash budget (concept basis; original question)

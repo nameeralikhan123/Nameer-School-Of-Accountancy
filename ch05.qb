@@ -1,0 +1,901 @@
+@subject acffa2
+@chapter 5
+@title Inventory
+@lo D1
+@topic t1 | Inventory and cost of sales | D1
+@topic t2 | IAS 2 Inventories | D1
+@topic t3 | Cost formulas | D1
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Opening inventory is $4,000, purchases are $30,000 and closing inventory is $6,000. What is cost of sales ($)?
+answer: 28000
+tol: 0
+unit: $
+formula: Cost of sales = opening inventory + purchases - closing inventory
+step: 4,000 + 30,000 = 34,000.
+step: 34,000 - 6,000 = $28,000.
+check: 4000+30000-6000
+explain: Closing inventory is carried forward as an asset.
+mistake: Adding closing inventory.
+tip: Plus opening, minus closing.
+src: Study text ch5 - cost of sales (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under IAS 2, at what amount is inventory measured?
++ The lower of cost and net realisable value || Prudent measurement.
+- The higher of cost and NRV || Would overstate assets.
+- Selling price || Includes unearned profit.
+- Replacement cost always || Not the IAS 2 rule.
+explain: The comparison is made item by item.
+mistake: Using selling price.
+tip: Lower of cost and NRV.
+src: Study text ch5 - IAS 2 (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Which cost formula is NOT permitted by IAS 2?
++ LIFO (last in, first out) || Prohibited.
+- FIFO || Permitted.
+- Periodic weighted average || Permitted.
+- Continuous weighted average || Permitted.
+explain: LIFO can understate inventory in rising prices.
+mistake: Thinking LIFO is allowed.
+tip: No LIFO.
+src: Study text ch5 - cost formulas (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which concept explains why unsold inventory is carried forward rather than expensed?
++ Matching (accruals) - costs are matched with the revenue they help earn || Expense when sold.
+- Going concern only || Not the main concept.
+- Business entity || Not relevant.
+- Materiality || Not relevant.
+explain: Cost of sales includes only goods actually sold.
+mistake: Expensing all purchases.
+tip: Match cost to sale.
+src: Study text ch5 - matching (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the year-end entry to record closing inventory?
++ Debit inventory; credit cost of sales || Asset recognised, cost of sales reduced.
+- Debit cost of sales; credit inventory || That transfers opening inventory.
+- Debit purchases; credit inventory || Not correct.
+- Debit inventory; credit sales || Not revenue.
+explain: Opening inventory is transferred: Dr cost of sales, Cr inventory.
+mistake: Reversing the entry.
+tip: Closing inventory = asset debit.
+src: Study text ch5 - inventory entries (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is net realisable value (NRV) calculated?
++ Estimated selling price less costs to complete and costs to sell || Net amount realisable.
+- Cost plus a mark-up || Not NRV.
+- Replacement cost less depreciation || Not NRV.
+- Selling price plus selling costs || Wrong sign.
+explain: If NRV falls below cost, inventory is written down.
+mistake: Adding selling costs.
+tip: Price less costs to finish and sell.
+src: Study text ch5 - NRV (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What does FIFO assume?
++ The oldest items are sold first || Closing inventory is the most recent purchases.
+- The newest items are sold first || LIFO.
+- All items cost the same average price || AVCO.
+- Items are sold at random || Not a method.
+explain: In rising prices FIFO gives the highest closing inventory.
+mistake: Confusing with LIFO.
+tip: First in, first out.
+src: Study text ch5 - FIFO (concept basis; original question)
+
+=== Q008
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: An item cost $40. It can be sold for $50 after completion costs of $8 and selling costs of $5. At what value ($) should it be included in inventory?
+answer: 37
+tol: 0
+unit: $
+formula: Value = lower of cost and (selling price - completion - selling costs)
+step: NRV = 50 - 8 - 5 = 37.
+step: Lower of cost 40 and NRV 37 = $37.
+check: 50-8-5
+explain: A write-down of $3 is charged to profit.
+mistake: Ignoring completion costs.
+tip: Compare cost with NRV.
+src: Study text ch5 - NRV (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which cost should be INCLUDED in the cost of inventory under IAS 2?
++ Import duties on raw materials || Part of purchase cost.
+- Selling costs || Excluded.
+- General administrative overheads || Excluded.
+- Abnormal wastage || Excluded.
+explain: Cost includes bringing inventory to its present location and condition.
+mistake: Including selling costs.
+tip: Getting it here and ready.
+src: Study text ch5 - cost (concept basis; original question)
+
+=== Q010
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: Sales are $45,000 and cost of sales is $28,000. What is gross profit ($)?
+answer: 17000
+tol: 0
+unit: $
+formula: Gross profit = sales - cost of sales
+step: Sales = 45,000; cost of sales = 28,000.
+step: Gross profit = $17,000.
+check: 45000-28000
+explain: Closing inventory affects gross profit through cost of sales.
+mistake: Subtracting purchases.
+tip: Sales less cost of sales.
+src: Study text ch5 - gross profit (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Item A: cost $2,000, NRV $2,600. Item B: cost $3,500, NRV $2,900. Item C: cost $1,800, NRV $2,100.
+q: At what total value ($) should inventory be stated?
+answer: 6700
+tol: 0
+unit: $
+formula: Inventory = Σ lower of cost and NRV, item by item
+step: A 2,000; B 2,900; C 1,800.
+step: Total = 2,000 + 2,900 + 1,800 = $6,700.
+check: 2000+2900+1800
+explain: Comparing totals (cost 7,300 vs NRV 7,600) would wrongly give 7,300.
+mistake: Comparing in total.
+tip: Item by item.
+src: Study text ch5 - item by item (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Purchase price of goods $20,000; import duty $1,500; carriage inwards $800; trade discount received $1,000; storage at the warehouse after arrival $400 (not necessary for production).
+q: What is the cost ($) of the inventory under IAS 2?
+answer: 21300
+tol: 0
+unit: $
+formula: Cost = purchase price + duties + transport - trade discounts
+step: 20,000 + 1,500 + 800 = 22,300.
+step: Less trade discount 1,000 = $21,300 (storage excluded).
+check: 20000+1500+800-1000
+explain: Storage after arrival is not part of cost unless needed in production.
+mistake: Including storage.
+tip: Bring it here; don't store it.
+src: Study text ch5 - cost (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 100 units at $10. Purchases: 200 units at $12 in January; 150 units at $13 in March. 220 units were sold in February. Closing inventory 230 units.
+q: What is the closing inventory value using FIFO?
++ $2,910 || 150 x 13 + 80 x 12.
+- $2,734 || Periodic AVCO.
+- $2,857 || Continuous AVCO.
+- $2,440 || FIFO cost of sales.
+formula: FIFO closing = most recent purchases
+step: Latest 150 units at 13 = 1,950.
+step: Next 80 units from January at 12 = 960; total = $2,910.
+check: 150*13+80*12
+explain: FIFO leaves the newest costs in inventory.
+mistake: Valuing at opening prices.
+tip: Closing = latest layers.
+src: Study text ch5 - FIFO (concept basis; original figures)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 100 units at $10. Purchases: 200 units at $12; 150 units at $13. Closing inventory 230 units.
+q: Using the PERIODIC weighted average method, what is closing inventory ($)? Round to the nearest dollar.
+answer: 2734
+tol: 0.5
+unit: $
+formula: Average cost = (opening + purchases) / total units; closing = units x average
+step: Total cost = 1,000 + 2,400 + 1,950 = 5,350; units = 450; average = $11.889.
+step: Closing = 230 x 11.889 = $2,734.
+check: 230*5350/450
+explain: One average is used for the whole period.
+mistake: Averaging the three prices without weighting.
+tip: Weight by units.
+src: Study text ch5 - periodic AVCO (concept basis; original figures)
+
+=== Q015
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO costs should be EXCLUDED from the cost of inventory?
++ Selling costs || Excluded.
++ Abnormal amounts of wasted materials || Excluded.
+- Direct labour in production || Conversion cost.
+- Production overheads based on normal capacity || Conversion cost.
+explain: Administrative overheads and unnecessary storage are also excluded.
+mistake: Including selling costs.
+tip: Production yes; selling no.
+src: Study text ch5 - exclusions (concept basis; original question)
+
+=== Q016
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each cost formula with its description.
+pair: FIFO => Oldest items are assumed sold first
+pair: Periodic weighted average => One average cost calculated for the whole period
+pair: Continuous weighted average => A new average calculated after each purchase
+pair: LIFO => Not permitted under IAS 2
+explain: Different methods give different profits.
+mistake: Mixing the average methods.
+tip: Period vs continuous.
+src: Study text ch5 - cost formulas (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: Inventory cost $15,000 but its NRV is now $11,500. What write-down ($) is charged to profit or loss?
+answer: 3500
+tol: 0
+unit: $
+formula: Write-down = cost - NRV
+step: 15,000 - 11,500.
+step: = $3,500.
+check: 15000-11500
+explain: The write-down increases cost of sales.
+mistake: Writing up to NRV when NRV exceeds cost.
+tip: Only write down.
+src: Study text ch5 - write-down (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: In a period of RISING prices, which method gives the HIGHEST closing inventory value?
++ FIFO || Closing inventory at latest, higher prices.
+- Periodic weighted average || Between.
+- Continuous weighted average || Between.
+- All give the same value || They differ.
+explain: Higher closing inventory gives higher profit.
+mistake: Thinking methods agree.
+tip: FIFO = recent prices.
+src: Study text ch5 - comparison (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Per unit: direct materials $6; direct labour $4; production overheads (at normal capacity) $2; administration overhead $1; selling costs $1.50.
+q: What is the cost per unit ($) for inventory valuation?
+answer: 12
+tol: 0
+unit: $
+formula: Cost = materials + labour + production overheads
+step: 6 + 4 + 2 = 12.
+step: Administration and selling costs are excluded.
+check: 6+4+2
+explain: Conversion costs include production overheads only.
+mistake: Including admin or selling costs.
+tip: Production costs only.
+src: Study text ch5 - conversion cost (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Where does closing inventory appear in the financial statements?
++ As a current asset in the SOFP, and deducted in cost of sales || Both statements.
+- As a non-current asset || Current.
+- As an expense only || It reduces cost of sales.
+- As a liability || An asset.
+explain: Opening inventory is added in cost of sales.
+mistake: Showing it only in one statement.
+tip: SOFP asset + COS deduction.
+src: Study text ch5 - presentation (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Closing inventory is overstated by $2,000. What is the effect on profit for the year?
++ Profit is overstated by $2,000 || Cost of sales is understated.
+- Profit is understated by $2,000 || Overstated.
+- No effect || Profit is affected.
+- Profit is overstated by $4,000 || Only once.
+formula: Cost of sales = opening + purchases - closing
+step: Higher closing inventory lowers cost of sales by 2,000.
+step: Profit rises by 2,000.
+check: 2000
+explain: Next year's opening inventory will also be overstated, reducing next year's profit.
+mistake: Reversing the effect.
+tip: Closing up = profit up.
+src: Study text ch5 - errors (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why is the cost and NRV comparison made item by item?
++ Losses on some items must not be hidden by gains on others || Prudence.
+- To save time || It takes longer.
+- Because IAS 2 bans totals for convenience || The reason is prudence.
+- To increase inventory value || It reduces it.
+explain: Groups of similar items may be compared together.
+mistake: Comparing totals.
+tip: Don't offset.
+src: Study text ch5 - item by item (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 100 units at $10. January: purchased 200 units at $12. February: sold 220 units at $20 each.
+q: Using FIFO, what is the gross profit ($) on the February sales?
+answer: 1960
+tol: 0
+unit: $
+formula: Gross profit = sales - FIFO cost of sales
+step: FIFO cost = 100 x 10 + 120 x 12 = 1,000 + 1,440 = 2,440.
+step: Sales = 220 x 20 = 4,400; GP = 4,400 - 2,440 = $1,960.
+check: 220*20-(100*10+120*12)
+explain: FIFO uses the oldest costs first.
+mistake: Using the latest price for all units.
+tip: Old layers first.
+src: Study text ch5 - FIFO profit (concept basis; original figures)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which of these is a reason NRV might fall BELOW cost?
++ The goods have become damaged or obsolete || Selling price falls.
+- Purchase prices have risen || Raises replacement cost, not NRV.
+- Demand has increased || Usually raises price.
+- Selling costs have fallen || Increases NRV.
+explain: Errors in production or marketing decisions also reduce NRV.
+mistake: Linking NRV to purchase price.
+tip: Damaged, obsolete, falling price.
+src: Study text ch5 - NRV (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the difference between periodic and continuous inventory records?
++ Periodic records count inventory at the period end; continuous records update after each movement || Timing of records.
+- Periodic records are not allowed || Allowed.
+- Continuous records never need counting || Counts still verify.
+- There is no difference || There is.
+explain: Continuous AVCO recalculates after each purchase.
+mistake: Thinking counts are unnecessary.
+tip: End vs every movement.
+src: Study text ch5 - records (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee values inventory at selling price "because that is what it is worth". What is wrong?
++ Inventory is valued at the lower of cost and NRV; selling price would recognise profit before sale || Prudence.
+- Nothing is wrong || Overstates.
+- Inventory should be at zero || Not correct.
+- Inventory should be at higher of cost and NRV || Not correct.
+explain: Profit is recognised only when goods are sold.
+mistake: Using selling price.
+tip: Never above cost.
+src: Study text ch5 - valuation (concept basis; original question)
+
+=== Q027
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put the steps of calculating gross profit in order.
+item: Start with opening inventory
+item: Add purchases for the period
+item: Deduct closing inventory to find cost of sales
+item: Deduct cost of sales from revenue
+explain: This is the cost of sales working.
+mistake: Adding closing inventory.
+tip: Opening, purchases, closing, revenue.
+src: Study text ch5 - gross profit (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is the year-end entry that transfers OPENING inventory?
++ Debit cost of sales; credit inventory || Opening inventory becomes an expense.
+- Debit inventory; credit cost of sales || That records closing inventory.
+- Debit purchases; credit inventory || Not standard.
+- No entry || An entry is needed.
+explain: Then closing inventory is recognised.
+mistake: Reversing the entries.
+tip: Opening out, closing in.
+src: Study text ch5 - inventory entries (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: How are production overheads allocated to inventory under IAS 2?
++ Based on the normal capacity of production facilities || Avoids inflating cost in low-output periods.
+- Based on actual output, even if very low || Could overstate cost.
+- Not at all || They are included.
+- Based on sales volume || Not correct.
+explain: Unallocated overheads in low-output periods are expensed.
+mistake: Allocating all overheads over low output.
+tip: Normal capacity.
+src: Study text ch5 - overheads (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: Cost of sales is $52,000, opening inventory $7,500 and closing inventory $9,200. What were purchases ($)?
+answer: 53700
+tol: 0
+unit: $
+formula: Purchases = cost of sales - opening + closing
+step: 52,000 - 7,500 = 44,500.
+step: 44,500 + 9,200 = $53,700.
+check: 52000-7500+9200
+explain: Rearrange the cost of sales formula.
+mistake: Reversing opening and closing.
+tip: Work back carefully.
+src: Study text ch5 - cost of sales (concept basis; original question)
+
+=== Q031
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 100 units at $10. January: purchased 200 units at $12. February: sold 220 units. March: purchased 150 units at $13.
+q: Using the CONTINUOUS weighted average method, what is closing inventory ($)? Round to the nearest dollar.
+answer: 2857
+tol: 0.5
+unit: $
+formula: New average after each purchase
+step: After January: 300 units costing 3,400; average 11.333. Sale of 220 leaves 80 units = 906.67.
+step: After March: 906.67 + 1,950 = 2,856.67 for 230 units = $2,857.
+check: 3400/300*80+150*13
+explain: The average is recalculated after each purchase.
+mistake: Using one average for the period.
+tip: Recalculate after every purchase.
+src: Study text ch5 - continuous AVCO (concept basis; original figures)
+
+=== Q032
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Inventory includes 500 units costing $30 each. They are damaged; after repairs costing $4 per unit they can be sold for $35 each, with selling commission of 10% of the selling price.
+q: What value should be included for these units?
++ $13,750 || NRV 35 - 4 - 3.50 = 27.50 x 500.
+- $15,000 || At cost.
+- $15,500 || Ignores commission.
+- $17,500 || At selling price.
+formula: Value = units x lower of cost and NRV
+step: NRV per unit = 35 - 4 - 3.50 = 27.50.
+step: Lower than cost $30; value = 500 x 27.50 = $13,750.
+check: 500*(35-4-35*0.1)
+explain: The write-down is 500 x 2.50 = $1,250.
+mistake: Forgetting commission.
+tip: All costs to sell.
+src: Study text ch5 - NRV (concept basis; original figures)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Sales $120,000; opening inventory $14,000; purchases $78,000; carriage inwards $2,000; returns outwards $3,000; closing inventory $16,500.
+q: What is gross profit ($)?
+answer: 45500
+tol: 0
+unit: $
+formula: GP = sales - (opening + purchases + carriage in - returns out - closing)
+step: Cost of sales = 14,000 + 78,000 + 2,000 - 3,000 - 16,500 = 74,500.
+step: GP = 120,000 - 74,500 = $45,500.
+check: 120000-(14000+78000+2000-3000-16500)
+explain: Carriage inwards is part of cost of purchases.
+mistake: Treating carriage inwards as a distribution expense.
+tip: Carriage IN = cost of sales.
+src: Study text ch5 - cost of sales (concept basis; original figures)
+
+=== Q034
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+scenario: Item X: cost $5,000, NRV $4,200. Item Y: cost $3,000, NRV $4,500.
+q: A trainee compares totals (cost $8,000, NRV $8,700) and values inventory at $8,000. What is the correct value?
++ $7,200 || 4,200 + 3,000 item by item.
+- $8,000 || Total comparison.
+- $8,700 || Total NRV.
+- $7,500 || Not supported.
+formula: Σ lower of cost and NRV per item
+step: X: lower of 5,000 and 4,200 = 4,200.
+step: Y: lower of 3,000 and 4,500 = 3,000; total $7,200.
+check: 4200+3000
+explain: The gain on Y must not offset the loss on X.
+mistake: Total comparison.
+tip: Item by item.
+src: Study text ch5 - item by item (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: Prices have risen steadily all year. A company switches from AVCO to FIFO. What is the likely effect on reported profit this year?
++ Profit increases, because closing inventory is valued at higher recent prices || Lower cost of sales.
+- Profit decreases || Opposite.
+- No effect || Methods differ.
+- Revenue increases || Revenue unaffected.
+explain: Consistent use of methods supports comparability.
+mistake: Thinking methods only affect inventory.
+tip: Higher closing = higher profit.
+src: Study text ch5 - method effects (concept basis; original scenario)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: A business has a gross profit margin of 25% on sales of $80,000. Opening inventory is $9,000 and purchases are $63,000. What is closing inventory ($)?
+answer: 12000
+tol: 0
+unit: $
+formula: Closing = opening + purchases - cost of sales
+step: Cost of sales = 80,000 x 75% = 60,000.
+step: Closing = 9,000 + 63,000 - 60,000 = $12,000.
+check: 9000+63000-80000*0.75
+explain: Useful for estimating inventory lost in a fire or theft.
+mistake: Using a 25% mark-up instead of margin.
+tip: Margin on sales.
+src: Study text ch5 - incomplete records link (concept basis; original question)
+
+=== Q037
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO must be disclosed about inventories under IAS 2?
++ The accounting policies, including the cost formula used || Required.
++ The amount of any write-down recognised as an expense || Required.
+- The names of all suppliers || Not required.
+- The selling price of every item || Not required.
+explain: Carrying amounts by classification are also disclosed.
+mistake: Over-disclosing commercial detail.
+tip: Policy, amounts, write-downs.
+src: Study text ch5 - disclosure (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 50 units at $8. Purchases: 100 units at $9; 150 units at $10. Sales: 220 units at $15.
+q: Using FIFO, what is gross profit ($)?
+answer: 1300
+tol: 0
+unit: $
+formula: GP = sales - FIFO cost of sales
+step: Cost of 220 units = 50 x 8 + 100 x 9 + 70 x 10 = 400 + 900 + 700 = 2,000.
+step: Sales = 220 x 15 = 3,300; GP = 3,300 - 2,000 = $1,300.
+check: 220*15-(50*8+100*9+70*10)
+explain: Closing inventory is 80 units at $10 = $800.
+mistake: Using the average price for all units.
+tip: Use up the oldest layers first.
+src: Study text ch5 - FIFO (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Inventory was written down to NRV last year. This year the selling price has recovered. What does IAS 2 allow?
++ The write-down is reversed, but the new carrying amount cannot exceed original cost || Limited reversal.
+- Inventory is written up to the new selling price || Above cost is not allowed.
+- No reversal is ever permitted || Reversal is permitted.
+- The reversal goes to share capital || Goes to profit or loss.
+explain: The reversal reduces the inventory expense of the period.
+mistake: Writing up above cost.
+tip: Back up to cost, no further.
+src: Study text ch5 - reversals (concept basis; original question)
+
+=== Q040
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: The year end is 31 December. Inventory was counted on 3 January at cost of $21,000. Between 1 and 3 January, goods costing $1,500 were sold and goods costing $800 were received from suppliers.
+q: What is the inventory value ($) at 31 December?
+answer: 21700
+tol: 0
+unit: $
+formula: Year-end inventory = count + goods sold since - goods received since
+step: Add back goods sold after the year end: 21,000 + 1,500 = 22,500.
+step: Remove goods received after the year end: 22,500 - 800 = $21,700.
+check: 21000+1500-800
+explain: Work back from the count date to the reporting date.
+mistake: Reversing the adjustments.
+tip: Undo post year-end movements.
+src: Study text ch5 - inventory counts (concept basis; original figures)
+
+=== Q041
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee adds showroom display and advertising costs to the cost of finished goods inventory. What is wrong?
++ Selling costs are excluded from inventory cost under IAS 2 || Expensed as incurred.
+- Nothing is wrong || They are selling costs.
+- They should be added to NRV || NRV deducts selling costs.
+- They should be capitalised as non-current assets || Not assets.
+explain: Including them overstates inventory and profit.
+mistake: Capitalising selling costs.
+tip: Selling costs = expense.
+src: Study text ch5 - exclusions (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Opening inventory 100 units at $10. Purchases: 200 units at $12; 150 units at $13. 220 units were sold in the period.
+q: Using the PERIODIC weighted average method, what is cost of sales (to the nearest dollar)?
++ $2,616 || 220 x 5,350 / 450.
+- $2,440 || FIFO.
+- $2,734 || Closing inventory.
+- $2,640 || Uses $12 for all units.
+formula: Cost of sales = units sold x period average cost
+step: Average = 5,350 / 450 = 11.889.
+step: Cost of sales = 220 x 11.889 = $2,616.
+check: 220*5350/450
+explain: Cost of sales + closing inventory = 2,616 + 2,734 = 5,350.
+mistake: Using one purchase price.
+tip: Units sold x average.
+src: Study text ch5 - periodic AVCO (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Does the choice between FIFO and AVCO affect the company's cash flows?
++ No - it changes reported cost of sales and inventory, not cash paid to suppliers || Accounting allocation only.
+- Yes - FIFO always increases cash || Cash is unaffected (ignoring tax).
+- Yes - AVCO always reduces cash || Cash is unaffected.
+- Only for cash sales || No.
+explain: The method allocates the same total cost between periods.
+mistake: Confusing profit and cash.
+tip: Method = allocation, not cash.
+src: Study text ch5 - methods (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+q: Last year's closing inventory was overstated by $1,500 and the error was not corrected. What is the effect on THIS year's profit?
++ Understated by $1,500 || Opening inventory too high increases this year's cost of sales.
+- Overstated by $1,500 || That was last year.
+- No effect || Opening inventory is affected.
+- Understated by $3,000 || Only once.
+formula: Cost of sales = opening + purchases - closing
+step: Opening inventory is overstated by 1,500.
+step: Cost of sales is overstated, so profit is understated by 1,500.
+check: 1500
+explain: Inventory errors reverse in the next period.
+mistake: Thinking the error repeats in the same direction.
+tip: Last year up, this year down.
+src: Study text ch5 - errors (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: For a manufacturer, which items are included in inventory?
++ Raw materials, work in progress and finished goods || All three.
+- Finished goods only || Not complete.
+- Machinery used in production || Non-current asset.
+- Office stationery for admin use || Usually expensed.
+explain: Each is measured at the lower of cost and NRV.
+mistake: Leaving out WIP.
+tip: Raw, WIP, finished.
+src: Study text ch5 - inventory types (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Fixed production overheads are $60,000 and normal capacity is 20,000 units, but only 15,000 units were produced. Direct materials are $5 and direct labour $4 per unit.
+q: What is the cost per unit ($) for inventory valuation?
+answer: 12
+tol: 0
+unit: $
+formula: Cost = materials + labour + fixed overhead / normal capacity
+step: Overhead per unit = 60,000 / 20,000 = 3.
+step: Cost = 5 + 4 + 3 = $12.
+check: 5+4+60000/20000
+explain: Unabsorbed overhead (5,000 x 3 = 15,000) is expensed.
+mistake: Dividing by actual output (giving $4).
+tip: Normal capacity, not actual.
+src: Study text ch5 - overheads (concept basis; original figures)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: When prices are FALLING, which method gives the LOWEST closing inventory value?
++ FIFO || Closing inventory is at the latest, lower prices.
+- Periodic weighted average || Between.
+- Continuous weighted average || Between.
+- All give the same value || They differ.
+explain: The effects reverse when the price trend reverses.
+mistake: Assuming FIFO always gives the highest value.
+tip: FIFO follows recent prices.
+src: Study text ch5 - falling prices (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A retailer holds 1,000 units of an outdated phone model costing $80 each. They can now only be sold to a recycler for $5 each, with collection costs of $1 per unit. At what amount should they be included in inventory?
++ $4,000 || NRV 5 - 1 = 4 per unit.
+- $80,000 || At cost.
+- $5,000 || Ignores collection costs.
+- $0 || They still have some value.
+formula: Value = units x lower of cost and NRV
+step: NRV = 5 - 1 = $4 per unit.
+step: Value = 1,000 x 4 = $4,000.
+check: 1000*(5-1)
+explain: The write-down is $76,000.
+mistake: Leaving obsolete stock at cost.
+tip: Obsolete = write down to NRV.
+src: Study text ch5 - obsolescence (concept basis; original scenario)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about IAS 2 is correct?
++ Inventory is measured at the lower of cost and NRV, item by item || Core rule.
+- Inventory is measured at selling price || Not allowed.
+- LIFO is the preferred method || Not permitted.
+- Selling costs are included in cost || Excluded.
+explain: FIFO and weighted average are permitted.
+mistake: Comparing in total.
+tip: Lower of cost and NRV, item by item.
+src: Study text ch5 - IAS 2 (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: Which formula gives cost of sales?
++ Opening inventory + purchases - closing inventory || Core formula.
+- Opening inventory - purchases + closing inventory || Signs wrong.
+- Purchases + closing inventory || Wrong.
+- Sales - purchases || That is not cost of sales.
+explain: Carriage inwards and returns outwards adjust purchases.
+mistake: Adding closing inventory.
+tip: Plus opening, minus closing.
+src: Study text ch5 - cost of sales (concept basis; original question)

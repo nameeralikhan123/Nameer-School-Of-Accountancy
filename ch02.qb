@@ -1,0 +1,815 @@
+@subject acffa2
+@chapter 2
+@title The Regulatory Framework
+@lo B1
+@topic t1 | Why regulation is needed | B1
+@topic t2 | The international regulatory structure | B1
+@topic t3 | Ownership, control and audit | B1
+@topic t4 | Corporate governance | B1
+@topic t5 | Principles vs rules | B1
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which body develops and issues IFRS Accounting Standards?
++ The International Accounting Standards Board (IASB) || The independent standard-setter.
+- The IFRS Foundation || Oversees and funds; does not write standards.
+- The IFRS Interpretations Committee || Issues interpretations.
+- The IFRS Advisory Council || Gives advice.
+explain: Each body in the structure has a distinct role.
+mistake: Naming the Foundation as the standard-setter.
+tip: IASB writes the standards.
+src: Study text ch2 - structure (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the main role of the IFRS Interpretations Committee (IFRIC)?
++ To give authoritative guidance on accounting issues where practice is inconsistent || It interprets standards.
+- To appoint IASB members || The Foundation's role.
+- To audit company accounts || Auditors' role.
+- To set tax rates || Governments' role.
+explain: Interpretations help apply standards consistently.
+mistake: Confusing IFRIC with the Advisory Council.
+tip: IFRIC interprets.
+src: Study text ch2 - IFRIC (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Who is responsible for preparing a company's financial statements?
++ The directors || Management prepares them.
+- The external auditors || They give an opinion.
+- The shareholders || They receive them.
+- The IASB || Sets standards only.
+explain: Auditors report on whether the statements give a true and fair view.
+mistake: Thinking auditors prepare the accounts.
+tip: Directors prepare; auditors report.
+src: Study text ch2 - responsibilities (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is corporate governance?
++ The system by which companies are directed and controlled || Standard definition.
+- The process of setting accounting standards || IASB's role.
+- The calculation of corporation tax || Not governance.
+- The audit of financial statements || Part of oversight, not the whole system.
+explain: Governance protects shareholders and maintains market confidence.
+mistake: Equating governance with audit.
+tip: Directed and controlled.
+src: Study text ch2 - governance (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: What is the status of the UK Corporate Governance Code for listed companies?
++ "Comply or explain" - comply with its principles or explain why not || A code, not law.
+- It is criminal law || That describes Sarbanes-Oxley.
+- It is optional with no reporting needed || Explanation is required.
+- It applies only to sole traders || Not relevant.
+explain: Market pressure encourages compliance.
+mistake: Treating the code as law.
+tip: Comply or explain.
+src: Study text ch2 - UK code (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Why are financial statements regulated?
++ To make them reliable and comparable and reduce scope for manipulation || Protects users.
+- To increase reported profits || Not the aim.
+- To remove the need for audit || Audit is part of regulation.
+- To let each company choose its own rules freely || The opposite.
+explain: Regulation builds trust in reported information.
+mistake: Thinking regulation helps preparers inflate results.
+tip: Trust and comparability.
+src: Study text ch2 - regulation (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What opinion does an external auditor give?
++ Whether the financial statements give a true and fair view (present fairly) || Not a guarantee of accuracy.
+- That the statements are 100% accurate || Auditors give reasonable assurance.
+- That the company will be profitable next year || Not their role.
+- That the share price is correct || Not their role.
+explain: Auditors must be independent and qualified.
+mistake: Expecting a guarantee.
+tip: True and fair.
+src: Study text ch2 - audit (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: How is corporate governance enforced in the United States under Sarbanes-Oxley?
++ By law, with possible criminal penalties for non-compliance || Rules-based.
+- On a "comply or explain" basis || UK approach.
+- Entirely voluntarily || Compulsory.
+- By the IASB || Not its role.
+explain: SOX is a rules-based legal regime.
+mistake: Calling SOX comply or explain.
+tip: SOX = law.
+src: Study text ch2 - SOX (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the role of the IFRS Foundation?
++ Overseeing governance and funding, and appointing members of the Board || Supervisory body.
+- Writing every accounting standard || IASB's role.
+- Interpreting standards || IFRIC's role.
+- Auditing listed companies || Not its role.
+explain: The Foundation sits at the top of the structure.
+mistake: Thinking it writes standards.
+tip: Foundation = oversight.
+src: Study text ch2 - Foundation (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: In a company, what is meant by the separation of ownership and control?
++ Shareholders own the company but directors run it || Owners rely on reports to judge directors.
+- Directors own all the shares || Not usual in large companies.
+- Auditors control the company || Not the case.
+- Employees own the company || Not the meaning.
+explain: This separation creates the need for reliable reporting and audit.
+mistake: Thinking owners manage day to day.
+tip: Owners vs managers.
+src: Study text ch2 - ownership and control (concept basis; original question)
+
+=== Q011
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the stages of developing a new IFRS Standard in order.
+item: Identify the subject and set up an advisory committee
+item: Publish a discussion paper
+item: Publish an exposure draft for public comment
+item: Consider comments received
+item: Issue the final standard
+explain: This due process gives stakeholders a chance to comment.
+mistake: Placing the exposure draft before the discussion paper.
+tip: Discuss, expose, consider, issue.
+src: Study text ch2 - due process (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is the main benefit of international harmonisation through IFRS Standards?
++ Financial statements from different countries are easier to compare, supporting cross-border investment || Common language.
+- Every company pays the same tax || Tax is national.
+- Audits are no longer required || Still required.
+- Share prices become fixed || Not related.
+explain: National laws and tax rules still differ.
+mistake: Overstating harmonisation.
+tip: Compare across borders.
+src: Study text ch2 - harmonisation (concept basis; original question)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO typically form part of a national regulatory framework for financial reporting?
++ Company law || Sets legal reporting requirements.
++ Stock exchange listing rules || Apply to listed companies.
+- A company's internal sales targets || Not regulation.
+- The directors' personal preferences || Not regulation.
+explain: National standards and tax law also contribute.
+mistake: Including internal targets.
+tip: Law, standards, exchange rules, tax.
+src: Study text ch2 - national frameworks (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each body with its role.
+pair: IFRS Foundation => Oversight, funding and appointments
+pair: IASB => Develops and issues IFRS Standards
+pair: IFRS Interpretations Committee => Issues interpretations on application issues
+pair: IFRS Advisory Council => Gives strategic advice to the Board and Foundation
+explain: Know which body does what.
+mistake: Mixing IFRIC and the Advisory Council.
+tip: Oversee, write, interpret, advise.
+src: Study text ch2 - structure (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the role of the International Sustainability Standards Board (ISSB)?
++ To develop a global baseline of sustainability-related disclosure standards || Formed in 2021.
+- To set financial accounting standards || IASB.
+- To audit environmental claims || Not its role.
+- To collect environmental taxes || Not its role.
+explain: The ISSB sits within the IFRS Foundation.
+mistake: Confusing it with the IASB.
+tip: ISSB = sustainability.
+src: Study text ch2 - ISSB (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is a typical corporate governance provision?
++ Separating the roles of chair and chief executive || Avoids concentration of power.
+- Allowing the CEO to chair the audit committee || Not independent.
+- Abolishing non-executive directors || The opposite.
+- Directors setting their own pay without oversight || Remuneration committees prevent this.
+explain: Independent non-executives and committees strengthen oversight.
+mistake: Allowing one person too much power.
+tip: Split the top roles.
+src: Study text ch2 - governance provisions (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is an exposure draft?
++ A draft standard published for public comment before it is finalised || Part of due process.
+- The final issued standard || Comes later.
+- An auditor's report || Not related.
+- A company's draft accounts || Not related.
+explain: Comments may lead to changes before issue.
+mistake: Thinking it is final.
+tip: Draft for comment.
+src: Study text ch2 - due process (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is the purpose of an audit committee of independent non-executive directors?
++ To oversee financial reporting, internal control and the relationship with external auditors || Independent oversight.
+- To prepare the accounts || Directors and staff prepare them.
+- To set sales prices || Not its role.
+- To replace the external auditor || Not possible.
+explain: Independence improves the credibility of reporting.
+mistake: Thinking it prepares accounts.
+tip: Oversight, not preparation.
+src: Study text ch2 - committees (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: Which is an advantage of a principles-based governance code?
++ Flexibility to adapt to each company's circumstances || Comply or explain.
+- Criminal penalties for every breach || Rules-based feature.
+- No disclosure is needed || Explanation is required.
+- Every company must follow identical rules || Rules-based.
+explain: Rules-based systems give certainty but less flexibility.
+mistake: Mixing up the approaches.
+tip: Principles = flexible.
+src: Study text ch2 - principles vs rules (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why must external auditors be independent?
++ So their opinion is objective and trusted by users || Credibility.
+- So they can prepare the accounts more quickly || They don't prepare them.
+- So they can set the company's strategy || Not their role.
+- So they can own shares in the client || That would impair independence.
+explain: Shareholders rely on the auditor's objectivity.
+mistake: Allowing conflicts of interest.
+tip: Independent = trusted.
+src: Study text ch2 - audit (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which problem led to stronger corporate governance and audit requirements?
++ Unreliable and fraudulent financial reporting by some directors || Loss of trust.
+- Too many accounting standards || Not the cause.
+- Too much competition between companies || Not the cause.
+- Falling tax rates || Not the cause.
+explain: Corporate scandals damaged market confidence.
+mistake: Missing the link to scandals.
+tip: Scandals drove reform.
+src: Study text ch2 - background (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is a discussion paper in the standard-setting process?
++ An early document setting out the issues and possible approaches, inviting comment || First public stage.
+- The final standard || Later.
+- An interpretation by IFRIC || Different document.
+- A company's annual report || Not related.
+explain: An exposure draft usually follows.
+mistake: Confusing it with an exposure draft.
+tip: Discuss before drafting.
+src: Study text ch2 - due process (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A student writes that "the IFRS Foundation issues IFRS Standards after public consultation". What is wrong?
++ The IASB issues the standards; the Foundation oversees and funds || Wrong body.
+- Nothing is wrong || The body is wrong.
+- Standards are issued without consultation || There is consultation.
+- IFRIC issues all standards || IFRIC interprets.
+explain: Exam questions often test which body does what.
+mistake: Naming the Foundation.
+tip: Board writes, Foundation oversees.
+src: Study text ch2 - structure (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is the role of a remuneration committee?
++ To set directors' pay independently of the directors themselves || Avoids self-interest.
+- To audit the accounts || Audit committee or auditors.
+- To appoint the external auditor alone || Usually audit committee recommendation.
+- To set product prices || Not its role.
+explain: Typically made up of independent non-executive directors.
+mistake: Confusing committees.
+tip: Pay set independently.
+src: Study text ch2 - committees (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is NOT usually part of a national regulatory framework?
++ The company's internal management accounts || Internal only.
+- National accounting standards || Part of it.
+- Company law || Part of it.
+- Tax law || Part of it.
+explain: Management accounts are not regulated.
+mistake: Thinking management accounts are regulated.
+tip: Internal = unregulated.
+src: Study text ch2 - frameworks (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: What happens if a UK listed company does not follow a provision of the Corporate Governance Code?
++ It must explain why in its annual report || Comply or explain.
+- Directors face automatic imprisonment || Not under the code.
+- The company is delisted immediately || Not automatic.
+- Nothing needs to be said || An explanation is required.
+explain: Investors judge whether the explanation is acceptable.
+mistake: Treating the code as law.
+tip: Explain non-compliance.
+src: Study text ch2 - UK code (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Who sits on the IFRS Advisory Council?
++ A wide range of organisations and individuals with an interest in financial reporting || Broad advisory membership.
+- Only IASB members || Not the case.
+- Only auditors from one firm || Not the case.
+- Only government ministers || Not the case.
+explain: Its breadth helps the Board hear many views.
+mistake: Thinking it is a narrow group.
+tip: Broad advice.
+src: Study text ch2 - Advisory Council (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why do shareholders need audited financial statements?
++ They cannot see the company's day-to-day operations, so they rely on independently checked reports to judge directors || Separation of ownership and control.
+- To prepare the company's tax return || Not their role.
+- Because auditors manage the company || They don't.
+- To set accounting standards || Not their role.
+explain: Audit adds credibility to directors' reports.
+mistake: Missing the agency link.
+tip: Owners can't see inside.
+src: Study text ch2 - audit need (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is the role of independent non-executive directors?
++ To bring objective judgement and challenge executive directors || Independent oversight.
+- To run day-to-day operations || Executives do that.
+- To prepare management accounts || Not their role.
+- To act as the external auditor || Not their role.
+explain: They often sit on audit and remuneration committees.
+mistake: Thinking they manage operations.
+tip: Challenge and oversee.
+src: Study text ch2 - NEDs (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How can regulation reduce the scope for "creative accounting"?
++ By restricting the choice of accounting treatments and requiring disclosure || Fewer options to manipulate.
+- By allowing any treatment the directors prefer || Increases scope.
+- By banning financial statements || Not possible.
+- By abolishing audits || Increases risk.
+explain: Standards narrow the range of acceptable methods.
+mistake: Thinking regulation adds flexibility.
+tip: Fewer choices, less manipulation.
+src: Study text ch2 - regulation (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: In a listed company, the CEO also chairs the board, sets his own pay and chooses the auditors. Which governance weakness is MOST serious?
++ Excessive concentration of power with no independent oversight || Several provisions breached.
+- The company has too many committees || The opposite.
+- The auditors are too independent || Not the issue.
+- Shareholders have too much power || Not the issue.
+explain: Separate roles and independent committees address this.
+mistake: Missing the combined effect.
+tip: One person, too much power.
+src: Study text ch2 - governance (concept basis; original scenario)
+
+=== Q032
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: Companies are applying a standard in very different ways to a new type of transaction. Which body would MOST likely issue guidance?
++ The IFRS Interpretations Committee || It addresses inconsistent application.
+- The IFRS Foundation trustees || Oversight only.
+- The external auditors of each company || Not standard-setters.
+- The national tax authority || Not its role.
+explain: Interpretations are authoritative guidance.
+mistake: Naming the Foundation.
+tip: Diverse practice = IFRIC.
+src: Study text ch2 - IFRIC (concept basis; original scenario)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t5
+status: review
+select: 2
+q: Which TWO statements about rules-based governance (such as Sarbanes-Oxley) are correct?
++ Compliance is compulsory by law || Legal requirement.
++ Breaches can lead to legal or criminal penalties || Enforcement.
+- Companies may explain non-compliance instead of complying || Principles-based.
+- It is more flexible than a principles-based code || Less flexible.
+explain: Principles-based codes rely on market pressure.
+mistake: Mixing the two approaches.
+tip: Rules = law + penalties.
+src: Study text ch2 - rules (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A shareholder sues the auditors, claiming an unqualified audit report guaranteed that the accounts were completely accurate. What is the flaw in the claim?
++ An audit gives reasonable assurance that the accounts are true and fair, not a guarantee of complete accuracy || Not absolute assurance.
+- Auditors prepare the accounts, so they are responsible for every figure || Directors prepare them.
+- Audits give no assurance at all || They give reasonable assurance.
+- Shareholders cannot read audit reports || Not relevant.
+explain: Responsibility for the accounts lies with the directors.
+mistake: Treating audit as a guarantee.
+tip: Reasonable, not absolute.
+src: Study text ch2 - audit (concept basis; original scenario)
+
+=== Q035
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Even with IFRS Standards, why may financial statements from two countries still differ?
++ National laws, tax rules and the judgements applied may still vary || Harmonisation is not uniformity.
+- IFRS Standards are identical tax laws || Not tax laws.
+- IFRS bans all choices || Some choices remain.
+- All countries use the same currency || Not true.
+explain: Comparability improves but is not perfect.
+mistake: Assuming total uniformity.
+tip: Harmonised, not identical.
+src: Study text ch2 - harmonisation (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why does the IASB publish exposure drafts?
++ To obtain feedback from users, preparers and others before finalising a standard || Due process and legitimacy.
+- To delay standards indefinitely || Not the aim.
+- To let companies ignore standards || Not the aim.
+- Because laws require every country to vote || Not the process.
+explain: Consultation improves quality and acceptance.
+mistake: Seeing due process as a formality.
+tip: Consult before finalising.
+src: Study text ch2 - due process (concept basis; original question)
+
+=== Q037
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each governance mechanism with what it addresses.
+pair: Separate chair and CEO => Concentration of power at the top
+pair: Remuneration committee => Directors setting their own pay
+pair: Audit committee => Oversight of reporting and external audit
+pair: Independent non-executive directors => Objective challenge of executives
+explain: Each mechanism tackles a specific risk.
+mistake: Mixing committees.
+tip: Mechanism to risk.
+src: Study text ch2 - governance (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: scenario
+topic: t5
+status: review
+q: A small listed company decides that having a fully independent board is impractical and explains its alternative arrangements in its annual report. Under the UK approach, is this acceptable?
++ Yes - under "comply or explain", a reasoned explanation is acceptable || Flexibility.
+- No - every provision is compulsory by law || That is a rules-based regime.
+- No - it must delist immediately || Not required.
+- Yes - but only if the IASB approves || Not the IASB's role.
+explain: Shareholders judge whether the explanation is reasonable.
+mistake: Applying SOX logic in the UK.
+tip: Explain is allowed.
+src: Study text ch2 - comply or explain (concept basis; original scenario)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which BEST describes the relationship between directors, shareholders and auditors?
++ Directors prepare accounts for shareholders; auditors independently report to shareholders on them || Three-way relationship.
+- Auditors prepare accounts for directors || Wrong.
+- Shareholders prepare accounts for auditors || Wrong.
+- Directors audit the accounts for shareholders || Wrong.
+explain: The auditor's report is addressed to the shareholders.
+mistake: Thinking auditors report to directors.
+tip: Directors prepare; auditors report to owners.
+src: Study text ch2 - relationships (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: What is the MAIN aim of corporate governance from investors' point of view?
++ To protect shareholders' interests and maintain confidence in markets || Monitoring those in control.
+- To maximise directors' pay || Not the aim.
+- To remove the need for financial statements || Not the aim.
+- To guarantee dividends || Not possible.
+explain: Good governance reduces the risk of mismanagement.
+mistake: Seeing governance as directors' benefit.
+tip: Protect owners, keep trust.
+src: Study text ch2 - governance purpose (concept basis; original question)
+
+=== Q041
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee says the IFRS Advisory Council "issues interpretations of standards". What is the correct position?
++ The Advisory Council gives advice; the IFRS Interpretations Committee issues interpretations || Different bodies.
+- The trainee is correct || Not its role.
+- The IASB never issues anything || It issues standards.
+- Interpretations are issued by auditors || Not auditors.
+explain: The examining team often tests these roles.
+mistake: Confusing the two bodies.
+tip: Council advises; Committee interprets.
+src: Study text ch2 - roles (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which user group benefits MOST directly from harmonised international standards?
++ Investors comparing companies in different countries || Cross-border comparison.
+- Local tax inspectors only || Tax remains national.
+- Company employees only || Less directly.
+- Customers buying products || Not directly.
+explain: Multinational groups also save preparation costs.
+mistake: Overlooking investors.
+tip: Cross-border investors.
+src: Study text ch2 - harmonisation (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Which sequence runs from the body with OVERSIGHT, to the standard-setter, to the body giving guidance on applying standards?
++ IFRS Foundation, IASB, IFRS Interpretations Committee || Oversee, set, interpret.
+- IASB, IFRS Foundation, IFRS Interpretations Committee || The Foundation oversees the IASB.
+- IFRS Interpretations Committee, IASB, IFRS Foundation || Reversed.
+- IFRS Foundation, IFRS Interpretations Committee, IASB || The IASB sets standards before interpretations.
+explain: The Foundation oversees the Board; IFRIC supports application of standards.
+mistake: Placing IFRIC above the IASB.
+tip: Oversee, set, interpret.
+src: Study text ch2 - structure (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A company's finance director also acts as its external auditor. Why is this unacceptable?
++ The auditor would be checking their own work, so the opinion would not be independent || Self-review threat.
+- Finance directors are not qualified accountants || Not the main point.
+- External audits are optional || Not for most companies.
+- It makes the accounts more reliable || Less reliable.
+explain: Independence is essential to audit credibility.
+mistake: Thinking competence is enough.
+tip: Can't audit yourself.
+src: Study text ch2 - independence (concept basis; original scenario)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t5
+status: review
+q: What is a DISADVANTAGE of a rules-based governance regime?
++ Companies may focus on ticking boxes rather than the spirit of good governance || Form over substance.
+- It has no legal force || It does.
+- It allows explanations instead of compliance || Principles-based.
+- It gives too much flexibility || It gives little.
+explain: Compliance can be costly for smaller companies.
+mistake: Thinking rules always improve behaviour.
+tip: Box-ticking risk.
+src: Study text ch2 - rules vs principles (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why do governance codes often require directors to report on internal controls?
++ Strong controls reduce the risk of error and fraud in financial reporting || Reliability.
+- To replace the external audit || Audit remains.
+- To increase revenue || Not directly.
+- To reduce the number of directors || Not related.
+explain: SOX made internal control reporting compulsory in the US.
+mistake: Seeing control reporting as optional paperwork.
+tip: Good controls, reliable numbers.
+src: Study text ch2 - internal control (concept basis; original question)
+
+=== Q047
+type: mr
+level: C
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO statements about IFRS standard-setting are correct?
++ The IASB is independent in setting standards || Independent standard-setter.
++ Proposed standards are exposed for public comment before issue || Due process.
+- The IFRS Foundation writes the technical content of each standard || The IASB does.
+- Standards are issued without any consultation || Consultation is required.
+explain: Independence and consultation give standards legitimacy.
+mistake: Mixing roles.
+tip: Independent + consultative.
+src: Study text ch2 - standard-setting (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: An investor compares two companies in different countries and finds that one capitalises development costs while the other expenses them. What does this show?
++ Differences in accounting treatment reduce comparability, which harmonised standards aim to limit || Policy differences.
+- The companies have identical results || Not necessarily.
+- Regulation is unnecessary || The opposite.
+- Both treatments are always wrong || Not necessarily.
+explain: Users may need to adjust figures to compare.
+mistake: Comparing figures without checking policies.
+tip: Check the policies first.
+src: Study text ch2 - comparability (concept basis; original scenario)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about the IFRS structure is correct?
++ The Foundation oversees, the IASB sets standards, IFRIC interprets and the Advisory Council advises || Core roles.
+- The IASB oversees and the Foundation sets standards || Reversed.
+- IFRIC sets standards || Interprets.
+- The Advisory Council issues interpretations || Advises.
+explain: The ISSB sets sustainability disclosure standards.
+mistake: Mixing up roles.
+tip: Oversee, set, interpret, advise.
+src: Study text ch2 - structure (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t5
+status: review
+important: 1
+q: Which pair correctly contrasts the UK and US approaches to governance?
++ UK: comply or explain (principles); US: Sarbanes-Oxley law (rules) || Core contrast.
+- UK: law with criminal penalties; US: comply or explain || Reversed.
+- Both are voluntary with no reporting || Neither is.
+- Both are set by the IASB || Not IASB matters.
+explain: Principles give flexibility; rules give certainty.
+mistake: Reversing them.
+tip: UK explain; US enforce.
+src: Study text ch2 - comparison (concept basis; original question)

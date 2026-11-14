@@ -1,0 +1,898 @@
+@subject acfbe
+@chapter 4a
+@title Forecasting
+@lo B1
+@topic t1 | Correlation | B1
+@topic t2 | Least squares regression | B1
+@topic t3 | High-low forecasting | B1
+@topic t4 | Time series analysis | B1
+@topic t5 | Index numbers | B1
+@topic t6 | Product life cycle | B1
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Within what range must a correlation coefficient (r) lie?
++ Between -1 and +1 || -1 is perfect negative, +1 perfect positive and 0 no correlation.
+- Between 0 and 1 only || Negative correlation is possible.
+- Between -100 and +100 || r is not a percentage.
+- Any value at all || It is bounded.
+explain: The sign shows the direction; the size shows the strength of a linear relationship.
+mistake: Forgetting negative values.
+tip: -1 to +1.
+src: Study text ch4a - correlation (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: The correlation coefficient between advertising spend and sales is 0.9. What percentage of the variation in sales is explained by variation in advertising spend?
+answer: 81
+tol: 0
+unit: %
+formula: Coefficient of determination = r²
+step: r² = 0.9 x 0.9 = 0.81.
+step: 0.81 = 81% of the variation in sales.
+check: 0.9**2*100
+explain: r² measures the proportion of variation in the dependent variable explained by the independent variable.
+mistake: Reporting 90% (r instead of r²).
+tip: Square r.
+src: Study text ch4a - coefficient of determination (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which of the following is NOT one of the components into which a time series is analysed?
++ Elasticity || Elasticity concerns demand responsiveness, not time series analysis.
+- Trend || The long-term underlying movement is a component.
+- Seasonal variation || Regular short-term fluctuation is a component.
+- Random variation || Unpredictable irregular movement is a component.
+explain: A time series is analysed into trend, seasonal, cyclical and random elements.
+mistake: Confusing time series analysis with other forecasting ideas.
+tip: T, S, C, R.
+src: Study text ch4a - time series (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: What value is given to the base period in an index?
++ 100 || Other periods are measured relative to 100.
+- 0 || Not used.
+- 1,000 || Not standard.
+- 1 || Not standard for index numbers.
+explain: An index measures average changes relative to a base period of 100.
+mistake: Thinking the base is 0.
+tip: Base = 100.
+src: Study text ch4a - index numbers (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t6
+status: review
+q: Which stage of the product life cycle is usually the LONGEST?
++ Maturity || Sales growth slows and the product becomes established.
+- Introduction || Usually short.
+- Growth || Usually shorter than maturity.
+- Decline || Varies, but maturity is usually longest.
+explain: Stages: introduction, growth, maturity, decline.
+mistake: Choosing growth.
+tip: Mature products last longest.
+src: Study text ch4a - product life cycle (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t5
+status: review
+q: The price of coffee rises from 40c (base period) to 50c. What is the simple price index for the current period?
+answer: 125
+tol: 0
+formula: Simple price index = P1 / P0 x 100
+step: 50 / 40 = 1.25.
+step: 1.25 x 100 = 125.
+check: 50/40*100
+explain: An index of 125 means prices are 25% higher than in the base period.
+mistake: Dividing base by current price (80).
+tip: Current over base.
+src: Study text ch4a - simple indices (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: In regression analysis, Y = a + bX. Which variable is X?
++ The independent variable || X is used to predict Y.
+- The dependent variable || That is Y.
+- The intercept || That is a.
+- The slope || That is b.
+explain: Least squares regression finds the line of best fit using all the data.
+mistake: Confusing X and Y.
+tip: X explains Y.
+src: Study text ch4a - regression (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Two variables are strongly correlated. What can be concluded?
++ They move together, but this does not prove that one causes the other || Correlation is not causation.
+- One variable definitely causes the other || Causation is not proven.
+- The relationship must be non-linear || Correlation measures linear relationships.
+- The data must be wrong || Not implied.
+explain: Correlation may arise by chance or because both variables depend on a third factor.
+mistake: Inferring causation.
+tip: Together does not mean because.
+src: Study text ch4a - correlation and causation (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What is the trend in a time series?
++ The underlying long-term movement in the values recorded || It ignores short-term fluctuations.
+- Short-term regular fluctuations || Seasonal variations.
+- Unpredictable one-off events || Random variations.
+- The forecast for next period only || Not the definition.
+explain: Moving averages are often used to estimate the trend.
+mistake: Confusing trend and seasonality.
+tip: Trend = long-term direction.
+src: Study text ch4a - trend (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Which price index uses BASE-period quantities as weights?
++ Laspeyre index || Base weights.
+- Paasche index || Current weights.
+- Chain base index || Compares with the previous period.
+- Simple price index || Single item, no weights.
+explain: Laspeyre uses base weights and tends to overstate price rises; Paasche uses current weights and tends to understate them.
+mistake: Reversing Laspeyre and Paasche.
+tip: Laspeyre = Last (base) year quantities.
+src: Study text ch4a - weighted indices (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Five months of data: X (output, thousand units) = 1, 2, 3, 4, 5; Y (cost, $000) = 10, 14, 15, 19, 22. ΣX = 15; ΣY = 80; ΣXY = 269; ΣX² = 55.
+q: Using least squares regression, b = [nΣXY - ΣXΣY] / [nΣX² - (ΣX)²]. What is the value of b? Give your answer to one decimal place.
+answer: 2.9
+tol: 0.05
+formula: b = [nΣXY - ΣXΣY] / [nΣX² - (ΣX)²]
+step: Numerator = 5 x 269 - 15 x 80 = 1,345 - 1,200 = 145.
+step: Denominator = 5 x 55 - 15² = 275 - 225 = 50.
+step: b = 145 / 50 = 2.9.
+check: (5*269-15*80)/(5*55-15**2)
+explain: b is the slope of the regression line: cost rises by $2,900 per extra thousand units.
+mistake: Using ΣX² as (ΣX)².
+tip: Square after summing for (ΣX)².
+src: Study text ch4a - regression (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: For five months: ΣX = 15, ΣY = 80, and the regression slope b = 2.9.
+q: Using a = ΣY/n - b(ΣX/n), what is the value of a? Give your answer to one decimal place.
+answer: 7.3
+tol: 0.05
+formula: a = mean of Y - b x mean of X
+step: Mean Y = 80 / 5 = 16; mean X = 15 / 5 = 3.
+step: a = 16 - 2.9 x 3 = 16 - 8.7 = 7.3.
+check: 80/5 - 2.9*15/5
+explain: The regression line Y = 7.3 + 2.9X passes through the means of X and Y.
+mistake: Forgetting to divide the sums by n.
+tip: Use means, not sums.
+src: Study text ch4a - regression intercept (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A regression line for monthly cost is Y = 28 + 2.6X, where Y is cost ($000) and X is output (thousand units). What is the forecast cost for 10,000 units?
++ $54,000 || 28 + 2.6 x 10 = 54 ($000).
+- $26,000 || This ignores the intercept.
+- $30,600 || This adds 2.6 rather than multiplying by 10.
+- $280,000 || This multiplies the intercept by 10.
+formula: Y = a + bX
+step: X = 10 (thousand units).
+step: Y = 28 + 2.6 x 10 = 54, i.e. $54,000.
+check: (28 + 2.6*10)*1000
+explain: Make sure X is in the same units as the data used to build the equation.
+mistake: Using X = 10,000 instead of 10 (thousands).
+tip: Check the units of X and Y.
+src: Study text ch4a - regression forecasting (concept basis; original question)
+
+=== Q014
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A sales trend is Y = 300 - 4.7X, where X = 0 for the first quarter of 20X0. What is the trend value for the fourth quarter of 20X5? Give your answer to one decimal place.
+answer: 191.9
+tol: 0.05
+formula: Y = a + bX, with X counted in quarters from X = 0
+step: 20X0 Q1 is X = 0, so 20X5 Q1 is X = 20 and 20X5 Q4 is X = 23.
+step: Y = 300 - 4.7 x 23 = 300 - 108.1 = 191.9.
+check: 300 - 4.7*23
+explain: In time series regression, X counts time periods from the chosen start.
+mistake: Using X = 24 (counting from 1).
+tip: If X starts at 0, the nth quarter is X = n - 1.
+src: Study text ch4a - time series regression (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Website revenue was $115,000 in a month with 80,000 visits and $97,000 in a month with 60,000 visits (the highest and lowest activity). Using the high-low method, what is the revenue per visit and the fixed element?
++ $0.90 per visit; fixed element $43,000 || 18,000 / 20,000 = 0.90; 115,000 - 72,000 = 43,000.
+- $1.44 per visit; no fixed element || This divides 115,000 by 80,000.
+- $0.90 per visit; fixed element $97,000 || $97,000 is total revenue at the low level.
+- $0.18 per visit; fixed element $43,000 || The rate is wrongly calculated.
+formula: Variable rate = change in revenue / change in activity
+step: Rate = (115,000 - 97,000) / (80,000 - 60,000) = 18,000 / 20,000 = $0.90.
+step: Fixed element = 115,000 - 80,000 x 0.90 = $43,000.
+check: (115000-97000)/(80000-60000)
+explain: The high-low method can forecast revenues as well as costs.
+mistake: Dividing total revenue by visits.
+tip: Change over change.
+src: Study text ch4a - high-low (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Quarterly sales (units) were 20, 30, 40, 50 and then 28 in the next quarter. Calculate the first two four-quarter moving averages and then the centred moving average between them.
+answer: 36
+tol: 0
+unit: units
+formula: Moving average = sum of n periods / n; centred average = average of two adjacent moving averages
+step: First four-quarter average = (20 + 30 + 40 + 50) / 4 = 35.
+step: Second = (30 + 40 + 50 + 28) / 4 = 37.
+step: Centred average = (35 + 37) / 2 = 36.
+check: ((20+30+40+50)/4 + (30+40+50+28)/4)/2
+explain: With an even number of periods, moving averages fall between periods, so they are averaged again to centre them.
+mistake: Not centring an even-period moving average.
+tip: Even period = centre it.
+src: Study text ch4a - moving averages (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: Using the ADDITIVE model, the trend for a quarter is 40 units and actual sales are 45 units. What is the seasonal variation?
++ +5 || Seasonal variation = actual - trend = 45 - 40.
+- -5 || Actual exceeds trend.
+- 1.125 || That is a multiplicative index (45 / 40).
+- 85 || This adds actual and trend.
+formula: Additive: S = Y - T
+step: Actual Y = 45; trend T = 40.
+step: S = Y - T = 45 - 40 = +5 (sales are 5 units above trend).
+check: 45-40
+explain: In the additive model, seasonal variations are amounts above or below the trend.
+mistake: Dividing instead of subtracting.
+tip: Additive = subtract.
+src: Study text ch4a - additive model (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A trend forecast for next quarter is 60 units and the additive seasonal variation for that quarter is -8. What is the forecast?
++ 52 units || 60 + (-8) = 52.
+- 68 units || This adds 8.
+- 7.5 units || This divides.
+- 480 units || This multiplies.
+formula: Forecast = trend + seasonal variation
+step: Trend forecast T = 60; seasonal variation S = -8.
+step: Forecast = 60 + (-8) = 52.
+check: 60-8
+explain: Additive forecasts adjust the trend by the seasonal amount.
+mistake: Ignoring the sign of the variation.
+tip: Keep the sign.
+src: Study text ch4a - forecasting (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: Using the MULTIPLICATIVE model, the trend for a quarter is 500 units and the seasonal index is 1.2. What is the forecast?
++ 600 units || 500 x 1.2 = 600.
+- 501.2 units || This adds the index.
+- 416.7 units || This divides by the index.
+- 120 units || Not related.
+formula: Forecast = trend x seasonal index
+step: Trend T = 500; seasonal index S = 1.2.
+step: Forecast = T x S = 500 x 1.2 = 600.
+check: 500*1.2
+explain: In the multiplicative model, the seasonal effect is a proportion of the trend.
+mistake: Adding the index.
+tip: Multiplicative = multiply.
+src: Study text ch4a - multiplicative model (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: Actual sales in a quarter were 660 units and the multiplicative seasonal index is 1.1. What are the deseasonalised sales?
++ 600 units || 660 / 1.1 = 600.
+- 726 units || This multiplies by the index.
+- 658.9 units || This subtracts 1.1.
+- 661.1 units || This adds 1.1.
+formula: Deseasonalised value = actual / seasonal index
+step: Actual = 660; seasonal index = 1.1.
+step: Deseasonalised = 660 / 1.1 = 600.
+check: 660/1.1
+explain: Deseasonalising removes the seasonal effect to show the underlying level.
+mistake: Multiplying instead of dividing.
+tip: Multiplicative deseasonalising = divide.
+src: Study text ch4a - deseasonalising (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: Using the ADDITIVE model, actual sales in a quarter were 120 and the seasonal variation for that quarter is +15. What are the deseasonalised sales?
++ 105 || 120 - 15 = 105.
+- 135 || This adds the variation.
+- 8 || This divides.
+- 1,800 || This multiplies.
+formula: Additive deseasonalised value = actual - seasonal variation
+step: Actual = 120; seasonal variation = +15.
+step: Deseasonalised = 120 - 15 = 105.
+check: 120-15
+explain: A positive seasonal variation is subtracted; a negative one would be added back.
+mistake: Adding a positive variation.
+tip: Remove the season: subtract it.
+src: Study text ch4a - deseasonalising (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: In an additive model, the seasonal variations for three quarters are +12, -5 and +8. What must the seasonal variation for the fourth quarter be?
+answer: -15
+tol: 0
+unit: units
+formula: Additive seasonal variations sum to zero over a cycle
+step: +12 - 5 + 8 = +15.
+step: Fourth quarter = 0 - 15 = -15.
+check: 0-(12-5+8)
+explain: Over a full cycle, the additive seasonal variations cancel out.
+mistake: Forgetting that the total must be zero.
+tip: Additive variations sum to zero.
+src: Study text ch4a - seasonal variations (concept basis; original question)
+
+=== Q023
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: In a multiplicative model with four quarters, three seasonal indices are 1.10, 0.90 and 1.25. What is the fourth index? Give your answer to two decimal places.
+answer: 0.75
+tol: 0.005
+formula: Multiplicative indices average 1, so four indices sum to 4
+step: 1.10 + 0.90 + 1.25 = 3.25.
+step: Fourth = 4 - 3.25 = 0.75.
+check: 4-(1.10+0.90+1.25)
+explain: Seasonal indices average 1 (or 100%) over a cycle.
+mistake: Making them sum to zero.
+tip: Multiplicative indices sum to the number of seasons.
+src: Study text ch4a - seasonal indices (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: A commodity cost $2.70 in Year 1, $3.11 in Year 2 and $3.42 in Year 3. What is the chain base index for Year 3?
++ 110 || 3.42 / 3.11 x 100 = 110.0.
+- 127 || This uses Year 1 as the base (3.42 / 2.70 x 100 = 126.7).
+- 115 || This is the Year 2 chain index.
+- 91 || This divides the earlier price by the later price.
+formula: Chain base index = this period's value / previous period's value x 100
+step: 3.42 / 3.11 = 1.0997.
+step: x 100 = 110 (rounded).
+check: 3.42/3.11*100
+explain: Chain base indices show year-on-year change.
+mistake: Using the original base period.
+tip: Chain = compare with the previous link.
+src: Study text ch4a - chain base indices (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: When is a regression forecast MOST reliable?
++ When r is high, the sample is large and the forecast is within the range of the data (interpolation) || These conditions increase reliability.
+- When the forecast is far outside the data range || Extrapolation is less reliable.
+- When r is close to zero || Weak correlation reduces reliability.
+- When only two data points are used || Small samples are less reliable.
+explain: Regression assumes a linear relationship and that the past applies to the future.
+mistake: Extrapolating confidently.
+tip: High r, big sample, inside the range.
+src: Study text ch4a - reliability (concept basis; original question)
+
+=== Q026
+type: mr
+level: S
+cat: concept
+topic: t5
+status: review
+select: 2
+q: Which TWO statements about Laspeyre and Paasche price indices are correct?
++ A Laspeyre index tends to overstate price rises || Base-period weights ignore substitution away from dearer items.
++ A Paasche index requires current quantities to be found every period || Weights must be updated each period.
+- A Paasche index uses base-period quantities || It uses current quantities.
+- A Laspeyre index always gives exactly the same result as Paasche || They usually differ.
+explain: Fisher's ideal index takes the geometric mean of the two to balance their biases.
+mistake: Reversing their weights.
+tip: Laspeyre = base; Paasche = present.
+src: Study text ch4a - weighted indices (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What is a weakness of the ADDITIVE time series model?
++ It assumes seasonal variations are constant amounts, even when the trend is rising or falling sharply || The multiplicative model suits changing trends.
+- It cannot be used for forecasting || It can.
+- It assumes seasonal variations are proportions of the trend || That is the multiplicative model.
+- It ignores the trend || The trend is central.
+explain: When the trend grows strongly, seasonal effects often grow with it, which suits the multiplicative model.
+mistake: Applying additive models to strongly growing series.
+tip: Growing trend = consider multiplicative.
+src: Study text ch4a - models (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: At which stage of the product life cycle are sales rising sharply, profits starting to appear and competitors entering the market?
++ Growth || These are typical growth features.
+- Introduction || Sales growth is slow and losses are likely.
+- Maturity || Sales growth slows.
+- Decline || Sales fall.
+explain: Life cycle stage affects forecasts and pricing decisions.
+mistake: Confusing growth with maturity.
+tip: Rapid rise + competitors arriving = growth.
+src: Study text ch4a - product life cycle (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Before applying the high-low method to cost data from several years, why might costs need to be DEFLATED using a price index?
++ To remove the effect of inflation so that only changes due to activity remain || Costs must be at a common price level.
+- To increase the costs to current values only || Deflating removes inflation.
+- Because the high-low method requires index numbers || Only when prices change.
+- To make the fixed cost zero || Not the purpose.
+explain: Divide each cost by its price index (and multiply by the base index) before calculating.
+mistake: Applying high-low to unadjusted costs.
+tip: Common price level first.
+src: Study text ch4a - high-low with inflation (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What length should a moving average be for quarterly data with an annual seasonal pattern?
++ Four periods || The length should match the seasonal cycle.
+- Two periods || Too short to remove the seasonal pattern.
+- Seven periods || Matches a weekly cycle, not quarterly data.
+- Twelve periods || Matches monthly data.
+explain: Matching the moving average to the cycle removes the seasonal pattern and reveals the trend.
+mistake: Choosing an arbitrary length.
+tip: Cycle length = moving average length.
+src: Study text ch4a - moving averages (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t4
+status: review
+q: Put the steps for producing a seasonally adjusted forecast (additive model) in order.
+item: Calculate moving averages to find the trend
+item: Calculate seasonal variations (actual minus trend)
+item: Average the seasonal variations for each season
+item: Extrapolate the trend to the forecast period
+item: Add the seasonal variation to the trend forecast
+explain: The trend is found, seasonality is measured and averaged, then the trend is projected and seasonality reapplied.
+mistake: Adding seasonality before projecting the trend.
+tip: Trend, season, average, project, adjust.
+src: Study text ch4a - forecasting (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A correlation coefficient of -0.992 between price and units sold indicates what?
++ Very strong negative correlation - as price rises, units sold fall || The value is close to -1.
+- Very weak correlation || It is close to -1, so very strong.
+- Strong positive correlation || The sign is negative.
+- No relationship || There is a strong relationship.
+explain: The closer r is to -1 or +1, the stronger the linear relationship.
+mistake: Thinking negative means weak.
+tip: Sign = direction; size = strength.
+src: Study text ch4a - correlation (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is a key ADVANTAGE of least squares regression over the high-low method?
++ It uses all the data to find a definitive line of best fit || High-low uses only two points.
+- It requires no calculations || It requires calculations.
+- It never assumes a linear relationship || It assumes linearity.
+- It is always more accurate for extrapolation || Extrapolation is risky with either method.
+explain: Regression is more objective and comprehensive than high-low or a line drawn by eye.
+mistake: Thinking regression removes all forecasting risk.
+tip: All data vs two points.
+src: Study text ch4a - regression (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: What is Fisher's ideal index?
++ The geometric mean of the Laspeyre and Paasche indices || √(Laspeyre x Paasche).
+- The simple average of all prices || Not Fisher's index.
+- A chain base index || Not Fisher's index.
+- A quantity index using base prices || That is a Laspeyre quantity index.
+explain: Fisher's index balances the overstatement of Laspeyre and understatement of Paasche.
+mistake: Using the arithmetic mean.
+tip: Square root of the product.
+src: Study text ch4a - Fisher's index (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t4
+status: review
+important: 1
+q: How are sales deseasonalised under each time series model?
++ Additive: subtract the seasonal variation; multiplicative: divide by the seasonal index || This removes the seasonal effect.
+- Additive: divide; multiplicative: subtract || Reversed.
+- Both: add the seasonal variation || Adding would increase the seasonal effect.
+- Both: multiply by the trend || Not correct.
+explain: Remember that subtracting a negative variation means adding it back.
+mistake: Reversing the operations.
+tip: Additive subtracts; multiplicative divides.
+src: Study text ch4a - deseasonalising (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: Item A: base price $2, base quantity 10, current price $3, current quantity 8. Item B: base price $5, base quantity 4, current price $6, current quantity 6.
+q: What is the Laspeyre price index?
++ 135 || ΣPnQ0 = 3x10 + 6x4 = 54; ΣP0Q0 = 2x10 + 5x4 = 40; 54/40 x 100 = 135.
+- 130.4 || This is the Paasche index (current quantities).
+- 132.7 || This is Fisher's index.
+- 122 || This averages simple price relatives incorrectly.
+formula: Laspeyre price index = Σ(Pn x Q0) / Σ(P0 x Q0) x 100
+step: Σ(Pn x Q0) = (3 x 10) + (6 x 4) = 30 + 24 = 54.
+step: Σ(P0 x Q0) = (2 x 10) + (5 x 4) = 20 + 20 = 40.
+step: Index = 54 / 40 x 100 = 135.
+check: (3*10+6*4)/(2*10+5*4)*100
+explain: Laspeyre weights prices by base-period quantities.
+mistake: Using current quantities.
+tip: Laspeyre: Q0 top and bottom.
+src: Study text ch4a - Laspeyre index (concept basis; original figures)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: Item A: base price $2, current price $3, current quantity 8. Item B: base price $5, current price $6, current quantity 6.
+q: What is the Paasche price index? Give your answer to one decimal place.
+answer: 130.4
+tol: 0.05
+formula: Paasche price index = Σ(Pn x Qn) / Σ(P0 x Qn) x 100
+step: Σ(Pn x Qn) = (3 x 8) + (6 x 6) = 24 + 36 = 60.
+step: Σ(P0 x Qn) = (2 x 8) + (5 x 6) = 16 + 30 = 46.
+step: Index = 60 / 46 x 100 = 130.4.
+check: (3*8+6*6)/(2*8+5*6)*100
+explain: Paasche weights prices by current quantities and tends to understate price rises compared with Laspeyre.
+mistake: Using base quantities.
+tip: Paasche: Qn top and bottom.
+src: Study text ch4a - Paasche index (concept basis; original figures)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: For a basket of goods, the Laspeyre price index is 135.0 and the Paasche price index is 130.4. What is Fisher's ideal index? Give your answer to one decimal place.
+answer: 132.7
+tol: 0.05
+formula: Fisher = √(Laspeyre x Paasche)
+step: 135.0 x 130.4 = 17,604.
+step: √17,604 = 132.7.
+check: (135*130.4)**0.5
+explain: Fisher's index lies between the Laspeyre and Paasche figures.
+mistake: Taking the simple average (132.7 is close, but the method is the geometric mean).
+tip: Multiply, then square root.
+src: Study text ch4a - Fisher's index (concept basis; original question)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Total costs were $50,000 for 10,000 units in Year 1 (price index 100) and $66,000 for 14,000 units in Year 2 (price index 110).
+q: After deflating Year 2 costs to Year 1 prices, what is the variable cost per unit ($) at Year 1 prices using the high-low method? Give your answer to two decimal places.
+answer: 2.50
+tol: 0.005
+unit: $
+formula: Deflated cost = actual cost x base index / current index; variable rate = change in cost / change in units
+step: Year 2 cost at Year 1 prices = 66,000 x 100 / 110 = $60,000.
+step: Variable cost per unit = (60,000 - 50,000) / (14,000 - 10,000) = 10,000 / 4,000 = $2.50.
+check: (66000*100/110 - 50000)/(14000-10000)
+explain: Removing inflation leaves only the cost change caused by activity.
+mistake: Ignoring inflation, giving $4.00.
+tip: Deflate first, then high-low.
+src: Study text ch4a - high-low with inflation (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: A study finds a correlation of +0.85 between ice cream sales and sunglasses sales. A manager plans to boost sunglasses sales by promoting ice cream. What is the flaw?
++ Both are probably driven by a third factor - sunny weather - so correlation does not prove one causes the other || Spurious causation.
+- The correlation is too weak to matter || 0.85 is strong.
+- Correlation of +0.85 proves causation || It does not.
+- Promoting ice cream will reduce sunglasses sales || Not implied.
+explain: Correlation may reflect a common cause rather than a direct link.
+mistake: Inferring causation from correlation.
+tip: Look for a third factor.
+src: Study text ch4a - correlation and causation (concept basis; original scenario)
+
+=== Q041
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are reasons why time series forecasts may be unreliable?
++ The further ahead the forecast, the less reliable it becomes || Uncertainty grows with time.
++ Past patterns of trend and seasonality may not continue || Conditions change.
+- Moving averages always remove random variations perfectly || They reduce, not remove, random effects.
+- Seasonal variations are always exactly the same each year || They vary.
+explain: Random events and structural change can disrupt historical patterns.
+mistake: Treating forecasts as certain.
+tip: The past is a guide, not a guarantee.
+src: Study text ch4a - forecasting problems (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+q: A wage index (base 2015 = 100) was 150 in 2020 and 180 in 2023. By what percentage did wages rise between 2020 and 2023?
++ 20% || (180 - 150) / 150 x 100 = 20%.
+- 30% || This is the difference in index points.
+- 80% || This compares 2023 with the base year.
+- 50% || This compares 2020 with the base year.
+formula: % change = (later index - earlier index) / earlier index x 100
+step: Change = 180 - 150 = 30 points.
+step: 30 / 150 x 100 = 20%.
+check: (180-150)/150*100
+explain: Index point changes are not percentage changes unless the earlier index is 100.
+mistake: Treating 30 points as 30%.
+tip: Divide by the starting index.
+src: Study text ch4a - index numbers (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: An employee's weekly wage rose from $300 to $360 while a price index rose from 100 to 115. By what percentage did the employee's REAL wage rise? Give your answer to one decimal place.
+answer: 4.3
+tol: 0.05
+unit: %
+formula: Real wage = money wage x base index / current index
+step: Real wage now (at base prices) = 360 x 100 / 115 = $313.04.
+step: Real increase = (313.04 - 300) / 300 x 100 = 4.3%.
+check: (360*100/115 - 300)/300*100
+explain: Deflating by a price index separates real changes from inflation.
+mistake: Reporting the 20% money increase.
+tip: Real = money adjusted for prices.
+src: Study text ch4a - deflating (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A regression line Y = 7.3 + 2.9X (Y = cost $000, X = output 000 units) was built from output between 1,000 and 5,000 units. A manager uses it to forecast cost at 50,000 units. What is the main concern?
++ This is extrapolation far beyond the data range, so the linear relationship may not hold || Fixed costs may step and variable rates may change.
+- The formula cannot be used at all || It can be used within the range.
+- The forecast will definitely be too high || The direction of error is unknown.
+- Regression lines are only for time series || They are used for cost estimation too.
+explain: Interpolation within the data range is more reliable than extrapolation beyond it.
+mistake: Trusting forecasts far outside the observed range.
+tip: Inside the data = safer.
+src: Study text ch4a - regression reliability (concept basis; original scenario)
+
+=== Q045
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+q: A company uses the multiplicative model. Trend sales for next year's quarter 3 are forecast at 2,400 units and the quarter 3 seasonal index is 85%. What is the forecast for quarter 3?
++ 2,040 units || 2,400 x 0.85 = 2,040.
+- 2,315 units || This deducts 85 units.
+- 2,824 units || This divides by 0.85.
+- 2,485 units || This adds 85 units.
+formula: Forecast = trend x seasonal index
+step: Seasonal index 85% = 0.85.
+step: Forecast = 2,400 x 0.85 = 2,040.
+check: 2400*0.85
+explain: An index below 100% means the season is below the trend.
+mistake: Treating 85% as 85 units.
+tip: Convert % to a decimal and multiply.
+src: Study text ch4a - multiplicative forecasting (concept basis; original question)
+
+=== Q046
+type: match
+level: C
+cat: concept
+topic: t5
+status: review
+q: Match each index with its weighting.
+pair: Laspeyre price index => Base-period quantities
+pair: Paasche price index => Current-period quantities
+pair: Laspeyre quantity index => Base-period prices
+pair: Paasche quantity index => Current-period prices
+choice: No weights
+explain: Price indices are weighted by quantities; quantity indices are weighted by prices.
+mistake: Mixing up which variable is the weight.
+tip: The weight is the OTHER variable.
+src: Study text ch4a - weighted indices (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: A product's sales are falling, the market has too much capacity and competitors are cutting prices sharply. What does this suggest for the product, and for forecasting?
++ It is in the decline stage, so forecasts based on past growth would overstate future sales || Life cycle stage affects forecasts.
+- It is in the growth stage, so sales will rise sharply || The signs point to decline.
+- It is in the introduction stage, so losses are temporary || Not introduction.
+- Life cycle stage is irrelevant to forecasting || It is relevant.
+explain: Forecasts should reflect the product's position in its life cycle.
+mistake: Extrapolating past trends regardless of stage.
+tip: Decline = adjust forecasts down.
+src: Study text ch4a - product life cycle (concept basis; original scenario)
+
+=== Q048
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A trainee calculates additive seasonal variations of +20, +5, -10 and +10 for four quarters. What is wrong?
++ They should sum to zero but sum to +25, so they need adjusting (for example by deducting 6.25 from each) || Additive variations must cancel over a cycle.
+- Nothing - variations can sum to any amount || They must sum to zero.
+- They should sum to 4 || That applies to multiplicative indices.
+- Negative variations are not allowed || They are allowed.
+explain: If averaged seasonal variations do not sum to zero, each is adjusted by an equal share of the excess.
+mistake: Applying unadjusted variations.
+tip: Additive variations must total zero.
+src: Study text ch4a - seasonal variations (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: A correlation coefficient between two variables is close to zero, yet a scatter diagram shows a clear U-shaped pattern. What explains this?
++ The coefficient measures only LINEAR relationships, so a strong curved relationship can give r near zero || r is about straight lines.
+- There is no relationship at all || The chart shows one.
+- The calculation must be wrong || It may be correct.
+- U-shaped relationships always give r = 1 || Not true.
+explain: Always look at the scatter diagram as well as the coefficient.
+mistake: Concluding no relationship from r alone.
+tip: r = linear only.
+src: Study text ch4a - correlation (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t5
+status: review
+important: 1
+q: Which pairing of index and its typical bias is correct?
++ Laspeyre tends to overstate price rises; Paasche tends to understate them || Due to fixed base or current weights.
+- Laspeyre understates; Paasche overstates || Reversed.
+- Both always give the true rate || They differ.
+- Fisher's index always overstates || Fisher balances the two.
+explain: Base weights do not reflect substitution away from items whose prices rise.
+mistake: Reversing the biases.
+tip: Laspeyre high, Paasche low, Fisher in between.
+src: Study text ch4a - index biases (concept basis; original question)

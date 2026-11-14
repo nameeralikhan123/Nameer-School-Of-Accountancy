@@ -1,0 +1,908 @@
+@subject acfbe
+@chapter 4b
+@title Summarising and Analysing Data
+@lo B2
+@topic t1 | Frequency distributions | B2
+@topic t2 | Averages | B2
+@topic t3 | Dispersion | B2
+@topic t4 | Expected values | B2
+@topic t5 | The normal distribution | B2
+
+=== Q001
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: Total demand over 20 days was 185 units. What is the arithmetic mean daily demand? Give your answer to two decimal places.
+answer: 9.25
+tol: 0.005
+unit: units
+formula: Mean = Σx / n
+step: Σx = 185; n = 20.
+step: Mean = 185 / 20 = 9.25 units.
+check: 185/20
+explain: The arithmetic mean uses every value but can be distorted by extreme values.
+mistake: Dividing by the wrong number of items.
+tip: Total divided by count.
+src: Study text ch4b - mean (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the MODE of a set of data?
++ The value that occurs most frequently || The most common value.
+- The middle value when data is in order || That is the median.
+- The sum of values divided by their number || That is the mean.
+- The difference between the highest and lowest values || That is the range.
+explain: For grouped data, the modal class is the class with the highest frequency (or tallest histogram bar for equal widths).
+mistake: Confusing mode and median.
+tip: Mode = most.
+src: Study text ch4b - mode (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Which is a property of the normal distribution?
++ It is symmetrical, with mean, median and mode all at the centre || Normal curves are symmetrical and bell-shaped.
+- It is skewed to the right || It is symmetrical.
+- Its tails touch the horizontal axis || The tails never touch.
+- The area under the curve equals 100 || The total area equals 1.
+explain: Half of the area (0.5) lies on each side of the mean.
+mistake: Thinking the curve meets the axis.
+tip: Symmetrical, bell-shaped, area 1.
+src: Study text ch4b - normal distribution (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: In a histogram, what represents the frequency of each class?
++ The area of each bar || Area, not just height, represents frequency.
+- The colour of each bar || Not meaningful.
+- The width of each bar alone || Width shows the class interval.
+- The gap between bars || Histogram bars touch.
+explain: When classes have unequal widths, bar heights must be adjusted so that areas remain proportional to frequencies.
+mistake: Thinking height always equals frequency.
+tip: Area = frequency.
+src: Study text ch4b - histograms (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t4
+status: review
+q: An investment will produce $100 with probability 0.4 or $50 with probability 0.6. What is the expected value ($)?
+answer: 70
+tol: 0
+unit: $
+formula: EV = Σpx
+step: 0.4 x 100 = 40; 0.6 x 50 = 30.
+step: EV = 40 + 30 = $70.
+check: 0.4*100+0.6*50
+explain: Expected value is a probability-weighted average of possible outcomes.
+mistake: Averaging the outcomes without weights ($75).
+tip: Multiply each outcome by its probability, then add.
+src: Study text ch4b - expected values (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is an ogive?
++ A graph of a cumulative frequency distribution || It is used to read off the median.
+- A bar chart with gaps between bars || Not an ogive.
+- A pie chart of frequencies || Not an ogive.
+- A table of class mid-points || Not an ogive.
+explain: Ogives allow the median and other values to be estimated from grouped data.
+mistake: Confusing an ogive with a histogram.
+tip: Ogive = cumulative curve.
+src: Study text ch4b - ogives (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: The values 7, 3, 15, 10, 5, 12, 8 are recorded. What is the median?
+answer: 8
+tol: 0
+formula: Median = value of the ((n + 1) / 2)th item in an ordered array
+step: In order: 3, 5, 7, 8, 10, 12, 15 (n = 7).
+step: (7 + 1) / 2 = 4th item = 8.
+check: 8
+explain: The median is unaffected by extreme values.
+mistake: Taking the middle of the unordered list (5).
+tip: Order first.
+src: Study text ch4b - median (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is standard deviation related to variance?
++ Standard deviation is the square root of the variance || σ = √variance.
+- Standard deviation is the square of the variance || Reversed.
+- They are equal || They differ.
+- Standard deviation is variance divided by the mean || That is not the definition.
+explain: Standard deviation is the most important measure of spread in statistics.
+mistake: Squaring instead of square-rooting.
+tip: Variance = σ².
+src: Study text ch4b - standard deviation (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: The variance of the time taken to complete a task is 256 hours². What is the standard deviation (hours)?
+answer: 16
+tol: 0
+unit: hours
+formula: Standard deviation = √variance
+step: √256 = 16.
+step: So the standard deviation is 16 hours.
+check: 256**0.5
+explain: Taking the square root returns the measure to the original units.
+mistake: Halving the variance.
+tip: Square root.
+src: Study text ch4b - standard deviation (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: What proportion of the area under a normal curve lies to the right of the mean?
++ 0.5 || The curve is symmetrical about the mean.
+- 1.0 || That is the whole area.
+- 0.25 || Not correct.
+- 0.95 || That is the area within ±1.96σ.
+explain: The total area is 1, split equally either side of the mean.
+mistake: Forgetting the total area is 1.
+tip: Half each side.
+src: Study text ch4b - normal distribution (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: A grouped frequency distribution: class 0-<10 (mid-point 5) frequency 4; class 10-<20 (mid-point 15) frequency 10; class 20-<30 (mid-point 25) frequency 6.
+q: What is the estimated arithmetic mean?
+answer: 16
+tol: 0
+formula: Mean = Σfx / Σf, using class mid-points
+step: Σfx = (4 x 5) + (10 x 15) + (6 x 25) = 20 + 150 + 150 = 320.
+step: Σf = 4 + 10 + 6 = 20.
+step: Mean = 320 / 20 = 16.
+check: (4*5+10*15+6*25)/(4+10+6)
+explain: Grouped data uses mid-points, so the mean is an estimate.
+mistake: Dividing by the number of classes (3).
+tip: Divide by total frequency.
+src: Study text ch4b - grouped mean (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: What is the median of 4, 6, 9 and 11?
+answer: 7.5
+tol: 0
+formula: With an even number of items, the median is the average of the two middle values
+step: Middle values are 6 and 9.
+step: Median = (6 + 9) / 2 = 7.5.
+check: (6+9)/2
+explain: With an even count, no single middle item exists.
+mistake: Choosing 6 or 9 alone.
+tip: Even count = average the middle two.
+src: Study text ch4b - median (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: For the values 2, 4 and 6, what is the standard deviation (population formula)? Give your answer to two decimal places.
+answer: 1.63
+tol: 0.005
+formula: σ = √[Σ(x - x̄)² / n]
+step: Mean = (2 + 4 + 6) / 3 = 4.
+step: Squared deviations: (2-4)² = 4; (4-4)² = 0; (6-4)² = 4; total = 8.
+step: Variance = 8 / 3 = 2.667; σ = √2.667 = 1.63.
+check: (8/3)**0.5
+explain: Standard deviation measures the average distance of values from the mean.
+mistake: Forgetting to square the deviations.
+tip: Deviate, square, average, square root.
+src: Study text ch4b - standard deviation (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Product A has a mean weekly sales of 60 units with a standard deviation of 12. Product B has a mean of 100 units with a standard deviation of 15. Which product's sales are RELATIVELY more variable?
++ Product A, with a coefficient of variation of 0.20 against 0.15 for B || 12/60 = 0.20; 15/100 = 0.15.
+- Product B, because its standard deviation is higher || Relative spread depends on the mean too.
+- They are equally variable || The coefficients differ.
+- It cannot be determined || The coefficient of variation answers it.
+formula: Coefficient of variation = standard deviation / mean
+step: A: 12 / 60 = 0.20.
+step: B: 15 / 100 = 0.15.
+check: 12/60
+explain: The coefficient of variation compares spread relative to the mean.
+mistake: Comparing standard deviations only.
+tip: Different means? Use the coefficient of variation.
+src: Study text ch4b - coefficient of variation (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A project may make a profit of $20,000 (probability 0.2), $12,000 (probability 0.5) or a loss of $5,000 (probability 0.3). What is the expected value?
++ $8,500 || 4,000 + 6,000 - 1,500 = $8,500.
+- $11,500 || This treats the loss as a profit.
+- $9,000 || This averages the three outcomes without weights.
+- $10,000 || This ignores the loss.
+formula: EV = Σpx
+step: 0.2 x 20,000 = 4,000; 0.5 x 12,000 = 6,000.
+step: 0.3 x (-5,000) = -1,500.
+step: EV = 4,000 + 6,000 - 1,500 = $8,500.
+check: 0.2*20000+0.5*12000-0.3*5000
+explain: Losses enter the calculation as negative outcomes.
+mistake: Treating the loss as positive.
+tip: Keep the signs.
+src: Study text ch4b - expected values (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: A normal distribution has a mean of 100 and a standard deviation of 10. What is the z score for a value of 80?
++ -2 || (80 - 100) / 10 = -2.
+- 2 || The value is below the mean.
+- -20 || This forgets to divide by σ.
+- 0.8 || This divides 80 by 100.
+formula: z = (x - μ) / σ
+step: x - μ = 80 - 100 = -20.
+step: z = -20 / 10 = -2.
+check: (80-100)/10
+explain: A z score shows how many standard deviations a value lies from the mean.
+mistake: Ignoring the sign.
+tip: Below the mean = negative z.
+src: Study text ch4b - z scores (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: Mean 100, standard deviation 10, normally distributed. Normal tables give 0.4772 for z = 2. What is the probability that a value is ABOVE 80?
++ 0.9772 || 0.5 (right half) + 0.4772 (80 to 100).
+- 0.4772 || This is only the area between 80 and 100.
+- 0.0228 || This is the area below 80.
+- 0.5228 || This adds 0.5 to 0.0228.
+formula: z = (x - μ) / σ; areas either side of the mean are added
+step: z = (80 - 100) / 10 = -2; area between 80 and the mean = 0.4772.
+step: P(x > 80) = 0.4772 + 0.5 = 0.9772.
+check: 0.5+0.4772
+explain: Sketching the curve shows that the area above 80 includes the whole right half.
+mistake: Forgetting the 0.5 on the other side of the mean.
+tip: Sketch first.
+src: Study text ch4b - normal probabilities (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: Mean 100, standard deviation 10. Tables give 0.4332 for z = 1.5. What is the probability that a value is ABOVE 115?
++ 0.0668 || 0.5 - 0.4332 = 0.0668.
+- 0.9332 || This adds instead of subtracting.
+- 0.4332 || This is the area between 100 and 115.
+- 0.5668 || This adds 0.1336 incorrectly.
+formula: Area beyond x on the same side = 0.5 - table value
+step: z = (115 - 100) / 10 = 1.5; area between mean and 115 = 0.4332.
+step: P(x > 115) = 0.5 - 0.4332 = 0.0668.
+check: 0.5-0.4332
+explain: For tail probabilities on the same side, subtract the table value from 0.5.
+mistake: Adding 0.5.
+tip: Same side as the tail = subtract.
+src: Study text ch4b - normal probabilities (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: Approximately what percentage of a normal population lies within ±1.96 standard deviations of the mean?
++ 95% || 0.475 x 2 = 0.95.
+- 99% || That is about ±2.58σ.
+- 68% || That is about ±1σ.
+- 50% || That is one half of the curve.
+explain: Key values: z = 1 -> 0.3413; z = 1.96 -> 0.475; z = 2.58 -> 0.495.
+mistake: Confusing 95% and 99% limits.
+tip: 1.96 for 95%; 2.58 for 99%.
+src: Study text ch4b - key z values (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which average is MOST affected by a few extreme values?
++ The arithmetic mean || It uses every value, including extremes.
+- The median || The median ignores extremes.
+- The mode || The mode is the most frequent value.
+- All are affected equally || They are not.
+explain: For skewed data, the median is often a better measure of a typical value.
+mistake: Thinking the median is affected by extremes.
+tip: Extremes pull the mean.
+src: Study text ch4b - averages (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: In a histogram, the standard class width is 10. One class has a width of 15 and a frequency of 30. What height should its bar have (in frequency units per standard width)?
++ 20 || 30 x (10 / 15) = 20.
+- 30 || This ignores the wider class.
+- 45 || This multiplies by 1.5.
+- 15 || This halves the frequency.
+formula: Adjusted height = frequency x (standard width / actual width)
+step: Width ratio = 10 / 15 = 2/3.
+step: Height = 30 x 2/3 = 20.
+check: 30*10/15
+explain: Adjusting height keeps the area proportional to frequency.
+mistake: Plotting the raw frequency.
+tip: Wider class = shorter bar.
+src: Study text ch4b - unequal classes (concept basis; original question)
+
+=== Q022
+type: mr
+level: S
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are limitations of expected values in decision making?
++ They ignore the decision maker's attitude to risk || Two options with the same EV may have very different risks.
++ They are long-run averages, less meaningful for a one-off decision || The actual outcome will be one of the possible outcomes, not the EV.
+- They cannot be calculated with probabilities || They require probabilities.
+- They ignore the size of outcomes || They weight outcomes by size and probability.
+explain: EV supports repeated decisions; one-off decisions may need a fuller view of risk.
+mistake: Treating the EV as the likely outcome.
+tip: EV is an average, not a prediction.
+src: Study text ch4b - EV limitations (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What does a cumulative frequency distribution show?
++ The total number of items with values at or below each class limit || It accumulates frequencies.
+- Only the frequency of the largest class || Not cumulative.
+- The average of each class || Not cumulative.
+- The percentage of each class only || Not necessarily cumulative.
+explain: Cumulative frequencies are plotted as an ogive.
+mistake: Confusing cumulative with relative frequency.
+tip: Running total.
+src: Study text ch4b - cumulative frequency (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: Mean 100, standard deviation 10. Tables give 0.3413 for z = 1 and 0.4772 for z = 2. What is the probability of a value between 80 and 110?
++ 0.8185 || 0.4772 (80 to 100) + 0.3413 (100 to 110).
+- 0.1359 || This subtracts the areas.
+- 0.4772 || This includes only one side.
+- 0.6826 || This is ±1σ.
+formula: Values on opposite sides of the mean: add the areas
+step: 80 is z = -2: area 0.4772. 110 is z = 1: area 0.3413.
+step: Total = 0.4772 + 0.3413 = 0.8185.
+check: 0.4772+0.3413
+explain: When the range spans the mean, add the two areas from the table.
+mistake: Subtracting areas on opposite sides.
+tip: Opposite sides = add.
+src: Study text ch4b - normal probabilities (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Why are averages alone insufficient to describe a set of data?
++ They locate the centre but say nothing about how spread out the values are || Dispersion measures are also needed.
+- They are always wrong || They are useful.
+- They describe the spread fully || They do not describe spread.
+- They cannot be calculated for grouped data || They can.
+explain: Two sets of data can share a mean but differ greatly in spread.
+mistake: Comparing data sets on averages only.
+tip: Centre + spread.
+src: Study text ch4b - dispersion (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Daily demand is 100 units (probability 0.3), 150 units (probability 0.5) or 200 units (probability 0.2). What is the expected daily demand (units)?
+answer: 145
+tol: 0
+unit: units
+formula: EV = Σpx
+step: 0.3 x 100 = 30; 0.5 x 150 = 75; 0.2 x 200 = 40.
+step: EV = 30 + 75 + 40 = 145 units.
+check: 0.3*100+0.5*150+0.2*200
+explain: The expected value need not be one of the possible outcomes.
+mistake: Choosing the most likely outcome (150).
+tip: Weighted average.
+src: Study text ch4b - expected values (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: For grouped data, how is the median usually estimated?
++ By reading the value at the n/2 point on an ogive || The ogive gives cumulative frequency.
+- By finding the class with the highest frequency || That gives the modal class.
+- By averaging the class mid-points || That is not the median.
+- By dividing the total by the number of classes || Not the median.
+explain: The ogive shows how many items lie at or below each value.
+mistake: Confusing median and modal class.
+tip: Halfway up the ogive.
+src: Study text ch4b - median from ogive (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which rule should be followed when setting class intervals in a frequency distribution?
++ Intervals should not overlap, and equal widths are preferred where possible || Each item must fall in only one class.
+- Classes should overlap so no value is missed || Overlaps put items in two classes.
+- Every class must contain the same number of items || Frequencies vary.
+- Only two classes should be used || More are usually needed.
+explain: Clear, non-overlapping classes allow accurate frequency counts.
+mistake: Writing classes like 10-20 and 20-30, so 20 fits both.
+tip: No overlaps.
+src: Study text ch4b - frequency distributions (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: Mean 100, standard deviation 10. Tables give 0.3413 for z = 1. What is the probability of a value between 90 and 110?
++ 0.6826 || 0.3413 x 2 = 0.6826.
+- 0.3413 || This is one side only.
+- 0.1587 || This is the area beyond z = 1.
+- 0.8413 || This is the area below z = 1.
+formula: Symmetrical range around the mean = 2 x table value
+step: 90 and 110 are each 1 standard deviation from the mean.
+step: Probability = 2 x 0.3413 = 0.6826.
+check: 2*0.3413
+explain: About 68% of a normal population lies within one standard deviation of the mean.
+mistake: Counting only one side.
+tip: Symmetric range = double.
+src: Study text ch4b - normal probabilities (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: When is the coefficient of variation MORE useful than the standard deviation?
++ When comparing the spread of two data sets with very different means || It measures relative spread.
+- When describing a single data set in its own units || Standard deviation is fine.
+- When the mean is zero || The coefficient cannot be calculated then.
+- When the data is qualitative || Neither applies.
+explain: A higher coefficient of variation means greater relative dispersion.
+mistake: Comparing raw standard deviations across different scales.
+tip: Different scales = coefficient of variation.
+src: Study text ch4b - coefficient of variation (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the steps for calculating a standard deviation (ungrouped data) in order.
+item: Calculate the mean
+item: Find each value's deviation from the mean
+item: Square each deviation
+item: Find the average of the squared deviations (the variance)
+item: Take the square root of the variance
+explain: The squaring step stops positive and negative deviations cancelling out.
+mistake: Square-rooting before averaging.
+tip: Mean, deviate, square, average, root.
+src: Study text ch4b - standard deviation (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: When using expected values to choose between projects to maximise profit, which should be chosen?
++ The project with the highest expected value || Highest long-run average profit.
+- The project with the lowest expected value || That would minimise profit.
+- The project with the most possible outcomes || Not a decision rule.
+- The project with the highest single possible outcome || That ignores probabilities.
+explain: EV decision rules suit risk-neutral decision makers and repeated decisions.
+mistake: Choosing the best possible outcome.
+tip: Highest EV for profit; lowest EV for cost.
+src: Study text ch4b - EV decisions (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: Why should you sketch the normal curve before using normal distribution tables?
++ To see whether areas should be added (opposite sides of the mean) or subtracted (same side) || Sketches prevent sign and area errors.
+- Because tables cannot be used without a drawing || Tables can be used, but sketches help.
+- To find the mean || The mean is given.
+- To calculate the variance || Not needed.
+explain: Most normal distribution errors come from adding instead of subtracting, or forgetting the 0.5.
+mistake: Calculating without visualising.
+tip: Sketch, shade, then calculate.
+src: Study text ch4b - exam technique (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A data set has a mode of 12, a median of 14 and a mean of 19. What does this suggest?
++ A few large values are pulling the mean upwards (positive skew) || Mean > median > mode.
+- The data is perfectly symmetrical || Then all three would be equal.
+- The data must contain errors || Skew is common.
+- The mode is the best measure of spread || The mode is a measure of location.
+explain: In a symmetrical distribution, mean = median = mode; differences indicate skewness.
+mistake: Thinking the three averages must be equal.
+tip: Mean pulled towards the tail.
+src: Study text ch4b - averages (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t5
+status: review
+important: 1
+q: What is the formula for a z score?
++ z = (x - μ) / σ || It measures distance from the mean in standard deviations.
+- z = (μ - x) x σ || Incorrect.
+- z = σ / (x - μ) || Inverted.
+- z = x / μ || Not the formula.
+explain: The z formula is given on the normal distribution table in the exam.
+mistake: Inverting the fraction.
+tip: Value minus mean, over sigma.
+src: Study text ch4b - z scores (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+q: Mean 100, standard deviation 10. Tables give 0.3413 for z = 1 and 0.4772 for z = 2. What is the probability of a value between 110 and 120?
++ 0.1359 || 0.4772 - 0.3413 = 0.1359 (both on the same side).
+- 0.8185 || This adds areas on the same side.
+- 0.3413 || This is only 100-110.
+- 0.4772 || This is 100-120.
+formula: Same side of the mean: subtract the smaller area from the larger
+step: 120: z = 2, area 0.4772. 110: z = 1, area 0.3413.
+step: 0.4772 - 0.3413 = 0.1359.
+check: 0.4772-0.3413
+explain: Both values lie above the mean, so the required area is the difference.
+mistake: Adding areas on the same side.
+tip: Same side = subtract.
+src: Study text ch4b - normal probabilities (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: Weights of packets are normally distributed with a mean of 100g and a standard deviation of 10g. Tables show that 2.28% of a normal population lies more than 2 standard deviations above the mean. Above what weight (g) are the heaviest 2.28% of packets?
+answer: 120
+tol: 0
+unit: g
+formula: x = μ + zσ
+step: The top 2.28% lies beyond z = 2.
+step: x = 100 + 2 x 10 = 120g.
+check: 100+2*10
+explain: Working backwards from a proportion to a z score and then to a value is a common exam task.
+mistake: Subtracting instead of adding for an upper tail.
+tip: Proportion -> z -> x.
+src: Study text ch4b - working backwards (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: Project A has outcomes of $50,000 or $10,000, each with probability 0.5. Project B gives $30,000 for certain. A manager says "they are identical because both have an EV of $30,000". What is the flaw?
++ Project A carries risk (outcomes vary widely) while B is certain, and EV ignores this difference || Risk attitude matters.
+- The EVs are different || Both are $30,000.
+- Project A must have a higher EV || Both are equal.
+- EV takes full account of risk || It does not.
+explain: Risk-averse managers may prefer B; risk-seekers may prefer A. EV alone cannot distinguish them.
+mistake: Treating equal EVs as equal choices.
+tip: Same average, different risk.
+src: Study text ch4b - EV limitations (concept basis; original scenario)
+
+=== Q039
+type: mr
+level: C
+cat: concept
+topic: t5
+status: review
+select: 2
+q: Which TWO statements about the normal distribution are correct?
++ The total area under the curve equals 1 || It represents total probability.
+- The tails meet the horizontal axis at ±3 standard deviations || The tails never touch.
++ The mean, median and mode are equal || Due to symmetry.
+- The curve is skewed to the left || It is symmetrical.
+explain: The syllabus requires you to explain the properties of the normal distribution.
+mistake: Thinking the tails end at 3σ.
+tip: Never touches; perfectly symmetrical.
+src: Study text ch4b - properties (concept basis; original question)
+
+=== Q040
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Delivery times (days) for 25 orders: 1 day: 3 orders; 2 days: 8 orders; 3 days: 9 orders; 4 days: 5 orders.
+q: What is the mean delivery time (days)? Give your answer to two decimal places.
+answer: 2.64
+tol: 0.005
+unit: days
+formula: Mean = Σfx / Σf
+step: Σfx = (1 x 3) + (2 x 8) + (3 x 9) + (4 x 5) = 3 + 16 + 27 + 20 = 66.
+step: Σf = 3 + 8 + 9 + 5 = 25.
+step: Mean = 66 / 25 = 2.64 days.
+check: (1*3+2*8+3*9+4*5)/25
+explain: Ungrouped frequency data uses the actual values as x.
+mistake: Dividing by 4 (number of values).
+tip: Weight each value by its frequency.
+src: Study text ch4b - frequency mean (concept basis; original figures)
+
+=== Q041
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+scenario: Delivery times (days) for 25 orders: 1 day: 3 orders; 2 days: 8 orders; 3 days: 9 orders; 4 days: 5 orders.
+q: What are the mode and the median delivery times?
++ Mode 3 days; median 3 days || 3 days is most frequent; the 13th value lies in the 3-day group.
+- Mode 2 days; median 2 days || 2 days is not the most frequent, and the 13th item is in the 3-day group.
+- Mode 4 days; median 3 days || 4 days is least frequent.
+- Mode 3 days; median 2 days || The 13th item is in the 3-day group (items 12-20).
+step: Mode: highest frequency is 9, at 3 days.
+step: Median: (25 + 1) / 2 = 13th item. Cumulative: 1 day = 3; 2 days = 11; 3 days = 20. The 13th item is 3 days.
+explain: The median position is found from cumulative frequencies.
+mistake: Taking the middle of the list of values (2.5).
+tip: Use cumulative frequencies to find the median position.
+src: Study text ch4b - mode and median (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: Machine A's output has a mean of 500 units and standard deviation of 50; Machine B's has a mean of 200 units and standard deviation of 30. Which is relatively more consistent?
++ Machine A, coefficient of variation 0.10 against 0.15 for B || Lower relative spread.
+- Machine B, because its standard deviation is smaller || Relative to its mean, B is more variable.
+- They are equally consistent || The coefficients differ.
+- Machine A, because its mean is higher || The mean alone does not show consistency.
+formula: Coefficient of variation = σ / mean
+step: A: 50 / 500 = 0.10.
+step: B: 30 / 200 = 0.15.
+check: 50/500
+explain: Lower coefficient of variation = more consistent relative to its average.
+mistake: Comparing standard deviations directly.
+tip: Relative spread for different means.
+src: Study text ch4b - coefficient of variation (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t5
+status: review
+q: A company's filling machine has a mean of 500 ml and standard deviation of 5 ml. It wants no more than 2.5% of bottles below the stated volume. Tables show 2.5% lies beyond z = 1.96 in one tail. What volume should be stated on the label?
++ 490.2 ml || 500 - 1.96 x 5 = 490.2.
+- 509.8 ml || This is the upper tail.
+- 495 ml || This uses z = 1.
+- 500 ml || Half of bottles would be below this.
+formula: x = μ - zσ for the lower tail
+step: z = 1.96 for 2.5% in one tail.
+step: x = 500 - 1.96 x 5 = 500 - 9.8 = 490.2 ml.
+check: 500-1.96*5
+explain: Lower-tail limits subtract zσ from the mean.
+mistake: Adding zσ for a lower limit.
+tip: Below the mean = subtract.
+src: Study text ch4b - working backwards (concept basis; original scenario)
+
+=== Q044
+type: match
+level: C
+cat: concept
+topic: t2
+status: review
+q: Match each measure with its description.
+pair: Arithmetic mean => Sum of values divided by their number
+pair: Median => The middle value of an ordered set
+pair: Mode => The most frequently occurring value
+pair: Standard deviation => A measure of spread around the mean
+choice: The highest value
+explain: Measures of location describe the centre; measures of dispersion describe spread.
+mistake: Calling standard deviation an average.
+tip: Location vs spread.
+src: Study text ch4b - summary measures (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A retailer can order 100 or 200 units of a seasonal product. Profit if it orders 100: $1,000 whatever demand. Profit if it orders 200: $2,400 if demand is high (probability 0.6) or -$300 if demand is low (probability 0.4).
+q: Using expected values, which order size should be chosen and what is its EV?
++ EV of $1,320 - so order 200 units || 0.6 x 2,400 + 0.4 x (-300) = 1,440 - 120 = 1,320 > 1,000.
+- EV of $1,000 - so order 100 units || This EV is lower.
+- EV of $1,560 - so order 200 units || This treats the loss as a profit.
+- EV of $1,050 - so order 200 units || This averages the two outcomes without weights.
+formula: EV = Σpx
+step: Order 200: 0.6 x 2,400 = 1,440; 0.4 x (-300) = -120; EV = 1,320.
+step: Order 100: EV = 1,000.
+step: Choose 200 units (higher EV).
+check: 0.6*2400-0.4*300
+explain: EV supports the choice for a risk-neutral decision maker; a risk-averse manager might still prefer the certain $1,000.
+mistake: Ignoring the possible loss.
+tip: Compare EVs, then consider risk.
+src: Study text ch4b - EV decisions (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: trap
+topic: t1
+status: review
+q: A trainee draws a histogram with one class twice the standard width but plots its raw frequency as the bar height. What is the effect?
++ The wide class looks twice as important as it should, because its area is doubled || Heights must be adjusted for unequal widths.
+- No effect - heights always equal frequencies || Area represents frequency.
+- The class looks half as important || It looks more important.
+- The histogram becomes an ogive || Not related.
+explain: For unequal widths, adjust height = frequency x (standard width / actual width).
+mistake: Forgetting the width adjustment.
+tip: Double width = halve the height.
+src: Study text ch4b - histograms (concept basis; original scenario)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t5
+status: review
+q: Approximately what proportion of a normal population lies OUTSIDE ±2.58 standard deviations from the mean?
++ 1% || ±2.58σ contains about 99%.
+- 5% || That is outside ±1.96σ.
+- 32% || That is outside ±1σ.
+- 0.5% || That is one tail only.
+formula: Outside = 1 - 2 x table value
+step: Area within ±2.58σ = 2 x 0.495 = 0.99.
+step: Outside = 1 - 0.99 = 0.01 = 1%.
+check: (1-2*0.495)*100
+explain: Two tails combine to give the outside area.
+mistake: Giving one tail only.
+tip: Two tails for "outside".
+src: Study text ch4b - key z values (concept basis; original question)
+
+=== Q048
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Grouped data: mid-points 10 (frequency 2), 20 (frequency 6) and 30 (frequency 2). The mean is 20.
+q: What is the standard deviation (population formula)? Give your answer to two decimal places.
+answer: 6.32
+tol: 0.005
+formula: σ = √[Σf(x - x̄)² / Σf]
+step: Deviations from 20: -10, 0, +10. Squared: 100, 0, 100.
+step: Σf(x - x̄)² = 2 x 100 + 6 x 0 + 2 x 100 = 400; Σf = 10.
+step: Variance = 400 / 10 = 40; σ = √40 = 6.32.
+check: (400/10)**0.5
+explain: Grouped data weights each squared deviation by its frequency.
+mistake: Forgetting the frequencies.
+tip: Weight the squares by f.
+src: Study text ch4b - grouped standard deviation (concept basis; original figures)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: House prices in an area include a few very expensive mansions. Which average BEST represents a typical house price?
++ The median || It is not distorted by extreme values.
+- The arithmetic mean || Extremes pull it upwards.
+- The highest value || Not typical.
+- The range || Not an average.
+explain: Medians are often used for skewed data such as incomes and house prices.
+mistake: Using the mean for skewed data.
+tip: Extremes present = median.
+src: Study text ch4b - averages (concept basis; original scenario)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t4
+status: review
+important: 1
+q: What is an expected value?
++ A probability-weighted average of the possible outcomes || EV = Σpx.
+- The outcome most likely to occur || That is the mode.
+- The best possible outcome || Not weighted.
+- The average of outcomes ignoring probabilities || Not weighted.
+explain: EV is a long-run average and is most useful for repeated decisions.
+mistake: Treating EV as the most likely result.
+tip: Weighted by probability.
+src: Study text ch4b - expected values (concept basis; original question)

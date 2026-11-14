@@ -1,0 +1,882 @@
+@subject acffa2
+@chapter 12
+@title Capital Structure and Finance Costs
+@lo D7
+@topic t1 | Share capital terminology | D7
+@topic t2 | Rights issue vs bonus issue | D7
+@topic t3 | Dividends and loan notes | D7
+@topic t4 | Reserves and the SOCE | D7
+@topic t5 | Income tax | D7
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the nominal (par) value of a share?
++ A fixed face value per share, which is not its market value || Arbitrary legal value.
+- The price at which shares trade on the stock exchange || Market value.
+- The dividend per share || Not the meaning.
+- The net assets per share || Not the meaning.
+explain: Any excess paid over nominal value goes to share premium.
+mistake: Equating nominal and market value.
+tip: Nominal = face value.
+src: Study text ch12 - nominal value (concept basis; original question)
+
+=== Q002
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: A company issues 200,000 shares of $0.50 nominal value at $1.20 each. What amount ($) is credited to share premium?
+answer: 140000
+tol: 0
+unit: $
+formula: Share premium = shares x (issue price - nominal value)
+step: Premium per share = 1.20 - 0.50 = 0.70.
+step: 200,000 x 0.70 = $140,000.
+check: 200000*(1.2-0.5)
+explain: Share capital is credited with $100,000 and bank debited with $240,000.
+mistake: Crediting the full proceeds to share capital.
+tip: Excess over nominal = premium.
+src: Study text ch12 - share premium (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Where are ordinary dividends paid shown in a company's financial statements?
++ In the statement of changes in equity, as a deduction from retained earnings || A distribution, not an expense.
+- As an expense in profit or loss || Not an expense.
+- As a non-current liability || Not a liability once paid.
+- In other comprehensive income || Not OCI.
+explain: Dividends are distributions to owners.
+mistake: Charging dividends to profit.
+tip: Dividends = SOCE.
+src: Study text ch12 - dividends (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is a bonus issue?
++ Free new shares given to existing shareholders in proportion to their holdings, funded from reserves || No cash raised.
+- New shares sold to existing shareholders at a discount || Rights issue.
+- New shares sold to the public || Public issue.
+- A dividend paid in cash || Not shares.
+explain: Bonus issues are usually funded from share premium first.
+mistake: Thinking bonus issues raise cash.
+tip: Bonus = free.
+src: Study text ch12 - bonus issue (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How are loan notes classified in a company's statement of financial position?
++ As liabilities || Borrowings.
+- As equity || Not owners' capital.
+- As share premium || Not correct.
+- As current assets || Not assets.
+explain: Interest on loan notes is a finance cost.
+mistake: Treating loan notes as equity.
+tip: Loan notes = debt.
+src: Study text ch12 - loan notes (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: At the year end, how is a company's estimated income tax for the year recorded?
++ Debit income tax expense; credit income tax liability || Expense and current liability.
+- Debit income tax liability; credit bank || That is a payment.
+- Debit retained earnings; credit bank || Not correct.
+- No entry until paid || An estimate is recorded.
+explain: Differences when paid are adjusted next year.
+mistake: Waiting until payment.
+tip: Estimate now.
+src: Study text ch12 - income tax (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is a rights issue?
++ New shares offered to existing shareholders in proportion to their holdings, at a price || Raises cash.
+- Free shares to existing shareholders || Bonus issue.
+- A dividend in shares || Not exactly.
+- A loan from shareholders || Not shares.
+explain: The price is usually below market value.
+mistake: Confusing with bonus issues.
+tip: Rights = pay for them.
+src: Study text ch12 - rights issue (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the entry for issuing shares at a premium for cash?
++ Dr bank (proceeds); Cr share capital (nominal); Cr share premium (excess) || Three-part entry.
+- Dr share capital; Cr bank || Reversed.
+- Dr bank; Cr revenue || Not revenue.
+- Dr share premium; Cr bank || Not correct.
+explain: Share premium is a capital reserve.
+mistake: Crediting revenue.
+tip: Split nominal and premium.
+src: Study text ch12 - issue at premium (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A company has 300,000 $1 ordinary shares and pays a dividend of 10c per share. What is the total dividend ($)?
+answer: 30000
+tol: 0
+unit: $
+formula: Dividend = number of shares x dividend per share
+step: 300,000 x 0.10.
+step: = $30,000.
+check: 300000*0.1
+explain: Dr retained earnings; Cr bank.
+mistake: Using the nominal value in total incorrectly.
+tip: Shares x cents.
+src: Study text ch12 - dividends (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which reserve is normally available for distribution as dividends?
++ Retained earnings || Accumulated distributable profits.
+- Share premium || Capital reserve.
+- Revaluation surplus || Unrealised gain.
+- Share capital || Not distributable.
+explain: Capital reserves are not distributable.
+mistake: Paying dividends from share premium.
+tip: Dividends from retained earnings.
+src: Study text ch12 - reserves (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company with 400,000 $1 shares makes a 1-for-4 rights issue at $1.50 per share, fully taken up. Which entries are correct?
++ Dr bank $150,000; Cr share capital $100,000; Cr share premium $50,000 || 100,000 new shares.
+- Dr bank $100,000; Cr share capital $100,000 || Ignores premium.
+- Dr share premium $100,000; Cr share capital $100,000 || Bonus issue.
+- Dr bank $600,000; Cr share capital $600,000 || Wrong number of shares.
+formula: New shares = existing / 4; cash = new shares x price
+step: New shares = 400,000 / 4 = 100,000; cash = 150,000.
+step: Share capital 100,000 (nominal); share premium 50,000.
+check: 400000/4*1.5
+explain: Rights issues raise cash.
+mistake: Treating it as a bonus issue.
+tip: Rights = cash in.
+src: Study text ch12 - rights issue (concept basis; original question)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company has 500,000 ordinary shares of $0.50 each. It makes a 1-for-5 bonus issue funded from share premium. By how much ($) does share capital increase?
+answer: 50000
+tol: 0
+unit: $
+formula: Increase = new shares x nominal value
+step: New shares = 500,000 / 5 = 100,000.
+step: 100,000 x 0.50 = $50,000.
+check: 500000/5*0.5
+explain: Dr share premium 50,000; Cr share capital 50,000.
+mistake: Using $1 nominal value.
+tip: Bonus at nominal.
+src: Study text ch12 - bonus issue (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: $50,000 of 8% loan notes were issued on 1 April. The year end is 31 December. Interest of $1,000 has been paid. What interest accrual ($) is needed?
+answer: 2000
+tol: 0
+unit: $
+formula: Accrual = nominal x rate x months / 12 - interest paid
+step: Interest for 9 months = 50,000 x 8% x 9/12 = 3,000.
+step: Accrual = 3,000 - 1,000 = $2,000.
+check: 50000*0.08*9/12-1000
+explain: The finance cost for the year is $3,000.
+mistake: Charging only the cash paid.
+tip: Time-apportion interest.
+src: Study text ch12 - loan note interest (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: A final dividend is proposed by the directors after the year end. How is it treated in the year-end accounts?
++ Not recognised as a liability; disclosed in a note || No obligation at the year end.
+- Recognised as a liability || Not yet an obligation.
+- Charged to profit or loss || Not an expense.
+- Deducted from share capital || Not correct.
+explain: It is recognised when approved, in the next period.
+mistake: Accruing proposed dividends.
+tip: Proposed after year end = note.
+src: Study text ch12 - proposed dividends (concept basis; original question)
+
+=== Q015
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO statements about a bonus issue are correct?
++ No cash is raised || Shares are free.
++ Reserves are converted into share capital || Capitalising reserves.
+- Share premium increases || It usually decreases.
+- Total equity increases || Total equity is unchanged.
+explain: The number of shares rises; total equity does not change.
+mistake: Thinking equity rises.
+tip: Reshuffle within equity.
+src: Study text ch12 - bonus issue (concept basis; original question)
+
+=== Q016
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each transaction with its double entry.
+pair: Issue of shares at a premium for cash => Dr bank, Cr share capital, Cr share premium
+pair: Bonus issue funded from share premium => Dr share premium, Cr share capital
+pair: Interim dividend paid => Dr retained earnings, Cr bank
+pair: Loan note interest accrued => Dr finance cost, Cr interest payable
+explain: Only loan interest passes through profit or loss.
+mistake: Expensing dividends.
+tip: Equity vs expense.
+src: Study text ch12 - entries (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: The estimated income tax for this year is $42,000. Last year's tax was over-provided by $3,000.
+q: What is the income tax expense ($) in this year's profit or loss?
+answer: 39000
+tol: 0
+unit: $
+formula: Expense = current estimate - prior over-provision
+step: 42,000 - 3,000.
+step: = $39,000.
+check: 42000-3000
+explain: The SOFP liability is the current estimate of $42,000.
+mistake: Adjusting the liability for the over-provision.
+tip: Over-provision reduces expense.
+src: Study text ch12 - tax (concept basis; original figures)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: Retained earnings were $120,000 at the start of the year. Profit for the year was $45,000 and dividends paid were $15,000. What are closing retained earnings ($)?
+answer: 150000
+tol: 0
+unit: $
+formula: Closing = opening + profit - dividends
+step: 120,000 + 45,000 = 165,000.
+step: 165,000 - 15,000 = $150,000.
+check: 120000+45000-15000
+explain: This movement is shown in the statement of changes in equity.
+mistake: Adding dividends.
+tip: Profit in, dividends out.
+src: Study text ch12 - SOCE (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which BEST describes preference shares?
++ Shares that usually carry a fixed dividend and usually no voting rights || Fixed return.
+- Shares with full votes and variable dividends || Ordinary shares.
+- Loans from the bank || Not shares.
+- Shares issued free || Bonus issue.
+explain: Ordinary shareholders own the residual interest.
+mistake: Confusing with ordinary shares.
+tip: Preference = fixed dividend.
+src: Study text ch12 - share types (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is interest on loan notes treated?
++ As a finance cost in profit or loss || An expense.
+- As a dividend in the SOCE || Not a dividend.
+- As a reduction of share capital || Not correct.
+- It is ignored until paid || Accrue it.
+explain: Unpaid interest at the year end is accrued.
+mistake: Treating interest as a distribution.
+tip: Interest = expense.
+src: Study text ch12 - finance cost (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A company has $100,000 of 6% preference shares (treated as a liability) and pays the dividend annually. What finance cost ($) arises for a full year?
+answer: 6000
+tol: 0
+unit: $
+formula: Dividend = nominal x rate
+step: 100,000 x 6%.
+step: = $6,000.
+check: 100000*0.06
+explain: Redeemable preference shares are often liabilities; their dividends are finance costs.
+mistake: Applying the rate to market value.
+tip: Nominal x rate.
+src: Study text ch12 - preference dividends (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: How is income tax treated for a SOLE TRADER's business?
++ The owner pays tax personally; tax is not a business expense || Not a separate entity for tax.
+- The business records an income tax expense || That is a company.
+- The tax is added to capital || Not correct.
+- Tax is ignored entirely || It is paid personally.
+explain: Tax paid from the business account is treated as drawings.
+mistake: Expensing a sole trader's tax.
+tip: Personal tax = drawings.
+src: Study text ch12 - sole trader tax (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which is an advantage of a rights issue?
++ It is a relatively cheap way to raise equity and preserves existing shareholders' control || If taken up.
+- It always raises more than a public issue || Not necessarily.
+- It costs nothing at all || Some costs exist.
+- It is cheaper than debt || Equity is usually more expensive.
+explain: It may not raise enough if shareholders decline.
+mistake: Thinking equity is cheaper than debt.
+tip: Existing owners, kept control.
+src: Study text ch12 - rights advantages (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: A company issued 50,000 $1 shares at $2.40 each. What is the total cash received ($)?
+answer: 120000
+tol: 0
+unit: $
+formula: Cash = shares x issue price
+step: 50,000 x 2.40.
+step: = $120,000 (share capital 50,000; premium 70,000).
+check: 50000*2.4
+explain: Cash = nominal plus premium.
+mistake: Using nominal value only.
+tip: Shares x price.
+src: Study text ch12 - share issue (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee charges an interim ordinary dividend of $20,000 to profit or loss. What is the effect?
++ Profit is understated by $20,000; retained earnings are unchanged overall || Dividends belong in the SOCE.
+- No effect on profit || Profit is understated.
+- Profit is overstated || Understated.
+- Equity is understated by $40,000 || Total equity is the same.
+explain: Dividends are distributions, not expenses.
+mistake: Expensing dividends.
+tip: Dividends below profit.
+src: Study text ch12 - dividends (concept basis; original question)
+
+=== Q026
+type: order
+level: S
+cat: concept
+topic: t4
+status: review
+q: Put these retained earnings movements in the order they appear in the statement of changes in equity.
+item: Balance at the start of the year
+item: Profit for the year
+item: Dividends paid
+item: Balance at the end of the year
+explain: Other comprehensive income and share issues affect other columns.
+mistake: Deducting dividends from opening balance first.
+tip: Open, profit, dividends, close.
+src: Study text ch12 - SOCE (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+scenario: Last year the tax liability was estimated at $30,000; the amount actually paid was $33,500. This year's estimate is $36,000.
+q: What is the income tax expense ($) for this year?
+answer: 39500
+tol: 0
+unit: $
+formula: Expense = current estimate + prior under-provision
+step: Under-provision = 33,500 - 30,000 = 3,500.
+step: Expense = 36,000 + 3,500 = $39,500.
+check: 36000+(33500-30000)
+explain: The year-end liability is $36,000.
+mistake: Including the under-provision in the liability.
+tip: Under-provision adds to expense.
+src: Study text ch12 - tax (concept basis; original figures)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which item is shown in the share premium column of the statement of changes in equity?
++ The premium on a new share issue || Capital reserve movement.
+- Profit for the year || Retained earnings.
+- Revaluation gains || Revaluation surplus.
+- Dividends paid || Retained earnings.
+explain: A bonus issue may reduce share premium.
+mistake: Placing profit in share premium.
+tip: Premium column = premiums and bonus issues.
+src: Study text ch12 - SOCE (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is meant by "issued share capital"?
++ The number and nominal value of shares actually issued to shareholders || Not market value.
+- The maximum shares a company may ever issue || Older concept of authorised capital.
+- The market value of shares || Not correct.
+- Retained earnings || Not share capital.
+explain: Called-up and paid-up capital may be smaller if not fully paid.
+mistake: Using market value.
+tip: Issued x nominal.
+src: Study text ch12 - terminology (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A company has 400,000 ordinary shares of $0.50 each and pays a dividend of 5c per share. What is the total dividend ($)?
+answer: 20000
+tol: 0
+unit: $
+formula: Dividend = shares x dividend per share
+step: 400,000 x 0.05.
+step: = $20,000.
+check: 400000*0.05
+explain: Count shares, not nominal dollars.
+mistake: Dividing nominal value by dividend rate.
+tip: Number of shares x cents.
+src: Study text ch12 - dividends (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Share capital: 800,000 $0.25 ordinary shares. Share premium $150,000. A 1-for-2 bonus issue is made, funded from share premium as far as possible, then retained earnings.
+q: What are the balances on share capital and share premium after the bonus issue?
++ Share capital $300,000; share premium $50,000 || 400,000 new shares x $0.25 = 100,000.
+- Share capital $600,000; share premium $0 || Uses $0.50 or wrong number.
+- Share capital $200,000; share premium $150,000 || Ignores the bonus.
+- Share capital $300,000; share premium $150,000 || Premium must fund it.
+formula: Bonus nominal = new shares x nominal value
+step: Existing share capital = 800,000 x 0.25 = 200,000; new shares = 400,000 x 0.25 = 100,000.
+step: Share capital = 300,000; share premium = 150,000 - 100,000 = 50,000.
+check: 800000*0.25+400000*0.25
+explain: Total equity is unchanged.
+mistake: Valuing bonus shares at market value.
+tip: Nominal value only.
+src: Study text ch12 - bonus issue (concept basis; original figures)
+
+=== Q032
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A company has 600,000 $0.50 shares. It makes a 1-for-3 rights issue at $0.80 per share, fully taken up.
+q: How much ($) is credited to share premium?
+answer: 60000
+tol: 0
+unit: $
+formula: Premium = new shares x (price - nominal)
+step: New shares = 600,000 / 3 = 200,000.
+step: Premium = 200,000 x (0.80 - 0.50) = $60,000.
+check: 600000/3*(0.8-0.5)
+explain: Cash raised = 160,000; share capital +100,000.
+mistake: Using existing shares.
+tip: New shares only.
+src: Study text ch12 - rights issue (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO items appear in the statement of changes in equity?
++ A revaluation gain on property for the year || Through OCI into the revaluation surplus.
++ Dividends paid to shareholders || Distribution.
+- Interest paid on loan notes || Profit or loss.
+- Repayment of a bank loan || Not equity.
+explain: Profit for the year is also included.
+mistake: Including finance costs.
+tip: Owner transactions and comprehensive income.
+src: Study text ch12 - SOCE (concept basis; original question)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: $200,000 of 5% loan notes were in issue all year. A further $100,000 of 5% loan notes were issued on 1 July. The year end is 31 December. Interest paid in the year was $7,500.
+q: What is the interest accrual ($) at the year end?
+answer: 5000
+tol: 0
+unit: $
+formula: Accrual = total interest for the year - paid
+step: Interest = 200,000 x 5% + 100,000 x 5% x 6/12 = 10,000 + 2,500 = 12,500.
+step: Accrual = 12,500 - 7,500 = $5,000.
+check: 200000*0.05+100000*0.05*6/12-7500
+explain: The finance cost is $12,500.
+mistake: Charging a full year on the new notes.
+tip: Time-apportion new issues.
+src: Study text ch12 - loan notes (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t5
+status: review
+q: A trainee shows last year's $4,000 tax under-provision as part of this year's year-end tax LIABILITY. What is correct?
++ The under-provision increases this year's tax expense, but the liability is only this year's estimate || The old amount has been paid.
+- The trainee is correct || The liability excludes it.
+- Ignore the under-provision completely || It affects the expense.
+- Add it to share capital || Not correct.
+explain: Last year's tax was settled; the difference is an expense adjustment.
+mistake: Double counting in the liability.
+tip: Expense yes; liability no.
+src: Study text ch12 - tax (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Opening equity: share capital $500,000; share premium $80,000; retained earnings $210,000. During the year: 100,000 $1 shares issued at $1.60; profit $95,000; dividends $40,000.
+q: What is total closing equity ($)?
+answer: 1005000
+tol: 0
+unit: $
+formula: Closing equity = opening + share issue proceeds + profit - dividends
+step: Opening = 790,000; issue proceeds = 160,000.
+step: Closing = 790,000 + 160,000 + 95,000 - 40,000 = $1,005,000.
+check: 500000+80000+210000+100000*1.6+95000-40000
+explain: Share capital 600,000; premium 140,000; retained earnings 265,000.
+mistake: Adding only nominal value.
+tip: Full proceeds increase equity.
+src: Study text ch12 - SOCE (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company wants to raise $2 million of new equity without diluting the control of existing shareholders. Which method is MOST suitable?
++ A rights issue || Offered to existing shareholders in proportion.
+- A bonus issue || Raises no cash.
+- A public issue to new investors || Dilutes control.
+- Issuing loan notes || Debt, not equity.
+explain: Shareholders who take up their rights keep their percentage.
+mistake: Choosing a bonus issue to raise cash.
+tip: Cash + control = rights.
+src: Study text ch12 - rights issue (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: Tax: opening liability $55,000 (estimate); actually paid $52,500 in settlement. Closing estimate for this year $61,000.
+q: What is the income tax expense ($) for the year?
+answer: 58500
+tol: 0
+unit: $
+formula: Expense = current estimate - prior over-provision
+step: Over-provision = 55,000 - 52,500 = 2,500.
+step: Expense = 61,000 - 2,500 = $58,500.
+check: 61000-(55000-52500)
+explain: The SOFP liability is $61,000.
+mistake: Adding the over-provision.
+tip: Paid less = over-provided.
+src: Study text ch12 - tax (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Why is share premium NOT normally available for dividends?
++ It is a capital reserve protecting creditors, not accumulated profit || Not distributable.
+- It has already been paid as dividends || Not correct.
+- It is a liability || It is equity.
+- It belongs to the auditors || Not correct.
+explain: It may be used for bonus issues.
+mistake: Distributing share premium.
+tip: Capital reserves stay.
+src: Study text ch12 - reserves (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t4
+status: review
+q: Match each reserve with its source.
+pair: Share premium => Shares issued above nominal value
+pair: Revaluation surplus => Upward revaluation of non-current assets
+pair: Retained earnings => Accumulated undistributed profits
+pair: Share capital => Nominal value of shares issued
+explain: Only retained earnings are normally distributable.
+mistake: Mixing sources.
+tip: Each reserve has one source.
+src: Study text ch12 - reserves (concept basis; original question)
+
+=== Q041
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A trainee records a 1-for-4 bonus issue of 100,000 $1 shares as "Dr bank $100,000; Cr share capital $100,000". What is wrong?
++ No cash is received; the debit should be to share premium or another reserve || Bonus issues are free.
+- Nothing is wrong || No cash moves.
+- It should be Dr share capital; Cr bank || Not correct.
+- It should credit share premium || Share capital is credited.
+explain: Bank would be overstated by $100,000.
+mistake: Debiting bank.
+tip: Bonus = no cash.
+src: Study text ch12 - bonus issue (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A company has 1,000,000 $0.20 ordinary shares. It paid an interim dividend of 3c per share and the directors propose a final dividend of 5c per share after the year end.
+q: What dividends ($) are deducted from retained earnings in this year's SOCE?
+answer: 30000
+tol: 0
+unit: $
+formula: Deduct only dividends paid or declared before the year end
+step: Interim = 1,000,000 x 0.03 = 30,000.
+step: The proposed final dividend is disclosed only.
+check: 1000000*0.03
+explain: The final dividend ($50,000) is recognised next year.
+mistake: Including the proposed dividend.
+tip: Proposed after year end = note.
+src: Study text ch12 - dividends (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: How does issuing shares at a premium affect the statement of financial position?
++ Cash rises, and share capital plus share premium rise by the same total || Equity and assets increase.
+- Only share capital rises || Premium also rises.
+- Liabilities rise || Not a liability.
+- Profit rises || Not income.
+explain: Share issues are capital transactions.
+mistake: Recording issues as profit.
+tip: Cash up, equity up.
+src: Study text ch12 - share issues (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: $80,000 of 7.5% loan notes were redeemed on 30 September. The year end is 31 December. No interest was paid during the year.
+q: What is the finance cost ($) for the year on these loan notes?
+answer: 4500
+tol: 0
+unit: $
+formula: Finance cost = nominal x rate x months outstanding / 12
+step: Months outstanding = January to September = 9.
+step: 80,000 x 7.5% x 9/12 = $4,500.
+check: 80000*0.075*9/12
+explain: Interest stops when the loan notes are repaid.
+mistake: Charging a full year.
+tip: Months outstanding only.
+src: Study text ch12 - finance cost (concept basis; original figures)
+
+=== Q045
+type: mcq
+level: C
+cat: scenario
+topic: t5
+status: review
+q: A company consistently estimates its tax liability too low and records large under-provisions each year. What is the effect on reported results?
++ Each year's tax expense includes the previous year's shortfall, so profits are shifted between years || Distortion.
+- No effect - under-provisions are ignored || They are adjusted.
+- The SOFP liability includes all past shortfalls || Only the current estimate.
+- Profit is always overstated in every year || Effect alternates.
+explain: Better estimation improves the accuracy of each year's tax charge.
+mistake: Ignoring estimation quality.
+tip: Estimates matter.
+src: Study text ch12 - tax estimates (concept basis; original scenario)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why are loan notes classified as liabilities rather than equity?
++ The company has an obligation to pay interest and repay the principal || Contractual obligation.
+- Because they have no nominal value || They do.
+- Because they carry votes || Usually they don't.
+- Because interest is a dividend || It is a finance cost.
+explain: Equity carries no obligation to repay.
+mistake: Treating long-term finance as equity.
+tip: Must repay = liability.
+src: Study text ch12 - liabilities (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Share capital $400,000 ($1 shares); share premium $90,000. A 1-for-4 rights issue at $1.40 is fully taken up, and then a 1-for-10 bonus issue is made from share premium.
+q: What is the closing share premium balance ($)?
+answer: 80000
+tol: 0
+unit: $
+formula: Premium = opening + rights premium - bonus nominal
+step: Rights: 100,000 shares x 0.40 = 40,000 premium; shares now 500,000.
+step: Bonus: 50,000 shares x $1 = 50,000 from premium; balance = 90,000 + 40,000 - 50,000 = $80,000.
+check: 90000+400000/4*0.4-(400000+100000)/10*1
+explain: The bonus issue is based on shares after the rights issue.
+mistake: Basing the bonus on the original shares.
+tip: Follow the order of events.
+src: Study text ch12 - combined issues (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t5
+status: review
+q: Where does the current year's estimated income tax appear in the statement of financial position?
++ As a current liability || Payable within a year.
+- As a non-current asset || Not an asset.
+- In equity || Not equity.
+- It does not appear || It is a liability.
+explain: The tax expense appears in profit or loss.
+mistake: Placing tax in equity.
+tip: Tax owed = current liability.
+src: Study text ch12 - tax presentation (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement BEST contrasts rights and bonus issues?
++ A rights issue raises cash; a bonus issue is free and capitalises reserves || Core contrast.
+- Both raise cash || Bonus raises none.
+- A bonus issue raises cash; a rights issue is free || Reversed.
+- Both reduce total equity || Neither reduces equity.
+explain: Rights: Dr bank. Bonus: Dr reserve.
+mistake: Reversing them.
+tip: Rights = pay; bonus = free.
+src: Study text ch12 - comparison (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t5
+status: review
+important: 1
+q: Which formula gives the income tax expense?
++ Current year estimate + prior under-provision (or - over-provision) || Core formula.
+- Tax paid in the year only || Ignores estimates.
+- Current estimate + all past tax paid || Not correct.
+- Prior year estimate only || Not correct.
+explain: The SOFP liability is only the current estimate.
+mistake: Including the adjustment in the liability.
+tip: Estimate + adjustment.
+src: Study text ch12 - tax (concept basis; original question)

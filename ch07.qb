@@ -1,0 +1,925 @@
+@subject acfma
+@chapter 7
+@title Overhead Costs
+@lo B5
+@topic t1 | Allocation and apportionment | B5
+@topic t2 | Absorption | B5
+@topic t3 | Under- and over-absorption | B5
+@topic t4 | Absorption vs marginal costing | B5
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is meant by overhead ALLOCATION?
++ Charging a whole item of cost to a single cost centre that alone incurred it || For example, the salary of a supervisor who works only in the assembly department.
+- Sharing a cost between several cost centres on a fair basis || That is apportionment.
+- Charging overheads to cost units using a predetermined rate || That is absorption.
+- Transferring service centre costs to production centres || That is reapportionment.
+explain: Overheads go through four stages: allocation (whole costs to one centre), apportionment (shared costs split fairly), reapportionment (service centres to production centres) and absorption (into cost units).
+mistake: Using "allocation" and "apportionment" as if they meant the same thing.
+tip: Allocate = whole cost, one centre. Apportion = shared cost, several centres.
+src: Study text ch7 - allocation (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which basis is MOST appropriate for apportioning factory rent between departments?
++ Floor area occupied || Rent relates to space, so floor area reflects the benefit each department receives.
+- Number of employees || This suits canteen or personnel costs.
+- Value of machinery || This suits machinery insurance or depreciation.
+- Direct labour hours || Labour hours are used for absorption, not for apportioning rent.
+explain: The apportionment basis should reflect how each department benefits from the shared cost.
+mistake: Choosing a basis that is easy to measure rather than one that reflects usage.
+tip: Rent and rates - floor area; canteen - employees; machine insurance - machine value.
+src: Study text ch7 - apportionment bases (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is a predetermined overhead absorption rate calculated?
++ Budgeted overhead divided by budgeted activity || Rates are set in advance from budgets so that product costs can be calculated during the period.
+- Actual overhead divided by actual activity || Actual figures are not known until the end of the period.
+- Budgeted overhead divided by actual activity || Mixing budget and actual figures is not how the rate is set.
+- Actual overhead divided by budgeted activity || The rate must be set before actual overheads are known.
+explain: The OAR uses budgeted figures. Differences between budget and actual later produce under- or over-absorption.
+mistake: Using actual figures to set the OAR.
+tip: Pre-determined = before the period = budget figures.
+src: Study text ch7 - absorption rates (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Overhead absorbed is LESS than actual overhead incurred. What is this called and how does it affect profit?
++ Under-absorption; profit is reduced || Too little overhead was charged to products, so the shortfall is charged against profit.
+- Over-absorption; profit is reduced || Over-absorption is when absorbed exceeds actual.
+- Under-absorption; profit is increased || The shortfall is an extra charge, so profit falls.
+- Over-absorption; profit is increased || The situation described is under-absorption.
+explain: Under-absorbed overhead (absorbed < actual) is debited to profit or loss. Over-absorbed overhead (absorbed > actual) is credited and increases profit.
+mistake: Reversing the terms.
+tip: "Under" = not enough absorbed = extra cost.
+src: Study text ch7 - under-absorption (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Why must the costs of service cost centres, such as stores and maintenance, be reapportioned?
++ Because overheads can only be absorbed into products through production cost centres || Products pass through production centres, not service centres.
+- Because service centres make the products || Service centres support production; they do not make products.
+- Because service centre costs are direct costs || Service centre costs are indirect (overheads).
+- Because service centre costs must be excluded from product costs || They are included, via reapportionment.
+explain: All production overheads must end up in production cost centres so that they can be absorbed into the units passing through those centres.
+mistake: Leaving service centre costs where they are.
+tip: Every overhead must reach a production centre before absorption.
+src: Study text ch7 - reapportionment (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: How is closing inventory valued under MARGINAL costing?
++ At variable production cost || Fixed production overhead is treated as a period cost.
+- At full production cost including fixed overheads || That is absorption costing.
+- At selling price || Inventory is valued at cost, not selling price.
+- At variable production cost plus selling costs || Selling costs are never included in inventory.
+explain: Marginal costing treats fixed production overhead as a period cost, charged in full in the period incurred. Inventory carries only variable production cost.
+mistake: Including fixed production overhead in marginal costing inventory.
+tip: Marginal = variable only.
+src: Study text ch7 - absorption vs marginal costing (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which of the following is an overhead (indirect cost) for a furniture manufacturer?
++ Wages of the factory cleaner || Cleaning cannot be traced to individual pieces of furniture.
+- Timber used to make chairs || Traceable to units - direct material.
+- Wages of carpenters making tables || Traceable to units - direct labour.
+- Hinges fitted to each cupboard || Traceable to units - direct material.
+explain: Overheads are costs that cannot be traced directly to a cost unit: indirect materials, indirect labour and indirect expenses.
+mistake: Thinking all factory wages are direct.
+tip: Ask "can I identify this cost in one specific product?"
+src: Study text ch7 - overheads (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A department is highly automated and most of its overhead relates to running machines. Which absorption basis is MOST appropriate?
++ Machine hours || Machine hours reflect how overhead is incurred in a machine-based department.
+- Direct labour hours || Suitable for labour-intensive departments.
+- Number of employees || This is an apportionment basis, not an absorption basis.
+- Floor area || This is an apportionment basis for rent.
+explain: The absorption base should reflect what drives overhead in the department.
+mistake: Using labour hours in a department where labour is a small part of activity.
+tip: Machine-intensive - machine hours; labour-intensive - labour hours.
+src: Study text ch7 - absorption bases (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: calc
+topic: t2
+status: review
+q: Budgeted production overhead for a department is $120,000 and budgeted machine hours are 40,000. What is the overhead absorption rate?
++ $3.00 per machine hour || 120,000 / 40,000 = $3.00.
+- $0.33 per machine hour || This divides hours by overhead.
+- $30.00 per machine hour || This misplaces the decimal point.
+- $4.00 per machine hour || This divides by 30,000 hours, a figure not given.
+formula: OAR = budgeted overhead / budgeted activity
+step: Budgeted overhead = $120,000; budgeted machine hours = 40,000.
+step: OAR = 120,000 / 40,000 = $3.00 per machine hour.
+check: 120000/40000
+explain: The OAR is used to charge overhead to each product according to the machine hours it uses.
+mistake: Inverting the fraction.
+tip: Overhead on top, activity underneath.
+src: Study text ch7 - OAR (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: In what order are the stages of absorption costing carried out?
++ Allocate, apportion, reapportion, absorb || Costs are first gathered in cost centres, then service centre costs move to production centres, then absorption into units.
+- Absorb, allocate, apportion, reapportion || Absorption is the final stage.
+- Apportion, allocate, absorb, reapportion || Reapportionment must happen before absorption.
+- Reapportion, apportion, allocate, absorb || Costs must be in cost centres before they can be reapportioned.
+explain: Overheads are collected in cost centres (allocation and apportionment), moved to production centres (reapportionment) and charged to units (absorption).
+mistake: Absorbing before reapportioning.
+tip: Learn the four stages in order - they structure most overhead questions.
+src: Study text ch7 - stages (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Factory rent of $24,000 is apportioned on floor area. Machining occupies 3,000 m2, Assembly 2,000 m2 and the Canteen 1,000 m2. How much rent is apportioned to Machining?
++ $12,000 || 24,000 x 3,000 / 6,000 = $12,000.
+- $8,000 || This splits the rent equally between the three departments.
+- $14,400 || This excludes the canteen and uses 3,000 / 5,000.
+- $3,000 || This is the floor area, not the cost.
+formula: Apportioned cost = total cost x department's share of the basis
+step: Total floor area = 3,000 + 2,000 + 1,000 = 6,000 m2.
+step: Machining share = 3,000 / 6,000 = 50%; 50% x 24,000 = $12,000.
+check: 24000*3000/6000
+explain: Shared costs are split in proportion to the chosen basis, including service centres such as the canteen.
+mistake: Leaving the canteen's area out of the total.
+tip: Include every cost centre that uses the shared resource.
+src: Study text ch7 - apportionment (concept basis; original question)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: Canteen costs of $18,000 are reapportioned to two production departments on the basis of employees. Machining has 40 employees and Assembly has 80. How much is reapportioned to Assembly?
++ $12,000 || 18,000 x 80 / 120 = $12,000.
+- $6,000 || This is Machining's share.
+- $9,000 || This splits the cost equally.
+- $14,400 || This uses 80 / 100.
+formula: Reapportioned cost = service centre cost x department's share of the basis
+step: Total employees = 40 + 80 = 120.
+step: Assembly = 18,000 x 80/120 = $12,000.
+check: 18000*80/120
+explain: Canteen costs relate to the number of people using the canteen, so employees is a fair basis.
+mistake: Calculating the wrong department's share.
+tip: Read which department the question asks about.
+src: Study text ch7 - reapportionment (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: An OAR of $3 per machine hour was set. Actual machine hours were 42,000 and actual overhead was $123,000. What was the under- or over-absorption?
++ $3,000 over-absorbed || Absorbed = 42,000 x 3 = 126,000, which exceeds actual 123,000 by $3,000.
+- $3,000 under-absorbed || Absorbed is higher than actual, so it is over-absorption.
+- $6,000 over-absorbed || This uses 41,000 hours or a different rate.
+- $123,000 under-absorbed || The whole actual overhead is not under-absorbed.
+formula: Absorbed = actual activity x OAR; difference = absorbed - actual
+step: Absorbed = 42,000 x 3 = $126,000.
+step: 126,000 - 123,000 = $3,000; absorbed > actual = over-absorbed.
+check: 42000*3 - 123000
+explain: Over-absorption arises when more overhead is charged to production than was actually incurred. It is credited to profit or loss.
+mistake: Comparing budgeted overhead with actual overhead instead of absorbed with actual.
+tip: Always compute absorbed overhead first: actual activity x OAR.
+src: Study text ch7 - under/over-absorption (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: Budgeted overhead $200,000; budgeted labour hours 50,000. Actual labour hours 46,000; actual overhead $195,000.
+q: What is the under- or over-absorbed overhead?
++ $11,000 under-absorbed || OAR = 4; absorbed = 46,000 x 4 = 184,000; actual 195,000 is higher by $11,000.
+- $5,000 under-absorbed || This compares budgeted with actual overhead.
+- $11,000 over-absorbed || Absorbed is less than actual, so it is under-absorption.
+- $16,000 under-absorbed || This compares absorbed overhead with the budgeted overhead.
+formula: OAR = budgeted overhead / budgeted hours; absorbed = actual hours x OAR
+step: OAR = 200,000 / 50,000 = $4 per labour hour.
+step: Absorbed = 46,000 x 4 = $184,000.
+step: Actual 195,000 - absorbed 184,000 = $11,000 under-absorbed.
+check: 195000 - 46000*200000/50000
+explain: Under-absorption here has two causes: actual activity was below budget, and actual overhead differed from budget.
+mistake: Comparing budgeted and actual overhead only.
+tip: Absorbed vs actual - never budget vs actual.
+src: Study text ch7 - under/over-absorption (concept basis; original figures)
+
+=== Q015
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A product needs direct materials of $10, direct labour of $8 and 2 machine hours. The OAR is $3 per machine hour. What is the full production cost per unit?
++ $24 || 10 + 8 + (2 x 3) = $24.
+- $21 || This absorbs only one machine hour.
+- $18 || This is the prime cost only.
+- $30 || This applies the OAR to the labour cost.
+formula: Full production cost = prime cost + absorbed overhead
+step: Prime cost = 10 + 8 = $18.
+step: Overhead = 2 x 3 = $6.
+step: Full cost = $24.
+check: 10 + 8 + 2*3
+explain: Absorption costing adds overhead to prime cost using the hours each unit uses.
+mistake: Absorbing overhead on the wrong number of hours.
+tip: Overhead per unit = hours per unit x OAR.
+src: Study text ch7 - product cost (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Overhead absorbed was $84,000 and overhead was under-absorbed by $6,000. What was the actual overhead incurred?
++ $90,000 || Under-absorbed means actual exceeded absorbed: 84,000 + 6,000.
+- $78,000 || This treats the $6,000 as over-absorption.
+- $84,000 || This ignores the under-absorption.
+- $6,000 || This is the under-absorbed amount only.
+formula: Actual = absorbed + under-absorbed (or - over-absorbed)
+step: Under-absorbed: actual > absorbed.
+step: Actual = 84,000 + 6,000 = $90,000.
+check: 84000 + 6000
+explain: Under-absorption is the excess of actual overhead over absorbed overhead.
+mistake: Deducting the under-absorbed amount.
+tip: Under = absorbed fell short of actual.
+src: Study text ch7 - under-absorption (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which of the following could cause overhead to be OVER-absorbed?
++ Actual production was higher than budgeted, with overhead costs as budgeted || More hours x the same rate absorbs more than was incurred.
+- Actual overhead costs were higher than budgeted, with activity as budgeted || This causes under-absorption.
+- Actual production was lower than budgeted, with overhead costs as budgeted || Fewer hours absorb less - under-absorption.
+- The absorption rate was set using actual figures || Using actual figures would leave no under- or over-absorption.
+explain: Over-absorption happens when actual activity exceeds budget and/or actual overhead is below budget.
+mistake: Linking higher costs with over-absorption.
+tip: Over-absorption: more activity than planned or less spending than planned.
+src: Study text ch7 - causes of under/over-absorption (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which basis is MOST appropriate for apportioning the cost of insuring factory machinery?
++ Value of machinery in each department || Insurance cost depends on the value of what is insured.
+- Floor area || Floor area suits rent and rates.
+- Number of employees || This suits canteen or welfare costs.
+- Number of units produced || This is not related to insurance cost.
+explain: The basis should reflect the cause of the cost. Machinery insurance is driven by machinery value.
+mistake: Using floor area for every shared cost.
+tip: Link each shared cost to its cause.
+src: Study text ch7 - apportionment bases (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why are overhead absorption rates usually set in advance from budgets rather than calculated from actual figures at the end of the period?
++ So that product costs and prices can be established during the period || Actual figures are not known until the period ends.
+- Because budgets are always accurate || Budgets are estimates, which is why under- and over-absorption occur.
+- Because actual overheads are not recorded || Actual overheads are recorded in the ledger.
+- Because accounting standards forbid using actual figures || There is no such rule for management accounting.
+explain: Managers need product costs to set prices, value inventory and prepare quotes during the period, so predetermined rates are used.
+mistake: Thinking budgets are used because they are more accurate.
+tip: The trade-off is timeliness versus accuracy.
+src: Study text ch7 - predetermined rates (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: A company produced 10,000 units and sold 9,000 units. There was no opening inventory. The fixed production overhead absorption rate is $5 per unit. How does absorption costing profit compare with marginal costing profit?
++ Absorption profit is $5,000 higher || Inventory rose by 1,000 units, carrying 1,000 x $5 of fixed overhead into the next period.
+- Marginal profit is $5,000 higher || When inventory rises, absorption profit is higher.
+- Absorption profit is $45,000 higher || This uses units sold instead of the change in inventory.
+- The profits are the same || They differ whenever inventory levels change.
+formula: Profit difference = change in inventory (units) x fixed OAR per unit
+step: Inventory increase = 10,000 - 9,000 = 1,000 units.
+step: Difference = 1,000 x 5 = $5,000; absorption higher because inventory rose.
+check: (10000-9000)*5
+explain: Under absorption costing some fixed overhead is carried forward in closing inventory, so profit is higher when inventory increases.
+mistake: Using total production or sales instead of the change in inventory.
+tip: Inventory up - absorption profit higher; inventory down - marginal profit higher.
+src: Study text ch7 - profit reconciliation (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Under marginal costing, how is fixed production overhead treated?
++ As a period cost, charged in full in the period incurred || It is not included in inventory values.
+- As part of the cost of each unit produced || That is absorption costing.
+- As a selling cost || It is a production cost, treated as a period cost.
+- It is not recorded at all || It is charged in full against profit.
+explain: Marginal costing separates variable costs (product costs) from fixed costs (period costs).
+mistake: Thinking marginal costing ignores fixed costs.
+tip: Fixed costs are still deducted - just not carried in inventory.
+src: Study text ch7 - marginal costing (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Department X: budgeted overhead $66,000, budgeted labour hours 11,000, budgeted machine hours 3,000. Work in the department is mainly manual.
+q: What overhead absorption rate should be used?
++ $6 per labour hour || The department is labour-intensive, so labour hours are used: 66,000 / 11,000.
+- $22 per machine hour || Machine hours suit machine-intensive departments.
+- $4.71 per hour || This divides by total hours of both kinds (14,000).
+- $66,000 per period || A rate per unit of activity is required.
+formula: OAR = budgeted overhead / budgeted labour hours
+step: The department is labour-intensive, so use labour hours.
+step: 66,000 / 11,000 = $6 per labour hour.
+check: 66000/11000
+explain: Choosing the right base gives product costs that reflect how overhead is really incurred.
+mistake: Choosing the base that gives the highest or lowest rate.
+tip: Read the description of the department before calculating.
+src: Study text ch7 - absorption bases (concept basis; original figures)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is under-absorbed overhead treated in the cost accounts at the end of the period?
++ It is debited to the statement of profit or loss as an additional expense || The shortfall is written off against profit.
+- It is added to closing inventory || It is not carried forward in inventory.
+- It is credited to profit or loss || That is the treatment of over-absorbed overhead.
+- It is ignored until the next period || It is dealt with in the period in which it arises.
+explain: Under-absorbed overhead reduces profit; over-absorbed overhead increases profit.
+mistake: Carrying the under-absorption forward.
+tip: Under = debit P/L; over = credit P/L.
+src: Study text ch7 - accounting for under/over-absorption (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Building insurance of $9,000 is apportioned on floor area: Department A 1,500 m2, Department B 2,500 m2, Stores 500 m2.
+q: How much is apportioned to Department B?
++ $5,000 || 9,000 x 2,500 / 4,500 = $5,000.
+- $5,625 || This leaves out the stores area and uses 2,500 / 4,000.
+- $4,500 || This splits the cost equally between A and B.
+- $3,000 || This splits the cost equally between all three centres.
+formula: Apportioned cost = total cost x department's share of floor area
+step: Total area = 1,500 + 2,500 + 500 = 4,500 m2.
+step: Department B = 9,000 x 2,500 / 4,500 = $5,000.
+check: 9000*2500/4500
+explain: Service centres share in apportioned costs too; their totals are reapportioned later.
+mistake: Excluding the stores.
+tip: Apportion to all centres first, reapportion service centres afterwards.
+src: Study text ch7 - apportionment (concept basis; original figures)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Opening inventory is higher than closing inventory. How does marginal costing profit compare with absorption costing profit?
++ Marginal costing profit is higher || Inventory fell, so absorption costing releases fixed overhead from opening inventory into cost of sales.
+- Absorption costing profit is higher || This happens when inventory rises.
+- They are equal || They are equal only when inventory levels do not change.
+- It depends on the selling price || The difference depends on inventory change and the fixed OAR, not price.
+explain: When inventory falls, absorption costing charges this period with fixed overhead brought forward in opening inventory, so its profit is lower.
+mistake: Thinking absorption profit is always higher.
+tip: Direction of inventory change decides which profit is higher.
+src: Study text ch7 - profit comparison (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Budgeted fixed production overhead is $90,000 and budgeted production is 15,000 units. What is the fixed overhead absorption rate per unit?
++ $6.00 || 90,000 / 15,000 = $6.00.
+- $0.17 || This divides units by overhead.
+- $60.00 || This misplaces the decimal point.
+- $9.00 || This divides by 10,000 units.
+formula: OAR = budgeted overhead / budgeted units
+step: Budgeted fixed overhead = $90,000; budgeted production = 15,000 units.
+step: 90,000 / 15,000 = $6.00 per unit.
+check: 90000/15000
+explain: A rate per unit is suitable when a single, uniform product is made.
+mistake: Inverting the fraction.
+tip: Rate per unit works only for identical units.
+src: Study text ch7 - absorption bases (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which of the following costs should be ALLOCATED rather than apportioned?
++ The salary of the supervisor who works only in the paint shop || It relates wholly to one cost centre.
+- Factory heating shared by all departments || Shared costs are apportioned.
+- Factory rent || Shared costs are apportioned.
+- The cost of the factory's security guards || Shared costs are apportioned.
+explain: A cost that relates entirely to one cost centre is allocated to it. Costs shared by several centres are apportioned.
+mistake: Apportioning a cost that clearly belongs to one department.
+tip: One centre = allocate.
+src: Study text ch7 - allocation (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: An OAR of $5 per labour hour was based on budgeted overhead of $150,000. Actual labour hours were 28,000 and actual overhead was $150,000. What was the under- or over-absorption?
++ $10,000 under-absorbed || Absorbed = 28,000 x 5 = 140,000, less than actual 150,000.
+- $10,000 over-absorbed || Absorbed is below actual, so it is under-absorption.
+- $0 || Overhead spending was as budgeted, but activity was lower.
+- $20,000 under-absorbed || This uses 26,000 hours.
+formula: Absorbed = actual hours x OAR
+step: Budgeted hours = 150,000 / 5 = 30,000.
+step: Absorbed = 28,000 x 5 = $140,000.
+step: Actual 150,000 - 140,000 = $10,000 under-absorbed.
+check: 150000 - 28000*5
+explain: Even when spending matches budget, lower activity means less overhead is absorbed.
+mistake: Assuming no under-absorption when actual spending equals budget.
+tip: Under/over-absorption can be caused by activity alone.
+src: Study text ch7 - under/over-absorption (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which statement about absorption costing is correct?
++ Closing inventory includes a share of fixed production overhead || Fixed production overhead is absorbed into units and some remains in inventory.
+- Fixed production overhead is treated as a period cost || That is marginal costing.
+- Inventory is valued at variable production cost only || That is marginal costing.
+- Selling overheads are included in inventory values || Non-production overheads are never included in inventory.
+explain: Absorption costing values inventory at full production cost: prime cost plus variable and fixed production overhead.
+mistake: Including selling or administration costs in inventory.
+tip: Only PRODUCTION costs go into inventory under either method.
+src: Study text ch7 - absorption costing (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A job uses 5 hours in Machining (OAR $8 per machine hour) and 3 hours in Finishing (OAR $6 per labour hour). Prime cost is $70. What is the total production cost of the job?
++ $128 || Overhead = (5 x 8) + (3 x 6) = 40 + 18 = 58; 70 + 58 = $128.
+- $112 || This uses $6 for both departments.
+- $110 || This omits the Finishing overhead.
+- $88 || This omits the Machining overhead.
+formula: Production cost = prime cost + sum of (hours in each department x that department's OAR)
+step: Machining overhead = 5 x 8 = $40.
+step: Finishing overhead = 3 x 6 = $18.
+step: Total = 70 + 40 + 18 = $128.
+check: 70 + 5*8 + 3*6
+explain: Each production department has its own OAR, and a job absorbs overhead in each department it passes through.
+mistake: Using one rate for all departments.
+tip: Work department by department.
+src: Study text ch7 - departmental rates (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Over-absorbed overhead in a period means that:
++ More overhead was charged to production than was actually incurred || Absorbed overhead exceeded actual.
+- Less overhead was charged to production than was actually incurred || That is under-absorption.
+- Actual overhead exceeded budgeted overhead || That compares budget with actual, not absorbed with actual.
+- Production was lower than budgeted || That tends to cause under-absorption.
+explain: Over-absorption occurs whenever absorbed overhead (actual activity x OAR) exceeds actual overhead.
+mistake: Defining over-absorption by comparing budget and actual overhead.
+tip: The comparison is always absorbed vs actual.
+src: Study text ch7 - over-absorption (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: calc
+topic: t4
+status: review
+q: In a period opening inventory was 2,000 units and closing inventory was 500 units. The fixed overhead absorption rate is $4 per unit. Marginal costing profit was $30,000. What was absorption costing profit?
++ $24,000 || Inventory fell by 1,500 units: 1,500 x 4 = 6,000; absorption profit is lower: 30,000 - 6,000.
+- $36,000 || Absorption profit is lower, not higher, when inventory falls.
+- $28,000 || This uses closing inventory only: 500 x 4.
+- $22,000 || This uses opening inventory only: 2,000 x 4.
+formula: Absorption profit = marginal profit + (change in inventory x fixed OAR)
+step: Change in inventory = 500 - 2,000 = -1,500 units.
+step: Difference = -1,500 x 4 = -$6,000.
+step: Absorption profit = 30,000 - 6,000 = $24,000.
+check: 30000 + (500-2000)*4
+explain: When inventory falls, fixed overhead carried in from the previous period is charged against this period under absorption costing.
+mistake: Adding the difference regardless of direction.
+tip: Use the signed change in inventory.
+src: Study text ch7 - profit reconciliation (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A factory makes many different products that use very different amounts of machine time. Why would a single rate per UNIT be unsuitable for absorbing overhead?
++ Products using more machine time would not bear a fair share of machine-related overhead || A per-unit rate charges every product the same overhead regardless of resources used.
+- A per-unit rate is not allowed for internal reporting || There is no such rule.
+- A per-unit rate always over-absorbs overhead || The rate does not automatically over-absorb.
+- Products are not counted in units || Products are counted in units; the issue is fairness.
+explain: When products differ, overhead should be absorbed using a time-based measure that reflects resource use.
+mistake: Thinking a per-unit rate is wrong in all cases - it suits identical products.
+tip: Different products - time-based rate; identical products - per-unit rate.
+src: Study text ch7 - absorption bases (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: After apportionment, overheads are: Production 1 $40,000; Production 2 $30,000; Maintenance $10,000. Maintenance work is split 60% to Production 1 and 40% to Production 2.
+q: What is the total overhead of Production 2 after reapportionment?
++ $34,000 || 30,000 + (40% x 10,000) = $34,000.
+- $36,000 || This uses Production 1's 60% share.
+- $30,000 || This leaves maintenance in its service centre.
+- $35,000 || This splits maintenance equally.
+formula: Production centre total = own overhead + share of service centre overhead
+step: Maintenance share to Production 2 = 40% x 10,000 = $4,000.
+step: 30,000 + 4,000 = $34,000.
+check: 30000 + 0.4*10000
+explain: Reapportionment moves all service centre costs into production centres before absorption.
+mistake: Using the wrong department's percentage.
+tip: Check the total: 46,000 + 34,000 = 80,000, the same as before.
+src: Study text ch7 - reapportionment (concept basis; original figures)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: How is absorbed overhead calculated?
++ Actual activity x predetermined overhead absorption rate || This is the overhead charged to production.
+- Budgeted activity x predetermined overhead absorption rate || This equals budgeted overhead.
+- Actual overhead / actual activity || This gives an actual rate, not absorbed overhead.
+- Budgeted overhead - actual overhead || This is a spending difference, not absorbed overhead.
+explain: Absorbed overhead uses actual activity and the predetermined rate. It is then compared with actual overhead.
+mistake: Using budgeted activity.
+tip: Absorbed = ACTUAL activity x BUDGETED rate.
+src: Study text ch7 - absorbed overhead (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: calc, mixed
+topic: t3
+status: review
+scenario: Budgeted overhead $180,000; budgeted machine hours 36,000. Actual machine hours 38,500; actual overhead $187,000.
+q: What is the under- or over-absorption, and what is its effect on profit?
++ $5,500 over-absorbed; profit increases || OAR 5; absorbed 192,500; actual 187,000; absorbed exceeds actual by 5,500.
+- $5,500 under-absorbed; profit falls || Absorbed is higher than actual, so it is over-absorption.
+- $7,000 under-absorbed; profit falls || This compares budget with actual overhead.
+- $12,500 over-absorbed; profit increases || This compares absorbed with budgeted overhead.
+formula: OAR = budget / budgeted hours; absorbed = actual hours x OAR
+step: OAR = 180,000 / 36,000 = $5 per hour.
+step: Absorbed = 38,500 x 5 = $192,500.
+step: 192,500 - 187,000 = $5,500 over-absorbed, credited to profit or loss.
+check: 38500*180000/36000 - 187000
+explain: Overhead spending was above budget, but activity rose even more, so absorption exceeded actual overhead.
+mistake: Concluding under-absorption because spending exceeded budget.
+tip: Calculate - do not guess from one variance.
+src: Study text ch7 - under/over-absorption (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: calc, trap
+topic: t3
+status: review
+q: In a period, overhead was over-absorbed by $4,000. Actual overhead was $96,000 and actual labour hours were 25,000. What was the overhead absorption rate per labour hour?
++ $4.00 || Absorbed = 96,000 + 4,000 = 100,000; 100,000 / 25,000 = $4.00.
+- $3.68 || This deducts the over-absorption: 92,000 / 25,000.
+- $3.84 || This divides actual overhead by hours: an actual rate, not the OAR.
+- $4.16 || This adds the over-absorption twice.
+formula: Absorbed = actual + over-absorbed; OAR = absorbed / actual hours
+step: Absorbed = 96,000 + 4,000 = $100,000.
+step: OAR = 100,000 / 25,000 = $4.00.
+check: (96000 + 4000)/25000
+explain: Working backwards: absorbed overhead equals actual overhead plus any over-absorption.
+mistake: Subtracting the over-absorption.
+tip: Over-absorbed means absorbed is the bigger figure.
+src: Study text ch7 - under/over-absorption (concept basis; original question)
+
+=== Q038
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: An overhead absorption rate of $12 per machine hour was based on budgeted overhead of $288,000. Actual overhead was $300,000 and overhead was under-absorbed by $24,000. How many machine hours were actually worked?
++ 23,000 || Absorbed = 300,000 - 24,000 = 276,000; 276,000 / 12 = 23,000 hours.
+- 27,000 || This adds the under-absorption to actual overhead.
+- 24,000 || This is the budgeted hours (288,000 / 12).
+- 25,000 || This divides actual overhead by the rate.
+formula: Absorbed = actual - under-absorbed; hours = absorbed / OAR
+step: Absorbed = 300,000 - 24,000 = $276,000.
+step: Actual hours = 276,000 / 12 = 23,000.
+check: (300000-24000)/12
+explain: Absorbed overhead is actual hours x OAR, so actual hours can be found by dividing absorbed overhead by the rate.
+mistake: Adding the under-absorption.
+tip: Find absorbed overhead first, then divide by the rate.
+src: Study text ch7 - under/over-absorption (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company absorbs all factory overhead using a single blanket rate per direct labour hour. Department A is labour-intensive; Department B is heavily automated. What is the MOST likely consequence?
++ Products that spend most time in Department B are under-costed || Machine-related overhead in B is charged mainly on labour hours, which B products use little of.
+- Products that spend most time in Department B are over-costed || They use few labour hours, so they attract little overhead.
+- All products are costed accurately because one rate is simpler || Simplicity does not give accuracy when departments differ.
+- Overhead will always be under-absorbed in total || A blanket rate affects product costs, not necessarily the total absorbed.
+explain: Blanket rates ignore differences between departments. Departmental rates using bases suited to each department give fairer product costs.
+mistake: Thinking blanket rates necessarily cause under-absorption in total.
+tip: Ask which products use the cost driver of the expensive department.
+src: Study text ch7 - departmental vs blanket rates (concept basis; original scenario)
+
+=== Q040
+type: mcq
+level: C
+cat: calc, mixed
+topic: t4
+status: review
+scenario: Selling price $50 per unit; variable production cost $20 per unit; fixed production overhead $60,000 per period. In the period 6,000 units were produced and 5,000 were sold. There was no opening inventory and no non-production cost.
+q: What is the profit under MARGINAL costing?
++ $90,000 || Contribution 5,000 x (50 - 20) = 150,000, less fixed overhead 60,000 = $90,000.
+- $100,000 || This is absorption costing profit, which carries $10,000 of fixed overhead forward in inventory.
+- $150,000 || This is contribution before fixed overhead.
+- $80,000 || This deducts the inventory adjustment from marginal profit as well.
+formula: Marginal profit = units sold x contribution per unit - total fixed overhead
+step: Contribution per unit = 50 - 20 = $30; total contribution = 5,000 x 30 = $150,000.
+step: Fixed production overhead is a period cost: deduct all $60,000.
+step: Profit = 150,000 - 60,000 = $90,000.
+check: 5000*(50-20) - 60000
+explain: Marginal costing charges all fixed production overhead in the period it is incurred, whatever happens to inventory.
+mistake: Deducting only the fixed overhead relating to units sold ($50,000).
+tip: Marginal costing: total fixed costs are always deducted in full.
+src: Study text ch7 - marginal costing (concept basis; original figures)
+
+=== Q041
+type: mcq
+level: C
+cat: calc, mixed
+topic: t4
+status: review
+scenario: Selling price $50 per unit; variable production cost $20 per unit; fixed production overhead $60,000 per period, absorbed on budgeted output of 6,000 units. In the period 6,000 units were produced and 5,000 were sold. There was no opening inventory and no non-production cost.
+q: What is the profit under ABSORPTION costing?
++ $100,000 || Full cost = 20 + 10 = $30; 5,000 x (50 - 30) = $100,000. No under/over-absorption as actual output equals budget.
+- $90,000 || This is marginal costing profit: contribution 150,000 - fixed 60,000.
+- $150,000 || This is total contribution, ignoring fixed overhead.
+- $110,000 || This adds the inventory adjustment to absorption profit instead of to marginal profit.
+formula: Absorption profit = units sold x (price - full production cost per unit) +/- under/over-absorption
+step: Fixed OAR = 60,000 / 6,000 = $10 per unit; full cost = 20 + 10 = $30.
+step: Profit = 5,000 x (50 - 30) = $100,000.
+step: Check: marginal profit = 5,000 x 30 - 60,000 = 90,000; + 1,000 units x 10 = 100,000.
+check: 5000*(50-20-60000/6000)
+explain: Absorption costing carries $10,000 of fixed overhead forward in the 1,000 units of closing inventory, so its profit is $10,000 higher than marginal costing profit.
+mistake: Charging the full $60,000 fixed overhead against the units sold.
+tip: Reconcile the two profits to check your answer.
+src: Study text ch7 - absorption vs marginal costing (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A manager says: "Our overhead was under-absorbed this month, so we must have overspent on overheads." Is the manager correct?
++ Not necessarily - under-absorption can also be caused by lower activity than budgeted || Fewer hours absorb less overhead even if spending is on budget.
+- Yes - under-absorption always means overspending || Activity also affects absorption.
+- No - under-absorption means overhead spending was below budget || Under-absorption says nothing directly about spending being below budget.
+- Yes - but only if the rate was set on machine hours || The basis does not change the logic.
+explain: Under- and over-absorption combine two effects: spending (actual vs budgeted overhead) and volume (actual vs budgeted activity).
+mistake: Attributing under-absorption to one cause.
+tip: Always consider both spending and activity.
+src: Study text ch7 - causes of under/over-absorption (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Overheads after apportionment: Machining $50,000; Assembly $40,000; Stores $12,000; Maintenance $8,000. Stores serves Machining 50%, Assembly 30%, Maintenance 20%. Maintenance (after receiving its share of Stores) serves Machining 70%, Assembly 30%. Use the step-down method, reapportioning Stores first.
+q: What is the total overhead of Machining after reapportionment?
++ $63,280 || Stores: Machining 6,000, Assembly 3,600, Maintenance 2,400. Maintenance total 10,400: Machining 7,280. Machining = 50,000 + 6,000 + 7,280 = 63,280.
+- $61,600 || This ignores Stores' charge to Maintenance before reapportioning Maintenance.
+- $56,000 || This leaves Maintenance unapportioned.
+- $59,120 || This swaps the Maintenance percentages, giving Machining only 30% of 10,400.
+formula: Step-down: reapportion the first service centre (including to the second), then the second
+step: Stores 12,000: Machining 6,000; Assembly 3,600; Maintenance 2,400.
+step: Maintenance total = 8,000 + 2,400 = 10,400: Machining 70% = 7,280; Assembly 30% = 3,120.
+step: Machining = 50,000 + 6,000 + 7,280 = $63,280.
+check: 50000 + 0.5*12000 + 0.7*(8000 + 0.2*12000)
+explain: The step-down method recognises that one service centre serves another. Its total, including any amount received, is then reapportioned to production centres.
+mistake: Reapportioning Maintenance's original $8,000 without adding its share of Stores.
+tip: Check the grand total: production centres should end with all $110,000.
+src: Study text ch7 - reapportionment (concept basis; original figures)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: Production and sales volumes are equal in a period, and fixed costs per unit are unchanged from the previous period. How will absorption and marginal costing profits compare?
++ They will be the same || With no change in inventory, no fixed overhead is carried forward or released.
+- Absorption profit will be higher || This requires inventory to rise.
+- Marginal profit will be higher || This requires inventory to fall.
+- It cannot be determined without the selling price || Price affects both profits equally.
+explain: The profit difference equals the change in inventory multiplied by the fixed overhead per unit. With no inventory change the difference is nil.
+mistake: Thinking absorption profit always differs from marginal profit.
+tip: No inventory change = same profit (with stable unit costs).
+src: Study text ch7 - profit comparison (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A company set its OAR at $8 per labour hour, based on 20,000 budgeted hours. Actual hours were 21,500 and actual overhead was $166,000.
+q: Which statement is correct?
++ Overhead was over-absorbed by $6,000, even though spending was $6,000 above budget || Budget 160,000; absorbed 172,000; actual 166,000.
+- Overhead was under-absorbed by $6,000 because spending exceeded budget || Higher activity absorbed more than the extra spending.
+- Overhead was over-absorbed by $12,000 || This compares absorbed with budgeted overhead.
+- Overhead was exactly absorbed || Absorbed 172,000 differs from actual 166,000.
+formula: Absorbed = actual hours x OAR
+step: Budgeted overhead = 20,000 x 8 = $160,000; actual spending is $6,000 above budget.
+step: Absorbed = 21,500 x 8 = $172,000.
+step: Over-absorbed = 172,000 - 166,000 = $6,000.
+check: 21500*8 - 166000
+explain: The volume effect (1,500 extra hours x $8 = $12,000) outweighed the spending overrun ($6,000).
+mistake: Assuming overspending must cause under-absorption.
+tip: Separate the spending and volume effects to explain the result.
+src: Study text ch7 - under/over-absorption (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A company's inventory increased during the year. Its management wants to report the HIGHER profit. Which costing method would give the higher profit, and why should this NOT drive the choice of method?
++ Absorption costing; profit differences only reflect timing of fixed overhead, not better performance || Carrying fixed overhead in inventory defers cost to the next period.
+- Marginal costing; it always gives higher profits || Marginal profit is higher only when inventory falls.
+- Absorption costing; it reduces total costs over time || Total costs over the long run are the same.
+- Neither - both methods always give the same profit || They differ when inventory changes.
+explain: Building inventory raises absorption costing profit by deferring fixed overhead. This can encourage over-production, which is why managers should understand the effect.
+mistake: Believing one method creates real extra profit.
+tip: Over the life of the business both methods give the same total profit.
+src: Study text ch7 - absorption vs marginal costing (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: Budgeted overhead for a department was $252,000. Using a rate per labour hour, the department absorbed $8.40 per hour. What were the budgeted labour hours?
++ 30,000 || 252,000 / 8.40 = 30,000 hours.
+- 2,116,800 || This multiplies instead of dividing.
+- 3,000 || The decimal point has been misplaced.
+- 33,333 || This divides by 7.56, a wrong rate.
+formula: Budgeted hours = budgeted overhead / OAR
+step: OAR = budgeted overhead / budgeted hours, so budgeted hours = 252,000 / 8.40.
+step: = 30,000 hours.
+check: 252000/8.4
+explain: The OAR formula can be rearranged to find any missing figure.
+mistake: Multiplying the two figures.
+tip: Rearrange the formula before substituting.
+src: Study text ch7 - OAR (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: In the direct method of reapportionment, how are service centre costs treated?
++ They are reapportioned only to production centres, ignoring work service centres do for each other || This is the simplest method of reapportionment.
+- They are reapportioned to other service centres first, then to production centres || That is the step-down method.
+- They are absorbed directly into products || Service centre costs must first be reapportioned.
+- They are written off to profit or loss || Service centre costs are part of production overhead.
+explain: The direct method ignores inter-service work. The step-down method recognises some of it.
+mistake: Confusing the direct and step-down methods.
+tip: Direct = straight to production; step-down = one service centre at a time.
+src: Study text ch7 - reapportionment methods (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+q: Fixed production overhead is absorbed at $6 per unit. Absorption costing profit was $52,000 and marginal costing profit was $46,000. What happened to inventory during the period?
++ It increased by 1,000 units || Absorption profit is $6,000 higher, so inventory rose: 6,000 / 6 = 1,000 units.
+- It decreased by 1,000 units || A fall in inventory would make marginal profit higher.
+- It increased by 6,000 units || This divides the difference by $1 instead of $6.
+- It did not change || The profits differ, so inventory must have changed.
+formula: Change in inventory = profit difference / fixed OAR per unit
+step: Difference = 52,000 - 46,000 = $6,000 (absorption higher).
+step: 6,000 / 6 = 1,000 units; inventory increased.
+check: (52000-46000)/6
+explain: The reconciliation formula can be used in reverse to find the change in inventory.
+mistake: Getting the direction of the change wrong.
+tip: Absorption higher = inventory up.
+src: Study text ch7 - profit reconciliation (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t4
+status: review
+important: 1
+q: Which is the formula for the difference between absorption and marginal costing profits?
++ Change in inventory (units) x fixed production overhead absorption rate per unit || This is the fixed overhead carried into or released from inventory.
+- Units sold x fixed overhead per unit || Units sold do not cause the difference.
+- Closing inventory x variable cost per unit || Variable cost is in inventory under both methods.
+- Change in inventory (units) x selling price || Selling price is irrelevant to the difference.
+explain: The only difference between the two methods is the treatment of fixed production overhead in inventory.
+mistake: Using variable cost or selling price.
+tip: Learn it together with the direction rule: inventory up, absorption higher.
+src: Study text ch7 - profit reconciliation (concept basis; original question)

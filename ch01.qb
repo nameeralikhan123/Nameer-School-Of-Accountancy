@@ -1,0 +1,837 @@
+@subject acffa2
+@chapter 1
+@title Introduction to Financial Reporting
+@lo A1, A2
+@topic t1 | Financial reporting and its users | A1, A2
+@topic t2 | Types of business entity | A1, A2
+@topic t3 | The Conceptual Framework | A1, A2
+@topic t4 | The elements | A1, A2
+@topic t5 | Components of financial statements | A1, A2
+@topic t6 | Accounting principles and concepts | A1, A2
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Who is the PRIMARY audience for a company's published annual financial statements?
++ External users such as investors and lenders || Published accounts report to outsiders.
+- The company's own production supervisors || They use management accounts.
+- The marketing team only || Internal users.
+- The company's auditors only || Auditors report on the accounts; they are not the main audience.
+explain: Financial accounting reports on how directors have looked after the owners' resources (stewardship).
+mistake: Thinking published accounts are prepared mainly for managers.
+tip: Published = outsiders.
+src: Study text ch1 - users (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which user group needs the MOST detailed financial information?
++ Management || They plan, control and decide using detailed internal data.
+- Shareholders || They see summarised published accounts.
+- The tax authorities || They need taxable profit information.
+- The general public || They need very little detail.
+explain: Management relies on management accounts rather than published statements.
+mistake: Choosing investors.
+tip: Insiders need the most detail.
+src: Study text ch1 - users (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: A bank is deciding whether to renew a loan to a company. What is the bank MOST interested in?
++ Whether the company can repay the loan and interest when due || Lenders focus on repayment.
+- The company's staff pension rates || Employees' interest.
+- Continuity of supply of products || Customers' interest.
+- The company's charitable donations || Public interest.
+explain: Lenders look at cash flow, security and gearing.
+mistake: Mixing up user needs.
+tip: Lenders want their money back.
+src: Study text ch1 - users (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which type of business has a separate legal identity from its owners?
++ A limited liability company || Incorporation creates a separate legal person.
+- A sole trader || Not legally separate.
+- An ordinary partnership || Not legally separate.
+- A sole trader with employees || Still not separate.
+explain: The business entity concept treats all businesses as separate for accounting, but only companies are legally separate.
+mistake: Confusing the accounting and legal views.
+tip: Company = separate legal person.
+src: Study text ch1 - entities (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the liability of a shareholder in a limited liability company?
++ Limited to the amount they have invested in shares || They cannot lose more.
+- Unlimited || Applies to sole traders and partners.
+- Joint and several for all company debts || Partnerships.
+- Limited to their salary || Not related.
+explain: This protection is a major advantage of incorporation.
+mistake: Thinking shareholders are personally liable.
+tip: Limited = capped at investment.
+src: Study text ch1 - limited liability (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What are the TWO fundamental qualitative characteristics in the Conceptual Framework?
++ Relevance and faithful representation || The two fundamentals.
+- Comparability and timeliness || Enhancing characteristics.
+- Understandability and verifiability || Enhancing characteristics.
+- Prudence and consistency || Not the fundamentals.
+explain: The four enhancing characteristics make useful information more useful.
+mistake: Listing enhancing characteristics.
+tip: Relevant + faithful.
+src: Study text ch1 - qualitative characteristics (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t4
+status: review
+q: A business has assets of $50,000 and liabilities of $18,000. What is its equity ($)?
+answer: 32000
+tol: 0
+unit: $
+formula: Equity = assets - liabilities
+step: Assets = 50,000; liabilities = 18,000.
+step: Equity = 50,000 - 18,000 = $32,000.
+check: 50000-18000
+explain: Equity is the owners' residual interest.
+mistake: Adding liabilities.
+tip: A - L = E.
+src: Study text ch1 - accounting equation (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which item is a CURRENT asset of a furniture retailer?
++ Amounts owed by credit customers || Expected to be received within 12 months.
+- The shop building || Non-current.
+- Delivery vans || Non-current.
+- A 5-year bank loan || A liability.
+explain: Current assets are expected to be realised within the operating cycle or 12 months.
+mistake: Classifying vans as current.
+tip: Turns into cash soon = current.
+src: Study text ch1 - classification (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: Which statement shows a company's assets, liabilities and equity at the reporting date?
++ The statement of financial position || A snapshot at a point in time.
+- The statement of profit or loss || Covers a period.
+- The statement of cash flows || Cash movements.
+- The statement of changes in equity || Equity movements.
+explain: The other statements cover the whole period.
+mistake: Confusing position with performance.
+tip: Position = one date.
+src: Study text ch1 - components (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t6
+status: review
+q: What does the going concern concept assume?
++ The business will keep operating for the foreseeable future || No intention or need to close.
+- The business will close within a year || The opposite.
+- All assets are valued at sale value || Not the assumption.
+- Profits will rise each year || Not the assumption.
+explain: If a business is not a going concern, assets may be shown at break-up values.
+mistake: Linking going concern to profitability.
+tip: Will it keep going?
+src: Study text ch1 - going concern (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: A company sells goods to a bank and agrees to buy them back in six months at a higher price. Economically this is a loan. Which concept requires it to be shown as a loan?
++ Substance over form || Report economic reality, not legal form.
+- Going concern || Not relevant.
+- Materiality || Not relevant.
+- Business entity || Not relevant.
+explain: The "sale" is really borrowing secured on the goods.
+mistake: Following legal form.
+tip: What really happened?
+src: Study text ch1 - substance over form (concept basis; original scenario)
+
+=== Q012
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which is an ENHANCING qualitative characteristic?
++ Comparability || Helps users compare entities and periods.
+- Relevance || Fundamental.
+- Faithful representation || Fundamental.
+- Materiality || An aspect of relevance.
+explain: Enhancing: comparability, verifiability, timeliness, understandability.
+mistake: Listing a fundamental characteristic.
+tip: Remember the four enhancers.
+src: Study text ch1 - characteristics (concept basis; original question)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO are components of faithful representation?
++ Complete || All necessary information included.
++ Neutral || Without bias.
+- Timely || An enhancing characteristic.
+- Predictive value || An aspect of relevance.
+explain: The third component is being free from error.
+mistake: Mixing relevance and faithful representation.
+tip: Complete, neutral, free from error.
+src: Study text ch1 - faithful representation (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each feature with the type of business.
+pair: Unlimited liability of a single owner => Sole trader
+pair: Capital and current accounts for each owner => Partnership
+pair: Managed by a board of directors => Limited liability company
+pair: Owners receive dividends, not drawings => Limited liability company
+explain: Company owners are shareholders; sole traders and partners take drawings.
+mistake: Calling dividends drawings.
+tip: Shareholders get dividends.
+src: Study text ch1 - entities (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A sole trader's capital at the start of the year was $20,000. Profit for the year was $8,000 and drawings were $5,000. What is closing capital ($)?
+answer: 23000
+tol: 0
+unit: $
+formula: Closing capital = opening capital + profit - drawings
+step: 20,000 + 8,000 = 28,000.
+step: 28,000 - 5,000 = $23,000.
+check: 20000+8000-5000
+explain: Drawings reduce the owner's interest in the business.
+mistake: Treating drawings as an expense.
+tip: Profit adds; drawings subtract.
+src: Study text ch1 - capital (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which BEST describes a liability?
++ A present obligation to give up economic resources, arising from past events || The key features.
+- A possible future expense || Must be present and from a past event.
+- Any amount the owner has invested || That is equity.
+- A resource controlled by the entity || That is an asset.
+explain: An asset is a present economic resource controlled because of past events.
+mistake: Including future possibilities.
+tip: Present obligation + past event.
+src: Study text ch1 - elements (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: When is an item MATERIAL?
++ When omitting or misstating it could change users' decisions || A matter of judgement.
+- Only when it exceeds $1 million || No fixed amount.
+- Whenever it relates to cash || Not the test.
+- Only when it is a non-current asset || Not the test.
+explain: Materiality depends on size and nature.
+mistake: Thinking materiality is a fixed number.
+tip: Would it change a decision?
+src: Study text ch1 - materiality (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: The owner of a shop pays her personal holiday from the business bank account. Which concept means this must be treated as drawings?
++ Business entity || The business is separate from the owner.
+- Going concern || Not relevant.
+- Materiality || Not relevant.
+- Accruals || Not relevant.
+explain: Personal spending is not a business expense.
+mistake: Recording it as an expense.
+tip: Personal = drawings.
+src: Study text ch1 - business entity (concept basis; original scenario)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: Which statement shows movements in share capital, revaluation surplus and retained earnings?
++ Statement of changes in equity || Equity movements.
+- Statement of financial position || Closing balances only.
+- Statement of cash flows || Cash only.
+- Notes to the accounts || Supporting detail.
+explain: Dividends paid appear here, not in profit or loss.
+mistake: Putting dividends in the P/L.
+tip: Equity changes = SOCE.
+src: Study text ch1 - components (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What is the MAIN purpose of the Conceptual Framework?
++ To help the IASB develop consistent standards and help preparers where no standard applies || Underlying principles.
+- To replace all IFRSs || It does not override standards.
+- To set tax rules || Not its role.
+- To audit financial statements || Not its role.
+explain: It also helps users understand standards.
+mistake: Thinking it overrides standards.
+tip: Framework = foundations.
+src: Study text ch1 - Conceptual Framework (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which is a feature of MANAGEMENT accounting rather than financial accounting?
++ Detailed, forward-looking information for internal planning and decisions || Internal focus.
+- An annual report for shareholders || Financial accounting.
+- Prepared under IFRS for external users || Financial accounting.
+- Published for the public || Financial accounting.
+explain: Management accounts need not follow accounting standards.
+mistake: Mixing the two.
+tip: Internal + future = management.
+src: Study text ch1 - comparison (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How should a bank loan repayable in two years' time be classified at the reporting date?
++ Non-current liability || Due after more than 12 months.
+- Current liability || Not due within 12 months.
+- Non-current asset || It is owed.
+- Equity || Not owners' funds.
+explain: The portion due within 12 months would be current.
+mistake: Calling all loans current.
+tip: Over 12 months = non-current.
+src: Study text ch1 - classification (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: What does the prudence principle require when judgements are made under uncertainty?
++ Caution, so that assets and income are not overstated and liabilities and expenses not understated || Supports neutrality.
+- Deliberately understating profit || Not allowed.
+- Always choosing the highest asset value || Not prudent.
+- Ignoring uncertain items completely || Not required.
+explain: Prudence must not create hidden reserves.
+mistake: Thinking prudence means understating profit.
+tip: Caution, not bias.
+src: Study text ch1 - prudence (concept basis; original question)
+
+=== Q024
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A company has equity of $75,000 and liabilities of $40,000. What are its total assets ($)?
+answer: 115000
+tol: 0
+unit: $
+formula: Assets = equity + liabilities
+step: Equity = 75,000; liabilities = 40,000.
+step: Assets = 75,000 + 40,000 = $115,000.
+check: 75000+40000
+explain: The accounting equation always balances.
+mistake: Subtracting liabilities.
+tip: A = E + L.
+src: Study text ch1 - accounting equation (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which is a DISADVANTAGE of operating as a limited liability company?
++ Accounts must be published and are subject to more regulation || Loss of privacy, more cost.
+- Owners have unlimited liability || Liability is limited.
+- Shares cannot be transferred || They can.
+- It cannot own property || It can.
+explain: Formation costs and audit requirements are other disadvantages.
+mistake: Listing an advantage.
+tip: Protection costs privacy.
+src: Study text ch1 - incorporation (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Information that helps users predict future cash flows has which quality?
++ Predictive value, part of relevance || Relevance includes predictive and confirmatory value.
+- Verifiability || An enhancing characteristic.
+- Neutrality || Faithful representation.
+- Timeliness || An enhancing characteristic.
+explain: Confirmatory value checks past predictions.
+mistake: Calling it faithful representation.
+tip: Predict = relevance.
+src: Study text ch1 - relevance (concept basis; original question)
+
+=== Q027
+type: order
+level: S
+cat: concept
+topic: t5
+status: review
+q: Put these steps in the order in which a full set of year-end statements is usually built up.
+item: Statement of profit or loss and other comprehensive income
+item: Statement of changes in equity
+item: Statement of financial position
+item: Statement of cash flows
+explain: Profit feeds equity, which feeds the SOFP; cash flows draw on both.
+mistake: Starting with the SOFP.
+tip: Performance, equity, position, cash.
+src: Study text ch1 - components (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How is INCOME defined in the Conceptual Framework?
++ Increases in assets or decreases in liabilities that increase equity, other than contributions from owners || Excludes capital introduced.
+- Any cash received || Includes loans and capital.
+- Money introduced by the owner || A contribution, not income.
+- Decreases in assets || That is an expense effect.
+explain: Expenses are the mirror image, excluding distributions to owners.
+mistake: Treating capital introduced as income.
+tip: Equity up, not from owners.
+src: Study text ch1 - income (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t6
+status: review
+q: A company buys a $15 stapler expected to last five years and expenses it immediately. Which concept justifies this?
++ Materiality || The amount is too small to affect decisions.
+- Going concern || Not relevant.
+- Substance over form || Not relevant.
+- Business entity || Not relevant.
+explain: Capitalising trivial items adds cost without benefit.
+mistake: Insisting all long-lived items be capitalised.
+tip: Immaterial = expense.
+src: Study text ch1 - materiality (concept basis; original scenario)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What are employees and trade unions MOST interested in?
++ The stability and profitability of the employer, affecting job security and pay || Their livelihoods.
+- Dividend yield || Investors.
+- Loan security || Lenders.
+- Tax payable || Government.
+explain: Each user group has different needs.
+mistake: Mixing groups.
+tip: Jobs and pay.
+src: Study text ch1 - users (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A company changes its depreciation method every year to smooth profits. Which qualitative characteristic is MOST damaged?
++ Comparability || Users cannot compare periods.
+- Timeliness || Not affected.
+- Verifiability || Less directly.
+- Understandability || Less directly.
+explain: Consistent policies support comparability.
+mistake: Ignoring the effect of policy changes.
+tip: Changing methods = harder to compare.
+src: Study text ch1 - comparability (concept basis; original scenario)
+
+=== Q032
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: A company leases a machine for 10 years, which is its entire useful life. Legally the lessor owns it. How does substance over form affect the accounts?
++ The company controls the machine's economic benefits, so it recognises an asset and a liability || Reflect economic reality.
+- The machine is ignored because the company does not own it || Ignores substance.
+- Only lease payments are expensed, with nothing recognised || Ignores control.
+- The lessor records nothing || Not the point.
+explain: Control, not legal title, drives recognition.
+mistake: Following legal form.
+tip: Control = asset.
+src: Study text ch1 - substance over form (concept basis; original scenario)
+
+=== Q033
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A sole trader starts the year with capital of $42,000. During the year she introduces $6,000 of extra capital, makes a profit of $15,500 and takes drawings of $11,200.
+q: What is her closing capital ($)?
+answer: 52300
+tol: 0
+unit: $
+formula: Closing capital = opening + capital introduced + profit - drawings
+step: 42,000 + 6,000 + 15,500 = 63,500.
+step: 63,500 - 11,200 = $52,300.
+check: 42000+6000+15500-11200
+explain: Capital introduced is not income.
+mistake: Treating capital introduced as profit.
+tip: Owner in/out vs profit.
+src: Study text ch1 - capital (concept basis; original figures)
+
+=== Q034
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: A business's net assets rose from $30,000 to $38,000 over the year. The owner introduced $5,000 of capital and took drawings of $9,000. What was the profit for the year ($)?
+answer: 12000
+tol: 0
+unit: $
+formula: Profit = increase in net assets - capital introduced + drawings
+step: Increase in net assets = 38,000 - 30,000 = 8,000.
+step: Profit = 8,000 - 5,000 + 9,000 = $12,000.
+check: (38000-30000)-5000+9000
+explain: Changes in net assets come from profit and owner transactions.
+mistake: Reporting the $8,000 increase as profit.
+tip: Strip out owner transactions.
+src: Study text ch1 - accounting equation (concept basis; original question)
+
+=== Q035
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO items are assets of a trading company?
++ Inventory held for resale || Controlled resource.
++ Prepaid insurance for next year || Future benefit controlled.
+- An overdraft || A liability.
+- Share capital || Equity.
+explain: Assets are resources controlled as a result of past events.
+mistake: Calling the overdraft an asset.
+tip: Controlled resource = asset.
+src: Study text ch1 - elements (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t6
+status: review
+q: A trainee says the business entity concept means sole traders have limited liability. What is wrong?
++ The concept is an accounting convention only; legally, a sole trader remains personally liable || Accounting separation ≠ legal separation.
+- Nothing is wrong || The law does not separate them.
+- Sole traders have no liability || Unlimited.
+- The concept applies only to companies || It applies to all businesses.
+explain: Only incorporation gives limited liability.
+mistake: Confusing accounting and law.
+tip: Separate books, not separate person.
+src: Study text ch1 - business entity (concept basis; original question)
+
+=== Q037
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: A company publishes its annual accounts 14 months after the year end. Which enhancing characteristic is weakest?
++ Timeliness || Late information loses usefulness.
+- Comparability || Not mainly.
+- Verifiability || Not mainly.
+- Neutrality || A faithful representation component.
+explain: Information must be available in time to influence decisions.
+mistake: Choosing understandability.
+tip: Late = not timely.
+src: Study text ch1 - timeliness (concept basis; original scenario)
+
+=== Q038
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: A manufacturer is about to close because its main customer has collapsed and no buyer can be found. What effect does this have on the accounts?
++ The going concern basis may not be appropriate, and assets may need to be shown at break-up values || The basis changes.
+- No effect - always use going concern || Not when closure is likely.
+- Assets should be revalued upwards || Unlikely.
+- Liabilities should be removed || They remain.
+explain: Directors must assess going concern at each year end.
+mistake: Ignoring going concern doubts.
+tip: Closing down = break-up basis.
+src: Study text ch1 - going concern (concept basis; original scenario)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: What does "stewardship" mean in the context of financial accounts?
++ Reporting on how the directors have managed the resources entrusted to them by the owners || Accountability.
+- Forecasting next year's profit || Not stewardship.
+- Setting product prices || Not stewardship.
+- Paying taxes || Not stewardship.
+explain: Financial statements hold directors to account.
+mistake: Confusing with planning.
+tip: Look after the owners' resources.
+src: Study text ch1 - stewardship (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which characteristic means that different knowledgeable, independent observers would agree that a figure is a faithful representation?
++ Verifiability || Agreement among independent observers.
+- Timeliness || Not this.
+- Comparability || Not this.
+- Relevance || Fundamental, not this.
+explain: Verifiability can be direct or indirect.
+mistake: Calling this neutrality.
+tip: Could others check it?
+src: Study text ch1 - verifiability (concept basis; original question)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each enhancing characteristic with its description.
+pair: Comparability => Users can identify similarities and differences between items
+pair: Verifiability => Independent observers could agree the figures
+pair: Timeliness => Available in time to influence decisions
+pair: Understandability => Classified and presented clearly and concisely
+explain: These enhance information that is already relevant and faithfully represented.
+mistake: Mixing definitions.
+tip: Compare, check, on time, clear.
+src: Study text ch1 - enhancing characteristics (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A trader's business has: premises $60,000; van $12,000; inventory $8,500; receivables $4,300; bank $2,200; payables $6,800; loan (due in 3 years) $20,000.
+q: What is the owner's capital ($)?
+answer: 60200
+tol: 0
+unit: $
+formula: Capital = total assets - total liabilities
+step: Assets = 60,000 + 12,000 + 8,500 + 4,300 + 2,200 = 87,000.
+step: Liabilities = 6,800 + 20,000 = 26,800; capital = 87,000 - 26,800 = $60,200.
+check: 60000+12000+8500+4300+2200-6800-20000
+explain: The equation holds whatever the type of liability.
+mistake: Leaving out the long-term loan.
+tip: All assets less all liabilities.
+src: Study text ch1 - accounting equation (concept basis; original figures)
+
+=== Q043
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A trainee records $10,000 cash introduced by the owner as revenue. What is the effect?
++ Profit is overstated by $10,000; it should be credited to capital || Owner contributions are not income.
+- No effect || Profit is wrong.
+- Profit is understated || Overstated.
+- Assets are overstated || Cash was received; assets are right.
+explain: Income excludes contributions from equity holders.
+mistake: Treating capital as income.
+tip: Owner's money = capital.
+src: Study text ch1 - income (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: How does a partnership record each partner's share of profit and drawings?
++ In separate capital and current accounts for each partner || Tracks each partner's interest.
+- In a single share capital account || Companies.
+- As dividends || Companies.
+- As expenses in profit or loss || Not expenses.
+explain: Partners' liability is usually unlimited, joint and several.
+mistake: Using company terminology.
+tip: Partners have current accounts.
+src: Study text ch1 - partnerships (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: scenario
+topic: t6
+status: review
+q: A small error of $400 is found in a company with profit of $5 million. However, the error relates to an undisclosed payment to a director. Why might it still be material?
++ Materiality depends on nature as well as size; related-party payments can matter to users || Nature matters.
+- It is not material because it is small || Ignores nature.
+- All errors are material || Not true.
+- Directors' payments are never disclosed || They are.
+explain: Users may care about governance issues regardless of amount.
+mistake: Judging materiality on size alone.
+tip: Size AND nature.
+src: Study text ch1 - materiality (concept basis; original scenario)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t5
+status: review
+q: Where would a reader find the accounting policies a company has used?
++ In the notes to the financial statements || Policies and disclosures.
+- In the statement of cash flows || Not there.
+- In the statement of changes in equity || Not there.
+- They are never disclosed || They must be.
+explain: Notes explain and expand on the main statements.
+mistake: Thinking policies are optional.
+tip: Notes = policies.
+src: Study text ch1 - notes (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+q: During a year a company's assets increased by $25,000 and its liabilities increased by $9,000. No shares were issued and no dividends paid. What was the profit ($)?
+answer: 16000
+tol: 0
+unit: $
+formula: Change in equity = change in assets - change in liabilities
+step: Increase in equity = 25,000 - 9,000 = 16,000.
+step: With no owner transactions, profit = $16,000.
+check: 25000-9000
+explain: Profit is the only source of the equity change here.
+mistake: Adding the liability increase.
+tip: Equity change = profit (if no owner flows).
+src: Study text ch1 - accounting equation (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: What is the objective of general purpose financial reporting?
++ To provide financial information useful to investors, lenders and other creditors in making decisions about providing resources || Decision usefulness.
+- To calculate tax payable || A secondary use.
+- To value the business for sale || Not the objective.
+- To help managers set prices || Management accounting.
+explain: Primary users are present and potential providers of capital.
+mistake: Naming management as the primary user.
+tip: Useful for resource decisions.
+src: Study text ch1 - objective (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which list correctly separates the qualitative characteristics?
++ Fundamental: relevance, faithful representation. Enhancing: comparability, verifiability, timeliness, understandability || Core classification.
+- Fundamental: comparability, timeliness. Enhancing: relevance, faithful representation || Reversed.
+- All six are fundamental || Two levels.
+- Fundamental: prudence, consistency || Not the framework list.
+explain: Enhancing characteristics cannot make irrelevant information useful.
+mistake: Reversing the groups.
+tip: 2 fundamental + 4 enhancing.
+src: Study text ch1 - characteristics (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t4
+status: review
+important: 1
+q: Which equation is always true?
++ Assets = liabilities + equity || The accounting equation.
+- Assets = liabilities - equity || Wrong sign.
+- Equity = assets + liabilities || Wrong sign.
+- Liabilities = assets + equity || Wrong.
+explain: Every transaction keeps the equation in balance.
+mistake: Mixing signs.
+tip: A = L + E.
+src: Study text ch1 - accounting equation (concept basis; original question)

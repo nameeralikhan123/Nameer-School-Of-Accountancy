@@ -1,0 +1,859 @@
+@subject acffa2
+@chapter 11
+@title Payables, Provisions and Contingent Liabilities
+@lo D6
+@topic t1 | Trade payables | D6
+@topic t2 | Provisions (IAS 37) | D6
+@topic t3 | Contingencies | D6
+@topic t4 | Reporting provisions | D6
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under IAS 37, what is a provision?
++ A liability of uncertain timing or amount || Core definition.
+- Any expense paid in advance || A prepayment.
+- A possible obligation that is only disclosed || A contingent liability.
+- An allowance against receivables || Different item.
+explain: A provision is recognised in the SOFP.
+mistake: Confusing provisions and contingent liabilities.
+tip: Uncertain timing or amount.
+src: Study text ch11 - provision (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which is NOT one of the three conditions for recognising a provision?
++ The amount must be known exactly || Only a reliable estimate is needed.
+- A present obligation from a past event || A condition.
+- A probable outflow of economic benefits || A condition.
+- A reliable estimate of the amount || A condition.
+explain: Estimates are acceptable.
+mistake: Requiring certainty.
+tip: Obligation, probable, estimate.
+src: Study text ch11 - recognition (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How should a POSSIBLE (not probable) contingent liability be treated?
++ Disclosed in a note || Not recognised.
+- Recognised as a provision || Needs probable outflow.
+- Ignored || Only if remote.
+- Recognised as an asset || Not an asset.
+explain: Remote contingent liabilities are ignored.
+mistake: Recognising possible liabilities.
+tip: Possible = disclose.
+src: Study text ch11 - contingencies (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How is a PROBABLE contingent asset treated?
++ Disclosed in a note, but not recognised || Prudent treatment.
+- Recognised as an asset || Only if virtually certain.
+- Ignored || Probable assets are disclosed.
+- Recognised as income || Not until virtually certain.
+explain: Possible contingent assets are ignored.
+mistake: Recognising probable assets.
+tip: Assets need virtual certainty.
+src: Study text ch11 - contingent assets (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is a constructive obligation?
++ An obligation created by the entity's past practice or public statements that others validly expect it to honour || Not legally required.
+- An obligation under a written contract || Legal obligation.
+- An obligation imposed by tax law || Legal obligation.
+- An obligation that is remote || Not the meaning.
+explain: Example: a published refund policy beyond legal requirements.
+mistake: Thinking only legal duties count.
+tip: Created by behaviour.
+src: Study text ch11 - constructive obligation (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What is the double entry to set up a provision?
++ Debit expense; credit provision || Expense up, liability up.
+- Debit provision; credit expense || Reversed.
+- Debit bank; credit provision || No cash.
+- Debit provision; credit bank || That would be using it.
+explain: Only the movement is charged in later years.
+mistake: Debiting the provision.
+tip: Provision = credit.
+src: Study text ch11 - entry (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t4
+status: review
+q: A warranty provision was $8,000 at the start of the year. The required provision at the year end is $11,000. What is charged ($) to profit or loss?
+answer: 3000
+tol: 0
+unit: $
+formula: Charge = closing provision - opening provision
+step: 11,000 - 8,000.
+step: = $3,000 increase.
+check: 11000-8000
+explain: Entry: Dr expense 3,000; Cr provision 3,000.
+mistake: Charging the full $11,000.
+tip: Charge the movement.
+src: Study text ch11 - movement (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: How should a REMOTE contingent liability be treated?
++ Ignored - no recognition or disclosure || Too unlikely.
+- Disclosed in a note || That is for possible.
+- Recognised as a provision || Not probable.
+- Recognised as an asset || Not relevant.
+explain: Disclosure would clutter the accounts.
+mistake: Disclosing remote items.
+tip: Remote = ignore.
+src: Study text ch11 - contingencies (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item is DEBITED to the trade payables account?
++ Cash paid to suppliers || Reduces the liability.
+- Credit purchases || Credited.
+- Opening balance || Credit b/f.
+- Interest charged by suppliers || Increases liability.
+explain: Returns, discounts received and contras are also debits.
+mistake: Debiting purchases.
+tip: Reductions = debits.
+src: Study text ch11 - payables account (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Can a company make a provision for expected future operating losses?
++ No - there is no present obligation from a past event || IAS 37 prohibits it.
+- Yes - always || Not allowed.
+- Yes - if the losses are probable || Still no obligation.
+- Only if the board approves || Not allowed.
+explain: Provisions require a past obligating event.
+mistake: Providing for future losses.
+tip: No past event, no provision.
+src: Study text ch11 - future losses (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Trade payables: b/f $12,000; credit purchases $90,000; cash paid $85,000; purchases returns $2,000; discounts received $1,000; contra with receivables $1,500.
+q: What is the closing trade payables balance ($)?
+answer: 12500
+tol: 0
+unit: $
+formula: C/f = b/f + purchases - payments - returns - discounts - contras
+step: 12,000 + 90,000 = 102,000.
+step: 102,000 - 85,000 - 2,000 - 1,000 - 1,500 = $12,500.
+check: 12000+90000-85000-2000-1000-1500
+explain: All reductions are debits.
+mistake: Adding returns.
+tip: Reductions out.
+src: Study text ch11 - payables account (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company sold 1,000 units with a one-year warranty. Past experience: 5% need minor repairs costing $40 each and 2% need major repairs costing $200 each. What warranty provision ($) is required?
+answer: 6000
+tol: 0
+unit: $
+formula: Provision = Σ(units x % x cost)
+step: Minor: 1,000 x 5% x 40 = 2,000.
+step: Major: 1,000 x 2% x 200 = 4,000; total = $6,000.
+check: 1000*0.05*40+1000*0.02*200
+explain: Past experience provides a reliable estimate.
+mistake: Using only one category.
+tip: Expected cost of all claims.
+src: Study text ch11 - warranty (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: scenario
+topic: t2
+status: review
+q: A customer sues a company. The lawyers say the company will PROBABLY lose and estimate damages of $50,000. How should this be treated?
++ Recognise a provision of $50,000 || Probable outflow, reliable estimate.
+- Disclose a contingent liability only || Outflow is probable.
+- Ignore it until the case ends || Must provide.
+- Recognise a contingent asset || Not an asset.
+explain: A present obligation exists from the past event.
+mistake: Only disclosing probable losses.
+tip: Probable = provide.
+src: Study text ch11 - legal claim (concept basis; original scenario)
+
+=== Q014
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO create an obligation that may require a provision?
++ A legal requirement to clean up land contaminated by the company || Legal obligation.
++ A long-standing published policy of refunding unhappy customers, beyond legal requirements || Constructive obligation.
+- A plan to buy new machinery next year || No obligation.
+- Expected losses next year || No past event.
+explain: Obligations can be legal or constructive.
+mistake: Providing for intentions.
+tip: Past event + no realistic alternative.
+src: Study text ch11 - obligations (concept basis; original question)
+
+=== Q015
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each probability with the treatment of a contingent LIABILITY.
+pair: Virtually certain => Recognise a liability
+pair: Probable => Recognise a provision
+pair: Possible => Disclose in a note
+pair: Remote => Ignore
+explain: Contingent assets need virtual certainty to be recognised.
+mistake: Disclosing remote items.
+tip: Probability drives treatment.
+src: Study text ch11 - contingencies (concept basis; original question)
+
+=== Q016
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: The opening provision for legal claims is $8,000. At the year end, the required provision is $5,500. What is the effect ($) on profit? (Enter the credit as a positive number.)
+answer: 2500
+tol: 0
+unit: $
+formula: Movement = opening - closing
+step: 8,000 - 5,500.
+step: = $2,500 credited to profit or loss.
+check: 8000-5500
+explain: Entry: Dr provision; Cr expense.
+mistake: Charging the closing provision.
+tip: Smaller provision = profit up.
+src: Study text ch11 - decrease (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: A company is suing a supplier, and its lawyers say success is PROBABLE but not virtually certain. How is this treated?
++ Disclose a contingent asset in a note || Not recognised.
+- Recognise an asset and income || Needs virtual certainty.
+- Ignore it || Probable assets are disclosed.
+- Recognise a provision || Not a liability.
+explain: Possible contingent assets are ignored.
+mistake: Recognising probable assets.
+tip: Assets: probable = disclose.
+src: Study text ch11 - contingent assets (concept basis; original scenario)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is a LEGAL obligation?
++ An obligation arising from a contract, legislation or other operation of law || Enforceable.
+- An obligation created by past practice || Constructive.
+- A future intention to spend || Not an obligation.
+- A remote possibility || Not an obligation.
+explain: Both legal and constructive obligations can lead to provisions.
+mistake: Thinking only legal obligations count.
+tip: Law or contract.
+src: Study text ch11 - legal obligation (concept basis; original question)
+
+=== Q019
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Payables b/f $13,000; payables c/f $15,000; cash paid to suppliers $70,000; purchases returns $1,200.
+q: What were credit purchases ($) for the year?
+answer: 73200
+tol: 0
+unit: $
+formula: Purchases = c/f + payments + returns - b/f
+step: 15,000 + 70,000 + 1,200 = 86,200.
+step: 86,200 - 13,000 = $73,200.
+check: 15000+70000+1200-13000
+explain: Purchases is the balancing figure.
+mistake: Omitting returns.
+tip: Rebuild the account.
+src: Study text ch11 - working back (concept basis; original figures)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: How is a provision expected to be settled in 3 years presented?
++ As a non-current liability || Timing decides classification.
+- As a current liability || Due after 12 months.
+- As equity || Not equity.
+- In a note only || It is recognised.
+explain: Notes disclose the nature and movement.
+mistake: Calling all provisions current.
+tip: Over 12 months = non-current.
+src: Study text ch11 - presentation (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee recognises a $20,000 provision for a claim the lawyers describe as "possible but unlikely to succeed". What is correct?
++ Disclose a contingent liability; do not recognise a provision || Outflow is not probable.
+- Keep the provision || Not probable.
+- Ignore it completely || Possible = disclose.
+- Recognise a contingent asset || Not an asset.
+explain: Recognition needs a probable outflow.
+mistake: Providing for possible outflows.
+tip: Possible = note.
+src: Study text ch11 - contingencies (concept basis; original question)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What does "probable" mean in IAS 37?
++ More likely than not || Over 50%.
+- Certain || Too strong.
+- Any chance at all || Too weak.
+- Less than 10% || Remote.
+explain: Virtually certain is much stronger than probable.
+mistake: Equating probable with certain.
+tip: Probable > 50%.
+src: Study text ch11 - probability (concept basis; original question)
+
+=== Q023
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put these probability levels in order from MOST to LEAST likely.
+item: Virtually certain
+item: Probable
+item: Possible
+item: Remote
+explain: Each level has a different accounting treatment.
+mistake: Placing possible above probable.
+tip: Certain, probable, possible, remote.
+src: Study text ch11 - probability (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is disclosed about provisions in the notes?
++ The nature of the obligation and the movement during the year || Required.
+- The names of all customers || Not required.
+- The company's share price || Not required.
+- Nothing - they are on the face only || Notes are required.
+explain: Uncertainties about timing and amount are also explained.
+mistake: Omitting movement details.
+tip: Nature + movement.
+src: Study text ch11 - disclosure (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which BEST describes a trade payable?
++ An amount owed to a supplier for goods or services bought on credit || Current liability.
+- An amount owed by a customer || Receivable.
+- A provision for a lawsuit || Provision.
+- A bank loan || Borrowing.
+explain: Trade payables are known in amount and timing.
+mistake: Calling payables provisions.
+tip: Owe a supplier = payable.
+src: Study text ch11 - payables (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A retailer has a policy of refunding faulty goods. Sales were $500,000 and past experience shows refunds average 1.5% of sales. What refund provision ($) is required?
+answer: 7500
+tol: 0
+unit: $
+formula: Provision = sales x expected refund %
+step: 500,000 x 1.5%.
+step: = $7,500.
+check: 500000*0.015
+explain: The policy creates a constructive obligation.
+mistake: Not providing because it is not legally required.
+tip: Policy = obligation.
+src: Study text ch11 - refunds (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the difference between a provision and an accrual?
++ A provision has more uncertainty about timing or amount than an accrual || Accruals are usually more certain.
+- Accruals are assets; provisions are liabilities || Both are liabilities.
+- Provisions are never recognised || They are.
+- There is no difference || There is.
+explain: Accruals are typically for goods or services received but not invoiced.
+mistake: Treating them as identical.
+tip: Uncertainty marks a provision.
+src: Study text ch11 - comparison (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee recognises a $40,000 asset for an insurance claim the company is "likely" to win. What is correct?
++ Disclose a contingent asset; recognise only when virtually certain || Probable is not enough.
+- Recognise the asset as the trainee did || Too early.
+- Ignore it || Probable assets are disclosed.
+- Recognise a provision || Not a liability.
+explain: Prudence treats gains more strictly than losses.
+mistake: Recognising probable gains.
+tip: Gains need virtual certainty.
+src: Study text ch11 - contingent assets (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: A warranty provision was $15,000 at the start of the year. During the year claims of $9,000 were paid and charged against the provision. The required closing provision is $18,000.
+q: What is charged ($) to profit or loss for warranties this year?
+answer: 12000
+tol: 0
+unit: $
+formula: Charge = closing - (opening - amounts used)
+step: Provision after use = 15,000 - 9,000 = 6,000.
+step: Charge = 18,000 - 6,000 = $12,000.
+check: 18000-(15000-9000)
+explain: Payments made against the provision are not a new expense.
+mistake: Expensing claims and the full movement.
+tip: Use, then top up.
+src: Study text ch11 - provision movement (concept basis; original figures)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: What is the "past event" for a warranty provision?
++ The sale of goods under warranty || The obligation arises at sale.
+- A future customer complaint || Not past.
+- The preparation of the accounts || Not the event.
+- The purchase of raw materials || Not the event.
+explain: Claims in future result from sales already made.
+mistake: Waiting for claims.
+tip: Sale creates the duty.
+src: Study text ch11 - obligating event (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company announces publicly, before the year end, a detailed plan to close a factory and has informed staff and unions. Does it have an obligation at the year end?
++ Yes - a constructive obligation, as it has created a valid expectation in those affected || Announced plan.
+- No - only a board decision exists || It has been announced.
+- No - closures never create obligations || They can.
+- Only when redundancy payments are made || Obligation exists earlier.
+explain: An internal decision alone would not be enough.
+mistake: Waiting for cash payments.
+tip: Announced = expectation created.
+src: Study text ch11 - constructive (concept basis; original scenario)
+
+=== Q032
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A company sold 4,000 products with a 1-year warranty. Expected outcomes: 90% no claim; 8% minor claim costing $25; 2% major claim costing $300.
+q: What warranty provision ($) should be recognised?
+answer: 32000
+tol: 0
+unit: $
+formula: Provision = units x Σ(probability x cost)
+step: Expected cost per unit = 0.08 x 25 + 0.02 x 300 = 2 + 6 = 8.
+step: Provision = 4,000 x 8 = $32,000.
+check: 4000*(0.08*25+0.02*300)
+explain: Expected values suit a large population of items.
+mistake: Using the most likely outcome (no claim).
+tip: Weight costs by probability.
+src: Study text ch11 - expected value (concept basis; original figures)
+
+=== Q033
+type: mr
+level: C
+cat: concept
+topic: t3
+status: review
+select: 2
+q: Which TWO statements are correct under IAS 37?
++ Contingent liabilities are never recognised in the SOFP || They are disclosed or ignored.
++ A contingent asset is recognised only when its realisation is virtually certain || Then it is no longer contingent.
+- Probable contingent assets are recognised || Disclosed only.
+- Remote contingent liabilities must be disclosed || Ignored.
+explain: Treatment is asymmetric between assets and liabilities.
+mistake: Treating them the same way.
+tip: Liabilities lean to disclosure; assets to caution.
+src: Study text ch11 - contingencies (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: trap
+topic: t4
+status: review
+q: A trainee charges the full closing warranty provision of $18,000 to profit each year, even though $15,000 was brought forward. What is the error?
++ Only the movement should be charged; profit is understated || Double counting.
+- No error || Double counting.
+- Profit is overstated || Understated.
+- The provision should be an asset || A liability.
+explain: The opening provision was charged in earlier years.
+mistake: Charging the balance again.
+tip: Movement only.
+src: Study text ch11 - movement (concept basis; original question)
+
+=== Q035
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Payables: opening $21,400; credit purchases $164,000; cash paid $158,300; discounts received $2,700; returns $3,900; a contra of $1,600 with receivables.
+q: What is the closing payables balance ($)?
+answer: 18900
+tol: 0
+unit: $
+formula: C/f = b/f + purchases - payments - discounts - returns - contras
+step: 21,400 + 164,000 = 185,400.
+step: 185,400 - 158,300 - 2,700 - 3,900 - 1,600 = $18,900.
+check: 21400+164000-158300-2700-3900-1600
+explain: Discounts received reduce the amount owed.
+mistake: Leaving out the contra.
+tip: Every reduction is a debit.
+src: Study text ch11 - payables account (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A company guarantees a bank loan for another company. At the year end the borrower is financially sound and default is unlikely but not remote. How is the guarantee treated?
++ Disclose a contingent liability || Possible outflow.
+- Recognise a provision || Not probable.
+- Ignore it || Not remote.
+- Recognise a contingent asset || Not an asset.
+explain: If default became probable, a provision would be needed.
+mistake: Ignoring guarantees.
+tip: Possible = note.
+src: Study text ch11 - guarantees (concept basis; original scenario)
+
+=== Q037
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: What does IAS 37 say about provisions where no reliable estimate is possible?
++ This is extremely rare; if it happens, the liability is disclosed as a contingent liability || Recognition fails.
+- A provision of $1 is recognised || Not correct.
+- The provision is recognised at the maximum possible amount || Not required.
+- It is ignored || Disclosure is needed.
+explain: A range of outcomes usually allows a reliable estimate.
+mistake: Claiming estimates are impossible.
+tip: Rarely impossible to estimate.
+src: Study text ch11 - estimates (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A lawsuit is probable to be lost. The lawyers estimate a 60% chance of paying $100,000 and a 40% chance of paying $150,000. Following the best estimate of the single most likely outcome.
+q: What provision ($) should be recognised?
+answer: 100000
+tol: 0
+unit: $
+formula: For a single obligation, use the most likely outcome
+step: Most likely outcome = 100,000 (60%).
+step: Provision = $100,000.
+check: 100000
+explain: Expected values are used for large populations, such as warranties.
+mistake: Using the weighted average (120,000) for a single case.
+tip: Single case = most likely outcome.
+src: Study text ch11 - measurement (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: How does recognising a new provision affect the financial statements?
++ Profit falls and liabilities rise by the same amount || Dr expense, Cr provision.
+- Assets rise and profit rises || Not correct.
+- Only cash falls || No cash yet.
+- No effect until paid || Recognised when obligation exists.
+explain: Cash leaves only when the obligation is settled.
+mistake: Waiting for payment.
+tip: Obligation now, cash later.
+src: Study text ch11 - effect (concept basis; original question)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t3
+status: review
+q: Match each probability with the treatment of a contingent ASSET.
+pair: Virtually certain => Recognise the asset
+pair: Probable => Disclose in a note
+pair: Possible => Ignore
+pair: Remote => Ignore
+explain: Assets are treated more cautiously than liabilities.
+mistake: Recognising probable assets.
+tip: Only certainty recognises.
+src: Study text ch11 - contingent assets (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: Provisions note: opening balance $24,000; amounts used during the year $7,500; unused amount reversed $3,000; new provisions charged $11,000.
+q: What is the closing provision ($)?
+answer: 24500
+tol: 0
+unit: $
+formula: Closing = opening - used - reversed + new
+step: 24,000 - 7,500 - 3,000 = 13,500.
+step: 13,500 + 11,000 = $24,500.
+check: 24000-7500-3000+11000
+explain: The net P/L effect is 11,000 - 3,000 = 8,000.
+mistake: Treating used amounts as reversals.
+tip: Reconcile the movement.
+src: Study text ch11 - movement note (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A board decides to retrain staff next year and wants to provide for the cost now. Is a provision allowed?
++ No - there is no present obligation from a past event; the company can still change its mind || Intention only.
+- Yes - the cost is probable || No obligation.
+- Yes - training is a legal obligation || Not here.
+- Only half the cost || Not allowed.
+explain: Future spending decisions are not obligations.
+mistake: Providing for plans.
+tip: Can avoid it = no provision.
+src: Study text ch11 - no obligation (concept basis; original scenario)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why does IAS 37 require strict criteria before recognising provisions?
++ To stop companies creating "hidden reserves" to smooth profits || Prevents manipulation.
+- To increase reported profits || Not the aim.
+- To delay recognising liabilities forever || Not the aim.
+- To match tax rules || Not the reason.
+explain: Over-provisioning in good years could be released in bad years.
+mistake: Seeing provisions as optional buffers.
+tip: No smoothing.
+src: Study text ch11 - purpose (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: Credit purchases were $96,000 and cash paid to suppliers $88,500. Discounts received were $1,500 and opening payables were $9,000. What are closing payables ($)?
+answer: 15000
+tol: 0
+unit: $
+formula: C/f = b/f + purchases - payments - discounts
+step: 9,000 + 96,000 = 105,000.
+step: 105,000 - 88,500 - 1,500 = $15,000.
+check: 9000+96000-88500-1500
+explain: Discounts received reduce the balance owed.
+mistake: Ignoring discounts.
+tip: Discounts are debits.
+src: Study text ch11 - payables (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: After the year end, a court rules that the company must pay $80,000 in a case existing at the year end. At the year end the outcome had seemed only possible. What should be done?
++ Recognise a provision, as the ruling gives evidence about the condition at the year end || Adjusting evidence.
+- Disclose only, as the year-end view governs || New evidence about the year end is used.
+- Ignore it until next year || The obligation existed.
+- Recognise a contingent asset || Not an asset.
+explain: Events after the reporting period are covered in a later chapter.
+mistake: Ignoring later evidence.
+tip: Evidence about year-end conditions = adjust.
+src: Study text ch11 - later evidence (concept basis; original scenario)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which item appears on the CREDIT side of the trade payables account?
++ Credit purchases || Increase the liability.
+- Cash paid || Debit.
+- Purchases returns || Debit.
+- Discounts received || Debit.
+explain: The opening balance is also a credit.
+mistake: Crediting payments.
+tip: Increases = credits.
+src: Study text ch11 - payables account (concept basis; original question)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: A company must dismantle an oil platform in 10 years. The best estimate of the future cost is $2,000,000, and the present value of this cost today is $1,250,000.
+q: What provision ($) is recognised now under IAS 37 (where the time value of money is material)?
+answer: 1250000
+tol: 0
+unit: $
+formula: Provision = present value of expected outflow when the time value of money is material
+step: Future cost = 2,000,000; present value = 1,250,000.
+step: Provision = $1,250,000.
+check: 1250000
+explain: The discount unwinds over time as a finance cost.
+mistake: Providing the undiscounted amount.
+tip: Material time value = discount.
+src: Study text ch11 - discounting (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Which BEST defines a contingent liability?
++ A possible obligation dependent on uncertain future events not wholly within the entity's control, or a present obligation that is not probable or cannot be measured reliably || Two-part definition.
+- Any liability shown in the SOFP || Contingent liabilities are not recognised.
+- A certain liability of known amount || That is a liability.
+- An expense paid in advance || Prepayment.
+explain: Contingent liabilities are disclosed unless remote.
+mistake: Recognising them.
+tip: Possible obligation = note.
+src: Study text ch11 - contingent liability (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: When must a provision be recognised?
++ When there is a present obligation from a past event, a probable outflow and a reliable estimate || All three conditions.
+- Whenever directors want to be prudent || Not allowed.
+- Only when the amount is known exactly || Estimates suffice.
+- When an outflow is merely possible || Disclose instead.
+explain: Missing any condition means no provision.
+mistake: Providing for possible items.
+tip: Obligation + probable + estimate.
+src: Study text ch11 - recognition (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which treatment is correct?
++ Possible contingent liability: disclose; probable contingent asset: disclose || Both disclosed.
+- Possible contingent liability: provide || Disclose.
+- Probable contingent asset: recognise || Disclose.
+- Remote contingent liability: disclose || Ignore.
+explain: Virtually certain items are no longer contingent.
+mistake: Mixing up the tables.
+tip: Learn both columns.
+src: Study text ch11 - contingencies (concept basis; original question)

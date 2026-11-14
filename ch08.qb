@@ -1,0 +1,868 @@
+@subject acffa2
+@chapter 8
+@title Intangible Assets
+@lo D3
+@topic t1 | Definition and recognition | D3
+@topic t2 | Research vs development | D3
+@topic t3 | Amortisation and subsequent measurement | D3
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item is an intangible asset?
++ A purchased patent || Identifiable, non-monetary, no physical form.
+- A delivery van || Tangible.
+- Cash at bank || Monetary.
+- Inventory of finished goods || Tangible and current.
+explain: Intangibles must be identifiable and controlled.
+mistake: Including monetary items.
+tip: No physical form, not cash.
+src: Study text ch8 - definition (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: How is RESEARCH expenditure treated under IAS 38?
++ Always expensed to profit or loss as incurred || Benefits are too uncertain.
+- Always capitalised || Not allowed.
+- Capitalised if the criteria are met || That is development.
+- Credited to equity || Not correct.
+explain: Only development spending can be capitalised.
+mistake: Capitalising research.
+tip: Research = expense.
+src: Study text ch8 - research (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: If development expenditure meets ALL the IAS 38 criteria, what must the company do?
++ Capitalise it as an intangible asset || Capitalisation is required.
+- Choose whether to capitalise it || Not optional.
+- Expense it || Not when criteria are met.
+- Credit it to revenue || Not income.
+explain: Before all criteria are met, the spend is expensed.
+mistake: Thinking capitalisation is optional.
+tip: All criteria met = must capitalise.
+src: Study text ch8 - development (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Capitalised development costs of $480,000 are amortised straight-line over 5 years with nil residual value. What is the annual amortisation ($)?
+answer: 96000
+tol: 0
+unit: $
+formula: Amortisation = (cost - residual value) / useful life
+step: 480,000 / 5.
+step: = $96,000.
+check: 480000/5
+explain: Amortisation is charged to profit or loss.
+mistake: Starting before production begins.
+tip: Cost / life.
+src: Study text ch8 - amortisation (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which item can NOT be recognised as an intangible asset?
++ Internally generated goodwill || Not identifiable or reliably measurable.
+- A purchased licence || Recognised.
+- A purchased trademark || Recognised.
+- Development costs meeting all criteria || Recognised.
+explain: Internally generated brands and customer lists are also excluded.
+mistake: Recognising internal goodwill.
+tip: Home-grown goodwill = no asset.
+src: Study text ch8 - recognition (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: When does amortisation of capitalised development costs begin?
++ When the product or process is available for use and commercial production begins || Benefits start.
+- When development spending starts || Too early.
+- When research starts || Research is expensed.
+- At the end of the product's life || Too late.
+explain: Amortisation spreads cost over the period of benefit.
+mistake: Amortising during development.
+tip: Start with sales.
+src: Study text ch8 - amortisation timing (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: What does the "T" stand for in the PIRATE criteria for capitalising development costs?
++ Technically feasible || The project can be completed.
+- Taxable || Not a criterion.
+- Tangible || Intangibles are not tangible.
+- Timely || Not a criterion.
+explain: PIRATE: probable benefits, intention, resources, ability, technical feasibility, expenditure measurable.
+mistake: Inventing criteria.
+tip: Can it actually be built?
+src: Study text ch8 - PIRATE (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What does "identifiable" mean for an intangible asset?
++ It is separable or arises from contractual or legal rights || One of the key features.
+- It can be seen and touched || That is tangible.
+- It is listed in the phone book || Not the meaning.
+- It has been revalued || Not the meaning.
+explain: Control and future benefits are the other features.
+mistake: Equating identifiable with physical.
+tip: Separable or legal right.
+src: Study text ch8 - identifiable (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A patent is purchased for $50,000 and gives protection for 10 years. What is the annual amortisation ($)?
+answer: 5000
+tol: 0
+unit: $
+formula: Amortisation = cost / useful life
+step: 50,000 / 10.
+step: = $5,000.
+check: 50000/10
+explain: The legal life often limits the useful life.
+mistake: Not amortising patents.
+tip: Cost / years of benefit.
+src: Study text ch8 - patents (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: When can an intangible asset be measured using the revaluation model?
++ Only when fair value can be measured by reference to an active market || Rare for intangibles.
+- Whenever the directors choose || Needs an active market.
+- Always, for patents and brands || These rarely have active markets.
+- Never || Possible in limited cases.
+explain: Most intangibles use the cost model.
+mistake: Revaluing brands.
+tip: Active market needed.
+src: Study text ch8 - revaluation (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: During the year a company spent: research $40,000; development before all criteria were met $25,000; development after all criteria were met $90,000.
+q: How much ($) should be capitalised as an intangible asset?
+answer: 90000
+tol: 0
+unit: $
+formula: Capitalise only development costs incurred after ALL criteria are met
+step: Research 40,000 - expensed.
+step: Development before criteria 25,000 - expensed; after criteria 90,000 - capitalised.
+check: 90000
+explain: Total expensed = 65,000.
+mistake: Capitalising earlier development spend.
+tip: From the date all criteria are met.
+src: Study text ch8 - capitalisation (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Research $40,000; development before all criteria met $25,000; development after all criteria met $90,000.
+q: How much is charged to profit or loss for the year (before amortisation)?
++ $65,000 || 40,000 + 25,000.
+- $40,000 || Omits early development.
+- $155,000 || Expenses everything.
+- $90,000 || That is capitalised.
+formula: Expense = research + development before criteria met
+step: Research 40,000.
+step: Plus early development 25,000 = $65,000.
+check: 40000+25000
+explain: Expensed development cannot be reinstated later.
+mistake: Expensing only research.
+tip: Everything before PIRATE is met.
+src: Study text ch8 - expense (concept basis; original figures)
+
+=== Q013
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are among the criteria that must be met before development costs are capitalised?
++ Adequate resources are available to complete the project || Resources.
++ The expenditure can be measured reliably || Expenditure.
+- The project has already made a profit || Not required.
+- The research phase cost more than $100,000 || Not a criterion.
+explain: All six PIRATE criteria must be met.
+mistake: Adding profit tests.
+tip: PIRATE, all of it.
+src: Study text ch8 - criteria (concept basis; original question)
+
+=== Q014
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each item with its accounting treatment.
+pair: Research into new materials => Expense as incurred
+pair: Development meeting all criteria => Capitalise as intangible asset
+pair: Development before criteria were met => Expense as incurred
+pair: Internally generated brand => Not recognised as an asset
+explain: Only qualifying development is capitalised.
+mistake: Capitalising internally generated brands.
+tip: Research and brands = no asset.
+src: Study text ch8 - treatments (concept basis; original question)
+
+=== Q015
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Development costs of $120,000 were capitalised. Commercial production began on 1 October and the product's life is 5 years. The year end is 31 December. What amortisation ($) is charged this year (pro rata)?
+answer: 6000
+tol: 0
+unit: $
+formula: Amortisation = cost / life x months / 12
+step: Annual = 120,000 / 5 = 24,000.
+step: 3 months = 24,000 x 3 / 12 = $6,000.
+check: 120000/5*3/12
+explain: Amortisation starts when production begins.
+mistake: Charging a full year.
+tip: From the start of production.
+src: Study text ch8 - pro rata (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which activity is RESEARCH rather than development?
++ Searching for new scientific knowledge about a material's properties || Original investigation.
+- Building and testing a prototype of a new product || Development.
+- Designing tools for a new product line || Development.
+- Testing pre-production models || Development.
+explain: Development applies knowledge to specific products or processes.
+mistake: Classing prototypes as research.
+tip: Knowledge = research; product = development.
+src: Study text ch8 - research vs development (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Development costs of $240,000 are amortised over 6 years from the start of production. What is the carrying amount ($) after 2 full years?
+answer: 160000
+tol: 0
+unit: $
+formula: Carrying amount = cost - accumulated amortisation
+step: Annual amortisation = 240,000 / 6 = 40,000; 2 years = 80,000.
+step: Carrying amount = 240,000 - 80,000 = $160,000.
+check: 240000-240000/6*2
+explain: The cost model is cost less amortisation and impairment.
+mistake: Forgetting accumulated amortisation.
+tip: Cost less amortisation to date.
+src: Study text ch8 - carrying amount (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is the annual amortisation of an intangible asset recorded?
++ Dr amortisation expense; Cr accumulated amortisation || Like depreciation.
+- Dr intangible asset; Cr amortisation || Reversed.
+- Dr retained earnings; Cr asset || Not standard.
+- No entry || An entry is required.
+explain: The expense is charged to profit or loss.
+mistake: Debiting the asset.
+tip: Same as depreciation.
+src: Study text ch8 - amortisation entry (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Development costs were expensed in Year 1 because the criteria were not met. In Year 2 the criteria are met. Can the Year 1 costs be capitalised?
++ No - costs expensed in earlier periods cannot be reinstated || Only future costs.
+- Yes - they must be reinstated || Not allowed.
+- Yes - if the directors choose || Not allowed.
+- Only if the product is profitable || Not allowed.
+explain: Capitalisation applies from the date the criteria are met.
+mistake: Reinstating earlier costs.
+tip: No going back.
+src: Study text ch8 - reinstatement (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How is an intangible asset with an INDEFINITE useful life treated?
++ It is not amortised but is tested for impairment || No amortisation.
+- It is amortised over 50 years || Not required.
+- It is expensed immediately || Not correct.
+- It is revalued annually || Not required.
+explain: Indefinite does not mean infinite; it means no foreseeable limit.
+mistake: Amortising regardless.
+tip: Indefinite = impairment tests.
+src: Study text ch8 - indefinite life (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: This year: research costs $30,000 and amortisation of previously capitalised development costs $20,000. New development spending of $70,000 meets all criteria.
+q: What is the total charge ($) to profit or loss for research and development?
+answer: 50000
+tol: 0
+unit: $
+formula: P/L charge = research expensed + amortisation
+step: Research 30,000.
+step: Plus amortisation 20,000 = $50,000 (the new $70,000 is capitalised).
+check: 30000+20000
+explain: The new spend will be amortised once production starts.
+mistake: Expensing qualifying development.
+tip: Research + amortisation.
+src: Study text ch8 - P/L charge (concept basis; original figures)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What are the conditions for recognising any intangible asset?
++ Future economic benefits are probable and cost can be measured reliably || General recognition criteria.
+- It must be physically separable || Not required.
+- It must have been revalued || Not required.
+- It must be bought for cash || Not required.
+explain: Internally generated goodwill fails these tests.
+mistake: Adding extra conditions.
+tip: Probable benefits + reliable cost.
+src: Study text ch8 - recognition (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: trap
+topic: t2
+status: review
+q: A trainee capitalises $35,000 spent on a laboratory study to discover new chemical compounds. What is wrong?
++ This is research and must be expensed || Original investigation.
+- Nothing is wrong || It is research.
+- It should be revalued || Not relevant.
+- It should be credited to revenue || Not income.
+explain: Profit and assets are overstated by $35,000.
+mistake: Capitalising research.
+tip: Discovery = research.
+src: Study text ch8 - research (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which is a required IAS 38 disclosure?
++ The total research and development expenditure expensed in the period || Required.
+- The names of the research staff || Not required.
+- The future selling price of the product || Not required.
+- The patent application number || Not required.
+explain: Useful lives, methods and a reconciliation of carrying amounts are also required.
+mistake: Thinking no disclosure is needed.
+tip: Show what was expensed.
+src: Study text ch8 - disclosure (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why are internally generated brands not recognised as assets?
++ Their cost cannot be distinguished reliably from the cost of developing the business as a whole || Not reliably measurable.
+- Because brands have no value || They can be valuable.
+- Because IAS 38 bans all brands || Purchased brands are recognised.
+- Because brands are tangible || They are intangible.
+explain: A purchased brand has a reliable cost.
+mistake: Recognising home-grown brands.
+tip: Bought yes; built no.
+src: Study text ch8 - internal brands (concept basis; original question)
+
+=== Q026
+type: order
+level: S
+cat: concept
+topic: t2
+status: review
+q: Put the stages of a product's development in the order they are usually accounted for.
+item: Research costs expensed as incurred
+item: Development costs expensed until all criteria are met
+item: Development costs capitalised once all criteria are met
+item: Amortisation begins when commercial production starts
+explain: This reflects increasing certainty of future benefits.
+mistake: Amortising before production.
+tip: Expense, expense, capitalise, amortise.
+src: Study text ch8 - sequence (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Project costs this year: January-April (criteria not yet met) $36,000; May-December (all criteria met from 1 May) $64,000.
+q: What is the closing intangible asset ($), assuming production has not yet started?
+answer: 64000
+tol: 0
+unit: $
+formula: Intangible = development costs incurred after criteria met
+step: January-April 36,000 - expensed.
+step: May-December 64,000 - capitalised; no amortisation yet.
+check: 64000
+explain: Amortisation begins only when production starts.
+mistake: Amortising before production.
+tip: Capitalise from the date criteria are met.
+src: Study text ch8 - capitalisation (concept basis; original figures)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which feature distinguishes an intangible asset from property, plant and equipment?
++ It has no physical substance || Key difference.
+- It is always current || Usually non-current.
+- It cannot be amortised || It usually is.
+- It is never purchased || Many are purchased.
+explain: Both are non-current assets used in the business.
+mistake: Thinking intangibles are current.
+tip: No physical form.
+src: Study text ch8 - comparison (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Under the cost model, how is an intangible asset measured after recognition?
++ Cost less accumulated amortisation and impairment losses || Standard model.
+- Fair value at each year end || Revaluation model.
+- Original cost forever || Ignores amortisation.
+- Selling price || Not used.
+explain: Most intangibles use the cost model.
+mistake: Ignoring amortisation.
+tip: Cost less amortisation.
+src: Study text ch8 - cost model (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which criterion is NOT met if the company has decided to abandon the project?
++ Intention to complete and use or sell the asset || Intention is missing.
+- Technical feasibility || May still be feasible.
+- Expenditure measured reliably || May still be measurable.
+- Resources available || May still be available.
+explain: Without intention, the spend is expensed.
+mistake: Capitalising abandoned projects.
+tip: No intention = no asset.
+src: Study text ch8 - criteria (concept basis; original question)
+
+=== Q031
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Capitalised development costs of $300,000 relate to a product launched on 1 July 20X5, with an expected life of 4 years. The year end is 31 December.
+q: What is the carrying amount at 31 December 20X6?
++ $187,500 || 18 months' amortisation of 112,500.
+- $225,000 || Only 1 year deducted.
+- $150,000 || 2 full years deducted.
+- $300,000 || No amortisation.
+formula: Carrying amount = cost - cost / life x months / 12
+step: Annual = 300,000 / 4 = 75,000; months since launch = 18.
+step: Amortisation = 75,000 x 18/12 = 112,500; carrying amount = 300,000 - 112,500 = $187,500.
+check: 300000-75000*18/12
+explain: Pro rata amortisation applies from the launch date.
+mistake: Counting full years.
+tip: Count months from launch.
+src: Study text ch8 - carrying amount (concept basis; original figures)
+
+=== Q032
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Intangible asset b/f: $180,000. This year: research $55,000; qualifying development $95,000; amortisation charge $36,000.
+q: What is the intangible asset c/f ($)?
+answer: 239000
+tol: 0
+unit: $
+formula: C/f = b/f + qualifying development - amortisation
+step: 180,000 + 95,000 = 275,000.
+step: 275,000 - 36,000 = $239,000.
+check: 180000+95000-36000
+explain: Research is expensed and never enters the asset.
+mistake: Adding research.
+tip: Only qualifying development goes in.
+src: Study text ch8 - movements (concept basis; original figures)
+
+=== Q033
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company is developing a new battery. It has proven the technology works, plans to sell it, has funding and can measure costs. But market research shows no customers are likely to buy it. Should the costs be capitalised?
++ No - probable future economic benefits are not shown || One criterion fails.
+- Yes - five out of six criteria are met || All must be met.
+- Yes - technical feasibility is enough || Not enough.
+- Only half the costs || Not an option.
+explain: All PIRATE criteria are required.
+mistake: Capitalising when one criterion fails.
+tip: Six out of six.
+src: Study text ch8 - criteria (concept basis; original scenario)
+
+=== Q034
+type: mr
+level: C
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO are recognised as intangible assets?
++ A licence bought to broadcast sports events || Purchased right.
++ A customer list purchased from another company || Purchased and identifiable.
+- An internally generated customer list || Not recognised.
+- Staff training costs || Not controlled.
+explain: Employees are not controlled assets.
+mistake: Capitalising training.
+tip: Purchased rights qualify.
+src: Study text ch8 - examples (concept basis; original question)
+
+=== Q035
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee starts amortising development costs from the date spending began, two years before the product was launched. What is the effect?
++ Amortisation is charged too early, understating profit and the asset before launch || Should start at production.
+- No effect || Timing matters.
+- Profit is overstated || Understated.
+- Only the notes are affected || Figures are affected.
+explain: Benefits begin with commercial production.
+mistake: Amortising during development.
+tip: Launch starts amortisation.
+src: Study text ch8 - timing (concept basis; original question)
+
+=== Q036
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: A company capitalised $150,000 of development costs. Production began on 1 April 20X7; expected life 5 years; year end 31 December.
+q: What is the amortisation charge ($) for the year ended 31 December 20X7?
+answer: 22500
+tol: 0
+unit: $
+formula: Charge = cost / life x months / 12
+step: Annual = 150,000 / 5 = 30,000.
+step: 9 months = 30,000 x 9 / 12 = $22,500.
+check: 150000/5*9/12
+explain: April to December is 9 months.
+mistake: Charging a full year.
+tip: Count the months.
+src: Study text ch8 - pro rata (concept basis; original figures)
+
+=== Q037
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why is the revaluation model rarely used for intangible assets?
++ Most intangibles, such as patents and brands, are unique and have no active market || Fair value not reliable.
+- IAS 38 prohibits it entirely || Allowed with an active market.
+- Intangibles never change in value || They can.
+- Revaluation increases tax || Not the reason.
+explain: Taxi licences or quotas sometimes have active markets.
+mistake: Thinking revaluation is common.
+tip: Unique = no active market.
+src: Study text ch8 - revaluation (concept basis; original question)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Spending on a new process: feasibility research $18,000; prototype building before funding was secured $42,000; prototype testing after all criteria were met $56,000; staff training for the launch $9,000.
+q: How much ($) should be capitalised?
+answer: 56000
+tol: 0
+unit: $
+formula: Capitalise only qualifying development spend
+step: Research 18,000 and pre-criteria prototype 42,000 are expensed.
+step: Training 9,000 is expensed; capitalise 56,000.
+check: 56000
+explain: Training costs are not part of the intangible asset.
+mistake: Capitalising training.
+tip: Only post-criteria development.
+src: Study text ch8 - capitalisation (concept basis; original figures)
+
+=== Q039
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: A product using capitalised development costs is withdrawn from the market after one year because of a safety problem. What is the likely treatment?
++ The remaining carrying amount is written off as an impairment, as no future benefits are expected || Asset no longer supported.
+- Continue amortising over the original life || No benefits remain.
+- Transfer it to inventory || Not inventory.
+- Reinstate it as research || Not correct.
+explain: Assets cannot be carried above their recoverable amount.
+mistake: Leaving the asset in place.
+tip: No benefits = write off.
+src: Study text ch8 - impairment (concept basis; original scenario)
+
+=== Q040
+type: match
+level: C
+cat: concept
+topic: t2
+status: review
+q: Match each PIRATE letter with its criterion.
+pair: P => Probable future economic benefits
+pair: I => Intention to complete and use or sell
+pair: R => Resources available to complete
+pair: A => Ability to use or sell the asset
+explain: T = technical feasibility; E = expenditure measured reliably.
+mistake: Forgetting a criterion.
+tip: Spell PIRATE.
+src: Study text ch8 - PIRATE (concept basis; original question)
+
+=== Q041
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Development costs capitalised: Project A $200,000 (launched 1 January 20X8, life 4 years); Project B $90,000 (not yet launched). Year end 31 December 20X8.
+q: What is the total amortisation charge ($) for 20X8?
+answer: 50000
+tol: 0
+unit: $
+formula: Charge only launched projects
+step: Project A: 200,000 / 4 = 50,000.
+step: Project B is not launched: no amortisation; total $50,000.
+check: 200000/4
+explain: Unlaunched projects are assets but not yet amortised.
+mistake: Amortising Project B.
+tip: Launched only.
+src: Study text ch8 - amortisation (concept basis; original figures)
+
+=== Q042
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A finance director says, "Our development costs meet every criterion, but we will expense them to be prudent." Is this acceptable?
++ No - IAS 38 requires capitalisation when all criteria are met || Not optional.
+- Yes - prudence overrides IAS 38 || Not correct.
+- Yes - capitalisation is optional || Required.
+- Only for small companies || No exemption.
+explain: Expensing understates assets and profit.
+mistake: Treating capitalisation as optional.
+tip: Criteria met = must capitalise.
+src: Study text ch8 - compulsory capitalisation (concept basis; original scenario)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which of the following BEST explains "control" of an intangible asset?
++ The entity can obtain the future benefits and restrict others' access, often through legal rights || Key feature.
+- The entity has physical possession || Not needed.
+- The entity's staff created it || Not enough.
+- The entity has insured it || Not the test.
+explain: Skilled staff are not controlled, so training is not an asset.
+mistake: Treating staff skills as assets.
+tip: Benefits + restrict access.
+src: Study text ch8 - control (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: A licence costing $72,000 with a 6-year life was purchased 2.5 years ago. What is its carrying amount ($) under the cost model?
+answer: 42000
+tol: 0
+unit: $
+formula: Carrying amount = cost - cost / life x years elapsed
+step: Annual = 72,000 / 6 = 12,000; 2.5 years = 30,000.
+step: Carrying amount = 72,000 - 30,000 = $42,000.
+check: 72000-72000/6*2.5
+explain: Purchased licences are amortised over their useful life.
+mistake: Forgetting the half year.
+tip: Count time precisely.
+src: Study text ch8 - licences (concept basis; original question)
+
+=== Q045
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Why is research expensed rather than capitalised?
++ At the research stage, future economic benefits cannot be shown to be probable || Too uncertain.
+- Because research is always cheap || Not the reason.
+- Because research is a tangible asset || It is not.
+- Because tax rules demand it || Not the reason.
+explain: Development is closer to a commercial outcome.
+mistake: Thinking it is about amount.
+tip: Too early to know.
+src: Study text ch8 - research (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A company spends $500,000 on advertising to build its brand. How is this treated?
++ Expensed as incurred; internally generated brands are not recognised || No asset.
+- Capitalised as a brand intangible || Not allowed.
+- Capitalised as development || Not development.
+- Treated as inventory || Not inventory.
+explain: Only a purchased brand would be recognised.
+mistake: Capitalising advertising.
+tip: Advertising = expense.
+src: Study text ch8 - brands (concept basis; original scenario)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Research $28,000; development before criteria met $15,000; development after criteria met $60,000; amortisation of earlier development $12,000.
+q: What total amount ($) is charged to profit or loss?
+answer: 55000
+tol: 0
+unit: $
+formula: Charge = research + early development + amortisation
+step: 28,000 + 15,000 = 43,000.
+step: Plus amortisation 12,000 = $55,000.
+check: 28000+15000+12000
+explain: The $60,000 is capitalised.
+mistake: Expensing qualifying development.
+tip: Expense everything except qualifying development.
+src: Study text ch8 - P/L charge (concept basis; original figures)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Over what period should capitalised development costs be amortised?
++ The period over which the product or process is expected to generate benefits || Useful life.
+- Always 5 years || No fixed period.
+- Always 20 years || No fixed period.
+- The period of development || Too early.
+explain: Useful lives are reviewed regularly.
+mistake: Using a fixed rule.
+tip: Life of the benefits.
+src: Study text ch8 - useful life (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement BEST summarises IAS 38 for research and development?
++ Research is always expensed; development is capitalised when all PIRATE criteria are met || Core rule.
+- Both are always capitalised || Research is expensed.
+- Both are always expensed || Development can be capitalised.
+- Development is optional to capitalise || Required.
+explain: Capitalised costs are amortised from launch.
+mistake: Treating capitalisation as optional.
+tip: Research out; qualifying development in.
+src: Study text ch8 - R&D (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: What is the IAS 38 definition of an intangible asset in simple terms?
++ An identifiable asset that is not money and has no physical form || Core definition.
+- Any asset that is hard to value || Not the definition.
+- Any expense the directors choose to capitalise || Not allowed.
+- A current asset || Usually non-current.
+explain: Recognition also needs probable benefits and reliable cost.
+mistake: Recognising internal goodwill.
+tip: Identifiable, non-monetary, non-physical.
+src: Study text ch8 - definition (concept basis; original question)

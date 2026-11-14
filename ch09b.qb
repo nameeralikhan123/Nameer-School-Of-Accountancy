@@ -1,0 +1,862 @@
+@subject acfbe
+@chapter 9b
+@title Alternative Costing Principles
+@lo C5
+@topic t1 | Activity based costing (ABC) | C5
+@topic t2 | ABC vs traditional absorption | C5
+@topic t3 | Quality and TQM | C5
+@topic t4 | Life cycle costing | C5
+@topic t5 | Target costing | C5
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: In activity based costing, what is a cost driver?
++ The factor that causes the cost of an activity to change || For example, the number of set-ups.
+- The manager responsible for a cost centre || A person, not a driver.
+- The total overhead of a department || That is a cost pool total.
+- The selling price of a product || Not related.
+explain: Costs are charged to products according to their use of each driver.
+mistake: Confusing the driver with the cost pool.
+tip: Driver = cause of cost.
+src: Study text ch9b - cost driver (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Which is the MOST likely cost driver for the cost of processing purchase orders?
++ Number of purchase orders raised || The activity's cost rises with the number of orders.
+- Machine hours worked || A volume driver for machine costs.
+- Floor area || A basis for rent.
+- Number of employees || A basis for personnel costs.
+explain: Support activities usually have transaction-based drivers.
+mistake: Using a volume measure for a transaction cost.
+tip: Match the driver to the activity.
+src: Study text ch9b - cost drivers (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Into which category of quality cost does staff training in quality procedures fall?
++ Prevention cost || Incurred to stop defects arising.
+- Appraisal cost || Inspection and testing.
+- Internal failure cost || Defects found before delivery.
+- External failure cost || Defects found after delivery.
+explain: Prevention costs are spent before production to avoid defects.
+mistake: Classing training as appraisal.
+tip: Stop it happening = prevention.
+src: Study text ch9b - quality costs (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t1
+status: review
+q: The inspection cost pool is $36,000 and there are 240 inspections in the period. What is the cost driver rate per inspection ($)?
+answer: 150
+tol: 0
+unit: $
+formula: Cost driver rate = cost pool / number of cost driver units
+step: Cost pool = $36,000; driver units = 240 inspections.
+step: Rate = 36,000 / 240 = $150 per inspection.
+check: 36000/240
+explain: Products are charged $150 for every inspection they need.
+mistake: Dividing by units produced.
+tip: Pool / driver volume.
+src: Study text ch9b - cost driver rate (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t5
+status: review
+q: How is a target cost calculated?
++ Target selling price less target profit || The market sets the price; the company sets the profit.
+- Estimated cost plus target profit || That is cost-plus pricing.
+- Estimated cost less target profit || Not the method.
+- Target selling price plus target profit || Not the method.
+explain: The target cost is the maximum cost the product can have.
+mistake: Starting from the estimated cost.
+tip: Price minus profit.
+src: Study text ch9b - target costing (concept basis; original question)
+
+=== Q006
+type: num
+level: F
+cat: calc
+topic: t5
+status: review
+q: A new product will sell for $80. The company requires a profit margin of 25% on selling price. What is the target cost ($)?
+answer: 60
+tol: 0
+unit: $
+formula: Target cost = target price - target profit
+step: Target profit = 80 x 25% = $20.
+step: Target cost = 80 - 20 = $60.
+check: 80*(1-0.25)
+explain: If the estimated cost exceeds $60, there is a cost gap to close.
+mistake: Applying 25% as a mark-up on cost.
+tip: Profit is a % of PRICE here.
+src: Study text ch9b - target cost (concept basis; original question)
+
+=== Q007
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: What does life cycle costing do?
++ Tracks costs and revenues of a product over its whole life, from design to disposal || It covers every stage.
+- Records only production costs in each period || That is traditional costing.
+- Sets prices by deducting profit from a market price || Target costing.
+- Charges overheads using cost drivers || ABC.
+explain: It shows each product's full profitability.
+mistake: Confusing it with target costing.
+tip: Cradle to grave.
+src: Study text ch9b - life cycle costing (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: Customer warranty repairs are an example of which quality cost?
++ External failure cost || The defect was found after delivery.
+- Internal failure cost || Found before delivery.
+- Prevention cost || Avoids defects.
+- Appraisal cost || Inspection.
+explain: External failure costs also include lost goodwill and returns.
+mistake: Classing it as internal failure.
+tip: After delivery = external.
+src: Study text ch9b - quality costs (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What are the two key principles of total quality management (TQM)?
++ Get it right first time, and continuous improvement || TQM aims for zero defects.
+- Inspect everything, and accept some defects || Contrary to TQM.
+- Minimise training, and maximise output || Contrary to TQM.
+- Cut prices, and reduce inspection || Not the principles.
+explain: Prevention is cheaper than correction.
+mistake: Thinking TQM is about inspection.
+tip: Right first time + always improve.
+src: Study text ch9b - TQM (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under traditional absorption costing, how are overheads usually charged to products?
++ Using one volume-related rate, such as labour hours or machine hours || A single basis per cost centre.
+- Using several transaction-based cost drivers || That is ABC.
+- Using the selling price || Not used.
+- Not charged at all || That is marginal costing for fixed overheads.
+explain: ABC replaces single volume rates with many activity drivers.
+mistake: Thinking traditional costing uses drivers.
+tip: Traditional = volume rate.
+src: Study text ch9b - comparison (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Why did activity based costing develop?
++ Overheads became a large share of total cost and many relate to activities rather than production volume || Volume-based rates distort costs.
+- Direct labour became the largest cost || It became smaller.
+- Products became more uniform || They became more diverse.
+- Overheads disappeared || They grew.
+explain: Modern production uses more support activities such as set-ups and inspections.
+mistake: Thinking labour costs drove the change.
+tip: More overheads, more diversity.
+src: Study text ch9b - why ABC (concept basis; original question)
+
+=== Q012
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put the steps of activity based costing in order.
+item: Identify the major activities
+item: Identify the cost driver of each activity
+item: Collect overheads into a cost pool for each activity
+item: Calculate a cost driver rate for each pool
+item: Charge overheads to products based on their use of each driver
+explain: ABC follows activities rather than departments.
+mistake: Calculating rates before pooling costs.
+tip: Activities, drivers, pools, rates, charge.
+src: Study text ch9b - ABC steps (concept basis; original question)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: The set-up cost pool is $48,000 and there are 120 set-ups in the year. Product Z needs 15 set-ups. How much set-up cost is charged to Product Z?
++ $6,000 || Rate $400 x 15 set-ups.
+- $400 || This is the rate per set-up.
+- $3,200 || Not supported.
+- $48,000 || The whole pool.
+formula: Charge = cost driver rate x driver units used
+step: Rate = 48,000 / 120 = $400 per set-up.
+step: Charge = 15 x 400 = $6,000.
+check: 15*48000/120
+explain: The charge reflects Z's use of the set-up activity.
+mistake: Spreading by units produced.
+tip: Rate x usage.
+src: Study text ch9b - ABC charge (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Compared with traditional absorption costing, what does ABC usually show about low-volume, complex products?
++ They cost MORE than traditional costing suggests || They use support activities heavily.
+- They cost less than traditional costing suggests || Usually the opposite.
+- They cost the same || ABC often reveals differences.
+- They have no overhead || They have overhead.
+explain: High-volume simple products often cost less under ABC.
+mistake: Reversing the effect.
+tip: Low volume, complex = more cost under ABC.
+src: Study text ch9b - ABC effect (concept basis; original question)
+
+=== Q015
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are criticisms of ABC?
++ Some arbitrary apportionment remains, for example of rent || Facility costs have no clear driver.
++ It can be costly and complex to set up and run || Many pools and drivers.
+- It always gives the same cost as traditional costing || It often differs.
+- It ignores overheads || It focuses on overheads.
+explain: ABC may not be worthwhile where overheads are small.
+mistake: Assuming ABC removes all arbitrariness.
+tip: Not perfect, not free.
+src: Study text ch9b - criticisms (concept basis; original question)
+
+=== Q016
+type: match
+level: S
+cat: concept
+topic: t3
+status: review
+q: Match each cost with its quality cost category.
+pair: Designing products to reduce defects => Prevention cost
+pair: Testing finished goods before despatch => Appraisal cost
+pair: Reworking faulty items found in the factory => Internal failure cost
+pair: Handling customer complaints and returns => External failure cost
+explain: Conformance costs are prevention and appraisal; non-conformance costs are failures.
+mistake: Classing inspection as prevention.
+tip: Prevent, check, fail inside, fail outside.
+src: Study text ch9b - quality costs (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: A company's quality costs are: training $12,000; inspection $18,000; rework $25,000; warranty claims $40,000. What are its total conformance costs ($)?
+answer: 30000
+tol: 0
+unit: $
+formula: Conformance costs = prevention + appraisal
+step: Prevention (training) = 12,000; appraisal (inspection) = 18,000.
+step: Conformance = 12,000 + 18,000 = $30,000.
+check: 12000+18000
+explain: Non-conformance costs = rework + warranty = $65,000.
+mistake: Including failure costs.
+tip: Conformance = prevent + appraise.
+src: Study text ch9b - conformance (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t5
+status: review
+q: A product's target cost is $60 and its estimated cost is $68. What is the cost gap ($)?
+answer: 8
+tol: 0
+unit: $
+formula: Cost gap = estimated cost - target cost
+step: Estimated cost = 68; target cost = 60.
+step: Cost gap = 68 - 60 = $8.
+check: 68-60
+explain: The gap must be closed before launch, or the product reconsidered.
+mistake: Reversing the subtraction.
+tip: Estimated minus target.
+src: Study text ch9b - cost gap (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: Which is NOT a usual way of closing a cost gap?
++ Raising the selling price above the market price || The market sets the price in target costing.
+- Redesigning the product to use fewer components || Value engineering.
+- Using cheaper materials that keep quality acceptable || A common method.
+- Negotiating lower prices with suppliers || A common method.
+explain: Target costing accepts the market price and works on cost.
+mistake: Thinking price can just be raised.
+tip: Close the gap through cost, not price.
+src: Study text ch9b - closing the gap (concept basis; original question)
+
+=== Q020
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Why is life cycle costing valuable?
++ Most of a product's costs are committed at the design stage, and it focuses attention there || It also shows full profitability.
+- It ignores research and development costs || It includes them.
+- It reports only production period costs || Traditional systems do.
+- It removes the need for budgets || Not true.
+explain: Traditional period reporting hides pre- and post-production costs.
+mistake: Thinking costs are mostly committed in production.
+tip: Costs are locked in at design.
+src: Study text ch9b - life cycle value (concept basis; original question)
+
+=== Q021
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: A product is expected to sell 50,000 units over its life. Life cycle costs: design and development $200,000; production $12 per unit; marketing $150,000; decommissioning $50,000.
+q: What is the life cycle cost per unit ($)?
+answer: 20
+tol: 0
+unit: $
+formula: Life cycle cost per unit = total life cycle costs / lifetime units
+step: Production = 50,000 x 12 = 600,000; total = 200,000 + 600,000 + 150,000 + 50,000 = 1,000,000.
+step: Per unit = 1,000,000 / 50,000 = $20.
+check: (200000+50000*12+150000+50000)/50000
+explain: The full life cycle cost is much higher than the $12 production cost.
+mistake: Using production cost only.
+tip: Include all stages.
+src: Study text ch9b - life cycle costing (concept basis; original figures)
+
+=== Q022
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Scrap and rework discovered BEFORE goods reach customers are which type of quality cost?
++ Internal failure costs || Found before delivery.
+- External failure costs || Found after delivery.
+- Appraisal costs || Inspection.
+- Prevention costs || Avoiding defects.
+explain: Internal failure costs also include production downtime caused by defects.
+mistake: Classing rework as external.
+tip: Before delivery = internal.
+src: Study text ch9b - internal failure (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which is a merit of ABC?
++ It gives a better understanding of what causes overhead costs || Managing drivers can reduce costs.
+- It is cheaper to run than traditional costing || It is usually more expensive.
+- It removes all overheads || It allocates them.
+- It needs only one absorption rate || It uses many.
+explain: Better cost information supports pricing and product mix decisions.
+mistake: Assuming ABC is simpler.
+tip: Understand causes, manage drivers.
+src: Study text ch9b - merits (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t5
+status: review
+q: A product will sell for $120. The company requires a margin of 15% on selling price. The estimated cost is $110. What is the cost gap?
++ $8 || Target cost 102; gap 110 - 102.
+- $10 || This uses a 10% margin.
+- $18 || This is the target profit.
+- $0 || There is a gap.
+formula: Cost gap = estimated cost - (price - target profit)
+step: Target cost = 120 x 85% = 102.
+step: Cost gap = 110 - 102 = $8.
+check: 110-120*0.85
+explain: The design team must find $8 of savings.
+mistake: Comparing the estimated cost with the price.
+tip: Target first, then gap.
+src: Study text ch9b - cost gap (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which costs are "non-conformance costs"?
++ Internal and external failure costs || Costs of not meeting quality standards.
+- Prevention and appraisal costs || Those are conformance costs.
+- Prevention and external failure costs || Mixed categories.
+- Appraisal costs only || Conformance.
+explain: TQM aims to reduce non-conformance by spending on conformance.
+mistake: Mixing up the groups.
+tip: Failure = non-conformance.
+src: Study text ch9b - conformance (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Which overhead would MOST appropriately be charged using a VOLUME-related driver such as machine hours?
++ Machine power and maintenance costs || They rise with machine use.
+- Purchasing department costs || Number of orders.
+- Set-up costs || Number of set-ups.
+- Despatch costs || Number of deliveries.
+explain: ABC still uses volume drivers for volume-related costs.
+mistake: Thinking ABC uses no volume drivers.
+tip: Volume costs keep volume drivers.
+src: Study text ch9b - drivers (concept basis; original question)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t5
+status: review
+q: When is target costing MOST effective?
++ At the design stage, before costs are committed || Changes are cheapest then.
+- After the product has been launched || Most costs are committed.
+- At the end of the product's life || Too late.
+- Only for products with no competitors || The market price is key.
+explain: Value engineering at design is the main tool.
+mistake: Applying target costing after launch.
+tip: Design stage.
+src: Study text ch9b - target costing (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which costs does a traditional period-based costing system tend to hide from the product?
++ Pre-production costs such as R&D and post-production costs such as decommissioning || They are charged to periods.
+- Direct material costs || These are traced.
+- Direct labour costs || These are traced.
+- Variable overheads || These are absorbed.
+explain: Life cycle costing brings all costs together for each product.
+mistake: Thinking traditional systems capture R&D per product.
+tip: Before and after production.
+src: Study text ch9b - life cycle (concept basis; original question)
+
+=== Q029
+type: mcq
+level: S
+cat: trap
+topic: t3
+status: review
+q: A trainee classifies the cost of inspecting incoming materials as a prevention cost. What is the correct classification?
++ Appraisal cost || Inspection checks conformance.
+- Prevention cost, as the trainee said || Inspection does not prevent.
+- Internal failure cost || No failure has occurred.
+- External failure cost || No customer involved.
+explain: Prevention examples include training and design reviews.
+mistake: Classing inspection as prevention.
+tip: Inspect/test = appraisal.
+src: Study text ch9b - appraisal (concept basis; original question)
+
+=== Q030
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+q: The materials handling cost pool is $27,000 and the driver is the number of material movements, of which there are 450. Product K needs 60 movements. What materials handling cost ($) is charged to K?
+answer: 3600
+tol: 0
+unit: $
+formula: Charge = (cost pool / driver units) x usage
+step: Rate = 27,000 / 450 = $60 per movement.
+step: Charge = 60 x 60 = $3,600.
+check: 60*27000/450
+explain: K is charged according to how often it causes materials to move.
+mistake: Charging by units produced.
+tip: Rate x movements.
+src: Study text ch9b - ABC charge (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: How does TQM view the balance between prevention costs and failure costs?
++ Spending more on prevention reduces failure costs, lowering total quality costs || Prevention is cheaper than correction.
+- Failure costs are unavoidable, so prevention is wasteful || Contrary to TQM.
+- Appraisal should replace prevention || Inspection does not prevent.
+- Quality costs should be ignored || TQM measures them.
+explain: TQM accepts no level of defects as normal.
+mistake: Relying on inspection.
+tip: Prevent rather than detect.
+src: Study text ch9b - TQM (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Where does ABC collect overheads, compared with traditional absorption costing?
++ In activity cost pools rather than in production departments || Activities, not departments.
+- In production departments only || Traditional.
+- In the selling price || Not collected there.
+- In direct labour || Overheads are indirect.
+explain: Each pool has its own cost driver.
+mistake: Thinking ABC uses departments.
+tip: Pools by activity.
+src: Study text ch9b - comparison (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What does the Study Guide say about ABC calculations in the exam?
++ You will not be required to calculate ABC costs, but must understand the method and its merits || Focus on principles.
+- Full ABC product costs will be required in every exam || Not required.
+- ABC is not examinable at all || It is examinable conceptually.
+- Only ABC calculations, not concepts, are examined || Concepts are examined.
+explain: Expect conceptual questions on drivers, pools and merits.
+mistake: Over-practising long calculations.
+tip: Understand, don't drill long calcs.
+src: Study text ch9b - exam scope (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: scenario
+topic: t2
+status: review
+q: A company makes a high-volume standard product and a low-volume custom product. Under traditional costing, both carry similar overhead per unit. Switching to ABC is MOST likely to show what?
++ The custom product's cost per unit rises and the standard product's falls || The custom product uses more set-ups and orders per unit.
+- Both costs stay the same || Different activity use changes costs.
+- The standard product's cost rises || It uses fewer support activities per unit.
+- Overheads disappear || They are reassigned.
+explain: Traditional volume rates over-cost high-volume products and under-cost complex ones.
+mistake: Reversing the effect.
+tip: Complexity costs money.
+src: Study text ch9b - ABC impact (concept basis; original scenario)
+
+=== Q035
+type: mcq
+level: C
+cat: calc
+topic: t5
+status: review
+scenario: A competitor's similar product sells for $250. The company wants a 20% margin on selling price. Estimated cost: materials $110, labour $60, overheads $45.
+q: What is the cost gap, and must it be closed?
++ $15 - yes, costs must fall to $200 || Estimated 215 vs target 200.
+- $35 - yes || This is target profit less a cost.
+- $0 - no || There is a gap.
+- $50 - yes || This is the target profit.
+formula: Cost gap = estimated cost - target cost
+step: Target cost = 250 x 80% = 200; estimated cost = 110 + 60 + 45 = 215.
+step: Gap = 215 - 200 = $15.
+check: 110+60+45-250*0.8
+explain: Value engineering or supplier negotiation could close the gap.
+mistake: Adding profit to estimated cost.
+tip: Market price drives target.
+src: Study text ch9b - target costing (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t5
+status: review
+q: A trainee calculates target cost as "estimated cost less target profit". Why is this wrong?
++ Target cost starts from the market price, not estimated cost || Target cost = target price - target profit.
+- It should be estimated cost plus profit || That is cost-plus pricing.
+- Target cost equals the selling price || Profit is deducted.
+- Target cost is set by suppliers || Set by the company.
+explain: Target costing works backwards from the market.
+mistake: Starting from cost.
+tip: Price - profit.
+src: Study text ch9b - target cost (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+scenario: Quality costs this year: design reviews $8,000; quality training $14,000; product testing $21,000; scrapped units $16,000; rework $9,000; warranty repairs $27,000; lost sales from complaints (estimated) $5,000.
+q: What are total non-conformance costs ($)?
+answer: 57000
+tol: 0
+unit: $
+formula: Non-conformance = internal failure + external failure
+step: Internal failure = scrap 16,000 + rework 9,000 = 25,000.
+step: External failure = warranty 27,000 + lost sales 5,000 = 32,000; total = 57,000.
+check: 16000+9000+27000+5000
+explain: Conformance costs = 8,000 + 14,000 + 21,000 = 43,000.
+mistake: Including testing (appraisal).
+tip: Only failure costs.
+src: Study text ch9b - quality costs (concept basis; original figures)
+
+=== Q038
+type: mr
+level: C
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO statements about life cycle costing are correct?
++ It includes design and development costs incurred before production starts || Pre-production costs are included.
++ It can show that a product is unprofitable over its life even when it is profitable in some periods || It gives a full picture.
+- It considers only the production stage || All stages are covered.
+- It ignores decommissioning and disposal costs || These are included.
+explain: Period-based reporting can make a product look better than it really is.
+mistake: Limiting costs to production.
+tip: Whole life, whole picture.
+src: Study text ch9b - life cycle costing (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A product earns contribution of $8 per unit over lifetime sales of 30,000 units. Development costs were $180,000, end-of-life clean-up will cost $20,000 and production fixed costs over the life are $30,000.
+q: What is the product's life cycle profit or loss?
++ $10,000 profit || 240,000 - 180,000 - 20,000 - 30,000.
+- $60,000 profit || This ignores clean-up and production fixed costs.
+- $30,000 profit || This ignores clean-up costs.
+- $10,000 loss || The sign is wrong.
+formula: Life cycle profit = total contribution - all life cycle fixed costs
+step: Contribution = 30,000 x 8 = $240,000.
+step: Fixed costs = 180,000 + 20,000 + 30,000 = 230,000; profit = 240,000 - 230,000 = $10,000.
+check: 30000*8-180000-20000-30000
+explain: Development and disposal costs are easy to overlook in period reports.
+mistake: Leaving out pre- or post-production costs.
+tip: Every stage counts.
+src: Study text ch9b - life cycle (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Which activity and cost driver pairing is LEAST appropriate?
++ Despatch costs - machine hours || Despatch cost is driven by the number of deliveries.
+- Set-up costs - number of set-ups || Appropriate.
+- Purchasing costs - number of purchase orders || Appropriate.
+- Machine running costs - machine hours || Appropriate.
+explain: A good driver is the factor that actually causes the activity's cost.
+mistake: Defaulting to volume drivers.
+tip: Ask what makes the cost go up.
+src: Study text ch9b - drivers (concept basis; original question)
+
+=== Q041
+type: order
+level: C
+cat: concept
+topic: t5
+status: review
+q: Put the steps of target costing in order.
+item: Determine the competitive market price
+item: Deduct the required profit to find the target cost
+item: Estimate the actual cost of the planned product
+item: Calculate the cost gap
+item: Close the gap through design changes and cost reduction
+explain: The process starts with the customer and the market, not with cost.
+mistake: Starting from estimated cost.
+tip: Price, profit, target, estimate, gap, close.
+src: Study text ch9b - target costing steps (concept basis; original question)
+
+=== Q042
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+q: The order-handling cost pool is $60,000 and 300 orders are handled. Product A, of which 1,000 units are made, needs 50 orders. What order-handling cost per unit ($) is charged to A?
+answer: 10
+tol: 0
+unit: $
+formula: Cost per unit = (pool / driver units) x A's driver usage / A's units
+step: Rate = 60,000 / 300 = $200 per order; A's charge = 50 x 200 = $10,000.
+step: Per unit = 10,000 / 1,000 = $10.
+check: 50*60000/300/1000
+explain: Low-volume products needing many orders get a high cost per unit.
+mistake: Dividing the pool by total units.
+tip: Charge, then divide by the product's units.
+src: Study text ch9b - ABC per unit (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: scenario
+topic: t3
+status: review
+q: To save money, a company cuts its quality training budget. Over the next year, warranty claims and rework rise sharply. What does this illustrate?
++ Cutting prevention costs can increase failure costs by more than it saves || TQM favours prevention.
+- Training has no effect on quality || The rise suggests otherwise.
+- Appraisal costs should be cut instead || Not the lesson.
+- Failure costs are always fixed || They vary with quality.
+explain: Total quality cost is often minimised by investing in prevention.
+mistake: Treating quality spending as pure overhead.
+tip: Cheap now, costly later.
+src: Study text ch9b - quality costs (concept basis; original scenario)
+
+=== Q044
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: When is ABC LEAST likely to be worthwhile?
++ When overheads are a small part of total cost and products are similar || Traditional costing gives similar results.
+- When overheads are high and products diverse || ABC helps most here.
+- When there are many support activities || ABC is useful.
+- When products use activities very differently || ABC is useful.
+explain: The extra cost of ABC must be justified by better information.
+mistake: Assuming ABC always beneficial.
+tip: Small overheads, similar products = little gain.
+src: Study text ch9b - ABC suitability (concept basis; original question)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t5
+status: review
+q: A product will sell for $45. The company requires a 30% margin on selling price. The estimated cost is $34. What is the cost gap ($)?
+answer: 2.5
+tol: 0.001
+unit: $
+formula: Cost gap = estimated cost - target price x (1 - margin %)
+step: Target cost = 45 x 70% = $31.50.
+step: Cost gap = 34 - 31.50 = $2.50.
+check: 34-45*0.7
+explain: The design team must find $2.50 of savings per unit.
+mistake: Using a 30% mark-up.
+tip: Margin is on price.
+src: Study text ch9b - cost gap (concept basis; original question)
+
+=== Q046
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: A product manager excludes the product's development costs from its profitability because "they were charged to last year's results". What would life cycle costing add?
++ It would match those development costs to the product, showing its true lifetime profitability || Costs are tracked by product, not period.
+- Nothing - development costs are irrelevant to products || They belong to the product.
+- It would move the costs to the next year || Not the aim.
+- It would treat them as appraisal costs || Not quality costs.
+explain: Products may look profitable in each period yet fail to recover their development spend.
+mistake: Judging products on period results alone.
+tip: Product life, not accounting period.
+src: Study text ch9b - life cycle (concept basis; original scenario)
+
+=== Q047
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: A trainee classifies lost customer goodwill caused by faulty products as an internal failure cost. What is the correct classification?
++ External failure cost || The fault reached the customer.
+- Internal failure cost, as the trainee said || Internal failures are found before delivery.
+- Prevention cost || Not preventive.
+- Appraisal cost || Not inspection.
+explain: External failure costs are often the most damaging and hardest to measure.
+mistake: Classing customer-facing failures as internal.
+tip: Customer saw it = external.
+src: Study text ch9b - external failure (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t5
+status: review
+q: In target costing, what is value engineering?
++ Redesigning a product to reduce cost without reducing the value customers place on it || A key gap-closing tool.
+- Raising the price to match value || Price is set by the market.
+- Inspecting products for faults || Appraisal.
+- Allocating overheads using drivers || ABC.
+explain: Features customers don't value can be removed or simplified.
+mistake: Thinking it reduces quality.
+tip: Cut cost, keep value.
+src: Study text ch9b - value engineering (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: What are the four categories of quality cost?
++ Prevention, appraisal, internal failure and external failure || The standard classification.
+- Fixed, variable, semi-variable and stepped || Cost behaviour.
+- Materials, labour, expenses and overheads || Cost elements.
+- Planning, control, decision and review || Management functions.
+explain: Conformance = prevention + appraisal; non-conformance = failure costs.
+mistake: Using cost behaviour categories.
+tip: Prevent, appraise, fail in, fail out.
+src: Study text ch9b - quality costs (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t1
+status: review
+important: 1
+q: How is a cost driver rate calculated in ABC?
++ Cost pool / total number of cost driver units || For example, set-up pool / number of set-ups.
+- Cost pool / total units produced || Volume-based.
+- Total overheads / labour hours || Traditional.
+- Cost driver units / cost pool || Inverted.
+explain: Products are then charged at the rate times their use of the driver.
+mistake: Dividing by output.
+tip: Pool over driver.
+src: Study text ch9b - driver rate (concept basis; original question)

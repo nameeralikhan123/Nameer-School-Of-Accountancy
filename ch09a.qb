@@ -1,0 +1,895 @@
+@subject acfbe
+@chapter 9a
+@title Job, Batch and Service Costing
+@lo C4
+@topic t1 | Job costing | C4
+@topic t2 | Margins and mark-ups | C4
+@topic t3 | Batch costing | C4
+@topic t4 | Service costing | C4
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: For which business is job costing MOST suitable?
++ A firm that refits shop interiors to each client's own design || Each order is unique and short.
+- A brewery producing lager continuously || Process costing.
+- A bus company || Service costing.
+- A factory making 10,000 identical bolts at a time || Batch costing.
+explain: Job costing suits work done to individual customer specifications over a short period.
+mistake: Choosing job costing for continuous production.
+tip: Unique customer order = job.
+src: Study text ch9a - job costing (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: Where are the costs of an individual job accumulated?
++ On a job cost sheet (job card) || One record per job.
+- In the process account || Process costing.
+- In the abnormal loss account || Not relevant.
+- In the payroll only || Payroll is one source.
+explain: The job cost sheet collects materials, labour, expenses and overheads for the job.
+mistake: Confusing job and process records.
+tip: One job, one cost sheet.
+src: Study text ch9a - job cost sheet (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is the usual source document for direct materials charged to a job?
++ Materials requisition note || It records materials issued from stores to the job.
+- Clock card || Records attendance.
+- Sales invoice || Records sales.
+- Goods received note || Records receipt into stores, not issue to a job.
+explain: Direct labour comes from job or time sheets; overheads are absorbed at a predetermined rate.
+mistake: Using the goods received note.
+tip: Issue to job = requisition.
+src: Study text ch9a - sources (concept basis; original question)
+
+=== Q004
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A job costs $650. The company adds a mark-up of 20% on cost. What is the selling price ($)?
+answer: 780
+tol: 0
+unit: $
+formula: Price = cost x (1 + mark-up %)
+step: Mark-up = 650 x 20% = 130.
+step: Price = 650 + 130 = $780.
+check: 650*1.2
+explain: A mark-up is profit expressed as a percentage of cost.
+mistake: Treating it as a margin (650 / 0.8 = $812.50).
+tip: Mark-up multiplies cost.
+src: Study text ch9a - mark-up (concept basis; original question)
+
+=== Q005
+type: num
+level: F
+cat: calc
+topic: t2
+status: review
+q: A job costs $150. The company requires a profit margin of 20% on selling price. What is the selling price ($)?
+answer: 187.5
+tol: 0.001
+unit: $
+formula: Price = cost / (1 - margin %)
+step: Cost = 80% of price.
+step: Price = 150 / 0.80 = $187.50.
+check: 150/0.8
+explain: Profit = 37.50, which is 20% of 187.50.
+mistake: Using 150 x 1.2 = $180, which is a 20% mark-up.
+tip: Margin divides by (1 - margin).
+src: Study text ch9a - margin (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t3
+status: review
+q: What is batch costing?
++ A form of job costing where a group of identical items is treated as one cost unit || The batch cost is then divided by the units.
+- Costing for continuous homogeneous production || Process costing.
+- Costing for services || Service costing.
+- Costing for a single unique customer order || Job costing.
+explain: Batch costing is used for shoes, pharmaceuticals and components.
+mistake: Confusing batches with processes.
+tip: Batch = job of identical items.
+src: Study text ch9a - batch costing (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: A batch of 400 identical components costs $3,000 in total. What is the cost per component ($)?
+answer: 7.5
+tol: 0.001
+unit: $
+formula: Cost per unit = total batch cost / units in batch
+step: Total batch cost = $3,000; units = 400.
+step: Cost per unit = 3,000 / 400 = $7.50.
+check: 3000/400
+explain: The unit cost is used to value inventory and set prices.
+mistake: Not dividing by units.
+tip: Batch total / units.
+src: Study text ch9a - batch cost per unit (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which is a suitable composite cost unit for a road haulage business?
++ Tonne-kilometre || Combines weight and distance.
+- Kilometre only || Ignores the load.
+- Tonne only || Ignores distance.
+- Driver || Not a measure of output.
+explain: Composite units capture two drivers of cost.
+mistake: Using a single measure.
+tip: Haulage = tonne-km.
+src: Study text ch9a - composite units (concept basis; original question)
+
+=== Q009
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which composite cost unit suits a hospital ward?
++ Patient-day || Combines patients and time.
+- Bed || A capacity measure.
+- Nurse-hour || An input measure.
+- Tonne-kilometre || Haulage.
+explain: Patient-days measure ward output.
+mistake: Using inputs as cost units.
+tip: Hospital = patient-day.
+src: Study text ch9a - composite units (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t4
+status: review
+q: Which characteristic of services means they cannot be stored?
++ Perishability || Unused capacity is lost.
+- Intangibility || Means they cannot be touched.
+- Heterogeneity || Means quality varies.
+- Simultaneity || Means produced and consumed together.
+explain: An empty hotel room tonight cannot be sold tomorrow.
+mistake: Confusing the four characteristics.
+tip: Perishable = can't store.
+src: Study text ch9a - service characteristics (concept basis; original question)
+
+=== Q011
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Job 47: direct materials $1,200; direct labour 40 hours at $15 per hour; production overhead is absorbed at $10 per direct labour hour; non-production overheads are added at 20% of production cost.
+q: What is the total cost of Job 47?
++ $2,640 || Production cost 2,200 x 1.20.
+- $2,200 || This is production cost only.
+- $2,520 || Applies 20% to prime cost only.
+- $2,400 || Omits overhead absorbed.
+formula: Total cost = production cost x (1 + non-production %)
+step: Prime cost = 1,200 + 40 x 15 = 1,800; overhead absorbed = 40 x 10 = 400; production cost = 2,200.
+step: Total cost = 2,200 x 1.20 = $2,640.
+check: (1200+40*15+40*10)*1.2
+explain: Non-production overheads are added to production cost to reach total cost.
+mistake: Applying the % to prime cost.
+tip: Build up: prime, production, total.
+src: Study text ch9a - job cost build-up (concept basis; original figures)
+
+=== Q012
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A job has a total cost of $2,640. The company wants a 25% margin on selling price. What is the price?
++ $3,520 || 2,640 / 0.75.
+- $3,300 || This is a 25% mark-up.
+- $3,168 || Not supported.
+- $2,860 || Not supported.
+formula: Price = cost / (1 - margin %)
+step: Cost = 75% of price.
+step: Price = 2,640 / 0.75 = $3,520.
+check: 2640/0.75
+explain: Profit 880 is 25% of 3,520.
+mistake: Using a mark-up.
+tip: Margin = % of price.
+src: Study text ch9a - margin (concept basis; original question)
+
+=== Q013
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+q: A product sells for $935, which includes a mark-up of 10% on cost. What is the cost ($)?
+answer: 850
+tol: 0
+unit: $
+formula: Cost = price / (1 + mark-up %)
+step: Price = cost x 1.10.
+step: Cost = 935 / 1.10 = $850.
+check: 935/1.1
+explain: Reverse the mark-up by dividing.
+mistake: Taking 10% off the price ($841.50).
+tip: Divide by 1.10, don't subtract 10%.
+src: Study text ch9a - reversing mark-up (concept basis; original question)
+
+=== Q014
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: A job needs rework because of an unusual mistake by the customer's own specifier. How should the rectification cost be treated?
++ Charged to the job, because it is exceptional and specific to it || Abnormal rectification goes to the job.
+- Treated as a production overhead spread over all jobs || That is for normal rectification.
+- Ignored || It is a cost.
+- Written off as a by-product || Not related.
+explain: Normal, expected rectification is included in production overheads.
+mistake: Spreading exceptional costs over all jobs.
+tip: Exceptional = job; normal = overhead.
+src: Study text ch9a - rectification (concept basis; original question)
+
+=== Q015
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How is closing work in progress valued in a job costing system?
++ As the total costs incurred to date on jobs not yet completed || Sum the incomplete job cards.
+- Using equivalent units || Process costing.
+- At selling price of incomplete jobs || Inventory is at cost.
+- At zero until jobs are finished || Costs are carried forward.
+explain: Each incomplete job cost sheet shows the costs accumulated so far.
+mistake: Applying process costing techniques.
+tip: WIP = incomplete job cards.
+src: Study text ch9a - WIP (concept basis; original question)
+
+=== Q016
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A product costs $80 and sells for $100. What are the margin and mark-up?
++ Margin 20%; mark-up 25% || Profit 20 / price 100; profit 20 / cost 80.
+- Margin 25%; mark-up 20% || Reversed.
+- Margin 20%; mark-up 20% || They differ.
+- Margin 25%; mark-up 25% || They differ.
+formula: Margin = profit / price; mark-up = profit / cost
+step: Profit = 100 - 80 = 20.
+step: Margin = 20 / 100 = 20%; mark-up = 20 / 80 = 25%.
+check: 20/100*100
+explain: For the same profit, the mark-up % is always higher than the margin %.
+mistake: Mixing up the bases.
+tip: Margin on price; mark-up on cost.
+src: Study text ch9a - margin vs mark-up (concept basis; original question)
+
+=== Q017
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A delivery fleet incurred total costs of $90,000 in a month and carried goods for 60,000 tonne-kilometres. What is the cost per tonne-kilometre ($)?
+answer: 1.5
+tol: 0.001
+unit: $
+formula: Cost per service unit = total costs / service units supplied
+step: Total costs = $90,000; service units = 60,000 tonne-km.
+step: Cost per tonne-km = 90,000 / 60,000 = $1.50.
+check: 90000/60000
+explain: The rate can be used to charge user departments or compare with outside hauliers.
+mistake: Dividing by kilometres only.
+tip: Total cost / composite units.
+src: Study text ch9a - service cost per unit (concept basis; original question)
+
+=== Q018
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+scenario: A lorry carries 12 tonnes for 150 km on Monday, 8 tonnes for 200 km on Tuesday and 5 tonnes for 320 km on Wednesday.
+q: How many tonne-kilometres were delivered in total?
+answer: 5000
+tol: 0
+unit: tonne-km
+formula: Tonne-km = Σ(tonnes x km per journey)
+step: Monday 12 x 150 = 1,800; Tuesday 8 x 200 = 1,600; Wednesday 5 x 320 = 1,600.
+step: Total = 1,800 + 1,600 + 1,600 = 5,000.
+check: 12*150+8*200+5*320
+explain: Multiply each journey separately, then add.
+mistake: Multiplying total tonnes by total km (25 x 670).
+tip: Journey by journey.
+src: Study text ch9a - composite units (concept basis; original figures)
+
+=== Q019
+type: mr
+level: S
+cat: concept
+topic: t4
+status: review
+select: 2
+q: Which TWO are typical features of service costing compared with product costing?
++ Indirect costs are a high proportion of total cost || Services rely heavily on overheads.
++ Defining a suitable cost unit is often difficult || Composite units are used.
+- Direct material is usually the largest cost || Usually small in services.
+- Services can be stored as inventory || Services are perishable.
+explain: Services are intangible, perishable, variable and simultaneous.
+mistake: Applying manufacturing assumptions.
+tip: Services: high overheads, hard-to-define output.
+src: Study text ch9a - service costing (concept basis; original question)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t4
+status: review
+q: Match each service with an appropriate composite cost unit.
+pair: Bus company => Passenger-kilometre
+pair: Hotel => Room-night
+pair: College => Student-hour
+pair: Haulage firm => Tonne-kilometre
+explain: Composite units combine two measures that drive cost.
+mistake: Using inputs instead of outputs.
+tip: Two measures of output.
+src: Study text ch9a - composite units (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: How are production overheads usually charged to a job?
++ Absorbed using a predetermined overhead absorption rate || For example, per direct labour hour.
+- At actual cost when the job finishes || Actual overheads are not known until the period ends.
+- Not charged at all || They are part of production cost.
+- At the selling price of the job || Not related.
+explain: Predetermined rates allow costs to be calculated as jobs progress.
+mistake: Waiting for actual overheads.
+tip: OAR x hours.
+src: Study text ch9a - overheads (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+scenario: A batch of 250 units requires materials of $1,500, 30 labour hours at $14 per hour and overhead absorbed at $16 per labour hour.
+q: What is the cost per unit ($)?
+answer: 9.6
+tol: 0.001
+unit: $
+formula: Cost per unit = (materials + labour + overhead) / units
+step: Labour = 30 x 14 = 420; overhead = 30 x 16 = 480.
+step: Total = 1,500 + 420 + 480 = 2,400; per unit = 2,400 / 250 = $9.60.
+check: (1500+30*14+30*16)/250
+explain: Batch costs are collected as for a job, then divided by units.
+mistake: Forgetting overhead.
+tip: Full batch cost / units.
+src: Study text ch9a - batch costing (concept basis; original figures)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What does "simultaneity" mean for a service?
++ It is produced and consumed at the same time || A haircut is consumed as it is produced.
+- It cannot be touched || Intangibility.
+- Quality varies each time || Heterogeneity.
+- It cannot be stored || Perishability.
+explain: The four characteristics explain why services are hard to cost.
+mistake: Confusing the terms.
+tip: Simultaneity = same time.
+src: Study text ch9a - characteristics (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Which is a purpose of costing an internal service such as a maintenance department?
++ To compare the cost of providing the service internally with buying it from outside || Supports make-or-buy decisions.
+- To value finished goods inventory of maintenance || Services are not stored.
+- To calculate equivalent units || Process costing.
+- To apportion joint costs || Joint product costing.
+explain: Internal service costing helps control costs and set internal charges.
+mistake: Thinking internal services need no costing.
+tip: Control, charge, compare.
+src: Study text ch9a - purposes (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A firm sets prices with a 40% mark-up on cost. A job costs $1,250. What profit margin (on selling price) does this represent?
++ 28.6% || Profit 500 / price 1,750.
+- 40% || That is the mark-up.
+- 25% || Not supported.
+- 35% || Not supported.
+formula: Margin = profit / price
+step: Price = 1,250 x 1.40 = 1,750; profit = 500.
+step: Margin = 500 / 1,750 = 28.6%.
+check: 500/1750*100
+explain: A 40% mark-up equals a margin of 0.4 / 1.4.
+mistake: Equating margin and mark-up.
+tip: Margin < mark-up.
+src: Study text ch9a - margin vs mark-up (concept basis; original question)
+
+=== Q026
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: What is the usual pricing method used by jobbing businesses?
++ Cost plus pricing || A mark-up or margin is added to the job cost.
+- Market skimming || Not usual in job costing.
+- Process pricing || Not a method.
+- Equivalent unit pricing || Not a method.
+explain: Each job is quoted individually based on its estimated cost.
+mistake: Applying mass-market pricing.
+tip: Job = cost plus.
+src: Study text ch9a - pricing (concept basis; original question)
+
+=== Q027
+type: num
+level: S
+cat: calc
+topic: t4
+status: review
+q: A staff canteen had costs of $28,800 in a month and served 9,600 meals. What is the cost per meal ($)?
+answer: 3
+tol: 0
+unit: $
+formula: Cost per meal = total costs / meals served
+step: Total costs = $28,800; meals = 9,600.
+step: Cost per meal = 28,800 / 9,600 = $3.
+check: 28800/9600
+explain: The canteen can use this to set an internal charge or subsidy level.
+mistake: Dividing by staff numbers.
+tip: Meals served is the cost unit.
+src: Study text ch9a - service costing (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: trap
+topic: t1
+status: review
+q: A firm regularly has 2% of all work reworked. A trainee charges this year's rework costs to the specific jobs reworked. What is the correct treatment?
++ Treat the normal rework as a production overhead, spread over all jobs through the absorption rate || It is an expected cost.
+- Charge it to the jobs reworked, as the trainee did || That applies only to exceptional rework.
+- Write it off as abnormal loss || Job costing does not use that.
+- Ignore it || It is a cost.
+explain: Normal rectification is part of overheads.
+mistake: Penalising unlucky jobs with expected costs.
+tip: Normal = overhead.
+src: Study text ch9a - rectification (concept basis; original question)
+
+=== Q029
+type: order
+level: S
+cat: concept
+topic: t1
+status: review
+q: Put the stages of building up a job's selling price in order.
+item: Add direct materials, labour and expenses to find prime cost
+item: Add absorbed production overhead to find production cost
+item: Add non-production overheads to find total cost
+item: Add profit to find the selling price
+explain: Each stage builds on the last.
+mistake: Adding profit before all costs.
+tip: Prime, production, total, price.
+src: Study text ch9a - build-up (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: Why is "kilometres travelled" alone a weak cost unit for a bus company?
++ It ignores the number of passengers carried, which also drives cost and output || A passenger-km captures both.
+- Buses do not travel kilometres || They do.
+- It is a composite unit || It is a single measure.
+- It is too precise || Not the issue.
+explain: Composite units better reflect the service delivered.
+mistake: Using single measures.
+tip: Combine two drivers.
+src: Study text ch9a - composite units (concept basis; original question)
+
+=== Q031
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A job's selling price is $2,400 and the company earns a margin of 25%. What is the job's cost?
++ $1,800 || 2,400 x 75%.
+- $1,920 || This reverses a 25% mark-up.
+- $600 || That is the profit.
+- $3,000 || Not supported.
+formula: Cost = price x (1 - margin %)
+step: Profit = 25% of price = 600.
+step: Cost = 2,400 - 600 = $1,800.
+check: 2400*0.75
+explain: Margins are calculated on selling price.
+mistake: Dividing by 1.25.
+tip: Margin: cost = price x (1 - m).
+src: Study text ch9a - margin (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: Which business is MOST likely to use batch costing?
++ A shoe manufacturer making 500 pairs of one style at a time || Identical items in groups.
+- A shipbuilder || Contract or job costing.
+- A water utility || Process or service costing.
+- A dentist || Service costing.
+explain: Each batch is treated as a job, then divided by units.
+mistake: Confusing with job costing for single items.
+tip: Groups of identical items.
+src: Study text ch9a - batch costing (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: concept
+topic: t4
+status: review
+q: What does "heterogeneity" mean for services?
++ The standard of service may vary each time it is delivered || It depends on who provides it and when.
+- Services cannot be stored || Perishability.
+- Services are intangible || Intangibility.
+- Services are consumed when produced || Simultaneity.
+explain: Variable quality makes standard costing harder in services.
+mistake: Confusing characteristics.
+tip: Hetero = varied.
+src: Study text ch9a - characteristics (concept basis; original question)
+
+=== Q034
+type: mcq
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: Job 92: materials $2,880; labour: Department A 60 hours at $12, Department B 25 hours at $18. Overheads are absorbed at $20 per hour in A and $30 per hour in B. Admin overhead is 10% of production cost, and the price gives a 20% margin on selling price.
+q: What is the selling price of Job 92?
++ $8,250 || Total cost 6,600 / 0.80.
+- $7,920 || This is a 20% mark-up on cost.
+- $7,500 || This prices production cost, omitting admin.
+- $6,600 || Total cost only.
+formula: Price = total cost / (1 - margin)
+step: Labour = 60 x 12 + 25 x 18 = 720 + 450 = 1,170; overhead = 60 x 20 + 25 x 30 = 1,950.
+step: Production cost = 2,880 + 1,170 + 1,950 = 6,000; total cost = 6,000 x 1.10 = 6,600.
+step: Price = 6,600 / 0.80 = $8,250.
+check: (2880+720+450+1950)*1.1/0.8
+explain: Overheads are absorbed department by department using each department's own rate.
+mistake: Using one blended rate or applying a mark-up instead of a margin.
+tip: Department rates, then admin, then margin.
+src: Study text ch9a - job pricing (concept basis; original figures)
+
+=== Q035
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A 120-room hotel had costs of $252,000 in a 30-day month. Average occupancy was 70%.
+q: What is the cost per occupied room-night ($)?
+answer: 100
+tol: 0
+unit: $
+formula: Cost per room-night = total costs / occupied room-nights
+step: Occupied room-nights = 120 x 30 x 70% = 2,520.
+step: Cost per room-night = 252,000 / 2,520 = $100.
+check: 252000/(120*30*0.7)
+explain: Using occupied rather than available room-nights shows the true cost of each night sold.
+mistake: Dividing by available room-nights (3,600).
+tip: Occupied units only.
+src: Study text ch9a - service costing (concept basis; original figures)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A manager wants a 30% margin on a job costing $700 but calculates the price as $700 x 1.30. By how much is the price understated?
++ $90 || Correct price 1,000 less 910.
+- $0 || The methods differ.
+- $210 || This is the mark-up amount.
+- $300 || This is the correct profit.
+formula: Correct price = cost / (1 - margin)
+step: Correct price = 700 / 0.70 = 1,000; manager's price = 700 x 1.30 = 910.
+step: Understatement = 1,000 - 910 = $90.
+check: 700/0.7-700*1.3
+explain: Applying a margin % as a mark-up always underprices.
+mistake: Treating margin as mark-up.
+tip: Margin: divide by (1 - m).
+src: Study text ch9a - margin vs mark-up (concept basis; original question)
+
+=== Q037
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: Each batch incurs a set-up cost of $600, plus variable cost of $4 per unit. What is the cost per unit ($) for a batch of 300 units?
+answer: 6
+tol: 0
+unit: $
+formula: Cost per unit = (set-up cost + variable cost x units) / units
+step: Total batch cost = 600 + 300 x 4 = 1,800.
+step: Cost per unit = 1,800 / 300 = $6.
+check: (600+300*4)/300
+explain: Larger batches spread the set-up cost over more units.
+mistake: Ignoring set-up costs.
+tip: Include batch-level costs.
+src: Study text ch9a - batch costing (concept basis; original question)
+
+=== Q038
+type: mr
+level: C
+cat: concept
+topic: t1
+status: review
+select: 2
+q: Which TWO are features of job costing?
++ Work is done to the customer's special requirements || Each job is unique.
++ Each job is a separately identifiable cost unit || Costs are collected per job.
+- Output is homogeneous and continuous || Process costing.
+- Costs are shared using equivalent units || Process costing.
+explain: Jobs are usually of comparatively short duration.
+mistake: Mixing in process costing features.
+tip: Unique, identifiable, short.
+src: Study text ch9a - job features (concept basis; original question)
+
+=== Q039
+type: mcq
+level: C
+cat: calc
+topic: t4
+status: review
+q: An internal maintenance department has monthly costs of $45,000 and provides 1,500 hours of service. The production department used 320 hours. What should it be charged?
++ $9,600 || 320 x $30 per hour.
+- $14,063 || Not supported.
+- $9,000 || This uses 300 hours.
+- $45,000 || Total cost.
+formula: Charge = hours used x (total cost / total hours)
+step: Rate = 45,000 / 1,500 = $30 per hour.
+step: Charge = 320 x 30 = $9,600.
+check: 320*45000/1500
+explain: Internal charges encourage users to use services efficiently.
+mistake: Charging on headcount.
+tip: Rate x usage.
+src: Study text ch9a - internal services (concept basis; original question)
+
+=== Q040
+type: mcq
+level: C
+cat: scenario
+topic: t4
+status: review
+q: An internal transport department costs $1.80 per tonne-km. An outside haulier quotes $1.60. Before outsourcing, what should management check first?
++ Which internal costs would actually be saved, as some fixed costs may continue anyway || Compare relevant costs, not full cost.
+- Nothing - the quote is cheaper so outsource immediately || Full cost may include unavoidable costs.
+- Whether the haulier uses tonne-km || Not the main point.
+- Whether depreciation is charged || Only part of the issue.
+explain: Full cost per unit is useful for comparison but decisions need avoidable costs.
+mistake: Comparing full cost with an outside price.
+tip: Compare avoidable cost with the quote.
+src: Study text ch9a - comparison (concept basis; original scenario)
+
+=== Q041
+type: match
+level: C
+cat: concept
+topic: t2
+status: review
+q: Match each calculation with the correct formula.
+pair: Price from cost and margin => Cost / (1 - margin %)
+pair: Price from cost and mark-up => Cost x (1 + mark-up %)
+pair: Cost from price and mark-up => Price / (1 + mark-up %)
+pair: Cost from price and margin => Price x (1 - margin %)
+explain: Margin uses selling price as its base; mark-up uses cost.
+mistake: Applying the wrong base.
+tip: Margin = price base; mark-up = cost base.
+src: Study text ch9a - formulas (concept basis; original question)
+
+=== Q042
+type: mcq
+level: C
+cat: calc
+topic: t2
+status: review
+q: A product costs $480 and is priced with a 25% mark-up. What margin does it earn?
++ 20% || Profit 120 / price 600.
+- 25% || That is the mark-up.
+- 15% || Not supported.
+- 33% || Not supported.
+formula: Margin = profit / price
+step: Price = 480 x 1.25 = 600; profit = 120.
+step: Margin = 120 / 600 = 20%.
+check: (600-480)/600*100
+explain: A 25% mark-up equals a 20% margin.
+mistake: Treating them as equal.
+tip: 25% mark-up = 20% margin.
+src: Study text ch9a - margin vs mark-up (concept basis; original question)
+
+=== Q043
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Apart from customer orders, where else can job costing be used?
++ To control the cost of internal work, such as individual maintenance jobs || Each internal job can be costed.
+- To cost continuous chemical production || Process costing.
+- To apportion joint costs || Joint product costing.
+- To calculate equivalent units || Process costing.
+explain: Job costing helps control internal services job by job.
+mistake: Restricting job costing to external sales.
+tip: Internal jobs too.
+src: Study text ch9a - uses (concept basis; original question)
+
+=== Q044
+type: num
+level: C
+cat: calc
+topic: t1
+status: review
+scenario: At the period end, Job 101 (costs to date $4,200), Job 102 ($3,150) and Job 104 ($1,650) are incomplete. Job 103 (cost $5,600) was completed and delivered.
+q: What is the value ($) of closing work in progress?
+answer: 9000
+tol: 0
+unit: $
+formula: WIP = sum of costs on incomplete jobs
+step: Incomplete jobs: 101, 102 and 104.
+step: WIP = 4,200 + 3,150 + 1,650 = $9,000.
+check: 4200+3150+1650
+explain: Completed Job 103 goes to cost of sales, not WIP.
+mistake: Including completed jobs.
+tip: Only unfinished jobs.
+src: Study text ch9a - WIP (concept basis; original figures)
+
+=== Q045
+type: num
+level: C
+cat: calc
+topic: t4
+status: review
+scenario: A bus carries an average of 45 passengers on a 60 km route, making 8 trips a day for 25 days. Monthly costs are $81,000.
+q: What is the cost per passenger-kilometre ($)?
+answer: 0.15
+tol: 0.0001
+unit: $
+formula: Cost per passenger-km = total costs / (passengers x km x trips x days)
+step: Passenger-km = 45 x 60 x 8 x 25 = 540,000.
+step: Cost = 81,000 / 540,000 = $0.15.
+check: 81000/(45*60*8*25)
+explain: The composite unit reflects both passengers and distance.
+mistake: Dividing by kilometres only.
+tip: Multiply all output drivers.
+src: Study text ch9a - composite units (concept basis; original figures)
+
+=== Q046
+type: mcq
+level: C
+cat: concept
+topic: t4
+status: review
+q: A seaside hotel cannot "save up" unused rooms from winter to sell in summer. Which service characteristic does this illustrate?
++ Perishability || Unsold capacity is lost.
+- Heterogeneity || Variable quality.
+- Intangibility || Cannot be touched.
+- Simultaneity || Produced and consumed together.
+explain: Capacity planning is critical for services.
+mistake: Mixing the characteristics.
+tip: Can't store = perishable.
+src: Study text ch9a - characteristics (concept basis; original scenario)
+
+=== Q047
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A job's total cost is $2,100. The company requires a margin of 30% on the selling price. What price ($) should be quoted?
+answer: 3000
+tol: 0
+unit: $
+formula: Price = cost / (1 - margin %)
+step: Cost = 70% of price.
+step: Price = 2,100 / 0.70 = $3,000.
+check: 2100/0.7
+explain: Profit = 900, which is 30% of 3,000.
+mistake: 2,100 x 1.30 = $2,730.
+tip: Margin divides.
+src: Study text ch9a - margin (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: concept
+topic: t3
+status: review
+q: Why does the cost per unit usually fall as the batch size increases?
++ Batch-level costs such as set-up are spread over more units || Fixed batch cost per unit falls.
+- Variable costs per unit always fall || Not necessarily.
+- Larger batches need no materials || Not true.
+- Overheads are not charged to large batches || They are.
+explain: This is why businesses consider optimal batch sizes.
+mistake: Ignoring set-up costs.
+tip: Spread set-up cost.
+src: Study text ch9a - batch size (concept basis; original question)
+
+=== Q049
+type: mcq
+level: F
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which statement about margin and mark-up is correct?
++ Margin is profit as a % of selling price; mark-up is profit as a % of cost || Different bases.
+- Margin is profit as a % of cost; mark-up is profit as a % of price || Reversed.
+- They are always equal || They differ.
+- Mark-up is always lower than margin || It is higher for the same profit.
+explain: A 20% margin is not the same as a 20% mark-up.
+mistake: Confusing the bases.
+tip: Margin on price; mark-up on cost.
+src: Study text ch9a - margin and mark-up (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t4
+status: review
+important: 1
+q: How is the cost per service unit calculated?
++ Total costs for the period / number of service units supplied in the period || Learn this formula.
+- Total revenue / service units || Revenue, not cost.
+- Direct materials / service units || Ignores other costs.
+- Total costs / number of employees || Not output.
+explain: Composite units such as tonne-km or patient-days are often used.
+mistake: Using inputs as the denominator.
+tip: Cost over output.
+src: Study text ch9a - service costing (concept basis; original question)

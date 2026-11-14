@@ -1,0 +1,891 @@
+@subject acfbe
+@chapter 7b
+@title Absorption and Marginal Costing
+@lo C3
+@topic t1 | Marginal costing | C3
+@topic t2 | Marginal vs absorption costing | C3
+@topic t3 | Reconciling the profits | C3
+
+=== Q001
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: What is meant by "marginal cost"?
++ The variable cost of one unit of product or service || Marginal cost excludes fixed costs.
+- The full cost of one unit including fixed overhead || That is absorption cost.
+- The selling price less fixed costs || Not a definition.
+- The fixed cost per unit || Not marginal cost.
+explain: Marginal costing charges only variable costs to units and treats fixed costs as period costs.
+mistake: Including fixed overhead in marginal cost.
+tip: Marginal = variable.
+src: Study text ch7b - marginal cost (concept basis; original question)
+
+=== Q002
+type: mcq
+level: F
+cat: concept
+topic: t1
+status: review
+q: How is contribution calculated?
++ Sales value minus variable cost of sales || It contributes to fixed costs and then profit.
+- Sales value minus total cost || That is profit.
+- Sales value minus fixed costs || Not contribution.
+- Variable costs minus fixed costs || Not contribution.
+explain: Each extra unit sold adds its contribution to profit once fixed costs are covered.
+mistake: Deducting fixed costs to find contribution.
+tip: Contribution ignores fixed costs.
+src: Study text ch7b - contribution (concept basis; original question)
+
+=== Q003
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: A company switches its internal reports to marginal costing. What now happens to this month's fixed factory overheads?
++ As a period cost written off in full in the period incurred || It is not included in inventory.
+- As part of the cost of each unit produced || That is absorption costing.
+- As a selling cost || It remains a production cost, treated as a period cost.
+- It is ignored || It is charged against contribution.
+explain: Marginal costing values inventory at variable production cost only.
+mistake: Absorbing fixed overhead under marginal costing.
+tip: Marginal = fixed costs hit the period.
+src: Study text ch7b - marginal costing (concept basis; original question)
+
+=== Q004
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: If inventory levels do not change during a period, how do absorption and marginal costing profits compare?
++ They are the same || No fixed overhead is carried forward or released.
+- Absorption profit is higher || Only when inventory rises.
+- Marginal profit is higher || Only when inventory falls.
+- They cannot be compared || They can.
+explain: Differences arise only from fixed overhead held in changing inventory levels.
+mistake: Assuming the methods always give different profits.
+tip: No inventory change = same profit.
+src: Study text ch7b - profit comparison (concept basis; original question)
+
+=== Q005
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: When inventory INCREASES during a period, which method reports the higher profit?
++ Absorption costing || Part of fixed overhead is carried forward in closing inventory.
+- Marginal costing || Marginal profit is higher when inventory falls.
+- Both report the same profit || Not when inventory changes.
+- Neither reports a profit || Not necessarily.
+explain: Inventory up: absorption higher. Inventory down: marginal higher.
+mistake: Reversing the rule.
+tip: Inventory up, absorption up.
+src: Study text ch7b - profit comparison (concept basis; original question)
+
+=== Q006
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which costing method must be used for inventory valuation in published financial statements?
++ Absorption costing, as required by IAS 2 || IAS 2 requires production overheads in inventory.
+- Marginal costing || Not acceptable for external reporting.
+- Either, at the directors' choice || IAS 2 requires absorption.
+- Neither - inventory is valued at selling price || Inventory is at cost (or lower NRV).
+explain: Marginal costing is widely used internally for decisions.
+mistake: Thinking marginal costing is acceptable for statutory accounts.
+tip: Published accounts = absorption.
+src: Study text ch7b - IAS 2 (concept basis; original question)
+
+=== Q007
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Opening inventory is 100 units and closing inventory is 150 units. The fixed overhead absorption rate is $1.25 per unit. By how much ($) do the two profits differ? Give your answer to two decimal places.
+answer: 62.50
+tol: 0.005
+unit: $
+formula: Profit difference = change in inventory (units) x fixed OAR per unit
+step: Change in inventory = 150 - 100 = 50 units.
+step: Difference = 50 x 1.25 = $62.50 (absorption profit higher).
+check: 50*1.25
+explain: The extra fixed overhead carried forward under absorption costing explains the difference.
+mistake: Using closing inventory only.
+tip: Change in inventory x fixed rate.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q008
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Under marginal costing, at what value is closing inventory held?
++ Variable production cost || Fixed production overhead is excluded.
+- Full production cost || That is absorption costing.
+- Selling price || Not a cost basis.
+- Total cost including selling costs || Selling costs are never in inventory.
+explain: Lower inventory values under marginal costing defer less cost to the next period.
+mistake: Including fixed overhead.
+tip: Variable production cost only.
+src: Study text ch7b - inventory valuation (concept basis; original question)
+
+=== Q009
+type: num
+level: F
+cat: calc
+topic: t3
+status: review
+q: Opening inventory is 400 units, production is 5,000 units and sales are 4,700 units. What is closing inventory (units)?
+answer: 700
+tol: 0
+unit: units
+formula: Closing inventory = opening + production - sales
+step: 400 + 5,000 = 5,400 available.
+step: 5,400 - 4,700 = 700 units.
+check: 400+5000-4700
+explain: Inventory changes are the driver of differences between the two profits.
+mistake: Ignoring opening inventory.
+tip: Start + made - sold.
+src: Study text ch7b - closing inventory (concept basis; original question)
+
+=== Q010
+type: mcq
+level: F
+cat: concept
+topic: t2
+status: review
+q: Which profit measure is central to marginal costing statements?
++ Contribution || Sales less variable costs.
+- Gross profit || Central to absorption costing statements.
+- Operating profit only || Both methods show this at the end.
+- Retained earnings || Not a costing measure.
+explain: Contribution shows how profit changes with volume.
+mistake: Thinking marginal costing reports gross profit.
+tip: Marginal = contribution.
+src: Study text ch7b - statements (concept basis; original question)
+
+=== Q011
+type: num
+level: S
+cat: calc
+topic: t1
+status: review
+scenario: Selling price $20; variable production cost $8 per unit; variable selling cost $1 per unit; fixed production overhead $30,000; fixed selling and administration $10,000. Production 10,000 units; sales 9,000 units; no opening inventory.
+q: What is the profit ($) under MARGINAL costing?
+answer: 59000
+tol: 0
+unit: $
+formula: Profit = units sold x contribution per unit - total fixed costs
+step: Contribution per unit = 20 - 8 - 1 = $11; total contribution = 9,000 x 11 = $99,000.
+step: Fixed costs = 30,000 + 10,000 = $40,000.
+step: Profit = 99,000 - 40,000 = $59,000.
+check: 9000*(20-8-1)-(30000+10000)
+explain: All fixed costs are charged in the period under marginal costing.
+mistake: Deducting only the fixed overhead for units sold.
+tip: Total contribution minus total fixed costs.
+src: Study text ch7b - marginal profit (concept basis; original figures)
+
+=== Q012
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Selling price $20; variable production cost $8 per unit; variable selling cost $1 per unit; fixed production overhead $30,000 absorbed on 10,000 units; fixed selling and administration $10,000. Production 10,000 units; sales 9,000 units; no opening inventory.
+q: What is the profit ($) under ABSORPTION costing?
+answer: 62000
+tol: 0
+unit: $
+formula: Profit = sales - cost of sales at full production cost - non-production costs
+step: Fixed OAR = 30,000 / 10,000 = $3; full production cost = 8 + 3 = $11 per unit.
+step: Gross profit = 9,000 x (20 - 11) = $81,000.
+step: Profit = 81,000 - 9,000 (variable selling) - 10,000 (fixed S&A) = $62,000.
+check: 9000*(20-11)-9000*1-10000
+explain: Absorption profit is $3,000 higher because 1,000 units in closing inventory carry $3 of fixed overhead each.
+mistake: Including selling costs in production cost.
+tip: Reconcile: 62,000 - 59,000 = 1,000 x $3.
+src: Study text ch7b - absorption profit (concept basis; original figures)
+
+=== Q013
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Variable production cost $8 per unit; fixed production OAR $3 per unit. Closing inventory 1,000 units.
+q: What is closing inventory under each method?
++ Marginal $8,000; absorption $11,000 || 1,000 x 8 and 1,000 x 11.
+- Marginal $11,000; absorption $8,000 || Reversed.
+- Both $8,000 || Absorption includes fixed overhead.
+- Both $11,000 || Marginal excludes fixed overhead.
+formula: Inventory = units x cost per unit under each method
+step: Marginal: 1,000 x 8 = $8,000.
+step: Absorption: 1,000 x (8 + 3) = $11,000.
+check: 1000*8
+explain: The $3,000 difference in inventory equals the difference in profit.
+mistake: Reversing the methods.
+tip: Absorption inventory is always higher (or equal).
+src: Study text ch7b - inventory (concept basis; original figures)
+
+=== Q014
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: In a period, sales exceed production by 500 units, and the fixed production OAR is $3 per unit. Marginal costing profit is $75,500. What is absorption costing profit?
++ $74,000 || Inventory fell by 500 units: 75,500 - 500 x 3 = 74,000.
+- $77,000 || Absorption profit is lower when inventory falls.
+- $75,500 || Profits differ when inventory changes.
+- $73,500 || Arithmetic error.
+formula: Absorption profit = marginal profit + (change in inventory x fixed OAR)
+step: Change in inventory = -500 units.
+step: Absorption profit = 75,500 + (-500 x 3) = $74,000.
+check: 75500-500*3
+explain: When inventory falls, fixed overhead brought forward in opening inventory is released into this period's cost of sales.
+mistake: Adding the adjustment when inventory falls.
+tip: Inventory down, absorption down.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q015
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are arguments in favour of MARGINAL costing?
++ Contribution information is useful for decision making || It shows how profit changes with volume.
++ Profit cannot be increased simply by building up inventory || Fixed costs are written off as incurred.
+- It complies with IAS 2 for published accounts || That favours absorption costing.
+- It shares fixed production costs fairly between units || That is an absorption argument.
+explain: Marginal costing is simple, avoids under/over-absorption and supports decisions.
+mistake: Choosing absorption arguments.
+tip: Marginal = decisions and simplicity.
+src: Study text ch7b - arguments (concept basis; original question)
+
+=== Q016
+type: mr
+level: S
+cat: concept
+topic: t2
+status: review
+select: 2
+q: Which TWO are arguments in favour of ABSORPTION costing?
++ It complies with IAS 2 for inventory valuation in financial statements || External reporting requirement.
++ It avoids reporting fictitious losses in periods when inventory is being built up for future sales || Fixed costs are carried forward with the inventory.
+- It shows contribution clearly for decisions || That favours marginal costing.
+- It avoids under- and over-absorption || Absorption costing creates these.
+explain: Absorption costing is required externally and argued to be "fair" in sharing fixed production costs.
+mistake: Choosing marginal arguments.
+tip: Absorption = compliance and fairness.
+src: Study text ch7b - arguments (concept basis; original question)
+
+=== Q017
+type: mcq
+level: S
+cat: calc
+topic: t1
+status: review
+q: A product sells for $45 with variable costs of $27 per unit. Fixed costs are $36,000 per period. In a period 2,500 units are sold. What is total contribution?
++ $45,000 || 2,500 x (45 - 27) = 2,500 x 18.
+- $9,000 || This is profit after fixed costs.
+- $112,500 || This is sales revenue.
+- $67,500 || This is total variable cost.
+formula: Total contribution = units sold x (price - variable cost)
+step: Contribution per unit = 45 - 27 = $18.
+step: Total = 2,500 x 18 = $45,000.
+check: 2500*(45-27)
+explain: Profit = contribution - fixed costs = 45,000 - 36,000 = $9,000.
+mistake: Deducting fixed costs to find contribution.
+tip: Contribution before fixed costs.
+src: Study text ch7b - contribution (concept basis; original question)
+
+=== Q018
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Why is marginal costing often preferred for internal decision making?
++ Fixed costs that will not change are separated out, so the effect of decisions on contribution is clear || Decisions focus on what changes.
+- It values inventory at a higher amount || It values inventory lower.
+- It is required by IAS 2 || Absorption is required.
+- It always produces higher profits || Not always.
+explain: Contribution analysis supports pricing, product mix and make-or-buy decisions.
+mistake: Thinking marginal costing is required externally.
+tip: Decisions need contribution.
+src: Study text ch7b - uses (concept basis; original question)
+
+=== Q019
+type: mcq
+level: S
+cat: calc
+topic: t3
+status: review
+q: Inventory increased by 1,200 units in a period. Absorption profit was $48,000 and the fixed production OAR is $4 per unit. What was marginal costing profit?
++ $43,200 || 48,000 - 1,200 x 4 = 43,200.
+- $52,800 || This adds the difference.
+- $48,000 || Profits differ.
+- $4,800 || This is the difference only.
+formula: Marginal profit = absorption profit - (increase in inventory x fixed OAR)
+step: Difference = 1,200 x 4 = $4,800.
+step: Inventory rose, so marginal profit is lower: 48,000 - 4,800 = $43,200.
+check: 48000-1200*4
+explain: When inventory increases, absorption costing defers fixed overhead to the next period.
+mistake: Adding instead of subtracting.
+tip: Inventory up: marginal lower.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q020
+type: match
+level: S
+cat: concept
+topic: t2
+status: review
+q: Match each feature with the costing method it describes.
+pair: Fixed production overhead included in inventory => Absorption costing
+pair: Fixed production overhead charged in full to the period => Marginal costing
+pair: Profit statement shows gross profit => Absorption costing
+pair: Profit statement shows contribution => Marginal costing
+explain: The key difference is the treatment of fixed production overhead.
+mistake: Mixing the statements.
+tip: Where does fixed production overhead go?
+src: Study text ch7b - comparison (concept basis; original question)
+
+=== Q021
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Under marginal costing, what happens to profit when ONE extra unit is sold, assuming fixed costs do not change?
++ Profit rises by that unit's contribution || Fixed costs are unaffected.
+- Profit rises by the unit's selling price || Variable costs must be deducted.
+- Profit rises by the full cost per unit || Not correct.
+- Profit is unchanged || It rises by contribution.
+explain: Contribution per unit shows the marginal effect of each sale on profit.
+mistake: Thinking each sale adds its full price to profit.
+tip: Extra unit = extra contribution.
+src: Study text ch7b - marginal principles (concept basis; original question)
+
+=== Q022
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Absorption costing profit is $2,000 and marginal costing gives a LOSS of $3,000. The fixed production cost is $2 per unit. By how many units did inventory change, and in which direction? (Enter the number of units.)
+answer: 2500
+tol: 0
+unit: units
+formula: Change in inventory = profit difference / fixed production cost per unit
+step: Difference = 2,000 - (-3,000) = $5,000 (absorption higher).
+step: Change = 5,000 / 2 = 2,500 units - an INCREASE, since absorption profit is higher.
+check: (2000+3000)/2
+explain: A loss under one method and a profit under the other is possible when inventory changes a lot.
+mistake: Subtracting 3,000 from 2,000 instead of adding the loss.
+tip: A loss is negative - the gap includes it.
+src: Study text ch7b - working backwards (concept basis; original question)
+
+=== Q023
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Which method can be MANIPULATED to show higher profit by producing more than is sold?
++ Absorption costing || Extra production carries fixed overhead forward in inventory.
+- Marginal costing || Fixed costs are written off regardless.
+- Both equally || Only absorption is affected.
+- Neither || Absorption profit can be inflated.
+explain: This is an argument for using marginal costing for internal performance measurement.
+mistake: Thinking marginal costing can be manipulated this way.
+tip: Overproduce + absorption = higher profit (temporarily).
+src: Study text ch7b - manipulation (concept basis; original question)
+
+=== Q024
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: Variable production cost is $12 per unit and the fixed production OAR is $5 per unit. Selling price is $30. What are the gross profit per unit (absorption) and the contribution per unit (marginal), ignoring selling costs?
++ Gross profit $13; contribution $18 || 30 - 17 = 13; 30 - 12 = 18.
+- Gross profit $18; contribution $13 || Reversed.
+- Both $13 || Contribution excludes fixed costs.
+- Both $18 || Gross profit includes fixed overhead.
+formula: Gross profit = price - full production cost; contribution = price - variable cost
+step: Full production cost = 12 + 5 = $17; gross profit = 30 - 17 = $13.
+step: Contribution = 30 - 12 = $18.
+check: 30-17
+explain: The two methods present unit profitability differently.
+mistake: Confusing gross profit with contribution.
+tip: Contribution is always larger than gross profit (if fixed overhead is positive).
+src: Study text ch7b - statements (concept basis; original question)
+
+=== Q025
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Does marginal costing involve under- or over-absorption of fixed overhead?
++ No - fixed overheads are not absorbed into units, so no under- or over-absorption arises || The full actual fixed cost is charged.
+- Yes, always || Only absorption costing has this.
+- Only when inventory rises || Not in marginal costing.
+- Only when production equals sales || Not in marginal costing.
+explain: Avoiding under/over-absorption is an argument for marginal costing.
+mistake: Applying absorption concepts to marginal costing.
+tip: No absorption, no under/over-absorption.
+src: Study text ch7b - arguments (concept basis; original question)
+
+=== Q026
+type: num
+level: S
+cat: calc
+topic: t2
+status: review
+scenario: Selling price $20; variable production cost $8 per unit; variable selling cost $1 per unit; fixed production overhead $30,000; fixed selling and administration $10,000. Opening inventory 1,000 units; production 10,000 units; sales 10,500 units.
+q: What is profit ($) under MARGINAL costing?
+answer: 75500
+tol: 0
+unit: $
+formula: Profit = units sold x contribution per unit - total fixed costs
+step: Contribution per unit = 20 - 8 - 1 = $11; total = 10,500 x 11 = $115,500.
+step: Profit = 115,500 - 40,000 = $75,500.
+check: 10500*11-40000
+explain: Opening inventory values do not affect marginal profit beyond variable cost, which is already in contribution.
+mistake: Using production instead of sales.
+tip: Contribution uses units SOLD.
+src: Study text ch7b - marginal profit (concept basis; original figures)
+
+=== Q027
+type: mcq
+level: S
+cat: concept
+topic: t3
+status: review
+q: In a period, production was 8,000 units and sales were 8,000 units, with opening inventory of 500 units. How do the two profits compare (fixed cost per unit unchanged)?
++ They are the same, because inventory did not change || Closing inventory remains 500 units.
+- Absorption profit is higher || Inventory did not rise.
+- Marginal profit is higher || Inventory did not fall.
+- They cannot be compared || They can.
+explain: Profit differences depend on the CHANGE in inventory, not its level.
+mistake: Thinking the existence of inventory causes a difference.
+tip: Change, not level.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q028
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: Under marginal costing, which costs are deducted from sales to arrive at contribution?
++ All variable costs, including variable selling costs || Variable selling costs reduce contribution.
+- Only variable production costs || Variable selling costs are also deducted.
+- All fixed and variable costs || Fixed costs are deducted after contribution.
+- Only fixed production costs || Not contribution.
+explain: Variable production cost values inventory; variable selling costs are deducted from contribution in the period of sale.
+mistake: Excluding variable selling costs from contribution.
+tip: All variable costs come off before contribution.
+src: Study text ch7b - contribution (concept basis; original question)
+
+=== Q029
+type: num
+level: S
+cat: calc
+topic: t3
+status: review
+q: Marginal costing profit is $64,000. Opening inventory was 3,000 units and closing inventory 1,800 units. The fixed production OAR is $6 per unit. What is absorption costing profit ($)?
+answer: 56800
+tol: 0
+unit: $
+formula: Absorption profit = marginal profit + (change in inventory x fixed OAR)
+step: Change in inventory = 1,800 - 3,000 = -1,200 units.
+step: Absorption profit = 64,000 + (-1,200 x 6) = 64,000 - 7,200 = $56,800.
+check: 64000+(1800-3000)*6
+explain: Falling inventory releases fixed overhead from earlier periods into this period's costs.
+mistake: Adding the difference when inventory falls.
+tip: Sign of the inventory change decides direction.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q030
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: Over several periods in which total production equals total sales, how do total absorption and marginal profits compare?
++ They are equal in total, because the methods only differ in timing || Fixed costs are charged eventually under both.
+- Absorption profit is always higher in total || Differences reverse over time.
+- Marginal profit is always higher in total || Differences reverse over time.
+- They differ by total fixed costs || Not in total.
+explain: Absorption costing defers fixed costs into inventory; when that inventory is sold, the cost is recognised.
+mistake: Thinking one method generates more total profit.
+tip: Timing difference only.
+src: Study text ch7b - comparison (concept basis; original question)
+
+=== Q031
+type: order
+level: S
+cat: concept
+topic: t3
+status: review
+q: Put the steps for reconciling absorption and marginal profits in order.
+item: Calculate the change in inventory (closing minus opening units)
+item: Multiply the change by the fixed production overhead absorption rate per unit
+item: Decide the direction - inventory up means absorption profit is higher
+item: Adjust marginal profit by the difference to reach absorption profit
+explain: The reconciliation explains differences using inventory movement and the fixed rate.
+mistake: Ignoring the direction of the change.
+tip: Change, multiply, direction, adjust.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q032
+type: mcq
+level: S
+cat: concept
+topic: t1
+status: review
+q: In marginal costing, fixed costs of the period are described as the same "whatever the volume". What does this imply?
++ Changes in sales volume affect profit only through contribution || Fixed costs stay constant.
+- Fixed costs rise with sales || They do not, within the relevant range.
+- Fixed costs are absorbed per unit || Not under marginal costing.
+- Fixed costs are ignored completely || They are deducted in full.
+explain: This principle underlies cost-volume-profit analysis.
+mistake: Treating fixed costs as variable.
+tip: Fixed costs don't move with volume.
+src: Study text ch7b - principles (concept basis; original question)
+
+=== Q033
+type: mcq
+level: S
+cat: calc
+topic: t2
+status: review
+q: A company produced 12,000 units and sold 10,000. Fixed production overhead is $48,000, absorbed on 12,000 units. How much fixed production overhead is carried forward in closing inventory under absorption costing?
++ $8,000 || OAR $4; 2,000 units x 4.
+- $48,000 || That is the total fixed overhead.
+- $40,000 || That is charged in cost of sales.
+- $0 || That is marginal costing.
+formula: Fixed overhead in inventory = closing units x fixed OAR
+step: OAR = 48,000 / 12,000 = $4.
+step: Closing inventory = 2,000 units x 4 = $8,000.
+check: 2000*48000/12000
+explain: This $8,000 is the profit difference between the two methods for the period.
+mistake: Carrying forward all fixed overhead.
+tip: Only closing units carry fixed overhead.
+src: Study text ch7b - inventory (concept basis; original question)
+
+=== Q034
+type: mcq
+level: S
+cat: concept
+topic: t2
+status: review
+q: A manager's bonus depends on absorption costing profit. Why might he increase production above expected sales?
++ The extra inventory absorbs fixed overhead, raising this period's reported profit || Profit can be inflated temporarily.
+- Higher production always increases sales || Not necessarily.
+- Marginal costing would then show higher profit || It would not.
+- It reduces fixed costs || Fixed costs are unchanged.
+explain: This dysfunctional behaviour is one reason marginal costing is preferred for performance measurement.
+mistake: Thinking extra production creates real profit.
+tip: Reported profit up, real performance unchanged.
+src: Study text ch7b - manipulation (concept basis; original question)
+
+=== Q035
+type: mcq
+level: F
+cat: revision
+topic: t3
+status: review
+important: 1
+q: Which formula explains the difference between absorption and marginal costing profits?
++ Change in inventory (units) x fixed production overhead absorption rate per unit || This is the reconciling item.
+- Closing inventory x variable cost per unit || Variable cost is in both inventories.
+- Units sold x fixed cost per unit || Not the reconciling item.
+- Change in inventory x selling price || Not relevant.
+explain: Learn the formula and the direction rule together.
+mistake: Using variable cost.
+tip: Change x fixed rate.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q036
+type: mcq
+level: C
+cat: trap
+topic: t3
+status: review
+q: In a period, absorption costing shows a profit of $15,000. Production exceeded sales by 6,000 units and the fixed production OAR is $3. What is the marginal costing result?
++ A loss of $3,000 || 15,000 - 6,000 x 3 = -3,000.
+- A profit of $33,000 || This adds the difference.
+- A profit of $15,000 || Profits differ when inventory changes.
+- A profit of $3,000 || The result is negative.
+formula: Marginal profit = absorption profit - (increase in inventory x fixed OAR)
+step: Difference = 6,000 x 3 = $18,000.
+step: Marginal result = 15,000 - 18,000 = -$3,000 (a loss).
+check: 15000-6000*3
+explain: Large inventory build-ups can turn a marginal loss into an absorption profit.
+mistake: Ignoring the possibility of a loss.
+tip: Watch the sign.
+src: Study text ch7b - reconciliation (concept basis; original question)
+
+=== Q037
+type: mr
+level: C
+cat: scenario
+topic: t2
+status: review
+select: 2
+q: A seasonal business builds up inventory all winter for summer sales. Which TWO statements are correct for the winter months?
++ Marginal costing may show losses because fixed costs are written off while sales are low || Fixed costs are charged in full each period.
++ Absorption costing smooths profit by carrying fixed overhead forward in inventory || Costs follow the inventory into summer.
+- Both methods show the same profit each winter month || Inventory is rising, so they differ.
+- Absorption costing shows lower profit in winter || It shows higher profit when inventory rises.
+explain: This is the "fictitious losses" argument for absorption costing.
+mistake: Reversing the effects.
+tip: Building inventory: absorption higher.
+src: Study text ch7b - arguments (concept basis; original scenario)
+
+=== Q038
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Selling price $50; variable production cost $22; fixed production overhead $84,000 absorbed on budgeted output of 12,000 units; variable selling cost $3 per unit; fixed selling cost $20,000. Actual production 12,000 units; sales 11,000 units; no opening inventory.
+q: What is profit ($) under ABSORPTION costing?
+answer: 178000
+tol: 0
+unit: $
+formula: Profit = units sold x (price - full production cost) - selling costs (+/- under/over-absorption)
+step: OAR = 84,000 / 12,000 = $7; full production cost = 22 + 7 = $29.
+step: Gross profit = 11,000 x (50 - 29) = $231,000. No under/over-absorption, as production equals budget.
+step: Profit = 231,000 - (11,000 x 3) - 20,000 = 231,000 - 33,000 - 20,000 = $178,000.
+check: 11000*(50-29)-11000*3-20000
+explain: Selling costs are period costs under both methods. Marginal profit is $171,000; the $7,000 difference is 1,000 units of closing inventory x $7.
+mistake: Forgetting variable selling costs.
+tip: Deduct all non-production costs.
+src: Study text ch7b - absorption profit (concept basis; original figures)
+
+=== Q039
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+scenario: Selling price $50; variable production cost $22; fixed production overhead $84,000 absorbed on budgeted output of 12,000 units; variable selling cost $3 per unit; fixed selling cost $20,000. Actual production 12,000 units; sales 11,000 units; no opening inventory.
+q: What is profit ($) under MARGINAL costing?
+answer: 171000
+tol: 0
+unit: $
+formula: Profit = units sold x contribution per unit - total fixed costs
+step: Contribution per unit = 50 - 22 - 3 = $25; total = 11,000 x 25 = $275,000.
+step: Fixed costs = 84,000 + 20,000 = $104,000.
+step: Profit = 275,000 - 104,000 = $171,000.
+check: 11000*(50-22-3)-(84000+20000)
+explain: Absorption profit is $178,000, $7,000 higher (1,000 units x $7 fixed overhead in closing inventory).
+mistake: Deducting fixed overhead only for units sold.
+tip: Reconcile: 1,000 x $7 = $7,000.
+src: Study text ch7b - marginal profit (concept basis; original figures)
+
+=== Q040
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: Actual production was below budget, creating under-absorbed fixed overhead under absorption costing. How is this handled in the absorption costing profit statement?
++ The under-absorbed amount is deducted as an extra cost in the period || It increases total costs for the period.
+- It is added to closing inventory || Under-absorption is written off.
+- It is ignored || It must be adjusted.
+- It also appears in the marginal costing statement || Marginal costing has no absorption.
+explain: Absorption statements adjust gross profit for under- or over-absorption.
+mistake: Forgetting the adjustment.
+tip: Under-absorbed = extra cost.
+src: Study text ch7b - statements (concept basis; original question)
+
+=== Q041
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: In Period 1, inventory rose by 800 units; in Period 2, it fell by 800 units. The fixed OAR is $5 in both periods. What is the TOTAL difference between absorption and marginal profits over the two periods?
++ $0 || +4,000 in Period 1 and -4,000 in Period 2 cancel out.
+- $8,000 || This adds both differences as positive.
+- $4,000 || This ignores the reversal.
+- $800 || Not the profit difference.
+formula: Total difference = Σ(change in inventory x fixed OAR)
+step: Period 1: +800 x 5 = +$4,000 (absorption higher).
+step: Period 2: -800 x 5 = -$4,000 (marginal higher). Total = 0.
+check: 800*5-800*5
+explain: The methods differ in timing; differences reverse when inventory returns to its original level.
+mistake: Adding the differences.
+tip: Timing differences reverse.
+src: Study text ch7b - timing (concept basis; original question)
+
+=== Q042
+type: match
+level: C
+cat: scenario
+topic: t3
+status: review
+q: Match each inventory movement with its effect on the two profits.
+pair: Closing inventory higher than opening => Absorption profit higher
+pair: Closing inventory lower than opening => Marginal profit higher
+pair: Closing inventory equal to opening => Profits equal
+choice: Marginal profit always higher
+explain: The direction depends only on the change in inventory (with constant fixed cost per unit).
+mistake: Thinking one method is always higher.
+tip: Follow the inventory change.
+src: Study text ch7b - comparison (concept basis; original question)
+
+=== Q043
+type: num
+level: C
+cat: calc
+topic: t3
+status: review
+q: Sales were 10,000 units. Absorption costing profit was $2,000 and marginal costing showed a loss of $3,000. Fixed production cost is $2 per unit. How many units were PRODUCED?
+answer: 12500
+tol: 0
+unit: units
+formula: Inventory change = profit difference / fixed cost per unit; production = sales + inventory increase
+step: Difference = 2,000 - (-3,000) = $5,000; inventory increase = 5,000 / 2 = 2,500 units.
+step: Production = 10,000 + 2,500 = 12,500 units.
+check: 10000+(2000+3000)/2
+explain: Absorption profit is higher, so inventory increased.
+mistake: Deducting the increase from sales.
+tip: Inventory up: production > sales.
+src: Study text ch7b - working backwards (concept basis; original question)
+
+=== Q044
+type: mcq
+level: C
+cat: scenario
+topic: t1
+status: review
+q: A manager must decide whether to accept a one-off order at a price above variable cost but below full absorption cost, with spare capacity available. Which costing information is MOST useful?
++ Marginal costing, because the order adds contribution while fixed costs are unchanged || Relevant costs are the variable costs.
+- Absorption costing, because full cost must always be covered || Fixed costs are incurred anyway.
+- Neither - such orders should always be refused || They can increase profit.
+- Financial accounts only || Not detailed enough.
+explain: Contribution analysis shows whether short-term decisions increase profit.
+mistake: Rejecting profitable orders because price is below full cost.
+tip: Spare capacity: compare price with variable cost.
+src: Study text ch7b - decisions (concept basis; original scenario)
+
+=== Q045
+type: mcq
+level: C
+cat: trap
+topic: t2
+status: review
+q: A manager says, "Marginal costing gives a lower inventory value, so it must give lower profit every period." Is this correct?
++ No - marginal profit is lower only when inventory increases; when inventory falls, marginal profit is higher || Direction depends on the inventory change.
+- Yes - lower inventory always means lower profit || Not when inventory falls.
+- Yes - marginal costing always reports losses || Not true.
+- No - marginal costing profit is always higher || Not when inventory rises.
+explain: Profit differences arise from changes in inventory, not its valuation basis alone.
+mistake: Generalising from one situation.
+tip: Up = absorption higher; down = marginal higher.
+src: Study text ch7b - comparison (concept basis; original question)
+
+=== Q046
+type: num
+level: C
+cat: calc
+topic: t2
+status: review
+q: A company produced 15,000 units and sold 13,000 units with no opening inventory. Variable production cost is $9 per unit and fixed production overhead $45,000, absorbed on 15,000 units. What is the value ($) of closing inventory under ABSORPTION costing?
+answer: 24000
+tol: 0
+unit: $
+formula: Closing inventory = units x (variable cost + fixed OAR)
+step: Fixed OAR = 45,000 / 15,000 = $3; full cost = 9 + 3 = $12.
+step: Closing inventory = 2,000 units x 12 = $24,000.
+check: 2000*(9+45000/15000)
+explain: Under marginal costing it would be 2,000 x 9 = $18,000.
+mistake: Valuing inventory at variable cost.
+tip: Absorption = full production cost.
+src: Study text ch7b - inventory (concept basis; original question)
+
+=== Q047
+type: mcq
+level: C
+cat: concept
+topic: t2
+status: review
+q: Which statement BEST describes the role of each costing method in practice?
++ Absorption costing for external reporting and routine profit reporting; marginal costing for planning and decision making || Each serves different purposes.
+- Marginal costing for external reporting; absorption for decisions || Reversed.
+- Only absorption costing is ever used || Marginal is widely used internally.
+- Only marginal costing is ever used || Absorption is required externally.
+explain: Many organisations use both: absorption for statutory accounts and marginal for management decisions.
+mistake: Thinking one method replaces the other.
+tip: Different jobs, different tools.
+src: Study text ch7b - uses (concept basis; original question)
+
+=== Q048
+type: mcq
+level: C
+cat: calc
+topic: t3
+status: review
+q: A company's absorption profit is $40,000 and its marginal profit $46,000. The fixed production OAR is $3 per unit. Which statement is correct?
++ Inventory fell by 2,000 units || Marginal higher by 6,000: 6,000 / 3 = 2,000 units decrease.
+- Inventory rose by 2,000 units || A rise would make absorption profit higher.
+- Inventory was unchanged || Profits differ.
+- Inventory fell by 6,000 units || The difference must be divided by $3.
+formula: Change in inventory = profit difference / fixed OAR
+step: Difference = 46,000 - 40,000 = $6,000 (marginal higher).
+step: 6,000 / 3 = 2,000 units; inventory fell.
+check: (46000-40000)/3
+explain: Marginal profit is higher when inventory falls.
+mistake: Getting the direction wrong.
+tip: Marginal higher = inventory down.
+src: Study text ch7b - working backwards (concept basis; original question)
+
+=== Q049
+type: mcq
+level: C
+cat: concept
+topic: t1
+status: review
+q: Why might marginal costing reports be MORE useful to a sales manager than absorption reports?
++ They show contribution by product, which indicates how sales volume and mix affect profit || Contribution reflects the effect of extra sales.
+- They include all fixed costs in each product's cost || That is absorption.
+- They value inventory higher || They value it lower.
+- They are required by law || They are not.
+explain: Contribution by product supports decisions on pricing, promotion and product mix.
+mistake: Thinking full cost per unit is the best guide to selling decisions.
+tip: Sales decisions = contribution.
+src: Study text ch7b - uses (concept basis; original question)
+
+=== Q050
+type: mcq
+level: S
+cat: revision
+topic: t2
+status: review
+important: 1
+q: Which summary of the two methods is correct?
++ Marginal: inventory at variable production cost, fixed production overhead a period cost; absorption: inventory at full production cost || This is the key difference.
+- Marginal: inventory at full cost; absorption: at variable cost || Reversed.
+- Both treat fixed production overhead as a period cost || Only marginal does.
+- Both include fixed overhead in inventory || Only absorption does.
+explain: Everything else in this chapter follows from this difference.
+mistake: Reversing the treatments.
+tip: Where does fixed production overhead go?
+src: Study text ch7b - comparison (concept basis; original question)
