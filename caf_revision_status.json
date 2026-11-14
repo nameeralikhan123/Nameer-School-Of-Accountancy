@@ -1,0 +1,2087 @@
+{
+ "generated": "2026-11-14",
+ "subjects": [
+  {
+   "id": "caf1",
+   "code": "CAF-1",
+   "name": "Financial Accounting and Reporting",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "IAS 20 Government Assistance and Grants",
+      "pages": [
+       1,
+       28
+      ]
+     },
+     "maps": [
+      {
+       "num": "1",
+       "id": "caf1-rv1",
+       "title": "IAS 20 Government Assistance and Grants",
+       "status": "published",
+       "problems": [],
+       "file": "ch01.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "IAS 23 Borrowing Costs",
+      "pages": [
+       29,
+       56
+      ]
+     },
+     "maps": [
+      {
+       "num": "2",
+       "id": "caf1-rv2",
+       "title": "IAS 23 Borrowing Costs",
+       "status": "published",
+       "problems": [],
+       "file": "ch02.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "IAS 16 Property, Plant and Equipment",
+      "pages": [
+       57,
+       136
+      ]
+     },
+     "maps": [
+      {
+       "num": "3a",
+       "id": "caf1-rv3a",
+       "title": "IAS 16 PPE - Recognition, Depreciation and Derecognition",
+       "status": "published",
+       "problems": [],
+       "file": "ch03a.md"
+      },
+      {
+       "num": "3b",
+       "id": "caf1-rv3b",
+       "title": "IAS 16 PPE - Revaluation Model and Disclosure",
+       "status": "published",
+       "problems": [],
+       "file": "ch03b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "IAS 40 Investment Property",
+      "pages": [
+       137,
+       170
+      ]
+     },
+     "maps": [
+      {
+       "num": "4",
+       "id": "caf1-rv4",
+       "title": "IAS 40 Investment Property",
+       "status": "published",
+       "problems": [],
+       "file": "ch04.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "IAS 36 Impairment of Assets",
+      "pages": [
+       171,
+       214
+      ]
+     },
+     "maps": [
+      {
+       "num": "5",
+       "id": "caf1-rv5",
+       "title": "IAS 36 Impairment of Assets",
+       "status": "published",
+       "problems": [],
+       "file": "ch05.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Interpretation of Financial Statements",
+      "pages": [
+       215,
+       282
+      ]
+     },
+     "maps": [
+      {
+       "num": "6",
+       "id": "caf1-rv6",
+       "title": "Interpretation of Financial Statements",
+       "status": "published",
+       "problems": [],
+       "file": "ch06.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "IAS 41 Agriculture",
+      "pages": [
+       283,
+       310
+      ]
+     },
+     "maps": [
+      {
+       "num": "7",
+       "id": "caf1-rv7",
+       "title": "IAS 41 Agriculture",
+       "status": "published",
+       "problems": [],
+       "file": "ch07.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Statement of Changes in Equity",
+      "pages": [
+       311,
+       342
+      ]
+     },
+     "maps": [
+      {
+       "num": "8",
+       "id": "caf1-rv8",
+       "title": "Statement of Changes in Equity",
+       "status": "published",
+       "problems": [],
+       "file": "ch08.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Conceptual and Regulatory Framework for Financial Reporting",
+      "pages": [
+       343,
+       376
+      ]
+     },
+     "maps": [
+      {
+       "num": "9",
+       "id": "caf1-rv9",
+       "title": "Conceptual and Regulatory Framework for Financial Reporting",
+       "status": "published",
+       "problems": [],
+       "file": "ch09.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "IAS 8 Accounting Policies, Changes in Accounting Estimates and Errors",
+      "pages": [
+       377,
+       420
+      ]
+     },
+     "maps": [
+      {
+       "num": "10",
+       "id": "caf1-rv10",
+       "title": "IAS 8 Accounting Policies, Changes in Accounting Estimates and Errors",
+       "status": "published",
+       "problems": [],
+       "file": "ch10.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "IAS 1 Presentation of Financial Statements",
+      "pages": [
+       421,
+       486
+      ]
+     },
+     "maps": [
+      {
+       "num": "11",
+       "id": "caf1-rv11",
+       "title": "IAS 1 Presentation of Financial Statements",
+       "status": "published",
+       "problems": [],
+       "file": "ch11.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Accounting for NPOs",
+      "pages": [
+       487,
+       580
+      ]
+     },
+     "maps": [
+      {
+       "num": "12a",
+       "id": "caf1-rv12a",
+       "title": "Accounting for NPOs - Framework, Fund Accounting and Income",
+       "status": "published",
+       "problems": [],
+       "file": "ch12a.md"
+      },
+      {
+       "num": "12b",
+       "id": "caf1-rv12b",
+       "title": "Accounting for NPOs - Assets and Financial Statements",
+       "status": "published",
+       "problems": [],
+       "file": "ch12b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "IAS 7 Statement of Cash Flows",
+      "pages": [
+       581,
+       662
+      ]
+     },
+     "maps": [
+      {
+       "num": "13",
+       "id": "caf1-rv13",
+       "title": "IAS 7 Statement of Cash Flows",
+       "status": "published",
+       "problems": [],
+       "file": "ch13.md"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf2",
+   "code": "CAF-2",
+   "name": "Taxation Principles and Compliance",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "System of Taxation in Pakistan",
+      "pages": [
+       1,
+       8
+      ]
+     },
+     "maps": [
+      {
+       "num": "1",
+       "id": "caf2-rv1",
+       "title": "System of Taxation in Pakistan",
+       "status": "published",
+       "problems": [],
+       "file": "ch01.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Constitutional Provisions on Taxes",
+      "pages": [
+       9,
+       18
+      ]
+     },
+     "maps": [
+      {
+       "num": "2",
+       "id": "caf2-rv2",
+       "title": "Constitutional Provisions on Taxes",
+       "status": "published",
+       "problems": [],
+       "file": "ch02.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Ethics",
+      "pages": [
+       19,
+       30
+      ]
+     },
+     "maps": [
+      {
+       "num": "3",
+       "id": "caf2-rv3",
+       "title": "Ethics",
+       "status": "published",
+       "problems": [],
+       "file": "ch03.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Basic Concepts of Taxation",
+      "pages": [
+       31,
+       60
+      ]
+     },
+     "maps": [
+      {
+       "num": "4a",
+       "id": "caf2-rv4a",
+       "title": "Basic Concepts - Tax Year, Taxable Income, Person and Residence",
+       "status": "published",
+       "problems": [],
+       "file": "ch04a.md"
+      },
+      {
+       "num": "4b",
+       "id": "caf2-rv4b",
+       "title": "Basic Concepts - Tax Liability, Tax Regimes and Common Rules",
+       "status": "published",
+       "problems": [],
+       "file": "ch04b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Salary",
+      "pages": [
+       61,
+       82
+      ]
+     },
+     "maps": [
+      {
+       "num": "5",
+       "id": "caf2-rv5",
+       "title": "Salary",
+       "status": "published",
+       "problems": [],
+       "file": "ch05.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Income from Property",
+      "pages": [
+       83,
+       90
+      ]
+     },
+     "maps": [
+      {
+       "num": "6",
+       "id": "caf2-rv6",
+       "title": "Income from Property",
+       "status": "published",
+       "problems": [],
+       "file": "ch06.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Income from Business – Part One",
+      "pages": [
+       91,
+       110
+      ]
+     },
+     "maps": [
+      {
+       "num": "7",
+       "id": "caf2-rv7",
+       "title": "Income from Business - Part One",
+       "status": "published",
+       "problems": [],
+       "file": "ch07.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Income from Business – Part Two",
+      "pages": [
+       111,
+       126
+      ]
+     },
+     "maps": [
+      {
+       "num": "8",
+       "id": "caf2-rv8",
+       "title": "Income from Business - Part Two",
+       "status": "published",
+       "problems": [],
+       "file": "ch08.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Capital Gains",
+      "pages": [
+       127,
+       140
+      ]
+     },
+     "maps": [
+      {
+       "num": "9",
+       "id": "caf2-rv9",
+       "title": "Capital Gains",
+       "status": "published",
+       "problems": [],
+       "file": "ch09.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Income from Other Sources",
+      "pages": [
+       141,
+       148
+      ]
+     },
+     "maps": [
+      {
+       "num": "10",
+       "id": "caf2-rv10",
+       "title": "Income from Other Sources",
+       "status": "published",
+       "problems": [],
+       "file": "ch10.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "Losses, Deductible Allowances, Tax Credits and Exemptions",
+      "pages": [
+       149,
+       164
+      ]
+     },
+     "maps": [
+      {
+       "num": "11",
+       "id": "caf2-rv11",
+       "title": "Losses, Deductible Allowances, Tax Credits and Exemptions",
+       "status": "published",
+       "problems": [],
+       "file": "ch11.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Taxation of Individuals and Associations of Persons",
+      "pages": [
+       165,
+       174
+      ]
+     },
+     "maps": [
+      {
+       "num": "12",
+       "id": "caf2-rv12",
+       "title": "Taxation of Individuals and Associations of Persons",
+       "status": "published",
+       "problems": [],
+       "file": "ch12.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Foreign Source Income of a Resident Person",
+      "pages": [
+       175,
+       182
+      ]
+     },
+     "maps": [
+      {
+       "num": "13",
+       "id": "caf2-rv13",
+       "title": "Foreign Source Income of a Resident Person",
+       "status": "published",
+       "problems": [],
+       "file": "ch13.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "14",
+      "title": "Returns",
+      "pages": [
+       183,
+       196
+      ]
+     },
+     "maps": [
+      {
+       "num": "14",
+       "id": "caf2-rv14",
+       "title": "Returns",
+       "status": "published",
+       "problems": [],
+       "file": "ch14.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "15",
+      "title": "Assessment, Records and Audit",
+      "pages": [
+       197,
+       210
+      ]
+     },
+     "maps": [
+      {
+       "num": "15",
+       "id": "caf2-rv15",
+       "title": "Assessment, Records and Audit",
+       "status": "published",
+       "problems": [],
+       "file": "ch15.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "16",
+      "title": "Appeals, References and Petitions",
+      "pages": [
+       211,
+       224
+      ]
+     },
+     "maps": [
+      {
+       "num": "16",
+       "id": "caf2-rv16",
+       "title": "Appeals, References and Petitions",
+       "status": "published",
+       "problems": [],
+       "file": "ch16.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "17",
+      "title": "Scope of Sales Tax Law and Rules for Registration and Deregistration",
+      "pages": [
+       225,
+       254
+      ]
+     },
+     "maps": [
+      {
+       "num": "17a",
+       "id": "caf2-rv17a",
+       "title": "Sales Tax - Basic Concepts and Definitions",
+       "status": "published",
+       "problems": [],
+       "file": "ch17a.md"
+      },
+      {
+       "num": "17b",
+       "id": "caf2-rv17b",
+       "title": "Sales Tax - Scope, Liability, Zero Rating, Registration and De-registration",
+       "status": "published",
+       "problems": [],
+       "file": "ch17b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "18",
+      "title": "Determination of Sales Tax Liability",
+      "pages": [
+       255,
+       270
+      ]
+     },
+     "maps": [
+      {
+       "num": "18",
+       "id": "caf2-rv18",
+       "title": "Determination of Sales Tax Liability",
+       "status": "published",
+       "problems": [],
+       "file": "ch18.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "19",
+      "title": "Returns and Records",
+      "pages": [
+       271,
+       282
+      ]
+     },
+     "maps": [
+      {
+       "num": "19",
+       "id": "caf2-rv19",
+       "title": "Sales Tax - Returns and Records",
+       "status": "published",
+       "problems": [],
+       "file": "ch19.md"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf3",
+   "code": "CAF-3",
+   "name": "Data, Systems and Risks",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "Types of Data & Sources",
+      "pages": [
+       1,
+       10
+      ]
+     },
+     "maps": [
+      {
+       "num": "1",
+       "id": "caf3-rv1",
+       "title": "Types of Data & Sources",
+       "status": "published",
+       "problems": [],
+       "file": "ch01.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Data Governance and Management",
+      "pages": [
+       11,
+       32
+      ]
+     },
+     "maps": [
+      {
+       "num": "2a",
+       "id": "caf3-rv2a",
+       "title": "Data Governance - Framework, Components and Levels",
+       "status": "published",
+       "problems": [],
+       "file": "ch02a.md"
+      },
+      {
+       "num": "2b",
+       "id": "caf3-rv2b",
+       "title": "Data Governance - Classification, Storage, Integrity, Security and Compliance",
+       "status": "published",
+       "problems": [],
+       "file": "ch02b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Introduction to Data Analytics",
+      "pages": [
+       33,
+       42
+      ]
+     },
+     "maps": [
+      {
+       "num": "3",
+       "id": "caf3-rv3",
+       "title": "Introduction to Data Analytics",
+       "status": "published",
+       "problems": [],
+       "file": "ch03.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Big Data",
+      "pages": [
+       43,
+       50
+      ]
+     },
+     "maps": [
+      {
+       "num": "4",
+       "id": "caf3-rv4",
+       "title": "Big Data",
+       "status": "published",
+       "problems": [],
+       "file": "ch04.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Database Management Systems",
+      "pages": [
+       51,
+       62
+      ]
+     },
+     "maps": [
+      {
+       "num": "5",
+       "id": "caf3-rv5",
+       "title": "Database Management Systems",
+       "status": "published",
+       "problems": [],
+       "file": "ch05.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Database Normalization & Data Warehousing",
+      "pages": [
+       63,
+       72
+      ]
+     },
+     "maps": [
+      {
+       "num": "6",
+       "id": "caf3-rv6",
+       "title": "Database Normalization & Data Warehousing",
+       "status": "published",
+       "problems": [],
+       "file": "ch06.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Information Systems Architecture",
+      "pages": [
+       73,
+       86
+      ]
+     },
+     "maps": [
+      {
+       "num": "7",
+       "id": "caf3-rv7",
+       "title": "Information Systems Architecture",
+       "status": "published",
+       "problems": [],
+       "file": "ch07.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Enterprise Resource Planning Systems",
+      "pages": [
+       87,
+       104
+      ]
+     },
+     "maps": [
+      {
+       "num": "8",
+       "id": "caf3-rv8",
+       "title": "Enterprise Resource Planning Systems",
+       "status": "published",
+       "problems": [],
+       "file": "ch08.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Emerging Technologies",
+      "pages": [
+       105,
+       128
+      ]
+     },
+     "maps": [
+      {
+       "num": "9a",
+       "id": "caf3-rv9a",
+       "title": "Emerging Technologies - AI, IoT, Blockchain and 5G",
+       "status": "published",
+       "problems": [],
+       "file": "ch09a.md"
+      },
+      {
+       "num": "9b",
+       "id": "caf3-rv9b",
+       "title": "Emerging Technologies - AR/VR, Quantum, Edge Computing and RPA",
+       "status": "published",
+       "problems": [],
+       "file": "ch09b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Artificial Intelligence & Automation",
+      "pages": [
+       129,
+       138
+      ]
+     },
+     "maps": [
+      {
+       "num": "10",
+       "id": "caf3-rv10",
+       "title": "Artificial Intelligence & Automation",
+       "status": "published",
+       "problems": [],
+       "file": "ch10.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "Cloud Computing",
+      "pages": [
+       139,
+       158
+      ]
+     },
+     "maps": [
+      {
+       "num": "11",
+       "id": "caf3-rv11",
+       "title": "Cloud Computing",
+       "status": "published",
+       "problems": [],
+       "file": "ch11.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Blockchain and Fintech",
+      "pages": [
+       159,
+       174
+      ]
+     },
+     "maps": [
+      {
+       "num": "12",
+       "id": "caf3-rv12",
+       "title": "Blockchain and Fintech",
+       "status": "published",
+       "problems": [],
+       "file": "ch12.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Impact of Digital Disruption on Business and Accountancy",
+      "pages": [
+       175,
+       190
+      ]
+     },
+     "maps": [
+      {
+       "num": "13",
+       "id": "caf3-rv13",
+       "title": "Impact of Digital Disruption on Business and Accountancy",
+       "status": "published",
+       "problems": [],
+       "file": "ch13.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "14",
+      "title": "IT Risk Management and Security",
+      "pages": [
+       191,
+       212
+      ]
+     },
+     "maps": [
+      {
+       "num": "14a",
+       "id": "caf3-rv14a",
+       "title": "IT Risk Management - Process, Risk Treatment and Types of IT Risk",
+       "status": "published",
+       "problems": [],
+       "file": "ch14a.md"
+      },
+      {
+       "num": "14b",
+       "id": "caf3-rv14b",
+       "title": "IT Risk Management - The Role of IT Security",
+       "status": "published",
+       "problems": [],
+       "file": "ch14b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "15",
+      "title": "Cybersecurity and Information Security Risks",
+      "pages": [
+       213,
+       232
+      ]
+     },
+     "maps": [
+      {
+       "num": "15a",
+       "id": "caf3-rv15a",
+       "title": "Cybersecurity - Threats, Incidents and Defence Strategies",
+       "status": "published",
+       "problems": [],
+       "file": "ch15a.md"
+      },
+      {
+       "num": "15b",
+       "id": "caf3-rv15b",
+       "title": "Cybersecurity - Emerging Risks, Advanced Technologies and Best Practices",
+       "status": "published",
+       "problems": [],
+       "file": "ch15b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "16",
+      "title": "IT General Controls for Managing Risk",
+      "pages": [
+       233,
+       248
+      ]
+     },
+     "maps": [
+      {
+       "num": "16",
+       "id": "caf3-rv16",
+       "title": "IT General Controls for Managing Risk",
+       "status": "published",
+       "problems": [],
+       "file": "ch16.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "17",
+      "title": "ICT's Role in Risk Management",
+      "pages": [
+       249,
+       260
+      ]
+     },
+     "maps": [
+      {
+       "num": "17",
+       "id": "caf3-rv17",
+       "title": "ICT's Role in Risk Management",
+       "status": "published",
+       "problems": [],
+       "file": "ch17.md"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf4",
+   "code": "CAF-4 Vol I",
+   "name": "Business Law Dynamics (Volume I)",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "Introduction to the Legal System",
+      "pages": [
+       1,
+       18
+      ]
+     },
+     "maps": [
+      {
+       "num": "1",
+       "id": "caf4-rv1",
+       "title": "Introduction to the Legal System",
+       "status": "published",
+       "problems": [],
+       "file": "ch01.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Offer, Acceptance and Revocation",
+      "pages": [
+       19,
+       38
+      ]
+     },
+     "maps": [
+      {
+       "num": "2",
+       "id": "caf4-rv2",
+       "title": "Offer, Acceptance and Revocation",
+       "status": "published",
+       "problems": [],
+       "file": "ch02.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Validity of Contracts and Agreements",
+      "pages": [
+       39,
+       58
+      ]
+     },
+     "maps": [
+      {
+       "num": "3",
+       "id": "caf4-rv3",
+       "title": "Validity of Contracts and Agreements",
+       "status": "published",
+       "problems": [],
+       "file": "ch03.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Free Consent and Void Agreements",
+      "pages": [
+       59,
+       88
+      ]
+     },
+     "maps": [
+      {
+       "num": "4",
+       "id": "caf4-rv4",
+       "title": "Free Consent and Void Agreements",
+       "status": "published",
+       "problems": [],
+       "file": "ch04.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Performance of Contracts",
+      "pages": [
+       89,
+       130
+      ]
+     },
+     "maps": [
+      {
+       "num": "5a",
+       "id": "caf4-rv5a",
+       "title": "Performance of Contracts - Who, When, Where and Tender",
+       "status": "published",
+       "problems": [],
+       "file": "ch05a.md"
+      },
+      {
+       "num": "5b",
+       "id": "caf4-rv5b",
+       "title": "Performance of Contracts - Appropriation, Discharge and Impossibility",
+       "status": "published",
+       "problems": [],
+       "file": "ch05b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Consequences for Breach of Contract",
+      "pages": [
+       131,
+       150
+      ]
+     },
+     "maps": [
+      {
+       "num": "6",
+       "id": "caf4-rv6",
+       "title": "Consequences for Breach of Contract",
+       "status": "published",
+       "problems": [],
+       "file": "ch06.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Special Type of Contracts",
+      "pages": [
+       151,
+       178
+      ]
+     },
+     "maps": [
+      {
+       "num": "7",
+       "id": "caf4-rv7",
+       "title": "Special Type of Contracts",
+       "status": "published",
+       "problems": [],
+       "file": "ch07.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Partnership",
+      "pages": [
+       179,
+       242
+      ]
+     },
+     "maps": [
+      {
+       "num": "8a",
+       "id": "caf4-rv8a",
+       "title": "Partnership - Nature, Types, Rights and Duties of Partners",
+       "status": "published",
+       "problems": [],
+       "file": "ch08a.md"
+      },
+      {
+       "num": "8b",
+       "id": "caf4-rv8b",
+       "title": "Partnership - Property, Authority, Liability and Minors",
+       "status": "published",
+       "problems": [],
+       "file": "ch08b.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Negotiable Instruments",
+      "pages": [
+       243,
+       270
+      ]
+     },
+     "maps": [
+      {
+       "num": "9",
+       "id": "caf4-rv9",
+       "title": "Negotiable Instruments",
+       "status": "published",
+       "problems": [],
+       "file": "ch09.md"
+      }
+     ]
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Anti-Money Laundering and Arbitration Act",
+      "pages": [
+       271,
+       282
+      ]
+     },
+     "maps": [
+      {
+       "num": "10",
+       "id": "caf4-rv10",
+       "title": "Anti-Money Laundering and Arbitration Act",
+       "status": "published",
+       "problems": [],
+       "file": "ch10.md"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf4v2",
+   "code": "CAF-4 Vol II",
+   "name": "Business Law Dynamics (Volume II)",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "Introduction and Types of Companies",
+      "pages": [
+       1,
+       26
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Memorandum and Articles",
+      "pages": [
+       27,
+       60
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Directors",
+      "pages": [
+       61,
+       102
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Chief Executive and Other Officers",
+      "pages": [
+       103,
+       120
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Share Capital and Commencement of Business",
+      "pages": [
+       121,
+       140
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Mortgages and Charges",
+      "pages": [
+       141,
+       158
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Meetings and Resolutions",
+      "pages": [
+       159,
+       208
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Distribution of Profits",
+      "pages": [
+       209,
+       226
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Investments and Disclosure of Interest",
+      "pages": [
+       227,
+       252
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Accounts and Annual Return",
+      "pages": [
+       253,
+       288
+      ]
+     },
+     "maps": []
+    }
+   ]
+  },
+  {
+   "id": "caf5",
+   "code": "CAF-5",
+   "name": "Management Accounting",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "Inventory Valuation",
+      "pages": [
+       1,
+       36
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Overheads",
+      "pages": [
+       37,
+       90
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Activity Based Costing",
+      "pages": [
+       91,
+       110
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Labour Costing",
+      "pages": [
+       111,
+       140
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Cost Flow in Production",
+      "pages": [
+       141,
+       178
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Job and Service Costing",
+      "pages": [
+       179,
+       210
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Process Costing",
+      "pages": [
+       211,
+       298
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Joint and By-Product Costing",
+      "pages": [
+       299,
+       340
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Marginal Costing and Absorption Costing",
+      "pages": [
+       341,
+       386
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Standard Costing",
+      "pages": [
+       387,
+       402
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "Variance Analysis",
+      "pages": [
+       403,
+       532
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Target Costing",
+      "pages": [
+       533,
+       556
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Cost-Volume-Profit (CVP) Analysis",
+      "pages": [
+       557,
+       612
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "14",
+      "title": "Relevant Costs",
+      "pages": [
+       613,
+       648
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "15",
+      "title": "Decision Making Techniques",
+      "pages": [
+       649,
+       732
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "16",
+      "title": "Inventory Management",
+      "pages": [
+       733,
+       778
+      ]
+     },
+     "maps": []
+    }
+   ]
+  },
+  {
+   "id": "caf6",
+   "code": "CAF-6",
+   "name": "Corporate Reporting",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "IAS 10, IAS 37 & IFRIC 1",
+      "pages": [
+       1,
+       76
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Financial Instruments",
+      "pages": [
+       77,
+       116
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "IFRS 16 Leases",
+      "pages": [
+       117,
+       182
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "IAS 21 Foreign Currency Transactions",
+      "pages": [
+       183,
+       214
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "IFRS 15 Revenue from Contracts with Customers",
+      "pages": [
+       215,
+       284
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "IFRS 8 Operating Segments",
+      "pages": [
+       285,
+       314
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "IAS 12 Income Taxes",
+      "pages": [
+       315,
+       388
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Regulatory Framework in Pakistan",
+      "pages": [
+       389,
+       442
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Consolidation",
+      "pages": [
+       443,
+       596
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Investment in Associate",
+      "pages": [
+       597,
+       670
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "IAS 33 Earnings per Share",
+      "pages": [
+       671,
+       716
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "IAS 38 Intangible Assets",
+      "pages": [
+       717,
+       772
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Ethical Issues in Financial Reporting",
+      "pages": [
+       773,
+       806
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "14",
+      "title": "ESG and Sustainability",
+      "pages": [
+       807,
+       824
+      ]
+     },
+     "maps": []
+    }
+   ]
+  },
+  {
+   "id": "caf7",
+   "code": "CAF-7",
+   "name": "Business Insights and Analysis",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "PESTEL Analysis (I) - Political, Economic and Social Environment",
+      "pages": [
+       1,
+       32
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "PESTEL Analysis (II) - Technological, Ecological, and Legal Environment",
+      "pages": [
+       33,
+       60
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "PESTEL Analysis (III) – Case Study Questions",
+      "pages": [
+       61,
+       72
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Competitive Forces",
+      "pages": [
+       73,
+       120
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Internal Analysis",
+      "pages": [
+       121,
+       164
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Ethical Decision Making Models",
+      "pages": [
+       165,
+       180
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Introduction to Sustainability",
+      "pages": [
+       181,
+       220
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Sources of Finance",
+      "pages": [
+       221,
+       248
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Cost of Finance",
+      "pages": [
+       249,
+       296
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Financial Risk Management",
+      "pages": [
+       297,
+       332
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "Budgeting",
+      "pages": [
+       333,
+       384
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Working Capital Management",
+      "pages": [
+       385,
+       436
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Introduction to Project Appraisal",
+      "pages": [
+       437,
+       522
+      ]
+     },
+     "maps": []
+    }
+   ]
+  },
+  {
+   "id": "caf8",
+   "code": "CAF-8",
+   "name": "Audit and Assurance Essentials",
+   "chapters": [
+    {
+     "toc": {
+      "num": "1",
+      "title": "Concept and Need for Audit",
+      "pages": [
+       1,
+       26
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "2",
+      "title": "Obtaining an Engagement",
+      "pages": [
+       27,
+       42
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "3",
+      "title": "Planning and Risk Assessment",
+      "pages": [
+       43,
+       112
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "4",
+      "title": "Evidence and Sampling",
+      "pages": [
+       113,
+       136
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "5",
+      "title": "Internal Control",
+      "pages": [
+       137,
+       166
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "6",
+      "title": "Tests of Controls",
+      "pages": [
+       167,
+       214
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "7",
+      "title": "Introduction to Substantive Procedures",
+      "pages": [
+       215,
+       230
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "8",
+      "title": "Substantive Procedures: Non-Current Assets",
+      "pages": [
+       231,
+       244
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "9",
+      "title": "Substantive Procedures: Current Assets",
+      "pages": [
+       245,
+       284
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "10",
+      "title": "Substantive Procedures: Other Areas",
+      "pages": [
+       285,
+       304
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "11",
+      "title": "Related Party Transactions",
+      "pages": [
+       305,
+       322
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "12",
+      "title": "Reliance on Others",
+      "pages": [
+       323,
+       340
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "13",
+      "title": "Professional Ethics and Code of Conduct",
+      "pages": [
+       341,
+       376
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "14",
+      "title": "Audit Finalisation - Reporting",
+      "pages": [
+       377,
+       442
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "15",
+      "title": "Audit Finalisation - Final Evaluation",
+      "pages": [
+       443,
+       480
+      ]
+     },
+     "maps": []
+    },
+    {
+     "toc": {
+      "num": "16",
+      "title": "Review and Assurance Engagements",
+      "pages": [
+       481,
+       506
+      ]
+     },
+     "maps": []
+    }
+   ]
+  }
+ ]
+}
