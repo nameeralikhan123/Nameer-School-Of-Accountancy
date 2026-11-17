@@ -4866,6 +4866,21 @@ tr.pc-zero td { opacity: .8; }
         html .section-title span:first-child::after { background: var(--sun); }
     </style>
     <!-- ==== end TEAL + SUNSHINE THEME ==== -->
+
+<style id="no-flash-dashboard">
+/* Hide the legacy dashboard markup until the new dashboard has rendered (prevents old-dashboard flash). */
+#view-dashboard.rd-dash-pending:not(.rd-dash-on) > * { visibility: hidden !important; }
+#view-dashboard.rd-dash-pending:not(.rd-dash-on) { min-height: 60vh; }
+</style>
+<script>
+/* Safety net: if the new dashboard never renders, show the original one instead of a blank page. */
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        var s = document.getElementById('view-dashboard');
+        if (s && !s.classList.contains('rd-dash-on')) s.classList.remove('rd-dash-pending');
+    }, 4000);
+});
+</script>
 </head>
 
 <body>
@@ -5019,11 +5034,25 @@ tr.pc-zero td { opacity: .8; }
             </nav>
 
             <div class="sidebar-footer">
-                <div class="user-avatar" id="sidebar-avatar-initials">MF</div>
+                <div class="user-avatar" id="sidebar-avatar-initials"></div>
                 <div class="user-info">
-                    <div class="user-name" id="sidebar-display-name">Manal Fatima</div>
-                    <div class="user-role" id="sidebar-display-crn">CRN: CR-2026-90412</div>
+                    <div class="user-name" id="sidebar-display-name"></div>
+                    <div class="user-role" id="sidebar-display-crn"></div>
                 </div>
+            <script>
+            (function () {
+                try {
+                    var p = JSON.parse(localStorage.getItem('nsa_profile') || '{}') || {};
+                    var n = String(p.name || '').trim();
+                    if (!n) return;
+                    var parts = n.split(/\s+/);
+                    var ini = parts.length > 1 ? (parts[0][0] + parts[parts.length - 1][0]) : n.slice(0, 2);
+                    var a = document.getElementById('sidebar-avatar-initials'); if (a) a.textContent = ini.toUpperCase();
+                    var e = document.getElementById('sidebar-display-name'); if (e) e.textContent = n;
+                    if (p.crn) { var c = document.getElementById('sidebar-display-crn'); if (c) c.textContent = 'CRN ' + p.crn; }
+                } catch (x) { /* */ }
+            })();
+            </script>
                 <button class="logout-btn" onclick="handleLogout()" title="Sign out" aria-label="Sign out">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -5146,11 +5175,11 @@ tr.pc-zero td { opacity: .8; }
             <main class="content-area">
 
                 <!-- VIEW 1: DASHBOARD -->
-                <section id="view-dashboard" class="view-section active">
+                <section id="view-dashboard" class="view-section active rd-dash-pending">
                     <div class="welcome-banner">
                         <div class="welcome-text">
-                            <h2 id="dash-welcome-name">Welcome back, Manal</h2>
-                            <p id="dash-welcome-crn">ICAP PRC Registration ID: <strong style="color:var(--text-main);">CR-2026-90412</strong> &nbsp;&bull;&nbsp; Autumn 2026 Attempt</p>
+                            <h2 id="dash-welcome-name">Welcome back</h2>
+                            <p id="dash-welcome-crn"></p>
                         </div>
                         <div class="streak-pill">
                             <div class="streak-pill-icon">
@@ -6343,8 +6372,8 @@ tr.pc-zero td { opacity: .8; }
                             <div id="profile-photo-feedback" role="status" aria-live="polite"
                                 style="display:none; margin-bottom:10px; padding:7px 12px; border-radius:8px; font-size:0.78rem; font-weight:600;"></div>
 
-                            <h3 class="pr-id-name" id="profile-card-name">Manal Fatima</h3>
-                            <div class="pr-id-crn" id="profile-card-crn">CRN CR-2026-90412</div>
+                            <h3 class="pr-id-name" id="profile-card-name"></h3>
+                            <div class="pr-id-crn" id="profile-card-crn"></div>
 
                             <div class="pr-meta">
                                 <div class="pr-meta-row">
@@ -39757,6 +39786,7 @@ html[data-theme="light"] #view-practice, html[data-theme="light"] #view-mockexam
             '<div class="rd-dash-split">' + renderHeat(d) + renderRecs(d, prefs) + '</div>' +
             renderSubjects(d) + renderBadges(d);
         sec.classList.add('rd-dash-on');
+        sec.classList.remove('rd-dash-pending');
         if (focusKey) {
             var again = root.querySelector('[data-rd="' + focusKey.replace(/"/g, '') + '"]');
             if (again) try { again.focus(); } catch (e) { /* */ }
@@ -39822,6 +39852,7 @@ html[data-theme="light"] #view-practice, html[data-theme="light"] #view-mockexam
         var sec = document.getElementById('view-dashboard');
         if (sec) {
             sec.classList.remove('rd-dash-on');
+            sec.classList.remove('rd-dash-pending');
             var r = sec.querySelector(':scope > .rd-dash');
             if (r) r.parentNode.removeChild(r);
         }
